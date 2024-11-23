@@ -1,0 +1,371 @@
+{% assign animation_row = 1 %} {% assign drawer_position = 'right' %} {% if logo_alignment == 'center' %} {% assign drawer_position = 'left' %} {% endif %} <div id="NavDrawer" class="drawer drawer--{{ drawer_position }}">
+  <div class="drawer__contents drawer-menu-june23">
+    <div class="drawer__fixed-header">
+      <div class="drawer__header appear-animation">
+        <!-- <div class="h2 drawer__title"></div> -->
+        <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/logo_main.svg?v=1686922500" class="drwjn23_logo">
+        
+        <div class="drawer__close">
+          <button type="button" class="drawer__close-button js-drawer-close">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+              <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" style="  color: #808080; " />
+            </svg>
+            <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer__scrollable">
+
+
+      <div class="headmbl_search">
+          <form action="{{ routes.search_url }}" method="get" role="search" id="HeaderSearchForm" class="site-header__search-form">
+            <input type="hidden" name="type" value="{{ settings.search_type }}">
+            
+            <input type="search" name="q" value="{{ search.terms | escape | replace: '*', '' }}" placeholder="{{ 'general.search.placeholder' | t }}" class="site-header__search-input" aria-label="{{ 'general.search.placeholder' | t }}">
+            <button type="submit" class="text-link site-header__search-btn site-header__search-btn--submit">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                <path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42" style="  color: #808080; " />
+              </svg>
+              <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+          </form>
+        </div>
+      {% if request.locale.iso_code == 'en' %}
+      <div class="jundraccwa">
+        <button class="accordionjundrwr activejundrwr">Shop Matcha</button>
+        <div class="paneljundrwr" style="max-height: 425px">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/collections/matcha-signature-teangle">All Matcha</a>
+               <a href="/products/starter-pack">Starter Pack</a>
+               <a href="/collections/teangle-matcha-bundles">Bundles</a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/collections/matcha-signature-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/GINGERLEMONGRASS_240x.png?v=1684177932"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/collections/matcha-signature-teangle"><strong>Signature Matcha</strong> Our best-selling matcha in 3 delicious flavors.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/collections/matcha-collagene"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/COLLAGEN_240x.png?v=1684177948"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/collections/matcha-collagene"><strong>Collagen Matcha</strong> 5g of pure marine collagen in every serving.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/ceremonial-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CEREMONIAL_240x.png?v=1684177951"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/ceremonial-matcha"><strong>Ceremonial Matcha</strong> 5g of pure marine collagen in every serving.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+         <!--Accessories  -->
+
+
+        <button class="accordionjundrwr">Accessories</button>
+        <div class="paneljundrwr">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/collections/accessoires">All Accessories</a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/teangle-milk-frother"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-397b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/teangle-milk-frother"><strong>Milk Frother</strong> For making delicious, extra creamy matcha.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-spoon"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-396b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-spoon"><strong>Matcha Spoon</strong> The perfect companion to your matcha regime.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-bottle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-395b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-bottle"><strong>Matcha Bottle</strong> Take your matcha game on the move.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+        <!-- Learn -->
+
+
+        <button class="accordionjundrwr">Learn</button>
+        <div class="paneljundrwr">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/pages/faq-teangle">FAQ</a>
+               <a href="/pages/contact-us">Contact Us</a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/pages/about-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-394b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/pages/about-teangle"><strong>Our Story</strong> Learn about our mission & purpose.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/blogs/recipes"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-393b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/blogs/recipes"><strong>Recipes</strong> From matcha drinks to desserts & snacks.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/blogs/matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-392b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/blogs/matcha"><strong>Blog</strong> Incorporate matcha and easy-living in your life.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+
+        <a href="/pages/subscription-program" class="jnp_intach">Subscribe & Save </a>
+      </div>
+ 
+      {% else %}
+     <div class="jundraccwa">
+        <button class="accordionjundrwr activejundrwr">Notre matcha</button>
+        <div class="paneljundrwr" style="max-height: 425px">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/collections/matcha-signature-teangle">Tous nos matcha</a>
+               <a href="/products/starter-pack">Ensemble de départ</a>
+               <a href="/collections/teangle-matcha-bundles">Ensembles</a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/collections/matcha-signature-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/GINGERLEMONGRASS_240x.png?v=1684177932"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/collections/matcha-signature-teangle"><strong>Matcha signature</strong> Notre matcha le plus vendu en 3 saveurs délicieuses.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/collections/matcha-collagene"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/COLLAGEN_240x.png?v=1684177948"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/collections/matcha-collagene"><strong>Matcha collagène</strong> 5g de  collagène marin pur avec chaque portion.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/ceremonial-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CEREMONIAL_240x.png?v=1684177951"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/ceremonial-matcha"><strong>Matcha cérémonial</strong> Matcha classique tel qu'il est traditionnellement apprécié.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+         <!--Accessories  -->
+
+
+        <button class="accordionjundrwr">Accessoires</button>
+        <div class="paneljundrwr">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/collections/accessoires">Tous nos accessoires</a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/teangle-milk-frother"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-397b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/teangle-milk-frother"><strong>Mousseur à lait</strong>  Pour un matcha latte extra crémeux.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-spoon"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-396b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-spoon"><strong>Cuillère à matcha</strong> Pour un matcha parfait à tous les coups.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-bottle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-395b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-bottle"><strong>Bouteille de matcha</strong> Prépare ton matcha sur le pouce.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+        <!-- Learn -->
+
+
+        <button class="accordionjundrwr">En savoir plus</button>
+        <div class="paneljundrwr">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/pages/faq-teangle">FAQ</a>
+               <a href="/pages/contact-us">Contactez-nous</a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/pages/about-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-394b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/pages/about-teangle"><strong>Notre histoire</strong> Découvrez notre mission et notre pourquoi.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/blogs/recipes"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-393b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/blogs/recipes"><strong>Recettes</strong> Découvrez toutes nos recettes à base de matcha.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/blogs/matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-392b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/blogs/matcha"><strong>Blog</strong> Intégrez le matcha et de la joie de vivre dans votre quotidien.</a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+
+        <a href="/pages/subscription-program" class="jnp_intach">Abonnement  </a>
+      </div>
+        {% endif %}
+
+
+      <div class="mbl_nav_sticky">
+        <!-- AMAIS ADDED LANG SWITCH -- STARTS --> {% if customer.id == null %} <a class="site-nav__link site-nav__link--icon large--hide" href="/a/account/login">
+           
+          <ly-as-567066>Log in</ly-as-567066>
+          <span class="icon__fallback-text">
+            <ly-as-567066>Connexion</ly-as-567066>
+          </span>
+        </a> {% else %} <a class="site-nav__link site-nav__link--icon large--hide" href="/a/account/login">
+          
+          <ly-as-567067>Compte</ly-as-567067>
+          <span class="icon__fallback-text">
+            <ly-as-567067>Compte</ly-as-567067>
+          </span>
+        </a>
+        <a class="site-nav__link site-nav__link--icon large--hide" href="{{ routes.account_logout_url }}">
+          <ly-as-567068>Déconnexion</ly-as-567068>
+          <span class="icon__fallback-text">
+            <ly-as-567068>Déconnexion</ly-as-567068>
+          </span>
+        </a> {% endif %} 
+        <a class="site-nav__link site-nav__link--icon large--hide" href="/pages/contact-us" style="margin-left: 10px; ">
+          Contactez-nous
+        </a>
+        <div class="drawer_lang medium-up--hides"> {% render 'custom-lang-switch-june2023' %} {% comment %} <span class="ly-custom-0"></span>{% endcomment %} </div>
+        <div class="cb"></div>
+        <!-- AMAIS ADDED LANG SWITCH -- ENDS -->
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+<script>
+  var acc = document.getElementsByClassName("accordionjundrwr");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("activejundrwr");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+  /* $(".accordionjundrwr").click(function() {
+        $(".accordionjundrwr").removeClass("activejundrwr");
+        $(".paneljundrwr").hide();
+        $(this).addClass("activejundrwr");
+        $(this).next().show();
+  }); */
+  $(".amanav_shop").click(function() {
+    $(".amanav_tab_shop").show();  
+    $(".amanav_tab_learn").hide();
+    $(".amanav_link").removeClass("activer");
+    $(this).addClass("activer");
+  });
+  $(".amanav_learn").click(function() {
+    $(".amanav_tab_shop").hide();  
+    $(".amanav_tab_learn").show();
+    $(".amanav_link").removeClass("activer");
+    $(this).addClass("activer");
+  });
+</script>

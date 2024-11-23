@@ -1,0 +1,348 @@
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+{%- liquid
+  assign overlap_images = true
+  if section.settings.image != blank and section.settings.image2 == blank
+    assign overlap_images = false
+  endif
+-%}
+
+<div class="index-section">
+
+  <div class="page-width feature-row-wrapper">
+    {%- capture image_layout -%}
+      <div class="feature-row__item{% if overlap_images %} feature-row__item--overlap-images{% endif %}" style="max-width: {{ section.settings.image_width }}px" data-aos>
+          {%- if section.settings.image != blank -%}
+            <div>
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}<a href="{{ section.settings.button_link }}">{%- endif -%}
+                <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image.alt }}">
+                </div>
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.image2 != blank -%}
+            <div>
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}<a href="{{ section.settings.button_link }}">{%- endif -%}
+                <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image2.aspect_ratio }}%;">
+                  {%- assign img_url = section.settings.image2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="feature-row__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 750, 900, 1080]"
+                    data-aspectratio="{{ section.settings.image2.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ section.settings.image2.alt }}">
+                </div>
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.image == blank and section.settings.image2 == blank -%}
+            <div>
+              <div class="image-wrap">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </div>
+            <div>
+              <div class="image-wrap">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </div>
+          {%- endif -%}
+      </div>
+    {%- endcapture -%}
+
+    <div class="feature-row">
+      {%- if section.settings.layout == 'left' -%}
+        {{ image_layout }}
+      {%- endif -%}
+
+      <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }} text-{{ section.settings.align_text }}" data-aos>
+        {%- if section.settings.subtitle != blank -%}
+          <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.subtitle }}</div>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <div class="h1 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.title | escape }}</div>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">
+            {{ section.settings.text }}
+            <div class="feature-row__icons">
+                <div class="feature-row__icon feature-row__icon1 clearfix">
+                  <div class="ftr_rimg">
+                      {%- assign img_url = section.settings.icon1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                      <img class="feature-row__image lazyload"
+                          data-src="{{ img_url }}"
+                          data-widths="[180, 360, 540, 750, 900, 1080]"
+                          data-aspectratio="{{ section.settings.icon1.aspect_ratio }}"
+                          data-sizes="auto"
+                          alt="{{ section.settings.icon1.alt }}">
+                      </div>
+                      <div class="ftr_rmeta">
+                          <h3>{{ section.settings.icon1_title }}</h3>
+                          {{ section.settings.icon1_text }}
+                      </div>
+                      <div class="cb"></div>
+                  </div>
+                  <div class="feature-row__icon feature-row__icon2 clearfix">
+                    <div class="ftr_rimg">
+                        {%- assign img_url = section.settings.icon2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                        <img class="feature-row__image lazyload"
+                            data-src="{{ img_url }}"
+                            data-widths="[180, 360, 540, 750, 900, 1080]"
+                            data-aspectratio="{{ section.settings.icon2.aspect_ratio }}"
+                            data-sizes="auto"
+                            alt="{{ section.settings.icon2.alt }}">
+                        </div>
+                        <div class="ftr_rmeta">
+                            <h3>{{ section.settings.icon2_title }}</h3>
+                            {{ section.settings.icon2_text }}
+                        </div>
+                        <div class="cb"></div>
+                    </div>
+                    <div class="feature-row__icon feature-row__icon3 clearfix">
+                      <div class="ftr_rimg">
+                          {%- assign img_url = section.settings.icon3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                          <img class="feature-row__image lazyload"
+                              data-src="{{ img_url }}"
+                              data-widths="[180, 360, 540, 750, 900, 1080]"
+                              data-aspectratio="{{ section.settings.icon3.aspect_ratio }}"
+                              data-sizes="auto"
+                              alt="{{ section.settings.icon3.alt }}">
+                          </div>
+                          <div class="ftr_rmeta">
+                              <h3>{{ section.settings.icon3_title }}</h3>
+                              {{ section.settings.icon3_text }}
+                          </div>
+                          <div class="cb"></div>
+                      </div>
+                      <div class="feature-row__icon feature-row__icon4 clearfix">
+                      <div class="ftr_rimg">
+                          {%- assign img_url = section.settings.icon4 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                          <img class="feature-row__image lazyload"
+                              data-src="{{ img_url }}"
+                              data-widths="[180, 360, 540, 750, 900, 1080]"
+                              data-aspectratio="{{ section.settings.icon4.aspect_ratio }}"
+                              data-sizes="auto"
+                              alt="{{ section.settings.icon4.alt }}">
+                          </div>
+                          <div class="ftr_rmeta">
+                              <h3>{{ section.settings.icon4_title }}</h3>
+                              {{ section.settings.icon4_text }}
+                          </div>
+                          <div class="cb"></div>
+                      </div>
+                </div>
+            </div>
+
+
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <div class="appear-delay{% cycle '','-1','-2','-3','-4' %}">
+            <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.layout == 'right' -%}
+        {{ image_layout }}
+      {%- endif -%}
+    </div>
+  </div>
+
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Icons w image-text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "Image 2"
+      },
+      {
+        "type": "range",
+        "id": "image_width",
+        "label": "Image width",
+        "default": 700,
+        "min": 200,
+        "max": 700,
+        "step": 10,
+        "unit": "px"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Image with text"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon1",
+        "label": "Icon 1"
+      },
+      {
+        "type": "text",
+        "id": "icon1_title",
+        "label": "Icon 1 Heading",
+        "default": "Hassle-Free"
+      },
+      {
+        "type": "richtext",
+        "id": "icon1_text",
+        "label": "Icon 1 Text",
+        "default": "<p>No more tea bags, infusion time or boiling water. It takes less than 10 seconds to prepare.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon2",
+        "label": "Icon 2"
+      },
+      {
+        "type": "text",
+        "id": "icon2_title",
+        "label": "Icon 2 Heading",
+        "default": "All Natural"
+      },
+      {
+        "type": "richtext",
+        "id": "icon2_text",
+        "label": "Icon 2 Text",
+        "default": "<p>Harmful chemicals, artificial and natural flavors are a big NONO. Filled with delicious organic ingredients used for centuries.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon3",
+        "label": "Icon 3"
+      },
+      {
+        "type": "text",
+        "id": "icon3_title",
+        "label": "Icon 3 Heading",
+        "default": "Glow From the Inside Out"
+      },
+      {
+        "type": "richtext",
+        "id": "icon3_text",
+        "label": "Icon 3 Text",
+        "default": "<p>The health benefits you deserve.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon4",
+        "label": "Icon 4"
+      },
+      {
+        "type": "text",
+        "id": "icon4_title",
+        "label": "Icon 4 Heading",
+        "default": "CANADIAN OWNED"
+      },
+      {
+        "type": "richtext",
+        "id": "icon4_text",
+        "label": "Icon 4 Text",
+        "default": "<p>Fast-shipping across North-America.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "select",
+        "id": "button_style",
+        "label": "Button style",
+        "default": "primary",
+        "options": [
+          {
+            "value": "primary",
+            "label": "Primary"
+          },
+          {
+            "value": "secondary",
+            "label": "Secondary"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "align_text",
+        "label": "Text alignment",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Centered"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Layout",
+        "default": "right",
+        "options": [
+          {
+            "value": "left",
+            "label": "Image on left"
+          },
+          {
+            "value": "right",
+            "label": "Image on right"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icons w image-text"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,2835 @@
+{% layout none %}
+{% if request.locale.iso_code == 'en' %}
+<!DOCTYPE html>
+<html class="no-js" lang="{{request.locale.iso_code}}" dir="{{settings.text_direction}}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_fr_favicon_32x32.png?v=1646856976" type="image/png" />
+    <title>Teangle - The World&#39;s Healthiest Matcha Tea </title>
+    <meta name="description" content="Matcha Waiting For?! Find out how Teangle matcha tea can make you glow inside and out. Simple and delicious, it will do you wonderful good!">
+     <meta property="og:url" content="https://teangle.ca/pages/q4-22-funnel-var-1">
+  <meta property="og:title" content="Teangle - The World&#39;s Healthiest Matcha Tea">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Matcha Waiting For?! Find out how Teangle matcha tea can make you glow inside and out. Simple and delicious, it will do you wonderful good!"><meta property="og:image" content="http://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-sharing-image_2e821795-2c71-4319-a6c3-734ed7b5ffbd.jpg?v=1621634357">
+    <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-sharing-image_2e821795-2c71-4319-a6c3-734ed7b5ffbd.jpg?v=1621634357">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630"><meta name="twitter:site" content="@">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Teangle - The World&#39;s Healthiest Matcha Tea">
+    <meta name="twitter:description" content="Matcha Waiting For?! Find out how Teangle matcha tea can make you glow inside and out. Simple and delicious, it will do you wonderful good!">
+    {{'theme.css' | asset_url | stylesheet_tag}}{%- render 'css-variables' -%} 
+  
+  
+    <style>
+      @font-face {
+        font-family: 'Termina';
+        src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaBoldRegular.woff2') format('woff2'), url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaBoldRegular.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Termina';
+        src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaRegular.woff2') format('woff2'), url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaRegular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Termina';
+        src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaHeavyRegular.woff2') format('woff2'), url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaHeavyRegular.woff') format('woff');
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Termina';
+        src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaBlackRegular.woff2') format('woff2'), url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaBlackRegular.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      .abc_wrapper h1,
+      .abc_wrapper h2,
+      .abc_wrapper h3,
+      .abc_wrapper h4,
+      .abc_wrapper h5 {
+        font-family: 'Termina', sans-serif !important;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .abc_wrapper {
+        overflow: hidden;
+      }
+
+      .odesktop {
+        display: block !important;
+      }
+
+      .omobile {
+        display: none !important;
+      }
+
+      .cb {
+        clear: both;
+      }
+
+      .page-width {
+        max-width: 1700px !important;
+      }
+
+      .page-width.page-width-narrow {
+        max-width: 1280px !important;
+      }
+
+      /* Header */
+      .headwrap {
+        padding: 15px 0 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        z-index: 10;
+      }
+
+      .header_logo1 img {
+        max-width: 150px;
+      }
+
+      .headwrap ul {
+        margin: 0;
+      }
+
+      .headwrap ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      /* Section 1 */
+      .fw_grid1 {
+        background: #1f4844;
+        color: #fff;
+      }
+
+      .fwgrid_item_txt {
+        width: 50%;
+        float: left;
+      }
+
+      .fwgrid_item_img {
+        width: 50%;
+        float: left;
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-28_1100x.jpg?v=1684091332) center center no-repeat;
+        height: 35vw;
+        min-height: 600px;
+        background-size: cover;
+      }
+
+      .lp1_inmeta {
+        padding: calc(70px + 6vw) calc(2vw + 20px) 40px calc(3vw + 60px + 3vh);
+        max-width: 720px;
+      }
+
+      .lp1_reviews {
+        width: 300px;
+        line-height: 20px;
+        display: block;
+        margin: 0 0 10px;
+        font-size: 17px;
+      }
+
+      .lp1_reviews img {
+        display: inline;
+        max-width: 90px;
+      }
+
+      .lp1_cta {
+        display: block;
+        max-width: 320px;
+        text-align: center;
+      }
+
+      .btn.lp1btn {
+        background: #ffdd00;
+        color: #1f4844;
+        margin: 10px 0;
+        padding: 12px 40px;
+        font-size: 20px;
+        display: block;
+      }
+
+      /* Section 2 */
+      .lp1_sec2b {
+        padding-top: 30px;
+      }
+
+      .lp1_sec2b p {
+        font-size: 16px;
+      }
+
+      .lp1_sec2b ul {
+        list-style: none;
+        margin: 30px 0 40px;
+      }
+
+      .lp1_sec2b ul li {
+        padding-left: 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      .lp1_sec2b ul li.what_list1 {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/active.svg?v=1664393145) 2px 4px no-repeat;
+        background-size: 27px;
+      }
+
+      .lp1_sec2b ul li.what_list2 {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/appearance.svg?v=1664393145) 2px 12px no-repeat;
+        background-size: 27px;
+      }
+
+      .lp1_sec2b ul li.what_list3 {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/zen.svg?v=1664393145) 2px 4px no-repeat;
+        background-size: 24px;
+      }
+
+      .lp1_sec2b ul li.what_list4 {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/glow.svg?v=1664393145) 2px 4px no-repeat;
+        background-size: 27px;
+      }
+
+      /* Section 3 */
+      .lp1_sec3 {
+        padding: 3vw 0;
+        background: #f2f5f1;
+      }
+
+      .lp1s3_offer {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 7px -2px #c3c3c3;
+      }
+
+      .lp1s3_offer.lp1s3_offer2 {
+        box-shadow: 0px 0px 13px 3px #5687834f;
+      }
+
+      .lp1s3omt {
+        padding: 10px 30px;
+      }
+
+      .lp1s3omt h3 {
+        font-size: 20px;
+      }
+
+      .lp1s3freq {
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .lp1s3price {
+        font-size: 26px;
+      }
+
+      .lp1s3price del {
+        color: #ccc;
+      }
+
+      .lp1s3price .serving {
+        display: block;
+        font-size: 14px;
+        color: #16be73;
+      }
+
+      .bbadge {
+        background: #1e4845;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+
+      .lp1s3om {
+        max-width: 320px;
+        margin: 10px auto 0;
+        display: block;
+      }
+
+      .subsavebadge {
+        margin: 0 auto 10px;
+        background: #D87739;
+        color: #fff;
+        max-width: 170px;
+        text-align: center;
+      }
+
+      .lp1s3cta {
+        width: 100%;
+        text-align: center;
+      }
+
+      .lp1s3cta a {
+        display: block;
+      }
+
+      .lp1s3cta p {
+        margin: 10px 0 10px;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+      .lp1s3ul {
+        margin: 0 0 20px;
+      }
+
+      .lp1s3ul li {
+        list-style: none;
+        padding-left: 22px;
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_checkmark.svg?v=1664460126) 0 7px no-repeat;
+        background-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      /* Section 4 */
+      .lp1_sec4,
+      .lp1_sec8,
+      .lp1_sec10 {
+        background: #fff;
+        padding: 70px 0 50px;
+      }
+
+      .lp1_sec4 h2 {
+        position: absolute;
+        top: 0;
+      }
+
+      .lp1_sec4b img.odesktop {
+        transform: rotate(180deg);
+        max-width: 80%;
+        margin: -70px auto 0;
+      }
+
+      .lp1s4ben {
+        margin: 0 0 25px;
+      }
+
+      /* Section 5 */
+      .lp1_sec5,
+      .lp1_sec6,
+      .lp1_sec7 {
+        padding: 4vw 0;
+      }
+
+      .lp1s5tab {
+        margin: 10px auto;
+        max-width: 700px;
+        text-align: center;
+      }
+
+      .lp1s5tab .grid {
+        border-bottom: 1px solid #ddd;
+        padding: 5px 0vw;
+        margin-bottom: 10px;
+      }
+
+      .lp1s5rt {
+        font-size: 16px;
+        font-family: 'Termina';
+        font-weight: 600;
+      }
+
+      .lp1s5rh {
+        font-size: 18px;
+        font-family: 'Termina';
+        font-weight: 600;
+      }
+
+      .lp1s6head {
+        max-width: 680px;
+        margin: 0 auto 35px;
+      }
+
+      .lp1_sec6 {
+        background: #fcfcfc;
+      }
+
+      .lp1s9a h2 {
+        font-size: 3.2em;
+      }
+
+      .lp1s9a .btn {
+        background: #de9076;
+      }
+
+      .lp1s9b a {
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .lp1_sec9 {
+        padding: 70px 0 50px;
+        background: #1f4844;
+        color: #fff;
+      }
+
+      .lp1s9b {
+        margin: 50px auto 10px;
+        padding: 30px 0px;
+        max-width: 580px;
+        border-top: 1px solid #efaa7e;
+      }
+
+      .lp1s9b img {
+        max-width: 150px;
+      }
+
+      /* FAQs ACCORDION */
+      .accordionc {
+        color: #1e4845;
+        cursor: pointer;
+        padding: 10px 18px 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        border-bottom: 1px solid #f7eee3;
+        font-weight: 600;
+        letter-spacing: 0px;
+      }
+
+      .active,
+      .accordionc:hover,
+      .active:after {
+        color: #D19B71;
+      }
+
+      .accordionc:after {
+        content: '\002B';
+        color: #1e4845;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      .panel {
+        padding: 0px 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin-top: 10px;
+      }
+
+      .lp1_sec7 .section-header {
+        text-align: center;
+      }
+
+      /* social Slider */
+      .single_ig_card {
+        border-radius: 20px;
+        max-width: 410px;
+        overflow: hidden;
+        margin: 0px 10px 20px;
+        border: 0px solid #fff;
+      }
+
+      .sig_card_content {
+        padding: 25px 15px 10px;
+        background: #f2f5f1;
+      }
+
+      .sig_card_pp {
+        max-width: 60px;
+        display: inline-block;
+        min-height: 60px;
+        float: left;
+      }
+
+      .sig_card_pp img {
+        border-radius: 50%;
+      }
+
+      .sig_card_name {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      .sig_card_handle {
+        max-width: calc(100% - 60px);
+        display: inline-block;
+        padding: 0 10px;
+        height: 60px;
+        float: left;
+      }
+
+      .sig_card_text {
+        font-size: 13px;
+        padding: 15px 0 0;
+      }
+
+      /* Section 10 */
+      .lp1_sec10 {
+        background: #FFF url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps43.jpg?v=1664574834) 90vw center no-repeat;
+        padding: 70px 0 50px;
+        background-size: 40vw;
+      }
+
+      .nut-facts {
+        display: block;
+        width: 100%;
+        text-align: left;
+        max-width: 400px;
+      }
+
+      .nut-facts span {
+        display: block;
+        width: calc(33% - 10px);
+        float: left;
+        border: 1px solid #f9f9f9;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 0px 3px;
+        background: #f7eee3;
+      }
+
+      .nut-meta-list ul {
+        list-style: none;
+        margin: 40px 0 10px;
+      }
+
+      .nut-meta-list ul li {
+        padding-left: 90px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+
+      .nut-meta-list ul li.nut-matcha {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-45.png?v=1664575749) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-ginger {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-46.png?v=1664575749) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-lgrass {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-47.png?v=1664575749) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-stevia {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-48.png?v=1664575749) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-cina {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-50.png?v=1664794352) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-cardm {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-51.png?v=1664794352) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-fennel {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-49.png?v=1664794352) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-nutmeg {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-63.png?v=1665097760) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .lp1s10imb {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        border-radius: 300px;
+        box-shadow: 2px 3px 12px #cddd;
+        background: #fff;
+        overflow: hidden;
+        bottom: 2%;
+        right: 0;
+      }
+
+      .nut-matcha h4 {
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+
+      .lp1s10bimg {
+        position: relative;
+      }
+
+      #lp1s10imb1 img {
+        position: relative;
+        top: -160px;
+      }
+
+      #lp1s10imb2 img {
+        position: relative;
+        top: -50px;
+      }
+
+      .lp1s10imb img:hover {
+        transform: scale(1.2);
+      }
+
+      /* ----------------------------------------------------------------- RESPONSIVE ----------------------------------------------------------------- */
+      @media only screen and (min-width: 769px) {
+
+        .lp1_inmeta ul li,
+        .lp1_inmeta p {
+          font-size: 17px;
+        }
+
+        .lp1_cta p {
+          font-size: 16px;
+        }
+
+        .lp1_sec2 {
+          padding: 4vw 0;
+        }
+
+        .lp1_sec2b {
+          max-width: 500px;
+        }
+
+        .lp1s3_offer1 {
+          margin-top: 45px;
+        }
+
+        .lp1_sec4a,
+        .lp1_sec4c {
+          position: relative;
+          padding-top: 170px;
+        }
+
+        .lp1s4ben h3 {
+          font-size: 20px;
+          margin: 0 0 5px;
+        }
+
+        .lp1s8b {
+          padding-top: 5vw;
+          padding-left: 3vw;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .omobile {
+          display: block !important;
+        }
+
+        .odesktop {
+          display: none !important;
+        }
+
+        p,
+        ul li {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+
+        .lp1s9a h2 {
+          font-size: 1.8em;
+        }
+
+        .fwgrid_item_txt,
+        .fwgrid_item_img {
+          width: 100%;
+          float: none;
+        }
+
+        .lp1_inmeta {
+          padding: 40px 20px;
+        }
+
+        .lp1_sec2b ul {
+          margin: 20px 0 15px;
+        }
+
+        .lp1s3_offer1 {
+          margin-top: 25px;
+        }
+
+        .lp1_sec2,
+        .lp1_sec3,
+        .lp1_sec4,
+        .lp1_sec5,
+        .lp1_sec6,
+        .lp1_sec7,
+        .lp1_sec8,
+        .lp1_sec9,
+        .lp1_sec10 {
+          padding: 50px 0 40px;
+        }
+
+        .lp1_sec4 h2 {
+          position: relative;
+          top: 0;
+          margin-bottom: 40px;
+        }
+
+        .regbtn {
+          font-size: 16px;
+          font-family: 'Termina';
+          letter-spacing: 1px;
+          padding: 15px 10px;
+        }
+
+        .lp1s10imb {
+          width: 120px;
+          height: 120px;
+          right: 40px;
+        }
+
+        #lp1s10imb1 img {
+          top: -100px;
+        }
+
+        #lp1s10imb2 img {
+          top: -30px;
+        }
+
+        .ing-carousel {
+          padding-left: 20px;
+        }
+      }
+    </style>
+
+
+
+   
+  </head>
+  <body>
+    <div class="abc_wrapper">
+      <div class="headwrap">
+        <div class="page-width">
+          <div class="grid">
+            <div class="grid__item medium-up--one-third header_logo1 text-left small--one-half">
+              <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_fr_logo_72a82fa8-8467-4e16-a06c-66f324ce63dd_150x.png?v=1646431894" alt="Teangle Matcha">
+            </div>
+            <div class="grid__item medium-up--one-third text-center small--hide">
+              <ul>
+                <li>
+                  <a href="#benefits">Benefits</a>
+                </li>
+                <li>
+                  <a href="#reviews">Reviews</a>
+                </li>
+                <li>
+                  <a href="#faq">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__item medium-up--one-third text-right small--one-half">
+              <a href="https://fr.teangle.ca/pages/q4-22-funnel-var-1?utm_medium=headnav" >FR</a>
+              <a href="#buymatcha" class="headercta btn">Shop Teangle</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec1">
+        <div class="fw_grid fw_grid1 clearfix">
+          <div class="fwgrid_item fwgrid_item_txt ">
+            <img class="omobile" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/1203144979725976.fZCzoXfWZi3Y60RBJtpp_height640_600x.png?v=1665673041" style=" margin-top: 10px; ">
+            <div class="lp1_inmeta">
+              <div class="lp1_reviews">
+                <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/5stars.svg?v=1664385064" alt="4000+ Reviews"> 4000+ reviews
+              </div>
+              <h2>The newest and healthiest lifestyle drink for busy moms</h2>
+              <p>Teangle combines Matcha and other superfood ingredients so that you can have the energy and positivity to take care of yourself!</p>
+              <ul>
+                <li>10x the benefits of green tea</li>
+                <li>No infusion or tea bags required</li>
+                <li>Boosts Energy, Mood and Weight Loss</li>
+              </ul>
+              <div class="lp1_cta">
+                <a href="#buymatcha" class="lp1btn btn">Get Started</a>
+                <p>100% Money Back Guarantee</p>
+              </div>
+            </div>
+          </div>
+          <div class="fwgrid_item fwgrid_item_img odesktop"></div>
+          <div class="cb"></div>
+        </div>
+        <div class="fw_grid fw_grid2">
+          <div class="page-width">
+            <div class="grid">
+              <div style="margin: 20px auto; max-width: 960px;">
+                <div class="feature-row">
+                  <img class="odesktop lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/collagen-icons-2022-EN-C.png?v=1665096444">
+                  <img class="omobile lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-icons-2022-EN-m3.png?v=1665096932" style="max-width: 90%; margin-bottom: -20px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec2">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="grid__item medium-up--one-half lp1_sec2a">
+              <img class="lazzy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/philippe-and-mom_640x.jpg?v=1665094098" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/philippe-and-mom_640x.jpg?v=1665094098"  alt=" I am Philippe">
+            </div>
+            <div class="grid__item medium-up--one-half lp1_sec2b">
+              <h2>Even Mama Needs Some Self-Care Time</h2>
+              <p>Hi, I'm Philippe and I founded Teangle because of my mom. At the age of 21 I was living with her while she was going through a bitter divorce. </p>
+              <p> One day as I watched her cleaning the dishes in the kitchen, it struck me how she seemed to have lost her usual spirit and the spark in her eyes. </p>
+              <p> I didn't recognize her anymore. <br>You see, my mother has a big heart. <br>She's always taken care of others. <br>Often times, forgetting herself and putting to the side her dreams. <br>I started noticing how many women show the same altruism. <br>They give, give, give. <br>They put their own needs, desires and dreams second to someone else’s . <br>
+              <p>Teangle was created to give women the positive energy they need to start making their own health and well-being a priority! </p>
+              <p> You'll be amazed at how it make life more enjoyable and how it gives you an ever greater capacity to GIVE ❤️!</p>
+              <a href="#buymatcha" class="regcta btn">GET STARTED</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec3 clearfix" id="buymatcha">
+        <div class="grid__item medium-up--one-thirdb lp1s3_offerw2">
+              <div class="lp1s3_offer lp1s3_offer2" style=" max-width: 730px; margin: 0 auto 121px; ">
+                <div class="lp1s3om" style=" float: left; ">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer2_400x.jpg?v=1664453103">
+                </div>
+                <div class="lp1s3omt" style=" padding: 20px 30px 10px; float: left; ">
+                  <h3>Teangle Starter Pack</h3>
+                  <p class="lp1s3freq">Best for starting out:</p>
+                  <ul class="lp1s3ul">
+                    <li>1 Ginger & Lemongrass Matcha ( 30 servings)</li>
+                    <li>1 Chai Matcha ( 30 servings)</li>
+                    <li>1 Teangle Bottle (Green)</li>
+                    <li>1 Teangle Matcha Spoon</li>
+                  </ul>
+                  <p class="lp1s3price">$82.00 <del>$86.9</del>
+                    <span class="serving">$0.8 per serving • Save $4.99</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a href="/cart/39780023894098:1?note=q4-lpv1" class="regbtn btn mcta">Start Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+        <!--<div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="grid__item medium-up--one-third small--hide lp1s3_offerw1">
+              <div class="lp1s3_offer lp1s3_offer1">
+                <div class="lp1s3om">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer-b_400x.jpg?v=1664453103">
+                </div>
+                <div class="lp1s3omt">
+                  <h3>One Time Purchase</h3>
+                  <p class="lp1s3freq">Try out Teangle</p>
+                  <ul class="lp1s3ul">
+                    <li>60 Servings / 30 Days of Teangle</li>
+                    <li>Ships once</li>
+                  </ul>
+                  <p class="lp1s3price">$54 <span class="serving">$0.9 per serving</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a href="https://teangle.ca/cart/add?items[][id]=39968388776018&items[][quantity]=1&items[][id]=39968387039314&items[][quantity]=1&return_to=/checkout?note=q4-22-funnel-var-1" class="regbtn addotbb btn mcta">Buy Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-third lp1s3_offerw2">
+              <div class="lp1s3_offer lp1s3_offer2">
+                <div class="bbadge" style=" background: #d87739; ">Most Popular</div>
+                <div class="lp1s3om">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer2_400x.jpg?v=1664453103">
+                </div>
+                <div class="lp1s3omt">
+                  <h3>Single Subscription</h3>
+                  <p class="lp1s3freq">Best for starting out:</p>
+                  <ul class="lp1s3ul">
+                    <li>60 servings \ 30 days of Teangle</li>
+                    <li>Delivered monthly</li>
+                    <li>Free Starter Kit: Premium bottle and spoon</li>
+                    <li>No Commitment, Pause or cancel Anytime</li>
+                  </ul>
+                  <p class="lp1s3price">$43.2 <del>$54</del>
+                    <span class="serving">$0.71 per serving • Save $10.8</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a onclick="addSingle()" class="regbtn btn mcta">Start Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-third lp1s3_offerw3">
+              <div class="lp1s3_offer lp1s3_offer">
+                <div class="bbadge">Best Value</div>
+                <div class="lp1s3om">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer3-b2_400x.jpg?v=1677872088">
+                </div>
+                <div class="lp1s3omt">
+                  <h3>Double Subscription</h3>
+                  <p class="lp1s3freq">Best for 2 daily drinkers or increased usage:</p>
+                  <ul class="lp1s3ul">
+                    <li>120 servings of Teangle \ 30 days of Teangle</li>
+                    <li>Delivered monthly</li>
+                    <li>Free Starter Kit: Two Premium bottles and two Spoons</li>
+                    <li>No Commitment, Pause or cancel Anytime</li>
+                    <li>Free Shipping</li>
+                  </ul>
+                  <p class="lp1s3price">$84.2 <del>$108</del>
+                    <span class="serving">$0.64 per serving • Save $23.8</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a onclick="addDouble()" class="regbtn btn mcta">Start Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-third medium-up--hide lp1s3_offerw1">
+              <div class="lp1s3_offer lp1s3_offer1">
+                <div class="lp1s3om">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer1_400x.jpg?v=1664453103">
+                </div>
+                <div class="lp1s3omt">
+                  <h3>One Time Purchase</h3>
+                  <p class="lp1s3freq">Try out Teangle</p>
+                  <ul class="lp1s3ul">
+                    <li>60 Servings / 30 Days of Teangle</li>
+                    <li>Ships once</li>
+                  </ul>
+                  <p class="lp1s3price">$54 <span class="serving">$0.9 per serving</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a href="https://teangle.ca/cart/add?items[][id]=39968388776018&items[][quantity]=1&items[][id]=39968387039314&items[][quantity]=1&return_to=/checkout?note=q4-22-funnel-var-1" class="regbtn addotbb btn mcta">Buy Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
+      </div> 
+      <div class="lp1_sec4" id="benefits">
+        <div class="lp1_sec4in">
+          <div class="page-width page-width-narrow">
+            <div class="grid">
+              <div class="grid__item medium-up--one-third lp1_sec4a">
+                <h2>Two Servings <br>Twice a Day <br>Real Benefits </h2>
+                <div class="lp1s4ben">
+                  <h3>The Taste</h3>
+                  <p>At Teangle, life and fun go hand in hand. We live by the motto ‘Do Your Health a Flavor’ and believe that no one should sacrifice taste & pleasure when it comes to their health. Our blends are D-E-L-I-C-I-O-U-S!</p>
+                </div>
+                <div class="lp1s4ben">
+                  <h3>Easy as 1-2-3</h3>
+                  <p>Teangle fits your busy lifestyle and takes less than 10 seconds to prepare. Just add your powder to a bottle of hot (not boiling) or cold water, shake, and you're ready to take on the world.</p>
+                </div>
+              </div>
+              <div class="grid__item medium-up--one-third lp1_sec4b">
+                <img class="odesktop lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps42.jpg?v=1664459269" alt="benefits of teangle">
+                <img class="omobile lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps5.jpg?v=1664459269" alt="benefits of teangle">
+              </div>
+              <div class="grid__item medium-up--one-third lp1_sec4c">
+                <div class="lp1s4ben">
+                  <h3>Natural</h3>
+                  <p>We spent a year sampling and traveling to find the highest quality ingredients. We use organic ingredients that are filled to the brim with vitamins and minerals. Added sugar, preservatives and flavouring are a big NONO.</p>
+                </div>
+                <div class="lp1s4ben">
+                  <h3>Balanced Energy</h3>
+                  <p>Unlike coffee or energy drinks, Teangle provides you with long-lasting energy without the nasty side effects like the : crash, anxiety and jitters. Between the both of us,we know you don't need any more of that in your life.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec10">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="lp1s6head grid__item text-center">
+              <p class="h5" style=" font-weight: 600; color: #D19B71; ">What's Inside?</p>
+              <h2>What makes the magic happen!</h2>
+            </div>
+          </div>
+          <div class="grid lp1s10b">
+            <div class="ing-carousel">
+              <div class="ing-cardsingle grid ing-card-ginger">
+                <div class="grid__item medium-up--one-half">
+                  <div class="lp1s10bimg">
+                    <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps44.jpg?v=1664574834" alt="Ginger & Lemongrass Matcha">
+                    <div class="lp1s10imb" id="lp1s10imb1">
+                      <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps54.jpg?v=1664794831" alt="Teangle Chai Matcha">
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__item medium-up--one-half">
+                  <div class="lp1s10bmeta">
+                    <h3>Ginger & Lemongrass Matcha</h3>
+                    <p>Each bag contains 30 servings <br>
+                    </p>
+                    <p class="nut-facts">
+                      <span>
+                        <strong>0.5g</strong>
+                        <br>Carbs </span>
+                      <span>
+                        <strong>~30mg</strong>
+                        <br>Caffeine </span>
+                      <span>
+                        <strong>~3</strong>
+                        <br>Calories </span>
+                    <div class="cb"></div>
+                    </p>
+                    <div class="nut-meta-list">
+                      <ul>
+                        <li class="nut-matcha">
+                          <h4>Japanese Matcha</h4>
+                          <p>Focus and energy without the jitters and crash.</p>
+                        </li>
+                        <li class="nut-ginger">
+                          <h4>Ginger</h4>
+                          <p>Boosts overall immunity and reduces bloating.</p>
+                        </li>
+                        <li class="nut-lgrass">
+                          <h4>Lemongrass</h4>
+                          <p>Helps maintain stable blood sugar levels</p>
+                        </li>
+                        <li class="nut-stevia">
+                          <h4>Stevia</h4>
+                          <p>A calorie and carb free natural sweetener.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ing-cardsingle grid ing-card-chai" style="display: none;">
+                <div class="grid__item medium-up--one-half">
+                  <div class="lp1s10bimg">
+                    <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps62_524x.jpg?v=1665097499" alt="Teangle Chai Matcha">
+                    <div class="lp1s10imb" id="lp1s10imb2">
+                      <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps44.jpg?v=1664574834" alt="Ginger & Lemongrass Matcha">
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__item medium-up--one-half">
+                  <div class="lp1s10bmeta">
+                    <h3>Teangle Chai Matcha</h3>
+                    <p>Each bag contains 30 servings <br>
+                    </p>
+                    <p class="nut-facts">
+                      <span>
+                        <strong>0.5g</strong>
+                        <br>Carbs </span>
+                      <span>
+                        <strong>~30mg</strong>
+                        <br>Caffeine </span>
+                      <span>
+                        <strong>~3</strong>
+                        <br>Calories </span>
+                    <div class="cb"></div>
+                    </p>
+                    <div class="nut-meta-list">
+                      <ul>
+                        <li class="nut-matcha">
+                          <h4>Japanese Matcha</h4>
+                          <p>Focus and energy without the jitters and crash.</p>
+                        </li>
+                        <li class="nut-ginger">
+                          <h4>Ginger</h4>
+                          <p>Boosts overall immunity and reduces bloating.</p>
+                        </li>
+                        <li class="nut-nutmeg">
+                          <h4>Cinnamon, Nutmeg, Fennel, Cardamom </h4>
+                          <p>Hall of fame ingredients that supports a healthy immune system, mood and energy.</p>
+                        </li>
+                        <li class="nut-stevia">
+                          <h4>Stevia</h4>
+                          <p>A calorie and carb free natural sweetener.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec5">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="lp1s5head grid__item text-center">
+              <h2>US vs Them</h2>
+            </div>
+            <div class="grid__item">
+              <div class="lp1s5tab">
+                <div class="lp1s5row lp1s5rh">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <p>TEANGLE</p>
+                    </div>
+                    <div class="grid__item one-third"></div>
+                    <div class="grid__item one-third">
+                      <p>
+                        <span style="font-size: 17px">Other</span>
+                        <br>
+                        <span style="font-size: 14px">Drinks/Coffee</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Long-Lasting energy</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>No jitters, anxiety or crash</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Enjoy hot or cold in seconds</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Organic</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Reduces stress</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt lp1s5tt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <p>$0.7 per serving</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Price</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>$3.5 per serving</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec6" id="reviews">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="lp1s6head text-center">
+              <h2>Join the Teangle fam! 100,00+ women adding flavour and fun to their lives</h2>
+              <p>At Teangle, we’re <strong>A FAMILY</strong> of like minded individuals with a thirst for life who are all about <strong>using their energy to spread the feeling of <em>joie de vivre</em> in all those around them. </strong>
+                <br>
+                <br>After all, new habits and lifestyle changes are so much easier to implement when you’re surrounded by positivity.
+              </p>
+              <a href="#buymatcha" class="btn"> Get your Teangle</a>
+            </div>
+          </div>{% render 'comp-q4-LPV1-UGCslider' %}
+        </div>
+      </div>
+      <div class="lp1_sec7" id="faq">{% render 'faqs-matcha' %}</div>
+      <div class="lp1_sec8">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="grid__item medium-up--one-half lp1s8a">
+              <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/All-Day-Energy-Packed-with-Delicious-Natural-Flavord.jpg?v=1648747687" alt="teangle promise">
+            </div>
+            <div class="grid__item medium-up--one-half text-left lp1s8b">
+              <p class="h5">30 Day Moneyback Guarantee</p>
+              <h2>The Teangle Promise</h2>
+              <p>We put our money where our benefits are. That's how much we believe in our products. And if you're not into it - totally fine. More for us.</p>
+              <a href="#buymatcha" class="btn">MATCHA WAITING FOR?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec9">
+        <div class="page-width page-width-narrow">
+          <div class="grid lp1s9a text-center">
+            <h2>Do your health a flavor!</h2>
+            <a href="#buymatcha" class="btn">Get your Teangle Matcha</a>
+          </div>
+          <div class="grid lp1s9b text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-logo-alt_fcc0ed69-b9f2-4003-821a-822a22732bd7.png?v=1614348963" alt="Teangle">
+            <p>© 2022 Teangle | Proudly Canadian 🍁. All Rights Reserved.</p>
+            <p>Call Us: <a href="tel:8003166320">800-316-6320</a> | Email Us: <a href="mailto:info@teangle.com">info@teangle.com</a>
+            </p>
+            <p>
+              <a href="/policies/privacy-policy" target="_blank">Privacy Policy</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+    <script>
+      function addSingle(){
+        fbq('track', 'AddToCart', {
+              content_name: 'Teangle Single Subscription',
+              content_ids: ['40294256083026'],
+              content_type: 'product',
+              value: 43.2,
+              currency: 'CAD' 
+            }); 
+              ttq.track('AddToCart', {
+                    quantity: 1,
+                    description: 'Teangle Single Subscription',
+                    content_type: 'product',
+                    content_id: ['40294256083026'],
+                    value: 43.2,
+                    currency: 'CAD'
+                  });
+        
+            $.ajax({
+              type: 'POST',
+              url: '/cart/add.js',
+                data: { quantity: 1, id: 40294256083026, selling_plan: 687472722 },
+                properties: { 'Free-Starter-Kit' : "Premium-bottle-and-spoon" },
+              async:false
+          });
+          window.location.href = "https://teangle.ca/checkout";
+        }
+        function addDouble(){
+          fbq('track', 'AddToCart', {
+              content_name: 'Teangle Double Subscription',
+              content_ids: ['40295420493906'],
+              content_type: 'product',
+              value: 84.2,
+              currency: 'CAD' 
+            }); 
+
+           ttq.track('AddToCart', {
+              quantity: 1,
+              description: 'Teangle Double Subscription',
+              content_type: 'product',
+              content_id: ['40295420493906'],
+              value: 84.2,
+              currency: 'CAD'
+            });
+            $.ajax({
+              type: 'POST',
+              url: '/cart/add.js',
+                data: { quantity: 1, id: 40295420493906, selling_plan: 687571026 },
+                properties: { '2Free-Starter-Kit' : "2Premium-bottles-and-2spoons" },
+              async:false
+          });
+          window.location.href = "https://teangle.ca/checkout";
+        }
+      $ = jQuery;
+      jQuery(document).ready(function() {
+
+        $.ajax({
+        type: "POST",
+        url: '/cart/clear.js',
+        data: '',
+        dataType: 'json',
+        success: function() {
+           
+        },
+        error: function(XMLHttpRequest, textStatus) {
+          /* error code */
+        }
+      });
+
+        
+            jQuery('.ig-carousel').slick({
+                  slidesToShow: 3,
+                  infinite: true,
+                  dots: false,
+                  arrows: true,
+                  autoplay: true,
+                  autoplaySpeed: 2000,
+                  adaptiveHeight: true,
+                  centerMode: false,
+                  responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 3,
+                          infinite: true,
+                          dots: true
+                        }
+                      }, {
+                        breakpoint: 600,
+                        settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 2
+                        }
+                      }, {
+                        breakpoint: 480,
+                        settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                        }
+                      } ] 
+                               
+                      }); 
+      });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js" integrity="sha512-eviLb3jW7+OaVLz5N3B5F0hpluwkLb8wTXHOTy0CyNaZM5IlShxX1nEbODak/C0k9UdsrWjqIBKOFY0ELCCArw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.plugins.min.js" integrity="sha512-znjTNYfgassLWnpEDIaGRNLUMuKUtaSz9UV76RFu/peUr8x+mCqEH3jRCJWVRf1ujF2TmT0CoiZOTF+EDoZfEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).ready(function() {
+        $('.lazy').Lazy();
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#lp1s10imb1').click(function() {
+          $(".ing-card-ginger").hide();
+          $(".ing-card-chai").show();
+        });
+        $('#lp1s10imb2').click(function() {
+          $(".ing-card-chai").hide();
+          $(".ing-card-ginger").show();
+        });
+        $('#lp1s10imb1').click(function() {
+             fbq('track', 'AddToCart', {
+              content_name: 'Teangle Matcha', 
+              content_category: 'product',
+              content_ids: ['39968387039314','39968388776018'],
+              content_type: 'product',
+              value: 54,
+              currency: 'CAD' 
+            });  
+
+            ttq.track('AddToCart', {
+              quantity: 1,
+              description: 'Teangle Matcha',
+              content_type: 'product',
+              content_id: ['39968387039314'],
+              value: 54,
+              currency: 'CAD'
+            });
+          });
+      });
+    </script>
+    
+    <script>
+/* >> TriplePixel :: start*/
+~function(W,H,A,L,E,_,B,N){function O(U,T,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET",U,!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):N[B]=R):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),W},E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",0),O("//triplewhale-pixel.web.app/triplefw.txt?",5)))}}("","TriplePixel",localStorage);
+/* << TriplePixel :: end*/
+</script> 
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "fbr87msdxj");
+</script>
+  </body>
+</html>
+{% comment %}<div class="peex-vid-contianer" id="peex-vid-contianer">
+  <button id="peex-vid-target">
+    <span id="peex-review-text"> Enjoy Teangle!</span>
+    <span class="peex-review-icon-text-container"> Enjoy Teangle! </span>
+    <video autoplay muted loop>
+      <source src="//cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4" type="video/mp4"> Your browser does not support the video player.
+    </video>
+  </button>
+  <button id="peex-vid-close">X</button>
+  <button id="peex-playback">
+    <video controls>
+      <source src="//cdn.shopify.com/videos/c/o/v/0ddc5288170d4934880191e294bb737e.mp4" type="video/mp4"> Your browser does not support the video player.
+    </video>
+  </button>
+</div>
+<div class="peex-vid-backdrop" id="peex-vid-backdrop"></div> {% endcomment %}
+
+
+  {% else %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="{{request.locale.iso_code}}" dir="{{settings.text_direction}}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_fr_favicon_32x32.png?v=1646856976" type="image/png" />
+    <title>Teangle - The World&#39;s Healthiest Matcha Tea </title>
+    <meta name="description" content="Matcha Waiting For?! Find out how Teangle matcha tea can make you glow inside and out. Simple and delicious, it will do you wonderful good!">
+     <meta property="og:url" content="https://teangle.ca/pages/q4-22-funnel-var-1">
+  <meta property="og:title" content="Teangle - The World&#39;s Healthiest Matcha Tea">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Matcha Waiting For?! Find out how Teangle matcha tea can make you glow inside and out. Simple and delicious, it will do you wonderful good!"><meta property="og:image" content="http://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-sharing-image_2e821795-2c71-4319-a6c3-734ed7b5ffbd.jpg?v=1621634357">
+    <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-sharing-image_2e821795-2c71-4319-a6c3-734ed7b5ffbd.jpg?v=1621634357">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630"><meta name="twitter:site" content="@">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Teangle - The World&#39;s Healthiest Matcha Tea">
+    <meta name="twitter:description" content="Matcha Waiting For?! Find out how Teangle matcha tea can make you glow inside and out. Simple and delicious, it will do you wonderful good!">
+    {{'theme.css' | asset_url | stylesheet_tag}}{%- render 'css-variables' -%} 
+
+  
+    <style>
+     /* @font-face {
+        font-family: 'Termina';
+        src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaBoldRegular.woff2') format('woff2'), url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaBoldRegular.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Termina';
+        src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaRegular.woff2') format('woff2'), url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaRegular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Termina';
+        src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaHeavyRegular.woff2') format('woff2'), url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaHeavyRegular.woff') format('woff');
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Termina';
+        src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaBlackRegular.woff2') format('woff2'), url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/FONTSPRINGDEMO-TerminaBlackRegular.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      .abc_wrapper h1,
+      .abc_wrapper h2,
+      .abc_wrapper h3,
+      .abc_wrapper h4,
+      .abc_wrapper h5 {
+        font-family: 'Termina', sans-serif !important;
+      }
+*/
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .abc_wrapper {
+        overflow: hidden;
+      }
+
+      .odesktop {
+        display: block !important;
+      }
+
+      .omobile {
+        display: none !important;
+      }
+
+      .cb {
+        clear: both;
+      }
+
+      .page-width {
+        max-width: 1700px !important;
+      }
+
+      .page-width.page-width-narrow {
+        max-width: 1280px !important;
+      }
+
+      /* Header */
+      .headwrap {
+        padding: 15px 0 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        z-index: 10;
+      }
+
+      .header_logo1 img {
+        max-width: 150px;
+      }
+
+      .headwrap ul {
+        margin: 0;
+      }
+
+      .headwrap ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      /* Section 1 */
+      .fw_grid1 {
+        background: #1f4844;
+        color: #fff;
+      }
+
+      .fwgrid_item_txt {
+        width: 50%;
+        float: left;
+      }
+
+      .fwgrid_item_img {
+        width: 50%;
+        float: left;
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/1203144979725974.mT8v2l5qUCcFHGt5VXkT_height640.png?v=1665672952) center center no-repeat;
+        height: 35vw;
+        min-height: 600px;
+        background-size: cover;
+      }
+
+      .lp1_inmeta {
+        padding: calc(70px + 6vw) calc(2vw + 20px) 40px calc(3vw + 60px + 3vh);
+        max-width: 720px;
+      }
+
+      .lp1_reviews {
+        width: 300px;
+        line-height: 20px;
+        display: block;
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+
+      .lp1_reviews img {
+        display: inline;
+        max-width: 90px;
+      }
+
+      .lp1_cta {
+        display: block;
+        max-width: 440px;
+        text-align: center;
+      }
+
+      .btn.lp1btn {
+        background: #ffdd00;
+        color: #1f4844;
+        margin: 10px 0;
+        padding: 12px 40px;
+        font-size: 20px;
+        display: block;
+      }
+
+      /* Section 2 */
+      .lp1_sec2b {
+        padding-top: 30px;
+      }
+
+      .lp1_sec2b p {
+        font-size: 16px;
+      }
+
+      .lp1_sec2b ul {
+        list-style: none;
+        margin: 30px 0 40px;
+      }
+
+      .lp1_sec2b ul li {
+        padding-left: 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      .lp1_sec2b ul li.what_list1 {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/active.svg?v=1664393145) 2px 4px no-repeat;
+        background-size: 27px;
+      }
+
+      .lp1_sec2b ul li.what_list2 {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/appearance.svg?v=1664393145) 2px 12px no-repeat;
+        background-size: 27px;
+      }
+
+      .lp1_sec2b ul li.what_list3 {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/zen.svg?v=1664393145) 2px 4px no-repeat;
+        background-size: 24px;
+      }
+
+      .lp1_sec2b ul li.what_list4 {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/glow.svg?v=1664393145) 2px 4px no-repeat;
+        background-size: 27px;
+      }
+
+      /* Section 3 */
+      .lp1_sec3 {
+        padding: 3vw 0;
+        background: #f2f5f1;
+      }
+
+      .lp1s3_offer {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 7px -2px #c3c3c3;
+      }
+
+      .lp1s3_offer.lp1s3_offer2 {
+        box-shadow: 0px 0px 13px 3px #5687834f;
+      }
+
+      .lp1s3omt {
+        padding: 10px 30px;
+      }
+
+      .lp1s3omt h3 {
+        font-size: 20px;
+      }
+
+      .lp1s3freq {
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .lp1s3price {
+        font-size: 26px;
+      }
+
+      .lp1s3price del {
+        color: #ccc;
+      }
+
+      .lp1s3price .serving {
+        display: block;
+        font-size: 14px;
+        color: #16be73;
+      }
+
+      .bbadge {
+        background: #1e4845;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+
+      .lp1s3om {
+        max-width: 320px;
+        margin: 10px auto 0;
+        display: block;
+      }
+
+      .subsavebadge {
+        margin: 0 auto 10px;
+        background: #D87739;
+        color: #fff;
+        max-width: 170px;
+        text-align: center;
+      }
+
+      .lp1s3cta {
+        width: 100%;
+        text-align: center;
+      }
+
+      .lp1s3cta a {
+        display: block;
+      }
+
+      .lp1s3cta p {
+        margin: 10px 0 10px;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+      .lp1s3ul {
+        margin: 0 0 20px;
+      }
+
+      .lp1s3ul li {
+        list-style: none;
+        padding-left: 22px;
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_checkmark.svg?v=1664460126) 0 7px no-repeat;
+        background-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      /* Section 4 */
+      .lp1_sec4,
+      .lp1_sec8,
+      .lp1_sec10 {
+        background: #fff;
+        padding: 70px 0 50px;
+      }
+
+      .lp1_sec4 h2 {
+        position: absolute;
+        top: 0;
+      }
+
+      .lp1_sec4b img.odesktop {
+        transform: rotate(180deg);
+        max-width: 80%;
+        margin: -70px auto 0;
+      }
+
+      .lp1s4ben {
+        margin: 0 0 25px;
+      }
+
+      /* Section 5 */
+      .lp1_sec5,
+      .lp1_sec6,
+      .lp1_sec7 {
+        padding: 4vw 0;
+      }
+
+      .lp1s5tab {
+        margin: 10px auto;
+        max-width: 700px;
+        text-align: center;
+      }
+
+      .lp1s5tab .grid {
+        border-bottom: 1px solid #ddd;
+        padding: 5px 0vw;
+        margin-bottom: 10px;
+      }
+
+      .lp1s5rt {
+        font-size: 16px;
+        /*font-family: 'Termina'; */
+        font-weight: 600;
+      }
+
+      .lp1s5rh {
+        font-size: 18px;
+        /*font-family: 'Termina'; */
+        font-weight: 600;
+      }
+
+      .lp1s6head {
+        max-width: 680px;
+        margin: 0 auto 35px;
+      }
+
+      .lp1_sec6 {
+        background: #fcfcfc;
+      }
+
+      .lp1s9a h2 {
+        font-size: 3.2em;
+      }
+
+      .lp1s9a .btn {
+        background: #de9076;
+      }
+
+      .lp1s9b a {
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .lp1_sec9 {
+        padding: 70px 0 50px;
+        background: #1f4844;
+        color: #fff;
+      }
+
+      .lp1s9b {
+        margin: 50px auto 10px;
+        padding: 30px 0px;
+        max-width: 580px;
+        border-top: 1px solid #efaa7e;
+      }
+
+      .lp1s9b img {
+        max-width: 150px;
+      }
+
+      /* FAQs ACCORDION */
+      .accordionc {
+        color: #1e4845;
+        cursor: pointer;
+        padding: 10px 18px 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        border-bottom: 1px solid #f7eee3;
+        font-weight: 600;
+        letter-spacing: 0px;
+      }
+
+      .active,
+      .accordionc:hover,
+      .active:after {
+        color: #D19B71;
+      }
+
+      .accordionc:after {
+        content: '\002B';
+        color: #1e4845;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      .panel {
+        padding: 0px 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin-top: 10px;
+      }
+
+      .lp1_sec7 .section-header {
+        text-align: center;
+      }
+
+      /* social Slider */
+      .single_ig_card {
+        border-radius: 20px;
+        max-width: 410px;
+        overflow: hidden;
+        margin: 0px 10px 20px;
+        border: 0px solid #fff;
+      }
+
+      .sig_card_content {
+        padding: 25px 15px 10px;
+        background: #f2f5f1;
+      }
+
+      .sig_card_pp {
+        max-width: 60px;
+        display: inline-block;
+        min-height: 60px;
+        float: left;
+      }
+
+      .sig_card_pp img {
+        border-radius: 50%;
+      }
+
+      .sig_card_name {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      .sig_card_handle {
+        max-width: calc(100% - 60px);
+        display: inline-block;
+        padding: 0 10px;
+        height: 60px;
+        float: left;
+      }
+
+      .sig_card_text {
+        font-size: 13px;
+        padding: 15px 0 0;
+      }
+
+      /* Section 10 */
+      .lp1_sec10 {
+        background: #FFF url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps43.jpg?v=1664574834) 90vw center no-repeat;
+        padding: 70px 0 50px;
+        background-size: 40vw;
+      }
+
+      .nut-facts {
+        display: block;
+        width: 100%;
+        text-align: left;
+        max-width: 400px;
+      }
+
+      .nut-facts span {
+        display: block;
+        width: calc(33% - 10px);
+        float: left;
+        border: 1px solid #f9f9f9;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 0px 3px;
+        background: #f7eee3;
+      }
+
+      .nut-meta-list ul {
+        list-style: none;
+        margin: 40px 0 10px;
+      }
+
+      .nut-meta-list ul li {
+        padding-left: 90px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+
+      .nut-meta-list ul li.nut-matcha {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-45.png?v=1664575749) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-ginger {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-46.png?v=1664575749) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-lgrass {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-47.png?v=1664575749) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-stevia {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-48.png?v=1664575749) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-cina {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-50.png?v=1664794352) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-cardm {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-51.png?v=1664794352) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-fennel {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-49.png?v=1664794352) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .nut-meta-list ul li.nut-nutmeg {
+        background: transparent url(https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps-63.png?v=1665097760) 0 0 no-repeat;
+        background-size: 75px;
+      }
+
+      .lp1s10imb {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        border-radius: 300px;
+        box-shadow: 2px 3px 12px #cddd;
+        background: #fff;
+        overflow: hidden;
+        bottom: 2%;
+        right: 0;
+      }
+
+      .nut-matcha h4 {
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+
+      .lp1s10bimg {
+        position: relative;
+      }
+
+      #lp1s10imb1 img {
+        position: relative;
+        top: -160px;
+      }
+
+      #lp1s10imb2 img {
+        position: relative;
+        top: -50px;
+      }
+
+      .lp1s10imb img:hover {
+        transform: scale(1.2);
+      }
+
+      /* ----------------------------------------------------------------- RESPONSIVE ----------------------------------------------------------------- */
+      @media only screen and (min-width: 769px) {
+
+        .lp1_inmeta ul li,
+        .lp1_inmeta p {
+          font-size: 17px;
+        }
+
+        .lp1_cta p {
+          font-size: 16px;
+        }
+
+        .lp1_sec2 {
+          padding: 4vw 0;
+        }
+
+        .lp1_sec2b {
+          max-width: 500px;
+        }
+
+        .lp1s3_offer1 {
+          margin-top: 45px;
+        }
+
+        .lp1_sec4a,
+        .lp1_sec4c {
+          position: relative;
+          padding-top: 170px;
+        }
+
+        .lp1s4ben h3 {
+          font-size: 20px;
+          margin: 0 0 5px;
+        }
+
+        .lp1s8b {
+          padding-top: 5vw;
+          padding-left: 3vw;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .omobile {
+          display: block !important;
+        }
+
+        .odesktop {
+          display: none !important;
+        }
+
+        p,
+        ul li {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+
+        .lp1s9a h2 {
+          font-size: 1.8em;
+        }
+
+        .fwgrid_item_txt,
+        .fwgrid_item_img {
+          width: 100%;
+          float: none;
+        }
+
+        .lp1_inmeta {
+          padding: 40px 20px;
+        }
+
+        .lp1_sec2b ul {
+          margin: 20px 0 15px;
+        }
+
+        .lp1s3_offer1 {
+          margin-top: 25px;
+        }
+
+        .lp1_sec2,
+        .lp1_sec3,
+        .lp1_sec4,
+        .lp1_sec5,
+        .lp1_sec6,
+        .lp1_sec7,
+        .lp1_sec8,
+        .lp1_sec9,
+        .lp1_sec10 {
+          padding: 50px 0 40px;
+        }
+
+        .lp1_sec4 h2 {
+          position: relative;
+          top: 0;
+          margin-bottom: 40px;
+        }
+
+        .regbtn {
+          font-size: 16px;
+          font-family: 'Termina';
+          letter-spacing: 1px;
+          padding: 15px 10px;
+        }
+
+        .lp1s10imb {
+          width: 120px;
+          height: 120px;
+          right: 40px;
+        }
+
+        #lp1s10imb1 img {
+          top: -100px;
+        }
+
+        #lp1s10imb2 img {
+          top: -30px;
+        }
+
+        .ing-carousel {
+          padding-left: 20px;
+        }
+      }
+    </style>
+
+  
+
+   
+  </head>
+  <body>
+    <div class="abc_wrapper">
+      <div class="headwrap">
+        <div class="page-width">
+          <div class="grid">
+            <div class="grid__item medium-up--one-third header_logo1 text-left small--one-half">
+              <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_fr_logo_72a82fa8-8467-4e16-a06c-66f324ce63dd_150x.png?v=1646431894" alt="Teangle Matcha">
+            </div>
+            <div class="grid__item medium-up--one-third text-center small--hide">
+              <ul>
+                <li>
+                  <a href="#benefits">Bienfaits</a>
+                </li>
+                <li>
+                  <a href="#reviews">Avis</a>
+                </li>
+                <li>
+                  <a href="#faq">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__item medium-up--one-third text-right small--one-half">
+              <a href="https://teangle.ca/pages/q4-22-funnel-var-1?utm_medium=headnav" >EN</a>
+              <a href="#buymatcha" class="headercta btn">Magasiner Teangle</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec1">
+        <div class="fw_grid fw_grid1 clearfix">
+          <div class="fwgrid_item fwgrid_item_txt ">
+            <img class="omobile" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/1203144979725976.fZCzoXfWZi3Y60RBJtpp_height640_600x.png?v=1665673041" style=" margin-top: 10px; ">
+            <div class="lp1_inmeta">
+              <div class="lp1_reviews">
+                <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/5stars.svg?v=1664385064" alt="4000+ Reviews"> 4000+ avis
+              </div>
+              <h2>Un tout nouveau breuvage santé pour les mamans occupées</h2>
+              <p>Teangle combine le Matcha et d'autres super-aliments pour que vous puissiez avoir l'énergie et le dynamisme nécessaires pour prendre soin de vous!</p>
+              <ul>
+                <li>10 fois les bienfaits du thé vert</li>
+                <li>Ne requiert pas d'infusion ou de sachets de thé</li>
+                <li>Optimise l'énergie, l'humeur et la perte de poids</li>
+              </ul>
+              <div class="lp1_cta">
+                <a href="#buymatcha" class="lp1btn btn">COMMENCER MAINTENANT</a>
+                <p>Satisfaction garantie ou argent remis</p>
+              </div>
+            </div>
+          </div>
+          <div class="fwgrid_item fwgrid_item_img odesktop"></div>
+          <div class="cb"></div>
+        </div>
+        <div class="fw_grid fw_grid2">
+          <div class="page-width">
+            <div class="grid">
+              <div style="margin: 20px auto; max-width: 960px;">
+                <div class="feature-row">
+                  <img class="odesktop lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/collagen-icons-2022-FR2.png" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/collagen-icons-2022-FR2.png">
+                  <img class="omobile lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/collagen-icons-2022-FRm3.png?v=1648057052"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/collagen-icons-2022-FRm3.png?v=1648057052" style="max-width: 90%; margin-bottom: -20px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec2">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="grid__item medium-up--one-half lp1_sec2a">
+              <img class="lazzy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/philippe-and-mom_640x.jpg?v=1665094098" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/philippe-and-mom_640x.jpg?v=1665094098" alt=" I am Philippe">
+            </div>
+            <div class="grid__item medium-up--one-half lp1_sec2b">
+              <h2>Même maman a besoin de prendre soin d'elle</h2>
+              <p>Bonjour, je m'appelle Philippe et j'ai fondé Teangle grâce à ma mère. À l'âge de 21 ans, je vivais avec elle alors qu'elle traversait un divorce difficile.</p>
+              <p> Un jour, pendant que je la regardais faire la vaisselle, j'ai été frappé par le fait qu'elle semblait avoir perdu son entrain habituel et l'étincelle dans ses yeux.</p>
+              <p> Je ne la reconnaissais plus. <br>Ma mère a un grand cœur. <br>Elle a toujours pris soin des autres.<br>Souvent, en s'oubliant et en mettant ses rêves de côté. <br>J'ai commencé à remarquer que beaucoup de femmes font preuve du même altruisme. <br>Elles donnent, donnent, donnent. <br>Elles font passer leurs propres besoins, désirs et rêves après ceux des autres. <br>
+              <p>Teangle a été créé pour donner aux femmes l'énergie positive qu'elles ont besoin pour faire de leur santé et de leur bien-être une priorité!</p>
+              <p> Tu sera étonné de voir comment ça rend la vie plus agréable et comment ça te permet d'encore plus DONNER ❤️!</p>
+              <a href="#buymatcha" class="regcta btn">COMMENCER MAINTENANT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec3 clearfix" id="buymatcha">
+        <div class="grid__item medium-up--one-thirdb lp1s3_offerw2">
+              <div class="lp1s3_offer lp1s3_offer2" style=" max-width: 730px; margin: 0 auto 121px; ">
+                <div class="lp1s3om" style=" float: left; ">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer2_400x.jpg?v=1664453103">
+                </div>
+                <div class="lp1s3omt" style=" padding: 20px 30px 10px; float: left; ">
+                  <h3>L'ensemble de départ Teangle</h3>
+                  <p class="lp1s3freq">Pour commencer en beauté :</p>
+                  <ul class="lp1s3ul">
+                    <li>1 Matcha Gingembre & Citronnelle (30 portions)</li>
+                    <li>1 Matcha Chai (30 portions)</li>
+                    <li>1 bouteille Teangle (verte)</li>
+                    <li>1 cuillère à Matcha Teangle</li>
+                  </ul>
+                  <p class="lp1s3price">82.00$ <del>86.90$</del>
+                    <span class="serving">0.80$ par portion • Épargne 4.99$</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a href="/cart/39780023894098:1?note=q4-lpv1" class="regbtn btn mcta">COMMENCER MAINTENANT</a>
+                    <p>Garantie de satisfation de 30 jours</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+        <!--<div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="grid__item medium-up--one-third small--hide lp1s3_offerw1">
+              <div class="lp1s3_offer lp1s3_offer1">
+                <div class="lp1s3om">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer-b_400x.jpg?v=1664453103">
+                </div>
+                <div class="lp1s3omt">
+                  <h3>One Time Purchase</h3>
+                  <p class="lp1s3freq">Try out Teangle</p>
+                  <ul class="lp1s3ul">
+                    <li>60 Servings / 30 Days of Teangle</li>
+                    <li>Ships once</li>
+                  </ul>
+                  <p class="lp1s3price">$54 <span class="serving">$0.9 per serving</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a href="https://teangle.ca/cart/add?items[][id]=39968388776018&items[][quantity]=1&items[][id]=39968387039314&items[][quantity]=1&return_to=/checkout?note=q4-22-funnel-var-1" class="regbtn addotbb btn mcta">Buy Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-third lp1s3_offerw2">
+              <div class="lp1s3_offer lp1s3_offer2">
+                <div class="bbadge" style=" background: #d87739; ">Most Popular</div>
+                <div class="lp1s3om">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer2_400x.jpg?v=1664453103">
+                </div>
+                <div class="lp1s3omt">
+                  <h3>Single Subscription</h3>
+                  <p class="lp1s3freq">Best for starting out:</p>
+                  <ul class="lp1s3ul">
+                    <li>60 servings \ 30 days of Teangle</li>
+                    <li>Delivered monthly</li>
+                    <li>Free Starter Kit: Premium bottle and spoon</li>
+                    <li>No Commitment, Pause or cancel Anytime</li>
+                  </ul>
+                  <p class="lp1s3price">$43.2 <del>$54</del>
+                    <span class="serving">$0.71 per serving • Save $10.8</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a onclick="addSingle()" class="regbtn btn mcta">Start Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-third lp1s3_offerw3">
+              <div class="lp1s3_offer lp1s3_offer">
+                <div class="bbadge">Best Value</div>
+                <div class="lp1s3om">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer3-b2_400x.jpg?v=1677872088">
+                </div>
+                <div class="lp1s3omt">
+                  <h3>Double Subscription</h3>
+                  <p class="lp1s3freq">Best for 2 daily drinkers or increased usage:</p>
+                  <ul class="lp1s3ul">
+                    <li>120 servings of Teangle \ 30 days of Teangle</li>
+                    <li>Delivered monthly</li>
+                    <li>Free Starter Kit: Two Premium bottles and two Spoons</li>
+                    <li>No Commitment, Pause or cancel Anytime</li>
+                    <li>Free Shipping</li>
+                  </ul>
+                  <p class="lp1s3price">$84.2 <del>$108</del>
+                    <span class="serving">$0.64 per serving • Save $23.8</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a onclick="addDouble()" class="regbtn btn mcta">Start Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-third medium-up--hide lp1s3_offerw1">
+              <div class="lp1s3_offer lp1s3_offer1">
+                <div class="lp1s3om">
+                  <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-offer1_400x.jpg?v=1664453103">
+                </div>
+                <div class="lp1s3omt">
+                  <h3>One Time Purchase</h3>
+                  <p class="lp1s3freq">Try out Teangle</p>
+                  <ul class="lp1s3ul">
+                    <li>60 Servings / 30 Days of Teangle</li>
+                    <li>Ships once</li>
+                  </ul>
+                  <p class="lp1s3price">$54 <span class="serving">$0.9 per serving</span>
+                  </p>
+                  <div class="lp1s3cta">
+                    <a href="https://teangle.ca/cart/add?items[][id]=39968388776018&items[][quantity]=1&items[][id]=39968387039314&items[][quantity]=1&return_to=/checkout?note=q4-22-funnel-var-1" class="regbtn addotbb btn mcta">Buy Now</a>
+                    <p>30 Day Money-Back Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
+      </div> 
+      <div class="lp1_sec4" id="benefits">
+        <div class="lp1_sec4in">
+          <div class="page-width page-width-narrow">
+            <div class="grid">
+              <div class="grid__item medium-up--one-third lp1_sec4a">
+                <h2>Deux portions <br>Deux fois par jour <br>De vrais bienfaits </h2>
+                <div class="lp1s4ben">
+                  <h3>Le goût</h3>
+                  <p>Chez Teangle, la vie et le plaisir ne font qu'un. Nous vivons à travers la philosophie "Donne du goût à ta santé" et pensons que personne ne devrait sacrifier le goût et le plaisir lorsqu'il s'agit de sa santé. Nos saveurs sont D-É-L-I-C-I-E-U-S-E-S !</p>
+                </div>
+                <div class="lp1s4ben">
+                  <h3>Simple comme bonjour</h3>
+                  <p>Teangle s'adapte à ton mode de vie chargé et se prépare en moins de 10 secondes. Il suffit d'ajouter la poudre à une bouteille d'eau chaude (non bouillante) ou froide, d'agiter et tu es prêt à affronter le monde.</p>
+                </div>
+              </div>
+              <div class="grid__item medium-up--one-third lp1_sec4b">
+                <img class="odesktop lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps42.jpg?v=1664459269" alt="benefits of teangle">
+                <img class="omobile lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps5.jpg?v=1664459269" alt="benefits of teangle">
+              </div>
+              <div class="grid__item medium-up--one-third lp1_sec4c">
+                <div class="lp1s4ben">
+                  <h3>Naturel</h3>
+                  <p>Nous avons passé un an à voyager et à tester différents matcha pour trouver les ingrédients de la plus haute qualité. Nous utilisons des ingrédients biologiques qui sont remplis de vitamines et de minéraux. Le sucre ajouté, les conservateurs et les additifs, c'est un gros NON.</p>
+                </div>
+                <div class="lp1s4ben">
+                  <h3>Une énergie équilibrée</h3>
+                  <p>Contrairement au café ou aux boissons énergisantes, Teangle procure une énergie durable sans chute drastique, sans l'anxiété et sans les malaises qui en découlent. Entre nous deux, on le sait que tu n'as pas besoin ces perturbateurs dans ta vie.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec10">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="lp1s6head grid__item text-center">
+              <p class="h5" style=" font-weight: 600; color: #D19B71; ">Ingrédients</p>
+              <h2>Rencontre ton matcha!</h2>
+            </div>
+          </div>
+          <div class="grid lp1s10b">
+            <div class="ing-carousel">
+              <div class="ing-cardsingle grid ing-card-ginger">
+                <div class="grid__item medium-up--one-half">
+                  <div class="lp1s10bimg">
+                    <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps44.jpg?v=1664574834" alt="Ginger & Lemongrass Matcha">
+                    <div class="lp1s10imb" id="lp1s10imb1">
+                      <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps54.jpg?v=1664794831" alt="Teangle Chai Matcha">
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__item medium-up--one-half">
+                  <div class="lp1s10bmeta">
+                    <h3>Gingembre & Citronnelle</h3>
+                    <p>Chaque sachet contient 30 portions <br>
+                    </p>
+                    <p class="nut-facts">
+                      <span>
+                        <strong>0.5g</strong>
+                        <br>de glucides </span>
+                      <span>
+                        <strong>~30mg</strong>
+                        <br>de caféine </span>
+                      <span>
+                        <strong>~3</strong>
+                        <br>calories </span>
+                    <div class="cb"></div>
+                    </p>
+                    <div class="nut-meta-list">
+                      <ul>
+                        <li class="nut-matcha">
+                          <h4>Matcha japonais</h4>
+                          <p>Le matcha est 10 fois plus puissant que du thé vert standard.</p>
+                        </li>
+                        <li class="nut-ginger">
+                          <h4>Gingembre</h4>
+                          <p>Le gingembre est très utile pour diminuer l'inflammation et peut traiter de nombreuses formes de nausée, en particulier celle du matin.</p>
+                        </li>
+                        <li class="nut-lgrass">
+                          <h4>Citronnelle</h4>
+                          <p>La citronnelle aide à soulager les colites, les indigestions et les brûlements causés par la gastro-entérite.</p>
+                        </li>
+                        <li class="nut-stevia">
+                          <h4>Stévia</h4>
+                          <p>Le stévia est essentiellement sans calorie et sans glucide. Il pourrait aussi aider à contrôler le taux de sucre dans ton sang.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ing-cardsingle grid ing-card-chai" style="display: none;">
+                <div class="grid__item medium-up--one-half">
+                  <div class="lp1s10bimg">
+                    <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps62_524x.jpg?v=1665097499" alt="Teangle Chai Matcha">
+                    <div class="lp1s10imb" id="lp1s10imb2">
+                      <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps44.jpg?v=1664574834" alt="Ginger & Lemongrass Matcha">
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__item medium-up--one-half">
+                  <div class="lp1s10bmeta">
+                    <h3>Matcha Chai</h3>
+                    <p>Chaque sachet contient 30 portions<br>
+                    </p>
+                    <p class="nut-facts">
+                      <span>
+                        <strong>0.5g</strong>
+                        <br>de glucides </span>
+                      <span>
+                        <strong>~30mg</strong>
+                        <br>de caféine </span>
+                      <span>
+                        <strong>~3</strong>
+                        <br>calories </span>
+                    <div class="cb"></div>
+                    </p>
+                    <div class="nut-meta-list">
+                      <ul>
+                        <li class="nut-matcha">
+                          <h4>Matcha japonais</h4>
+                          <p>Le matcha est 10 fois plus puissant que du thé vert standard.</p>
+                        </li>
+                        <li class="nut-ginger">
+                          <h4>GINGEMBRE</h4>
+                          <p>Le gingembre est très utile pour diminuer l'inflammation et peut traiter de nombreuses formes de nausée, en particulier celle du matin.</p>
+                        </li>
+                        <li class="nut-nutmeg">
+                          <h4>CANNELLE, NOIX DE MUSCADE, FENOUIL, CARDAMOME </h4>
+                          <p>Des ingrédients de renom qui favorisent la santé du système immunitaire, de l'humeur et de l'énergie.</p>
+                        </li>
+                        <li class="nut-stevia">
+                          <h4>Stévia</h4>
+                          <p>Le stévia est essentiellement sans calorie et sans glucide. Il pourrait aussi aider à contrôler le taux de sucre dans ton sang.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec5">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="lp1s5head grid__item text-center">
+              <h2>NOUS VS LES AUTRES</h2>
+            </div>
+            <div class="grid__item">
+              <div class="lp1s5tab">
+                <div class="lp1s5row lp1s5rh">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <p>TEANGLE</p>
+                    </div>
+                    <div class="grid__item one-third"></div>
+                    <div class="grid__item one-third">
+                      <p>
+                        <span style="font-size: 17px">Autres</span>
+                        <br>
+                        <span style="font-size: 14px">Boissons/Café</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Une énergie durable</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Pas de sensation d'énervement, d'anxiété ou de crash</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Se savoure chaud ou froid en quelques secondes</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Biologique</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_check.svg?v=1664460126">
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Réduit le stress</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <img class="lazy" data-src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_cross.svg?v=1664460126">
+                    </div>
+                  </div>
+                </div>
+                <div class="lp1s5row lp1s5rt lp1s5tt">
+                  <div class="grid">
+                    <div class="grid__item one-third">
+                      <p>0.70$ par portion</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>Prix</p>
+                    </div>
+                    <div class="grid__item one-third">
+                      <p>3.50$ par portion</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec6" id="reviews">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="lp1s6head text-center">
+              <h2>Joins-toi aux 100 000+ femmes qui ont ajouté la "joie de vivre" à leur quotidien avec la Famille Teangle!</h2>
+              <p>Chez Teangle, nous sommes une FAMILLE de motivés qui ont soif de vivre et qui souhaitent utiliser leur énergie pour répandre la joie de vivre autour d'eux. </strong>
+                <br>
+                <br>Après tout, les nouvelles habitudes sont tellement plus faciles à adopter lorsqu'on est entouré de positivité.
+              </p>
+              <a href="#buymatcha" class="btn"> Joins-toi à Teangle</a>
+            </div>
+          </div>
+           <div class="ig-carousel"> <div> <div class="single_ig_card"> <div class="sig_card_image"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/Allison.buch.jpg?v=1618417635"> </div> <div class="sig_card_content"> <div class="sig_card_meta clearfix"> <div class="sig_card_pp"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/Allison.buch1.jpg?v=1618417635"> </div> <div class="sig_card_handle"> <p class="sig_card_name">Allison Bucheleres</p> <p class="sig_card_handle"> <a target="_blank" href="https://www.instagram.com/Allison.buch/">@Allison.buch</a> </p> </div> </div> <div class="sig_card_text"> <p>Le Matcha Gingembre & Citronnelle est le breuvage le plus rafraîchissant de tous les temps! Il te donne la quantité parfaite d’énergie, tout en goûtant super bon! Ses bienfaits sont phénoménaux et j’adore le petit plus de gingembre. </p> </div> </div> </div> </div> <div> <div class="single_ig_card"> <div class="sig_card_image"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/sonia_gavrilova.jpg"> </div> <div class="sig_card_content"> <div class="sig_card_meta clearfix"> <div class="sig_card_pp"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/products/sonia_gavrilova1_350x350.jpg?v=1618428974"> </div> <div class="sig_card_handle"> <p class="sig_card_name">Sonia Gavrilova</p> <p class="sig_card_handle"> <a target="_blank" href="https://www.instagram.com/sonia_gavrilova/">@sonia_gavrilova</a> </p> </div> </div> <div class="sig_card_text"> <p>J’aime tellement mon @teanglematcha! Je l’intègre tranquillement à ma routine, en remplacement à mon café matinal et c’est absolument délicieux (en plus d’être rempli de bienfaits incroyables)! </p> </div> </div> </div> </div> <div> <div class="single_ig_card"> <div class="sig_card_image"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/koobzzz.jpg"> </div> <div class="sig_card_content"> <div class="sig_card_meta clearfix"> <div class="sig_card_pp"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/products/koobzzz1_350x350.jpg?v=1618429179"> </div> <div class="sig_card_handle"> <p class="sig_card_name">Kooba Pardo</p> <p class="sig_card_handle"> <a target="_blank" href="https://www.instagram.com/koobzzz/">@koobzzz</a> </p> </div> </div> <div class="sig_card_text"> <p>Appel à tous les amateurs de matcha!! Le Matcha Gingembre et Citronnelle de @teanglematcha est rafraîchissant et énergisant. La meilleure façon de commencer ma journée! </p> </div> </div> </div> </div> <div> <div class="single_ig_card"> <div class="sig_card_image"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/emmaleighhhh.jpg"> </div> <div class="sig_card_content"> <div class="sig_card_meta clearfix"> <div class="sig_card_pp"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/emmaleighhhh1.jpg"> </div> <div class="sig_card_handle"> <p class="sig_card_name">Emma Leigh </p> <p class="sig_card_handle"> <a target="_blank" href="https://www.instagram.com/_emmaleighhhh_/">@_emmaleighhhh_</a> </p> </div> </div> <div class="sig_card_text"> <p>Si tu me connais, tu sais que le matcha m’obsède LITTÉRALEMENT. Bien que j’adore m’aventurer au café du coin, @teanglematcha a rendu possible, pour moi, de préparer mon breuvage préféré, à la maison! @teanglematcha offre plusieurs saveurs, incluant Gingembre et Citronnelle (ce qu’il y a dans ma tasse!), Chai (un autre de mes préférés), Menthe Poivrée et le traditionnel. Si tu aimes le matcha - ou souhaites l’essayer, alors tu devrais goûter @teanglematcha!  </p> </div> </div> </div> </div> <div> <div class="single_ig_card"> <div class="sig_card_image"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ediya.daulet.jpg"> </div> <div class="sig_card_content"> <div class="sig_card_meta clearfix"> <div class="sig_card_pp"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ediya.daulet1.jpg"> </div> <div class="sig_card_handle"> <p class="sig_card_name">Ediya Daulet</p> <p class="sig_card_handle"> <a target="_blank" href="https://www.instagram.com/ediya.daulet/">@ediya.daulet</a> </p> </div> </div> <div class="sig_card_text"> <p>Je me sers un Matcha Gingembre et Citronnelle pour me dégourdir, entre mes appels d’après-midi. Il est exquis glacé! Le goût de citronnelle m’évoque mes voyages en Asie du Sud, me submergeant d’une vague d’excitation, comme si j’étais de retour sur la route.</p> </div> </div> </div> </div> <div> <div class="single_ig_card"> <div class="sig_card_image"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/lovenicolerae.jpg"> </div> <div class="sig_card_content"> <div class="sig_card_meta clearfix"> <div class="sig_card_pp"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/products/lovenicolerae1.jpg?v=1618429086"> </div> <div class="sig_card_handle"> <p class="sig_card_name">Nicole Hamilton</p> <p class="sig_card_handle"> <a target="_blank" href="https://www.instagram.com/lovenicolerae/">@lovenicolerae</a> </p> </div> </div> <div class="sig_card_text"> <p>Jusqu’à présent, j’adore leur matcha - il est instantanément devenu, mon nouveau préféré! Le Gingembre et Citronnelle est tellement rafraîchissant. </p> </div> </div> </div> </div> <div> <div class="single_ig_card"> <div class="sig_card_image"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/erin22xoxo.jpg"> </div> <div class="sig_card_content"> <div class="sig_card_meta clearfix"> <div class="sig_card_pp"> <img class="lazy"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/erin22xoxo1.jpg"> </div> <div class="sig_card_handle"> <p class="sig_card_name">Erin Chau</p> <p class="sig_card_handle"> <a target="_blank" href="https://www.instagram.com/erin22xoxo/">@erin22xoxo</a> </p> </div> </div> <div class="sig_card_text"> <p>Ils ont plusieurs saveurs, mais le Gingembre et Citronnelle est de loin mon préféré. J’en bois à tous les jours, depuis un peu plus d’un mois et je me sens définitivement moins ballonnée et plus énergisée, tout au long de la journée. CE N’EST PAS UN THÉ MINCEUR! Je ne ferais JAMAIS la promotion de ce type de produit. C’est du Matcha (donc, 137 fois plus puissant que du thé régulier) en toute simplicité!</p> </div> </div> </div> </div> </div>
+  
+        </div>
+      </div>
+      <div class="lp1_sec7" id="faq">{% render 'faqs-matcha' %}</div>
+      <div class="lp1_sec8">
+        <div class="page-width page-width-narrow">
+          <div class="grid">
+            <div class="grid__item medium-up--one-half lp1s8a">
+              <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/All-Day-Energy-Packed-with-Delicious-Natural-Flavord.jpg?v=1648747687" alt="teangle promise">
+            </div>
+            <div class="grid__item medium-up--one-half text-left lp1s8b">
+              <p class="h5">GARANTIE DE SATISFACTION DE 30 JOURS</p>
+              <h2>La promesse Teangle</h2>
+              <p>On croit tellement aux avantages de nos produits qu'on en parie notre argent. Si tu n'aimes pas ça, c'est bien correct. Ça en fait plus pour nous.</p>
+              <a href="#buymatcha" class="btn">AJOUTE LE MATCHA À TA VIE?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lp1_sec9">
+        <div class="page-width page-width-narrow">
+          <div class="grid lp1s9a text-center">
+            <h2>Donne du goût à ta santé!</h2>
+            <a href="#buymatcha" class="btn">Procure-toi ton Matcha Teangle</a>
+          </div>
+          <div class="grid lp1s9b text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-logo-alt_fcc0ed69-b9f2-4003-821a-822a22732bd7.png?v=1614348963" alt="Teangle">
+            <p>© 2022 Teangle | Fièrement canadien 🍁. Tous droits réservés.</p>
+            <p>Appelle-nous: <a href="tel:8003166320">800-316-6320</a> | Écris-nous: <a href="mailto:info@teangle.com">info@teangle.com</a>
+            </p>
+            <p>
+              <a href="/policies/privacy-policy" target="_blank">Politique de confidentialité</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+    <script>
+      function addSingle(){
+        fbq('track', 'AddToCart', {
+              content_name: 'Teangle Single Subscription',
+              content_ids: ['40294256083026'],
+              content_type: 'product',
+              value: 43.2,
+              currency: 'CAD' 
+            }); 
+              ttq.track('AddToCart', {
+                    quantity: 1,
+                    description: 'Teangle Single Subscription',
+                    content_type: 'product',
+                    content_id: ['40294256083026'],
+                    value: 43.2,
+                    currency: 'CAD'
+                  });
+        
+            $.ajax({
+              type: 'POST',
+              url: '/cart/add.js',
+                data: { quantity: 1, id: 40294256083026, selling_plan: 687472722 },
+                properties: { 'Free-Starter-Kit' : "Premium-bottle-and-spoon" },
+              async:false
+          });
+          window.location.href = "https://teangle.ca/checkout";
+        }
+        function addDouble(){
+          fbq('track', 'AddToCart', {
+              content_name: 'Teangle Double Subscription',
+              content_ids: ['40295420493906'],
+              content_type: 'product',
+              value: 84.2,
+              currency: 'CAD' 
+            }); 
+
+           ttq.track('AddToCart', {
+              quantity: 1,
+              description: 'Teangle Double Subscription',
+              content_type: 'product',
+              content_id: ['40295420493906'],
+              value: 84.2,
+              currency: 'CAD'
+            });
+            $.ajax({
+              type: 'POST',
+              url: '/cart/add.js',
+                data: { quantity: 1, id: 40295420493906, selling_plan: 687571026 },
+                properties: { '2Free-Starter-Kit' : "2Premium-bottles-and-2spoons" },
+              async:false
+          });
+          window.location.href = "https://teangle.ca/checkout";
+        }
+      $ = jQuery;
+      jQuery(document).ready(function() {
+
+        $.ajax({
+        type: "POST",
+        url: '/cart/clear.js',
+        data: '',
+        dataType: 'json',
+        success: function() {
+           
+        },
+        error: function(XMLHttpRequest, textStatus) {
+          /* error code */
+        }
+      });
+
+        
+            jQuery('.ig-carousel').slick({
+                  slidesToShow: 3,
+                  infinite: true,
+                  dots: false,
+                  arrows: true,
+                  autoplay: true,
+                  autoplaySpeed: 2000,
+                  adaptiveHeight: true,
+                  centerMode: false,
+                  responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 3,
+                          infinite: true,
+                          dots: true
+                        }
+                      }, {
+                        breakpoint: 600,
+                        settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 2
+                        }
+                      }, {
+                        breakpoint: 480,
+                        settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                        }
+                      } ] 
+                               
+                      }); 
+      });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js" integrity="sha512-eviLb3jW7+OaVLz5N3B5F0hpluwkLb8wTXHOTy0CyNaZM5IlShxX1nEbODak/C0k9UdsrWjqIBKOFY0ELCCArw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.plugins.min.js" integrity="sha512-znjTNYfgassLWnpEDIaGRNLUMuKUtaSz9UV76RFu/peUr8x+mCqEH3jRCJWVRf1ujF2TmT0CoiZOTF+EDoZfEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).ready(function() {
+        $('.lazy').Lazy();
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#lp1s10imb1').click(function() {
+          $(".ing-card-ginger").hide();
+          $(".ing-card-chai").show();
+        });
+        $('#lp1s10imb2').click(function() {
+          $(".ing-card-chai").hide();
+          $(".ing-card-ginger").show();
+        });
+        $('#lp1s10imb1').click(function() {
+             fbq('track', 'AddToCart', {
+              content_name: 'Teangle Matcha', 
+              content_category: 'product',
+              content_ids: ['39968387039314','39968388776018'],
+              content_type: 'product',
+              value: 54,
+              currency: 'CAD' 
+            });  
+
+            ttq.track('AddToCart', {
+              quantity: 1,
+              description: 'Teangle Matcha',
+              content_type: 'product',
+              content_id: ['39968387039314'],
+              value: 54,
+              currency: 'CAD'
+            });
+          });
+      });
+    </script>
+    
+    <script>
+/* >> TriplePixel :: start*/
+~function(W,H,A,L,E,_,B,N){function O(U,T,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET",U,!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):N[B]=R):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),W},E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",0),O("//triplewhale-pixel.web.app/triplefw.txt?",5)))}}("","TriplePixel",localStorage);
+/* << TriplePixel :: end*/
+</script> 
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "fbr87msdxj");
+</script>
+  </body>
+</html>
+{% comment %}<div class="peex-vid-contianer" id="peex-vid-contianer">
+  <button id="peex-vid-target">
+    <span id="peex-review-text"> Enjoy Teangle!</span>
+    <span class="peex-review-icon-text-container"> Enjoy Teangle! </span>
+    <video autoplay muted loop>
+      <source src="//cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4" type="video/mp4"> Your browser does not support the video player.
+    </video>
+  </button>
+  <button id="peex-vid-close">X</button>
+  <button id="peex-playback">
+    <video controls>
+      <source src="//cdn.shopify.com/videos/c/o/v/0ddc5288170d4934880191e294bb737e.mp4" type="video/mp4"> Your browser does not support the video player.
+    </video>
+  </button>
+</div>
+<div class="peex-vid-backdrop" id="peex-vid-backdrop"></div> {% endcomment %}
+  {% endif %}

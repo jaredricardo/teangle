@@ -1,0 +1,63 @@
+<section class="fullwidth-text-img"   {%- if section.settings.layout == 'right' -%} style="direction: rtl;"  {%- endif -%}>
+    <div class="secv2row">
+        <div class="secv2contentcol-left" style="background: transparent url({{ section.settings.image | img_url: '1000x' }}) center center no-repeat; background-size: cover;">
+            <div class="secv2content">
+
+            </div>
+        </div>
+        <div class="secv2contentcol-right" style=" {%- if section.settings.layout == 'right' -%} direction: ltr;  {%- endif -%} background-color: {{ section.settings.sec_color }};">
+            <div class="secv2content secv2cb">
+              {{ section.settings.section_html }}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Fullwidth Image HTML",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "textarea",
+        "id": "section_html",
+        "label": "Custom HTML",
+        "default": "<p>add html here</p>",
+        "info": "Supports Liquid"
+      },
+      {
+        "type": "color",
+        "id": "sec_color",
+        "label": "Section Color",
+        "default": "#fffef2"
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Layout",
+        "default": "right",
+        "options": [
+          {
+            "value": "left",
+            "label": "Image on left"
+          },
+          {
+            "value": "right",
+            "label": "Image on right"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Fullwidth Image HTML"
+      }
+    ]
+  }
+{% endschema %}

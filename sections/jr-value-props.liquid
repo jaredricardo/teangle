@@ -1,0 +1,79 @@
+{% liquid 
+
+    assign bg_color = section.settings.bg_color
+    assign text_color = section.settings.text_color
+
+-%}
+
+{% style %}
+
+[data-section-id="{{ section.id }}"] {
+
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+
+}
+
+{% endstyle %} 
+
+<section data-section-id="{{ section.id }}">
+    <div class="page-width section-padding value-props">
+        {% for block in section.blocks %}
+            <div class="prop-container">
+                <div class="img-container">
+                    <img src="{{ block.settings.image | image_url: width: 100  }}" alt="{{ block.settings.title }}" />
+                </div>
+                <div class="text-container">
+                    <h3>{{ block.settings.title }}</h3>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+
+{% schema %}
+{
+    "name": "JR Value Props",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000000"
+        }    
+    ],
+    "blocks": [
+        {
+            "type": "value-prop",
+            "name": "Value Prop",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Prop title",
+                    "default": "Prop Title"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Prop Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Value Props",
+            "category": "Content"
+        }
+    ]
+}
+{% endschema %}

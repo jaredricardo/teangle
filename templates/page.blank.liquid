@@ -1,0 +1,33 @@
+<script src="//cdn.jsdelivr.net/jquery/1.9.1/jquery.min.js"></script>
+<div class="blank_wrapper">
+
+
+ <!-- long_description -->
+  {% if page.metafields.general_fields.long_description != blank %}
+    <div class=" rtee">
+      {{ page.metafields.general_fields.long_description }}
+    </div>	
+  {% endif %}
+ <!-- long_description -->
+  
+   <!-- reviews -->
+  {% if page.metafields.general_fields.reviews != blank %}
+  	  <div id="okendo_revwidget" class="page-width text-center" style=" margin: 10px auto; max-width: 1080px; ">
+  <div class="grid">
+  	<div data-oke-reviews-widget data-oke-reviews-product-id="shopify-{{ page.metafields.general_fields.reviews }}">{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
+  </div>
+</div>
+  {% endif %}
+ <!-- reviews --> 
+  
+ <!-- styles -->
+  {% if page.metafields.general_fields.styles != blank %}
+  	  <style>
+     	 {{ page.metafields.general_fields.styles }}
+	  </style>	
+  {% endif %}
+ <!-- styles --> 
+</div>
+<style>
+  #footer_newsltter { display: none !important; }
+</style>

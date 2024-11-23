@@ -1,0 +1,55 @@
+{% if request.locale.iso_code == 'fr' %}
+<div class="acc_top_nav">
+   <div class="acc_tn_inner">
+      <ul>
+         <li><a href="/account">Historique d'achats</a></li>
+         <!-- Begin ReCharge code -->
+         <li><a href="/tools/recurring/login/">Gérer les abonnements</a></li>
+         <!-- End ReCharge code -->
+          
+         <li><a href="/account/addresses">Adresses</a></li>
+         <!-- <li><a href="/en/pages/membership-guide">Guide d'adhésion</a></li> -->
+         <li><a href="/account/logout">Déconnexion</a></li>
+      </ul>
+   </div>
+</div>
+{% else %}
+<div class="acc_top_nav">
+   <div class="acc_tn_inner">
+      <ul>
+         <li><a href="/account">Order History</a></li>
+         <!-- Begin ReCharge code -->
+         <li><a href="/tools/recurring/login/">Manage Subscriptions</a></li>
+         <!-- End ReCharge code -->
+          
+         <li><a href="/account/addresses">Addresses</a></li>
+         <!-- <li><a href="/en/pages/membership-guide">Guide d'adhésion</a></li> -->
+         <li><a href="/account/logout">Déconnexion</a></li>
+      </ul>
+   </div>
+</div>
+{% endif %}
+<div style="max-width: 1200px; margin: 2vw auto;">
+<div class="teangleaccountfrench" style="width: 100%; min-height: 750px;"></div>
+</div>
+
+<div class="page-width page-content">
+
+  {%- render 'breadcrumbs' -%}
+
+	<div class="grid">
+    <div class="grid__item medium-up--three-quarters medium-up--push-one-eighth">
+      <div class="rte rte--nomargin">
+        {{ page.content }}
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<style>
+  #footer_newsltter { display: none !important; }
+  .announcement-bar , #carttopr  { display: none !important; }
+  .acc_icon_out { display: inline-block !important; }
+.acc_icon_in { display: none !important; }
+</style>

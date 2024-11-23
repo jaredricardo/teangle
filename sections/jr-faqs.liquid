@@ -1,0 +1,150 @@
+{% liquid 
+
+    assign bg_color = section.settings.bg_color
+    assign text_color = section.settings.text_color
+    assign faq_bg_color = section.settings.faq_bg_color
+    assign faq_text_color = section.settings.faq_text_color
+
+-%}
+
+{% style %}
+
+[data-section-id="{{ section.id }}"] {
+
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+
+}
+
+[data-section-id="{{ section.id }}"] .accordion-item {
+    background-color: {{ faq_bg_color }};
+    color: {{ faq_text_color }};
+}
+
+{% endstyle %} 
+
+<section data-section-id="{{ section.id }}">
+    <div class="page-width section-padding jr-faqs">
+        {% if section.settings.header != blank %}
+            <h2>{{ section.settings.header }}</h2>
+        {% endif %}
+        <div class="faqs-container">
+            {% for block in section.blocks %}
+                <button class="accordion-item">
+                  <div class="header-area">
+                    <h4>{{ block.settings.title }}</h4>
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.3091 1.16406L7.32166 7.16406L1.30908 1.16406" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="accordion-content" style="max-height: 0px;">{{ block.settings.answer }}</div>
+                </button>
+              {% endfor %}
+        </div>
+        {% if section.settings.button_url != blank %}
+            <a href="{{ section.settings.button_url }}" class="btn new-default-btn">
+                {{ section.settings.button_text }}
+            </a>
+        {% endif %}
+    </div> 
+</section>
+
+<script>
+
+window.addEventListener('DOMContentLoaded', () => {
+    const accordionButtons = document.querySelectorAll('[data-section-id="{{ section.id }}"] .accordion-item');
+    console.log(accordionButtons)
+    accordionButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const content = btn.querySelector('.accordion-content');
+            if(btn.classList.contains('open')) {
+                btn.classList.remove('open')
+                content.style.maxHeight = 0
+            } else {
+                accordionButtons.forEach((btn) => {
+                    btn.classList.remove('open')
+                    btn.querySelector('.accordion-content').style.maxHeight = 0
+                })
+                btn.classList.add('open')
+                content.style.maxHeight = content.scrollHeight + 'px'
+            }
+        })
+    })
+})
+
+</script>
+
+{% schema %}
+{
+    "name": "JR FAQs",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#25623A"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#FFFFFF"
+        },
+        {
+            "type": "color",
+            "id": "faq_bg_color",
+            "label": "FAQ Background Color",
+            "default": "#FFF4E0"
+        },
+        {
+            "type": "color",
+            "label": "faq_text_color",
+            "id": "faq_text_color",
+            "default": "#000000"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header",
+            "default": "Frequently Asked Questions"
+        },
+        {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button URL"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Read More"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "faq",
+            "name": "FAQ", 
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Question",
+                    "default": "Question"
+                },
+                {
+                    "type": "textarea",
+                    "id": "answer",
+                    "label": "Answer",
+                    "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis erat metus, consequat ac egestas sed, euismod quis diam. Integer non enim dolor. Aliquam congue non justo nec accumsan. Donec a tincidunt massa. Pellentesque eu ipsum erat."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR FAQs",
+            "category": "Content"
+        }
+    ]
+}
+{% endschema %}

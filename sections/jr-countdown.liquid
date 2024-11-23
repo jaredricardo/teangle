@@ -1,0 +1,127 @@
+{{ 'jr-countdown.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+[data-section-id="{{ section.id }}" ] {
+    background-color: {{ section.settings.bg_color }};
+}
+
+[data-section-id="{{ section.id }}" ] .section-header,
+[data-section-id="{{ section.id }}" ] .time-remaining {
+    color: {{ section.settings.header_color }};
+}
+
+[data-section-id="{{ section.id }}" ] .jr-countdown {
+    max-width: 1276px;
+    padding: 5% 25px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 851px) {
+    [data-section-id="{{ section.id }}" ] .jr-countdown {
+        padding: calc(5% + 25px) 15px;
+    }
+}
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-countdown">
+        {% if section.settings.header != blank %}
+            <h2 class="section-header">{{ section.settings.header }}</h2>
+        {% endif %}
+        <div class="countdown-container">
+            <div class="time-remaining">00d:00h:00s</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const timeRemaining = document.querySelector('[data-section-id="{{ section.id }}" ] .time-remaining')
+        const cd_year          = {{ section.settings.year }}
+        const cd_month         = {{ section.settings.month }} - 1 // month is indexed at 0
+        const cd_day           = {{ section.settings.day }}
+        const cd_hour          = {{ section.settings.hour }}
+        const cd_minute        = {{ section.settings.minute }}
+        const countDownDate =  new Date(cd_year, cd_month, cd_day, cd_hour, cd_minute).getTime()
+
+        const startTimer = setInterval(function() {
+
+            const now = new Date().getTime()
+            const distance = countDownDate - now
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+            document.querySelector('[data-section-id="{{ section.id }}"] .time-remaining').innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s "
+
+            if (distance < 0) {
+                clearInterval(startTimer)
+                document.querySelector('[data-section-id="{{ section.id }}"] .time-remaining').innerHTML = "00:00:00"
+            }
+        }, 1000)
+
+    })
+</script>
+
+{% schema %}
+{
+    "name": "JR Countdown",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background Color"
+        },
+        {
+            "type": "color",
+            "id": "header_color",
+            "label": "Section Text Color"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Section Header"
+        },
+        {
+            "type": "header",
+            "content": "Countdown Settings"
+        },
+        {
+            "type": "number",
+            "id": "year",
+            "label": "Countdown Year"
+        },
+        {
+            "type": "number",
+            "id": "month",
+            "label": "Countdown Month"
+        },
+        {
+            "type": "number",
+            "id": "day",
+            "label": "Countdown Day"
+        },
+        {
+            "type": "number",
+            "id": "hour",
+            "label": "Countdown Hour"
+        },
+        {
+            "type": "number",
+            "id": "minute",
+            "label": "Countdown Minute"
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Countdown"
+        }
+    ]
+}
+{% endschema %}

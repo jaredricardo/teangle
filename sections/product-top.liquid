@@ -1,0 +1,1085 @@
+{{ 'product-top.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign isModal = false
+  if template == 'product.modal'
+    assign isModal = true
+  endif
+%}
+
+{% assign section_id = section.id %}
+{% assign image_position = 'left' %}
+{% assign product_zoom_enable = false %}
+{% assign product_zoom_size = section.settings.product_zoom_size %}
+{% assign product_image_size = 'medium' %}
+{% assign image_container_width = 'medium' %}
+{% assign thumbnail_arrows = section.settings.thumbnail_arrows %}
+{% assign thumbnail_position = 'below' %}
+{% assign video_looping = section.settings.enable_video_looping %}
+{% assign video_style = section.settings.product_video_style %}
+{% assign mobile_layout = 'partial' %}
+
+{% liquid
+
+  case image_container_width
+    when 'small'
+      assign product_image_width = 'medium-up--two-fifths'
+      assign product_description_width = 'medium-up--three-fifths'
+      assign product_image_size = '480x'
+    when 'medium'
+      assign product_image_width = 'medium-up--one-half'
+      assign product_description_width = 'medium-up--one-half'
+      assign product_image_size = '620x'
+    when 'large'
+      assign product_image_width = 'medium-up--three-fifths'
+      assign product_description_width = 'medium-up--two-fifths'
+      assign product_image_size = '740x'
+  endcase
+
+%}
+
+<script>
+  // must be initialized before adding product data to global products on page, probably a way to do this using the window instead of multiple script tags at points on page
+  const sellingPlanObj = {}
+  let tempJson
+  function addProductJson(obj){
+    const vid = obj.variants[0].id
+    const planArr = []
+    obj.selling_plan_groups.forEach((group) => {
+
+      planArr.push(group.selling_plans)
+    })
+    sellingPlanObj[vid] = planArr
+  }
+</script>
+
+<div
+  id="ProductSection-{{ section_id }}-{{ product.id }}"
+  class="product-section j-product-section product--{{ product.handle }}"
+  data-section-id="{{ section_id }}"
+  data-product-id="{{ product.id }}"
+  data-section-type="product"
+  data-product-handle="{{ product.handle }}"
+  data-product-title="{{ product.title | escape }}"
+  data-product-url="{{ product.url | within: collection }}"
+  data-aspect-ratio="{{ 100 | divided_by: product.featured_media.aspect_ratio }}"
+  data-img-url="{{ product_img_structure }}"
+  {% unless isModal %}
+  data-history="true"
+  {% endunless %}
+  data-modal="{{ isModal }}">
+
+  {% render 'product-template-variables', product: product, current_variant: current_variant %}
+
+  <div class="page-content page-content--product">
+    <div class="page-width">
+      <div class="pdp-ab-mobile-header">
+        <h2 class="product-header">{{ product.title }}</h2>
+        {% if section.settings.subheader != blank %}
+          <div class="product-subheader">{{ section.settings.subheader }}</div>
+        {% endif %}
+        {% if section.settings.sub_callout != blank %}
+          <div class="sub-callout">{{ section.settings.sub_callout }}</div>
+        {% endif %}
+        {% render 'okendo-reviews-product-rating-summary', product: product %}
+        {% if section.settings.percent_rating != blank %}
+          <div class="percent-rating-container">
+            <div class="svg-container">
+              {% render 'icon-thumbs-up' %}
+            </div>
+            <span>{{ section.settings.percent_rating }}</span>
+          </div>
+        {% endif %}
+      </div>
+      <div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}{% if mobile_layout == 'partial' %} grid--product-images--partial{% endif %}">
+        {% if image_position == 'left' %}
+          <div class="grid__item {% unless product.available %} relative {% endunless %}{{ product_image_width }} product-single__sticky " {% if product.id == 7110367346770 %}style=" position: relative; "{% endif %}>
+            {% if product.id == 7110367346770 %}
+              <img
+                src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/new12_200x.png?v=1683229792"
+                data-ly-processed="1683234459848"
+                style=" display: block; position: absolute; top: 10px; right: 0; width: 100px; z-index: 99; ">
+            {% endif %}
+            {% unless product.available %}
+              <div class="sold-out-sticker-container">
+                <svg width="138" height="67" viewBox="0 0 138 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="68.9761" cy="33.3823" rx="69.3674" ry="30.3625" transform="rotate(11.3148 68.9761 33.3823)" fill="#DD8D76"/>
+                </svg>
+                <span>Sold Out</span>
+              </div>
+            {% endunless %}
+            {% render 'product-images'
+              , section_id: section_id,
+              product: product,
+              isModal: isModal,
+              image_position: image_position,
+              product_zoom_enable: product_zoom_enable,
+              product_zoom_size: product_zoom_size,
+              product_image_size: product_image_size,
+              thumbnail_arrows: thumbnail_arrows,
+              thumbnail_position: thumbnail_position,
+              video_looping: video_looping,
+              video_style: video_style %}
+          </div>
+        {% endif %}
+
+        <div class="grid__item {{ product_description_width }}">
+
+          <div class="product-single__meta">
+            <div class="product-block product-block--header">
+              <div class="header-container">
+                <h2 class="product-header">{{ product.title}}</h2>
+                {% if section.settings.subheader != blank %}
+                  <div class="product-subheader">{{ section.settings.subheader }}</div>
+                {% endif %}
+                {% if section.settings.sub_callout != blank %}
+                  <div class="sub-callout">{{ section.settings.sub_callout }}</div>
+                {% endif %}
+                {% render 'okendo-reviews-product-rating-summary', product: product %}
+                {% if section.settings.percent_rating != blank %}
+                  <div class="percent-rating-container">
+                    <div class="svg-container">
+                      {% render 'icon-thumbs-up' %}
+                    </div>
+                    <span>{{ section.settings.percent_rating }}</span>
+                  </div>
+                {% endif %}
+                {% if product.metafields.custom.tag %}
+                  <div class="product--tag">
+                    {{ product.metafields.custom.tag }}
+                  </div>
+                {% endif %}
+                
+                {% if product.metafields.custom.enable_amazon_link %}
+
+                  {% if request.locale.iso_code == 'fr' %}
+                    {% if product.metafields.custom.sold_out_text_fr and product.available == false %}
+                        <a class="link-sold-out" href={{ product.metafields.custom.sold_out_link }} target="_blank">
+                          <h3>{{ product.metafields.custom.sold_out_text_fr }}</h3>
+                        </a>
+                    {% endif %}
+                  {% else %}
+                      {% if product.metafields.custom.sold_out_text_en and product.available == false %}
+                        <a class="link-sold-out" href={{ product.metafields.custom.sold_out_link }} target="_blank">
+                          <h3>{{ product.metafields.custom.sold_out_text_en }}</h3>
+                        </a>
+                      {% endif %}
+                  {% endif %}
+
+                {% endif %}
+
+                {% unless product.available %}
+                  <div id="klaviyo-alt-oos" style="margin-bottom: 1rem;"></div>
+                {% endunless %}
+              
+      
+                <div class="options-container">
+                  {% comment %} the flavour breakout and format breakout could be made non hard coded in the future, {% endcomment %}
+                  {% if product.metafields.flavour_breakout.has_breakout.value %}
+                    <div class="flavours-wrapper">
+                      <h3 class="first-h3"><ly-as-1078936>Flavour:</ly-as-1078936></h3>
+                      <div class="flavours-container">
+                        {% for flavour in collections[product.metafields.custom.collection_handle].products %}
+                          <a href="{{ flavour.url }}" class="flavour {% if product.id == flavour.id %} selected {% endif %}">
+                            <div class="flavour-top" style="background-color: {{ flavour.metafields.signature.details.signature_color }};">
+                              <div class="img-wrapper">
+                                <img src="{{ flavour.metafields.signature.details.signature_image }}" alt="Tea Flavor">
+                              </div>
+                            </div>
+                            <div class="flavour-bottom">{{ flavour.title | remove: 'Teangle' | remove: 'Matcha' }}</div>
+                          </a>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endif %}
+                  {% if product.metafields.format_breakout.has_breakout.value %}
+                    <div class="flavours-wrapper">
+                      <h3 class="first-h3"><ly-as-1078937>Format:</ly-as-1078937></h3>
+                      <div class="flavours-container breakout">
+                        {% for breakout in collections[product.metafields.custom.collection_handle].products %}
+                          <a href="{{ breakout.url }}" class="flavour {% if product.id == breakout.id %} selected {% endif %}">
+                            <div class="flavour-bottom breakout">
+                              <div class="breakout-title">{{ breakout.metafields.alternative.info.format }}</div>
+                              <div class="breakout-servings">{{ breakout.metafields.alternative.info.servings }} </div>
+                            </div>
+                          </a>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="quantity-wrapper">
+                    <h3><ly-as-1078938>Quantity:</ly-as-1078938></h3>
+                    <div class="quantity-container">  
+
+                      <script>       
+                       // must be done on each product inside their respective liquid with new script tag until a better way is coded,
+                       // could go the approach of placing the json in a data attribute and extrating it on page load but this is easier for now
+                       // and keeps DOM and JS seperate 
+                        tempJson = {{ product | json }}
+                        addProductJson(tempJson)
+                      </script>
+
+                      {% comment %} 1st is current product on page {% endcomment %}
+                    <div class="quantity selected {% if product.variants[0].available != true %}out-of-stock{% endif %}" 
+                    data-quantity-type="solo"
+                    data-pack-size="{{ product.metafields.quantity.values.pack_size_num }}"
+                    data-pack-string="{{ product.metafields.quantity.values.pack_size_string }}"
+                    data-full-price="{{ product.price }}"
+                    data-variant-id="{{ product.variants[0].id }}">
+                        <div class="top">{{ product.metafields.quantity.values.pack_size_string }}</div>
+                        <div class="bottom">{{ product.price | money }}</div>
+                      </div>
+                      {% assign quantity_handles = product.metafields.quantity.handles | split: ',' %}
+                      {% for handle in quantity_handles %}
+                        
+                        {% assign stripped = handle | strip %}
+                        {% assign q_product = all_products[stripped] %}
+                        {% assign unit_price = q_product.price | divided_by: q_product.metafields.quantity.values.pack_size_num %}
+                        <script>       
+                          // must be done on each product inside their respetive liquid with new script tag until a better way is coded,
+                          // could go the approach of placing the json in a data attribute and extrating it on page load but this is easier for now
+                          // and keeps DOM and JS seperate 
+                           tempJson = {{ q_product | json }}
+                           addProductJson(tempJson)
+                         </script>
+                        <div class="quantity {% if q_product.variants[0].available != true %}out-of-stock{% endif %}" 
+                        data-quantity-type="multi"
+                        data-pack-size="{{ q_product.metafields.quantity.values.pack_size_num }}"
+                        data-pack-string="{{ q_product.metafields.quantity.values.pack_size_string }}"
+                        data-full-price="{{ q_product.price }}"
+                        data-variant-id="{{ q_product.variants[0].id }}">
+                          <div class="quantity-savings-text">{{ q_product.metafields.quantity.values.savings_text }}</div>
+                          <div class="top">{{ q_product.metafields.quantity.values.pack_size_string }}</div>
+                          <div class="bottom">{{ unit_price | money }}
+                            <span><ly-as-1078939>each</ly-as-1078939></span>
+                          </div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="subscribe-save-otp-container">
+                    <div class="sub-save" id="check-sub-save">
+                      {% comment %} checked by defualt  {% endcomment %}
+                      <input type="radio" name="sub-save-otp" checked>
+                        <div class="sub-save-info">
+                          <div class="regular-savings"><ly-as-1078940>Subscribe & Save 15%</ly-as-1078940></div>
+                          <div class="bundle-savings" style="display:none;"><ly-as-1078941>On top of bundle savings!</ly-as-1078941></div>
+                        </div>
+                      {% assign discounted_price = product.price | times: 0.85 %}
+                      <div class="sub-save-price">
+                        <div class="strike-through">{{ product.price | money }}</div>
+                        <div class="discounted-price">{{ discounted_price | money }}</div>
+                      </div>
+                    </div>
+                    <select name="selling_plans" id="selling-plans" class="selling-plans-container">
+                      {% comment %} {% for plan in product.selling_plan_groups %}
+                        {% unless plan.app_id == 'SKIO' %}
+                          <option value="{{ forloop.index0 }}" data-plan-id="{{ plan.id }}">{{ plan.name }}</option>
+                      {% endfor %} {% endcomment %}
+
+                      {% assign skioSellingPlanGroups = product.selling_plan_groups | where: 'app_id', 'SKIO' %}
+                      {% for plan in skioSellingPlanGroups[0].selling_plans %}
+                        <option value="{{ forloop.index0 }}" data-plan-id="{{ plan.id }}">{{ plan.name }}</option>
+                      {% endfor %}
+
+                      {% comment %} <option value="0"><ly-as-1078942>Delivery Every 30 Days</ly-as-1078942></option>
+                      <option value="1"><ly-as-1078943>Delivery Every 60 Days</ly-as-1078943></option> {% endcomment %}
+                    </select>
+                    <div class="otp unchecked" id="check-otp">
+                      <input type="radio" name="sub-save-otp">
+                        <div class="otp-info"><ly-as-1078944>One-time purchase</ly-as-1078944></div>
+                      <div class="otp-price">{{ product.price | money }}</div>
+                    </div>
+                  </div>
+                  <div class="atc-btn btn solo-atc {% unless product.available %} btn-oos {% endunless %}">
+                      <ly-as-1078945> 
+                        {% if product.available %}
+                          ADD TO CART - &nbsp
+                          {% else %}
+                          SOLD OUT
+                        {% endif %}
+                      </ly-as-1078945>
+                      <span id="atc-price-one">
+                        {% if product.available %}
+                          {{ discounted_price | money }}
+                        {% endif %}
+                      </span>
+                  </div>
+                </div>
+                {% if product.metafields.fbt.show.value %}
+                  <div class="frequently-bought-together-container">
+                   <h3> <ly-as-1078946>Frequently Bought Together</ly-as-1078946></h3>
+              
+                  <div class="fbt-item-container main-product"
+                    data-price="{{ product.price }}"
+                    data-variant-id="{{ product.variants[0].id }}">
+                    <input type="checkbox" checked>
+                    <div class="content-container">
+                      <div class="img-container">
+                        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="Product Image">
+                      </div>
+                      <div class="info">
+                        <div class="title">{{ product.metafields.quantity.values.fbt_title }}</div>
+                        <div class="extra">
+                          {{ product.title | downcase | remove: "teangle" | remove: "matcha" }}
+                          <div>
+                            <span id="fbt-pack-size">{{ product.metafields.quantity.values.pack_size_string }}</span>
+                            <span id="fbt-subscription-tag" style="display:inline;"><ly-as-1078947>subscription</ly-as-1078947></span> 
+                          </div>
+                        </div>
+                      </div>
+                      {% assign discounted_price = product.price | times: 0.85 %}
+                      <div class="price-container">
+                        <div class="strike-through">{{ product.price | money }}</div>
+                        <div class="discounted-price fbt-price">{{ discounted_price | money }}</div>
+                      </div>
+                    </div>
+                  </div>
+                  {% comment %} default / current product {% endcomment %}
+                  {% assign fbt_handles = product.metafields.fbt.handles | split: ',' %}
+                  {% assign starting_bundle_number = discounted_price %}
+                  {% for handle in fbt_handles %}
+                    {% assign stripped = handle | strip %}
+                    {% assign prod = all_products[stripped] %}
+                    {% assign starting_bundle_number = starting_bundle_number | plus: prod.price %}
+                    <div class="fbt-item-container"
+                    data-price="{{ prod.price }}"
+                    data-variant-id="{{ prod.variants[0].id }}">
+                      <input type="checkbox" checked>
+                      <div class="content-container">
+                        <div class="img-container">
+                          <img src="{{ prod.featured_image | img_url: 'medium' }}" alt="Product Image">
+                        </div>
+                        <div class="info">
+                          <div class="title">
+                            {% if prod.metafields.fbt.alt_title %}
+                              {{ prod.metafields.fbt.alt_title }}
+                            {% else %}
+                              {{ prod.title | downcase | remove: "teangle" }}
+                            {% endif %}
+                          </div>
+                          <div class="extra">
+                            {{ prod.metafields.fbt.description }}
+                          </div>
+                        </div>
+                        <div class="price-container">
+                          <div class="fbt-price">{{ prod.price | money }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                  <div class="atc-btn btn bundle-atc {% unless product.available %} btn-oos {% endunless %}">
+                    <ly-as-1078948>ADD BUNDLE TO CART - &nbsp</ly-as-1078948><span id="atc-price-two">{{ starting_bundle_number| money }}</span>
+                  </div>
+                {% endif %}
+              </div>
+              <div class="simple-options-container">  
+                <div class="simple-options-buttons">
+
+                  {% comment %} otp {% endcomment %}
+                  <button data-variant-id="{{ product.variants[0].id }}" data-is-subscription="false" {% unless product.available %} class="sold-out" {% endunless %}> 
+                    <div class="left">
+                      <div class="circle--outer">
+                        <div class="dot--inner active-option"></div>
+                      </div>
+                      <div class="title-info-container">
+                        <div class="simple-product-title">
+                          {% if section.settings.simple_alt_solo_title != blank %}
+                            {{ section.settings.simple_alt_solo_title }}
+                          {% else %}
+                            {{ product.title }}
+                          {% endif %}
+                        </div>
+                        <div class="simple-product-frequency">
+                          One time purchase
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <div class="prices-container">
+                        <div class="price">{{ product.price | money_without_trailing_zeros }}</div>
+                      </div>
+                    </div>
+                  </button>
+
+                  {% comment %} first subscription option{% endcomment %}
+
+                  {% assign single_plan_price        = product.variants[0].selling_plan_allocations[0].price %}
+                  {% assign single_savings_percent   = product.selling_plan_groups[0].selling_plans[0].price_adjustments[0].value %}
+                  {% for group in product.selling_plan_groups %}
+                    {% if group.app_id == 'SKIO' %}
+                      {% assign single_plan_id = group.selling_plans[0].id %}
+                    {% endif %}
+                  {% endfor %}
+
+                  <button data-plan-id="{{ single_plan_id }}" data-variant-id="{{ product.variants[0].id }}" data-is-subscription="true" {% unless product.available %} class="sold-out" {% endunless %}> 
+                    <div class="left">
+                      <div class="circle--outer">
+                        <div class="dot--inner"></div>
+                      </div>
+                      <div class="title-info-container">
+                        <div class="simple-product-title">
+                          Monthly Plan
+                        </div>
+                        <div class="simple-product-frequency">
+                          {{ single_plan_price | money_without_trailing_zeros }} <span>paid monthly</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <div class="prices-container">
+                        <div class="savings-percent-container">save <span>{{ single_savings_percent | round }}%</span></div>
+                        <div class="price-container">
+                          <span class="price">{{ single_plan_price | money_without_trailing_zeros }}</span>
+                          <span class="a-month">/mo</span>
+                          </div>
+                      </div>
+                    </div>
+                  </button>
+
+                  {% comment %} chosen subscription item {% endcomment %}
+
+                  {% if section.settings.chosen_sub_product != blank %}
+                    
+                    {% assign chosen_p                 = all_products[section.settings.chosen_sub_product] %}
+                    {% assign chosen_index             = section.settings.chosen_sub_product_index %}
+                    {% assign chosen_plan_price        = chosen_p.variants[0].selling_plan_allocations[0].price %}
+                    {% assign chosen_savings_percent   = chosen_p.selling_plan_groups[0].selling_plans[chosen_index].price_adjustments[0].value %}
+                    {% assign chosen_final_price       = chosen_plan_price | divided_by: section.settings.divide_by_amount %}
+
+                    
+
+                    {% for group in chosen_p.selling_plan_groups %}
+                      {% if group.app_id == 'SKIO' %}
+                        {% assign chosen_plan_id = group.selling_plans[chosen_index].id %}
+                      {% endif %}
+                    {% endfor %}
+
+                    <button data-plan-id="{{ chosen_plan_id }}" data-variant-id="{{ chosen_p.variants[0].id }}" data-is-subscription="true" class="auto-switch no-change-price {% unless product.available %} sold-out {% endunless %}" > 
+                      <div class="left">
+                        <div class="circle--outer">
+                          <div class="dot--inner"></div>
+                        </div>
+                        <div class="title-info-container">
+                          <div class="simple-product-title">
+                            3 Month Plan
+                          </div>
+                          <div class="simple-product-frequency">
+                            {{ chosen_plan_price | money_without_trailing_zeros }} 
+                            <span>paid quarterly</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="prices-container">
+                          <div class="savings-percent-container">save <span>{{ chosen_savings_percent | round }}%</span></div>
+                          <div class="price-container">
+                            <span class="price">{{ chosen_final_price| money_without_trailing_zeros }}</span>
+                            <span class="a-month">/mo</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="value-button">Best Value</div>
+                    </button>
+                  {% endif %}
+                </div>    
+
+                <form class="simple-pdp-form test33" action="/cart/add" method="post">
+                  <input class="input-selling-plan" name="selling_plan" type="hidden" value="">
+                  <input min="1" id="quantity" name="quantity" type="hidden" value="1" />
+                  <input class="input-variant-id" type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                  {% if request.locale.iso_code == 'fr' %}
+                    <input type="submit" 
+                      {% if product.available %}
+                        value="AJOUTER AU PANIER - {{ product.price | money_without_trailing_zeros }}" 
+                      {% else %}
+                        value="épuisé" 
+                      {% endif %}
+                      class="atc-btn btn {% unless product.available %} sold-out {% endunless %}"></input>
+                  {% else %}
+                    <input type="submit" 
+                      {% if product.available %}
+                       value="Add to cart - {{ product.price | money_without_trailing_zeros }}" 
+                      {% else %}
+                        value="Sold Out" 
+                      {% endif %}
+                      class="atc-btn btn {% unless product.available %} sold-out {% endunless %}"></input>
+                  {% endif %}
+                </form>
+                <div class="subscription-value-prop-container hidden">
+                  <div class="col">
+                    <div class="svg-container">
+                      {% render 'icon-shipping' %}
+                    </div>
+                    <div class="value-text">Free Shipping</div>
+                  </div>
+                  <div class="col">
+                    <div class="svg-container">
+                      {% render 'icon-cancel' %}
+                    </div>
+                    <div class="value-text">Cancel Any Time</div>
+                  </div>
+                </div>
+              </div>
+ 
+              <div class="description-and-tabs">
+                <div class="description">
+                  {{ product.description }}
+                </div>
+                
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                  {% when 'tab' %}
+                    <div class="product-block product-block--tab" {{ block.shopify_attributes }}>
+                      {% assign tab_id = block.id | append: product.id %}
+                      {% capture tab_content %}
+                        {{ block.settings.content }}
+                        {{ block.settings.page.content }}
+                      {% endcapture %}
+                      {% render 'tab', id: tab_id, title: block.settings.title, content: tab_content %}
+                    </div>
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        {% unless image_position == 'left' %}
+          <div class="grid__item {{ product_image_width }} product-single__sticky">
+            {% render 'product-images'
+              section_id: section_id,
+              product: product,
+              isModal: isModal,
+              image_position: image_position,
+              product_zoom_enable: product_zoom_enable,
+              product_zoom_size: product_zoom_size,
+              product_image_size: product_image_size,
+              thumbnail_arrows: thumbnail_arrows,
+              thumbnail_position: thumbnail_position,
+              video_looping: video_looping,
+              video_style: video_style %}
+          </div>
+        {% endunless %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+  window.addEventListener('DOMContentLoaded', () => {
+
+
+  {% if product.available == false %}
+    return
+  {% endif %}
+
+    // immutable variables
+    const subSaveInput = document.getElementById('check-sub-save')
+    const otpInput = document.getElementById('check-otp')
+    const sellingPlans = document.getElementById('selling-plans')
+    const quantityBtns = document.querySelectorAll('.options-container .quantity')
+    const fbtBtns = document.querySelectorAll('.fbt-item-container')
+    const soloATC = document.querySelector('.atc-btn.solo-atc')
+    const bundleATC = document.querySelector('.atc-btn.bundle-atc') 
+    const savingsTag = document.querySelector('.bundle-savings')
+    const fbtPackSize = document.querySelector('#fbt-pack-size')
+    const fbtSubscriptionTag = document.querySelector('#fbt-subscription-tag')
+    const atcPriceOne = document.querySelector('#atc-price-one')
+    const atcPriceTwo = document.querySelector('#atc-price-two')
+    const subSaveStrikeThroughPrice = document.querySelector('.sub-save-price .strike-through')
+    const subSaveDiscountedPrice = document.querySelector('.sub-save-price .discounted-price')
+    const fbtStrikeThroughPrice = document.querySelector('.fbt-item-container .price-container .strike-through')
+    const fbtDiscountedPrice = document.querySelector('.fbt-item-container .price-container .discounted-price')
+    const otpPrice = document.querySelector('.otp .otp-price')
+    const discount = 0.85
+
+    {% if product.metafields.fbt.show.value %}
+      const fbtActive = true
+    {% else %}
+      const fbtActive = false
+    {% endif %}
+
+    // mutable variables initial states
+    let subscriptionActive = true
+    let subscriptionIndex = 0
+    let masterBasePrice = {{ product.price }}
+    let bundlePrice = masterBasePrice
+
+    let variantFormItem  = {
+      'id': {{ product.variants[0].id }},
+      'quantity': 1,
+      'selling_plan': sellingPlanObj[{{ product.variants[0].id }}][0].id
+    }
+    
+    // event listeners 
+
+    soloATC.addEventListener('click', (e) => {     
+      const formData = {
+        'items': [variantFormItem]
+      }
+      addToCart(formData)
+    })
+
+    if(bundleATC !== null && fbtActive) {
+      bundleATC.addEventListener('click', () => {
+        const formData = {
+          'items': []
+        }
+        let itemVidArr = []
+        fbtBtns.forEach((btn) => {
+          if(btn.querySelector('input').checked) {
+            itemVidArr.push(btn.dataset.variantId)
+          }
+        })
+
+        itemVidArr.forEach((vid) => {
+          if(vid == variantFormItem.id) {
+            formData.items.push(variantFormItem)
+          } else {
+            formData.items.push({
+              'id': vid,
+              'quantity': 1
+            })
+          }
+        })
+
+        addToCart(formData)
+      })
+    }
+
+    subSaveInput.addEventListener('click', (e) => {
+      sellingPlans.disabled = false
+      subscriptionActive = true
+      _updateVariantFormData()
+      subSaveInput.querySelector('input').checked = true
+      otpInput.querySelector('input').checked = false
+      sellingPlans.classList.remove('unchecked')
+      subSaveInput.classList.remove('unchecked')
+      otpInput.classList.add('unchecked')
+      _updateMainPrices(masterBasePrice)
+
+      if(fbtActive) {
+        _updateBundlePrice()
+      }
+     
+      // update fbt subscription tag
+      if(!fbtActive) return
+      fbtSubscriptionTag.style.display = "inline"
+      fbtStrikeThroughPrice.style.display = "block"
+
+    })
+
+    otpInput.addEventListener('click', (e) => {     
+      sellingPlans.disabled = true 
+      subscriptionActive = false
+      variantFormItem.selling_plan = null
+      subSaveInput.querySelector('input').checked = false
+      otpInput.querySelector('input').checked = true
+      sellingPlans.classList.add('unchecked')
+      subSaveInput.classList.add('unchecked')
+      otpInput.classList.remove('unchecked')
+      _updateMainPrices(masterBasePrice)
+      if(fbtActive) {
+        _updateBundlePrice()
+      }
+    
+      // update fbt subscription tag
+      if(!fbtActive) return
+      fbtSubscriptionTag.style.display = "none"
+      fbtStrikeThroughPrice.style.display = "none"
+ 
+    })    
+
+    sellingPlans.addEventListener('change', (e) => {
+      const index = Number(e.target.value)
+      subscriptionIndex = index
+      _updateVariantFormData()
+    })
+
+    fbtBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        // allows for clicking to check input element even if with current target checking parent
+        if(e.target.nodeName === "INPUT") {
+          _updateMainPrices(masterBasePrice)
+          if(fbtActive) {
+            _updateBundlePrice()
+          }
+          return
+        }
+        e.currentTarget.querySelector('input').checked = !e.currentTarget.querySelector('input').checked  
+        
+        _updateMainPrices(masterBasePrice)
+        if(fbtActive) {
+          _updateBundlePrice()
+        }
+      
+      })
+    })
+
+    quantityBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+
+        masterBasePrice = Number(e.currentTarget.dataset.fullPrice)
+        quantityBtns.forEach(btn=> btn.classList.remove('selected'))
+        e.currentTarget.classList.add('selected')
+        savingsTag.style.display = e.currentTarget.dataset.quantityType === "solo" ? 'none' : 'block'
+
+        variantFormItem.id = e.currentTarget.dataset.variantId
+
+        // must update fbt main item's variant id to keep in sync when bundle is added
+        if(fbtActive){
+          document.querySelector('.fbt-item-container.main-product').dataset.variantId = e.currentTarget.dataset.variantId
+        }
+
+        _updateMainPrices(masterBasePrice)
+        if(fbtActive) {
+          _updateBundlePrice()
+        }
+        _updateVariantFormData()
+        // update pack size in FBT 
+        if(!fbtActive) return
+        fbtPackSize.innerHTML = e.currentTarget.dataset.packString
+      })
+    })
+
+    // page functions 
+    function _updateMainPrices(masterFull){
+
+      let discounted = masterFull * discount
+      
+      if(fbtActive) {
+        subSaveStrikeThroughPrice.innerHTML = `$${formatMoneyInt(masterFull)}`
+      }
+   
+      fbtStrikeThroughPrice.innerHTML = `$${formatMoneyInt(masterFull)}`
+      otpPrice.innerHTML = `$${formatMoneyInt(masterFull)}`
+      subSaveDiscountedPrice.innerHTML = `$${formatMoneyInt(discounted)}`
+
+      if(subscriptionActive) {
+        atcPriceOne.innerHTML = `$${formatMoneyInt(discounted)}`
+        subSaveDiscountedPrice.innerHTML = `$${formatMoneyInt(discounted)}`
+        if(fbtActive) {
+          fbtDiscountedPrice.innerHTML = `$${formatMoneyInt(discounted)}`
+          document.querySelector('.fbt-item-container.main-product').dataset.price = discounted
+        }
+      } else {
+        atcPriceOne.innerHTML = `$${formatMoneyInt(masterFull)}`
+        if(fbtActive) {
+          fbtDiscountedPrice.innerHTML = `$${formatMoneyInt(masterFull)}`
+          document.querySelector('.fbt-item-container.main-product').dataset.price = masterFull 
+        }
+      }
+      
+    }
+    function _updateBundlePrice(){
+      let running = 0
+      fbtBtns.forEach((btn) => {
+        if(btn.querySelector('input').checked) {
+          running += Number(btn.dataset.price)
+        }
+      })
+      atcPriceTwo.innerHTML = `$${formatMoneyInt(running)}`
+    }
+
+    function _updateVariantFormData() {
+
+      var selectElement = document.getElementById("selling-plans");
+      var selectedOption = selectElement.options[selectElement.selectedIndex];
+      var planId = selectedOption.getAttribute("data-plan-id");
+      console.log(planId);
+
+      const correctSellingPlanForCurrentVariant = planId;
+
+      console.log(sellingPlanObj)
+
+      if(subscriptionActive) {
+        variantFormItem.selling_plan = correctSellingPlanForCurrentVariant
+      } else {
+        variantFormItem.selling_plan = null  
+      }
+    }
+      otpInput.click()
+  })  
+
+  // global functions
+  function addToCart(formData){
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(res => {
+      if(res.ok) {
+        console.log('success')
+      }
+      return res.json();
+    })
+    .catch((error) => {
+      alert('Sorry, something went wrong when adding to cart..')
+      console.error('Error:', error);
+    });
+  }
+
+  function formatMoneyInt(int) {
+    if (int === null) return
+    if (int === 0) return int
+
+    let s = int.toString().split('').reverse()
+    s.splice(2, 0, '.')
+    s.reverse()
+    let f = s.join('')
+    return f
+  }
+
+  ////////////////////////////
+
+  // AB Javascript
+
+  window.addEventListener('DOMContentLoaded', () => {
+
+    const simpleOptionButtons = document.querySelectorAll('.simple-options-buttons button')
+    const simpleForm = document.querySelector('.simple-pdp-form')
+    const iso = "{{ request.locale.iso_code }}"
+
+    simpleOptionButtons.forEach((btn) => {
+
+      btn.addEventListener('click', (e) => {
+
+        const clickedPrice = e.currentTarget.querySelector('.price').innerHTML
+
+        simpleOptionButtons.forEach((btn) => {
+          btn.querySelector('.dot--inner').classList.remove('active-option')  
+        })
+
+        if(btn.dataset.isSubscription === "true") {
+          document.querySelector('.subscription-value-prop-container').classList.remove('hidden')
+        } else {
+          document.querySelector('.subscription-value-prop-container').classList.add('hidden')
+        }
+
+
+        btn.querySelector('.dot--inner').classList.add('active-option')
+
+        
+        if(btn.classList.contains('no-change-price')){
+          if(iso === 'fr') {
+            {%  if product.available %}
+                simpleForm.querySelector('.atc-btn').value = `Ajouter Au Panier`
+              {%  else %}
+                 simpleForm.querySelector('.atc-btn').value = `épuisé`
+            {%  endif %}
+          } else {
+             {%  if product.available %}
+                simpleForm.querySelector('.atc-btn').value = `Add to cart`
+              {%  else %}
+                simpleForm.querySelector('.atc-btn').value = `Sold Out`
+            {%  endif %}
+          }
+        } else {
+          if(iso === 'fr') {
+            simpleForm.querySelector('.atc-btn').value = `Ajouter au panier - ${clickedPrice}`
+          } else {
+            simpleForm.querySelector('.atc-btn').value = `Add to cart - ${clickedPrice}`
+          }
+        }
+
+        console.log(btn.dataset.planId)
+        if(btn.dataset.planId === undefined) {
+          simpleForm.querySelector('.input-selling-plan').disabled = true
+        } else {
+          simpleForm.querySelector('.input-selling-plan').disabled = false
+          simpleForm.querySelector('.input-selling-plan').value = btn.dataset.planId
+        }
+       
+        simpleForm.querySelector('.input-variant-id').value = btn.dataset.variantId
+
+      })
+    })
+
+    simpleOptionButtons[2].click()
+
+  })
+
+</script>
+
+
+{% schema %}
+  {
+    "name": "Product Top (JR)",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "sku_enable",
+        "label": "Show SKU"
+      },
+      {
+        "type": "header",
+        "content": "Media"
+      },
+      {
+        "type": "paragraph",
+        "content": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Position",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }, {
+        "type": "select",
+        "id": "image_size",
+        "label": "Size",
+        "default": "medium",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          }, {
+            "value": "medium",
+            "label": "Medium"
+          }, {
+            "value": "large",
+            "label": "Large"
+          }
+        ]
+      }, {
+        "type": "checkbox",
+        "id": "product_zoom_enable",
+        "label": "Enable image zoom",
+        "default": true
+      }, {
+        "type": "select",
+        "id": "thumbnail_position",
+        "label": "Thumbnail position",
+        "default": "beside",
+        "options": [
+          {
+            "value": "beside",
+            "label": "Next to media"
+          }, {
+            "value": "below",
+            "label": "Below media"
+          }
+        ]
+      }, {
+        "type": "checkbox",
+        "id": "thumbnail_arrows",
+        "label": "Show thumbnail arrows"
+      }, {
+        "type": "select",
+        "id": "mobile_layout",
+        "label": "Mobile layout",
+        "default": "partial",
+        "options": [
+          {
+            "value": "partial",
+            "label": "75% width"
+          }, {
+            "value": "full",
+            "label": "Full width"
+          }
+        ]
+      }, {
+        "type": "checkbox",
+        "id": "enable_video_looping",
+        "label": "Enable video looping",
+        "default": true
+      }, {
+        "type": "select",
+        "id": "product_video_style",
+        "label": "Video style",
+        "default": "muted",
+        "options": [
+          {
+            "value": "muted",
+            "label": "Video without sound"
+          }, {
+            "value": "unmuted",
+            "label": "Video with sound"
+          }
+        ],
+        "info": "Video with sound will not autoplay"
+      },
+      {
+        "type": "header",
+        "content": "Simple Form Options"
+      },
+      {
+        "type": "text",
+        "id": "subheader",
+        "label": "Product Subheader"
+      },
+      {
+        "type": "text",
+        "id": "percent_rating",
+        "label": "Percent Rating Callout"
+      },
+      {
+        "type": "text",
+        "id": "sub_callout",
+        "label": "Sub Callout"
+      },
+      {
+        "type": "text",
+        "id": "simple_alt_solo_title",
+        "label": "Solo Product Alt title"
+      },
+      {
+        "type": "product",
+        "id": "chosen_sub_product",
+        "label": "Extra Subscription Product"
+      },
+      {
+        "type": "number",
+        "id": "chosen_sub_product_index",
+        "label": "Subscription Index of chosen product"
+      },
+      {
+        "type": "number",
+        "id": "divide_by_amount",
+        "label": "Divide Price by (optional)",
+        "default": 1
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tab",
+        "name": "Tab",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Shipping information"
+          },
+          {
+            "type": "liquid",
+            "id": "content",
+            "label": "Tab content",
+            "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>",
+            "info": "Supports Liquid"
+          },
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Tab content from page"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,19 @@
+<div class="page-width page-width--narrow page-content">
+  <header class="section-header">
+    <h1 class="section-header__title">{{ page.title }}</h1>
+    {% if page.metafields.custom.default_page_subheader != blank %}
+      <p>{{ page.metafields.custom.default_page_subheader }}</p>
+    {% endif %}
+  </header>
+
+  <div class="rte rte--nomargin">
+    {{ page.content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page",
+  "tag": "section"
+}
+{% endschema %}

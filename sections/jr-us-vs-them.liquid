@@ -1,0 +1,106 @@
+{% liquid 
+
+    assign bg_color = section.settings.bg_color
+    assign text_color = section.settings.text_color
+
+-%}
+
+{% style %}
+
+[data-section-id="{{ section.id }}"] {
+
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+
+}
+
+{% endstyle %} 
+
+<section data-section-id="{{ section.id }}">
+    <div class="page-width section-padding us-vs-them">
+        {% if section.settings.header != blank %}
+            <h2>{{ section.settings.header }}</h2>
+        {% endif %}
+        <div class="grid-container">
+            <div class="row">
+                <div class="blank-header box"></div>
+                <div class="teangle-header box">
+                    <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/Group.png?v=1709583240">
+                </div>
+                <div class="competitor-header box">
+                    <p>{{ section.settings.competing_text }}</p>
+                </div>
+            </div>
+            {% for block in section.blocks %}
+                <div class="row">
+                    <div class="value-box box text {% if forloop.last %} last-left {% endif %}">
+                        {{ block.settings.title }}
+                    </div>
+                    <div class="value-box box emoji">
+                        ✅
+                    </div>
+                    <div class="value-box box emoji {% if forloop.last %} last-right {% endif %}">
+                        ❌
+                    </div>
+                </div>
+            {% endfor %}    
+        </div>
+    </div> 
+</section>
+
+
+
+{% schema %}
+{
+    "name": "JR Us vs Them",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000000"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Logo"
+        },
+        {
+            "type": "text",
+            "id": "competing_text",
+            "label": "Competitor text"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "value",
+            "name": "Value", 
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Prop title",
+                    "default": "Prop Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Jr Us vs them",
+            "category": "Content"
+        }
+    ]
+}
+{% endschema %}

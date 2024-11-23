@@ -1,0 +1,424 @@
+<style>
+  .drawer-menu-june23 .drawer__close-button .icon { height: 37px; width: 37px; }
+  .drawer-menu-june23 .drawer__fixed-header, .drawer__header { padding-top: 0; padding-bottom: 0; background: #fff; border-bottom: 1px solid; border-bottom-color: #e6e6e6; height: 55px !important; }
+  .drwjn23_logo { margin-top: 20px; max-width: 110px; }
+  .headmbl_search input { border: none !important; padding: 0; font-size: 14px !important; line-height: 1; color: #878787 !important; }
+  .headmbl_search { padding: 5px 15px; border: 1px solid #e6e6e6; border-radius: 50px;     margin: 0 0 10px;}
+  .headmbl_search .site-header__search-btn { padding: 0 0px 0 10px; margin-top: -1px; }
+  .jundraccwa { padding-bottom: 50px; }
+  .drawer__scrollable::-webkit-scrollbar { display: none; }
+</style>
+
+<style>
+.accordionjundrwr { color: #264d48; cursor: pointer; padding: 5px 0; width: 100%; border: none; text-align: left; outline: none; font-size: 17px; transition: 0.4s; font-weight: 600; margin: 5px 0; }
+.accordionjundrwr:after {
+  content: '\FF0B';
+  color: #264d48;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  transform: scale(1.1);
+}
+
+.activejundrwr:after {
+  content: "\2212";
+  transform: scale(1.5);
+  margin-right: 2px;
+  font-weight: 300;
+}
+
+.paneljundrwr {
+  padding: 0 18px 0 0 ; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+  .drawer-menu-june23 { background: #fff; }
+  .jnp_inrmsi { padding-left: 18px; border-left: 1px solid #BECDBE; margin-bottom: 15px; }
+  .jnp_inrmsi a { display: block; font-weight: 300; font-size: 15px; padding: 3px 0; }
+  .jnp_inrd { padding-bottom: 10px; }
+  
+  .jnp_inrmlsi { width: 100px; overflow: hidden; float: left; }
+  .jnp_inrmlsi img { border-radius: 10px; }
+  .jnp_inrmlsit { float: left; width: calc(100% - 100px); padding-left: 15px; }
+  .jnp_inrmlsit a { font-weight: 300; padding-top: 12px; display: block;line-height: 1.35; }
+  .jnp_inrmlsit a strong { font-size: 17px; display: block; line-height: 21px; }
+  .jnp_intach {color: #264d48;  padding: 5px 0; width: 100%; border: none; text-align: left;  font-size: 17px; transition: 0.4s; font-weight: 600; margin: 5px 0; display: block;}
+  .drawer-menu-june23 .mbl_nav_sticky {  border-top: 1px solid #E9E9E9; background: #F9F9F9; padding: 4px 10px 5px;}
+  .mbl_nav_sticky , .mbl_nav_sticky a { color: #000; }
+  .mbl_nav_sticky .site-nav__link { text-decoration: underline; letter-spacing: 0.05em; font-size: 13px; padding: 10px 5px;}
+  
+</style>
+
+{% assign animation_row = 1 %} {% assign drawer_position = 'right' %} {% if logo_alignment == 'center' %} {% assign drawer_position = 'left' %} {% endif %} <div id="NavDrawer" class="drawer drawer--{{ drawer_position }}">
+  <div class="drawer__contents drawer-menu-june23">
+    <div class="drawer__fixed-header">
+      <div class="drawer__header appear-animation">
+        <!-- <div class="h2 drawer__title"></div> -->
+        <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/logo_main.svg?v=1686922500" class="drwjn23_logo">
+        
+        <div class="drawer__close">
+          <button type="button" class="drawer__close-button js-drawer-close">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+              <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" style="  color: #808080; " />
+            </svg>
+            <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer__scrollable">
+
+
+      <div class="headmbl_search">
+          <form action="{{ routes.search_url }}" method="get" role="search" id="HeaderSearchForm" class="site-header__search-form">
+            <input type="hidden" name="type" value="{{ settings.search_type }}">
+            
+            <input type="search" name="q" value="{{ search.terms | escape | replace: '*', '' }}" placeholder="{{ 'general.search.placeholder' | t }}" class="site-header__search-input" aria-label="{{ 'general.search.placeholder' | t }}">
+            <button type="submit" class="text-link site-header__search-btn site-header__search-btn--submit">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                <path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42" style="  color: #808080; " />
+              </svg>
+              <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+          </form>
+        </div>
+      {% if request.locale.iso_code == 'en' %}
+      <div class="jundraccwa">
+        <button class="accordionjundrwr activejundrwr"><ly-as-1079012>Shop Matcha</ly-as-1079012></button>
+        <div class="paneljundrwr" style="max-height: 425px">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/collections/matcha-signature-teangle"><ly-as-1079013>All Matcha</ly-as-1079013></a>
+               <a href="/products/starter-pack"><ly-as-1079014>Starter Pack</ly-as-1079014></a>
+               <a href="/collections/teangle-matcha-bundles"><ly-as-1079015>Bundles</ly-as-1079015></a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/collections/matcha-signature-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/GINGERLEMONGRASS_240x.png?v=1684177932"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/collections/matcha-signature-teangle"><strong><ly-as-1079016>Signature Matcha</ly-as-1079016></strong> <ly-as-1079017>Our best-selling matcha in 3 delicious flavors.</ly-as-1079017></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-collagen"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/COLLAGEN_240x.png?v=1684177948"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-collagen"><strong><ly-as-1079018>Collagen Matcha</ly-as-1079018></strong> <ly-as-1079019>5g of pure marine collagen in every serving.</ly-as-1079019></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/ceremonial-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CEREMONIAL_240x.png?v=1684177951"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/ceremonial-matcha"><strong><ly-as-1079020>Ceremonial Matcha</ly-as-1079020></strong> <ly-as-1079019>5g of pure marine collagen in every serving.</ly-as-1079019></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+         <!--Accessories  -->
+
+
+        <button class="accordionjundrwr"><ly-as-1079021>Accessories</ly-as-1079021></button>
+        <div class="paneljundrwr">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/collections/accessoires"><ly-as-1079022>All Accessories</ly-as-1079022></a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/teangle-milk-frother"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-397b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/teangle-milk-frother"><strong><ly-as-1079023>Milk Frother</ly-as-1079023></strong> <ly-as-1079024>For making delicious, extra creamy matcha.</ly-as-1079024></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-spoon"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-396b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-spoon"><strong><ly-as-1079025>Matcha Spoon</ly-as-1079025></strong> <ly-as-1079026>The perfect companion to your matcha regime.</ly-as-1079026></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-bottle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-395b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-bottle"><strong><ly-as-1079027>Matcha Bottle</ly-as-1079027></strong> <ly-as-1079028>Take your matcha game on the move.</ly-as-1079028></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+        <!-- Learn -->
+
+
+        <button class="accordionjundrwr"><ly-as-1079029>Learn</ly-as-1079029></button>
+        <div class="paneljundrwr">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/pages/faq-teangle"><ly-as-1079030>FAQ</ly-as-1079030></a>
+               <a href="/pages/contact-us"><ly-as-1079031>Contact Us</ly-as-1079031></a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/pages/about-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-394b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/pages/about-teangle"><strong><ly-as-1079032>Our Story</ly-as-1079032></strong> <ly-as-1079033>Learn about our mission & purpose.</ly-as-1079033></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/blogs/recipes"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-393b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/blogs/recipes"><strong><ly-as-1079034>Recipes</ly-as-1079034></strong> <ly-as-1079035>From matcha drinks to desserts & snacks.</ly-as-1079035></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/blogs/matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-392b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/blogs/matcha"><strong><ly-as-1079036>Blog</ly-as-1079036></strong> <ly-as-1079037>Incorporate matcha and easy-living in your life.</ly-as-1079037></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+
+        <a href="/pages/subscription-program" class="jnp_intach"><ly-as-1079038>Subscribe & Save</ly-as-1079038> </a>
+      </div>
+ 
+      {% else %}
+     <div class="jundraccwa">
+        <button class="accordionjundrwr activejundrwr"><ly-as-1079039>Notre matcha</ly-as-1079039></button>
+        <div class="paneljundrwr" style="max-height: 425px">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/collections/matcha-signature-teangle"><ly-as-1079040>Tous nos matcha</ly-as-1079040></a>
+               <a href="/products/starter-pack"><ly-as-1079041>Ensemble de départ</ly-as-1079041></a>
+               <a href="/collections/teangle-matcha-bundles"><ly-as-1079042>Ensembles</ly-as-1079042></a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/collections/matcha-signature-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/GINGERLEMONGRASS_240x.png?v=1684177932"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/collections/matcha-signature-teangle"><strong><ly-as-1079043>Matcha signature</ly-as-1079043></strong> <ly-as-1079044>Notre matcha le plus vendu en 3 saveurs délicieuses.</ly-as-1079044></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-collagen"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/COLLAGEN_240x.png?v=1684177948"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-collagen"><strong><ly-as-1079045>Matcha collagène</ly-as-1079045></strong> <ly-as-1079046>5g de  collagène marin pur avec chaque portion.</ly-as-1079046></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/ceremonial-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CEREMONIAL_240x.png?v=1684177951"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/ceremonial-matcha"><strong><ly-as-1079047>Matcha cérémonial</ly-as-1079047></strong> <ly-as-1079048>Matcha classique tel qu'il est traditionnellement apprécié.</ly-as-1079048></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+         <!--Accessories  -->
+
+
+        <button class="accordionjundrwr"><ly-as-1079021>Accessories</ly-as-1079021></button>
+        <div class="paneljundrwr">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/collections/accessoires"><ly-as-1079049>Tous nos accessoires</ly-as-1079049></a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/teangle-milk-frother"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-397b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/teangle-milk-frother"><strong><ly-as-1079050>Mousseur à lait</ly-as-1079050></strong>  <ly-as-1079051>Pour un matcha latte extra crémeux.</ly-as-1079051></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-spoon"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-396b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-spoon"><strong><ly-as-1079052>Cuillère à matcha</ly-as-1079052></strong> <ly-as-1079053>Pour un matcha parfait à tous les coups.</ly-as-1079053></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/products/matcha-bottle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-395b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/products/matcha-bottle"><strong><ly-as-1079054>Bouteille de matcha</ly-as-1079054></strong> <ly-as-1079055>Prépare ton matcha sur le pouce.</ly-as-1079055></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+        <!-- Learn -->
+
+
+        <button class="accordionjundrwr"><ly-as-1079056>En savoir plus</ly-as-1079056></button>
+        <div class="paneljundrwr">
+           <div class="jnp_inrd"> 
+           <div class="jnp_inrmeta">
+             <div class="jnp_inrmsi">
+               <a href="/pages/faq-teangle"><ly-as-1079030>FAQ</ly-as-1079030></a>
+               <a href="/pages/contact-us"><ly-as-1079057>Contactez-nous</ly-as-1079057></a>
+             </div>
+           </div>
+           <div class="jnp_inrli">
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="#"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-394b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="#"><strong><ly-as-1079058>Notre histoire</ly-as-1079058></strong> <ly-as-1079059>Découvrez notre mission et notre pourquoi.</ly-as-1079059></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/blogs/recipes"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-393b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/blogs/recipes"><strong><ly-as-1079060>Recettes</ly-as-1079060></strong> <ly-as-1079061>Découvrez toutes nos recettes à base de matcha.</ly-as-1079061></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+             <div class="jnp_inrmls">
+                <div class="jnp_inrmlsi">
+                  <a href="/blogs/matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-392b_240x.jpg?v=1686854922"></a>
+                </div>
+               <div class="jnp_inrmlsit">
+                  <a href="/blogs/matcha"><strong><ly-as-1079036>Blog</ly-as-1079036></strong> <ly-as-1079062>Intégrez le matcha et de la joie de vivre dans votre quotidien.</ly-as-1079062></a>
+                </div>
+               <div class="cb"></div>
+             </div>
+           </div>
+           </div>
+        </div>
+
+
+        <a href="/pages/subscription-program" class="jnp_intach"><ly-as-1079063>Abonnement</ly-as-1079063>  </a>
+      </div>
+        {% endif %}
+
+
+      <div class="mbl_nav_sticky">
+        <!-- AMAIS ADDED LANG SWITCH -- STARTS --> {% if customer.id == null %} <a class="site-nav__link site-nav__link--icon large--hide" href="/account">
+           
+          <ly-as-1079064>Log in</ly-as-1079064>
+          <span class="icon__fallback-text">
+            <ly-as-1079065>Connexion</ly-as-1079065>
+          </span>
+        </a> {% else %} <a class="site-nav__link site-nav__link--icon large--hide" href="/account">
+          
+          <ly-as-1079066>Compte</ly-as-1079066>
+          <span class="icon__fallback-text">
+            <ly-as-1079066>Compte</ly-as-1079066>
+          </span>
+        </a>
+        <a class="site-nav__link site-nav__link--icon large--hide" href="{{ routes.account_logout_url }}">
+          <ly-as-1079067>Déconnexion</ly-as-1079067>
+          <span class="icon__fallback-text">
+            <ly-as-1079067>Déconnexion</ly-as-1079067>
+          </span>
+        </a> {% endif %} 
+        <a class="site-nav__link site-nav__link--icon large--hide" href="/pages/contact-us" style="margin-left: 10px; ">
+          <ly-as-1079057>Contactez-nous</ly-as-1079057>
+        </a>
+        <div class="drawer_lang medium-up--hides"> {% render 'custom-lang-switch-june2023' %} {% comment %} <span class="ly-custom-0"></span>{% endcomment %} </div>
+        <div class="cb"></div>
+        <!-- AMAIS ADDED LANG SWITCH -- ENDS -->
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+<script>
+  var acc = document.getElementsByClassName("accordionjundrwr");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("activejundrwr");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+  /* $(".accordionjundrwr").click(function() {
+        $(".accordionjundrwr").removeClass("activejundrwr");
+        $(".paneljundrwr").hide();
+        $(this).addClass("activejundrwr");
+        $(this).next().show();
+  }); */
+  $(".amanav_shop").click(function() {
+    $(".amanav_tab_shop").show();  
+    $(".amanav_tab_learn").hide();
+    $(".amanav_link").removeClass("activer");
+    $(this).addClass("activer");
+  });
+  $(".amanav_learn").click(function() {
+    $(".amanav_tab_shop").hide();  
+    $(".amanav_tab_learn").show();
+    $(".amanav_link").removeClass("activer");
+    $(this).addClass("activer");
+  });
+</script>

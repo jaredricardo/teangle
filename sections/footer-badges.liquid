@@ -1,0 +1,111 @@
+{%- liquid
+
+  assign show_section = true
+  if template == 'index' and section.settings.hide_homepage
+    assign show_section = false
+  endif -%
+-%}
+
+{%- if show_section -%}
+  {%- if section.blocks.size > 0 -%}
+    {%- liquid
+      assign grid_item_width = 'medium-up--one-half'
+      if section.blocks.size == 3
+        assign grid_item_width = 'medium-up--one-third'
+      elsif section.blocks.size == 4
+          assign grid_item_width = 'medium-up--one-quarter'
+      endif
+    -%}
+
+    <div class="index-section">
+      <div id="footer_cols">
+        <div class="page-width">
+          <div class="grid grid--flush-bottom">
+            {%- for block in section.blocks -%}
+              <div class="grid__item {{ grid_item_width }}" {{ block.shopify_attributes }} data-aos="row-of-3">
+                <div class="ffc_col ffc_col1">
+                      {%- if block.settings.image != blank -%}
+                         <div class="ffc_colimg">
+                           {% assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                           <img class="lazyload"
+                               data-src="{{ img_url }}"
+                               data-widths="[360, 540, 720, 900, 1080]"
+                               data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                               data-sizes="auto"
+                               alt="{{ block.settings.image.alt | escape }}">
+                         </div>
+                          {%- endif -%}
+                         <div class="ffc_coltxt">
+                           {%- if block.settings.title != blank -%}
+                             <h3>{{ block.settings.title }}</h3>
+                           {%- endif -%}
+                           {%- if block.settings.text != blank -%}
+                             <p>{{ block.settings.text }}</p>
+                           {%- endif -%}
+                         </div>
+                     <div class="cb"></div>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Footer badges",
+    "max_blocks": 4,
+    "class": "index-section--footer",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "hide_homepage",
+        "label": "Do not show on home page"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "trust-badges",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "FREE SHIPPING"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>For orders over $60</p>"
+          }
+        ]
+      }
+    ],
+    "default": {
+      "blocks": [
+        {
+          "type": "trust-badges"
+        },
+        {
+          "type": "trust-badges"
+        },
+        {
+          "type": "trust-badges"
+        },
+        {
+          "type": "trust-badges"
+        }
+      ]
+    }
+  }
+{% endschema %}

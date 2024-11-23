@@ -1,0 +1,247 @@
+.jr-product-cards {
+    max-width: 1276px;
+    margin: 0 auto;
+    padding: 5% 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.jr-product-cards .headers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 60px;
+}
+
+.jr-product-cards h2 {
+    color: black;
+    font-size: 64px;
+    line-height: 76px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+
+.jr-product-cards .section-subheader {
+    color: black;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.jr-product-cards .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 60px;
+    column-gap: 40px;
+}
+
+.jr-product-cards .product-card {
+    width: 30.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 380px;
+}
+
+.jr-product-cards .top,
+.jr-product-cards .bottom {
+    flex: 1;
+}
+
+.jr-product-cards .top {
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+}
+
+.jr-product-cards .top img.product-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    vertical-align: bottom;
+    aspect-ratio: 1 / 1;
+}
+
+.jr-product-cards .top .inner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.jr-product-cards .top .sticker {
+    width: max-content;
+    max-width: 130px;
+}
+
+.jr-product-cards .top .sticker-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.jr-product-cards .top .sticker-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.jr-product-cards .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.jr-product-cards .bottom .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.jr-product-cards .product-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.jr-product-cards .bottom .title-sub-callout {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.jr-product-cards .bottom .price-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.jr-product-cards .price-container .product-price,
+.jr-product-cards .strike-through-price  {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.jr-product-cards .strike-through-price {
+    color: #8E8E93 !important;
+    text-decoration: line-through;
+}
+
+.jr-product-cards .value-prop-container .value-prop,
+.jr-product-cards .value-prop-container .value-prop p {
+    font-size: 24px;  
+    line-height: 30px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.jr-product-cards .card-button {
+    height: 50px;
+    width: 100%;
+    max-width: 200px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    margin-top: 15px;
+}
+
+.jr-product-cards .value-prop-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;;
+}
+
+@media screen and (max-width: 851px) {
+    .jr-product-cards {
+        padding: calc(5% + 25px) 15px;
+        overflow: hidden;
+    }
+    .jr-product-cards .product-card {
+        width: 47%;
+        gap: 15px;
+    }
+    .jr-product-cards h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .jr-product-cards .section-subheader {
+        font-size: 28px;
+        line-height: 42px;
+    }
+    .jr-product-cards .headers-container {
+        gap: 0;
+        margin-bottom: 30px;
+    }
+    .jr-product-cards .card-container {
+        column-gap: 12px;
+        justify-content: center;
+    }
+    .jr-product-cards .top .sticker {
+        max-width: 88px;
+    }
+    .jr-product-cards .top .sticker-text {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .jr-product-cards .product-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .jr-product-cards .bottom .title-container {
+        gap: 8px;
+    }
+    .jr-product-cards .bottom .title-sub-callout {
+        font-size: 18px;
+        line-height: 1;
+    }
+    .jr-product-cards .bottom {
+        line-height: 5px;
+        gap: 6px;
+    }
+    .jr-product-cards .value-prop-container {
+        gap: 2px;
+    }
+    .jr-product-cards .price-container .product-price, 
+    .jr-product-cards .strike-through-price {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .jr-product-cards .value-prop-container .value-prop, 
+    .jr-product-cards .value-prop-container .value-prop p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .jr-product-cards .card-button {
+        margin-top: 0;
+        height: 40px;
+        font-size: 18px;
+    }
+}

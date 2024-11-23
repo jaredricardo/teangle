@@ -1,0 +1,48 @@
+<style>
+
+{% if section.settings.hide_header %}
+    #shopify-section-scrolling-announcement {
+        display: none;
+    }
+    #shopify-section-header {
+        display: none;
+    }
+{% endif %}
+
+{% if section.settings.hide_footer %}
+    #shopify-section-footer {
+        display: none;
+    }
+    #shopify-section-footer-newsletter {
+        display: none;
+    }
+{% endif %}
+
+</style>
+
+
+
+{% schema %}
+{
+    "name": "JR Page Overrides",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "hide_header",
+            "label": "Hide Header",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "hide_footer",
+            "label": "Hide Footer",
+            "default": true
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Page Overrides"
+        }
+    ]
+}
+{% endschema %}

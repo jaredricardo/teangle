@@ -1,0 +1,98 @@
+{{ 'jr-hp-hero.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+[data-section-id="{{ section.id }}" ] {
+    background-color: {{ section.settings.bg_color }};
+}
+
+[data-section-id="{{ section.id }}" ] .jr-hp-hero {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-hp-hero">
+        <img src="{{ section.settings.mobile_img |  img_url: 'master' }}" alt="Hero image" class="mobile hero-image">
+        <div class="content-container">
+            {% if section.settings.header != blank %}
+                <h1 class="section-header">{{ section.settings.header }}</h1>
+            {% endif %}
+            {% if section.settings.subheader != blank %}
+                <div class="section-subheader">{{ section.settings.subheader }}</div>
+            {% endif %}
+            {% if section.settings.stars_text != blank %}
+               <div class="star-review-container">
+                    {% if section.settings.stars_img != blank %}
+                        <img src="{{ section.settings.stars_img |  img_url: 'master' }}" alt="Stars" class="stars">
+                    {% endif %}
+                    <div class="stars-text">{{ section.settings.stars_text }}</div>
+               </div>
+            {% endif %}
+            {% if section.settings.button_text != blank %}
+                <a href="{{ section.settings.button_link }}" class="hero-btn btn">{{ section.settings.button_text }}</a>
+            {% endif %}
+        </div>
+        <img src="{{ section.settings.desktop_img |  img_url: 'master' }}" alt="Hero image" class="desktop hero-image">
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "JR Homepage Hero",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background Color"
+        },
+        {
+            "type": "image_picker",
+            "id": "desktop_img",
+            "label": "Deskop Image"   
+        },
+        {
+            "type": "image_picker",
+            "id": "mobile_img",
+            "label": "Mobile Image"   
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Hero Header"
+        },
+        {
+            "type": "text",
+            "id": "subheader",
+            "label": "Subheader"
+        },
+        {
+            "type": "text",
+            "id": "stars_text",
+            "label": "Review Stars Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "stars_img",
+            "label": "Review Stars Image"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Homepage Hero"
+        }
+    ]
+}
+{% endschema %}

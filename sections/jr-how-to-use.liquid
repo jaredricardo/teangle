@@ -1,0 +1,110 @@
+{% liquid 
+
+    assign bg_color = section.settings.bg_color
+    assign text_color = section.settings.text_color
+    assign step_bg_color = section.settings.step_bg_color
+    assign step_number_color = section.settings.step_number_color
+
+-%}
+
+{% style %}
+
+[data-section-id="{{ section.id }}"] {
+
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+
+}
+
+[data-section-id="{{ section.id }}"] .step-num {
+    background-color: {{ step_bg_color }};
+    color: {{ step_number_color }};
+}
+
+{% endstyle %} 
+
+<section data-section-id="{{ section.id }}">
+    <div class="page-width section-padding how-to-use">
+        <div class="column">
+            <img src="{{ section.settings.image | img_url: 'master' }}" alt="How to use Image">
+        </div>
+        <div class="column">
+            {% if section.settings.header != blank %}
+                <h2>{{ section.settings.header }}</h2>
+            {% endif %}
+            <div class="steps-container">
+                {% for block in section.blocks %}
+                    <div class="row">
+                        <div class="step-num">
+                            {{ forloop.index }}
+                        </div>
+                        <div class="step-text">
+                            {{ block.settings.title }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div> 
+</section>
+
+{% schema %}
+{
+    "name": "JR How to Use",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#25623A"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#FFFFFF"
+        },
+        {
+            "type": "color",
+            "id": "step_bg_color",
+            "label": "Step Background Color",
+            "default": "#F5DAF4"
+        },
+        {
+            "type": "color",
+            "id": "step_number_color",
+            "label": "Step Number    Color",
+            "default": "#000000"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Main Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "Step",
+            "name": "step", 
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Step info"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR How to Use",
+            "category": "Content"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,47 @@
+<div class="footer__item-padding">
+  {% if block.settings.show_footer_title %}
+    <p class="h4 footer__title small--hide">{{ block.settings.title }}</p>
+    <button type="button" class="h4 footer__title collapsible-trigger collapsible-trigger-btn medium-up--hide" aria-controls="Footer-{{ block.id }}">
+      {{ block.settings.title }}
+      {% render 'collapsible-icons' %}
+    </button>
+  {% endif %}
+  <div
+    {% if block.settings.show_footer_title %}
+      id="Footer-{{ block.id }}" class="collapsible-content collapsible-content--small"
+    {% endif %}>
+    <div class="collapsible-content__inner">
+      <div class="footer__collapsible{% unless block.settings.show_footer_title %} footer_collapsible--disabled{% endunless %}">
+        <p>{{ block.settings.text }}</p>
+        <p style=" font-size: 15px; line-height: 1.7; ">
+          <strong><ly-as-518401>Call Us:</ly-as-518401> </strong><a href="tel:8003166320">800-316-6320</a>
+          <br><strong><ly-as-518402>Email Us:</ly-as-518402> </strong><a href="mailto:info@teangle.com"><ly-as-518403>info@teangle.com</ly-as-518403></a>
+          <br><strong><ly-as-518404>Chat on  fb:</ly-as-518404> </strong><a href="https://m.me/teanglematcha"><ly-as-518405>@teanglematcha</ly-as-518405></a>
+        </p>
+        
+
+        {% comment %}
+        <div class="ffcr_cols">
+            <div class="ffcr_col ffcr_col1">
+                <a href="https://m.me/teanglematcha" target="_blank"><img src="{{ 'ffcr_icon1.png' | asset_img_url: '40x' }}"> </a>
+                <a href="https://m.me/teanglematcha" target="_blank">Chat</a>
+            </div>
+            <div class="ffcr_col ffcr_col2">
+                <a href="tel:1800316320"><img src="{{ 'ffcr_icon2.png' | asset_img_url: '40x' }}"></a>
+                <a href="tel:1800316320">Call</a>
+            </div>
+            <div class="ffcr_col ffcr_col3">
+                <a href="mailto:mailto:info@teangle.com"><img src="{{ 'ffcr_icon3.png' | asset_img_url: '40x' }}"></a>
+                <a href="mailto:mailto:info@teangle.com">Email</a>
+            </div>
+            <div class="ffcr_col ffcr_col4">
+                <a href="/pages/faqs"><img src="{{ 'ffcr_icon4.png' | asset_img_url: '40x' }}"></a>
+                <a href="/pages/faqs">Faq</a>
+            </div>
+            <div class="cb"></div>
+        </div>
+        {% endcomment %}
+      </div>
+    </div>
+  </div>
+</div>

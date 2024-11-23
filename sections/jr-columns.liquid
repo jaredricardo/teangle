@@ -1,0 +1,107 @@
+{% liquid 
+
+    assign bg_color = section.settings.bg_color
+    assign text_color = section.settings.text_color
+
+-%}
+
+{% style %}
+
+[data-section-id="{{ section.id }}"] {
+
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+
+}
+
+{% endstyle %} 
+
+<section data-section-id="{{ section.id }}">
+    <div class="page-width section-padding jr-columns col--{{ section.settings.size }}">
+        {% for block in section.blocks %}
+            <div class="column">
+                {% if block.settings.title != blank %}
+                    <h2>{{ block.settings.title }}</h2>
+                {% endif %}
+                {% if block.settings.subheader != blank %}
+                    <h3>{{ block.settings.subheader }}</h3>
+                {% endif %}
+                {% if block.settings.text_body != blank %}
+                    <p>{{ block.settings.text_body }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div> 
+</section>
+
+
+{% schema %}
+{
+    "name": "JR Columns",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000000"
+        },
+        {
+            "type": "select",
+            "id": "size",
+            "label": "Sets the size of the fonts in the solumns",
+            "default": "small",
+            "options": [
+                {
+                    "value": "small",
+                    "label": "Small"
+                },
+                {
+                    "value": "medium",
+                    "label": "Medium"
+                },
+                {
+                    "value": "large",
+                    "label": "Large"
+                }
+            ]
+        }
+    ],
+    "blocks": [
+        {
+            "type": "value",
+            "name": "Value", 
+            "limit": 3,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Prop title",
+                    "default": "Prop Title"
+                },
+                {
+                    "type": "text",
+                    "id": "subheader",
+                    "label": "Subheader"
+                },
+                {
+                    "type": "textarea",
+                    "id": "text_body",
+                    "label": "Text Body"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Jr Coumns",
+            "category": "Content"
+        }
+    ]
+}
+{% endschema %}

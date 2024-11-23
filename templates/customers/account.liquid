@@ -1,0 +1,299 @@
+<script>
+RC_CLASS_IDENTIFIER = 'js--recharge';
+
+async function fetchRcCustomer() {
+    try {
+        const res = await fetch(
+            '/tools/recurring/get_rc_token/{{ customer.id }}'
+        )
+            .then((res) => res.clone().text())
+            .then((res) => JSON.parse(res.match(/{"rc_customer":.*}}/g)[0]));
+        return res.rc_customer;
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+fetchRcCustomer().then((rc_customer) => {
+    document
+        .querySelectorAll(`[class^=${RC_CLASS_IDENTIFIER}]`)
+        .forEach((link) => {
+            const target_class = Array.from(link.classList).find((el) =>
+                el.includes(RC_CLASS_IDENTIFIER)
+            );
+            const target_class_location = target_class.split(
+                RC_CLASS_IDENTIFIER
+            )[1];
+    	  {% if request.locale.iso_code == 'en' %}
+            const base_path = `https://teangle.ca/tools/recurring/portal/${rc_customer.hash}/subscriptions`;
+          {% else %}
+      		const base_path = `https://fr.teangle.ca/tools/recurring/portal/${rc_customer.hash}/subscriptions`;
+      	  {% endif %}
+            const token = `token=${rc_customer.token}`;
+            target_class_location.includes('?')
+                ? (link.href = base_path + '&' + token)
+                : (link.href = base_path + '?' + token);
+            
+        });
+});
+{% for tag in customer.tags %}
+  console.log("{{ tag }}");
+  {% if tag == 'Active Subscriber' %}
+    
+    //$("<p style='text-align: center;padding: 50vh 10px;'>Loading Dashboard</p>").insertBefore(".main-content");
+    //$(".main-content").hide();
+    setTimeout(function(){  
+              //window.location.replace($("#redir_ifsub").attr("href")); 
+              }, 1800);
+  {% break %}{% endif %}
+{% endfor %}
+ 
+</script>
+{% if request.locale.iso_code == 'en' %}
+<div class="acc_top_nav">
+	<div class="acc_tn_inner">
+		<ul>
+			<li><a href="/account">Order History</a></li>
+			<!-- Begin ReCharge code -->
+			  {% assign is_subscription_customer = false %}
+		      {% for tag in customer.tags %}
+		      {% if tag == 'Active Subscriber' %}{% assign is_subscription_customer = true %}{% break %}{% endif %}
+		      {% endfor %}
+
+		      {% if is_subscription_customer %}
+		     	 <li><a class="js--recharge" id="redir_ifsub" href="/tools/recurring/login/">Manage Subscriptions</a></li>
+		      {% else %}
+		     	 <li><a   class="js--recharge" id="redir_ifsub" href="/tools/recurring/login/">Subscriptions</a></li>
+		      {% endif %}
+  			<!-- End ReCharge code -->
+			<!--  <li><a href="/pages/referral-dashboard-1">Referrals</a></li>-->
+			<li><a href="{{ routes.account_addresses_url }}">Addresses</a></li>
+			<li><a href="{{ routes.account_logout_url }}">Sign Out</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="dashboard_hello" >
+	<div class="page-width">
+		<div class="grid grid--uniform">
+
+			<div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2">
+				<h3>Happy {{ "now" | date: "%B" }}!</h3>
+				<p>Welcome to your account. Here you can change your subscription and view your order history. You also get a 20% discount on all subscription products. Matcha Waiting For?</p>
+			</div>
+
+
+			<div class="grid__item medium-up--one-half aos-init aos-animate text-center" data-aos="row-of-2">
+
+					<div class="member_benefits">
+                      <p>Teangle subscription benefits</p>
+						<div class="member_ben_inner">
+							<div class="memben_col memben_col1">
+								<img src="https://cdn.shopify.com/s/files/1/1835/6147/files/Membership-icons1.png?v=1591182461">
+								<p>20% Off</p>
+							</div>
+							<div class="memben_col memben_col3">
+								<img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/t/11/assets/cancel-anytime.png?v=1633689185">
+								<p>Schedule Shipping</p>
+							</div>
+							<div class="memben_col memben_col2">
+								<img src="https://cdn.shopify.com/s/files/1/1835/6147/files/Membership-icons2.png?v=1591182461">
+								<p>Exclusive Content</p>
+							</div>
+							<div class="cb"></div>
+						</div>
+					</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{% else %}
+
+<div class="acc_top_nav">
+	<div class="acc_tn_inner">
+		<ul>
+			<li><a href="/account">Historique d'achats</a></li>
+			<!-- Begin ReCharge code -->
+			  {% assign is_subscription_customer = false %}
+		      {% for tag in customer.tags %}
+		      {% if tag == 'Active Subscriber' %}{% assign is_subscription_customer = true %}{% break %}{% endif %}
+		      {% endfor %}
+
+		      {% if is_subscription_customer %}
+		     	 <li><a   class="js--recharge" href="/tools/recurring/login/">Gérer les abonnements</a></li>
+		      {% else %}
+		     	 <li><a   class="js--recharge" href="/tools/recurring/login/">Abonnement</a></li>
+		      {% endif %}
+  			<!-- End ReCharge code -->
+			<li><a href="/pages/referral-dashboard-1">Référencement</a></li>
+			<li><a href="{{ routes.account_addresses_url }}">Adresses</a></li>
+			<li><a href="{{ routes.account_logout_url }}"><ly-as-209331>Déconnexion</ly-as-209331></a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="dashboard_hello" >
+	<div class="page-width">
+		<div class="grid grid--uniform">
+
+			<div class="grid__item medium-up--one-half aos-init aos-animate" data-aos="row-of-2">
+				<h3>Happy {{ "now" | date: "%B" }}!</h3>
+				<p><ly-as-209332>Bienvenue sur votre compte. Ici, vous pouvez modifier votre abonnement et consulter l'historique de vos commandes. Vous bénéficiez également d'un 20 % de rabais sur tous les produits d'abonnement. Matcha Waiting For?</ly-as-209332>  </p>
+			</div>
+
+
+			<div class="grid__item medium-up--one-half aos-init aos-animate text-center" data-aos="row-of-2">
+             	    
+					<div class="member_benefits">
+                      <p><ly-as-209333>Avantages avec l'abonnement Teangle</ly-as-209333></p>
+						<div class="member_ben_inner">
+							<div class="memben_col memben_col1">
+								<img src="https://cdn.shopify.com/s/files/1/1835/6147/files/Membership-icons1.png?v=1591182461">
+								<p><ly-as-209334>20 % de rabais</ly-as-209334></p>
+							</div>	
+							<div class="memben_col memben_col3">
+								<img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/t/11/assets/cancel-anytime.png?v=1633689185">
+								<p><ly-as-209335>Annule quand tu veux</ly-as-209335></p>
+							</div>			
+							<div class="memben_col memben_col2">
+								<img src="https://cdn.shopify.com/s/files/1/1835/6147/files/Membership-icons2.png?v=1591182461">
+								<p><ly-as-209336>Du contenu exclusif</ly-as-209336></p>
+							</div>			
+							<div class="cb">
+					</div>
+						</div>
+					</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+{% endif %}
+<style>
+.announcement-bar , #carttopr { display: none !important; }
+.acc_icon_out { display: inline-block !important; }
+.acc_icon_in { display: none !important; }
+.index-section {
+    margin: 2vw 0 0 !important;
+    padding: 5px 0 !important;
+}
+.dashboard_hello {
+    max-width: 1140px;
+    margin: 3vw auto;
+    background: #f6ebe2;
+    border-radius: 10px;
+    border-bottom: 10px solid #214a47;
+    padding: 20px 0;
+}
+#footer_newsltter , #footer_cols {
+    display: none !important;
+}
+.site-footer {
+    margin-top: 5vw;
+}
+.member_ben_inner {
+    max-width: 680px;
+    margin: 30px auto 0 ;
+}
+.memben_col  {
+    width: 33%;
+    float: left;
+    padding: 0 10px;
+}
+.memben_col  img {
+    max-width: 55px;
+}
+.memben_col p {
+    text-transform:  ;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+</style>
+
+{%- paginate customer.orders by 20 -%}
+
+<div class="page-width page-content">
+  <header class="section-header{% unless settings.type_headers_align_text %} hide section-header--with-link{% endunless %}">
+    <h1 class="section-header__title">{{ 'customer.account.title' | t }}</h1>
+    <a href="{{ routes.account_logout_url }}" class="btn btn--secondary btn--small section-header__link">{{ 'layout.customer.log_out'| t }}</a>
+  </header>
+
+  <div class="grid" style=" max-width: 1140px; margin: 0 auto; ">
+
+    <div class="grid__item medium-up--two-thirds">
+      <h2>{{ 'customer.orders.title' | t }}</h2>
+
+      {%- if customer.orders.size != 0 -%}
+
+        <table class="table--responsive table--small-text">
+          <thead>
+            <tr>
+              <th>{{ 'customer.orders.order_number' | t }}</th>
+              <th>{{ 'customer.orders.date' | t }}</th>
+              <th>{{ 'customer.orders.payment_status' | t }}</th>
+              <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+              <th>{{ 'customer.orders.total' | t }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for order in customer.orders -%}
+              <tr class="table__section">
+                <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name | link_to: order.customer_url }}</td>
+                <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+
+        <hr class="hr--clear">
+
+      {%- else -%}
+
+        <p>{{ 'customer.orders.none' | t }}</p>
+
+      {%- endif -%}
+    </div>
+
+    <div class="grid__item medium-up--one-third">
+      <h3>{{ 'customer.account.details' | t }}</h3>
+
+      <p class="h5">{{ customer.name }}</p>
+
+      {{ customer.default_address | format_address }}
+
+      <p><a href="{{ routes.account_addresses_url }}" class="text-link">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a></p>
+
+      <!-- Begin ReCharge code -->
+              {% assign is_subscription_customer = false %}
+              {% for tag in customer.tags %}
+              {% if tag == 'Active Subscriber' %}{% assign is_subscription_customer = true %}{% break %}{% endif %}
+              {% endfor %}
+
+              {% if is_subscription_customer %}
+              <p><a  class="js--recharge" href="/tools/recurring/login/">{% if request.locale.iso_code == 'en' %} Manage Subscriptions {% else %} Gérer les abonnements {% endif %}</a></p>
+              {% else %}
+              <p><a  class="js--recharge" href="/tools/recurring/login/">{% if request.locale.iso_code == 'en' %} Manage Subscriptions {% else %} Gérer les abonnements {% endif %}</a></p>
+              {% endif %}
+        <!-- End ReCharge code -->
+
+        <!-- Begin Friendbuy code 
+          <p><a href="/pages/referral-dashboard-1"><ly-as-209339>Statistiques de Référence</ly-as-209339></a></p>-->
+        <!-- End Friendbuy code -->
+
+
+    </div>
+
+  </div>
+
+  {%- if paginate.pages > 1 -%}
+    {%- render 'pagination', paginate: paginate -%}
+  {%- endif -%}
+</div>
+{%- endpaginate -%}

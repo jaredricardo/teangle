@@ -1,0 +1,119 @@
+{% liquid 
+
+    assign bg_color = section.settings.bg_color
+    assign text_color = section.settings.text_color
+
+-%}
+
+{% style %}
+
+[data-section-id="{{ section.id }}"] {
+
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+
+}
+
+{% endstyle %} 
+
+<section data-section-id="{{ section.id }}">
+    <div class="page-width section-padding images-and-text">
+        <div class="header-content">
+            {% if section.settings.header != blank %}
+                <h2>{{ section.settings.header }}</h2>
+            {% endif %}
+            {% if section.settings.subheader != blank %}
+                <h4>{{ section.settings.subheader }}</h4>
+            {% endif %}
+        </div>
+        <div class="images-container">
+            {% for block in section.blocks %}
+                <div class="images-text-container">
+                    <img src="{{ block.settings.image | img_url: 'master' }}">
+                    {% if block.settings.title != blank %}
+                        <h5>{{ block.settings.title }}</h5>
+                    {% endif %}
+                    {% if block.settings.image_text != blank %}
+                        <p>{{ block.settings.image_text }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        {% if section.settings.button_link != blank %}
+            <a class="btn new-default-btn" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+        {% endif %}
+    </div> 
+</section>
+
+{% schema %}
+{
+    "name": "JR Images and Text",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#25623A"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#FFFFFF"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header",
+            "default": "Section Header"
+        },
+        {
+            "type": "text",
+            "id": "subheader",
+            "label": "Section Subheader",
+            "default": "Section Subheader"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Get Started",
+            "info": "Requires a button link to be set"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button URL"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image-text",
+            "name": "Image + Text", 
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Image title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "image_text",
+                    "label": "Image Text"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Images and Text",
+            "category": "Content"
+        }
+    ]
+}
+{% endschema %}

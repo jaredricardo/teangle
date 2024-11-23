@@ -1,0 +1,56 @@
+
+<script>
+
+  document.addEventListener('rebuy:smartcart.show', (event) => {
+   var itemKeys = event.detail.smartcart.cart.items;
+    var itemsArr = [];
+    itemsArr.push(itemKeys);
+
+    gtag("event", "view_cart", {
+      currency: "CAD",
+      value: event.detail.smartcart.cart.total_price * 0.01,
+      items: itemsArr
+    });     
+  });
+  
+</script> 
+
+{% if product %}
+<script>
+
+  gtag("event", "view_item", {
+    currency: "CAD",
+    value: {{ product.price | times: 0.01 }},
+    items: [
+      {
+        item_id: {{ product.id }},
+        item_name: "{{ product.title }}",
+        item_brand: "Teangle",
+        price: {{ product.price | times: 0.01 }},
+        quantity: 1
+      }
+    ]
+  });
+  
+  {% if product.metafields.custom.custom_quantity_selector == blank %}
+    document.addEventListener('rebuy:cart.add', (event) => { 
+       console.log(event.detail);
+      
+      gtag("event", "add_to_cart", {
+        currency: event.detail.cart.cart.currency,
+        value: event.detail.cart.cart.total_price * 0.01,
+        items: [
+          {
+            item_id: {{ product.id }},
+            item_name: "{{ product.title }}",
+            item_brand: "Teangle",
+            price: event.detail.cart.cart.total_price * 0.01,
+            quantity: 1
+          }
+        ]
+      });
+          
+    });
+  {% endif %}
+</script>
+{% endif %}

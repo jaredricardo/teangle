@@ -1,0 +1,30 @@
+<section class="fullwidth-html" style="background-color: {{ section.settings.sec_color }};">
+    {{ section.settings.section_html }}
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Fullwidth HTML",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "section_html",
+        "label": "Custom HTML",
+        "default": "<p>add html here</p>"
+      },
+      {
+        "type": "color",
+        "id": "sec_color",
+        "label": "Section Color",
+        "default": "#fffef2"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Fullwidth HTML"
+      }
+    ]
+  }
+{% endschema %}

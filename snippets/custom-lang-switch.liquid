@@ -1,0 +1,75 @@
+<div class="custom-lang-switch">
+  {% if request.locale.iso_code == 'fr' %}
+    <span class=" medium-up--hide">Langue</span>  <a  class="lang_en">EN</a>
+  {% else %}
+    <span class=" medium-up--hide">Language</span>   <a class="lang_fr">FR</a>
+  {% endif %}
+</div>
+
+<script>
+  var currentpath = "{{ request.path }}";
+  function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {   
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+ $(".lang_en").click(function(){
+  	//console.log("en click");
+    setCookie('grt_lang','english',7);
+   setCookie('is_lang','true',7);
+  setTimeout(function(){
+		window.location.href = "https://teangle.ca" + currentpath ;
+  }, 500);
+  });
+$(".lang_fr").click(function(){
+  	//console.log("fr click");
+      setCookie('grt_lang','french',7);
+  	 setCookie('is_lang','true',7);
+  setTimeout(function(){
+		window.location.href = "https://fr.teangle.ca" + currentpath ;
+  }, 500);
+  
+  
+  });
+  
+  $(document).ready(function(){
+  	//console.log("trc");
+    var isLangSession = getCookie("is_lang");
+    var grtLang = getCookie("grt_lang");
+    //console.log(isLangSession);
+     if(isLangSession) {
+    	console.log("langsession_true");
+      eraseCookie("is_lang");
+       if(grtLang === "french") {
+       
+       console.log("langsession_true_fr");
+        // window.location.href = "https://fr.teangle.ca" + currentpath ;
+       }
+       else {
+       	console.log("langsession_true_en");
+        // window.location.href = "https://teangle.ca" + currentpath ;
+       }
+       
+    }
+    else {
+    	console.log("langsession_false");
+    }  
+  });
+</script>

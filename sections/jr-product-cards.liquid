@@ -1,0 +1,317 @@
+{{ 'jr-product-cards.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+[data-section-id="{{ section.id }}" ] {
+    {% if section.settings.make_gradient %}
+        background: linear-gradient({{ section.settings.bg_1 }}, {{ section.settings.bg_2 }});
+    {% else %}
+        background-color: {{ section.settings.bg_1 }};
+    {% endif %} 
+}
+
+[data-section-id="{{ section.id }}" ] .jr-product-cards,
+[data-section-id="{{ section.id }}" ] .jr-product-cards h2,
+[data-section-id="{{ section.id }}" ] .jr-product-cards .section-subheader {
+    color: {{ section.settings.text_color }};
+}
+
+[data-section-id="{{ section.id }}" ]  .jr-product-cards .top img.product-image {
+    border: 4px solid {{ section.settings.border_color }};
+    background-color: {{ section.settings.card_bg_color }};
+    {% if section.settings.contain_image %}
+        object-fit: contain;
+        {% else %}
+        object-fit: cover;
+    {% endif %}
+}
+
+[data-section-id="{{ section.id }}" ] .jr-product-cards .product-subtitle {
+    color: {{ section.settings.pro }}
+}
+
+[data-section-id="{{ section.id }}" ] .title-sub-callout {
+    color: {{ section.settings.callout_color }};
+}
+
+[data-section-id="{{ section.id }}" ] .card-button {
+    background-color: {{ section.settings.button_color }};
+}
+
+@media screen and (max-width: 851px) {
+    [data-section-id="{{ section.id }}" ]  .jr-product-cards .top img.product-image {
+        object-fit: cover;
+    }
+}
+
+{% endstyle %}
+
+{% assign num_blocks = 0 %}
+
+{% for block in section.blocks %}
+    {% assign num_blocks = num_blocks | plus: 1 %}
+{% endfor %}
+
+<div data-section-id="{{ section.id }}" id="{{ section.settings.scroll_to_id }}">
+    <div class="jr-product-cards">
+        {% if section.settings.header != blank or section.settings.subheader != blank %}
+            <div class="headers-container">
+                {% if section.settings.header != blank %}
+                    <h2>{{ section.settings.header }}</h2>
+                {% endif %}
+                {% if section.settings.subheader != blank %}
+                    <div class="section-subheader">{{ section.settings.subheader }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
+        {% if num_blocks > 0 %}
+            <div class="card-container">
+                {% for block in section.blocks %}
+                    {% assign product = all_products[block.settings.card_product] %}
+                    {% if product.available %}
+                        <div class="product-card">
+                            <a class="top" href="{{ product.url }}">
+                                {% if block.settings.product_alt_image != blank %}
+                                    <img class="product-image" src="{{ block.settings.product_alt_image | img_url: 'master' }}" alt="Product Image">
+                                {% else %}
+                                    <img class="product-image" src="{{ product.featured_image | img_url: 'master' }}" alt="Product Image">
+                                {% endif %}
+                                {% if block.settings.sticker != blank %}
+                                    <div class="sticker-container" style="left: {{ block.settings.sticker_left }}%; top: {{ block.settings.sticker_top }}%;">
+                                        <div class="inner-wrapper">
+                                            <img class="sticker" src="{{ block.settings.sticker |  img_url: 'master' }}" alt="Sticker">
+                                            <span class="sticker-text" style="transform: translate({{ block.settings.translate_y }}%,{{ block.settings.translate_x }}%) rotate({{ block.settings.sticker_text_rotation}}deg); color: {{ block.settings.sticker_text_color }};">{{ block.settings.sticker_text }}</span>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </a>
+                            <div class="bottom">
+                                <div class="title-container">
+                                    <div class="product-title">{% if block.settings.product_alt_title != blank %} {{ block.settings.product_alt_title }} {% else %} {{ product.title }} {% endif %} </div>
+                                    {% if block.settings.product_subtitle != blank %}
+                                        <div class="title-sub-callout">{{ block.settings.product_subtitle }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="price-container">
+                                    {% if product.compare_at_price != product.price and product.compare_at_price != nil %}
+                                        <div class="product-price">{{ product.price | money }}</div>
+                                        <div class="strike-through-price">{{ product.compare_at_price | money }}</div>
+                                    {% else %}
+                                        <div class="product-price">{{ product.price | money }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="value-prop-container">
+                                    {% if block.settings.enable_savings_callout %}
+                                        {% if product.compare_at_price != product.price and product.compare_at_price != nil %}
+                                            {% assign savings = product.compare_at_price | minus: product.price %}
+                                                <div class="value-prop">💰 You Save {{ savings | money }}</div>
+                                        {% endif %}
+                                    {% endif %}
+                                    {% if block.settings.free_gift_text != blank %}
+                                        <div class="value-prop">{{ block.settings.free_gift_text }}</div>
+                                    {% endif %}
+                                    {% if block.settings.shipping_callout != blank %}
+                                        <div class="value-prop">{{ block.settings.shipping_callout }}</div>
+                                    {% endif %}
+                                </div>
+                                <a href="{{ product.url }}" class="card-button">{{ section.settings.button_text }}</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "JR Product Cards",
+    "settings": [
+        {
+            "type": "text",
+            "id": "scroll_to_id",
+            "label": "Scroll To ID"
+        },
+        {
+            "type": "header",
+            "content": "Section Color Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "make_gradient",
+            "label": "Make Gradient (requires second color)",
+            "default": false
+        },
+        {
+            "type": "color",
+            "id": "bg_1",
+            "label": "Background Color #1"
+        },
+        {
+            "type": "color",
+            "id": "bg_2",
+            "label": "Background Color #2"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Section Text Color"
+        },
+        {
+            "type": "color",
+            "id": "callout_color",
+            "label": "Under Product Title Callout Color"
+        },
+        {
+            "type": "color",
+            "id": "border_color",
+            "label": "Card Border Color"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Section Button Color"
+        },
+        {
+            "type": "color",
+            "id": "card_bg_color",
+            "label": "Card Background Color"
+        },
+        {
+            "type": "header",
+            "content": "Section Text Settings"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Section Header"
+        },
+        {
+            "type": "text",
+            "id": "subheader",
+            "label": "Section Subheader"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Buy / Link Button Text",
+            "default": "Buy Now"
+        },
+        {
+            "type": "header",
+            "content": "Section Image Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "contain_image",
+            "label": "Enable Contain Image (defaults to cover)",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "type": "product-card",
+            "name": "Product Card",
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "card_product",
+                    "label": "Product"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "product_alt_image",
+                    "label": "Product Alternative Image"
+                },
+                {
+                    "type": "text",
+                    "id": "product_alt_title",
+                    "label": "Product Alt Title"
+                },
+                {
+                    "type": "text",
+                    "id": "product_subtitle",
+                    "label": "Product Subtitle"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "enable_savings_callout",
+                    "label": "Enable '💰 You save X' Callout",
+                    "info": "If produt has no compare at price, this will remain hidden",
+                    "default": true
+                },
+                {
+                    "type": "richtext",
+                    "id": "free_gift_text",
+                    "label": "Free Gift Value (blank for none)"
+                },
+                {
+                    "type": "text",
+                    "id": "shipping_callout",
+                    "label": "Enable Shipping Callout",
+                    "default": "🚚 Free Shipping Included"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "sticker",
+                    "label": "Card Sticker"
+                },
+                {
+                    "type": "text",
+                    "id": "sticker_text",
+                    "label": "Sticker Text"
+                },
+                {
+                    "type": "range",
+                    "id": "sticker_top",
+                    "label": "% sticker is from top",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "default": 0
+                },
+                {
+                    "type": "range",
+                    "id": "sticker_left",
+                    "label": "% sticker is from left",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "default": 0
+                },
+                {
+                    "type": "number",
+                    "id": "translate_y",
+                    "label": "Sticker center translate Y",
+                    "default": -50
+                },
+                {
+                    "type": "number",
+                    "id": "translate_x",
+                    "label": "Sticker center translate X",
+                    "default": -50
+                },
+                {
+                    "type": "number",
+                    "id": "sticker_text_rotation",
+                    "label": "Sticker Text rotation (up to 360)",
+                    "info": "Must be kept at 0 for no rotation, can go negative as well",
+                    "default": 0
+                },
+                {
+                    "type": "color",
+                    "id": "sticker_text_color",
+                    "label": "Sticker Text Color",
+                    "default": "#FFF"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Product Cards"
+        }
+    ]
+}
+{% endschema %}

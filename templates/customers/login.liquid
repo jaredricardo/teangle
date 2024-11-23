@@ -1,0 +1,112 @@
+<div class="page-width  page-content" style="max-width: 960px;">
+  <div class="grid">
+      <div class="grid__item medium-up--one-half ">
+          <header class="section-header">
+            <h1 class="section-header__title">{{ 'customer.login.title' | t }}</h1>
+          </header>
+
+          <div class="note note--success hide" id="ResetSuccess">
+            {{ 'customer.recover_password.success' | t }}
+          </div>
+
+          <div id="CustomerLoginForm" class="form-vertical">
+            {% form 'customer_login' %}
+
+              {{ form.errors | default_errors }}
+
+              <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
+              <input type="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" autocorrect="off" autocapitalize="off" autofocus>
+
+              {% if form.password_needed %}
+                <div class="grid">
+                  <div class="grid__item one-half">
+                    <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+                  </div>
+                  <div class="grid__item one-half text-right">
+                    <small class="label-info">
+                      <a href="#recover" id="RecoverPassword">
+                        {{ 'customer.login.forgot_password' | t }}
+                      </a>
+                    </small>
+                  </div>
+                </div>
+                <input type="password" value="" name="customer[password]" id="CustomerPassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}">
+              {% endif %}
+
+              <p>
+                <button type="submit" class="btn btn--full">
+                  {{ 'customer.login.sign_in' | t }}
+                </button>
+              </p>
+              <p>{{ 'layout.customer.create_account' | t | customer_register_link }}</p>
+
+              <p><a style="text-decoration: underline;" href="/a/account/login">Manage your subscription here</a>.</p>
+
+            {% endform %}
+
+
+
+
+
+
+
+
+          </div>
+
+          <div id="RecoverPasswordForm" class="hide">
+            <div class="form-vertical">
+              <h2>{{ 'customer.recover_password.title' | t }}</h2>
+              <p>{{ 'customer.recover_password.subtext' | t }}</p>
+
+              {% form 'recover_customer_password' %}
+
+                {{ form.errors | default_errors }}
+
+                {% if form.posted_successfully? %}
+                  <span class="hide reset-password-success"></span>
+                {% endif %}
+
+                <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
+                <input type="email" value="" name="email" id="RecoverEmail" class="input-full" autocorrect="off" autocapitalize="off">
+
+                <p>
+                  <button type="submit" class="btn">
+                    {{ 'customer.recover_password.submit' | t }}
+                  </button>
+                </p>
+                <button type="button" id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</button>
+              {% endform %}
+            </div>
+
+          </div>
+
+          {% if shop.checkout.guest_login %}
+            <hr class="hr--clear">
+
+            <h1>{{ 'customer.login.guest_title' | t }}</h1>
+            <hr class="hr--small">
+
+            {% form 'guest_login' %}
+              <button type="submit" class="btn">
+                {{ 'customer.login.guest_continue' | t }}
+              </button>
+            {% endform %}
+          {% endif %}
+        </div>
+        <div class="grid__item medium-up--one-half ">
+          <div class="feature-row__item feature-row__text feature-row__text--left">
+                <p class="h5"><ly-as-518384>Manage your account</ly-as-518384></p>
+                <p class="h3"><ly-as-518385>Log in to manage your subscription</ly-as-518385></p>
+                <div class="rte featured-row__subtext"><br class="omobile">
+                <ul class="memeber_lisst">
+                    <li><ly-as-518386>Review your upcoming shipment</ly-as-518386></li>
+                    <li><ly-as-518387>Track your shipment</ly-as-518387></li>
+                    <li><ly-as-518388>Skip a shipment</ly-as-518388></li>
+                    <li><ly-as-518389>Swap to a new product</ly-as-518389></li>
+                    <li><ly-as-518390>Change the frequency of your deliveries</ly-as-518390></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>

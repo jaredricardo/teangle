@@ -1,0 +1,134 @@
+{%- if settings.cart_type == 'drawer' -%}
+  <div id="CartDrawer" class="drawer drawer--right">
+    <form id="CartDrawerForm" action="{{ routes.cart_url }}" method="post" novalidate class="drawer__contents">
+      <div class="drawer__fixed-header">
+        <div class="drawer__header appear-animation appear-delay-1">
+          <div class="drawer__title">{{ 'cart.general.title' | t }}</div>
+          <div class="drawer__close">
+            <button type="button" class="drawer__close-button js-drawer-close">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+              <span class="icon__fallback-text">{{ 'cart.general.close_cart' | t }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+     <!-- <div class="drawer_free_ship">
+        <div class="dr_fr_ship"></div>
+        <div class="dr_fr_ship_bar">
+          <div class="dr_fr_shipbar_filler"></div>
+        </div>
+      </div>  -->
+      <div class="drawer_free_ship">
+          <div class="dr_fr_ship"></div>
+          <div class="dr_fr_ship_bar">
+              <div class="dr_fr_shipbar_filler"></div>
+          </div>
+          
+          <div class="dr_fr_ship_mstones">
+            <div class="dr_fr_ship_mstone dr_fr_ship_mstone1"><span class="fr_ship_msicon">🚚</span> </div>
+            <div class="dr_fr_ship_mstone dr_fr_ship_mstone2"><span class="fr_ship_msicon">🎁</span> </div>
+          </div>
+      </div> 
+
+      <div class="drawer__inner">
+        <div class="drawer__scrollable">
+          <div data-products class="appear-animation appear-delay-2"></div>
+			
+          {% if settings.cart_notes_enable %}
+            <div class="appear-animation appear-delay-3">
+              <label for="CartNoteDrawer">{{ 'cart.general.note' | t }}</label>
+              <textarea name="note" class="input-full cart-notes" id="CartNoteDrawer">{{ cart.note }}</textarea>
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="drawer__footer appear-animation appear-delay-4">
+          <div data-discounts>
+            {% if cart.cart_level_discount_applications != blank %}
+              <div class="cart__discounts cart__item-sub cart__item-row">
+                <div>{{ 'cart.general.discounts' | t }}</div>
+                <div class="text-right">
+                  {% for cart_discount in cart.cart_level_discount_applications %}
+                    <div class="cart__discount">
+                      {{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+			
+          
+          <div class=" cart__item-row">
+            <div data-rebuy-id="6610"></div>
+          </div>
+          
+          <div class="cart__item-sub cart__item-row">
+            <div class="ajaxcart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
+            <div class="datacart__subtotal" data-subtotal>{{ cart.total_price | money }}</div>
+          </div>
+
+          <div class="cart__item-row text-center hideit">
+            <small>
+              {{ 'cart.general.shipping_at_checkout' | t }}<br />
+            </small>
+          </div>
+          
+		 {% comment %} <div class="cart__item-row text-center  ">
+            
+            <!-- Afterpay Messaging  -->
+                <afterpay-placement
+                                {% if request.locale.iso_code == 'fr' %}
+                                    data-locale="fr_CA"
+                                {% else %}
+                                    data-locale="en_CA"
+                                {% endif %}
+                                    data-currency="CAD"
+                                    data-amount="{{ cart.total_price | money_without_currency }}"
+                                    data-show-upper-limit="false"
+                                    data-show-lower-limit="true"
+                                    data-modal-theme="white" 
+                                    data-size="xs"
+                                    data-badge-theme="white-on-black">
+                            </afterpay-placement>
+              <!-- Afterpay Messaging  -->
+          </div> {% endcomment %}
+          
+          {% if settings.cart_terms_conditions_enable %}
+            <div class="cart__item-row cart__terms">
+              <input type="checkbox" id="CartTermsDrawer" class="cart__terms-checkbox">
+              <label for="CartTermsDrawer">
+                {% if settings.cart_terms_conditions_page != blank %}
+                  {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_page.url }}
+                {% else %}
+                  {{ 'cart.general.terms' | t }}
+                {% endif %}
+              </label>
+            </div>
+          {% endif %}
+
+          <div class="cart__checkout-wrapper">
+            <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
+              {{ 'cart.general.checkout' | t }}
+            </button>
+			
+            
+            
+            {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+              <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer__cart-empty appear-animation text-center appear-delay-2">
+        <div class="drawer__scrollable">
+          {{ 'cart.general.empty' | t }}
+          <div class="cb"></div>
+          <div data-rebuy-id="23680" data-rebuy-shopify-product-ids="{{ product.id }}"></div>  
+        </div>
+      </div>
+    </form>
+  </div>
+{%- endif -%}

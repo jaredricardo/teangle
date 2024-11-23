@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+	<link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_fr_favicon_32x32.png?v=1646856976" type="image/png" />
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+    <script type="application/javascript" async src="https://sdk.postscript.io/integrations/sdk-min.js"></script>
+  
+  
+
+  {% include 'friendbuy' %}
+</head>
+  <body>
+    
+    {{ skip_to_content_link }}
+	  
+    <header class="banner" data-header role="banner">
+      <div class="checkout-scroll-header omobile">
+          <h1 class="checkout-scroll-text">#matchawaitingfor</h1>
+          <div class="checkout-scroll-bg"></div>
+      </div>
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      
+      <div class="checkout-scroll-header odesktop">
+          <h1 class="checkout-scroll-text">#matchawaitingfor</h1>
+          <div class="checkout-scroll-bg"></div>
+      </div>
+      
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+            <div class="cb"></div>
+            <div class="upsells_c1" id="upsells_c1"></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script async src="//rebuyengine.com/js/rebuy?shop=fr-hellodarknessmyoldfriend.myshopify.com"></script>
+    <script>
+
+      setTimeout(function () {
+       jQuery('.order-summary-toggle').trigger('click');
+            console.log("jeres ");
+      }, 500);
+
+
+      var host = window.location.host;
+      console.log( host);
+      if(host == 'teangle.ca') {
+        console.log("jeres EN");
+        //$(".upsells_c1").last().append('<div data-rebuy-id="7122"></div>');
+        $(`[data-rebuy-id="7122"]`).remove(); $("#upsells_c1").last().append('<div data-rebuy-id="7122"></div>');
+          //console.log("here goes rebuy code");
+          if(window.Rebuy){
+              Rebuy.init();
+              }
+        $("input[name='checkout[reduction_code]']").focus(function(){
+          
+          		if ($(".tags-list")[0]){
+                     $("#checkout_reduction_code").prop( "disabled", true );
+                  	 $("#checkout_reduction_code").attr("placeholder", "Only 1 Code allowed");
+                } else {
+                    $("#checkout_reduction_code").prop( "disabled", false );
+                }
+			});
+      }
+      else {
+        
+        console.log("jeres FR");
+            //$(".upsells_c1").last().append('<div data-rebuy-id="7103"></div>');
+        	$(`[data-rebuy-id="7103"]`).remove(); $("#upsells_c1").last().append('<div data-rebuy-id="7103"></div>');
+            //console.log("here goes rebuy code");
+            if(window.Rebuy){
+                Rebuy.init();
+                }
+        $("label[for='comedyclubs']").text("");
+            //$(".logo__image").attr("src", "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle_fr_logo_72a82fa8-8467-4e16-a06c-66f324ce63dd_136x.png?v=1646431894");
+          setTimeout(function () {
+            $("#ps_accepts_checkbox_label").text("Envoyez-moi des offres spéciales par SMS*");
+            $("#ps__footer").html("*J'accepte de recevoir des SMS de marketing automatisés récurrents (par exemple, des rappels de panier) au numéro de téléphone fourni. Le consentement n'est pas une condition d'achat. Des frais de messagerie et de données peuvent s'appliquer. La fréquence des messages varie. Répondez HELP pour obtenir de l'aide et STOP pour annuler. Consultez nos <a style='color:inherit !important; text-decoration: underline;' target='_blank'  href='https://fr.teangle.ca/policies/terms-of-service.html'> conditions d'utilisation </a>  et notre <a style='color:inherit !important; text-decoration: underline;' target='_blank' href='https://fr.teangle.ca/policies/privacy-policy.html'> politique de confidentialité. </a> ");
+          }, 2500);
+        $("input[name='checkout[reduction_code]']").focus(function(){
+             
+          		if ($(".tags-list")[0]){
+                     $("#checkout_reduction_code").prop( "disabled", true );
+                  	 $("#checkout_reduction_code").attr("placeholder", "1 seul code autorisé");
+                } else {
+                    $("#checkout_reduction_code").prop( "disabled", false );
+                }
+			});
+      }
+		 
+         
+            
+
+    </script>
+    <style>
+      .breadcrumb  li:nth-child(1) , [data-step~=contact_information] .step__footer__previous-link {
+        pointer-events: none !important;
+    }
+      .odesktop { display: block; }
+      .omobile { display: none; }
+      /* .section--shipping-method .content-box__row:nth-child(3) {   background: url(https://www.pngkit.com/png/full/135-1354941_fast-delivery-icon-red-01-fast-delivery-icon.png) 99% center no-repeat; background-size: 45px; padding-right: 60px; }
+      .section--shipping-method .content-box__row:nth-child(3) .radio-wrapper { font-weight: 800; color: #f14f98; }
+      */
+      .checkout-scroll-header { position: relative; height: 150px; width: 100vw; overflow: hidden; }
+      .checkout-scroll-header .checkout-scroll-text { 
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 48px;
+            line-height: 150px;
+            color: #ffffff;
+            z-index: 10;
+            font-weight: 600;
+            text-shadow: 2px 4px 3px rgb(0 0 0 / 30%);
+        }
+      .checkout-scroll-header .checkout-scroll-bg {
+            width: 100%;
+            height: 150px;
+            top: 0;
+            left: 0;
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+            animation: moveBG 50s linear infinite;
+            background-image: url(//cdn.shopify.com/s/files/1/0263/3606/7666/t/17/assets/checkout-carousel.jpg?v=1647946716);
+        }
+        @keyframes moveBG {
+          0% { 
+            background-position: 0;
+          }
+          100% {
+            background-position: -1200px;
+          }
+        }
+      
+        @media (max-width: 768px) {
+          .odesktop { display: none; }
+          .omobile { display: block; }
+          .checkout-scroll-header .checkout-scroll-text {
+            font-size: 32px;
+            line-height: 120px;
+          }
+          .checkout-scroll-header , .checkout-scroll-header .checkout-scroll-bg { height: 120px; }
+          .checkout-scroll-header { margin-bottom: 15px; margin-top: -10px; }
+        }
+    </style>
+  </body>
+</html>

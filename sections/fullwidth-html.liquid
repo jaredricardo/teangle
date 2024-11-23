@@ -1,0 +1,31 @@
+<section class="fullwidth-liquid" style="background-color: {{ section.settings.sec_color }};">
+    {{ section.settings.section_html }}
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Fullwidth Liquid",
+    "settings": [
+      {
+        "type": "liquid",
+        "id": "section_html",
+        "label": "Custom HTML",
+        "default": "<p>add html here</p>",
+        "info": "Supports Liquid"
+      },
+      {
+        "type": "color",
+        "id": "sec_color",
+        "label": "Section Color",
+        "default": "#fffef2"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Fullwidth Liquid"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,310 @@
+{% assign animation_row = 1 %} {% assign drawer_position = 'right' %} {% if logo_alignment == 'center' %} {% assign drawer_position = 'left' %} {% endif %} <div id="NavDrawer" class="drawer drawer--{{ drawer_position }}">
+  <div class="drawer__contents">
+    <div class="drawer__fixed-header">
+      <div class="drawer__header appear-animation appear-delay-{{ animation_row }}">
+        <!-- <div class="h2 drawer__title"></div> -->
+        <div class="headmbl_search">
+          <form action="{{ routes.search_url }}" method="get" role="search" id="HeaderSearchForm" class="site-header__search-form">
+            <input type="hidden" name="type" value="{{ settings.search_type }}">
+            <button type="submit" class="text-link site-header__search-btn site-header__search-btn--submit">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                <path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42" />
+              </svg>
+              <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+            <input type="search" name="q" value="{{ search.terms | escape | replace: '*', '' }}" placeholder="{{ 'general.search.placeholder' | t }}" class="site-header__search-input" aria-label="{{ 'general.search.placeholder' | t }}">
+          </form>
+        </div>
+        <div class="drawer__close">
+          <button type="button" class="drawer__close-button js-drawer-close">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+              <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" />
+            </svg>
+            <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer__scrollable">
+      <div class="subnsavehead hide">
+        <a href="/pages/subscription-program">{% if request.locale.iso_code == 'en' %} <ly-as-567054>Subscribe &amp; Save 20%</ly-as-567054> {% else %} <ly-as-567055>Abonne-toi et épargne 20%</ly-as-567055> {% endif %} </a>
+      </div>
+      {% if request.locale.iso_code == 'en' %}
+      <div class="amais_nav_warpper clearfix">
+        <div class="amanav_header">
+          <div class="amanav_tabs"> 
+            <a class="amanav_link amanav_shop activer">Shop</a> 
+            <a class="amanav_link amanav_learn ">Learn</a> 
+            <div class="cb"></div> 
+          </div>
+        </div>
+        <div class="amanav_body">
+          <div class="amanav_tabcontent">
+            <div class="amanav_tab amanav_tab_shop">
+              <div class="grid drnsigblends">
+                <div class="grid__item ">
+                  <h4>Best Sellers ❤️</h4>
+                </div>
+                
+                <div class="grid__item small--one-third text-center">
+                  <a href="/products/teangle-ginger-lemongrass-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/GINGERLEMONGRASS_220x.png?v=1684177932" alt="Ginger Lemongrass"></a>
+                  <h6><a href="/products/teangle-ginger-lemongrass-matcha">Matcha Energizing Blend</a></h6>
+                </div>
+                <div class="grid__item small--one-third text-center">
+                  <a href="/products/matcha-collagen"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/COLLAGEN_220x.png?v=1684177948" alt="Collagen"></a>
+                  <h6><a href="/products/matcha-collagen">Matcha Collagen Beauty Blend</a></h6>
+                </div>
+                <div class="grid__item small--one-third text-center">
+                  <a href="/ceremonial-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CEREMONIAL_220x.png?v=1684177951" alt="Traditional Ceremonial Matcha"></a>
+                  <h6><a href="/ceremonial-matcha"> Traditional Ceremonial Matcha</a></h6>
+                </div>
+              </div>
+
+              <div class="grid drnlist">
+                <div class="grid__item">
+                  <ul>
+                    <li class="drncol">
+                      <a href="/collections/matcha-signature-teangle" >
+                        Matcha Signature Blends
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-43_260x.png?v=1669035523" alt="Signature Blends">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="drncol">
+                      <a href="/products/matcha-collagen" >
+                        Matcha Collagen Beauty Blend
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-22_260x.png?v=1669035523" alt="Collagen">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="drncere">
+                      <a href="/products/ceremonial-matcha">
+                         Traditional Ceremonial Matcha
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-41_260x.png?v=1669035523" alt="Ceremonial">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="drnbund">
+                      <a href="/collections/teangle-matcha-bundles" >
+                        Matcha Bundles
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-72_260x.png?v=1669237374" alt="Bundles">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="drnacces">
+                      <a href="/collections/accessoires" >
+                        Accessories
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-44_260x.png?v=16690646463" alt="Accessories">
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="amanav_tab amanav_tab_learn" style="display: none;">
+              <div class="grid drnbrand">
+                <div class="grid__item">
+                  <div class="drnbrandlist" style=" margin:  0 0 30px; ">
+                    <h5 style=" font-size: 18px; ">QUICK LINKS</h5>
+                    <ul style=" font-size: 20px; list-style: none; margin: 0; ">
+                      <li><a href="/blogs/matcha">Blog</a></li>
+                      <li><a href="/blogs/recipes">Recipes</a></li>
+                      <li><a href="/pages/faq-teangle">FAQ</a></li>
+                      <li><a href="/pages/contact-us">Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid drnbrsplit">
+                <div class="grid__item small--one-half">
+                  <a href="/pages/about-teangle">
+                    <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/matcha-menu-1dd2.jpg?v=1678131227" alt="ABOUT US">
+                    <span>About Us</span>
+                  </a>
+                </div>
+                <div class="grid__item small--one-half">
+                  <a href="/pages/subscription-program">
+                    <img src="https://cdn.shopify.com/s/files/1/1835/6147/files/matcha-menu-2dd.jpg?v=1591616403" alt="Teangle Membership">
+                    <span>Teangle Membership</span>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {% else %}
+
+      <div class="amais_nav_warpper clearfix">
+        <div class="amanav_header">
+          <div class="amanav_tabs"> 
+            <a class="amanav_link amanav_shop activer">Boutique</a> 
+            <a class="amanav_link amanav_learn ">En Savoir Plus</a> 
+            <div class="cb"></div> 
+          </div>
+        </div>
+        <div class="amanav_body">
+          <div class="amanav_tabcontent">
+            <div class="amanav_tab amanav_tab_shop">
+              <div class="grid drnsigblends">
+                <div class="grid__item ">
+                  <h4>Meilleurs vendeurs ❤️</h4>
+                </div>
+                
+                <div class="grid__item small--one-third text-center">
+                  <a href="/products/teangle-ginger-lemongrass-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/GINGERLEMONGRASS_220x.png?v=1684177932" alt="Gingembre  Citronnelle"></a>
+                  <h6><a href="/products/teangle-ginger-lemongrass-matcha">Mélange énergisant de Matcha</a></h6>
+                </div>
+                <div class="grid__item small--one-third text-center">
+                  <a href="/products/matcha-collagen"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/COLLAGEN_540x.png?v=1684177948" alt="Matcha Collagène"></a>
+                  <h6><a href="/products/matcha-collagen">Mélange beauté Matcha collagène</a></h6>
+                </div>
+                <div class="grid__item small--one-third text-center">
+                  <a href="/ceremonial-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CEREMONIAL_220x.png?v=1684177951" alt="Matcha Cérémonial Traditionnel"></a>
+                  <h6><a href="/ceremonial-matcha">Matcha Cérémonial Traditionnel</a></h6>
+                </div>
+              </div>
+
+              <div class="grid drnlist">
+                <div class="grid__item">
+                  <ul>
+                    <li class="drncol">
+                      <a href="/collections/matcha-signature-teangle" >
+                        Mélanges Signature
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-43_260x.png?v=1669035523" alt="Mélanges Signature">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="drncol">
+                      <a href="/products/matcha-collagen" >
+                        Mélange beauté Matcha collagène
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-22_260x.png?v=1669035523" alt="Collagène">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="drncere">
+                      <a href="/products/ceremonial-matcha">
+                        Matcha Cérémonial Traditionnel
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-41_260x.png?v=1669035523" alt="Traditionnelle">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="drnbund">
+                      <a href="/collections/teangle-matcha-bundles" >
+                        Ensembles de Matcha
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-72_260x.png?v=1669237374" alt="Ensembles">
+                        </span>
+                      </a>
+                    </li>
+                    <li class="drnacces">
+                      <a href="/collections/accessoires" >
+                        Accessoires
+                        <span>
+                          <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-44_260x.png?v=16690646463" alt="Accessoires">
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="amanav_tab amanav_tab_learn" style="display: none;">
+              <div class="grid drnbrand">
+                <div class="grid__item">
+                  <div class="drnbrandlist" style=" margin:  0 0 30px; ">
+                    <h5 style=" font-size: 18px; ">LIENS RAPIDES</h5>
+                    <ul style=" font-size: 20px; list-style: none; margin: 0; ">
+                      <li><a href="/blogs/matcha">Blog</a></li>
+                      <li><a href="/blogs/recipes">Recettes</a></li>
+                      <li><a href="/pages/faq-teangle">FAQ</a></li>
+                      <li><a href="/pages/contact-us">Contactez-nous</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid drnbrsplit">
+                <div class="grid__item small--one-half">
+                  <a href="/pages/about-teangle">
+                    <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/matcha-menu-1dd2.jpg?v=1678131227" alt="À-Propos">
+                    <span>À-Propos</span>
+                  </a>
+                </div>
+                <div class="grid__item small--one-half">
+                  <a href="/pages/subscription-program">
+                    <img src="https://cdn.shopify.com/s/files/1/1835/6147/files/matcha-menu-2dd.jpg?v=1591616403" alt="Abonnement Teangle">
+                    <span>Abonnement Teangle</span>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        {% endif %}
+
+
+      <div class="mbl_nav_sticky">
+        <!-- AMAIS ADDED LANG SWITCH -- STARTS --> {% if customer.id == null %} <a class="site-nav__link site-nav__link--icon large--hide" href="/account">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-user" viewBox="0 0 64 64">
+            <path d="M35 39.84v-2.53c3.3-1.91 6-6.66 6-11.41 0-7.63 0-13.82-9-13.82s-9 6.19-9 13.82c0 4.75 2.7 9.51 6 11.41v2.53c-10.18.85-18 6-18 12.16h42c0-6.19-7.82-11.31-18-12.16z"></path>
+          </svg>
+          <ly-as-567066>Log in</ly-as-567066>
+          <span class="icon__fallback-text">
+            <ly-as-567066>Log in</ly-as-567066>
+          </span>
+        </a> {% else %} <a class="site-nav__link site-nav__link--icon large--hide" href="/account">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-user" viewBox="0 0 64 64">
+            <path d="M35 39.84v-2.53c3.3-1.91 6-6.66 6-11.41 0-7.63 0-13.82-9-13.82s-9 6.19-9 13.82c0 4.75 2.7 9.51 6 11.41v2.53c-10.18.85-18 6-18 12.16h42c0-6.19-7.82-11.31-18-12.16z"></path>
+          </svg>
+          <ly-as-567067>Account</ly-as-567067>
+          <span class="icon__fallback-text">
+            <ly-as-567067>Account</ly-as-567067>
+          </span>
+        </a>
+        <a class="site-nav__link site-nav__link--icon large--hide" href="{{ routes.account_logout_url }}">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNOCA5di00bDggNy04IDd2LTRoLTh2LTZoOHptMi03djJoMTJ2MTZoLTEydjJoMTR2LTIwaC0xNHoiLz48L3N2Zz4=" style=" height: 16px; ">
+          <ly-as-567068>Logout</ly-as-567068>
+          <span class="icon__fallback-text">
+            <ly-as-567068>Logout</ly-as-567068>
+          </span>
+        </a> {% endif %} <div class="drawer_lang medium-up--hides"> {% render 'custom-lang-switch' %} {% comment %} <span class="ly-custom-0"></span>{% endcomment %} </div>
+        <div class="cb"></div>
+        <!-- AMAIS ADDED LANG SWITCH -- ENDS -->
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+<script>
+  $(".amanav_shop").click(function() {
+    $(".amanav_tab_shop").show();  
+    $(".amanav_tab_learn").hide();
+    $(".amanav_link").removeClass("activer");
+    $(this).addClass("activer");
+  });
+  $(".amanav_learn").click(function() {
+    $(".amanav_tab_shop").hide();  
+    $(".amanav_tab_learn").show();
+    $(".amanav_link").removeClass("activer");
+    $(this).addClass("activer");
+  });
+</script>

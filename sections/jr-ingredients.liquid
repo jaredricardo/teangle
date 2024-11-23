@@ -1,0 +1,182 @@
+{% liquid 
+
+    assign bg_color             = section.settings.bg_color
+    assign text_color           = section.settings.text_color
+    assign btn_bg_color         = section.settings.btn_bg_color
+    assign btn_text_color       = section.settings.btn_text_color
+    assign btn_text             = section.settings.btn_text 
+    assign btn_link             = section.settings.btn_link
+    assign header               = section.settings.header
+
+-%}
+
+<script>
+    
+</script>
+
+{% style %}
+
+[data-section-id="{{ section.id }}"] {
+
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+
+}
+
+{% endstyle %} 
+
+<section data-section-id="{{ section.id }}">
+    <div class="page-width section-padding ingredients-section">
+        {% if header != bank %}
+            <h2>{{ header }}</h2>
+        {% endif %}
+        <div class="ingredients-container desktop">
+            {% for block in section.blocks %}
+                <div class="ingredient-card">
+                  
+                    <img src="{{ block.settings.image |   image_url: width: 140, height: 140 }}" alt="{{ block.settings.title }}">
+                  
+                    <div class="ingredient-content">
+                        <h4 class="ingredient-title">{{ block.settings.title }}</h4>
+                        <div class="ingredient-body">
+                            {{ block.settings.ingredient_body }}
+                        </div>
+                    </div>
+                </div> 
+            {% endfor %}
+        </div>
+        {% comment %}
+            For some reason the flickity version thats been installed and modified in this theme does not work properly 
+            with the watchCSS property, so i have to render a seperate element containing the carousel 
+            and hide it until we're in mobile view.
+        {% endcomment %}
+        <div class="ingredients-container mobile">
+            {% for block in section.blocks %}
+                <div class="ingredient-card">
+                  
+                    <img width="140" height="140" src="{{ block.settings.image |  image_url: width: 140, height: 140 }}" alt="{{ block.settings.title }}">
+                  
+                    <div class="ingredient-content">
+                        <h4 class="ingredient-title">{{ block.settings.title }}</h4>
+                        <div class="ingredient-body">
+                            {{ block.settings.ingredient_body }}
+                        </div>
+                    </div>
+                </div> 
+            {% endfor %}
+        </div>
+        {% if btn_link != blank %}
+            <a href="{{ btn_link }}" class="btn new-default-btn">
+                {{ btn_text }}
+            </a>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const el = document.querySelector('[data-section-id="{{ section.id }}"] .ingredients-container.mobile')
+
+        const flkty = new Flickity( el, {
+            cellAlign: 'center',
+            wrapAround: true,
+            imagesLoaded: true,
+            setGallerySize: true
+        })
+        
+        window.addEventListener('resize', () => {
+            flkty.resize()
+            flkty.reposition()
+        })
+
+    })
+</script>
+
+
+
+{% schema %}
+{
+    "name": "Ingredient Details",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Color Settings"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "btn_bg_color",
+            "label": "Button BG Color",
+            "default": "#25623A"
+        },
+        {
+            "type": "color",
+            "id": "btn_text_color",
+            "label": "Button Text Color",
+            "default": "#FFFFFF"
+        },
+        {
+            "type": "header",
+            "content": "Content Settings"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+        },
+        {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text",
+            "default": "Try It Now"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "ingredient",
+            "name": "Ingredient Block",
+            "settings": [ 
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Ingredient Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Ingredient title",
+                    "default": "Ingredient Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "ingredient_body",
+                    "label": "Ingredient Text Body"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Ingredient Details",
+            "category": "Content"
+        }
+    ]
+}
+{% endschema %}

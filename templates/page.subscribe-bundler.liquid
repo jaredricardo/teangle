@@ -1,0 +1,22 @@
+{% layout none %}
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+ {%- render 'seo-title' -%}
+
+  {%- if page_description -%}
+  <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  {{ 'custom.css' | asset_url | stylesheet_tag }}
+</head>
+<body>
+{% if request.locale.iso_code == 'en' %} {%- render 'subscribe-bundler' -%}{% else %} {%- render 'subscribe-bundler-fr' -%}{% endif %}
+
+  <link href="//cdn.shopify.com/s/files/1/0263/3606/7666/t/17/assets/theme.css?v=2214394501451257678" rel="stylesheet" type="text/css" media="all" />
+<script src="//cdn.shopify.com/s/files/1/0263/3606/7666/t/17/assets/vendor-scripts-v10.js" defer="defer"></script><script src="//cdn.shopify.com/s/files/1/0263/3606/7666/t/17/assets/theme.js?v=1926196004028002218" defer="defer"></script><link href="https://d3hw6dc1ow8pp2.cloudfront.net/styles/main.min.css" rel="stylesheet" type="text/css">
+
+</body>
+  
+</html>
+
+

@@ -1,0 +1,66 @@
+
+{% style %}
+
+[data-section-id="{{ section.id }}" ] {
+    background-color: {{ section.settings.bg_color }};
+}
+
+[data-section-id="{{ section.id }}" ] .jr-simple-header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 15px 25px;
+}
+
+[data-section-id="{{ section.id }}" ] .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+}
+
+[data-section-id="{{ section.id }}" ] .logo img {
+    width: 170px;
+}
+
+@media screen and (max-width: 851px) {
+    [data-section-id="{{ section.id }}" ] .jr-simple-header {
+        padding: 10px 15px;
+    }
+    [data-section-id="{{ section.id }}" ] .logo img {
+        width: 130px;
+    }
+}
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-simple-header">
+        <a href="{{ routes.root_url }}" class="logo">
+            <img src="{{ section.settings.logo |  img_url: 'master' }}" alt="Logo">
+        </a>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "JR Simple Header",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Form Background Color"
+        },
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Simple Header"
+        }
+    ]
+}
+{% endschema %}

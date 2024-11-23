@@ -1,0 +1,154 @@
+{% liquid 
+
+    assign bg_color = section.settings.bg_color
+    assign text_color = section.settings.text_color
+
+    assign num_blocks = 0
+    
+    for block in section.blocks
+        assign num_blocks = num_blocks | plus: 1
+    endfor
+
+-%}
+
+{% style %}
+
+[data-section-id="{{ section.id }}"] {
+
+    background-color: {{ bg_color }};
+    color: {{ text_color }};
+
+}
+
+{% endstyle %} 
+
+<section data-section-id="{{ section.id }}">
+    <div class="page-width section-padding customer-reviews">
+        {% if section.settings.header != blank %}
+            <h2>{{ section.settings.header }}</h2>
+        {% endif %}
+        {% if section.settings.subheader != blank %}
+            <h5>{{ section.settings.subheader }}</h5>
+        {% endif %}
+        {% if section.settings.review_stars != blank %}
+            <div class="review-star-container">
+                <img src="{{ section.settings.review_stars |  img_url: 'master' }}" alt="Review Stars">
+                {{ section.settings.review_text }}
+        {% endif %}
+        </div>
+        <div class="customer-reviews-carousel">
+            {% for block in section.blocks %}
+                <div class="customer-review">
+                    <div class="ghost-image">
+                        <img src="{{ block.settings.image |  img_url: 'master'}}" alt="Reviewer Image">
+                    </div> 
+                    <div class="review-body">
+                        <p>{{ block.settings.review_body }}</p>
+                        <div class="reviewer-name">{{ block.settings.reviewer_name }}</div>
+                        <div class="reviewer-intsa">{{ block.settings.reviewer_instagram }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% if num_blocks > 3 %}
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const el = document.querySelector('[data-section-id="{{ section.id }}"] .customer-reviews-carousel')
+
+        const flkty = new Flickity(el, {
+            cellAlign: 'center',
+            wrapAround: true,
+            pageDots: true,
+            prevNextButtons: false
+        })
+
+        window.addEventListener('resize', () => {
+            flkty.resize()
+            flkty.reposition()
+        })
+    
+    })
+    
+</script>
+
+{% endif %}
+
+
+{% schema %}
+{
+    "name": "JR Customer Reviews",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000000"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+        }, 
+        {
+            "type": "text",
+            "id": "subheader",
+            "label": "Subheader"
+        }, 
+        {
+            "type": "text",
+            "id": "review_text",
+            "label": "Review Text"
+        }, 
+        {
+            "type": "image_picker",
+            "id": "review_stars",
+            "label": "Revie Stars Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "customer-review",
+            "name": "Customer Review",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "richtext",
+                    "id": "review_body",
+                    "label": "Review Body"
+                },
+                {
+                    "type": "text",
+                    "id": "reviewer_name",
+                    "label": "Reviewer Name"
+                },
+                {
+                    "type": "text",
+                    "id": "reviewer_instagram",
+                    "label": "Reviewer Instagram"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Customer Reviews",
+            "category": "Content"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,197 @@
+{%- liquid
+  unless limit
+    assign limit = main_menu.links.size
+  endunless
+  unless offset
+    assign offset = 0
+  endunless
+-%}
+
+{% if request.locale.iso_code == 'en' %}
+<ul class="site-nav site-navigation small--hide dc22_desknav" role="navigation" aria-label="Primary">
+   <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="#shop" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> Shop </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-fifth">
+            <div class="h5">
+              <a href="/collections/teangle-matcha-bundles" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Bundles</a>
+            </div>
+            <div>
+              <a href="/products/starter-pack" class="site-nav__dropdown-link"> Matcha Starter Pack <span style=" font-size: 10px; padding: 2px 6px; background: red; color: white; border-radius: 20px; ">HOT</span> </a>
+            </div>
+            <div>
+              <a href="/products/collagen-starter-pack" class="site-nav__dropdown-link"> Collagen Starter Pack </a>
+            </div>
+            <div>
+              <a href="/products/teangle-sports-pack" class="site-nav__dropdown-link"> Sports Pack  </a>
+            </div>
+            <div>
+              <a href="/products/la-vida-verde" class="site-nav__dropdown-link"> La Vida Verde! </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-sixth">
+            <a href="/collections/matcha-signature-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader3b.jpg?v=1678136509"></a>
+            <div class="h5">
+              <a href="/collections/matcha-signature-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Signature Blends</a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-sixth">
+            <a href="/products/matcha-collagen"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader2.jpg?v=1671921316"></a>
+            <div class="h5">
+              <a href="/products/matcha-collagen" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Matcha Collagen</a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-sixth">
+            <a href="/products/ceremonial-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader7_a26d8bfc-2504-44cf-9ba4-0f6b029f5323.jpg?v=1671922278"></a>
+            <div class="h5">
+              <a href="/products/ceremonial-matcha" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Ceremonial Matcha</a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-sixth">
+             <a href="/collections/accessoires"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader8b.jpg?v=1678992162"></a>
+            <div class="h5">
+              <a href="/collections/accessoires" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Accessories</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="#brand" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> Brand </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-fifth">
+            <div class="h5">
+               Quick Links 
+            </div>
+            <div>
+              <a href="/blogs/matcha" class="site-nav__dropdown-link"> Blog </a>
+            </div>
+            <div>
+              <a href="/blogs/recipes" class="site-nav__dropdown-link"> Recipes </a>
+            </div>
+            <div>
+              <a href="/pages/faq-teangle" class="site-nav__dropdown-link"> FAQ  </a>
+            </div>
+            <div>
+              <a href="/pages/contact-us" class="site-nav__dropdown-link"> Contact Us </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth">
+            <a href="/pages/about-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader5e.jpg?v=1684266367"></a>
+            <div class="h5">
+              <a href="/pages/about-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">About Us</a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth">
+            <a href="/pages/subscription-program"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader4.jpg?v=1671921316"></a>
+            <div class="h5">
+              <a href="/pages/subscription-program" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Teangle Membership</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+{% else %}
+<ul class="site-nav site-navigation small--hide dc22_desknav" role="navigation" aria-label="Primary">
+   <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="#shop" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> Boutique </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-fifth">
+            <div class="h5">
+              <a href="/collections/teangle-matcha-bundles" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Ensembles</a>
+            </div>
+            <div>
+              <a href="/products/starter-pack" class="site-nav__dropdown-link"> Ensemble de départ <span style=" font-size: 10px; padding: 2px 6px; background: red; color: white; border-radius: 20px; ">HOT</span> </a>
+            </div>
+            <div>
+              <a href="/products/collagen-starter-pack" class="site-nav__dropdown-link"> Ensemble départ Collagène </a>
+            </div>
+            <div>
+              <a href="/products/teangle-sports-pack" class="site-nav__dropdown-link"> Ensemble "Sur la go"  </a>
+            </div>
+            <div>
+              <a href="/products/la-vida-verde" class="site-nav__dropdown-link"> La vie en vert </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-sixth">
+            <a href="/collections/matcha-signature-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader3b.jpg?v=1671921316"></a>
+            <div class="h5">
+              <a href="/collections/matcha-signature-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Mélanges Signature</a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-sixth">
+            <a href="/products/matcha-collagen"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader2.jpg?v=1671921316"></a>
+            <div class="h5">
+              <a href="/products/matcha-collagen" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Matcha Collagène</a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-sixth">
+            <a href="/products/ceremonial-matcha"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader7_a26d8bfc-2504-44cf-9ba4-0f6b029f5323.jpg?v=1671922278"></a>
+            <div class="h5">
+              <a href="/products/ceremonial-matcha" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Traditionnelle Matcha</a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-sixth">
+             <a href="/collections/accessoires"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader8b.jpg?v=1678992162"></a>
+            <div class="h5">
+              <a href="/collections/accessoires" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Accessoires</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="#brand" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> En Savoir Plus </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-fifth">
+            <div class="h5">
+               LIENS RAPIDES
+            </div>
+            <div>
+              <a href="/blogs/matcha" class="site-nav__dropdown-link"> Blog </a>
+            </div>
+            <div>
+              <a href="/blogs/recipes" class="site-nav__dropdown-link"> Recettes </a>
+            </div>
+            <div>
+              <a href="/pages/faq-teangle" class="site-nav__dropdown-link"> FAQ  </a>
+            </div>
+            <div>
+              <a href="/pages/contact-us" class="site-nav__dropdown-link"> Contactez-nous </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth">
+            <a href="/pages/about-teangle"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader5e.jpg?v=1684266367"></a>
+            <div class="h5">
+              <a href="/pages/about-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">À-Propos</a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth">
+            <a href="/pages/subscription-program"><img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/decheader4.jpg?v=1671921316"></a>
+            <div class="h5">
+              <a href="/pages/subscription-program" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Abonnement Teangle</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+{% endif %}
+
+

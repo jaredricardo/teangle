@@ -1,0 +1,95 @@
+{{ 'jr-email-capture.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+[data-section-id="{{ section.id }}" ] {
+    background-color: {{ section.settings.bg_color }};
+}
+
+[data-section-id="{{ section.id }}" ] .jr-hp-hero {
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+html {
+    padding: 0 !important;
+    background-color: {{ section.settings.bg_color }} !important;
+}
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-email-capture">
+        <div class="left">
+            {% if request.locale.iso_code == 'fr' %}
+                <img src="{{ section.settings.french_image | img_url: 'master' }}" alt="Hero Image">
+            {% else %}
+                <img src="{{ section.settings.english_image | img_url: 'master' }}" alt="Hero Image">
+            {% endif %}    
+        </div>
+        <div class="right">
+            <div class="lang-switch-container">
+                {% render 'custom-lang-switch-june2023' %}
+            </div>
+            {% if section.settings.header != blank %}
+                <h1>{{ section.settings.header }}</h1>
+            {% endif %}
+            {% if section.settings.subheader != blank %}
+                <div class="section-subheader">{{ section.settings.subheader }}</div>
+            {% endif %}
+            {% if request.locale.iso_code == 'fr' %}
+                <div class="form-area">{{ section.settings.form_area_fr }}</div>
+            {% else %}
+                <div class="form-area">{{ section.settings.form_area_en }}</div>
+            {% endif %}  
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "JR Email Capture",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Form Background Color"
+        },
+        {
+            "type": "image_picker",
+            "id": "english_image",
+            "label": "English Image"   
+        },
+        {
+            "type": "image_picker",
+            "id": "french_image",
+            "label": "French Image"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Form Header"
+        },
+        {
+            "type": "text",
+            "id": "subheader",
+            "label": "Form Subheader"
+        },
+        {
+            "type": "html",
+            "id": "form_area_en",
+            "label": "English Form Area"
+        },
+        {
+            "type": "html",
+            "id": "form_area_fr",
+            "label": "French Form Area"
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Email Capture"
+        }
+    ]
+}
+{% endschema %}

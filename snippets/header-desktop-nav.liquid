@@ -1,0 +1,305 @@
+{%- liquid
+  unless limit
+    assign limit = main_menu.links.size
+  endunless
+  unless offset
+    assign offset = 0
+  endunless
+-%}
+
+{% if request.locale.iso_code == 'en' %}
+<ul class="site-nav site-navigation small--hide dc22_desknav" role="navigation" aria-label="Primary">
+   <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="/collections/matcha" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> Shop Matcha </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-sixth">
+            <div class="jttnav_sradmpi">
+              <div class="jttnav_sradma">
+                <a href="/collections/matcha" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">All Matcha</a>
+              </div>
+              <div class="jttnav_sradma">
+                <a href="/products/starter-pack" class="site-nav__dropdown-link site-nav__dropdown-link--top-level"> Starter Pack </a>
+              </div>
+             <div class="jttnav_sradma">
+                <a href="/collections/teangle-matcha-bundles" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Bundles</a>
+              </div>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center" style=" border-left: 1px solid #BECDBE; ">
+            <a href="/collections/matcha-signature-teangle"><img class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/GINGERLEMONGRASS_440x.png?v=1684177932"></a>
+            <div class="jttnav_sradm">
+              <a href="/collections/matcha-signature-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Signature Matcha</strong> Our best-selling matcha in 3 delicious flavors.  
+              </a>
+            </div>
+             
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/collections/matcha-collagene"><img  class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/COLLAGEN_440x.png?v=1684177948"></a>
+            <div class="jttnav_sradm">
+              <a href="/collections/matcha-collagene" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Collagen Matcha</strong> 5g of pure marine collagen in every serving. 
+              </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/products/ceremonial-matcha"><img  class="lazy lazyload"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CEREMONIAL_440x.png?v=1684177951"></a>
+            <div class="jttnav_sradm">
+              <a href="/products/ceremonial-matcha" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Ceremonial Matcha</strong> Classic matcha as it is traditionally enjoyed. 
+              </a>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="/collections/accessoires" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> Accessories </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-sixth">
+            <div class="jttnav_sradmpi">
+              <div class="jttnav_sradma">
+                <a href="/collections/accessoires" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">All Accessories</a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center" style=" border-left: 1px solid #BECDBE; ">
+            <a href="/products/teangle-milk-frother"><img class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-397b.jpg?v=1686854922" alt="Milk Frother"></a>
+            <div class="jttnav_sradm">
+              <a href="/products/teangle-milk-frother" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Milk Frother</strong> For making delicious, extra creamy matcha.  
+              </a>
+            </div>
+             
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/products/matcha-spoon"><img  class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-396b.jpg?v=1686854922" alt="Matcha Spoon"></a>
+            <div class="jttnav_sradm">
+              <a href="/products/matcha-spoon" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Matcha Spoon</strong> The perfect companion to your matcha regime.
+              </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/products/matcha-bottle"><img  class="lazy lazyload"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-395b.jpg?v=1686854922" alt="Matcha Bottle"></a>
+            <div class="jttnav_sradm">
+              <a href="/products/matcha-bottle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Matcha Bottle</strong> Take your matcha game on the move. 
+              </a>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </li>
+
+
+  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="/pages/about-teangle" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> Learn </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-sixth">
+            <div class="jttnav_sradmpi">
+              <div class="jttnav_sradma">
+                <a href="/pages/faq-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">FAQ</a>
+              </div>
+              <div class="jttnav_sradma">
+                <a href="/pages/contact-us" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Contact Us</a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center" style=" border-left: 1px solid #BECDBE; ">
+            <a href="/pages/about-teangle"><img class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-394b.jpg?v=1686854922" alt="about-teangle"></a>
+            <div class="jttnav_sradm">
+              <a href="/pages/about-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Our Story</strong> Learn about our mission & purpose. <br><br>
+              </a>
+            </div>
+             
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/blogs/recipes"><img  class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-393b.jpg?v=1686854922" alt="recipes"></a>
+            <div class="jttnav_sradm">
+              <a href="/blogs/recipes" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Recipes</strong> From matcha drinks to desserts & snacks.
+              </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/blogs/matcha"><img  class="lazy lazyload"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-392b.jpg?v=1686854922" alt="Blog"></a>
+            <div class="jttnav_sradm">
+              <a href="/blogs/matcha" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Blog</strong> Incorporate matcha and easy-living in your life.
+              </a>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="site-nav__item">
+    <a href="/pages/subscription-program" class="site-nav__link site-nav__link--underline "> Subscribe & Save </a>
+  </li>
+</ul>
+
+
+{% else %}
+<ul class="site-nav site-navigation small--hide dc22_desknav" role="navigation" aria-label="Primary">
+<li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="/collections/matcha" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> Notre matcha </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-sixth">
+            <div class="jttnav_sradmpi">
+              <div class="jttnav_sradma">
+                <a href="/collections/matcha" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Tous nos matcha</a>
+              </div>
+              <div class="jttnav_sradma">
+                <a href="/products/starter-pack" class="site-nav__dropdown-link site-nav__dropdown-link--top-level"> Ensemble de départ </a>
+              </div>
+             <div class="jttnav_sradma">
+                <a href="/collections/teangle-matcha-bundles" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Ensembles</a>
+              </div>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center" style=" border-left: 1px solid #BECDBE; ">
+            <a href="/collections/matcha-signature-teangle"><img class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/GINGERLEMONGRASS_440x.png?v=1684177932"></a>
+            <div class="jttnav_sradm">
+              <a href="/collections/matcha-signature-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Matcha signature</strong> Notre matcha le plus vendu en 3 saveurs délicieuses.   
+              </a>
+            </div>
+             
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/collections/matcha-collagene"><img  class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/COLLAGEN_440x.png?v=1684177948"></a>
+            <div class="jttnav_sradm">
+              <a href="/collections/matcha-collagene" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Matcha Collagène </strong> 5g de  collagène marin pur avec chaque portion. 
+              </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/products/ceremonial-matcha"><img  class="lazy lazyload"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CEREMONIAL_440x.png?v=1684177951"></a>
+            <div class="jttnav_sradm">
+              <a href="/products/ceremonial-matcha" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Ceremonial Matcha</strong> Matcha classique tel qu'il est traditionnellement apprécié. 
+              </a>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="/collections/accessoires" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> Accessoires </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-sixth">
+            <div class="jttnav_sradmpi">
+              <div class="jttnav_sradma">
+                <a href="/collections/accessoires" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Tous nos accessoires</a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center" style=" border-left: 1px solid #BECDBE; ">
+            <a href="/products/teangle-milk-frother"><img class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-397b.jpg?v=1686854922" alt="Milk Frother"></a>
+            <div class="jttnav_sradm">
+              <a href="/products/teangle-milk-frother" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Mousseur à lait</strong> Pour un matcha latte extra crémeux. 
+              </a>
+            </div>
+             
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/products/matcha-spoon"><img  class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-396b.jpg?v=1686854922" alt="Matcha Spoon"></a>
+            <div class="jttnav_sradm">
+              <a href="/products/matcha-spoon" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Cuillère à matcha</strong> Pour un matcha parfait à tous les coups.
+              </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/products/matcha-bottle"><img  class="lazy lazyload"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-395b.jpg?v=1686854922" alt="Matcha Bottle"></a>
+            <div class="jttnav_sradm">
+              <a href="/products/matcha-bottle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Bouteille de matcha</strong> Prépare ton matcha sur le pouce.
+              </a>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </li>
+
+
+  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu" aria-haspopup="true">
+    <a href="/pages/about-teangle" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"> En savoir plus </a>
+    <div class="site-nav__dropdown megamenu text-left">
+      <div class="page-width">
+        <div class="grid grid--center ">
+          <div class="grid__item medium-up--one-sixth">
+            <div class="jttnav_sradmpi">
+              <div class="jttnav_sradma">
+                <a href="/pages/faq-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">FAQ</a>
+              </div>
+              <div class="jttnav_sradma">
+                <a href="/pages/contact-us" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">Contactez-nous</a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center" style=" border-left: 1px solid #BECDBE; ">
+            <a href="/pages/about-teangle"><img class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-394b.jpg?v=1686854922" alt="about-teangle"></a>
+            <div class="jttnav_sradm">
+              <a href="/pages/about-teangle" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Notre histoire</strong> Découvrez notre mission et notre pourquoi. <br> 
+              </a>
+            </div>
+             
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/blogs/recipes"><img  class="lazy lazyload" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-393b.jpg?v=1686854922" alt="recipes"></a>
+            <div class="jttnav_sradm">
+              <a href="/blogs/recipes" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Recettes</strong> Découvrez toutes nos recettes à base de matcha.
+              </a>
+            </div>
+          </div>
+          <div class="grid__item medium-up--one-fifth jttnav_srad text-center">
+            <a href="/blogs/matcha"><img  class="lazy lazyload"  src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-matcha-392b.jpg?v=1686854922" alt="Blog"></a>
+            <div class="jttnav_sradm">
+              <a href="/blogs/matcha" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">
+                <strong>Blog</strong> Intégrez le matcha et de la joie de vivre dans votre quotidien.
+              </a>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="site-nav__item">
+    <a href="/pages/subscription-program" class="site-nav__link site-nav__link--underline "> Abonnement </a>
+  </li>
+</ul>
+
+{% endif %}
+
+

@@ -1,0 +1,66 @@
+{% style %}
+
+    [data-section-id="{{ section.id }}"] .jr-simple-image {
+        margin:  0 auto;
+        max-width: 2000px;
+    }
+
+    [data-section-id="{{ section.id }}"] .jr-simple-image .desktop {
+        display: block;
+    }
+
+    [data-section-id="{{ section.id }}"] .jr-simple-image .mobile {
+        display: none;
+    }
+
+    {% if section.settings.image_m != blank %}
+        @media screen and (max-width: 851px) {
+            [data-section-id="{{ section.id }}"] .jr-simple-image .desktop {
+                display: none;
+            }
+            
+            [data-section-id="{{ section.id }}"] .jr-simple-image .mobile {
+                display: block;
+            }
+        }
+    {% endif %}
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-simple-image">
+        {% if section.settings.image_d != blank %}
+            <img class="desktop" src="{{ section.settings.image_d |  img_url: 'master' }}" alt="Section Image">
+        {% endif %}
+        {% if section.settings.image_m != blank %}
+            <img class="mobile" src="{{ section.settings.image_m |  img_url: 'master' }}" alt="Section Image">
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "JR Simple Image",
+    "settings": [
+        {
+            "type": "paragraph",
+            "content": "If no mobile image is selected the code defaults to keeping the desktop image on mobile as well"  
+        },
+        {
+            "type": "image_picker",
+            "id": "image_d",
+            "label": "Desktop Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_m",
+            "label": "Mobile Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR Simple Image"
+        }
+    ]
+}
+{% endschema %}
