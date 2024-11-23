@@ -46,6 +46,21 @@ html {
     </div>
 </div>
 
+<script>
+    window.addEventListener('load', (event) => {
+
+        const roleArea = document.querySelector('.form-area [role="radiogroup"]')
+        const locale = {{ request.locale.iso_code | json }}
+
+        if(!roleArea) return
+
+        const inputs = roleArea.querySelectorAll('input')
+
+        inputs[0].click()
+
+    })
+</script>
+
 {% schema %}
 {
     "name": "JR Email Capture",
