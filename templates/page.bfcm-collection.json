@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "jr_bfcm_hero_Hz8YKi": {
+      "type": "jr-bfcm-hero",
+      "settings": {
+        "desktop_img": "shopify:\/\/shop_images\/Screenshot_2024-11-15_at_8.48.26_AM_1.png",
+        "mobile_img": "shopify:\/\/shop_images\/Screenshot_2024-11-15_at_8.48.26_AM_1.png",
+        "header": "Balance meets Boldness this black friday. Matcha deals to reclaim your spark.",
+        "text_color": "#FFFFFF"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "jr_bfcm_hero_Hz8YKi"
+  ]
+}

@@ -1,0 +1,79 @@
+{{ 'jr-hp-hero.css' | asset_url | stylesheet_tag }}
+{{ 'jr-bfcm-hero.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+[data-section-id="{{ section.id }}" ] .jr-bfcm-hero {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.jr-hp-hero.jr-bfcm-hero h1 {
+    color: {{ section.settings.text_color }};
+}
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-hp-hero jr-bfcm-hero">
+        <img src="{{ section.settings.mobile_img |  img_url: 'master' }}" alt="Hero image" class="mobile hero-image">
+        <div class="content-container">
+            {% if section.settings.header != blank %}
+                <h1 class="section-header">{{ section.settings.header }}</h1>
+            {% endif %}
+        </div>
+        <img src="{{ section.settings.desktop_img |  img_url: 'master' }}" alt="Hero image" class="desktop hero-image">
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "JR BFCM Hero",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "desktop_img",
+            "label": "Deskop Image"   
+        },
+        {
+            "type": "image_picker",
+            "id": "mobile_img",
+            "label": "Mobile Image"   
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Hero Header"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#FFFFFF"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "sticker",
+            "name": "Sticker block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "sticker_image",
+                    "label": "Sticker Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Text atop sticker"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR BFCM Hero"
+        }
+    ]
+}
+{% endschema %}
