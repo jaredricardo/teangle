@@ -1178,19 +1178,19 @@
           "voided": "Annulée",
           "partially_paid": "Partiellement payée",
           "partially_refunded": "Partiellement remboursée",
-          "refunded": "Remboursée",
+          "refunded": "Remboursé",
           "expired": "Expiré"
         },
         "fulfillment_status": {
           "fulfilled": "Confirmée",
-          "complete": "Complete",
+          "complete": "Terminé",
           "partial": "Partielle",
           "unfulfilled": "Non traitée",
           "restocked": "Remis en stock"
         },
         "transaction_status": {
           "success": "Réussite",
-          "pending": "En cours",
+          "pending": "En attente",
           "failure": "Échec",
           "error": "Erreur"
         },
