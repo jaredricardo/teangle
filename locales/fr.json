@@ -283,7 +283,7 @@
         "estimated_delivery_time_range": "Livraison prévue entre le %{min_time} et le %{max_time}",
         "shipping_line_phone_label": "Numéro de téléphone mobile (obligatoire)",
         "shipping_line_phone": "Il est possible que votre transporteur utilise ce numéro pour vous contacter.",
-        "shipping_line_delivery_phone_label": "Téléphone mobile",
+        "shipping_line_delivery_phone_label": "Numéro de téléphone mobile",
         "shipping_line_delivery_phone": "Nous pouvons utiliser ce numéro pour vous appeler ou vous envoyer un SMS au sujet de votre livraison.",
         "optional_shipping_line_delivery_instructions_label": "Instructions de livraison (facultatives)",
         "shipping_line_delivery_instructions": "Saisissez les informations nécessaires, telles que les codes de porte ou les instructions de dépôt.",
@@ -341,7 +341,14 @@
         "arrives_time": "Arrivée à %{time}",
         "arrives_time_range": "Arrivée entre %{min_time} et %{max_time}",
         "estimated_time": "Prévue le %{time}",
-        "estimated_time_range": "Prévue entre %{min_time} et %{max_time}"
+        "estimated_time_range": "Prévue entre %{min_time} et %{max_time}",
+        "edit": "Éditer",
+        "address_edit": "Éditer l'adresse",
+        "address_confirm": "Souhaitez-vous vraiment supprimer cette adresse de votre compte ?",
+        "address_default": "Définir comme support multimédia par défaut",
+        "address_form": {
+          "add_address": "Ajouter l'adresse"
+        }
       },
       "localized_fields": {
         "additional_information": {
