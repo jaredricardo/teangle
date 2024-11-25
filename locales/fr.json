@@ -878,11 +878,12 @@
           "change_shipping_address_link_label": "Modifier l'adresse de livraison",
           "change_shipping_method_link_label": "Modifier le mode d'expédition",
           "change_payment_method_link_label": "Modifier le mode de paiement",
-          "pick_up_in_store_shipping_method_html": "Récupérer en boutique · %{location_name}"
+          "pick_up_in_store_shipping_method_html": "Récupérer en boutique · %{location_name}",
+          "purchase_order_number_title": "N° bon de commande"
         }
       },
       "marketing": {
-        "accept_marketing_checkbox_label": "Envoyez-moi les nouvelles et les offres par e-mail",
+        "accept_marketing_checkbox_label": "Envoyez-moi des nouvelles et des offres par e-mail",
         "post_accept_marketing_checkbox_label": "Vous êtes abonné(e) pour recevoir les nouveautés et offres par e-mail",
         "pending_accept_marketing_checkbox_label": "Consultez votre boîte mail pour confirmer votre abonnement aux nouveautés et offres",
         "accept_sms_checkbox_label": "Envoyez-moi les nouvelles et les offres par SMS",
@@ -897,6 +898,9 @@
         "unsubscribe": {
           "title": "Vous vous êtes désinscrit",
           "description": "Vous ne recevrez plus de rappels concernant votre panier de notre part."
+        },
+        "disclaimer": {
+          "terms_of_service": "Conditions d'utilisation"
         }
       },
       "shop_policies": {
