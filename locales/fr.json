@@ -1741,6 +1741,19 @@
       "edit_button": "Éditer",
       "edit_modal_title": {
         "default": "Éditer l'adresse"
+      },
+      "title": "Votre adresse"
+    },
+    "address_form": {
+      "section_title_accessibility_label": "Ajouter l'adresse"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_section_accessibility_label": "Compagnie"
+      },
+      "locations": {
+        "contact_email": "Courriel",
+        "contact_phone_number": "Téléphone"
       }
     }
   }
