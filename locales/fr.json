@@ -906,11 +906,11 @@
       "shop_policies": {
         "refund_policy": "Politique de remboursement",
         "privacy_policy": "Politique de confidentialité",
-        "terms_of_service": "Conditions d'utilisation",
+        "terms_of_service": "Conditions de service",
         "legal_notice": "Mentions légales",
         "shipping_policy": "Politique d'expédition",
         "terms_of_sale": "Conditions générales de vente",
-        "subscription_policy": "Politique d'abonnement"
+        "subscription_policy": "Politique de résiliation"
       },
       "remember_me": {
         "shopify_pay_label": "Shop Pay",
@@ -974,7 +974,7 @@
         "update_tip": "Modifier le pourboire",
         "message": "Merci beaucoup !",
         "preset_label": "%{tip_percent} %",
-        "no_tip_label": "Aucun"
+        "no_tip_label": "Aucune"
       },
       "open_graph_meta_tag": {
         "title_with_products": {
