@@ -728,10 +728,10 @@
         "thank_you_confirmed_order_with_phone_payment": "Vous avez effectué un paiement sur votre commande le %{date}.",
         "thank_you_confirmed_order_with_email_and_phone_payment": "Vous avez effectué un paiement sur votre commande le %{date}.",
         "thank_you_confirmed_order_with_email_pick_up": "Vous recevrez un e-mail lorsque votre commande sera prête pour le ramassage.",
-        "thank_you_confirmed_order_with_phone_pick_up": "Vous recevrez un SMS lorsque votre commande sera prête à être retirée.",
+        "thank_you_confirmed_order_with_phone_pick_up": "Vous recevrez un SMS lorsque votre commande sera prête pour le ramassage.",
         "thank_you_confirmed_order_with_email_and_phone_pick_up": "Vous recevrez un e-mail lorsque votre commande sera prête pour le ramassage.",
         "thank_you_confirmed_order_with_missing": "Contactez-nous par e-mail ou par téléphone pour recevoir une confirmation de commande.",
-        "order_status_confirmed_order_with_email": "Vous recevrez un e-mail lorsque votre commande sera prête.",
+        "order_status_confirmed_order_with_email": "Vous recevrez un e-mail et un SMS lorsque votre commande sera prête.",
         "order_status_confirmed_order_with_phone": "Vous recevrez un SMS lorsque votre commande sera prête.",
         "order_status_confirmed_order_with_email_and_phone": "Vous recevrez un e-mail et un SMS lorsque votre commande sera prête.",
         "order_status_confirmed_order_with_email_payment": "Vous avez effectué un paiement sur votre commande le %{date}.",
@@ -852,7 +852,10 @@
           }
         },
         "estimated_delivery": "Date de livraison estimée ",
-        "view_business_customer_account": "Voir le compte"
+        "view_business_customer_account": "Voir le compte",
+        "thank_you_confirmed_order_with_draft": "Nous vous contacterons si nous avons besoin d'informations supplémentaires ou lorsque votre commande sera confirmée.",
+        "thank_you_confirmed_order_with_draft_payment": "Nous vous contacterons si nous avons besoin d'informations supplémentaires ou lorsque votre commande sera confirmée.",
+        "thank_you_confirmed_order_with_draft_pick_up": "Nous vous contacterons si nous avons besoin d'informations supplémentaires ou lorsque votre commande sera confirmée."
       },
       "review": {
         "title": "Avis",
