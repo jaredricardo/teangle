@@ -1050,6 +1050,17 @@
         "individual_violations_title": {
           "DeliveryViolations": "Adresse de livraison"
         }
+      },
+      "shop_pay_external": {
+        "return_to_store_simple": "Retourner à la boutique"
+      },
+      "wallets": {
+        "shipping_line_label": "Livraison",
+        "errors": {
+          "unsupported": {
+            "postal_code": "Cet emplacement n'est pas pris en charge."
+          }
+        }
       }
     },
     "pagination": {
