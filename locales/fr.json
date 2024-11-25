@@ -677,7 +677,7 @@
       "failed_payment": {
         "page_title": "Le paiement n'a pas pu être traité",
         "title": "Le paiement n'a pas pu être traité",
-        "payment_not_processed_title": "Votre paiement n'a pas pu être traité",
+        "payment_not_processed_title": "Votre paiement n’a pas pu être traité",
         "payment_not_processed_text": "Vous n'avez pas été facturé. Revenez à votre panier pour finaliser votre achat.",
         "return_to_cart_button_label": "Retour au panier"
       },
@@ -685,7 +685,13 @@
         "credit_card_label": "Carte de crédit",
         "bank_deposit_label": "Dépôt en banque",
         "cash_on_delivery_label": "Paiement à la livraison",
-        "money_order_label": "Mandat"
+        "money_order_label": "Mandat",
+        "login_prompt": {
+          "no_access": {
+            "link": "Se connecter"
+          }
+        },
+        "draft_order_deposit_due_later": "{{depositAmount}} sera dû une fois votre commande confirmée. L’échéance du solde est fixée à {{translatedName}}."
       },
       "thank_you": {
         "title": "Merci pour votre achat!",
@@ -693,7 +699,7 @@
         "return_to_store_link_label": "Retour à la boutique",
         "print_link_label": "Imprimer",
         "payment_information_title": "Informations de paiement",
-        "shipping_information_title": "Information de livraison",
+        "shipping_information_title": "Information de Livraison",
         "page_title": "Merci %{display_name}!",
         "page_title_no_name": "Merci!",
         "cancelled_page_title": "Commande annulée",
