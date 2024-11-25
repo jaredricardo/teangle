@@ -607,7 +607,8 @@
         "deferred_payment_not_allowed": "Les paiements différés ne sont pas autorisés. Veuillez vérifier votre commande et réessayer.",
         "deferred_payment_required": "Cette commande nécessite un paiement différé. Veuillez vérifier votre commande et réessayer.",
         "deferred_amount_changed": "Votre paiement n’a pas pu être traité, car le montant du paiement différé a changé. Veuillez vérifier votre commande et réessayer.",
-        "deferred_date_changed": "Votre paiement n’a pas pu être traité, car la date du paiement différé a changé. Veuillez vérifier votre commande et réessayer."
+        "deferred_date_changed": "Votre paiement n’a pas pu être traité, car la date du paiement différé a changé. Veuillez vérifier votre commande et réessayer.",
+        "invalid_number": "Entrez un numéro de carte valide"
       },
       "shipping_errors": {
         "shipping_method": "Votre panier a été mis à jour et les tarifs d'expédition précédents ne sont pas valides. Sélectionnez un nouveau tarif.",
@@ -642,7 +643,7 @@
         "escape_action": "Afficher la confirmation de commande ›",
         "components": {
           "close": "Fermer",
-          "expand": "Afficher plus",
+          "expand": "Voir plus",
           "processing": "En cours de traitement...",
           "submit": "Soumettre"
         }
