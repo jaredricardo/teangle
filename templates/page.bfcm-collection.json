@@ -7,11 +7,43 @@
     },
     "jr_bfcm_hero_Hz8YKi": {
       "type": "jr-bfcm-hero",
+      "blocks": {
+        "sticker_6R3mLP": {
+          "type": "sticker",
+          "settings": {
+            "sticker_image": "shopify:\/\/shop_images\/Star.svg",
+            "sticker_rotation": 15,
+            "offset_right": 3,
+            "offset_bottom": 2,
+            "sticker_text_color": "#3b7d52",
+            "title": "up to 40% off",
+            "title_fr": "jusqu'à 40% de réduction"
+          }
+        },
+        "sticker_UKkmDM": {
+          "type": "sticker",
+          "disabled": true,
+          "settings": {
+            "sticker_image": "shopify:\/\/shop_images\/NewPalette-05_1.svg",
+            "sticker_rotation": 0,
+            "offset_right": 0,
+            "offset_bottom": 0,
+            "sticker_text_color": "#000000",
+            "title": "EN EN",
+            "title_fr": "FR FR"
+          }
+        }
+      },
+      "block_order": [
+        "sticker_6R3mLP",
+        "sticker_UKkmDM"
+      ],
       "settings": {
-        "desktop_img": "shopify:\/\/shop_images\/Screenshot_2024-11-15_at_8.48.26_AM_1.png",
-        "mobile_img": "shopify:\/\/shop_images\/Screenshot_2024-11-15_at_8.48.26_AM_1.png",
-        "header": "Balance meets Boldness this black friday. Matcha deals to reclaim your spark.",
-        "text_color": "#FFFFFF"
+        "desktop_img": "shopify:\/\/shop_images\/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
+        "header_en": "Balance meets Boldness this black Friday. Matcha deals to reclaim your spark.",
+        "header_fr": "L’équilibre rencontre l’audace ce vendredi noir. Offres Matcha pour récupérer votre étincelle.",
+        "text_color": "#ffffff"
       }
     }
   },

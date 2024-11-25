@@ -16,12 +16,27 @@
 
 <div data-section-id="{{ section.id }}">
     <div class="jr-hp-hero jr-bfcm-hero">
-        <img src="{{ section.settings.mobile_img |  img_url: 'master' }}" alt="Hero image" class="mobile hero-image">
+        {% for block in section.blocks %}
+            <div class="sticker-container" style="right: {{ block.settings.offset_right }}%; bottom: {{ block.settings.offset_bottom }}%;">
+                <div class="sticker" style="transform:rotate({{ block.settings.sticker_rotation }}deg);">
+                    <img src="{{ block.settings.sticker_image |  img_url: 'master' }}" alt="Sticker image" class="sticker-image">
+                    {% if request.locale.iso_code == 'en' %}
+                            <p style="color: {{ block.settings.sticker_text_color }};">{{ block.settings.title }}</p>
+                        {% else %}
+                            <p style="color: {{ block.settings.sticker_text_color }};">{{ block.settings.title_fr }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
         <div class="content-container">
-            {% if section.settings.header != blank %}
-                <h1 class="section-header">{{ section.settings.header }}</h1>
+            {% if request.locale.iso_code == 'en' %}
+                    <h1 class="section-header">{{ section.settings.header_en }}</h1>
+                {% else %}
+                    <h1 class="section-header">{{ section.settings.header_fr }}</h1>
             {% endif %}
         </div>
+        <div class="overlay"></div>
+        <img src="{{ section.settings.mobile_img |  img_url: 'master' }}" alt="Hero image" class="mobile hero-image">
         <img src="{{ section.settings.desktop_img |  img_url: 'master' }}" alt="Hero image" class="desktop hero-image">
     </div>
 </div>
@@ -42,8 +57,13 @@
         },
         {
             "type": "text",
-            "id": "header",
-            "label": "Hero Header"
+            "id": "header_en",
+            "label": "Hero Header (en)"
+        },
+        {
+            "type": "text",
+            "id": "header_fr",
+            "label": "Hero Header (fr)"
         },
         {
             "type": "color",
@@ -63,9 +83,38 @@
                     "label": "Sticker Image"
                 },
                 {
+                    "type": "number",
+                    "id": "sticker_rotation",
+                    "label": "Sticker Rotation",
+                    "default": 0
+                },
+                {
+                    "type": "number",
+                    "id": "offset_right",
+                    "label": "Sticker distance right (%)",
+                    "default": 0
+                },
+                {
+                    "type": "number",
+                    "id": "offset_bottom",
+                    "label": "Sticker distance bottom (%)",
+                    "default": 0
+                },
+                {
+                    "type": "color",
+                    "id": "sticker_text_color",
+                    "label": "Sticker Text Color",
+                    "default": "#000000"
+                },
+                {
                     "type": "text",
                     "id": "title",
-                    "label": "Text atop sticker"
+                    "label": "Text atop sticker (en)"
+                },
+                {
+                    "type": "text",
+                    "id": "title_fr",
+                    "label": "Text atop sticker (fr)"
                 }
             ]
         }

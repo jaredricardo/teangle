@@ -1,19 +1,28 @@
 @font-face {
     font-family: 'Cooper MBT';
-    src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CooperMdBTMedium.ttf?v=1732493441') format('truetype');
+    src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CooperMdBTMedium.ttf?v=1732493441  ') format('truetype');
 }
 
 .jr-hp-hero.jr-bfcm-hero {
     height: 650px;
 }
 
-.jr-hp-hero.jr-bfcm-hero .hero-image {
-    /* height: auto; */
+.jr-hp-hero.jr-bfcm-hero .overlay {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1; 
 }
 
 .jr-hp-hero.jr-bfcm-hero .content-container {
     margin-left: unset;
     width: 100%;
+    z-index: 2;
 }
 .jr-hp-hero.jr-bfcm-hero h1 {
     text-align: center !important;
@@ -22,6 +31,53 @@
     font-weight: 400;
     line-height: 77.31px;
     text-align: center;
-    max-width: 90%;
+    max-width: 75%;
     margin: 0 auto;
+}
+
+.jr-hp-hero.jr-bfcm-hero .sticker-container {
+    z-index: 3;
+    position: absolute;
+}
+
+.jr-hp-hero.jr-bfcm-hero .sticker {
+    position: relative;
+}
+
+.jr-hp-hero.jr-bfcm-hero .sticker p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    text-align: center;
+    font-family: Sofia Pro;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 33px;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0;
+}
+
+@media screen and (max-width: 651px) {
+    .jr-hp-hero.jr-bfcm-hero h1 {
+        font-size: 26px;
+        line-height: 30px;
+        max-width: 100%;
+    }
+    .jr-hp-hero.jr-bfcm-hero {
+        height: 300px;
+    }
+    .jr-hp-hero.jr-bfcm-hero .hero-image {
+        height: 100%;
+        position: absolute;
+    }
+    .jr-hp-hero.jr-bfcm-hero .sticker img {
+        width: 85px;
+    }
+    .jr-hp-hero.jr-bfcm-hero .sticker p {
+        font-size: 14px;
+        line-height: 1.15;
+        top: 46%;
+    }
 }
