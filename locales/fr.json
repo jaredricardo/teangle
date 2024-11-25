@@ -1730,6 +1730,17 @@
         "address": "Adresse de livraison",
         "address_map_marker": "Adresse de livraison",
         "summary": "Livraison"
+      },
+      "shop_pay": {
+        "learn_more": "Apprendre plus"
+      }
+    },
+    "addresses": {
+      "add_button": "Ajouter l'adresse",
+      "add_button_accessibility_label": "Ajouter l'adresse",
+      "edit_button": "Éditer",
+      "edit_modal_title": {
+        "default": "Éditer l'adresse"
       }
     }
   }
