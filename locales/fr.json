@@ -474,7 +474,21 @@
         },
         "email_connected": "Compte connecté : ",
         "klarna_label": "Klarna",
-        "mor_disclaimer_html": "En cliquant ci-dessous et en finalisant votre commande, vous acceptez d’acheter vos articles auprès de Flow I.O en tant que Merchant of Record\npour cette transaction, conformément aux <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Conditions générales d’utilisation</a>\net à la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Politique de confidentialité</a> de Flow I.O. Flow I.O est un fournisseur international de\nservices de traitement pour %{shop_name}\n"
+        "mor_disclaimer_html": "En cliquant ci-dessous et en finalisant votre commande, vous acceptez d’acheter vos articles auprès de Flow I.O en tant que Merchant of Record\npour cette transaction, conformément aux <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Conditions générales d’utilisation</a>\net à la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Politique de confidentialité</a> de Flow I.O. Flow I.O est un fournisseur international de\nservices de traitement pour %{shop_name}\n",
+        "saved_credit_card_actions": {
+          "edit": "Éditer"
+        },
+        "edit_credit_card_modal": {
+          "fields": {
+            "default": "Définir comme support multimédia par défaut"
+          }
+        },
+        "order_edit_banner_items_added": {
+          "other": "%{count} ajouté"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Supprimé"
+        }
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "Solde actuel %{amount}",
