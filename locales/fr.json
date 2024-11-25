@@ -1527,7 +1527,7 @@
     "addresses": {
       "title": "Votre adresse",
       "default": "Par défaut",
-      "add_new": "Ajouter une nouvelle adresse",
+      "add_new": "Ajouter l'adresse",
       "edit_address": "Éditer l'adresse",
       "first_name": "Prénom",
       "last_name": "Nom",
@@ -1548,12 +1548,12 @@
       "delete_confirm": "Êtes-vous certain(e) de vouloir supprimer cette adresse?"
     },
     "login": {
-      "title": "Connexion",
+      "title": "Se connecter",
       "email": "Courriel",
       "password": "Mot de passe",
       "forgot_password": "Mot de passe oublié?",
       "sign_in": "Se connecter",
-      "cancel": "Retourner à la boutique",
+      "cancel": "Retour à la boutique",
       "guest_title": "Continuer en tant qu'invité",
       "guest_continue": "Continuer"
     },
