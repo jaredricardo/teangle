@@ -1763,6 +1763,11 @@
           "show_all_accessibility_label": "Afficher toutes les commandes en cours d’examen"
         }
       }
+    },
+    "payment_methods": {
+      "payment_details": {
+        "edit_payment_method_button": "Éditer"
+      }
     }
   }
 }
