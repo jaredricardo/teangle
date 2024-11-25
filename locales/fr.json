@@ -782,7 +782,7 @@
         "picked_up_title": "Cette commande a été récupérée",
         "picked_up_description_html": "Votre commande a été récupérée à %{location_name} le %{date}.",
         "contact_us": "Contactez-nous",
-        "contact_us_lowercase": "nous contacter",
+        "contact_us_lowercase": "contactez-nous",
         "contact_us_html": "Besoin d'aide ? %{contact_us}",
         "updated_time": "Mis à jour %{time_ago} ago",
         "failure": "Non livré",
@@ -805,8 +805,8 @@
         "order_number_label": "Numéro de commande",
         "customer_validation_error": "Saisissez un e-mail ou un numéro de commande valide.",
         "customer_validation_error_phone": "Saisissez un numéro de téléphone ou un numéro de commande valide.",
-        "login": "Connexion",
-        "unfulfilled_items_title": "Préparation pour l'expédition",
+        "login": "Se connecter",
+        "unfulfilled_items_title": "Préparation pour expédition",
         "unfulfilled_items_description": "Nous préparons actuellement l'expédition de ces articles.",
         "marker": {
           "current": "Emplacement actuel de la commande",
@@ -814,7 +814,7 @@
         },
         "pick_up_in_store_marker": {
           "current": "Emplacement actuel de la commande",
-          "shipping": "Centre de retrait"
+          "shipping": "Point retrait"
         },
         "fulfillment": {
           "fulfilled_table_title": "Articles dans cet envoi",
@@ -828,7 +828,7 @@
         "order_updates_subscribe_to_email_notifications": "Recevoir des mises à jour sur le statut de l’expédition par e-mail",
         "order_updates_subscribe_to_email_or_phone_notifications": "Recevez les mises à jour sur l'expédition par e-mail ou message.",
         "order_updates_subscribe_to_phone_notifications": "Recevez les mises à jour sur l'expédition par message.",
-        "order_updates_submit_subscription": "Envoyer",
+        "order_updates_submit_subscription": "Soumettre",
         "track_shipment": "Suivre l'envoi",
         "shopify_pay": {
           "order_completed_html": "Commande complétée avec %{shopify_pay}",
