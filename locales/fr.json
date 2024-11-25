@@ -1694,6 +1694,18 @@
       "profile_card": {
         "edit": "Éditer"
       }
+    },
+    "orders": {
+      "order_list": {
+        "sort_title": "Appliquer"
+      },
+      "order_status": {
+        "delivery_promise_v2": {
+          "promise_line": {
+            "not_delivered_by_label": "Livré après le {{date}}."
+          }
+        }
+      }
     }
   }
 }
