@@ -223,7 +223,7 @@
         "sale_price": "Prix réduit",
         "total_updated_label": "Prix total actualisé :",
         "order_total_updated_label": "Total mis à jour",
-        "total_already_paid_label": "Déjà payé",
+        "total_already_paid_label": "Payé",
         "unit_price": {
           "accessible_separator": "par",
           "content_html": "%{price}%{accessible_separator}%{per_unit}"
@@ -254,7 +254,10 @@
           "one": "Rabais appliqué"
         },
         "discount_not_found": "Nous n'avons pas trouvé de promotion valide correspondant à ce code",
-        "price_before_discount_aria_text": "Prix d'origine"
+        "price_before_discount_aria_text": "Prix d'origine",
+        "due_on_fulfillment": "Dû lors du traitement de la commande",
+        "duties_and_taxes_label": "Frais de douane et taxes",
+        "error_duties_tooltip": "Cette commande étant expédiée depuis un autre pays, il se peut que des frais de douane et des taxes soient facturés à la livraison."
       },
       "shipping": {
         "title": "Livraison",
