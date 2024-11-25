@@ -1069,7 +1069,7 @@
     },
     "links": {
       "powered_by_shopify": "Commerce électronique propulsé par Shopify",
-      "learn_more": "En savoir plus"
+      "learn_more": "Apprendre plus"
     },
     "feed": {
       "more": "Plus"
@@ -1096,7 +1096,7 @@
       "county": "Comté",
       "emirate": "Émirat",
       "governorate": "Gouvernorat",
-      "confirm": "Souhaitez-vous vraiment supprimer cette adresse ?"
+      "confirm": "Êtes-vous certain(e) de vouloir supprimer cette adresse?"
     },
     "collections": {
       "sorting": {
@@ -1172,8 +1172,8 @@
         "not_available": "Cette commande n'est pas disponible",
         "financial_status": {
           "authorized": "Autorisée",
-          "pending": "En cours",
-          "paid": "Payée",
+          "pending": "En attente",
+          "paid": "Payé",
           "unpaid": "Impayée",
           "voided": "Annulée",
           "partially_paid": "Partiellement payée",
