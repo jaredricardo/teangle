@@ -1300,7 +1300,7 @@
       "account": "Compte",
       "create_account": "Créer un compte",
       "reset_account": "Réinitialiser le compte",
-      "addresses": "Adresses",
+      "addresses": "Votre adresse",
       "order": "Commande %{name}",
       "search": "Recherche",
       "search_results": {
@@ -1688,5 +1688,12 @@
   },
   "date_formats": {
     "month_day_year": "%d %B, %Y"
+  },
+  "customer_accounts": {
+    "account_information": {
+      "profile_card": {
+        "edit": "Éditer"
+      }
+    }
   }
 }
