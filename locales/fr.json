@@ -855,17 +855,22 @@
         "view_business_customer_account": "Voir le compte",
         "thank_you_confirmed_order_with_draft": "Nous vous contacterons si nous avons besoin d'informations supplémentaires ou lorsque votre commande sera confirmée.",
         "thank_you_confirmed_order_with_draft_payment": "Nous vous contacterons si nous avons besoin d'informations supplémentaires ou lorsque votre commande sera confirmée.",
-        "thank_you_confirmed_order_with_draft_pick_up": "Nous vous contacterons si nous avons besoin d'informations supplémentaires ou lorsque votre commande sera confirmée."
+        "thank_you_confirmed_order_with_draft_pick_up": "Nous vous contacterons si nous avons besoin d'informations supplémentaires ou lorsque votre commande sera confirmée.",
+        "breadcrumbs_submitted": "Soumise",
+        "breadcrumbs_confirmed": "Confirmée",
+        "missing_shipping_address_banner": {
+          "contact_us": "Contactez-nous"
+        }
       },
       "review": {
-        "title": "Avis",
+        "title": "Vérifier",
         "review_title": "Réviser la commande",
         "checkout_as_guest": "Passer à la caisse en tant qu’invité",
         "blocks": {
           "contact_method_title": "Contact",
           "billing_address_title": "Facturation",
           "shipping_address_title": "Expédier à",
-          "shipping_method_title": "Méthode",
+          "shipping_method_title": "Mode d'expédition",
           "payment_method_title": "Paiement",
           "change_link_label": "Modifier",
           "change_contact_method_link_label": "Modifier les coordonnées",
