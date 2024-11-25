@@ -162,9 +162,9 @@
         "title": "Résumé de la commande",
         "order_name_label": "Commande %{name}",
         "shopping_cart_label": "Panier",
-        "discount_title": "Code promo",
-        "discount_label": "code de réduction",
-        "discount_placeholder": "code de réduction",
+        "discount_title": "Rabais appliqué",
+        "discount_label": "Code de réduction",
+        "discount_placeholder": "Code de réduction",
         "gift_card_title": "Carte-cadeau",
         "gift_card_label": "Carte-cadeau",
         "gift_card_placeholder": "Carte-cadeau",
@@ -175,7 +175,7 @@
         "remove_discount_label": "Retirer le code promo",
         "free_shipping_discount_label": "Expédition gratuite",
         "applied_free_shipping_discount_label": "Appliqué",
-        "apply_discount_button_label": "Valider",
+        "apply_discount_button_label": "Appliquer",
         "applied_discount_message": "%{amount} a/ont été déduit(s) du prix total",
         "discount_has_been_applied": "La réduction a été appliquée",
         "discount_has_been_removed": "La réduction a été retirée",
@@ -193,7 +193,7 @@
         "pickup_label": "Récupérer",
         "no_pickup_location": "Votre commande n'est pas disponible pour le ramassage. Veuillez saisir une adresse d'expédition.",
         "tip_label": "Pourboire",
-        "calculating_shipping": "En cours de calcul...",
+        "calculating_shipping": "En cours de calcul…",
         "shipping_default_value": "Calculé à l'étape suivante",
         "shipping_pending_value": "—",
         "shipping_pending_message": "Pas encore disponible",
@@ -246,7 +246,14 @@
           "due_today": "Total dû aujourd'hui",
           "due_later": "Total dû %{due_at}"
         },
-        "higher_value_discount_applied": "Certains codes de réduction ne pouvaient pas être utilisés ensemble. Nous avons appliqué la meilleure combinaison."
+        "higher_value_discount_applied": "Certains codes de réduction ne pouvaient pas être utilisés ensemble. Nous avons appliqué la meilleure combinaison.",
+        "more_items_modal": {
+          "search_item": "Recherche"
+        },
+        "discount_title_stacking": {
+          "one": "Rabais appliqué"
+        },
+        "discount_not_found": "Nous n'avons pas trouvé de promotion valide correspondant à ce code"
       },
       "shipping": {
         "title": "Livraison",
