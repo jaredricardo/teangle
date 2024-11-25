@@ -155,10 +155,11 @@
         "reduced_with_quantity_label": "Plus que %{quantity_available} restant",
         "remove_from_cart_button_label": "Retirer du panier",
         "continue_shopping_button_label": "Continuer",
-        "go_back_to_cart_button_label": "Revenir à mon panier"
+        "go_back_to_cart_button_label": "Revenir à mon panier",
+        "return_to_store_label": "Retourner à la boutique"
       },
       "order_summary": {
-        "title": "Sommaire de la commande",
+        "title": "Résumé de la commande",
         "order_name_label": "Commande %{name}",
         "shopping_cart_label": "Panier",
         "discount_title": "Code promo",
@@ -967,6 +968,9 @@
       "mor_policies": {
         "terms_and_conditions": "Conditions générales d’utilisation du Merchant of Record",
         "privacy_policy": "Politique de confidentialité du Merchant of Record"
+      },
+      "contextual_availability": {
+        "unavailable_label": "Non disponible"
       }
     },
     "pagination": {
