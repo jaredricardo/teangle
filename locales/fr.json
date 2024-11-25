@@ -130,21 +130,21 @@
         "pick_up_in_five_or_more_days": "Habituellement prête en 5 jours ou plus",
         "pick_up_in_zero_to_two_hours": "Prêt pour le ramassage dans 2 heures",
         "pick_up_in_two_to_four_hours": "Prêt pour le ramassage dans 4 heures",
-        "pick_up_immediately": "Prêt pour le ramassage maintenant",
-        "pick_up_next_day": "Prêt pour le ramassage le jour suivant",
+        "pick_up_immediately": "Prête pour le ramassage maintenant",
+        "pick_up_next_day": "Prête pour le ramassage le jour suivant",
         "pick_up_from_store": "Récupérer"
       },
       "customer_account": {
         "not_user_label": "Vous n'êtes pas %{first_name} ?",
         "have_an_account_label": "Vous avez déjà un compte ?",
-        "sign_in_link_label": "Ouvrir une session",
-        "sign_out_link_label": "Déconnexion",
+        "sign_in_link_label": "Se connecter",
+        "sign_out_link_label": "Se déconnecter",
         "save_my_information_label": "Sauvegarder mes coordonnées pour la prochaine fois"
       },
       "stock": {
         "page_title": "Problèmes d'inventaire",
         "title": "En rupture de stock",
-        "items_unavailable_notice": "Certains articles ne sont plus disponibles. Votre panier a été mis à jour.",
+        "items_unavailable_notice": "Certains articles ne sont plus disponibles.",
         "product_column_header": "Produits",
         "quantity_column_header": "Quantité",
         "price_column_header": "Prix",
