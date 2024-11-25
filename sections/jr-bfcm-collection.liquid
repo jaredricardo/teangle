@@ -1,0 +1,143 @@
+{{ 'jr-bfcm-collection.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+[data-section-id="{{ section.id }}" ] {
+    background-color: {{ section.settings.bg_color }};
+}
+
+[data-section-id="{{ section.id }}" ] .jr-hp-hero {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+{% endstyle %}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-bfcm-collection">
+        <div class="header-area">
+            {% if request.locale.iso_code == 'en' %}
+                <h3>{{ section.settings.header }}</h3>
+            {% else %}
+                <h3>{{ section.settings.header_fr }}</h3>
+            {% endif %}
+        </div>
+        <div class="filter-area">
+            {% for block in section.blocks %}
+                <button class="fitler" data-filter-index="{{ forloop.index }}">
+                    {% if request.locale.iso_code == 'en' %}
+                        {{ block.settings.filter_text_en }}
+                    {% else %}
+                        {{ block.settings.filter_text_fr }}
+                    {% endif %}
+                </button>
+            {% endfor %}
+        </div>
+        <div class="products-area">
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const section = document.querySelector('[data-section-id="{{ section.id }}"]')
+        console.log('/////////////')
+        console.log(section)
+    })
+</script>
+
+{% schema %}
+{
+    "name": "JR BFCM Collection",
+    "limit": 1,
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background Color",
+            "default": "#FFFFFF"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header (EN)"
+        },
+        {
+            "type": "text",
+            "id": "header_fr",
+            "label": "Header (FR)"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "products",
+            "name": "Product List Block",
+            "settings": [
+                {
+                    "type": "header",
+                    "content": "Usage Information:",
+                    "info": "If you need to use an alt image in place of the default product image, there is a metafield at the product level called 'bfcm_alt_image' where you can upload an alt image. Additionally, there are also three other optional fields at the product metafield level: 'bfcm_product_callout_one', 'bfcm_product_callout_two', and 'bfcm_product_subheader'. The first two are used to populate the extra callouts above each product, and the third is used to populate a subheader below the product title."
+                },
+                {
+                    "type": "product_list",
+                    "id": "product_list",
+                    "label": "Product List"
+                },
+                {
+                    "type": "text",
+                    "id": "filter_button_text",
+                    "label": "filter button text (EN)"
+                },
+                {
+                    "type": "text",
+                    "id": "filter_button_text_fr",
+                    "label": "filter button text (FR)"
+                },
+                {
+                    "type": "text",
+                    "id": "product_section_header",
+                    "label": "Product Section Header (EN)",
+                    "default": "Section Header (en)"
+                },
+                {
+                    "type": "text",
+                    "id": "product_section_header_fr",
+                    "label": "Product Section Header (FR)",
+                    "default": "Section Header (fr)"
+                },
+                {
+                    "type": "text",
+                    "id": "product_section_subheader",
+                    "label": "Product Section Subheader (EN)",
+                    "default": "Section subheader (en)"
+                },
+                {
+                    "type": "text",
+                    "id": "product_section_subheader_fr",
+                    "label": "Product Section Subheader (FR)",
+                    "default": "Section subheader (fr)"
+                },
+                {
+                    "type": "textarea",
+                    "id": "section_description",
+                    "label": "Section Description (EN)",
+                    "default": "Section Description (en)"
+                },
+                {
+                    "type": "textarea",
+                    "id": "section_description_fr",
+                    "label": "Section Description (FR)",
+                    "default": "Section Description (fr)"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR BFCM Collection"
+            
+        }
+    ]
+}
+{% endschema %}

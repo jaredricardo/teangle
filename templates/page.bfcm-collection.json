@@ -45,10 +45,65 @@
         "header_fr": "L’équilibre rencontre l’audace ce vendredi noir. Offres Matcha pour récupérer votre étincelle.",
         "text_color": "#ffffff"
       }
+    },
+    "jr_bfcm_collection_FaLMrP": {
+      "type": "jr-bfcm-collection",
+      "blocks": {
+        "products_DBwRMP": {
+          "type": "products",
+          "settings": {
+            "product_list": [
+              "teangle-ginger-lemongrass-matcha-3-packs",
+              "matcha-chai",
+              "teangle-peppermint-matcha",
+              "matcha-collagen",
+              "ceremonial-matcha"
+            ],
+            "filter_button_text": "Teangle Teas",
+            "filter_button_text_fr": "Teangle Thés",
+            "product_section_header": "Teas",
+            "product_section_header_fr": "Thés",
+            "product_section_subheader": "Section subheader (en)",
+            "product_section_subheader_fr": "Section subheader (fr)",
+            "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
+            "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
+          }
+        },
+        "products_TGWdpE": {
+          "type": "products",
+          "settings": {
+            "product_list": [
+              "crewneck-hakuna-matchacha",
+              "matcha-mug-matchawaitingfor",
+              "luxe-bottle",
+              "matcha-bottle",
+              "matcha-spoon"
+            ],
+            "filter_button_text": "accessories",
+            "filter_button_text_fr": "accessoires",
+            "product_section_header": "Accessories",
+            "product_section_header_fr": "Accessoires",
+            "product_section_subheader": "Section subheader (en)",
+            "product_section_subheader_fr": "Section subheader (fr)",
+            "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
+            "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
+          }
+        }
+      },
+      "block_order": [
+        "products_DBwRMP",
+        "products_TGWdpE"
+      ],
+      "settings": {
+        "bg_color": "",
+        "header": "Matcha, Reimagined. Experience the difference of all organic, high quality ingredients. Our blends are designed for flavor, focus, and a life you love.",
+        "header_fr": "Matcha, réinventé. Découvrez la différence de tous les ingrédients biologiques de haute qualité. Nos mélanges sont conçus pour la saveur, la concentration et une vie que vous aimez."
+      }
     }
   },
   "order": [
     "main",
-    "jr_bfcm_hero_Hz8YKi"
+    "jr_bfcm_hero_Hz8YKi",
+    "jr_bfcm_collection_FaLMrP"
   ]
 }
