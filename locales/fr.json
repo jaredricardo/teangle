@@ -1754,6 +1754,14 @@
       "locations": {
         "contact_email": "Courriel",
         "contact_phone_number": "Téléphone"
+      },
+      "addresses": {
+        "shipping_address_card_title": "Adresse de livraison"
+      },
+      "orders": {
+        "draft_order_list": {
+          "show_all_accessibility_label": "Afficher toutes les commandes en cours d’examen"
+        }
       }
     }
   }
