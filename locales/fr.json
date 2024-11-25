@@ -58,16 +58,17 @@
         "tooltip_accessibility_label": "Plus d’informations",
         "errors": {
           "session_identifier_not_unique_error": "Une erreur s'est produite avec votre commande. Essayez à nouveau de la payer."
-        }
+        },
+        "submit": "Soumettre"
       },
       "contact": {
         "title": "Informations",
         "address_title": "Adresse",
         "shipping_address_title": "Adresse de livraison",
         "delivery_option_title": "Mode de livraison",
-        "contact_method_title": "Coordonnées",
-        "email_label": "Adresse e-mail",
-        "email_placeholder": "Adresse e-mail",
+        "contact_method_title": "Contact",
+        "email_label": "Courriel",
+        "email_placeholder": "Courriel",
         "email_or_phone_label": "E‑mail ou numéro de portable",
         "email_or_phone_placeholder": "E‑mail ou numéro de portable",
         "stored_addresses_label": "Adresses enregistrées",
