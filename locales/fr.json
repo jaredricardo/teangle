@@ -217,10 +217,10 @@
         "product_change_label": "Modifier",
         "product_image_label": "Image du produit",
         "scroll_order_summary": "Défiler la liste d’éléments",
-        "expand_order_summary": "Afficher le sommaire de la commande",
-        "collapse_order_summary": "Fermer le sommaire de la commande",
+        "expand_order_summary": "Afficher le résumé de la commande",
+        "collapse_order_summary": "Masquer le résumé de la commande",
         "original_price": "Prix d'origine",
-        "sale_price": "Prix soldé",
+        "sale_price": "Prix réduit",
         "total_updated_label": "Prix total actualisé :",
         "order_total_updated_label": "Total mis à jour",
         "total_already_paid_label": "Déjà payé",
@@ -253,7 +253,8 @@
         "discount_title_stacking": {
           "one": "Rabais appliqué"
         },
-        "discount_not_found": "Nous n'avons pas trouvé de promotion valide correspondant à ce code"
+        "discount_not_found": "Nous n'avons pas trouvé de promotion valide correspondant à ce code",
+        "price_before_discount_aria_text": "Prix d'origine"
       },
       "shipping": {
         "title": "Livraison",
