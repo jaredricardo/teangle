@@ -41,7 +41,7 @@
       "settings": {
         "desktop_img": "shopify:\/\/shop_images\/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
         "mobile_img": "shopify:\/\/shop_images\/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
-        "header_en": "Balance meets Boldness this black Friday. Matcha deals to reclaim your spark.",
+        "header_en": "Balance meets Boldness this Black Friday. Matcha deals to reclaim your spark.",
         "header_fr": "L’équilibre rencontre l’audace ce vendredi noir. Offres Matcha pour récupérer votre étincelle.",
         "text_color": "#ffffff"
       }
@@ -88,11 +88,31 @@
             "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
             "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
           }
+        },
+        "products_CMEaG6": {
+          "type": "products",
+          "settings": {
+            "product_list": [
+              "le-trio-magique",
+              "the-foursome",
+              "la-vida-verde",
+              "matcha-discovery-bundle"
+            ],
+            "filter_button_text": "Test Filter",
+            "filter_button_text_fr": "Test Filter FR",
+            "product_section_header": "Section Header (en)",
+            "product_section_header_fr": "Section Header (fr)",
+            "product_section_subheader": "Section subheader (en)",
+            "product_section_subheader_fr": "Section subheader (fr)",
+            "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
+            "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
+          }
         }
       },
       "block_order": [
         "products_DBwRMP",
-        "products_TGWdpE"
+        "products_TGWdpE",
+        "products_CMEaG6"
       ],
       "settings": {
         "bg_color": "",

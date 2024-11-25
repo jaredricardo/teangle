@@ -5,6 +5,12 @@
     font-style: normal;
     font-display: swap;
 } */
+
+@font-face {
+  font-family: 'Cooper MBT';
+  src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CooperMdBTMedium.ttf?v=1732493441  ') format('truetype');
+}
+
 #chat-button { z-index: 1 !important; }
 html { scroll-behavior: smooth; }
 .omobile , 

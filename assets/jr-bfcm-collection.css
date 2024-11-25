@@ -1,0 +1,225 @@
+.jr-bfcm-collection {
+    overflow: hidden;
+}
+
+.jr-bfcm-collection .header-area {
+    padding: 50px 0;
+}
+
+.jr-bfcm-collection .header-area h2 {
+    font-family: Sofia Pro;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 27.6px;
+    text-align: center;
+    max-width: 870px;
+    margin: 0 auto;
+    color: black;
+    padding: 0 20px;
+}
+
+.jr-bfcm-collection .filter-area {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 20px;
+    margin-bottom: 75px;
+}
+
+.jr-bfcm-collection .filter {
+    text-transform: uppercase;
+    background-color: #F3DE7D;
+    color: #1F4745;
+    border-radius: 10px;
+    font-family: Sofia Pro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.4px;
+    letter-spacing: 0.21em;
+    text-align: center;
+    padding: 12px 20px 8px 20px; // extra padding top to account for the misaligned font baseline
+}
+
+.jr-bfcm-collection .filter:hover,
+.jr-bfcm-collection .filter.active {
+    background-color: #1E4845;
+    color: #FFFFFF;
+}
+
+.jr-bfcm-collection .filter.active:after {
+    display: none;
+}
+
+
+.jr-bfcm-collection .filter-area::-webkit-scrollbar,
+.jr-bfcm-collection .filter-area::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.jr-bfcm-collection .product-area-container.hidden {
+    display: none;
+}
+
+.jr-bfcm-collection .products-area {
+    padding: 50px 30px 75px 30px;
+    width: 100vw;
+}
+
+.jr-bfcm-collection .product-header-info {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.jr-bfcm-collection .product-header-info h3 {
+    font-family: 'Cooper MBT';
+    font-family: Cooper Lt BT;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    color: #1F4745;
+    margin: 0;
+}
+.jr-bfcm-collection .product-header-info h4 {
+    font-family: Sofia Pro;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    text-align: left;
+    color: #3B7D52;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.jr-bfcm-collection .product-header-description {
+    color: black;
+    font-family: Sofia Pro;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 27.6px;
+    text-align: left;
+    max-width: 1000px;
+    margin-bottom: 50px;
+}
+
+.jr-bfcm-collection .bfcm-product {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    background-color: #F6EFE1;
+    border-radius: 30px;
+    padding: 20px 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+.jr-bfcm-collection .okeReviews-reviewsSummary {
+    display: flex;
+    justify-content: center;
+}
+
+.jr-bfcm-collection .bfcm-product a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.jr-bfcm-collection .okeReviews-starRating-indicator-layer {
+    background-size: 62px 15px !important;
+    left: 8px !important;
+}
+
+.jr-bfcm-collection .okeReviews-reviewsSummary-ratingCount {
+    font-size: 12px;
+}
+
+.jr-bfcm-collection .okeReviews-reviewsSummary-ratingCount span {
+    white-space: nowrap;
+}
+
+.jr-bfcm-collection .bfcm-product img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.jr-bfcm-collection .swiper-button-lock {
+    display: block;
+}
+
+.jr-bfcm-collection .product-carousel-container {
+    margin-bottom: 75px;
+    position: relative;
+}
+
+.jr-bfcm-collection .swiper-button {
+    width: 60px;
+}
+
+.jr-bfcm-collection .swiper-button.swiper-button-prev {
+    left: -1.5%;
+}
+.jr-bfcm-collection .swiper-button.swiper-button-next {
+    right: -1.5%;
+}
+
+@media screen and (max-width: 761px) {
+    .jr-bfcm-collection .header-area {
+        padding: 30px 0;
+    }
+    
+    .jr-bfcm-collection .header-area h2 {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0 15px;
+    }
+    .jr-bfcm-collection .filter-area {
+        justify-content: start;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    .jr-bfcm-collection .filter {
+        font-size: 14px;
+        padding: 8px 14px 6px; 
+        white-space: nowrap;
+    }
+    .jr-bfcm-collection .products-area {
+        padding: 15px 0px 45px 15px;
+    }
+    .jr-bfcm-collection .product-carousel-container{
+        margin-bottom: 35px;
+    }
+    .jr-bfcm-collection .product-header-description {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .jr-bfcm-collection .product-header-info,
+    .jr-bfcm-collection .product-header-description {
+        padding-right: 15px;
+    }
+    .jr-bfcm-collection .product-header-info {
+        margin-bottom: 10px;
+    }
+    .jr-bfcm-collection .product-header-info h3 {
+        font-size: 20px;
+        white-space: nowrap;
+        font-weight: 700;
+    }
+    .jr-bfcm-collection .product-header-info h4 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .jr-bfcm-collection .swiper-button.swiper-button-prev,
+    .jr-bfcm-collection .swiper-button.swiper-button-next {
+        display: none;
+    }
+}
