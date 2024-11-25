@@ -1710,6 +1710,17 @@
           }
         }
       }
+    },
+    "order_details": {
+      "company": "Compagnie",
+      "discount": "Rabais appliqué",
+      "image_gallery": {
+        "load_more_items": {
+          "one": "Charger {{count}} articles en plus"
+        }
+      },
+      "no_data": "Aucune",
+      "paid_amount": "Payé"
     }
   }
 }
