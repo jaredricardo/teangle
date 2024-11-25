@@ -1040,6 +1040,16 @@
         "address_form": {
           "add_address": "Ajouter l'adresse"
         }
+      },
+      "pickup_point": {
+        "title": "Point de retrait",
+        "search_button": "Recherche",
+        "could_not_resolve_address": "Votre adresse n’a pas pu être localisée. Réessayez ou utilisez une autre adresse"
+      },
+      "notice_banner": {
+        "individual_violations_title": {
+          "DeliveryViolations": "Adresse de livraison"
+        }
       }
     },
     "pagination": {
