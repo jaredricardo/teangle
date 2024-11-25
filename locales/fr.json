@@ -76,7 +76,7 @@
         "first_name_label": "Prénom",
         "optional_first_name_label": "Prénom (optionnel)",
         "last_name_label": "Nom",
-        "company_label": "Entreprise",
+        "company_label": "Compagnie",
         "optional_company_label": "Entreprise (optionnel)",
         "address1_label": "Adresse",
         "address2_label": "Appartement, suite, etc.",
@@ -113,13 +113,14 @@
         "postcode_placeholder": "Code postal",
         "pincode_label": "Index postal",
         "pincode_placeholder": "Index postal",
-        "civic_number_warning": "Ajoutez un numéro de rue, le cas échéant"
+        "civic_number_warning": "Ajoutez un numéro de rue, le cas échéant",
+        "different_shipping_address_text": "Utiliser une adresse ponctuelle pour cette commande"
       },
       "delivery_options": {
         "free_total_label": "Gratuit",
         "ship": "Expédiez",
-        "shipping_address": "Adresse d'expédition",
-        "pick_up": "Récupérer",
+        "shipping_address": "Adresse de livraison",
+        "pick_up": "Retrait",
         "pick_up_locations": "Centres de retrait",
         "pick_up_in_one_hour": "Habituellement prête en 1 heure",
         "pick_up_in_two_hours": "Habituellement prête en 2 heures",
@@ -130,7 +131,8 @@
         "pick_up_in_zero_to_two_hours": "Prêt pour le ramassage dans 2 heures",
         "pick_up_in_two_to_four_hours": "Prêt pour le ramassage dans 4 heures",
         "pick_up_immediately": "Prêt pour le ramassage maintenant",
-        "pick_up_next_day": "Prêt pour le ramassage le jour suivant"
+        "pick_up_next_day": "Prêt pour le ramassage le jour suivant",
+        "pick_up_from_store": "Récupérer"
       },
       "customer_account": {
         "not_user_label": "Vous n'êtes pas %{first_name} ?",
