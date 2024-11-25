@@ -495,7 +495,8 @@
         "order_edit_banner_single_item_returned": "Retourné",
         "order_edit_banner_single_item_return_line_item_removed": "Supprimé du retour",
         "markets_pro_disclaimer_terms_and_conditions_title": "Conditions générales d’utilisation du Merchant of Record",
-        "markets_pro_disclaimer_privacy_policy_title": "Politique de confidentialité du Merchant of Record"
+        "markets_pro_disclaimer_privacy_policy_title": "Politique de confidentialité du Merchant of Record",
+        "payment_method": "Paiement"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "Solde actuel %{amount}",
@@ -1010,6 +1011,13 @@
       },
       "contextual_availability": {
         "unavailable_label": "Non disponible"
+      },
+      "billing": {
+        "edit": "Éditer",
+        "address_edit": "Éditer l'adresse",
+        "address_form": {
+          "add_address": "Ajouter l'adresse"
+        }
       }
     },
     "pagination": {
