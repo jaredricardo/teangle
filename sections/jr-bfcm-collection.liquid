@@ -86,14 +86,16 @@
                                                     <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
                                             {% endif %}
                                         </a>
-                                        {% render 'okendo-reviews-product-rating-summary', product: product %}
-                                        <h4>{{ product.title }}</h4>
-                                        {% comment %} extra serving or subheader callout metafield {% endcomment %}
-                                        <form action="/cart/add">
-                                            <input min="1" id="quantity" name="quantity" type="hidden" value="1">
-                                            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                                            <input type="submit" Value="{{ atc_text }}">
-                                        </form>
+                                        <div class="product-info">
+                                            {% render 'okendo-reviews-product-rating-summary', product: product %}
+                                            <h4>{{ product.title }}</h4>
+                                            <p>X servings</p>
+                                            <form action="/cart/add">
+                                                <input min="1" id="quantity" name="quantity" type="hidden" value="1">
+                                                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                                <input type="submit" Value="{{ atc_text }}">
+                                            </form>
+                                        </div>
                                     </div>
                                 {% endfor %}
                             </div>

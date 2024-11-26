@@ -25,7 +25,6 @@
     flex-direction: row;
     gap: 10px;
     padding: 0 20px;
-    margin-bottom: 75px;
 }
 
 .jr-bfcm-collection .filter {
@@ -104,19 +103,27 @@
     line-height: 27.6px;
     text-align: left;
     max-width: 1000px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .jr-bfcm-collection .bfcm-product {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     width: 100%;
     background-color: #F6EFE1;
     border-radius: 30px;
     padding: 20px 15px;
     text-align: center;
     justify-content: center;
+
+}
+.jr-bfcm-collection .product-carousel-container,
+.jr-bfcm-collection .bfcm-product,
+.jr-bfcm-collection .swiper-wrapper,
+.jr-bfcm-collection .swiper-horizontal {
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
 }
 
 .jr-bfcm-collection .okeReviews-reviewsSummary {
@@ -127,8 +134,10 @@
 .jr-bfcm-collection .bfcm-product a {
     display: flex;
     height: 100%;
+    max-height: max-content;
     width: 100%;
     margin-bottom: 10px;
+    align-items: start;
 }
 
 .jr-bfcm-collection .okeReviews-starRating-indicator-layer {
@@ -138,15 +147,19 @@
 
 .jr-bfcm-collection .okeReviews-reviewsSummary-ratingCount {
     font-size: 12px;
+    color: #3B7D52;
 }
 
 .jr-bfcm-collection .okeReviews-reviewsSummary-ratingCount span {
     white-space: nowrap;
+    color: #3B7D52;
 }
 
 .jr-bfcm-collection .bfcm-product img {
-    width: 70%;
+    max-width: 75%;
     margin: 0 auto;
+    object-fit: contain;
+    vertical-align: top;
 }
 
 .jr-bfcm-collection .swiper-button-lock {
@@ -163,10 +176,35 @@
 }
 
 .jr-bfcm-collection .swiper-button.swiper-button-prev {
-    left: -1.5%;
+    left: -2%;
 }
 .jr-bfcm-collection .swiper-button.swiper-button-next {
-    right: -1.5%;
+    right: -2%;
+}
+
+.jr-bfcm-collection .bfcm-product h4 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.jr-bfcm-collection .bfcm-product h4,
+.jr-bfcm-collection .bfcm-product p {
+    margin: 0;
+    color: #3B7D52;
+}
+
+.jr-bfcm-collection .bfcm-product p {
+    font-family: Sofia Pro;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13.8px;
+    text-align: center;
+}
+
+.jr-bfcm-collection .bfcm-product .product-info {
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 761px) {
