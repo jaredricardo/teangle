@@ -1,20 +1,129 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
+    },
+    "jr_bfcm_hero_Hz8YKi": {
+      "type": "jr-bfcm-hero",
+      "blocks": {
+        "sticker_6R3mLP": {
+          "type": "sticker",
+          "settings": {
+            "sticker_image": "shopify:\/\/shop_images\/Star.svg",
+            "sticker_rotation": 15,
+            "offset_right": 3,
+            "offset_bottom": 2,
+            "sticker_text_color": "#3b7d52",
+            "title": "up to 40% off",
+            "title_fr": "jusqu'à 40% de réduction"
+          }
+        },
+        "sticker_UKkmDM": {
+          "type": "sticker",
+          "disabled": true,
+          "settings": {
+            "sticker_image": "shopify:\/\/shop_images\/NewPalette-05_1.svg",
+            "sticker_rotation": 0,
+            "offset_right": 0,
+            "offset_bottom": 0,
+            "sticker_text_color": "#000000",
+            "title": "EN EN",
+            "title_fr": "FR FR"
+          }
+        }
+      },
+      "block_order": [
+        "sticker_6R3mLP",
+        "sticker_UKkmDM"
+      ],
+      "settings": {
+        "desktop_img": "shopify:\/\/shop_images\/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
+        "header_en": "Balance meets Boldness this Black Friday. Matcha deals to reclaim your spark.",
+        "header_fr": "L’équilibre rencontre l’audace ce vendredi noir. Offres Matcha pour récupérer votre étincelle.",
+        "text_color": "#ffffff"
+      }
+    },
+    "jr_bfcm_collection_FaLMrP": {
+      "type": "jr-bfcm-collection",
+      "blocks": {
+        "products_DBwRMP": {
+          "type": "products",
+          "settings": {
+            "product_list": [
+              "teangle-ginger-lemongrass-matcha-3-packs",
+              "matcha-chai",
+              "teangle-peppermint-matcha",
+              "matcha-collagen",
+              "ceremonial-matcha"
+            ],
+            "filter_button_text": "Teangle Teas",
+            "filter_button_text_fr": "Teangle Thés",
+            "product_section_header": "Teas",
+            "product_section_header_fr": "Thés",
+            "product_section_subheader": "Section subheader (en)",
+            "product_section_subheader_fr": "Section subheader (fr)",
+            "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
+            "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
+          }
+        },
+        "products_TGWdpE": {
+          "type": "products",
+          "settings": {
+            "product_list": [
+              "crewneck-hakuna-matchacha",
+              "matcha-mug-matchawaitingfor",
+              "luxe-bottle",
+              "matcha-bottle",
+              "matcha-spoon"
+            ],
+            "filter_button_text": "accessories",
+            "filter_button_text_fr": "accessoires",
+            "product_section_header": "Accessories",
+            "product_section_header_fr": "Accessoires",
+            "product_section_subheader": "Section subheader (en)",
+            "product_section_subheader_fr": "Section subheader (fr)",
+            "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
+            "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
+          }
+        },
+        "products_CMEaG6": {
+          "type": "products",
+          "settings": {
+            "product_list": [
+              "le-trio-magique",
+              "the-foursome",
+              "la-vida-verde",
+              "matcha-discovery-bundle"
+            ],
+            "filter_button_text": "Test Filter",
+            "filter_button_text_fr": "Test Filter FR",
+            "product_section_header": "Section Header (en)",
+            "product_section_header_fr": "Section Header (fr)",
+            "product_section_subheader": "Section subheader (en)",
+            "product_section_subheader_fr": "Section subheader (fr)",
+            "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
+            "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
+          }
+        }
+      },
+      "block_order": [
+        "products_DBwRMP",
+        "products_TGWdpE",
+        "products_CMEaG6"
+      ],
+      "settings": {
+        "bg_color": "",
+        "header": "Matcha, Reimagined. Experience the difference of all organic, high quality ingredients. Our blends are designed for flavor, focus, and a life you love.",
+        "header_fr": "Matcha, réinventé. Découvrez la différence de tous les ingrédients biologiques de haute qualité. Nos mélanges sont conçus pour la saveur, la concentration et une vie que vous aimez."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "jr_bfcm_hero_Hz8YKi",
+    "jr_bfcm_collection_FaLMrP"
   ]
 }

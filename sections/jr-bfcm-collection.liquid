@@ -1,0 +1,329 @@
+{{ 'jr-bfcm-collection.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+
+[data-section-id="{{ section.id }}" ] {
+    background-color: {{ section.settings.bg_color }};
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+{% endstyle %}
+
+{% liquid 
+
+    if request.locale.iso_code == 'en'
+            assign atc_text = 'Add to Cart'
+        else
+            assign atc_text = 'Ajouter au panier'
+    endif
+    
+
+-%}
+
+<div data-section-id="{{ section.id }}">
+    <div class="jr-bfcm-collection">
+        <div class="header-area">
+            {% if request.locale.iso_code == 'en' %}
+                <h2>{{ section.settings.header }}</h2>
+            {% else %}
+                <h2>{{ section.settings.header_fr }}</h2>
+            {% endif %}
+        </div>
+        <div class="filter-area">
+                <button class="filter" data-filter-index="reset">
+                    {% if request.locale.iso_code == 'en' %}
+                        All
+                        {% else %}
+                        Toutes
+                    {% endif %}
+                </button>
+            {% for block in section.blocks %}
+                <button class="filter" data-filter-index="{{ forloop.index }}">
+                    {% if request.locale.iso_code == 'en' %}
+                        {{ block.settings.filter_button_text }}
+                    {% else %}
+                        {{ block.settings.filter_button_text_fr }}
+                    {% endif %}
+                </button>
+            {% endfor %}
+        </div>
+        <div class="products-area">
+            {% for block in section.blocks %}
+                <div class="product-area-container"  data-filter-index="{{ forloop.index }}">
+                    <div class="product-header-info">
+                        <h3>
+                            {% if request.locale.iso_code == 'en' %}
+                                    {{ block.settings.product_section_header }}
+                                {% else %}
+                                    {{ block.settings.product_section_header_fr }}
+                            {% endif %}
+                        </h3>
+                        <h4>
+                            {% if request.locale.iso_code == 'en' %}
+                                {{ block.settings.product_section_subheader }}
+                            {% else %}
+                                {{ block.settings.product_section_subheader_fr }}
+                            {% endif %}
+                        </h4>
+                    </div>
+                    <p class="product-header-description">
+                        {% if request.locale.iso_code == 'en' %}
+                            {{ block.settings.section_description }}
+                        {% else %}
+                            {{ block.settings.section_description_fr }}
+                        {% endif %}
+                    </p>
+                    <div class="product-carousel-container">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <script>
+                                    console.log({{ block.settings.product_list | json }})
+                                </script>
+                                {% for product in block.settings.product_list %}
+                                    {% if product.available %}
+                                        <div class="swiper-slide bfcm-product">
+                                            {% comment %} callout 1 + 2 in english + fr metafield {% endcomment %}
+                                            <a class="image-container" href="{{ product.url }}">
+                                                {% if product.metafields.custom.bfcm_2024_alt_image %}
+                                                        <img src="{{ product.metafields.custom.bfcm_2024_alt_image | img_url: '300x300' }}" alt="{{ product.title }}">
+                                                    {% else %}
+                                                        <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
+                                                {% endif %}
+                                            </a>
+                                            <div class="product-info">
+                                                {% render 'okendo-reviews-product-rating-summary', product: product %}
+                                                <h4>{{ product.title }}</h4>
+                                                {% if product.metafields.custom.bfcm_servings %}
+                                                    <p>
+                                                        {% if request.locale_iso_code == 'en' %}
+                                                            {{ product.metafields.custom.bfcm_servings }} servings
+                                                        {% else %}
+                                                            {{ product.metafields.custom.bfcm_servings }} portions
+                                                        {% endif %}
+                                                    </p>
+                                                {% endif %}
+                                            </div>
+                                            <form action="/cart/add" method="post">
+                                                <input min="1" id="quantity" name="quantity" type="hidden" value="1">
+                                                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                                {% comment %} <input type="submit" class="hidden hidden-submit"> {% endcomment %}
+                                                <button class="bfcm-collection-atc" type="submit">
+                                                    <span class="atc-text">{{ atc_text }}</span>
+                                                    <span class="price-text">
+                                                        {% if product.compare_at_price > product.price %}
+                                                            <span class="strike">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+                                                        {% endif %}
+                                                        {{ product.price | money_without_trailing_zeros }}
+                                                    </span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev swiper-button" style="transform: rotate(180deg);">
+                            {% render 'icon-right' %}
+                        </div>
+                        <div class="swiper-button-next swiper-button">
+                            {% render 'icon-right' %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const section = document.querySelector('[data-section-id="{{ section.id }}"]')
+        const filterButtons = section.querySelectorAll('.filter')
+        const productContainers = section.querySelectorAll('.product-area-container')
+        const atcButtons = document.querySelectorAll('.bfcm-collection-atc')
+
+        window.addEventListener('click', (e) => {
+            console.log(e.target)
+        })
+
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', (e) => {
+
+                e.preventDefault()
+
+                filterButtons.forEach((button) => {
+                    button.classList.remove('active')
+                })
+
+                button.classList.add('active')
+
+       
+                if(button.dataset.filterIndex === "reset") {
+                    productContainers.forEach((container) => {
+                        container.classList.remove('hidden')
+                    })
+                } else {
+                    const filterIndex = button.dataset.filterIndex
+
+                    productContainers.forEach((container) => {
+
+                        container.dataset.filterIndex === filterIndex ? container.classList.remove('hidden') : container.classList.add('hidden')
+
+                    })
+                }
+
+
+            })
+        })
+
+        atcButtons.forEach((button) => {
+
+            button.addEventListener('click', () => {
+        
+                // button.closest('form').querySelector('.hidden-submit').click()
+                button.closest('form').classList.add('loading')
+                button.querySelector('.atc-text').classList.add('v-hidden')
+                button.querySelector('.price-text').classList.add('v-hidden')
+
+
+                window.setTimeout(() => {
+                    button.closest('form').classList.remove('loading')
+                    button.querySelector('.atc-text').classList.remove('v-hidden')
+                    button.querySelector('.price-text').classList.remove('v-hidden')
+                    // window.Rebuy.SmartCart.show()
+                }, 2500)
+            })
+
+
+        })
+
+        
+        productContainers.forEach((container) => {
+            const target = container.querySelector('.swiper')
+            const prev = container.querySelector('.swiper-button-prev')
+            const next = container.querySelector('.swiper-button-next')
+            const swiper = new Swiper(target, {
+            centeredSlides: false,
+            speed: 400,
+            spaceBetween: 10,
+            loop: true,
+            slidesPerView: 1.16,
+            breakpoints:{
+                551:{
+                    slidesPerView: 2
+                },
+                768:{
+                    slidesPerView: 3,
+                    spaceBetween: 15
+                },
+                1024:{
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            },
+            navigation: {
+                nextEl: next,
+                prevEl: prev
+            },
+        })
+        })
+
+    })
+</script>
+
+{% schema %}
+{
+    "name": "JR BFCM Collection",
+    "limit": 1,
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background Color",
+            "default": "#FFFFFF"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Header (EN)"
+        },
+        {
+            "type": "text",
+            "id": "header_fr",
+            "label": "Header (FR)"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "products",
+            "name": "Product List Block",
+            "settings": [
+                {
+                    "type": "header",
+                    "content": "Usage Information:",
+                    "info": "If you need to use an alt image in place of the default product image, there is a metafield at the product level called 'bfcm_alt_image' where you can upload an alt image. Additionally, there are also three other optional fields at the product metafield level: 'bfcm_product_callout_one', 'bfcm_product_callout_two', and 'bfcm_product_subheader'. The first two are used to populate the extra callouts above each product, and the third is used to populate a subheader below the product title."
+                },
+                {
+                    "type": "product_list",
+                    "id": "product_list",
+                    "label": "Product List"
+                },
+                {
+                    "type": "text",
+                    "id": "filter_button_text",
+                    "label": "filter button text (EN)"
+                },
+                {
+                    "type": "text",
+                    "id": "filter_button_text_fr",
+                    "label": "filter button text (FR)"
+                },
+                {
+                    "type": "text",
+                    "id": "product_section_header",
+                    "label": "Product Section Header (EN)",
+                    "default": "Section Header (en)"
+                },
+                {
+                    "type": "text",
+                    "id": "product_section_header_fr",
+                    "label": "Product Section Header (FR)",
+                    "default": "Section Header (fr)"
+                },
+                {
+                    "type": "text",
+                    "id": "product_section_subheader",
+                    "label": "Product Section Subheader (EN)",
+                    "default": "Section subheader (en)"
+                },
+                {
+                    "type": "text",
+                    "id": "product_section_subheader_fr",
+                    "label": "Product Section Subheader (FR)",
+                    "default": "Section subheader (fr)"
+                },
+                {
+                    "type": "textarea",
+                    "id": "section_description",
+                    "label": "Section Description (EN)",
+                    "default": "Section Description (en)"
+                },
+                {
+                    "type": "textarea",
+                    "id": "section_description_fr",
+                    "label": "Section Description (FR)",
+                    "default": "Section Description (fr)"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "JR BFCM Collection"
+            
+        }
+    ]
+}
+{% endschema %}
