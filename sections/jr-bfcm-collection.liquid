@@ -17,6 +17,7 @@
         else
             assign atc_text = 'Ajouter au panier'
     endif
+    
 
 -%}
 
@@ -76,27 +77,49 @@
                     <div class="product-carousel-container">
                         <div class="swiper">
                             <div class="swiper-wrapper">
+                                <script>
+                                    console.log({{ block.settings.product_list | json }})
+                                </script>
                                 {% for product in block.settings.product_list %}
-                                    <div class="swiper-slide bfcm-product">
-                                        {% comment %} callout 1 + 2 in english + fr metafield {% endcomment %}
-                                        <a class="image-container" href="{{ product.url }}">
-                                            {% if product.metafields.custom.bfcm_alt_image %}
-                                                    <img src="{{ product.metafields.custom.bfcm_alt_image | img_url: '300x300' }}" alt="{{ product.title }}">
-                                                {% else %}
-                                                    <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
-                                            {% endif %}
-                                        </a>
-                                        <div class="product-info">
-                                            {% render 'okendo-reviews-product-rating-summary', product: product %}
-                                            <h4>{{ product.title }}</h4>
-                                            <p>X servings</p>
-                                            <form action="/cart/add">
+                                    {% if product.available %}
+                                        <div class="swiper-slide bfcm-product">
+                                            {% comment %} callout 1 + 2 in english + fr metafield {% endcomment %}
+                                            <a class="image-container" href="{{ product.url }}">
+                                                {% if product.metafields.custom.bfcm_2024_alt_image %}
+                                                        <img src="{{ product.metafields.custom.bfcm_2024_alt_image | img_url: '300x300' }}" alt="{{ product.title }}">
+                                                    {% else %}
+                                                        <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
+                                                {% endif %}
+                                            </a>
+                                            <div class="product-info">
+                                                {% render 'okendo-reviews-product-rating-summary', product: product %}
+                                                <h4>{{ product.title }}</h4>
+                                                {% if product.metafields.custom.bfcm_servings %}
+                                                    <p>
+                                                        {% if request.locale_iso_code == 'en' %}
+                                                            {{ product.metafields.custom.bfcm_servings }} servings
+                                                        {% else %}
+                                                            {{ product.metafields.custom.bfcm_servings }} portions
+                                                        {% endif %}
+                                                    </p>
+                                                {% endif %}
+                                            </div>
+                                            <form action="/cart/add" method="post">
                                                 <input min="1" id="quantity" name="quantity" type="hidden" value="1">
                                                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                                                <input type="submit" Value="{{ atc_text }}">
+                                                {% comment %} <input type="submit" class="hidden hidden-submit"> {% endcomment %}
+                                                <button class="bfcm-collection-atc" type="submit">
+                                                    <span class="atc-text">{{ atc_text }}</span>
+                                                    <span class="price-text">
+                                                        {% if product.compare_at_price > product.price %}
+                                                            <span class="strike">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+                                                        {% endif %}
+                                                        {{ product.price | money_without_trailing_zeros }}
+                                                    </span>
+                                                </button>
                                             </form>
                                         </div>
-                                    </div>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
                         </div>
@@ -119,6 +142,11 @@
         const section = document.querySelector('[data-section-id="{{ section.id }}"]')
         const filterButtons = section.querySelectorAll('.filter')
         const productContainers = section.querySelectorAll('.product-area-container')
+        const atcButtons = document.querySelectorAll('.bfcm-collection-atc')
+
+        window.addEventListener('click', (e) => {
+            console.log(e.target)
+        })
 
         filterButtons.forEach((button) => {
             button.addEventListener('click', (e) => {
@@ -150,7 +178,33 @@
             })
         })
 
-        const swiper = new Swiper('[data-section-id="{{ section.id }}"] .swiper', {
+        atcButtons.forEach((button) => {
+
+            button.addEventListener('click', () => {
+        
+                // button.closest('form').querySelector('.hidden-submit').click()
+                button.closest('form').classList.add('loading')
+                button.querySelector('.atc-text').classList.add('v-hidden')
+                button.querySelector('.price-text').classList.add('v-hidden')
+
+
+                window.setTimeout(() => {
+                    button.closest('form').classList.remove('loading')
+                    button.querySelector('.atc-text').classList.remove('v-hidden')
+                    button.querySelector('.price-text').classList.remove('v-hidden')
+                    // window.Rebuy.SmartCart.show()
+                }, 2500)
+            })
+
+
+        })
+
+        
+        productContainers.forEach((container) => {
+            const target = container.querySelector('.swiper')
+            const prev = container.querySelector('.swiper-button-prev')
+            const next = container.querySelector('.swiper-button-next')
+            const swiper = new Swiper(target, {
             centeredSlides: false,
             speed: 400,
             spaceBetween: 10,
@@ -170,11 +224,11 @@
                 }
             },
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: next,
+                prevEl: prev
             },
         })
-
+        })
 
     })
 </script>

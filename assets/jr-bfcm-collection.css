@@ -114,7 +114,7 @@
     border-radius: 30px;
     padding: 20px 15px;
     text-align: center;
-    justify-content: center;
+    justify-content: space: between;;
 
 }
 .jr-bfcm-collection .product-carousel-container,
@@ -205,6 +205,58 @@
 .jr-bfcm-collection .bfcm-product .product-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.jr-bfcm-collection .hidden {
+    display: none;
+}
+
+.jr-bfcm-collection form { 
+    width: 100%;
+    padding-top: 10px;
+    margin: auto auto 0 auto;
+    max-width: 250px;
+    position: relative;
+}
+
+.jr-bfcm-collection .loading:before,
+.jr-bfcm-collection .loading:after {
+    top: 60% !important;
+}
+
+.jr-bfcm-collection .price-text {
+    display: flex; 
+    gap: 5px;
+}
+
+.jr-bfcm-collection .atc-text.v-hidden,
+.jr-bfcm-collection .price-text.v-hidden {
+    visibility: hidden;
+}
+
+.jr-bfcm-collection .bfcm-collection-atc {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1f4745;
+    color: #deefbe;
+    font-size: 16px;
+    padding: 6px 10px 4px;
+    border-radius: 28px;
+    width: 100%;
+    font-weight: 800;
+    max-width: 250px;
+    z-index: 10;
+    position: relative;
+}
+
+.jr-bfcm-collection .bfcm-collection-atc:hover {
+    opacity: 0.75;
+}
+
+.jr-bfcm-collection .strike {
+    text-decoration: line-through;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 761px) {
