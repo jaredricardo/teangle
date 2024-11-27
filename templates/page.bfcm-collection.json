@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -11,7 +20,7 @@
         "sticker_6R3mLP": {
           "type": "sticker",
           "settings": {
-            "sticker_image": "shopify:\/\/shop_images\/Star.svg",
+            "sticker_image": "shopify://shop_images/Star.svg",
             "sticker_rotation": 15,
             "offset_right": 3,
             "offset_bottom": 2,
@@ -23,7 +32,7 @@
         "sticker_CiGtEp": {
           "type": "sticker",
           "settings": {
-            "sticker_image": "shopify:\/\/shop_images\/JoieDeVivre_1.svg",
+            "sticker_image": "shopify://shop_images/JoieDeVivre_1.svg",
             "sticker_rotation": 11,
             "offset_right": 8,
             "offset_bottom": -8,
@@ -38,10 +47,10 @@
         "sticker_CiGtEp"
       ],
       "settings": {
-        "desktop_img": "shopify:\/\/shop_images\/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
-        "mobile_img": "shopify:\/\/shop_images\/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
-        "header_en": "Balance meets Boldness this Black Friday. Matcha deals to reclaim your spark.",
-        "header_fr": "L’équilibre rencontre l’audace ce vendredi noir. Offres Matcha pour récupérer votre étincelle.",
+        "desktop_img": "shopify://shop_images/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
+        "mobile_img": "shopify://shop_images/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
+        "header_en": "Black Friday Vip Event!",
+        "header_fr": "Soirée VIP Black Friday",
         "text_color": "#ffffff"
       }
     },
