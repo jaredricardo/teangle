@@ -79,34 +79,34 @@
                                 {% for product in block.settings.product_list %}
                                     {% if product.available %}
                                         <div class="swiper-slide bfcm-product">
-
-                                            {% if product.metafields.custom.bfcm_extra_info_1_en != blank and request.locale.iso_code == 'en' %}
-                                                <span class="extra-cta cta-one">
-                                                    {{ product.metafields.custom.bfcm_extra_info_1_en }}
-                                                </span>
-                                            {% endif %}
-
-                                            {% if product.metafields.custom.bfcm_extra_info_2_en != blank and request.locale.iso_code == 'en' %}
-                                                <span class="extra-cta cta-two">
-                                                    {{ product.metafields.custom.bfcm_extra_info_2_en }}
-                                                </span>
-                                            {% endif %}
-
-                                            {% if product.metafields.custom.bfcm_extra_info_1_fr and request.locale.iso_code == 'fr' %}
-                                                <span class="extra-cta cta-one">
-                                                    {{ product.metafields.custom.bfcm_extra_info_1_fr }}
-                                                </span>
-                                            {% endif %}
-
-                                            {% if product.metafields.custom.bfcm_extra_info_2_fr and request.locale.iso_code == 'fr' %}
-                                                <span class="extra-cta cta-two">
-                                                    {{ product.metafields.custom.bfcm_extra_info_2_fr }}
-                                                </span>
-                                            {% endif %}
-                                        
+                                            <div class="extra-ctas">
+                                                {% if product.metafields.custom.bfcm_extra_info_1_en != blank and request.locale.iso_code == 'en' %}
+                                                    <span class="extra-cta cta-one">
+                                                        {{ product.metafields.custom.bfcm_extra_info_1_en }}
+                                                    </span>
+                                                {% endif %}
+    
+                                                {% if product.metafields.custom.bfcm_extra_info_2_en != blank and request.locale.iso_code == 'en' %}
+                                                    <span class="extra-cta cta-two">
+                                                        {{ product.metafields.custom.bfcm_extra_info_2_en }}
+                                                    </span>
+                                                {% endif %}
+    
+                                                {% if product.metafields.custom.bfcm_extra_info_1_fr and request.locale.iso_code == 'fr' %}
+                                                    <span class="extra-cta cta-one">
+                                                        {{ product.metafields.custom.bfcm_extra_info_1_fr }}
+                                                    </span>
+                                                {% endif %}
+    
+                                                {% if product.metafields.custom.bfcm_extra_info_2_fr and request.locale.iso_code == 'fr' %}
+                                                    <span class="extra-cta cta-two">
+                                                        {{ product.metafields.custom.bfcm_extra_info_2_fr }}
+                                                    </span>
+                                                {% endif %}  
+                                            </div>
                                             <a class="image-container" href="{{ product.url }}">
-                                                {% if product.metafields.custom.bfcm_2024_alt_image %}
-                                                        <img src="{{ product.metafields.custom.bfcm_2024_alt_image | img_url: '300x300' }}" alt="{{ product.title }}">
+                                                {% if product.metafields.custom.bfcm_alt_image %}
+                                                        <img src="{{ product.metafields.custom.bfcm_alt_image | img_url: '300x300' }}" alt="{{ product.title }}">
                                                     {% else %}
                                                         <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}">
                                                 {% endif %}
@@ -127,8 +127,9 @@
                                             <form action="/cart/add" method="post">
                                                 <input min="1" id="quantity" name="quantity" type="hidden" value="1">
                                                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                                                {% comment %} <input type="submit" class="hidden hidden-submit"> {% endcomment %}
-                                                <button class="bfcm-collection-atc" type="submit">
+                                                
+                                                {% comment %} turned off and just linking out for now {% endcomment %}
+                                                {% comment %} <button class="bfcm-collection-atc" type="submit">
                                                     <span class="atc-text">{{ atc_text }}</span>
                                                     <span class="price-text">
                                                         {% if product.compare_at_price > product.price %}
@@ -136,7 +137,17 @@
                                                         {% endif %}
                                                         {{ product.price | money_without_trailing_zeros }}
                                                     </span>
-                                                </button>
+                                                </button> {% endcomment %}
+
+                                                <a href="{{ product.url }}" class="bfcm-collection-atc">
+                                                    <span class="atc-text">{{ atc_text }}</span>
+                                                    <span class="price-text">
+                                                        {% if product.compare_at_price > product.price %}
+                                                            <span class="strike">{{ product.compare_at_price | money_without_trailing_zeros }}</span>
+                                                        {% endif %}
+                                                        {{ product.price | money_without_trailing_zeros }}
+                                                    </span>
+                                                </a>
                                             </form>
                                         </div>
                                     {% endif %}
@@ -162,7 +173,7 @@
         const section = document.querySelector('[data-section-id="{{ section.id }}"]')
         const filterButtons = section.querySelectorAll('.filter')
         const productContainers = section.querySelectorAll('.product-area-container')
-        const atcButtons = document.querySelectorAll('.bfcm-collection-atc')
+        // const atcButtons = document.querySelectorAll('.bfcm-collection-atc')
 
         window.addEventListener('click', (e) => {
             console.log(e.target)
@@ -198,44 +209,44 @@
             })
         })
 
-        atcButtons.forEach((button) => {
+        // atcButtons.forEach((button) => {
 
-            button.addEventListener('click', async () => {
+        //     button.addEventListener('click', async () => {
 
-                button.closest('form').classList.add('loading')
-                button.querySelector('.atc-text').classList.add('v-hidden')
-                button.querySelector('.price-text').classList.add('v-hidden')
+        //         button.closest('form').classList.add('loading')
+        //         button.querySelector('.atc-text').classList.add('v-hidden')
+        //         button.querySelector('.price-text').classList.add('v-hidden')
 
-                let formData  = {
-                    'id': button.closest('form').querySelector('input[name="id"]').value,
-                    'quantity': 1
-                }
+        //         let formData  = {
+        //             'id': button.closest('form').querySelector('input[name="id"]').value,
+        //             'quantity': 1
+        //         }
 
-                try {
-                    const response = await fetch(window.Shopify.routes.root + 'cart/add.js', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)
-                    })
-                    if (response.ok) {
-                        window.Rebuy.SmartCart.show()
-                    }
-                    // const data = await response.json()
-                    // return data
-                } catch (error) {
-                    alert('Sorry, something went wrong when adding to cart.')
-                    console.error('Error:', error)
-                }
-                finally {
-                    button.closest('form').classList.remove('loading')
-                    button.querySelector('.atc-text').classList.remove('v-hidden')
-                    button.querySelector('.price-text').classList.remove('v-hidden')
-                }
-            })
+        //         try {
+        //             const response = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+        //                 method: 'POST',
+        //                 headers: {
+        //                     'Content-Type': 'application/json'
+        //                 },
+        //                 body: JSON.stringify(formData)
+        //             })
+        //             if (response.ok) {
+        //                 window.Rebuy.SmartCart.show()
+        //             }
+        //             // const data = await response.json()
+        //             // return data
+        //         } catch (error) {
+        //             alert('Sorry, something went wrong when adding to cart.')
+        //             console.error('Error:', error)
+        //         }
+        //         finally {
+        //             button.closest('form').classList.remove('loading')
+        //             button.querySelector('.atc-text').classList.remove('v-hidden')
+        //             button.querySelector('.price-text').classList.remove('v-hidden')
+        //         }
+        //     })
 
-        })
+        // })
                 
         productContainers.forEach((container) => {
             const target = container.querySelector('.swiper')
@@ -246,7 +257,7 @@
             speed: 400,
             spaceBetween: 10,
             loop: true,
-            slidesPerView: 1.16,
+            slidesPerView: 1.6,
             breakpoints:{
                 551:{
                     slidesPerView: 2
