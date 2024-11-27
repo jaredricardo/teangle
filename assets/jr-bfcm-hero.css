@@ -39,6 +39,18 @@
     position: relative;
 }
 
+.jr-hp-hero.jr-bfcm-hero .sticker img {
+    min-width: 180px;
+}
+
+.jr-hp-hero.jr-bfcm-hero .sticker-container:nth-of-type(1) p {
+    font-size: 36px;
+}
+
+.jr-hp-hero.jr-bfcm-hero .sticker-container:nth-of-type(2) p{
+    font-size: 26px;
+}
+
 .jr-hp-hero.jr-bfcm-hero .sticker p {
     position: absolute;
     top: 50%;
@@ -46,9 +58,8 @@
     transform: translate(-50%, -50%);  
     text-align: center;
     font-family: Sofia Pro;
-    font-size: 32px;
     font-weight: 800;
-    line-height: 33px;
+    line-height: 1;
     text-transform: uppercase;
     width: 80%;
     margin: 0;
@@ -69,10 +80,18 @@
     }
     .jr-hp-hero.jr-bfcm-hero .sticker img {
         width: 85px;
+        max-width: 85px;
+        min-width: unset;
     }
     .jr-hp-hero.jr-bfcm-hero .sticker p {
-        font-size: 14px;
         line-height: 1.15;
         top: 46%;
+    }
+    .jr-hp-hero.jr-bfcm-hero .sticker-container:nth-of-type(1) p {
+        font-size: 16px;
+    }
+    
+    .jr-hp-hero.jr-bfcm-hero .sticker-container:nth-of-type(2) p{
+        font-size: 12px;
     }
 }

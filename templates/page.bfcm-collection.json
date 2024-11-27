@@ -20,23 +20,22 @@
             "title_fr": "jusqu'à 40% de réduction"
           }
         },
-        "sticker_UKkmDM": {
+        "sticker_CiGtEp": {
           "type": "sticker",
-          "disabled": true,
           "settings": {
-            "sticker_image": "shopify:\/\/shop_images\/NewPalette-05_1.svg",
-            "sticker_rotation": 0,
-            "offset_right": 0,
-            "offset_bottom": 0,
-            "sticker_text_color": "#000000",
-            "title": "EN EN",
-            "title_fr": "FR FR"
+            "sticker_image": "shopify:\/\/shop_images\/JoieDeVivre_1.svg",
+            "sticker_rotation": 11,
+            "offset_right": 8,
+            "offset_bottom": -8,
+            "sticker_text_color": "#fffbf7",
+            "title": "Joy of living",
+            "title_fr": "joie de vivre"
           }
         }
       },
       "block_order": [
         "sticker_6R3mLP",
-        "sticker_UKkmDM"
+        "sticker_CiGtEp"
       ],
       "settings": {
         "desktop_img": "shopify:\/\/shop_images\/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
