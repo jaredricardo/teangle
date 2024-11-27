@@ -19,11 +19,10 @@
         {% for block in section.blocks %}
             <div class="sticker-container" style="right: {{ block.settings.offset_right }}%; bottom: {{ block.settings.offset_bottom }}%;">
                 <div class="sticker" style="transform:rotate({{ block.settings.sticker_rotation }}deg);">
-                    <img src="{{ block.settings.sticker_image |  img_url: 'master' }}" alt="Sticker image" class="sticker-image">
                     {% if request.locale.iso_code == 'en' %}
-                            <p style="color: {{ block.settings.sticker_text_color }};">{{ block.settings.title }}</p>
+                            <img src="{{ block.settings.sticker_image |  img_url: 'master' }}" alt="Sticker image" class="sticker-image">
                         {% else %}
-                            <p style="color: {{ block.settings.sticker_text_color }};">{{ block.settings.title_fr }}</p>
+                            <img src="{{ block.settings.sticker_image_fr |  img_url: 'master' }}" alt="Sticker image" class="sticker-image">
                     {% endif %}
                 </div>
             </div>
@@ -80,7 +79,12 @@
                 {
                     "type": "image_picker",
                     "id": "sticker_image",
-                    "label": "Sticker Image"
+                    "label": "Sticker Image (en)"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "sticker_image_fr",
+                    "label": "Sticker Image (fr)"
                 },
                 {
                     "type": "number",
@@ -99,22 +103,6 @@
                     "id": "offset_bottom",
                     "label": "Sticker distance bottom (%)",
                     "default": 0
-                },
-                {
-                    "type": "color",
-                    "id": "sticker_text_color",
-                    "label": "Sticker Text Color",
-                    "default": "#000000"
-                },
-                {
-                    "type": "text",
-                    "id": "title",
-                    "label": "Text atop sticker (en)"
-                },
-                {
-                    "type": "text",
-                    "id": "title_fr",
-                    "label": "Text atop sticker (fr)"
                 }
             ]
         }
