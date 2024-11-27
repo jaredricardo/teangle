@@ -18,7 +18,6 @@
             assign atc_text = 'Ajouter au panier'
     endif
     
-
 -%}
 
 <div data-section-id="{{ section.id }}">
@@ -77,13 +76,34 @@
                     <div class="product-carousel-container">
                         <div class="swiper">
                             <div class="swiper-wrapper">
-                                <script>
-                                    console.log({{ block.settings.product_list | json }})
-                                </script>
                                 {% for product in block.settings.product_list %}
                                     {% if product.available %}
                                         <div class="swiper-slide bfcm-product">
-                                            {% comment %} callout 1 + 2 in english + fr metafield {% endcomment %}
+
+                                            {% if product.metafields.custom.bfcm_extra_info_1_en != blank and request.locale.iso_code == 'en' %}
+                                                <span class="extra-cta cta-one">
+                                                    {{ product.metafields.custom.bfcm_extra_info_1_en }}
+                                                </span>
+                                            {% endif %}
+
+                                            {% if product.metafields.custom.bfcm_extra_info_2_en != blank and request.locale.iso_code == 'en' %}
+                                                <span class="extra-cta cta-two">
+                                                    {{ product.metafields.custom.bfcm_extra_info_2_en }}
+                                                </span>
+                                            {% endif %}
+
+                                            {% if product.metafields.custom.bfcm_extra_info_1_fr and request.locale.iso_code == 'fr' %}
+                                                <span class="extra-cta cta-one">
+                                                    {{ product.metafields.custom.bfcm_extra_info_1_fr }}
+                                                </span>
+                                            {% endif %}
+
+                                            {% if product.metafields.custom.bfcm_extra_info_2_fr and request.locale.iso_code == 'fr' %}
+                                                <span class="extra-cta cta-two">
+                                                    {{ product.metafields.custom.bfcm_extra_info_2_fr }}
+                                                </span>
+                                            {% endif %}
+                                        
                                             <a class="image-container" href="{{ product.url }}">
                                                 {% if product.metafields.custom.bfcm_2024_alt_image %}
                                                         <img src="{{ product.metafields.custom.bfcm_2024_alt_image | img_url: '300x300' }}" alt="{{ product.title }}">
@@ -96,7 +116,7 @@
                                                 <h4>{{ product.title }}</h4>
                                                 {% if product.metafields.custom.bfcm_servings %}
                                                     <p>
-                                                        {% if request.locale_iso_code == 'en' %}
+                                                        {% if request.locale.iso_code == 'en' %}
                                                             {{ product.metafields.custom.bfcm_servings }} servings
                                                         {% else %}
                                                             {{ product.metafields.custom.bfcm_servings }} portions
@@ -180,26 +200,43 @@
 
         atcButtons.forEach((button) => {
 
-            button.addEventListener('click', () => {
-        
-                // button.closest('form').querySelector('.hidden-submit').click()
+            button.addEventListener('click', async () => {
+
                 button.closest('form').classList.add('loading')
                 button.querySelector('.atc-text').classList.add('v-hidden')
                 button.querySelector('.price-text').classList.add('v-hidden')
 
+                let formData  = {
+                    'id': button.closest('form').querySelector('input[name="id"]').value,
+                    'quantity': 1
+                }
 
-                window.setTimeout(() => {
+                try {
+                    const response = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                    if (response.ok) {
+                        window.Rebuy.SmartCart.show()
+                    }
+                    // const data = await response.json()
+                    // return data
+                } catch (error) {
+                    alert('Sorry, something went wrong when adding to cart.')
+                    console.error('Error:', error)
+                }
+                finally {
                     button.closest('form').classList.remove('loading')
                     button.querySelector('.atc-text').classList.remove('v-hidden')
                     button.querySelector('.price-text').classList.remove('v-hidden')
-                    // window.Rebuy.SmartCart.show()
-                }, 2500)
+                }
             })
 
-
         })
-
-        
+                
         productContainers.forEach((container) => {
             const target = container.querySelector('.swiper')
             const prev = container.querySelector('.swiper-button-prev')
