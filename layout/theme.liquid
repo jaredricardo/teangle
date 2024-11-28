@@ -2,10 +2,7 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
 <head>
   {% if product.metafields.custom.custom_redirect != blank %}
-  <script>
-    function redirectToPath(newPath) { window.location.href = newPath;  } 
-    redirectToPath('{{ product.metafields.custom.custom_redirect }}');
-  </script>
+  <script> window.location.href = '{{ product.metafields.custom.custom_redirect }}'; </script>
  {% endif %}
   
   {% render 'skio-head' %}
