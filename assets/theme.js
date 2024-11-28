@@ -8619,7 +8619,7 @@ function attributeToString(attribute) {
  
 document.addEventListener('variant:change', function(evt) {
   let varxId = evt.detail.variant.id;
-  rechargeVariants(varxId);
+  //rechargeVariants(varxId);
 });
 // function rechargeVariants(varx) {
 //   function rcWidgetOff() {
