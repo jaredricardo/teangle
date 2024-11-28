@@ -93,15 +93,22 @@
         "products_GHnMfC": {
           "type": "products",
           "settings": {
-            "product_list": [],
-            "filter_button_text": "",
-            "filter_button_text_fr": "",
-            "product_section_header": "Section Header (en)",
-            "product_section_header_fr": "Section Header (fr)",
-            "product_section_subheader": "Section subheader (en)",
-            "product_section_subheader_fr": "Section subheader (fr)",
-            "section_description": "Section Description (en)",
-            "section_description_fr": "Section Description (fr)"
+            "product_list": [
+              "casquette-matcha-for-your-soul",
+              "t-shirt-matcha-for-your-soul",
+              "luxe-bottle",
+              "matcha-mug-matchawaitingfor",
+              "matcha-spoon",
+              "matcha-bottle"
+            ],
+            "filter_button_text": "Accessories",
+            "filter_button_text_fr": "Accessoires",
+            "product_section_header": "Accessories",
+            "product_section_header_fr": "Accessoires",
+            "product_section_subheader": "Teangle Essentials",
+            "product_section_subheader_fr": "Les essentiels Teangle",
+            "section_description": "Cute and practical add-ons",
+            "section_description_fr": "Des accessoires adorables et pratiques"
           }
         },
         "products_CMEaG6": {
