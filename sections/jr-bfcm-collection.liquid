@@ -153,6 +153,7 @@
                                     {% endif %}
                                 {% endfor %}
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                         <div class="swiper-button-prev swiper-button" style="transform: rotate(180deg);">
                             {% render 'icon-right' %}
@@ -174,10 +175,6 @@
         const filterButtons = section.querySelectorAll('.filter')
         const productContainers = section.querySelectorAll('.product-area-container')
         // const atcButtons = document.querySelectorAll('.bfcm-collection-atc')
-
-        window.addEventListener('click', (e) => {
-            console.log(e.target)
-        })
 
         filterButtons.forEach((button) => {
             button.addEventListener('click', (e) => {
@@ -249,15 +246,18 @@
         // })
                 
         productContainers.forEach((container) => {
+            const numBlocks = container.querySelectorAll('.swiper-slide').length
             const target = container.querySelector('.swiper')
             const prev = container.querySelector('.swiper-button-prev')
             const next = container.querySelector('.swiper-button-next')
+            const pagination = container.querySelector('.swiper-pagination')
             const swiper = new Swiper(target, {
             centeredSlides: false,
             speed: 400,
             spaceBetween: 10,
             loop: true,
             slidesPerView: 1.6,
+            loopFillGroupWithBlank: true,
             breakpoints:{
                 551:{
                     slidesPerView: 2
@@ -275,10 +275,17 @@
                 nextEl: next,
                 prevEl: prev
             },
+            pagination: {
+                    el: pagination,
+                    clickable: true
+            },
         })
-        })
-
+        if(numBlocks < 2) {
+            container.querySelector('.swiper-button-next').classList.add('hidden')
+            container.querySelector('.swiper-button-prev').classList.add('hidden')
+        }
     })
+})
 </script>
 
 {% schema %}
