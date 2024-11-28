@@ -2,6 +2,7 @@
   "sections": {
     "ff04fe8e-3989-4e29-be10-2b3919db90ac": {
       "type": "jr-hp-hero",
+      "disabled": true,
       "settings": {
         "bg_color": "#f1e0d6",
         "desktop_img": "shopify:\/\/shop_images\/Matcha_Collagen_3_Banner_1.jpg",
@@ -12,6 +13,23 @@
         "stars_img": "shopify:\/\/shop_images\/stars.svg",
         "button_text": "Try Now",
         "button_link": "shopify:\/\/products\/matcha-collagen"
+      }
+    },
+    "jr_hp_hero_L6V6WV": {
+      "type": "jr-hp-hero",
+      "custom_css": [
+        ".section-header {color: white;}",
+        "@media screen and (max-width: 768px) {.content-container {position: absolute; top: 15%; justify-content: start; } .section-header {line-height: 1.2; }}"
+      ],
+      "settings": {
+        "bg_color": "",
+        "desktop_img": "shopify:\/\/shop_images\/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
+        "header": "Shop our Black Friday Sale",
+        "subheader": "",
+        "stars_text": "",
+        "button_text": "Shop Now",
+        "button_link": "shopify:\/\/pages\/bfcm-collection"
       }
     },
     "0c582d46-3982-4a95-81b4-dc9d778d38ff": {
@@ -486,6 +504,7 @@
   },
   "order": [
     "ff04fe8e-3989-4e29-be10-2b3919db90ac",
+    "jr_hp_hero_L6V6WV",
     "0c582d46-3982-4a95-81b4-dc9d778d38ff",
     "f58c934a-8820-4f57-a70a-9fb8089b5b96",
     "replo_as_seen_in_mPMPkQ",

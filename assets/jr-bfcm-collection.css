@@ -300,6 +300,14 @@
     right: 6%;
 }
 
+.jr-bfcm-collection .swiper-pagination {
+    display: none;
+    bottom: -7px;
+}
+.jr-bfcm-collection .swiper-pagination-bullet-active {
+    background-color: #1F4745;
+}
+
 @media screen and (max-width: 761px) {
     .jr-bfcm-collection .header-area {
         padding: 30px 0;
@@ -364,6 +372,9 @@
     }
     .jr-bfcm-collection .bfcm-product {
         padding: 15px 10px;
+    }
+    .jr-bfcm-collection .swiper-pagination {
+        display: block;
     }
 }
 
