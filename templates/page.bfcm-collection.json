@@ -20,8 +20,8 @@
         "sticker_6R3mLP": {
           "type": "sticker",
           "settings": {
-            "sticker_image": "shopify:\/\/shop_images\/Frame_5.svg",
-            "sticker_image_fr": "shopify:\/\/shop_images\/Frame_6.svg",
+            "sticker_image": "shopify://shop_images/Frame_5.svg",
+            "sticker_image_fr": "shopify://shop_images/Frame_6.svg",
             "sticker_rotation": 11,
             "offset_right": 3,
             "offset_bottom": -5
@@ -30,8 +30,8 @@
         "sticker_CiGtEp": {
           "type": "sticker",
           "settings": {
-            "sticker_image": "shopify:\/\/shop_images\/Stickers_JoieDeVivre_c8f1e70b-40fc-44d7-b95f-31a7495d820e.svg",
-            "sticker_image_fr": "shopify:\/\/shop_images\/Stickers_JoieDeVivre_2b2ba49f-621c-4bdc-b9c7-1b8d56c61efa.svg",
+            "sticker_image": "shopify://shop_images/Stickers_JoieDeVivre_c8f1e70b-40fc-44d7-b95f-31a7495d820e.svg",
+            "sticker_image_fr": "shopify://shop_images/Stickers_JoieDeVivre_2b2ba49f-621c-4bdc-b9c7-1b8d56c61efa.svg",
             "sticker_rotation": 11,
             "offset_right": 8,
             "offset_bottom": -8
@@ -43,8 +43,8 @@
         "sticker_CiGtEp"
       ],
       "settings": {
-        "desktop_img": "shopify:\/\/shop_images\/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
-        "mobile_img": "shopify:\/\/shop_images\/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
+        "desktop_img": "shopify://shop_images/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
+        "mobile_img": "shopify://shop_images/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
         "header_en": "Black Friday Vip Event!",
         "header_fr": "Soirée VIP Black Friday",
         "text_color": "#ffffff"
@@ -90,27 +90,6 @@
             "section_description_fr": "Tout ce dont vous avez besoin pour la meilleure expérience Teangle !"
           }
         },
-        "products_GHnMfC": {
-          "type": "products",
-          "settings": {
-            "product_list": [
-              "casquette-matcha-for-your-soul",
-              "t-shirt-matcha-for-your-soul",
-              "luxe-bottle",
-              "matcha-mug-matchawaitingfor",
-              "matcha-spoon",
-              "matcha-bottle"
-            ],
-            "filter_button_text": "Accessories",
-            "filter_button_text_fr": "Accessoires",
-            "product_section_header": "Accessories",
-            "product_section_header_fr": "Accessoires",
-            "product_section_subheader": "Teangle Essentials",
-            "product_section_subheader_fr": "Les essentiels Teangle",
-            "section_description": "Cute and practical add-ons",
-            "section_description_fr": "Des accessoires adorables et pratiques"
-          }
-        },
         "products_CMEaG6": {
           "type": "products",
           "settings": {
@@ -138,19 +117,40 @@
             "filter_button_text_fr": "Matcha+",
             "product_section_header": "Matcha+",
             "product_section_header_fr": "Matcha+",
-            "product_section_subheader": "Section subheader (en)",
-            "product_section_subheader_fr": "Section subheader (fr)",
-            "section_description": "Section Description (en)",
-            "section_description_fr": "Section Description (fr)"
+            "product_section_subheader": "Up to 40% Off",
+            "product_section_subheader_fr": "Jusqu'à 40% de rabais",
+            "section_description": "Our best selling matcha bags",
+            "section_description_fr": "Notre matcha signature et cérémonial"
+          }
+        },
+        "products_GHnMfC": {
+          "type": "products",
+          "settings": {
+            "product_list": [
+              "casquette-matcha-for-your-soul",
+              "t-shirt-matcha-for-your-soul",
+              "luxe-bottle",
+              "matcha-mug-matchawaitingfor",
+              "matcha-spoon",
+              "matcha-bottle"
+            ],
+            "filter_button_text": "Accessories",
+            "filter_button_text_fr": "Accessoires",
+            "product_section_header": "Accessories",
+            "product_section_header_fr": "Accessoires",
+            "product_section_subheader": "Teangle Essentials",
+            "product_section_subheader_fr": "Les essentiels Teangle",
+            "section_description": "Cute and practical add-ons",
+            "section_description_fr": "Des accessoires adorables et pratiques"
           }
         }
       },
       "block_order": [
         "products_TGWdpE",
         "products_DBwRMP",
-        "products_GHnMfC",
         "products_CMEaG6",
-        "products_7VrPLG"
+        "products_7VrPLG",
+        "products_GHnMfC"
       ],
       "settings": {
         "bg_color": "",
