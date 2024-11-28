@@ -77,20 +77,18 @@
           "type": "products",
           "settings": {
             "product_list": [
-              "crewneck-hakuna-matchacha",
-              "matcha-mug-matchawaitingfor",
-              "luxe-bottle",
-              "matcha-bottle",
-              "matcha-spoon"
+              "teangle-matcha-collagen-6-tubs",
+              "healthy-delicious-matcha-6-month-plan",
+              "teangle-ceremonial-matcha-6-month-plan"
             ],
-            "filter_button_text": "accessories",
-            "filter_button_text_fr": "accessoires",
-            "product_section_header": "Accessories",
-            "product_section_header_fr": "Accessoires",
-            "product_section_subheader": "Section subheader (en)",
-            "product_section_subheader_fr": "Section subheader (fr)",
-            "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
-            "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
+            "filter_button_text": "VIP OFFERS",
+            "filter_button_text_fr": "OFFRES VIP",
+            "product_section_header": "VIP OFFERS",
+            "product_section_header_fr": "OFFRES VIP",
+            "product_section_subheader": "Stock up & Save",
+            "product_section_subheader_fr": "Faites des réserves et économisez",
+            "section_description": "You won't ever see these deals again, Stock up on your matcha faves!",
+            "section_description_fr": "Vous ne reverrez plus jamais ces offres, faites le plein de vos matchas préférés !"
           }
         },
         "products_CMEaG6": {
