@@ -2,7 +2,6 @@
   "sections": {
     "ff04fe8e-3989-4e29-be10-2b3919db90ac": {
       "type": "jr-hp-hero",
-      "disabled": true,
       "settings": {
         "bg_color": "#f1e0d6",
         "desktop_img": "shopify:\/\/shop_images\/Matcha_Collagen_3_Banner_1.jpg",
@@ -17,6 +16,7 @@
     },
     "jr_hp_hero_L6V6WV": {
       "type": "jr-hp-hero",
+      "disabled": true,
       "custom_css": [
         ".section-header {color: white;}",
         "@media screen and (max-width: 768px) {.content-container {position: absolute; top: 15%; justify-content: start; } .section-header {line-height: 1.2; }}"

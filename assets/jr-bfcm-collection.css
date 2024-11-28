@@ -118,6 +118,7 @@
     position: relative;
 
 }
+
 .jr-bfcm-collection .product-carousel-container,
 .jr-bfcm-collection .bfcm-product,
 .jr-bfcm-collection .swiper-wrapper,
@@ -129,6 +130,8 @@
 
 .jr-bfcm-collection .swiper {
     padding: 20px 0;
+    height: 100%;
+    width: 100%;
 }
 
 .jr-bfcm-collection .okeReviews-reviewsSummary {

@@ -176,10 +176,6 @@
         const productContainers = section.querySelectorAll('.product-area-container')
         // const atcButtons = document.querySelectorAll('.bfcm-collection-atc')
 
-        window.addEventListener('click', (e) => {
-            console.log(e.target)
-        })
-
         filterButtons.forEach((button) => {
             button.addEventListener('click', (e) => {
 
@@ -250,6 +246,7 @@
         // })
                 
         productContainers.forEach((container) => {
+            const numBlocks = container.querySelectorAll('.swiper-slide').length
             const target = container.querySelector('.swiper')
             const prev = container.querySelector('.swiper-button-prev')
             const next = container.querySelector('.swiper-button-next')
@@ -260,6 +257,7 @@
             spaceBetween: 10,
             loop: true,
             slidesPerView: 1.6,
+            loopFillGroupWithBlank: true,
             breakpoints:{
                 551:{
                     slidesPerView: 2
@@ -282,9 +280,12 @@
                     clickable: true
             },
         })
-        })
-
+        if(numBlocks < 2) {
+            container.querySelector('.swiper-button-next').classList.add('hidden')
+            container.querySelector('.swiper-button-prev').classList.add('hidden')
+        }
     })
+})
 </script>
 
 {% schema %}
