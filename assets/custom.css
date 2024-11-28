@@ -12,7 +12,7 @@
 }
 
 a.site-nav__link[href="/pages/bfcm-collection"] {
-  color:rgb(209, 155, 113);
+  color:rgb(209, 155, 113) !important;
 }
 
 #chat-button { z-index: 1 !important; }
