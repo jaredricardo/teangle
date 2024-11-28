@@ -63,14 +63,14 @@
               "matcha-collagen",
               "ceremonial-matcha"
             ],
-            "filter_button_text": "Teangle Teas",
-            "filter_button_text_fr": "Teangle Thés",
-            "product_section_header": "Teas",
-            "product_section_header_fr": "Thés",
-            "product_section_subheader": "Section subheader (en)",
-            "product_section_subheader_fr": "Section subheader (fr)",
-            "section_description": "(EN) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus.",
-            "section_description_fr": "(FR) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lacus id venenatis commodo, dui ligula faucibus mauris, at tempus."
+            "filter_button_text": "Bundles",
+            "filter_button_text_fr": "Ensembles",
+            "product_section_header": "Bundles",
+            "product_section_header_fr": "Ensembles",
+            "product_section_subheader": "Up to 40% off",
+            "product_section_subheader_fr": "Jusqu'à 40% de rabais",
+            "section_description": "Everything you need for the best matcha experience!",
+            "section_description_fr": "Tout ce dont vous avez besoin pour la meilleure expérience matcha !"
           }
         },
         "products_TGWdpE": {
