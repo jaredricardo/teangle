@@ -78,7 +78,7 @@ Arguments
       assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
     -%}
 
-    <a href="{% if product.metafields.custom.custom_redirect != blank %} {{ product.metafields.custom.custom_redirect }} {% else %}{{ product.url }}{% endif %}" class="grid-product__link">
+    <a href="{% if product.metafields.custom.custom_redirect != blank %}{{ product.metafields.custom.custom_redirect }} {% else %}{{ product.url }}{% endif %}" class="grid-product__link">
       <div class="grid-product__image-mask">
         {%- if quick_shop_enable -%}
           <div class="quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide">
