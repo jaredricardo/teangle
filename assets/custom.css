@@ -11,7 +11,7 @@
   src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CooperMdBTMedium.ttf?v=1732493441  ') format('truetype');
 }
 
-a[href="/pages/bfcm-collection"] {
+a.site-nav__link[href="/pages/bfcm-collection"] {
   color:rgb(209, 155, 113);
 }
 
