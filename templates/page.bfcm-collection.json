@@ -57,9 +57,9 @@
           "type": "products",
           "settings": {
             "product_list": [
+              "teangle-matcha-collagen-6-tubs",
               "healthy-delicious-matcha-6-month-plan",
-              "teangle-ceremonial-matcha-6-month-plan",
-              "teangle-matcha-collagen-6-tubs"
+              "teangle-ceremonial-matcha-6-month-plan"
             ],
             "filter_button_text": "VIP OFFERS",
             "filter_button_text_fr": "OFFRES VIP",
@@ -69,6 +69,20 @@
             "product_section_subheader_fr": "Faites des réserves et économisez",
             "section_description": "Stock up on your matcha faves!",
             "section_description_fr": "Vous ne reverrez plus jamais ces offres, faites le plein de vos matchas préférés !"
+          }
+        },
+        "products_LiKdyk": {
+          "type": "products",
+          "settings": {
+            "product_list": [],
+            "filter_button_text": "",
+            "filter_button_text_fr": "",
+            "product_section_header": "Section Header (en)",
+            "product_section_header_fr": "Section Header (fr)",
+            "product_section_subheader": "Section subheader (en)",
+            "product_section_subheader_fr": "Section subheader (fr)",
+            "section_description": "Section Description (en)",
+            "section_description_fr": "Section Description (fr)"
           }
         },
         "products_DBwRMP": {
@@ -147,6 +161,7 @@
       },
       "block_order": [
         "products_TGWdpE",
+        "products_LiKdyk",
         "products_DBwRMP",
         "products_CMEaG6",
         "products_7VrPLG",
