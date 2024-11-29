@@ -33,9 +33,9 @@
           "settings": {
             "form_id": "product-form-{{section.id}}",
             "start_onetime": "false",
-            "onetime_first": "true",
-            "default_subscription": "",
-            "group_border_radius": 5,
+            "onetime_first": "false",
+            "default_subscription": "6 months",
+            "group_border_radius": 3,
             "group_border_shadow": true,
             "group_border_selected_color": "#000000",
             "onetime_title": "One Time",
