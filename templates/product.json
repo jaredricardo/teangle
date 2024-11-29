@@ -43,26 +43,6 @@
             "code": "<!-- LINE ITEMS METAFIELD -->\n\n\n      {% if product.metafields.general_fields.line_items != blank %}\n        <div class=\"gbl_line_items\"  >\n          {{ product.metafields.general_fields.line_items }}\n        </div>\n      {% endif %}\n\n\n    <!-- LINE ITEMS METAFIELD END HERE -->\n\n\n<!-- BFCM LINE ITEMS METAFIELD -->\n\n\n      {% if product.metafields.bfcm.bf2022 != blank %}\n       <style>\n.product-single__form  { display: none !important; }\n</style>\n      {% endif %}\n\n\n    <!-- BFCM LINE ITEMS METAFIELD END HERE -->"
           }
         },
-        "skio_subscriptions_yc_s20_app_block_UpLAML": {
-          "type": "shopify://apps/skio-subscriptions-yc-s20/blocks/app-block/de50f7a4-0bb0-4d4c-84e2-c03dce83436d",
-          "settings": {
-            "form_id": "product-form-{{section.id}}",
-            "start_onetime": "false",
-            "onetime_first": "false",
-            "default_subscription": "",
-            "group_border_radius": 5,
-            "group_border_shadow": true,
-            "group_border_selected_color": "#000",
-            "onetime_title": "One Time",
-            "subscription_title": "Subscribe",
-            "prepaid_title": "Prepaid",
-            "discount_format": "percent",
-            "discount_style": "bubble",
-            "discount_prefix": "Save",
-            "discount_suffix": "",
-            "discount_color": "#0fa573"
-          }
-        },
         "74d50b9f-7435-429e-b976-9f5b6180d353": {
           "type": "buy_buttons",
           "settings": {
@@ -133,7 +113,6 @@
         "7cd9b1ce-895f-4cb9-8e86-a5524e0b0723",
         "variant_picker",
         "12319ff3-c565-4037-baf2-7945b1bcc1a0",
-        "skio_subscriptions_yc_s20_app_block_UpLAML",
         "74d50b9f-7435-429e-b976-9f5b6180d353",
         "6b975a6e-ee43-4c8d-9a17-2a267fa8846d",
         "41b407f9-34d3-432b-9b11-a5d8592b960e",
