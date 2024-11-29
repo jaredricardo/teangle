@@ -188,6 +188,7 @@
         "e1303077-15e0-4ed0-9660-735d2e924b4a",
         "16673e34-9d09-40c3-be1e-3070ff19cd77"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "space_around": false
