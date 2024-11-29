@@ -57,9 +57,9 @@
           "type": "products",
           "settings": {
             "product_list": [
-              "healthy-delicious-matcha-6-month-plan",
               "teangle-matcha-collagen-6-month-plan",
-              "teangle-ceremonial-matcha-6-month-plan-1"
+              "teangle-ceremonial-matcha-6-month-plan-1",
+              "healthy-delicious-matcha-6-month-plan-1"
             ],
             "filter_button_text": "VIP OFFERS",
             "filter_button_text_fr": "OFFRES VIP",
