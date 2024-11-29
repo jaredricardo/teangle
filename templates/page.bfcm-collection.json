@@ -73,6 +73,7 @@
         },
         "products_LiKdyk": {
           "type": "products",
+          "disabled": true,
           "settings": {
             "product_list": [],
             "filter_button_text": "",
