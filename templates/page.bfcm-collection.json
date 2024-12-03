@@ -19,6 +19,7 @@
       "blocks": {
         "sticker_6R3mLP": {
           "type": "sticker",
+          "disabled": true,
           "settings": {
             "sticker_image": "shopify://shop_images/Frame_5.svg",
             "sticker_image_fr": "shopify://shop_images/Frame_6.svg",
@@ -29,6 +30,7 @@
         },
         "sticker_CiGtEp": {
           "type": "sticker",
+          "disabled": true,
           "settings": {
             "sticker_image": "shopify://shop_images/Stickers_JoieDeVivre_c8f1e70b-40fc-44d7-b95f-31a7495d820e.svg",
             "sticker_image_fr": "shopify://shop_images/Stickers_JoieDeVivre_2b2ba49f-621c-4bdc-b9c7-1b8d56c61efa.svg",
@@ -43,7 +45,7 @@
         "sticker_CiGtEp"
       ],
       "settings": {
-        "desktop_img": "shopify://shop_images/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
+        "desktop_img": "shopify://shop_images/Teangle0256_2.jpg",
         "mobile_img": "shopify://shop_images/Teangle0256_2.jpg",
         "header_en": "",
         "header_fr": "",
@@ -55,6 +57,7 @@
       "blocks": {
         "products_TGWdpE": {
           "type": "products",
+          "disabled": true,
           "settings": {
             "product_list": [
               "teangle-matcha-collagen-6-month-plan",
