@@ -145,11 +145,11 @@
           "type": "products",
           "settings": {
             "product_list": [
-              "casquette-matcha-for-your-soul",
-              "t-shirt-matcha-for-your-soul",
               "luxe-bottle",
               "matcha-mug-matchawaitingfor",
               "matcha-spoon",
+              "casquette-matcha-for-your-soul",
+              "t-shirt-matcha-for-your-soul",
               "matcha-bottle"
             ],
             "filter_button_text": "Accessories",
