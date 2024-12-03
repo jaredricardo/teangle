@@ -44,9 +44,9 @@
       ],
       "settings": {
         "desktop_img": "shopify://shop_images/Teangle0145_3bb91fc6-73d2-4684-8069-4d74521ffaab.jpg",
-        "mobile_img": "shopify://shop_images/Teangle0145_f61a6901-eda9-4f59-af25-e184e9c4ecad.jpg",
-        "header_en": "Black Friday!",
-        "header_fr": "Black Friday!",
+        "mobile_img": "shopify://shop_images/Teangle0256_2.jpg",
+        "header_en": "",
+        "header_fr": "",
         "text_color": "#ffffff"
       }
     },
