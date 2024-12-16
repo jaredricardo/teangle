@@ -42,6 +42,18 @@
         scrolling-text .announcement--wrapper{
             max-width: none;
         }
+
+        {% if section.settings.align_icons_row %}
+         [data-section-id="{{ section.id }}"] .announcement--wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          }
+          .announcement--icon {
+            width: 50px;
+          }
+        {% endif %}
         
     </style>
 
@@ -141,6 +153,12 @@
       "max": 300,
       "step": 10,
       "default": 60
+    },
+    {
+      "type": "checkbox",
+      "id": "align_icons_row",
+      "label": "Align img icons in row instead of stacked",
+      "default": false
     }
   ],
   "blocks": [
