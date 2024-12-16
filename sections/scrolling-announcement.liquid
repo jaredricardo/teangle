@@ -17,11 +17,11 @@
         .announcement--root[data-section-id="{{ section.id }}"] a.announcement--link:hover {
             --color--alternative: #fff;
         }
-        scrolling-text{
+        [data-section-id="{{ section.id }}"] scrolling-text{
             display: flex;
             padding: {{ section.settings.padding_y }}px 0;
         }
-        .announcement--text {
+        [data-section-id="{{ section.id }}"]  .announcement--text {
             color: {{ section.settings.color }};
             line-height: 1;
         }
@@ -35,7 +35,7 @@
             font-weight: bold;
         }
 
-        .announcement__item {
+        [data-section-id="{{ section.id }}"] .announcement__item {
             margin: 0 {{ section.settings.text_margin }}px;
         }
 
@@ -50,21 +50,25 @@
             align-items: center;
             gap: 10px;
           }
-          .announcement--icon {
-            width: 50px;
-          }
         {% endif %}
+
+        [data-section-id="{{ section.id }}"] .announcement--icon img {
+           width: 100%;
+        }
+        [data-section-id="{{ section.id }}"] .announcement--icon {
+          width: {{ section.settings.icon_max_width }}px;
+        }
         
     </style>
 
     <div
-            class="announcement--root"
-            data-section-id="{{ section.id }}"
-            data-section-type="announcement"
-            data-js-class="IndexAnnouncement"
-            data-alternative-color="{{ section.settings.alternative-color }}"
-            role="region"
-            aria-label="Discount banner"
+      class="announcement--root"
+      data-section-id="{{ section.id }}"
+      data-section-type="announcement"
+      data-js-class="IndexAnnouncement"
+      data-alternative-color="{{ section.settings.alternative-color }}"
+      role="region"
+      aria-label="Discount banner"
     >
         {% if section.settings.enabled and show_on_page %}
             <scrolling-text  data-scrolling-speed="{{ section.settings.speed }}" data-scrolling-direction="ltr" data-pause-on-hover="false" dir="ltr">
@@ -116,10 +120,16 @@
       "default": true
     },
     {
-        "type": "number",
-         "id": "padding_y",
-         "label": "Top / Bottom padding",
-         "default": 10
+      "type": "number",
+      "id": "icon_max_width",
+      "label": "Icon max width",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_y",
+      "label": "Top / Bottom padding",
+      "default": 10
     },
     {
       "type": "checkbox",
