@@ -61,6 +61,37 @@
         
     </style>
 
+
+    {% if section.settings.append_as_sticky_header %}
+      <style>
+
+        [data-section-id="{{ section.id }}"].announcement--root--sticky {
+          display: none;
+        }
+        .site-header--stuck [data-section-id="{{ section.id }}"].announcement--root--sticky {
+          display: block;
+        } 
+        .site-header {
+          padding-top: 0 !important;
+        }
+      </style>
+      <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const target = document.querySelector('#SiteHeader');
+            const originalElement = document.querySelector('[data-section-id="{{ section.id }}"].announcement--root')
+
+            if (target && originalElement) {
+ 
+                const clonedElement = originalElement.cloneNode(true)
+                clonedElement.classList.add('announcement--root--sticky')
+
+            
+                target.insertBefore(clonedElement, target.firstChild)
+            }
+        })
+      </script>
+    {% endif %}
+
     <div
       class="announcement--root"
       data-section-id="{{ section.id }}"
@@ -107,6 +138,12 @@
 {
   "name": "Announcement bar",
   "settings": [
+    {
+      "type":"checkbox",
+      "id": "append_as_sticky_header",
+      "label": "Append as sticky header (ONLY USE FOR ONE SCROLL SECTION ON PAGE)",
+      "default": false
+    },
     {
       "type": "number",
       "id": "text_margin",

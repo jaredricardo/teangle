@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "current": {
     "color_body_bg": "#fffbf7",
@@ -71,21 +62,21 @@
     "cart_additional_buttons": false,
     "cart_notes_enable": false,
     "cart_terms_conditions_enable": false,
-    "social_facebook_link": "https://www.facebook.com/teanglematcha/",
-    "social_pinterest_link": "https://www.pinterest.com/teangle/",
-    "social_instagram_link": "https://www.instagram.com/teanglematcha/",
-    "social_tiktok_link": "https://www.tiktok.com/@teangle",
-    "social_youtube_link": "https://www.youtube.com/channel/UC19pk9nercDN0W8ZFdUjXqw",
+    "social_facebook_link": "https:\/\/www.facebook.com\/teanglematcha\/",
+    "social_pinterest_link": "https:\/\/www.pinterest.com\/teangle\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/teanglematcha\/",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@teangle",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UC19pk9nercDN0W8ZFdUjXqw",
     "social_vimeo_link": "",
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
-    "favicon": "shopify://shop_images/teangle_fr_favicon.png",
+    "favicon": "shopify:\/\/shop_images\/teangle_fr_favicon.png",
     "search_enable": true,
     "search_type": "product,article",
     "show_breadcrumbs": true,
     "show_breadcrumbs_collection_link": false,
-    "checkout_logo_image": "shopify://shop_images/logo1.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo1.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#ffffff",
@@ -110,15 +101,15 @@
           "610aad82-47d4-4ffb-aa5b-1c33b87be65b": {
             "type": "announcement",
             "settings": {
-              "text": "Free Shipping on Orders $60+ <u>SHOP NOW</u>",
+              "text": "Free Shipping on Orders $60+ <u>SHOP NOW<\/u>",
               "link_text": "",
-              "link": "/collections/matcha-signature-teangle"
+              "link": "\/collections\/matcha-signature-teangle"
             }
           },
           "b16b902e-93c1-4190-b7bb-c19b09205957": {
             "type": "announcement",
             "settings": {
-              "text": "Need Help?  <u>Speak with our Team</u>",
+              "text": "Need Help?  <u>Speak with our Team<\/u>",
               "link_text": "",
               "link": "tel:18003166320"
             }
@@ -126,90 +117,90 @@
           "34df6dfd-a60d-441c-b53d-d3c042cc9001": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/Group_1484580834_1.webp",
+              "mega_image": "shopify:\/\/shop_images\/Group_1484580834_1.webp",
               "mega_title": "Matcha+",
-              "mega_text": "<p>Most Popular</p>",
-              "mega_url": "shopify://pages/new-pdp-2",
+              "mega_text": "<p>Most Popular<\/p>",
+              "mega_url": "shopify:\/\/pages\/new-pdp-2",
               "mega_assignment": 1
             }
           },
           "93d74be2-73aa-40c8-b76e-86293feeb870": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/COLLAGEN_440x_035b4f05-dcbb-4f3e-a14f-4bccb59e0654.webp",
+              "mega_image": "shopify:\/\/shop_images\/COLLAGEN_440x_035b4f05-dcbb-4f3e-a14f-4bccb59e0654.webp",
               "mega_title": "Matcha Collagen",
-              "mega_text": "<p>Matcha and Collagen for your self-care routine</p>",
-              "mega_url": "shopify://collections/matcha-collagene",
+              "mega_text": "<p>Matcha and Collagen for your self-care routine<\/p>",
+              "mega_url": "shopify:\/\/collections\/matcha-collagene",
               "mega_assignment": 1
             }
           },
           "691b79fa-3a88-4a9c-9e7c-3ec249ff8bde": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/CEREMONIAL_440x_d3599a7d-ec10-40c7-be2e-9602cd9eaa90.webp",
+              "mega_image": "shopify:\/\/shop_images\/CEREMONIAL_440x_d3599a7d-ec10-40c7-be2e-9602cd9eaa90.webp",
               "mega_title": "Ceremonial Matcha",
-              "mega_text": "<p>Classic matcha as it is traditionally enjoyed.</p>",
-              "mega_url": "shopify://products/ceremonial-matcha",
+              "mega_text": "<p>Classic matcha as it is traditionally enjoyed.<\/p>",
+              "mega_url": "shopify:\/\/products\/ceremonial-matcha",
               "mega_assignment": 1
             }
           },
           "90264629-791f-47c5-9888-eb9203eded82": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/Luxe_Bottle_Supernova_-_Square.png",
+              "mega_image": "shopify:\/\/shop_images\/Luxe_Bottle_Supernova_-_Square.png",
               "mega_title": "Luxe Bottle",
-              "mega_text": "<p>Perfect for your active lifestyle! </p>",
-              "mega_url": "shopify://products/luxe-bottle",
+              "mega_text": "<p>Perfect for your active lifestyle! <\/p>",
+              "mega_url": "shopify:\/\/products\/luxe-bottle",
               "mega_assignment": 3
             }
           },
           "b4967b17-aef8-42f9-9e09-62f32943f1e5": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/teangle-matcha-396b_dd2e5385-567e-4035-8634-2339ef75f353.jpg",
+              "mega_image": "shopify:\/\/shop_images\/teangle-matcha-396b_dd2e5385-567e-4035-8634-2339ef75f353.jpg",
               "mega_title": "Matcha Spoon",
-              "mega_text": "<p>The perfect companion to your matcha regime.</p>",
-              "mega_url": "shopify://products/matcha-spoon",
+              "mega_text": "<p>The perfect companion to your matcha regime.<\/p>",
+              "mega_url": "shopify:\/\/products\/matcha-spoon",
               "mega_assignment": 3
             }
           },
           "38075c7c-fc5f-4bf9-99e8-01e87a41bf75": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/Untitled_design_11.png",
+              "mega_image": "shopify:\/\/shop_images\/Untitled_design_11.png",
               "mega_title": "Matcha Tumbler",
-              "mega_text": "<p>Take your matcha game on the move.</p>",
-              "mega_url": "shopify://products/free-teangle-matchawaitingfor-tumbler",
+              "mega_text": "<p>Take your matcha game on the move.<\/p>",
+              "mega_url": "shopify:\/\/products\/free-teangle-matchawaitingfor-tumbler",
               "mega_assignment": 3
             }
           },
           "ce94ea53-449f-4245-9084-ba666caf1383": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/Untitled_design_10.png",
+              "mega_image": "shopify:\/\/shop_images\/Untitled_design_10.png",
               "mega_title": "Our Story",
-              "mega_text": "<p>Learn about our mission & purpose.</p>",
-              "mega_url": "shopify://pages/about-teangle",
+              "mega_text": "<p>Learn about our mission & purpose.<\/p>",
+              "mega_url": "shopify:\/\/pages\/about-teangle",
               "mega_assignment": 2
             }
           },
           "cc6fd8bb-e5ab-40f0-bfe8-ae016b131c91": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/4-recipes-03_1024x1024_90761ff5-9c3d-45a6-a231-994554d837de.webp",
+              "mega_image": "shopify:\/\/shop_images\/4-recipes-03_1024x1024_90761ff5-9c3d-45a6-a231-994554d837de.webp",
               "mega_title": "Recipes",
-              "mega_text": "<p>From matcha drinks to desserts & snacks.</p>",
-              "mega_url": "shopify://blogs/recipes",
+              "mega_text": "<p>From matcha drinks to desserts & snacks.<\/p>",
+              "mega_url": "shopify:\/\/blogs\/recipes",
               "mega_assignment": 2
             }
           },
           "b1675e8e-b71c-442b-b94c-c693aabac8e5": {
             "type": "mega",
             "settings": {
-              "mega_image": "shopify://shop_images/teangle-matcha-392b_d632980b-c1a5-4908-b4ca-87508fff5cad.jpg",
+              "mega_image": "shopify:\/\/shop_images\/teangle-matcha-392b_d632980b-c1a5-4908-b4ca-87508fff5cad.jpg",
               "mega_title": "Blog",
-              "mega_text": "<p>Incorporate matcha and easy-living in your life.</p>",
-              "mega_url": "shopify://blogs/matcha",
+              "mega_text": "<p>Incorporate matcha and easy-living in your life.<\/p>",
+              "mega_url": "shopify:\/\/blogs\/matcha",
               "mega_assignment": 2
             }
           }
@@ -277,7 +268,7 @@
             "settings": {
               "show_footer_title": true,
               "title": "HOW CAN WE HELP?",
-              "text": "<p>If you have questions, testimonials or suggestions to improve our products and services, feel free to contact us.</p>",
+              "text": "<p>If you have questions, testimonials or suggestions to improve our products and services, feel free to contact us.<\/p>",
               "container_width": 40
             }
           }
@@ -304,7 +295,7 @@
           "popup_seconds": 2,
           "popup_days": 30,
           "popup_title": "Inscris-toi et économise",
-          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>",
+          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
           "close_text": "No thanks",
           "enable_newsletter": true,
           "button_label": "Optional button",
@@ -331,7 +322,7 @@
         "type": "footer-newsletter",
         "settings": {
           "newsletter_text": "Sign up to get instant VIP access to special deals, New Arrivals and more!",
-          "klaviyo_form": "<div class=\"klaviyo-form-Rkbw8x\"></div>"
+          "klaviyo_form": "<div class=\"klaviyo-form-Rkbw8x\"><\/div>"
         }
       },
       "scrolling-announcement": {
@@ -403,53 +394,56 @@
           "text_8wTJ6W"
         ],
         "settings": {
+          "append_as_sticky_header": true,
           "text_margin": 120,
           "enabled": true,
+          "icon_max_width": 50,
           "padding_y": 10,
           "home-page-only": false,
           "bg_color": "#becdbe",
           "color": "#000000",
           "alternative-color": true,
-          "speed": 60
+          "speed": 60,
+          "align_icons_row": false
         }
       }
     },
     "content_for_index": [],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       },
       "733389323033596483": {
-        "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
         "disabled": false,
         "settings": {
           "show_preview_data": true
         }
       },
       "17676059084223943535": {
-        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
         "settings": {}
       },
       "3868600829136772411": {
-        "type": "shopify://apps/lyve-video-marketing-chat/blocks/app-embed/59c1ba16-2c38-422a-a2a9-23074d5a3fd9",
+        "type": "shopify:\/\/apps\/lyve-video-marketing-chat\/blocks\/app-embed\/59c1ba16-2c38-422a-a2a9-23074d5a3fd9",
         "disabled": false,
         "settings": {}
       },
       "10840395464443086010": {
-        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
+        "type": "shopify:\/\/apps\/alia\/blocks\/customer-app-frame\/51f1d398-3e41-44da-b81e-defd5804b292",
         "disabled": false,
         "settings": {}
       },
       "15685250022964305326": {
-        "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
+        "type": "shopify:\/\/apps\/elevar-conversion-tracking\/blocks\/dataLayerEmbed\/bc30ab68-b15c-4311-811f-8ef485877ad6",
         "disabled": false,
         "settings": {}
       },
       "14818028230436078177": {
-        "type": "shopify://apps/langify/blocks/langify/b50c2edb-8c63-4e36-9e7c-a7fdd62ddb8f",
+        "type": "shopify:\/\/apps\/langify\/blocks\/langify\/b50c2edb-8c63-4e36-9e7c-a7fdd62ddb8f",
         "disabled": false,
         "settings": {
           "theme_id": "125742579794",
@@ -703,7 +697,7 @@
               "settings": {
                 "text": "Free shipping",
                 "link_text": "On all orders over $100",
-                "link": "shopify://collections/all"
+                "link": "shopify:\/\/collections\/all"
               }
             },
             "1520888647304": {
@@ -711,7 +705,7 @@
               "settings": {
                 "text": "Hassle-free returns",
                 "link_text": "30-day postage paid returns",
-                "link": "shopify://collections/all"
+                "link": "shopify:\/\/collections\/all"
               }
             }
           },
@@ -752,7 +746,7 @@
               "settings": {
                 "show_footer_title": true,
                 "title": "Sign up and save",
-                "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>",
+                "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
                 "container_width": 30
               }
             },
@@ -787,7 +781,7 @@
             "popup_days": 30,
             "popup_title": "Sign up and save",
             "popup_image": "",
-            "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>",
+            "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
             "close_text": "No thanks",
             "enable_newsletter": true,
             "button_label": "Optional button",
@@ -812,7 +806,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }
@@ -823,7 +817,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }
@@ -834,7 +828,7 @@
                 "enable_image": true,
                 "image": "",
                 "title": "Site-wide promotion",
-                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+                "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.<\/p>",
                 "button_label": "Optional button",
                 "button_link": ""
               }

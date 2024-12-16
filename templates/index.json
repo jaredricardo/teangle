@@ -94,6 +94,7 @@
         "text_zgY8h6"
       ],
       "settings": {
+        "append_as_sticky_header": false,
         "text_margin": 120,
         "enabled": true,
         "icon_max_width": 50,
