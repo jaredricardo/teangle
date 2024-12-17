@@ -6583,6 +6583,7 @@ lazySizesConfig.expFactor = 4;
       },
 
       updatePrice: function(evt) {
+        
         var variant = evt.detail.variant;
 
         if (variant) {

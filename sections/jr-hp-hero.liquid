@@ -1,5 +1,20 @@
 {{ 'jr-hp-hero.css' | asset_url | stylesheet_tag }}
 
+{% liquid  
+
+    assign overlay_string = ''
+
+    if section.settings.image_overlay_opacity == 0
+            assign overlay_string = '0'
+        elsif section.settings.image_overlay_opacity == 100
+            assign overlay_string = '1'
+        else 
+            assign percent = section.settings.image_overlay_opacity | divided_by: 10
+            assign overlay_string = '0.' | append: percent
+    endif 
+
+-%}
+
 {% style %}
 
 [data-section-id="{{ section.id }}" ] {
@@ -11,18 +26,51 @@
     margin: 0 auto;
 }
 
+[data-section-id="{{ section.id }}" ] .content-container {
+    top: {{ section.settings.top_alignment_d }}%;
+}
+
+@media screen and (max-width: 768px) {
+    [data-section-id="{{ section.id }}" ] .content-container {
+        position: absolute;
+        justify-content: start;
+        top: {{ section.settings.top_alignment_m }}%;
+    }
+}
+
 {% endstyle %}
 
 <div data-section-id="{{ section.id }}">
     <div class="jr-hp-hero">
-        <img src="{{ section.settings.mobile_img |  img_url: 'master' }}" alt="Hero image" class="mobile hero-image">
+        {% unless overlay_string == '0' %}
+            <div class="image-overlay" style="background-color: rgba(0, 0, 0, {{ overlay_string }});" data-test="{{ section.settings.overlay_string }}" ></div>
+        {% endunless %}
         <div class="content-container">
-            {% if section.settings.header != blank %}
-                <h1 class="section-header">{{ section.settings.header }}</h1>
-            {% endif %}
-            {% if section.settings.subheader != blank %}
-                <div class="section-subheader">{{ section.settings.subheader }}</div>
-            {% endif %}
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'header' %}
+                        <div style="color:{{ block.settings.text_color }}; margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;" 
+                            class="section-header"
+                            >{{ block.settings.header }}
+                        </div>
+                    {% when 'subheader' %}
+                        <div 
+                            style="color:{{ block.settings.text_color }}; margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;"
+                            class="section-subheader"
+                            >{{ block.settings.subheader }}
+                        </div>
+                    {% when 'button' %}
+                        <a 
+                            style="color:{{ block.settings.button_text_color }}; background-color:{{ block.settings.button_bg_color }}; margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px;"
+                            href="{{ block.settings.button_link }}" 
+                            class="hero-btn btn"
+                            >{{ block.settings.button_text }}
+                        </a>
+                {% endcase %}
+            {% endfor %}
+
+            {% comment %} unused for now {% endcomment %}
+            {% comment %} 
             {% if section.settings.stars_text != blank %}
                <div class="star-review-container">
                     {% if section.settings.stars_img != blank %}
@@ -30,11 +78,10 @@
                     {% endif %}
                     <div class="stars-text">{{ section.settings.stars_text }}</div>
                </div>
-            {% endif %}
-            {% if section.settings.button_text != blank %}
-                <a href="{{ section.settings.button_link }}" class="hero-btn btn">{{ section.settings.button_text }}</a>
-            {% endif %}
+            {% endif %} 
+            {% endcomment %}
         </div>
+        <img src="{{ section.settings.mobile_img |  img_url: 'master' }}" alt="Hero image" class="mobile hero-image">
         <img src="{{ section.settings.desktop_img |  img_url: 'master' }}" alt="Hero image" class="desktop hero-image">
     </div>
 </div>
@@ -59,34 +106,133 @@
             "label": "Mobile Image"   
         },
         {
-            "type": "text",
-            "id": "header",
-            "label": "Hero Header"
+            "type": "range",
+            "step": 10,
+            "id": "image_overlay_opacity",
+            "label": "Image Overlay Opacity (%)",
+            "min": 0,
+            "max": 100,
+            "default": 20
         },
         {
-            "type": "text",
-            "id": "subheader",
-            "label": "Subheader"
+            "type": "header",
+            "content": "Alignment settings"
         },
         {
-            "type": "text",
-            "id": "stars_text",
-            "label": "Review Stars Text"
+            "type": "number",
+            "id": "top_alignment_d",
+            "label": "Spacing from the top of the page (desktop)",
+            "default": 15
         },
         {
-            "type": "image_picker",
-            "id": "stars_img",
-            "label": "Review Stars Image"
+            "type": "number",
+            "id": "top_alignment_m",
+            "label": "Spacing from the top of the page (m)",
+            "default": 15
+        }
+    ],
+    "blocks": [
+        {
+            "type": "header",
+            "name": "Header",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "header",
+                    "label": "Header Text"
+                },
+                {
+                    "type": "color",
+                    "id": "text_color",
+                    "label": "Header Color",
+                    "default": "#FFFFFF"
+                },
+                {
+                    "type": "number",
+                    "id": "margin_top",
+                    "label": "Margin Top",
+                    "default": 0
+                },
+                {
+                    "type": "number",
+                    "id": "margin_bottom",
+                    "label": "Margin bottom",
+                    "default": 0
+                }
+            ]
         },
         {
-            "type": "text",
-            "id": "button_text",
-            "label": "Button Text"
+            "type": "subheader",
+            "name": "Subheader",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "subheader",
+                    "label": "Subheader Text"
+                },
+                {
+                    "type": "color",
+                    "id": "text_color",
+                    "label": "Subheader Color",
+                    "default": "#FFFFFF"
+                },
+                {
+                    "type": "number",
+                    "id": "margin_top",
+                    "label": "Margin Top",
+                    "default": 0
+                },
+                {
+                    "type": "number",
+                    "id": "margin_bottom",
+                    "label": "Margin bottom",
+                    "default": 0
+                }
+            ]
         },
         {
-            "type": "url",
-            "id": "button_link",
-            "label": "Button Link"
+            "type": "button",
+            "name": "Button",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text",
+                    "default": "Button Text"
+                },
+                {
+                    "type": "color",
+                    "id": "button_text_color",
+                    "label": "Button Text Color",
+                    "default": "#FFFFFF"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button Link"
+                },
+                {
+                    "type": "color",
+                    "id": "button_bg_color",
+                    "label": "Button Background Color",
+                    "default": "#1e4845"
+                },
+                {
+                    "type": "number",
+                    "id": "margin_top",
+                    "label": "Margin Top",
+                    "default": 0
+                },
+                {
+                    "type": "number",
+                    "id": "margin_bottom",
+                    "label": "Margin bottom",
+                    "default": 0
+                }
+            ]
         }
     ],
     "presets": [

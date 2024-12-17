@@ -3,16 +3,32 @@
     position: relative;
 }
 
+.jr-hp-hero h1,
+.jr-hp-hero h2,
+.jr-hp-hero h3,
+.jr-hp-hero h4,
+.jr-hp-hero h5,
+.jr-hp-hero h6,
+.jr-hp-hero p,
+.jr-hp-hero a {
+    margin: 0;
+    line-height: 1.1 !important;
+}
+
+.jr-hp-hero a {
+    /* font alignment issue */
+    padding-top: 2px;
+}
+
 .jr-hp-hero .content-container { 
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: start;
-    z-index: 1;
     height: 100%;
-    justify-content: center;
     width: 50%;
     margin-left: 6.5%;
+    z-index: 3;
 }
 
 .jr-hp-hero .hero-image {
@@ -73,6 +89,14 @@
     margin-top: 25px;
     line-height: 1;
     padding: 0;
+}
+
+.jr-hp-hero .image-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: block;
 }
 
 
