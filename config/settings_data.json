@@ -412,7 +412,7 @@
           "bg_color": "#becdbe",
           "color": "#000000",
           "alternative-color": true,
-          "speed": 0,
+          "speed": 60,
           "align_icons_row": false
         }
       }
