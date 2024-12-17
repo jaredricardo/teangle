@@ -72,6 +72,14 @@
     "scrolling_announcement_pCahRV": {
       "type": "scrolling-announcement",
       "blocks": {
+        "text_Gjx4H4": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/frame_7.webp",
+            "text": "No Jitters or anxiety",
+            "link": ""
+          }
+        },
         "text_rXNKjq": {
           "type": "text",
           "settings": {
@@ -106,6 +114,7 @@
         }
       },
       "block_order": [
+        "text_Gjx4H4",
         "text_rXNKjq",
         "text_RzpNhP",
         "text_zgY8h6",
