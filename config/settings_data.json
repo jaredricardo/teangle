@@ -403,7 +403,7 @@
           "bg_color": "#becdbe",
           "color": "#000000",
           "alternative-color": true,
-          "speed": 60,
+          "speed": 0,
           "align_icons_row": false
         }
       }
