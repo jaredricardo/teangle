@@ -75,7 +75,7 @@
 }
 
 .jr-bfcm-collection .product-header-info h3 {
-    font-family: 'Cooper MBT';
+    font-family: 'Cooper MBT LT' !important;
     font-family: Cooper Lt BT;
     font-size: 36px;
     font-weight: 400;
@@ -129,7 +129,7 @@
 }
 
 .jr-bfcm-collection .swiper {
-    padding: 20px 0;
+    padding: 15px 0 25px 0;
     width: 100%;
 }
 
@@ -338,8 +338,9 @@
     }
     .jr-bfcm-collection .product-header-description {
         margin-bottom: 5px;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.2;
+        font-weight: 600 !important;
     }
     .jr-bfcm-collection .product-header-info,
     .jr-bfcm-collection .product-header-description {
