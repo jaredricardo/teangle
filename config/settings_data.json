@@ -363,7 +363,6 @@
           },
           "b9872e5e-3916-4a47-adac-531de967b8ac": {
             "type": "text",
-            "disabled": true,
             "settings": {
               "text": "Proudly Canadian 🇨🇦",
               "link": ""
@@ -371,6 +370,7 @@
           },
           "01951b68-eea9-4309-8e9e-9e64764729ed": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "text": "Need Help? ☎️ Click Here to Speak With Our Team",
               "link": "tel:18003166320"
