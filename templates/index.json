@@ -60,6 +60,65 @@
         "top_alignment_m": 10
       }
     },
+    "jr_columns_i7YrXX": {
+      "type": "jr-columns",
+      "blocks": {
+        "value_UATty4": {
+          "type": "value",
+          "settings": {
+            "link": "shopify:\/\/collections",
+            "image": "shopify:\/\/shop_images\/Teangle0030.jpg",
+            "title": "",
+            "title_fr": "",
+            "subheader": "Classic Matcha",
+            "subheader_fr": "Matcha classique",
+            "text_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus.",
+            "text_body_fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus."
+          }
+        },
+        "value_mzBMtW": {
+          "type": "value",
+          "settings": {
+            "link": "shopify:\/\/collections",
+            "image": "shopify:\/\/shop_images\/Teangle0030.jpg",
+            "title": "",
+            "title_fr": "",
+            "subheader": "Fun Flavors",
+            "subheader_fr": "Saveurs amusantes",
+            "text_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus.",
+            "text_body_fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus."
+          }
+        },
+        "value_Rq8UQd": {
+          "type": "value",
+          "settings": {
+            "link": "shopify:\/\/collections",
+            "image": "shopify:\/\/shop_images\/Teangle0030.jpg",
+            "title": "",
+            "title_fr": "",
+            "subheader": "Beauty Matcha",
+            "subheader_fr": "Matcha de beauté",
+            "text_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus.",
+            "text_body_fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus."
+          }
+        }
+      },
+      "block_order": [
+        "value_UATty4",
+        "value_mzBMtW",
+        "value_Rq8UQd"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#1e4845",
+        "title": "Shop by Category",
+        "title_fr": "Acheter par Catégorie",
+        "section_subtitle": "Balance is the ultimate power move. We got you covered on all basis.",
+        "section_subtitle_fr": "L’équilibre est le mouvement de puissance ultime. Nous vous couvrons sur toutes les bases.",
+        "collapse_mobile": false,
+        "size": "xs"
+      }
+    },
     "scrolling_announcement_pCahRV": {
       "type": "scrolling-announcement",
       "blocks": {
@@ -374,6 +433,7 @@
   "order": [
     "ff04fe8e-3989-4e29-be10-2b3919db90ac",
     "jr_hp_hero_L6V6WV",
+    "jr_columns_i7YrXX",
     "scrolling_announcement_pCahRV",
     "0c582d46-3982-4a95-81b4-dc9d778d38ff",
     "9c3ab650-e9f8-40eb-b530-62b31a19c4c0",

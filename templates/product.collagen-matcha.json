@@ -557,9 +557,13 @@
         "value_G89MH6": {
           "type": "value",
           "settings": {
+            "link": "",
             "title": "😄",
+            "title_fr": "Column Title (FR)",
             "subheader": "Happiness, guaranteed.",
-            "text_body": "We stand behind providing our customers with the healthiest and best tasting matcha possible."
+            "subheader_fr": "",
+            "text_body": "We stand behind providing our customers with the healthiest and best tasting matcha possible.",
+            "text_body_fr": ""
           }
         }
       },
@@ -569,6 +573,10 @@
       "settings": {
         "bg_color": "#fff4e0",
         "text_color": "#000000",
+        "title": "",
+        "title_fr": "",
+        "section_subtitle": "",
+        "section_subtitle_fr": "",
         "size": "large"
       }
     },
@@ -578,25 +586,37 @@
         "value_Hx7e9C": {
           "type": "value",
           "settings": {
+            "link": "",
             "title": "🚚",
+            "title_fr": "Column Title (FR)",
             "subheader": "Ships Free",
-            "text_body": "Free Shipping on every subscription order."
+            "subheader_fr": "",
+            "text_body": "Free Shipping on every subscription order.",
+            "text_body_fr": ""
           }
         },
         "value_AYLNM6": {
           "type": "value",
           "settings": {
+            "link": "",
             "title": "👍🏼",
+            "title_fr": "Column Title (FR)",
             "subheader": "100% Risk-Free",
-            "text_body": "We offer a 30 day money back guarantee... that’s how much we know you’ll love it!"
+            "subheader_fr": "",
+            "text_body": "We offer a 30 day money back guarantee... that’s how much we know you’ll love it!",
+            "text_body_fr": ""
           }
         },
         "value_mxjwrk": {
           "type": "value",
           "settings": {
+            "link": "",
             "title": "💝",
+            "title_fr": "Column Title (FR)",
             "subheader": "Here for You",
-            "text_body": "We’re with you every step of the way."
+            "subheader_fr": "",
+            "text_body": "We’re with you every step of the way.",
+            "text_body_fr": ""
           }
         }
       },
@@ -608,7 +628,11 @@
       "settings": {
         "bg_color": "#f8d2e6",
         "text_color": "#000000",
-        "size": "small"
+        "title": "",
+        "title_fr": "",
+        "section_subtitle": "",
+        "section_subtitle_fr": "",
+        "size": "xs"
       }
     }
   },

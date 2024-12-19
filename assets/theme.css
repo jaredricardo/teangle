@@ -11881,11 +11881,11 @@ html[dir=rtl] .product-single__meta .rte{
   line-height: 1.3;
 }
 
-.jr-columns.col--small h2 {
+.jr-columns.col--small h3 {
   font-size: 32px;
 }
 
-.jr-columns.col--small h3 {
+.jr-columns.col--small h4 {
   font-size: 26px;
 }
 
@@ -11893,11 +11893,11 @@ html[dir=rtl] .product-single__meta .rte{
   font-size: 16px;
 }
 
-.jr-columns.col--medium h2 {
+.jr-columns.col--medium h3 {
   font-size: 40px;
 }
 
-.jr-columns.col--medium h3 {
+.jr-columns.col--medium h4 {
   font-size: 32px;
 }
 
@@ -11905,11 +11905,11 @@ html[dir=rtl] .product-single__meta .rte{
   font-size: 20px;
 }
 
-.jr-columns.col--large h2 {
+.jr-columns.col--large h3 {
   font-size: 56px;
 }
 
-.jr-columns.col--large h3 {
+.jr-columns.col--large h4 {
   font-size: 40px;
 }
 
