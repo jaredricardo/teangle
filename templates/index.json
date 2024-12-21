@@ -64,7 +64,7 @@
         "bg_color": "",
         "desktop_img": "shopify://shop_images/MatchaWaitingFor-Mug-_-Collagen-23.jpg",
         "mobile_img": "shopify://shop_images/MatchaWaitingFor-Mug-_-Collagen.jpg",
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 10,
         "top_alignment_d": 26,
         "top_alignment_m": 45
       }
