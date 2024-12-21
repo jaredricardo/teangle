@@ -75,7 +75,7 @@
         "value_mzBMtW": {
           "type": "value",
           "settings": {
-            "link": "shopify://collections",
+            "link": "",
             "image": "shopify://shop_images/Teangle_Ginger_and_Lemongrass_Matcha_Hero_Image.jpg",
             "title": "",
             "title_fr": "",
@@ -88,7 +88,7 @@
         "value_Rq8UQd": {
           "type": "value",
           "settings": {
-            "link": "shopify://collections",
+            "link": "https://teangle.ca/products/matcha-collagen",
             "image": "shopify://shop_images/Teangle_Matcha_Collagen_Hero_Image.jpg",
             "title": "",
             "title_fr": "",
@@ -101,7 +101,7 @@
         "value_UATty4": {
           "type": "value",
           "settings": {
-            "link": "shopify://collections",
+            "link": "https://teangle.ca/pages/ceremonial-matcha",
             "image": "shopify://shop_images/Teangle_Ceremonial_Matcha_Hero_Image.jpg",
             "title": "",
             "title_fr": "",
