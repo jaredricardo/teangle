@@ -363,7 +363,6 @@
           },
           "b9872e5e-3916-4a47-adac-531de967b8ac": {
             "type": "text",
-            "disabled": true,
             "settings": {
               "text": "Proudly Canadian 🇨🇦",
               "link": ""
@@ -387,6 +386,7 @@
           },
           "text_8wTJ6W": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "text": "All Orders Shipped with Purolator or UPS",
               "link": ""
@@ -412,7 +412,7 @@
           "bg_color": "#becdbe",
           "color": "#000000",
           "alternative-color": true,
-          "speed": 60,
+          "speed": 0,
           "align_icons_row": false
         }
       }
