@@ -62,11 +62,11 @@
       "custom_css": [],
       "settings": {
         "bg_color": "",
-        "desktop_img": "shopify://shop_images/Teangle0277_1.jpg",
-        "mobile_img": "shopify://shop_images/Teangle0007_2.jpg",
-        "image_overlay_opacity": 20,
-        "top_alignment_d": 25,
-        "top_alignment_m": 10
+        "desktop_img": "shopify://shop_images/MatchaWaitingFor-Mug-_-Collagen-23.jpg",
+        "mobile_img": "shopify://shop_images/MatchaWaitingFor-Mug-_-Collagen.jpg",
+        "image_overlay_opacity": 30,
+        "top_alignment_d": 26,
+        "top_alignment_m": 45
       }
     },
     "jr_columns_i7YrXX": {
@@ -120,10 +120,10 @@
       "settings": {
         "bg_color": "#ffffff",
         "text_color": "#1e4845",
-        "title": "Shop by Category",
-        "title_fr": "Acheter par Catégorie",
-        "section_subtitle": "Balance is the ultimate power move. We got you covered on all basis.",
-        "section_subtitle_fr": "L’équilibre est le mouvement de puissance ultime. Nous vous couvrons sur toutes les bases.",
+        "title": "Find your perfect matcha",
+        "title_fr": "Trouver votre matcha parfait",
+        "section_subtitle": "",
+        "section_subtitle_fr": "",
         "collapse_mobile": false,
         "size": "xs"
       }
@@ -239,6 +239,7 @@
         "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-2",
         "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-3"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "title": "As seen in",
@@ -251,6 +252,7 @@
       "blocks": {
         "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-0": {
           "type": "text_block",
+          "disabled": true,
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Group_1484580834_1.webp",
@@ -263,6 +265,7 @@
         },
         "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-1": {
           "type": "text_block",
+          "disabled": true,
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Instagram_post_-_11.png",
@@ -320,6 +323,7 @@
         "text_block_pahxMp",
         "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-2"
       ],
+      "disabled": true,
       "custom_css": [
         ".lpp_card {border-radius: 20px; overflow: hidden; background: #fff; padding-bottom: 25px;}",
         ".lpp_card .text-spacing {padding: 0;}"
