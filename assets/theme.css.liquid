@@ -11867,6 +11867,7 @@ html[dir=rtl] .product-single__meta .rte{
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  width: 100%;
 }
 
 .jr-columns .column {
@@ -11895,6 +11896,10 @@ html[dir=rtl] .product-single__meta .rte{
   font-size: 36px;
 }
 
+.jr-columns p {
+  margin-bottom: 0.5rem !important;
+}
+
 .jr-columns h2,
 .jr-columns h3,
 .jr-columns p {
@@ -11904,7 +11909,9 @@ html[dir=rtl] .product-single__meta .rte{
 
 .jr-columns h3,
 .jr-columns h4 {
-  margin-top: 0.5rem !important;
+  margin-top: 1.5rem !important;
+  line-height: 1.15;
+  margin-bottom: 0.5rem !important;
 }
 
 .jr-columns.col--xs h3 {
@@ -11980,10 +11987,26 @@ html[dir=rtl] .product-single__meta .rte{
   opacity: 1;
 }
 
+.jr-columns .btn {
+  margin-top: auto; 
+  width: 100%;
+  max-width: 250px;
+}
+
+.jr-columns .swiper-wrapper {
+  height: auto;
+}
+
+.jr-columns .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+
 @media screen and (max-width: 768px) {  
-  .jr-columns img {
-    max-width: 240px;
-  }
   .jr-columns h2 {
     font-size: 26px;
   }
@@ -12211,7 +12234,7 @@ html[dir=rtl] .product-single__meta .rte{
     gap: 0.5rem;
   }
   .jr-columns .block-area {
-    gap: 0.25remrem;
+    gap: 0.25rem;
     flex-direction: column;
   }
   

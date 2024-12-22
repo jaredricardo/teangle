@@ -11926,6 +11926,7 @@ html[dir=rtl] .product-single__meta .rte{
   opacity: 1;
 }
 
+
 @media screen and (max-width: 768px) {  
   .ingredients-section {
     gap: 1rem;

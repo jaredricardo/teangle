@@ -1,6 +1,17 @@
-{% if section.blocks.size > 0 %}
-    <script src="{{ 'scrolling-text.js' | asset_url }}" defer="defer"></script>
+{% if section.blocks.size == 1 %}
+  <style>
+    [data-section-id="{{ section.id }}"] scrolling-text {
+      justify-content: center;
+    } 
+  </style>
+{% endif %}
 
+
+
+<script src="{{ 'scrolling-text.js' | asset_url }}" defer="defer"></script>
+
+
+{% if section.blocks.size > 0 %}
 
     {% assign show_on_page = true %}
     {% if section.settings.home-page-only and template != 'index' or template == 'password' %}
@@ -102,7 +113,7 @@
       aria-label="Discount banner"
     >
         {% if section.settings.enabled and show_on_page %}
-            <scrolling-text  data-scrolling-speed="{{ section.settings.speed }}" data-scrolling-direction="ltr" data-pause-on-hover="false" dir="ltr">
+            <scrolling-text  data-scrolling-speed="{{ section.settings.speed }}" data-scrolling-direction="ltr" data-pause-on-hover="false" dir="ltr" data-num-blocks="{{ section.blocks.size }}">
                 <div class="announcement__items">
                 {% for block in section.blocks %}
                     <div class="announcement__item">

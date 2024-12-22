@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -19,7 +10,7 @@
       "disabled": true,
       "settings": {
         "bg_color": "",
-        "desktop_img": "shopify://shop_images/Teangle0277_1.jpg",
+        "desktop_img": "shopify:\/\/shop_images\/Teangle0277_1.jpg",
         "image_overlay_opacity": 20,
         "top_alignment_d": 15,
         "top_alignment_m": 15
@@ -32,8 +23,8 @@
           "type": "sticker",
           "disabled": true,
           "settings": {
-            "sticker_image": "shopify://shop_images/Frame_5.svg",
-            "sticker_image_fr": "shopify://shop_images/Frame_6.svg",
+            "sticker_image": "shopify:\/\/shop_images\/Frame_5.svg",
+            "sticker_image_fr": "shopify:\/\/shop_images\/Frame_6.svg",
             "sticker_rotation": 11,
             "offset_right": 3,
             "offset_bottom": -5
@@ -43,8 +34,8 @@
           "type": "sticker",
           "disabled": true,
           "settings": {
-            "sticker_image": "shopify://shop_images/Stickers_JoieDeVivre_c8f1e70b-40fc-44d7-b95f-31a7495d820e.svg",
-            "sticker_image_fr": "shopify://shop_images/Stickers_JoieDeVivre_2b2ba49f-621c-4bdc-b9c7-1b8d56c61efa.svg",
+            "sticker_image": "shopify:\/\/shop_images\/Stickers_JoieDeVivre_c8f1e70b-40fc-44d7-b95f-31a7495d820e.svg",
+            "sticker_image_fr": "shopify:\/\/shop_images\/Stickers_JoieDeVivre_2b2ba49f-621c-4bdc-b9c7-1b8d56c61efa.svg",
             "sticker_rotation": 11,
             "offset_right": 8,
             "offset_bottom": -8
@@ -57,8 +48,8 @@
       ],
       "disabled": true,
       "settings": {
-        "desktop_img": "shopify://shop_images/Teangle0256_2.jpg",
-        "mobile_img": "shopify://shop_images/Teangle0256_2.jpg",
+        "desktop_img": "shopify:\/\/shop_images\/Teangle0256_2.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/Teangle0256_2.jpg",
         "header_en": "",
         "header_fr": "",
         "text_color": "#ffffff"

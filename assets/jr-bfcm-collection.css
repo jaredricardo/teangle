@@ -116,8 +116,8 @@
     text-align: center;
     justify-content: space-between;
     position: relative;
-
 }
+
 
 .jr-bfcm-collection .product-carousel-container,
 .jr-bfcm-collection .bfcm-product,
@@ -129,7 +129,7 @@
 }
 
 .jr-bfcm-collection .swiper {
-    padding: 15px 0 25px 0;
+    padding: 15px 15px 25px 0;
     width: 100%;
 }
 
