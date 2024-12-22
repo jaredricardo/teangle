@@ -38,14 +38,14 @@
                 {% if request.locale.iso_code == 'fr' %} 
 
                         <h2>{{ section.settings.title_fr }}</h2>
-                        {% if section.settings.section_subtitle_fr %}
+                        {% if section.settings.section_subtitle_fr != blank %}
                             <h3>{{ section.settings.section_subtitle_fr }}</h3>
                         {% endif %}
         
                     {% else %}
     
                         <h2>{{ section.settings.title }}</h2>
-                        {% if section.settings.section_subtitle %}
+                        {% if section.settings.section_subtitle != blank %}
                             <h3>{{ section.settings.section_subtitle }}</h3>
                         {% endif %}
     
@@ -111,7 +111,7 @@
             speed: 400,
             spaceBetween: 15,
             loop: true,
-            slidesPerView: 1.6,
+            slidesPerView: 1.4,
             loopFillGroupWithBlank: true,
             breakpoints:{
                 1024:{

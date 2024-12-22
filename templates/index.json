@@ -119,7 +119,7 @@
         "section_subtitle": "",
         "section_subtitle_fr": "",
         "collapse_mobile": false,
-        "size": "xs",
+        "size": "small",
         "make_carousel_on_mobile": true
       }
     },
