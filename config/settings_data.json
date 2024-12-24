@@ -383,14 +383,6 @@
               "text": "Discover our new brand identity! 💚",
               "link": ""
             }
-          },
-          "text_8wTJ6W": {
-            "type": "text",
-            "disabled": true,
-            "settings": {
-              "text": "All Orders Shipped with Purolator or UPS",
-              "link": ""
-            }
           }
         },
         "block_order": [
@@ -399,8 +391,7 @@
           "e332a7dd-e091-4ba4-87eb-49087d6d38b5",
           "b9872e5e-3916-4a47-adac-531de967b8ac",
           "01951b68-eea9-4309-8e9e-9e64764729ed",
-          "9e4e1112-cc32-42e4-9597-5a9a963bebbf",
-          "text_8wTJ6W"
+          "9e4e1112-cc32-42e4-9597-5a9a963bebbf"
         ],
         "settings": {
           "append_as_sticky_header": true,
