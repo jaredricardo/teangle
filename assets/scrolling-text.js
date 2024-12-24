@@ -3,6 +3,8 @@ if (typeof ScrollingText !== "function") {
         constructor() {
             super();
 
+            const numBlocks = this.dataset.numBlocks
+        
             var ScrollingText = (function () {
                 function getWidth(element) {
                     var rect = element.getBoundingClientRect();
@@ -10,6 +12,11 @@ if (typeof ScrollingText !== "function") {
                 }
 
                 function ScrollingText(box, speed) {
+
+                    console.log('!!!!!!')
+                    console.log(numBlocks)
+                    if(numBlocks == 1) return
+    
                     var inner_element = (box.children && box.children[0]) || null;
                     if (!inner_element) throw "No child node found";
 
@@ -120,7 +127,7 @@ if (typeof ScrollingText !== "function") {
             }
 
             const intersectionObserver = new IntersectionObserver(entries => {
-                if ( entries[0].isIntersecting ) {
+                if (entries[0].isIntersecting ) {
                     scrolling_text.start(direction);
                 } else {
                     scrolling_text.stop();

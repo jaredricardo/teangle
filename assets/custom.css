@@ -8,7 +8,12 @@
 
 @font-face {
   font-family: 'Cooper MBT';
-  src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CooperMdBTMedium.ttf?v=1732493441  ') format('truetype');
+  src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/CooperMdBTMedium.ttf?v=1732493441') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cooper MBT LT';
+  src: url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/cooperl.ttf?v=1734590996') format('truetype');
 }
 
 .drawer__scrollable a[href="/pages/bfcm-collection"],

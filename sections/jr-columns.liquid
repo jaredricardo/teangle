@@ -11,28 +11,117 @@
 
     background-color: {{ bg_color }};
     color: {{ text_color }};
-
+    padding: 0 2rem;
 }
+
+[data-section-id="{{ section.id }}"] h2,
+[data-section-id="{{ section.id }}"] h3,
+[data-section-id="{{ section.id }}"] h4,
+[data-section-id="{{ section.id }}"] p {
+    color: {{ text_color }};
+}
+
+{% if section.settings.make_carousel_on_mobile %}
+    @media screen and (max-width: 768px) {
+        [data-section-id="{{ section.id }}"] {
+            padding: 1rem 0 1rem 1rem;
+        }
+    }
+{% endif %}
 
 {% endstyle %} 
 
 <section data-section-id="{{ section.id }}">
     <div class="page-width section-padding jr-columns col--{{ section.settings.size }}">
-        {% for block in section.blocks %}
-            <div class="column">
-                {% if block.settings.title != blank %}
-                    <h2>{{ block.settings.title }}</h2>
-                {% endif %}
-                {% if block.settings.subheader != blank %}
-                    <h3>{{ block.settings.subheader }}</h3>
-                {% endif %}
-                {% if block.settings.text_body != blank %}
-                    <p>{{ block.settings.text_body }}</p>
+        {% if section.settings.title != blank %}
+            <div class="header-area">
+                {% if request.locale.iso_code == 'fr' %} 
+
+                        <h2>{{ section.settings.title_fr }}</h2>
+                        {% if section.settings.section_subtitle_fr != blank %}
+                            <h3>{{ section.settings.section_subtitle_fr }}</h3>
+                        {% endif %}
+        
+                    {% else %}
+    
+                        <h2>{{ section.settings.title }}</h2>
+                        {% if section.settings.section_subtitle != blank %}
+                            <h3>{{ section.settings.section_subtitle }}</h3>
+                        {% endif %}
+    
                 {% endif %}
             </div>
-        {% endfor %}
+        {% endif %}
+        <div class="block-area {% if section.settings.make_carousel_on_mobile %} swiper {% endif %}">
+            {% if section.settings.make_carousel_on_mobile %}
+            <div class="swiper-wrapper">
+            {% endif %}
+                {% for block in section.blocks %}
+                    <div class="{% if section.settings.make_carousel_on_mobile %} swiper-slide {% else %} column {% endif %}">    
+                        {% if block.settings.image %}
+                            <img src="{{ block.settings.image | image_url: width: 600  }}" alt="Teangle Image">
+                        {% endif %}
+        
+                        {% if block.settings.title != blank %}
+                            {% if request.locale.iso_code == 'fr' %} 
+                                <h3>{{ block.settings.title_fr }}</h3>
+                            {% else %}
+                                <h3>{{ block.settings.title }}</h3>
+                            {% endif %}
+                        {% endif %}
+        
+                        {% if block.settings.subheader != blank %}
+                            {% if request.locale.iso_code == 'fr' %}
+                                    <h4>{{ block.settings.subheader_fr }}</h4> 
+                                {% else %}
+                                    <h4>{{ block.settings.subheader }}</h4>
+                            {% endif %}
+                        {% endif %}
+        
+                        {% if block.settings.text_body != blank %}
+                            {% if request.locale.iso_code == 'fr' %}
+                                <p>{{ block.settings.text_body_fr }}</p>
+                            {% else %}
+                                <p>{{ block.settings.text_body }}</p>
+                            {% endif %}
+                        {% endif %}  
+                        {% if block.settings.link != blank and block.settings.link_text != blank %}
+                            <a class="btn" href="{{ block.settings.link }}">{{ block.settings.link_text }}</a>
+                        {% endif %}                                  
+                    </div>
+            {% endfor %}
+            {% if section.settings.make_carousel_on_mobile %}
+            </div>
+            {% endif %}
+        </div>
     </div> 
 </section>
+
+{% if section.settings.make_carousel_on_mobile %}
+
+{% endif %}
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const section = document.querySelector('[data-section-id="{{ section.id }}"] .swiper')
+
+        const swiper = new Swiper(section, {
+            centeredSlides: false,
+            speed: 400,
+            spaceBetween: 15,
+            loop: true,
+            slidesPerView: 1.4,
+            loopFillGroupWithBlank: true,
+            breakpoints:{
+                1024:{
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            }
+        })
+    })
+</script>
 
 
 {% schema %}
@@ -52,11 +141,41 @@
             "default": "#000000"
         },
         {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title (optional)"
+        },
+        {
+            "type": "text",
+            "id": "title_fr",
+            "label": "Section Title (French, optional)"
+        },
+        {
+            "type": "textarea",
+            "id": "section_subtitle",
+            "label": "Section Subtitle (optional)"
+        },
+        {
+            "type": "text",
+            "id": "section_subtitle_fr",
+            "label": "Section Subtitle (French, optional)"
+        },
+        {
+            "type": "checkbox",
+            "id": "collapse_mobile",
+            "label": "Collapse on mobile",
+            "default": false
+        },
+        {
             "type": "select",
             "id": "size",
-            "label": "Sets the size of the fonts in the solumns",
+            "label": "Sets the size of the fonts in the columns",
             "default": "small",
             "options": [
+                {
+                    "value": "xs",
+                    "label": "Extra Small"
+                },
                 {
                     "value": "small",
                     "label": "Small"
@@ -70,19 +189,46 @@
                     "label": "Large"
                 }
             ]
+        },
+        {
+            "type": "checkbox",
+            "id": "make_carousel_on_mobile",
+            "label": "Make carousel on mobile",
+            "default": false
         }
     ],
     "blocks": [
         {
             "type": "value",
-            "name": "Value", 
+            "name": "column", 
             "limit": 3,
             "settings": [
                 {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link (optional)"
+                },
+                {
+                    "type": "text",
+                    "id":"link_text",
+                    "label": "Link Text",
+                    "default": "Shop Now"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image (optional)"
+                },
+                {
                     "type": "text",
                     "id": "title",
-                    "label": "Prop title",
-                    "default": "Prop Title"
+                    "label": "Column Title",
+                    "default": "Column title"
+                },                {
+                    "type": "text",
+                    "id": "title_fr",
+                    "label": "Column title (French)",
+                    "default": "Column Title (FR)"
                 },
                 {
                     "type": "text",
@@ -90,16 +236,26 @@
                     "label": "Subheader"
                 },
                 {
+                    "type": "text",
+                    "id": "subheader_fr",
+                    "label": "Subheader (French)"
+                },
+                {
                     "type": "textarea",
                     "id": "text_body",
                     "label": "Text Body"
+                },
+                {
+                    "type": "textarea",
+                    "id": "text_body_fr",
+                    "label": "Text Body (French)"
                 }
             ]
         }
     ],
     "presets": [
         {
-            "name": "Jr Coumns",
+            "name": "Jr Columns",
             "category": "Content"
         }
     ]
