@@ -347,9 +347,8 @@
           },
           "text_rNyxKP": {
             "type": "text",
-            "disabled": true,
             "settings": {
-              "text": "Summer promo ☀️ Add a Tumbler for 1$",
+              "text": "Boxing Day 🥊 20% Off Applied at Checkout*",
               "link": ""
             }
           },
@@ -363,6 +362,7 @@
           },
           "b9872e5e-3916-4a47-adac-531de967b8ac": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "text": "Proudly Canadian 🇨🇦",
               "link": ""
