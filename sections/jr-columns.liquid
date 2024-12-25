@@ -59,7 +59,17 @@
                 {% for block in section.blocks %}
                     <div class="{% if section.settings.make_carousel_on_mobile %} swiper-slide {% else %} column {% endif %}">    
                         {% if block.settings.image %}
+                          
+                          {% if block.settings.link %}
+                            <a href={{ block.settings.link }}>
+                          {% endif %}
+                              
                             <img src="{{ block.settings.image | image_url: width: 600  }}" alt="Teangle Image">
+                            
+                          {% if block.settings.link %}
+                            </a>
+                          {% endif %}
+                      
                         {% endif %}
         
                         {% if block.settings.title != blank %}
