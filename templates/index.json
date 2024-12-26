@@ -89,7 +89,7 @@
         "value_Rq8UQd": {
           "type": "value",
           "settings": {
-            "link": "https://teangle.ca/products/matcha-collagen",
+            "link": "shopify://products/matcha-collagen",
             "link_text": "Shop Now",
             "image": "shopify://shop_images/Teangle_Matcha_Collagen_Hero_Image.jpg",
             "title": "",
