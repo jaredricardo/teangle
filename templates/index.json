@@ -120,7 +120,6 @@
         "value_Rq8UQd",
         "value_UATty4"
       ],
-      "disabled": true,
       "settings": {
         "bg_color": "#ffffff",
         "text_color": "#1e4845",
@@ -257,6 +256,7 @@
       "blocks": {
         "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-0": {
           "type": "text_block",
+          "disabled": true,
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Group_1484580834_1.webp",
@@ -269,6 +269,7 @@
         },
         "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-1": {
           "type": "text_block",
+          "disabled": true,
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Instagram_post_-_11.png",
@@ -279,8 +280,21 @@
             "button_link": "shopify://products/matcha-collagen"
           }
         },
+        "text_block_K9Tqct": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
         "text_block_dAXPEg": {
           "type": "text_block",
+          "disabled": true,
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/fijibishh3_2.jpg",
@@ -321,10 +335,12 @@
       "block_order": [
         "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-0",
         "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-1",
+        "text_block_K9Tqct",
         "text_block_dAXPEg",
         "text_block_pahxMp",
         "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-2"
       ],
+      "disabled": true,
       "custom_css": [
         ".lpp_card {border-radius: 20px; overflow: hidden; background: #fff; padding-bottom: 25px;}",
         ".lpp_card .text-spacing {padding: 0;}"
