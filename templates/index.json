@@ -103,7 +103,7 @@
         "value_UATty4": {
           "type": "value",
           "settings": {
-            "link": "https://teangle.ca/pages/ceremonial-matcha",
+            "link": "shopify://pages/ceremonial-matcha",
             "link_text": "Shop Now",
             "image": "shopify://shop_images/Teangle_Ceremonial_Matcha_Hero_Image.jpg",
             "title": "",
