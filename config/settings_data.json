@@ -347,7 +347,6 @@
           },
           "text_rNyxKP": {
             "type": "text",
-            "disabled": true,
             "settings": {
               "text": "Summer promo ☀️ Add a Tumbler for 1$",
               "link": ""
@@ -355,7 +354,6 @@
           },
           "e332a7dd-e091-4ba4-87eb-49087d6d38b5": {
             "type": "text",
-            "disabled": true,
             "settings": {
               "text": "Free Shipping on Orders $60+",
               "link": ""
