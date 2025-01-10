@@ -90,7 +90,7 @@
           "type": "tab",
           "settings": {
             "title": "Shipping & Returns",
-            "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $60. <\/li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!<\/li> <\/ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $60<\/li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!<\/li> <\/ul>\n                         \n                    {% endif %}",
+            "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $70. <\/li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!<\/li> <\/ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $70<\/li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!<\/li> <\/ul>\n                         \n                    {% endif %}",
             "page": ""
           }
         }
