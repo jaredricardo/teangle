@@ -859,7 +859,8 @@
           btn.querySelector('.dot--inner').classList.remove('active-option')  
         })
 
-        if(btn.dataset.isSubscription === "true") {
+        if(btn.dataset.isSubscription === "true" && clickedPrice > 69) {
+          
           document.querySelector('.subscription-value-prop-container').classList.remove('hidden')
         } else {
           document.querySelector('.subscription-value-prop-container').classList.add('hidden')
