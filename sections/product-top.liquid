@@ -858,7 +858,7 @@
         simpleOptionButtons.forEach((btn) => {
           btn.querySelector('.dot--inner').classList.remove('active-option')  
         })
-
+      console.log(clickedPrice);
         if(btn.dataset.isSubscription === "true" && clickedPrice > 69) {
           
           document.querySelector('.subscription-value-prop-container').classList.remove('hidden')
