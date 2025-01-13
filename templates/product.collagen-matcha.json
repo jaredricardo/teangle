@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "product-top": {
@@ -24,7 +33,7 @@
           "disabled": true,
           "settings": {
             "title": "Shipping information",
-            "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $70. <\/li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!<\/li> <\/ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $70<\/li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!<\/li> <\/ul>\n                         \n                    {% endif %}",
+            "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $70. </li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!</li> </ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $70</li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!</li> </ul>\n                         \n                    {% endif %}",
             "page": ""
           }
         }
@@ -60,28 +69,28 @@
           "type": "value-prop",
           "settings": {
             "title": "Zero Sugar",
-            "image": "shopify:\/\/shop_images\/Group_210292.svg"
+            "image": "shopify://shop_images/Group_210292.svg"
           }
         },
         "value_prop_xr9twf": {
           "type": "value-prop",
           "settings": {
             "title": "Dairy Free",
-            "image": "shopify:\/\/shop_images\/Group_210293.svg"
+            "image": "shopify://shop_images/Group_210293.svg"
           }
         },
         "value_prop_E7jfAn": {
           "type": "value-prop",
           "settings": {
             "title": "Organic",
-            "image": "shopify:\/\/shop_images\/Group_210294-1.svg"
+            "image": "shopify://shop_images/Group_210294-1.svg"
           }
         },
         "value_prop_7z6gMq": {
           "type": "value-prop",
           "settings": {
             "title": "Gluten-Free",
-            "image": "shopify:\/\/shop_images\/Group_210294.svg"
+            "image": "shopify://shop_images/Group_210294.svg"
           }
         }
       },
@@ -102,33 +111,33 @@
         "ingredient_hkhfFq": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Matcha_Powder_1_f0e1c1c2-e09f-4d57-8cfe-9395fdd92bae.jpg",
+            "image": "shopify://shop_images/Matcha_Powder_1_f0e1c1c2-e09f-4d57-8cfe-9395fdd92bae.jpg",
             "title": "1g of organic ceremonial Matcha",
-            "ingredient_body": "<p>Your superhero when it comes to long-lasting energy, reduced stress and better focus.<\/p><ul><li>Sourced from a family farm in Japan<\/li><li>Screened and tested for toxins<\/li><\/ul>"
+            "ingredient_body": "<p>Your superhero when it comes to long-lasting energy, reduced stress and better focus.</p><ul><li>Sourced from a family farm in Japan</li><li>Screened and tested for toxins</li></ul>"
           }
         },
         "ingredient_FCc3x4": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Marine_Collagen_f94b4b0e-bb6a-46e9-a448-9ce1ae95e080.jpg",
+            "image": "shopify://shop_images/Marine_Collagen_f94b4b0e-bb6a-46e9-a448-9ce1ae95e080.jpg",
             "title": "5g of pure marine collagen",
-            "ingredient_body": "<p>Aka the fountain of youth. This stuff is amazing for your skin, hair, nails and just overall confidence.<\/p><ul><li>The most bioavailable form<\/li><li>Sustainably sourced from wild-caught fish in Canada<\/li><\/ul>"
+            "ingredient_body": "<p>Aka the fountain of youth. This stuff is amazing for your skin, hair, nails and just overall confidence.</p><ul><li>The most bioavailable form</li><li>Sustainably sourced from wild-caught fish in Canada</li></ul>"
           }
         },
         "ingredient_qFnrdE": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Acacia_Gum_ca3647ce-0d25-4b46-ab5e-61c96380e70e.jpg",
+            "image": "shopify://shop_images/Acacia_Gum_ca3647ce-0d25-4b46-ab5e-61c96380e70e.jpg",
             "title": "organic acacia gum",
-            "ingredient_body": "<p>Supports a healthy gut and digestion. <\/p><ul><li>Sourced from wild Acacia trees.<\/li><\/ul>"
+            "ingredient_body": "<p>Supports a healthy gut and digestion. </p><ul><li>Sourced from wild Acacia trees.</li></ul>"
           }
         },
         "ingredient_6NYU6N": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Coconut_Milk_Powder_8f068ea0-b923-466d-bc1e-6bc3958e0211.jpg",
+            "image": "shopify://shop_images/Coconut_Milk_Powder_8f068ea0-b923-466d-bc1e-6bc3958e0211.jpg",
             "title": "organic coconut milk powder",
-            "ingredient_body": "<p>Super creamy deliciousness that’s dairy free and low calorie.<\/p><ul><li>Paleo, keto and 100% plant based<\/li><li>Non-GMO<\/li><\/ul>"
+            "ingredient_body": "<p>Super creamy deliciousness that’s dairy free and low calorie.</p><ul><li>Paleo, keto and 100% plant based</li><li>Non-GMO</li></ul>"
           }
         }
       },
@@ -143,7 +152,7 @@
         "text_color": "#000000",
         "btn_bg_color": "#25623a",
         "btn_text_color": "#ffffff",
-        "header": "We only use the\u2028best quality ingredients",
+        "header": "We only use the best quality ingredients",
         "btn_link": "#shopify-section-header",
         "btn_text": "Try It Now"
       }
@@ -154,8 +163,8 @@
         "customer_review_Ja3qqK": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_01.png",
-            "review_body": "<p>HAKUNA MATCHACHA with @teanglematcha. Adding their New Coconut Matcha collagen powder in my morning drinks has been something I love forward to when\u2028waking up!<\/p>",
+            "image": "shopify://shop_images/Teangle_fam_01.png",
+            "review_body": "<p>HAKUNA MATCHACHA with @teanglematcha. Adding their New Coconut Matcha collagen powder in my morning drinks has been something I love forward to when waking up!</p>",
             "reviewer_name": "Emily",
             "reviewer_instagram": "@ewilydee"
           }
@@ -163,8 +172,8 @@
         "customer_review_geh9pQ": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_05.png",
-            "review_body": "<p>My new favorite addition to my morning routine. Love how it gives energy versus the other collagen I used to take.<\/p>",
+            "image": "shopify://shop_images/Teangle_fam_05.png",
+            "review_body": "<p>My new favorite addition to my morning routine. Love how it gives energy versus the other collagen I used to take.</p>",
             "reviewer_name": "Cameliane Laroche",
             "reviewer_instagram": "@cameliane_laroche"
           }
@@ -172,8 +181,8 @@
         "customer_review_PH76yN": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_07.png",
-            "review_body": "<p>It tastes amazing & promotes hair, skin and nail growth. & on top of those benefits you’re getting the benefits of Matcha!\u2028That’s double the benefits in one drink.<\/p>",
+            "image": "shopify://shop_images/Teangle_fam_07.png",
+            "review_body": "<p>It tastes amazing & promotes hair, skin and nail growth. & on top of those benefits you’re getting the benefits of Matcha! That’s double the benefits in one drink.</p>",
             "reviewer_name": "Rae Savaunnah",
             "reviewer_instagram": "@rachelsavaunnah"
           }
@@ -181,8 +190,8 @@
         "customer_review_6d7dJk": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_02.png",
-            "review_body": "<p>I’ve been taking my @teanglematcha Matcha Collagen every morning for a week now & it’s delicious! On top fo that, it helps preserve your natural beauty!<\/p>",
+            "image": "shopify://shop_images/Teangle_fam_02.png",
+            "review_body": "<p>I’ve been taking my @teanglematcha Matcha Collagen every morning for a week now & it’s delicious! On top fo that, it helps preserve your natural beauty!</p>",
             "reviewer_name": "Kaitlyn",
             "reviewer_instagram": "@mrmrandmama"
           }
@@ -190,8 +199,8 @@
         "customer_review_an8jXx": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_06.png",
-            "review_body": "<p>But seriously, collagen & Matcha together?! Can things can any better?! I feel so good adding collagen to my morning routine. It helps make your hair, nail & skin GLOW! <\/p>",
+            "image": "shopify://shop_images/Teangle_fam_06.png",
+            "review_body": "<p>But seriously, collagen & Matcha together?! Can things can any better?! I feel so good adding collagen to my morning routine. It helps make your hair, nail & skin GLOW! </p>",
             "reviewer_name": "Kaitlyn",
             "reviewer_instagram": "@mrmrandmama"
           }
@@ -199,8 +208,8 @@
         "customer_review_ipyKKK": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_03.png",
-            "review_body": "<p>If you’ve been following my journey, you know I’ve been struggling to find a good way to take collagen without... tasting the collagen. This stuff is SERIOUSLY amazing!<\/p>",
+            "image": "shopify://shop_images/Teangle_fam_03.png",
+            "review_body": "<p>If you’ve been following my journey, you know I’ve been struggling to find a good way to take collagen without... tasting the collagen. This stuff is SERIOUSLY amazing!</p>",
             "reviewer_name": "Jamie Fok",
             "reviewer_instagram": "@healthwithjamie"
           }
@@ -208,8 +217,8 @@
         "customer_review_kz7mtd": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_09.png",
-            "review_body": "<p>I ADORE IT. I added a little bit of stevia to sweeten. I love it’s super creamy texture.<\/p>",
+            "image": "shopify://shop_images/Teangle_fam_09.png",
+            "review_body": "<p>I ADORE IT. I added a little bit of stevia to sweeten. I love it’s super creamy texture.</p>",
             "reviewer_name": "xkimy23",
             "reviewer_instagram": "@xkimy23"
           }
@@ -217,8 +226,8 @@
         "customer_review_pRY46r": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_08.png",
-            "review_body": "<p>DELICIOUS I LOVE IT.<\/p>",
+            "image": "shopify://shop_images/Teangle_fam_08.png",
+            "review_body": "<p>DELICIOUS I LOVE IT.</p>",
             "reviewer_name": "Tanya Savard",
             "reviewer_instagram": "@tanyasavard22"
           }
@@ -226,8 +235,8 @@
         "customer_review_U7Eaxe": {
           "type": "customer-review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Teangle_fam_04.png",
-            "review_body": "<p>The brand new collagen Matcha from @teanglematcha has been a big hit for me as my afternoon boost - especially with a bit of honey and some steamed milk to make it a latte.<\/p>",
+            "image": "shopify://shop_images/Teangle_fam_04.png",
+            "review_body": "<p>The brand new collagen Matcha from @teanglematcha has been a big hit for me as my afternoon boost - especially with a bit of honey and some steamed milk to make it a latte.</p>",
             "reviewer_name": "Nicole",
             "reviewer_instagram": "@lovenicolerae"
           }
@@ -250,7 +259,7 @@
         "header": "Join the Teangle fam!",
         "subheader": "100,000+ people adding \"joie de vivre\" to their lives!",
         "review_text": "1000+ reviews",
-        "review_stars": "shopify:\/\/shop_images\/Rating.png"
+        "review_stars": "shopify://shop_images/Rating.png"
       }
     },
     "rich_text_LKpqgc": {
@@ -276,7 +285,7 @@
     "fullwidth_code_jgGmDL": {
       "type": "fullwidth-code",
       "settings": {
-        "section_html": "<script data-lyvecom async src=\"https:\/\/dashboard.lyvecom.com\/widget\/widget.js\"><\/script>\n      <div class=\"lyvecom_carousel--component-new\" data-lyvecom-id=\"66cca15be39443b3d6a1d358\"><\/div>\n      <script>\n          (() => {\n                  const scriptElement = document.querySelector('script[data-lyvecom]');\n                  const mountCarousel = () => {\n                      LyveComWidget.mountCarouselComponentV2({\n                        carouselID: '66cca15be39443b3d6a1d358',\n                        carousel: true,\n                        lng: 'en'\n                    });\n                  }\n                      \n                  if (window.LyveComWidget) {\n                        mountCarousel();\n                    } else {\n                        scriptElement.addEventListener('load', mountCarousel);\n                    }\n          })()\n      <\/script>",
+        "section_html": "<script data-lyvecom async src=\"https://dashboard.lyvecom.com/widget/widget.js\"></script>\n      <div class=\"lyvecom_carousel--component-new\" data-lyvecom-id=\"66cca15be39443b3d6a1d358\"></div>\n      <script>\n          (() => {\n                  const scriptElement = document.querySelector('script[data-lyvecom]');\n                  const mountCarousel = () => {\n                      LyveComWidget.mountCarouselComponentV2({\n                        carouselID: '66cca15be39443b3d6a1d358',\n                        carousel: true,\n                        lng: 'en'\n                    });\n                  }\n                      \n                  if (window.LyveComWidget) {\n                        mountCarousel();\n                    } else {\n                        scriptElement.addEventListener('load', mountCarousel);\n                    }\n          })()\n      </script>",
         "sec_color": "#fffef2"
       }
     },
@@ -368,7 +377,7 @@
         "step_bg_color": "#f5daf4",
         "step_number_color": "#000000",
         "header": "How to Use",
-        "image": "shopify:\/\/shop_images\/matcha-gif.gif"
+        "image": "shopify://shop_images/matcha-gif.gif"
       }
     },
     "jr_images_and_text_descriptions_Ye4AYB": {
@@ -377,7 +386,7 @@
         "image_text_KCYqah": {
           "type": "image-text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Matcha_Collagen_2_Vertical_1.jpg",
+            "image": "shopify://shop_images/Matcha_Collagen_2_Vertical_1.jpg",
             "title": "Original Matcha Collagen",
             "image_text": "Enjoy the matcha collagen on its own! All you have to do is to mix some water with it."
           }
@@ -385,7 +394,7 @@
         "image_text_8hqFtA": {
           "type": "image-text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tyler-nix-KYzyAAizxno-unsplash.jpg",
+            "image": "shopify://shop_images/tyler-nix-KYzyAAizxno-unsplash.jpg",
             "title": "Matcha Collagen Latte",
             "image_text": "Combine the matcha collagen with any milk of your choice and add any sweetener if you like!"
           }
@@ -393,7 +402,7 @@
         "image_text_MHUKaz": {
           "type": "image-text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/4-recipes-03_1024x1024_90761ff5-9c3d-45a6-a231-994554d837de.webp",
+            "image": "shopify://shop_images/4-recipes-03_1024x1024_90761ff5-9c3d-45a6-a231-994554d837de.webp",
             "title": "Matcha Collagen Smoothie",
             "image_text": "Add some fruits to your matcha collagen with a big splash of milk!"
           }
@@ -408,7 +417,7 @@
         "bg_color": "#fffbf7",
         "text_color": "#000000",
         "header": "How to have the best Matcha Collagen experience",
-        "subheader": "Each scoop is deliciously creamy and rich, with a light taste of matcha.\u2028It’s sugar-free, so you can sweeten it to your liking with a little honey or a hint of maple syrup.",
+        "subheader": "Each scoop is deliciously creamy and rich, with a light taste of matcha. It’s sugar-free, so you can sweeten it to your liking with a little honey or a hint of maple syrup.",
         "button_text": "Get Started",
         "button_link": "#shopify-section-header"
       }
@@ -437,7 +446,7 @@
       "type": "apps",
       "blocks": {
         "okendo_reviews_widget_nmmHgq": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "reviews_widget"
@@ -511,7 +520,7 @@
           "type": "faq",
           "settings": {
             "title": "Do I have to get a subscription?  🧐",
-            "answer": "No! We have a 1 time purchase option, but when you subscribe you get FREE shipping + a massive discount. So it's totally worth it!"
+            "answer": "No! We have a 1 time purchase option, but when you subscribe you get a massive discount. So it's totally worth it!"
           }
         },
         "faq_RAnT7K": {
@@ -519,6 +528,13 @@
           "settings": {
             "title": "How much caffeine? 🍵",
             "answer": "Each scoop of our matcha collagen contain around 30-35mg of caffeine which is 70% less than a traditional cup of coffee! You can enjoy it without the nasty jitters and sudden crash of energy."
+          }
+        },
+        "faq_YeMmJE": {
+          "type": "faq",
+          "settings": {
+            "title": "Question",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis erat metus, consequat ac egestas sed, euismod quis diam. Integer non enim dolor. Aliquam congue non justo nec accumsan. Donec a tincidunt massa. Pellentesque eu ipsum erat."
           }
         },
         "faq_QhtEP8": {
@@ -539,6 +555,7 @@
         "faq_g8cABy",
         "faq_wifHzV",
         "faq_RAnT7K",
+        "faq_YeMmJE",
         "faq_QhtEP8"
       ],
       "settings": {
@@ -558,6 +575,7 @@
           "type": "value",
           "settings": {
             "link": "",
+            "link_text": "Shop Now",
             "title": "😄",
             "title_fr": "Column Title (FR)",
             "subheader": "Happiness, guaranteed.",
@@ -577,7 +595,9 @@
         "title_fr": "",
         "section_subtitle": "",
         "section_subtitle_fr": "",
-        "size": "large"
+        "collapse_mobile": false,
+        "size": "large",
+        "make_carousel_on_mobile": false
       }
     },
     "jr_columns_Fyn8gP": {
@@ -587,6 +607,7 @@
           "type": "value",
           "settings": {
             "link": "",
+            "link_text": "Shop Now",
             "title": "🚚",
             "title_fr": "Column Title (FR)",
             "subheader": "Ships Free",
@@ -599,6 +620,7 @@
           "type": "value",
           "settings": {
             "link": "",
+            "link_text": "Shop Now",
             "title": "👍🏼",
             "title_fr": "Column Title (FR)",
             "subheader": "100% Risk-Free",
@@ -611,6 +633,7 @@
           "type": "value",
           "settings": {
             "link": "",
+            "link_text": "Shop Now",
             "title": "💝",
             "title_fr": "Column Title (FR)",
             "subheader": "Here for You",
@@ -625,6 +648,7 @@
         "value_AYLNM6",
         "value_mxjwrk"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "#f8d2e6",
         "text_color": "#000000",
@@ -632,7 +656,9 @@
         "title_fr": "",
         "section_subtitle": "",
         "section_subtitle_fr": "",
-        "size": "xs"
+        "collapse_mobile": false,
+        "size": "xs",
+        "make_carousel_on_mobile": false
       }
     }
   },
