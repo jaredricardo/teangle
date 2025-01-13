@@ -864,17 +864,17 @@
           console.log(priceNumber); 
            
           if(priceNumber > 69) {
-            document.querySelector('.free-shipcol').classList.remove('hidden')
+            document.querySelector('.free-shipcol').classList.remove('hide')
           } else{
-            document.querySelector('.free-shipcol').classList.add('hidden')
+            document.querySelector('.free-shipcol').classList.add('hide')
           }
           
           }
         if(btn.dataset.isSubscription === "true") {
           
-          document.querySelector('.subscription-value-prop-container').classList.remove('hide')
+          document.querySelector('.subscription-value-prop-container').classList.remove('hidden')
         } else {
-          document.querySelector('.subscription-value-prop-container').classList.add('hide')
+          document.querySelector('.subscription-value-prop-container').classList.add('hidden')
         }
 
 
