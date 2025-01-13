@@ -858,10 +858,10 @@
         simpleOptionButtons.forEach((btn) => {
           btn.querySelector('.dot--inner').classList.remove('active-option')  
         })
-        console.log(clickedPrice); 
+        
         var priceNumber = parseInt(clickedPrice.match(/\d+/)[0], 10);
        
-
+        console.log(priceNumber); 
         if(btn.dataset.isSubscription === "true" && priceNumber > 69) {
           
           document.querySelector('.subscription-value-prop-container').classList.remove('hidden')

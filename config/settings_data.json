@@ -356,12 +356,13 @@
           "e332a7dd-e091-4ba4-87eb-49087d6d38b5": {
             "type": "text",
             "settings": {
-              "text": "Free Shipping on orders over $70 to Canada",
+              "text": "Free Standard Shipping on orders $70+",
               "link": ""
             }
           },
           "b9872e5e-3916-4a47-adac-531de967b8ac": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "text": "Proudly Canadian 🇨🇦",
               "link": ""
