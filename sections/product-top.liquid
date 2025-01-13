@@ -861,8 +861,6 @@
         if(btn.dataset.isSubscription === "true") {
           var prepaidPrice = e.currentTarget.querySelector('.simple-product-frequency').innerHTML
           var priceNumber = parseInt(prepaidPrice.match(/\d+/)[0], 10);
-          console.log(priceNumber); 
-           
           if(priceNumber > 69) {
             document.querySelector('.free-shipcol').classList.remove('hide') 
           } else{
