@@ -510,7 +510,7 @@
                   {% endif %}
                 </form>
                 <div class="subscription-value-prop-container hidden">
-                  <div class="col">
+                  <div class="col free-shipcol">
                     <div class="svg-container">
                       {% render 'icon-shipping' %}
                     </div>
@@ -862,8 +862,15 @@
           var prepaidPrice = e.currentTarget.querySelector('.simple-product-frequency').innerHTML
           var priceNumber = parseInt(prepaidPrice.match(/\d+/)[0], 10);
           console.log(priceNumber); 
+          free-shipcol
+          if(priceNumber > 69) {
+            document.querySelector('.free-shipcol').classList.remove('hidden')
+          } else{
+            document.querySelector('.free-shipcol').classList.add('hidden')
           }
-        if(btn.dataset.isSubscription === "true" && priceNumber > 69) {
+          
+          }
+        if(btn.dataset.isSubscription === "true") {
           
           document.querySelector('.subscription-value-prop-container').classList.remove('hidden')
         } else {
