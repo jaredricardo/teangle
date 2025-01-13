@@ -854,14 +854,17 @@
       btn.addEventListener('click', (e) => {
 
         const clickedPrice = e.currentTarget.querySelector('.price').innerHTML
-        const prepaidPrice = e.currentTarget.querySelector('.simple-product-frequency').innerHTML
+        
         simpleOptionButtons.forEach((btn) => {
           btn.querySelector('.dot--inner').classList.remove('active-option')  
         })
+        if(btn.dataset.isSubscription === "true") {
+          var prepaidPrice = e.currentTarget.querySelector('.simple-product-frequency').innerHTML
         
         var priceNumber = parseInt(prepaidPrice.match(/\d+/)[0], 10);
        
         console.log(priceNumber); 
+          }
         if(btn.dataset.isSubscription === "true" && priceNumber > 69) {
           
           document.querySelector('.subscription-value-prop-container').classList.remove('hidden')
