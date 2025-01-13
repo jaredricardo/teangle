@@ -110,7 +110,7 @@
           "610aad82-47d4-4ffb-aa5b-1c33b87be65b": {
             "type": "announcement",
             "settings": {
-              "text": "Free Shipping on Orders $60+ <u>SHOP NOW</u>",
+              "text": "Free Shipping on Orders $70+ <u>SHOP NOW</u>",
               "link_text": "",
               "link": "/collections/matcha-signature-teangle"
             }
@@ -357,7 +357,7 @@
             "type": "text",
             "disabled": true,
             "settings": {
-              "text": "Free Shipping on Orders $60+",
+              "text": "Free Shipping on Orders $70+",
               "link": ""
             }
           },
