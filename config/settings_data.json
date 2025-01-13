@@ -355,9 +355,8 @@
           },
           "e332a7dd-e091-4ba4-87eb-49087d6d38b5": {
             "type": "text",
-            "disabled": true,
             "settings": {
-              "text": "Free Shipping on Orders $70+",
+              "text": "Free Shipping on orders over $70 to Canada",
               "link": ""
             }
           },
@@ -403,7 +402,7 @@
           "bg_color": "#becdbe",
           "color": "#000000",
           "alternative-color": true,
-          "speed": 0,
+          "speed": 120,
           "align_icons_row": false
         }
       }
