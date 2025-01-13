@@ -859,7 +859,10 @@
           btn.querySelector('.dot--inner').classList.remove('active-option')  
         })
         console.log(clickedPrice);
-        if(btn.dataset.isSubscription === "true" && clickedPrice > 69) {
+        var priceNumber = parseInt(clickedPrice.match(/\d+/)[0], 10);
+       
+
+        if(btn.dataset.isSubscription === "true" && priceNumber > 69) {
           
           document.querySelector('.subscription-value-prop-container').classList.remove('hidden')
         } else {
