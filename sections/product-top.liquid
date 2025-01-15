@@ -415,7 +415,7 @@
                     {% endif %}
                   {% endfor %}
 
-                  <button data-plan-id="{{ single_plan_id }}" data-variant-id="{{ product.variants[0].id }}" data-is-subscription="true" {% unless product.available %} class="sold-out" {% endunless %}> 
+                  <button data-plan-id="{{ single_plan_id }}" data-variant-id="{{ product.variants[0].id }}" data-is-subscription="true" {% unless product.available %} class="sold-out" {% endunless %} data-no-free-shipping="true"> 
                     <div class="left">
                       <div class="circle--outer">
                         <div class="dot--inner"></div>
@@ -510,6 +510,12 @@
                   {% endif %}
                 </form>
                 <div class="subscription-value-prop-container hidden">
+                  <div class="col shipping-icon-container">
+                    <div class="svg-container">
+                      {% render 'icon-shipping' %}
+                    </div>
+                    <div class="value-text">Free Shipping</div>
+                  </div>
                   <div class="col">
                     <div class="svg-container">
                       {% render 'icon-cancel' %}
@@ -648,6 +654,7 @@
     }
 
     subSaveInput.addEventListener('click', (e) => {
+      console.log('clicked sub save')
       sellingPlans.disabled = false
       subscriptionActive = true
       _updateVariantFormData()
@@ -669,7 +676,8 @@
 
     })
 
-    otpInput.addEventListener('click', (e) => {     
+    otpInput.addEventListener('click', (e) => {    
+      console.log('clicked otp save') 
       sellingPlans.disabled = true 
       subscriptionActive = false
       variantFormItem.selling_plan = null
@@ -833,8 +841,6 @@
     return f
   }
 
-  ////////////////////////////
-
   // AB Javascript
 
   window.addEventListener('DOMContentLoaded', () => {
@@ -847,6 +853,8 @@
 
       btn.addEventListener('click', (e) => {
 
+        console.log('clicked')
+
         const clickedPrice = e.currentTarget.querySelector('.price').innerHTML
 
         simpleOptionButtons.forEach((btn) => {
@@ -854,6 +862,11 @@
         })
 
         if(btn.dataset.isSubscription === "true") {
+          if(btn.dataset.noFreeShipping === "true") {
+            document.querySelector('.subscription-value-prop-container .shipping-icon-container').classList.add('hidden')
+          } else {
+            document.querySelector('.subscription-value-prop-container .shipping-icon-container').classList.remove('hidden')
+          }
           document.querySelector('.subscription-value-prop-container').classList.remove('hidden')
         } else {
           document.querySelector('.subscription-value-prop-container').classList.add('hidden')

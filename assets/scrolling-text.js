@@ -13,8 +13,6 @@ if (typeof ScrollingText !== "function") {
 
                 function ScrollingText(box, speed) {
 
-                    console.log('!!!!!!')
-                    console.log(numBlocks)
                     if(numBlocks == 1) return
     
                     var inner_element = (box.children && box.children[0]) || null;

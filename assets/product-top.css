@@ -652,8 +652,8 @@
   text-transform: uppercase;
 }
 
-.subscription-value-prop-container.hidden {
-  display: none;
+.hidden {
+  display: none !important;
 }
 
 .pdp-ab .product--matcha-collagen .product-main-slide starting-slide {
