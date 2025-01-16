@@ -409,6 +409,7 @@
 
                   {% assign single_plan_price        = product.variants[0].selling_plan_allocations[0].price %}
                   {% assign single_savings_percent   = product.selling_plan_groups[0].selling_plans[0].price_adjustments[0].value %}
+
                   {% for group in product.selling_plan_groups %}
                     {% if group.app_id == 'SKIO' %}
                       {% assign single_plan_id = group.selling_plans[0].id %}
@@ -654,7 +655,6 @@
     }
 
     subSaveInput.addEventListener('click', (e) => {
-      console.log('clicked sub save')
       sellingPlans.disabled = false
       subscriptionActive = true
       _updateVariantFormData()
@@ -677,7 +677,6 @@
     })
 
     otpInput.addEventListener('click', (e) => {    
-      console.log('clicked otp save') 
       sellingPlans.disabled = true 
       subscriptionActive = false
       variantFormItem.selling_plan = null
@@ -794,11 +793,8 @@
       var selectElement = document.getElementById("selling-plans");
       var selectedOption = selectElement.options[selectElement.selectedIndex];
       var planId = selectedOption.getAttribute("data-plan-id");
-      console.log(planId);
 
       const correctSellingPlanForCurrentVariant = planId;
-
-      console.log(sellingPlanObj)
 
       if(subscriptionActive) {
         variantFormItem.selling_plan = correctSellingPlanForCurrentVariant
@@ -853,8 +849,6 @@
 
       btn.addEventListener('click', (e) => {
 
-        console.log('clicked')
-
         const clickedPrice = e.currentTarget.querySelector('.price').innerHTML
 
         simpleOptionButtons.forEach((btn) => {
@@ -898,7 +892,6 @@
           }
         }
 
-        console.log(btn.dataset.planId)
         if(btn.dataset.planId === undefined) {
           simpleForm.querySelector('.input-selling-plan').disabled = true
         } else {
