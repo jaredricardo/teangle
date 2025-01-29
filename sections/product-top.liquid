@@ -377,7 +377,7 @@
                 <div class="simple-options-buttons">
 
                   {% comment %} otp {% endcomment %}
-                  <button data-variant-id="{{ product.variants[0].id }}" data-is-subscription="false" {% unless product.available %} class="sold-out" {% endunless %}> 
+                  <button data-variant-id="{{ product.variants[0].id }}" data-is-thirty-servings="true" data-is-subscription="false" {% unless product.available %} class="sold-out" {% endunless %}> 
                     <div class="left">
                       <div class="circle--outer">
                         <div class="dot--inner active-option"></div>
@@ -416,7 +416,7 @@
                     {% endif %}
                   {% endfor %}
 
-                  <button data-plan-id="{{ single_plan_id }}" data-variant-id="{{ product.variants[0].id }}" data-is-subscription="true" {% unless product.available %} class="sold-out" {% endunless %} data-no-free-shipping="true"> 
+                  <button data-plan-id="{{ single_plan_id }}" data-variant-id="{{ product.variants[0].id }}" data-is-thirty-servings="true" data-is-subscription="true" {% unless product.available %} class="sold-out" {% endunless %} data-no-free-shipping="true"> 
                     <div class="left">
                       <div class="circle--outer">
                         <div class="dot--inner"></div>
@@ -459,7 +459,7 @@
                       {% endif %}
                     {% endfor %}
 
-                    <button data-plan-id="{{ chosen_plan_id }}" data-variant-id="{{ chosen_p.variants[0].id }}" data-is-subscription="true" class="auto-switch no-change-price {% unless product.available %} sold-out {% endunless %}" > 
+                    <button data-plan-id="{{ chosen_plan_id }}" data-variant-id="{{ chosen_p.variants[0].id }}" data-is-thirty-servings="false"data-is-subscription="true" class="auto-switch no-change-price {% unless product.available %} sold-out {% endunless %}" > 
                       <div class="left">
                         <div class="circle--outer">
                           <div class="dot--inner"></div>
@@ -850,6 +850,24 @@
       btn.addEventListener('click', (e) => {
 
         const clickedPrice = e.currentTarget.querySelector('.price').innerHTML
+        const allServingsCallouts = document.querySelectorAll('.sub-callout')
+
+        // replace servings callout with appropriate number of servings 
+
+        if(btn.dataset.isThirtyServings === "true") {
+         
+          if(iso === 'fr') {
+            allServingsCallouts.forEach((callout) => {callout.innerHTML = '30 portions par pot (approvisionnement de 1 mois)'})
+          } else {
+            allServingsCallouts.forEach((callout) => {callout.innerHTML = '30 servings per tub (1-month-supply)'})
+          }
+        } else {
+          if(iso === 'fr') {
+            allServingsCallouts.forEach((callout) => {callout.innerHTML = '30 portions par pot (approvisionnement de 3 mois)'})
+          } else {
+            allServingsCallouts.forEach((callout) => {callout.innerHTML = '30 servings per tub (3-month-supply)'})
+          }
+        }
 
         simpleOptionButtons.forEach((btn) => {
           btn.querySelector('.dot--inner').classList.remove('active-option')  
