@@ -362,7 +362,6 @@
           },
           "b9872e5e-3916-4a47-adac-531de967b8ac": {
             "type": "text",
-            "disabled": true,
             "settings": {
               "text": "Proudly Canadian 🇨🇦",
               "link": ""
@@ -403,7 +402,7 @@
           "bg_color": "#becdbe",
           "color": "#000000",
           "alternative-color": true,
-          "speed": 0,
+          "speed": 130,
           "align_icons_row": false
         }
       }
