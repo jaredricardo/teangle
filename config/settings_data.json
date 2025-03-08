@@ -175,6 +175,7 @@
           },
           "38075c7c-fc5f-4bf9-99e8-01e87a41bf75": {
             "type": "mega",
+            "disabled": true,
             "settings": {
               "mega_image": "shopify://shop_images/Untitled_design_11.png",
               "mega_title": "Matcha Tumbler",
