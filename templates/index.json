@@ -408,7 +408,6 @@
     },
     "1d43b673-0e08-4551-b692-fed1fce94bd3": {
       "type": "icons-and-image-text",
-      "disabled": true,
       "custom_css": [
         ".image-wrap img {border-radius: 20px;}",
         ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
@@ -470,7 +469,7 @@
     "1641763180ab99d00f",
     "eeaa9a58-5149-4edb-bd84-6735b8e4c5ce",
     "cbeef862-dbee-42e9-b022-4bed3277e134",
-    "1d43b673-0e08-4551-b692-fed1fce94bd3",
-    "9276e944-3cca-447d-a592-23523cdc229e"
+    "9276e944-3cca-447d-a592-23523cdc229e",
+    "1d43b673-0e08-4551-b692-fed1fce94bd3"
   ]
 }
