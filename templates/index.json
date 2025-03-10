@@ -243,7 +243,6 @@
         "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-2",
         "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-3"
       ],
-      "disabled": true,
       "custom_css": [],
       "settings": {
         "title": "As seen in",
@@ -406,6 +405,26 @@
         "divider": true
       }
     },
+    "9276e944-3cca-447d-a592-23523cdc229e": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".image-wrap img {border-radius: 20px;}",
+        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_4.png",
+        "image_width": 510,
+        "subtitle": "",
+        "title": "Our mission for balance",
+        "text": "<p>At Teangle, we believe balance isn’t the enemy of ambition—it’s the secret to thriving. Inspired by my mom’s selflessness, I created Teangle to help women reclaim their energy, find balance, and achieve success without sacrifice.</p><p>  -Phil, Founder</p>",
+        "button_label": "Learn more about the movement",
+        "button_link": "shopify://pages/about-teangle",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
     "1d43b673-0e08-4551-b692-fed1fce94bd3": {
       "type": "icons-and-image-text",
       "custom_css": [
@@ -437,36 +456,16 @@
         "layout": "right",
         "divider": false
       }
-    },
-    "9276e944-3cca-447d-a592-23523cdc229e": {
-      "type": "text-and-image",
-      "custom_css": [
-        ".image-wrap img {border-radius: 20px;}",
-        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/image_4.png",
-        "image_width": 510,
-        "subtitle": "",
-        "title": "Our mission for balance",
-        "text": "<p>At Teangle, we believe balance isn’t the enemy of ambition—it’s the secret to thriving. Inspired by my mom’s selflessness, I created Teangle to help women reclaim their energy, find balance, and achieve success without sacrifice.</p><p>  -Phil, Founder</p>",
-        "button_label": "Learn more about the movement",
-        "button_link": "shopify://pages/about-teangle",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "divider": false
-      }
     }
   },
   "order": [
     "ff04fe8e-3989-4e29-be10-2b3919db90ac",
     "jr_hp_hero_L6V6WV",
-    "jr_columns_i7YrXX",
     "scrolling_announcement_pCahRV",
-    "0c582d46-3982-4a95-81b4-dc9d778d38ff",
+    "jr_columns_i7YrXX",
     "9c3ab650-e9f8-40eb-b530-62b31a19c4c0",
     "1641763180ab99d00f",
+    "0c582d46-3982-4a95-81b4-dc9d778d38ff",
     "eeaa9a58-5149-4edb-bd84-6735b8e4c5ce",
     "cbeef862-dbee-42e9-b022-4bed3277e134",
     "9276e944-3cca-447d-a592-23523cdc229e",
