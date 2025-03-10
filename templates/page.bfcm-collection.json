@@ -137,10 +137,10 @@
           "type": "products",
           "settings": {
             "product_list": [
-              "matcha-discovery-bundle",
-              "la-vida-verde",
-              "le-trio-magique",
-              "the-foursome"
+              "discovery-matcha-bundle-draft",
+              "matcha-lovers-4-pack-draft",
+              "matcha-variety-3-pack-draft",
+              "ultimate-matcha-bundle-test"
             ],
             "filter_button_text": "Bundles",
             "filter_button_text_fr": "Ensembles",
