@@ -86,6 +86,8 @@
     "show_breadcrumbs": true,
     "show_breadcrumbs_collection_link": false,
     "hide_matcha_sub_box": true,
+    "bogo_ended_message_en": "PEPPERMINT BOGO HAS ENDED!",
+    "bogo_ended_message_fr": "PEPPERMINT BOGO HAS ENDED (FR)!",
     "checkout_logo_image": "shopify://shop_images/logo1.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
