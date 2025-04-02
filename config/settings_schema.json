@@ -1092,13 +1092,29 @@
         ]
     },
     {
-        "name": "Hide Matcha Sub Box",
+        "name": "Peppermint BOGO settings",
         "settings": [
             {
                 "type": "checkbox",
                 "id": "hide_matcha_sub_box",
                 "label": "Hide Matcha Sub Box",
                 "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "bogo_ended",
+                "label": "BOGO Ended",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "bogo_ended_message_en",
+                "label": "Bogo Ended Message (English)"
+            },
+            {
+                "type": "text",
+                "id": "bogo_ended_message_fr",
+                "label": "Bogo Ended Message (French)"
             }
         ]
     }

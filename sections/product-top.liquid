@@ -313,6 +313,34 @@ specific otp turn off for peppermint subscriptions
                       <div class="otp-price">{{ product.price | money }}</div>
                     </div>
                   </div>
+                  {% if settings.bogo_ended %}
+                    <style>
+                      .bogo-ended {
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: red;
+                        font-family: 'Courier New', Courier, monospace;
+                        margin-bottom: 0;
+                        margin-top: 20px;
+                        font-family: 'Cooper MBT LT' !important;
+                      }
+
+                      @media screen and (max-width: 768px) {
+                        .bogo-ended {
+                          font-size: 14px;
+                        }
+                      }
+                    </style>
+                    {% if product.handle == "teangle-peppermint-matcha" %}
+                      <p class="bogo-ended">
+                        {% if request.locale.iso_code == 'en' %}
+                           {{ settings.bogo_ended_message_en }}
+                          {% else %}
+                          {{ settings.bogo_ended_message_fr }}
+                        {% endif %}
+                      </p>
+                    {% endif %}
+                  {% endif %}
                   <div class="atc-btn btn solo-atc {% unless product.available %} btn-oos {% endunless %}">
                       <ly-as-1078945> 
                         {% if product.available %}
