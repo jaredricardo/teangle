@@ -38,6 +38,28 @@
 
 %}
 
+{% comment %} 
+
+specific otp turn off for peppermint subscriptions 
+
+{% endcomment %}
+
+{% if settings.hhide_matcha_sub_box%}
+  {% if product.handle == "teangle-peppermint-matcha" %}
+    <style>
+
+      .subscribe-save-otp-container {
+        display: none;
+      }
+
+      .atc-btn.btn.solo-atc  {
+        margin-top: 20px;
+      }
+
+    </style>
+  {% endif %}
+{% endif %}
+
 <script>
   // must be initialized before adding product data to global products on page, probably a way to do this using the window instead of multiple script tags at points on page
   const sellingPlanObj = {}
