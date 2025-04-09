@@ -120,17 +120,16 @@
           "type": "products",
           "settings": {
             "product_list": [
-              "healthy-delicious-matcha",
-              "ceremonial-matcha-2"
+              "healthy-delicious-matcha"
             ],
             "filter_button_text": "Matcha+",
             "filter_button_text_fr": "Matcha+",
             "product_section_header": "Matcha+",
-            "product_section_header_fr": "Matcha+",
-            "product_section_subheader": "Up to 40% Off",
-            "product_section_subheader_fr": "Jusqu'à 40% de rabais",
-            "section_description": "Our best selling matcha bags",
-            "section_description_fr": "Notre matcha signature et cérémonial"
+            "product_section_header_fr": "Pas de goût d’herbe ici",
+            "product_section_subheader": "Matcha that doesn’t taste like grass",
+            "product_section_subheader_fr": "Juste du bon matcha et l’énergie que tu mérites",
+            "section_description": "Just the energy you deserve",
+            "section_description_fr": "Juste du bon matcha et l’énergie que tu mérites"
           }
         },
         "products_DBwRMP": {

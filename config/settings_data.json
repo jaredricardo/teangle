@@ -149,6 +149,7 @@
           },
           "691b79fa-3a88-4a9c-9e7c-3ec249ff8bde": {
             "type": "mega",
+            "disabled": true,
             "settings": {
               "mega_image": "shopify://shop_images/CEREMONIAL_440x_d3599a7d-ec10-40c7-be2e-9602cd9eaa90.webp",
               "mega_title": "Ceremonial Matcha",
