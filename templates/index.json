@@ -167,6 +167,7 @@
         },
         "value_UATty4": {
           "type": "value",
+          "disabled": true,
           "settings": {
             "link": "shopify://pages/ceremonial-matcha",
             "link_text": "Shop Now",
