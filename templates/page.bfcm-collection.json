@@ -134,6 +134,7 @@
         },
         "products_DBwRMP": {
           "type": "products",
+          "disabled": true,
           "settings": {
             "product_list": [
               "matcha-discovery-bundle",
