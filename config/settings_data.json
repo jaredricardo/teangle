@@ -432,11 +432,6 @@
         "disabled": false,
         "settings": {}
       },
-      "3868600829136772411": {
-        "type": "shopify://apps/lyve-video-marketing-chat/blocks/app-embed/59c1ba16-2c38-422a-a2a9-23074d5a3fd9",
-        "disabled": false,
-        "settings": {}
-      },
       "10840395464443086010": {
         "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
         "disabled": false,
@@ -459,6 +454,11 @@
       },
       "1877152918344802950": {
         "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
+        "disabled": false,
+        "settings": {}
+      },
+      "7885500093077574326": {
+        "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
         "disabled": false,
         "settings": {}
       }
