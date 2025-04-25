@@ -297,7 +297,33 @@
     "replo_s_p_videowise_K4Gx3V": {
       "type": "replo-s-p-videowise",
       "name": "s_p - Videowise",
+      "settings": {
+        "replo_text_89f16ee6-a951-4170-b54a-92986c98ab48": "<p>The Delicious Matcha Collagen Everyone's Talking About</p>"
+      }
+    },
+    "replo_s_p_reviews_fL4LQx": {
+      "type": "replo-s-p-reviews",
+      "name": "s_p - Reviews",
       "settings": {}
+    },
+    "174561029589a75392": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_7FnDPr": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "matcha-collagen",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_7FnDPr"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
@@ -313,6 +339,8 @@
     "f3da4c40-ccae-4ecd-baed-e3e29b2b286c",
     "replo_s_p_5_reasons_Jknga7",
     "replo_s_p_comparison_Mak4tt",
-    "replo_s_p_videowise_K4Gx3V"
+    "replo_s_p_videowise_K4Gx3V",
+    "replo_s_p_reviews_fL4LQx",
+    "174561029589a75392"
   ]
 }
