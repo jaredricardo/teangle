@@ -361,6 +361,7 @@
           },
           "e332a7dd-e091-4ba4-87eb-49087d6d38b5": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "text": "Free Shipping on Orders $70+",
               "link": ""
@@ -408,7 +409,7 @@
           "bg_color": "#becdbe",
           "color": "#000000",
           "alternative-color": true,
-          "speed": 50,
+          "speed": 0,
           "align_icons_row": false
         }
       }
