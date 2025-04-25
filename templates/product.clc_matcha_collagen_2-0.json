@@ -325,9 +325,15 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "replo_s_p_hero_AHFzbD": {
+      "type": "replo-s-p-hero",
+      "name": "s_p - Hero",
+      "settings": {}
     }
   },
   "order": [
+    "replo_s_p_hero_AHFzbD",
     "main",
     "sub",
     "164720475056b2cb28",
