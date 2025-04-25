@@ -303,6 +303,7 @@
     },
     "replo_s_p_reviews_fL4LQx": {
       "type": "replo-s-p-reviews",
+      "disabled": true,
       "name": "s_p - Reviews",
       "settings": {}
     },
@@ -313,7 +314,7 @@
           "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "matcha-collagen",
-            "widget_type": "reviews_widget"
+            "widget_type": "combined_widget"
           }
         }
       },
