@@ -1,5 +1,8 @@
 {%- comment -%}replo-liquid-chunk-begin{%- endcomment -%}
     <script id="replo-deps-section-settings" data-section-id="{{ section.id }}">{
-      
+      {%- assign replo_text_89f16ee6-a951-4170-b54a-92986c98ab48 = section.settings['replo_text_89f16ee6-a951-4170-b54a-92986c98ab48'] -%}
+    {%- capture default_replo_text_89f16ee6-a951-4170-b54a-92986c98ab48 -%}<p>The Delicious Matcha Collagen Everyone's Talking About</p>{%- endcapture -%}
+    {%- assign replo_text_89f16ee6-a951-4170-b54a-92986c98ab48 = replo_text_89f16ee6-a951-4170-b54a-92986c98ab48 | default: default_replo_text_89f16ee6-a951-4170-b54a-92986c98ab48 -%}
+    "replo_text_89f16ee6-a951-4170-b54a-92986c98ab48": {{ replo_text_89f16ee6-a951-4170-b54a-92986c98ab48 | json }}
     }</script>
   {%- comment -%}replo-liquid-chunk-end{%- endcomment -%}

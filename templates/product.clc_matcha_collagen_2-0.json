@@ -281,6 +281,23 @@
         "layout": "right",
         "divider": false
       }
+    },
+    "replo_s_p_5_reasons_Jknga7": {
+      "type": "replo-s-p-5-reasons",
+      "name": "s_p - 5 Reasons",
+      "settings": {
+        "replo_text_bc9c81ef-7d2b-4309-b6f1-967c72728bfd": "<p>Why Over 100,000 Canadians Have Replaced Coffee With Teangle’s Delicious Matcha Collagen</p>"
+      }
+    },
+    "replo_s_p_comparison_Mak4tt": {
+      "type": "replo-s-p-comparison",
+      "name": "s_p - Comparison",
+      "settings": {}
+    },
+    "replo_s_p_videowise_K4Gx3V": {
+      "type": "replo-s-p-videowise",
+      "name": "s_p - Videowise",
+      "settings": {}
     }
   },
   "order": [
@@ -293,6 +310,9 @@
     "recently-viewed",
     "collection-return",
     "product-recommendations",
-    "f3da4c40-ccae-4ecd-baed-e3e29b2b286c"
+    "f3da4c40-ccae-4ecd-baed-e3e29b2b286c",
+    "replo_s_p_5_reasons_Jknga7",
+    "replo_s_p_comparison_Mak4tt",
+    "replo_s_p_videowise_K4Gx3V"
   ]
 }
