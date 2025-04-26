@@ -312,12 +312,6 @@
         "replo_text_89f16ee6-a951-4170-b54a-92986c98ab48": "<p>The Delicious Matcha Collagen Everyone's Talking About</p>"
       }
     },
-    "replo_s_p_reviews_fL4LQx": {
-      "type": "replo-s-p-reviews",
-      "disabled": true,
-      "name": "s_p - Reviews",
-      "settings": {}
-    },
     "174561029589a75392": {
       "type": "apps",
       "blocks": {
@@ -332,10 +326,16 @@
       "block_order": [
         "okendo_reviews_widget_7FnDPr"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "space_around": true
       }
+    },
+    "replo_s_p_reviews_jkGHtA": {
+      "type": "replo-s-p-reviews",
+      "name": "s_p - Reviews",
+      "settings": {}
     }
   },
   "order": [
@@ -354,7 +354,7 @@
     "replo_s_p_5_reasons_Jknga7",
     "replo_s_p_comparison_Mak4tt",
     "replo_s_p_videowise_K4Gx3V",
-    "replo_s_p_reviews_fL4LQx",
+    "replo_s_p_reviews_jkGHtA",
     "174561029589a75392"
   ]
 }
