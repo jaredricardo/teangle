@@ -312,6 +312,11 @@
         "replo_text_89f16ee6-a951-4170-b54a-92986c98ab48": "<p>The Delicious Matcha Collagen Everyone's Talking About</p>"
       }
     },
+    "replo_s_p_reviews_jkGHtA": {
+      "type": "replo-s-p-reviews",
+      "name": "s_p - Reviews",
+      "settings": {}
+    },
     "174561029589a75392": {
       "type": "apps",
       "blocks": {
@@ -332,10 +337,18 @@
         "space_around": true
       }
     },
-    "replo_s_p_reviews_jkGHtA": {
-      "type": "replo-s-p-reviews",
-      "name": "s_p - Reviews",
-      "settings": {}
+    "replo_s_p_faq_mC9TVd": {
+      "type": "replo-s-p-faq",
+      "name": "s_p - FAQ",
+      "settings": {
+        "replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236": "<p>Are you certified by a third party? ✅</p>",
+        "replo_text_ae4de7b7-ad66-400c-a8f5-e62dd5cb3529": "<p>What does it taste like ? 🐥</p>",
+        "replo_text_7e17e2f6-efa1-4a14-b87f-4ac057a63053": "<p>Best time to drink it? ⏰</p>",
+        "replo_text_7a604543-e4d4-46cd-be60-dbb21960507d": "<p>Do I have to get a subscription? 🧐</p>",
+        "replo_text_cb888d59-95f2-435c-8c8b-7877a294a43c": "<p>How much caffeine? 🍵</p>",
+        "replo_text_2f3d73c8-eb53-428b-91a4-9aec43ce0fb7": "<p>Do you have samples? 👀</p>",
+        "replo_text_6c8e9c47-f389-4d32-bf6a-d5b74e552dba": "<p>Question</p>"
+      }
     }
   },
   "order": [
@@ -355,6 +368,7 @@
     "replo_s_p_comparison_Mak4tt",
     "replo_s_p_videowise_K4Gx3V",
     "replo_s_p_reviews_jkGHtA",
+    "replo_s_p_faq_mC9TVd",
     "174561029589a75392"
   ]
 }
