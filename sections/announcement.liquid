@@ -721,6 +721,15 @@
       {%- endstyle -%}
     {%- endif -%}
     
+    {% if section.blocks.size > 0 %}
+      <script src="{{ 'ticker.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
+    
+    {% if section.settings.layout == 'slider' and section.blocks.size > 1 %}
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    {% endif %}
+    
     <div
       id="Announcement--{{ section.id }}"
       class="announcement__wrapper{% if is_top %} announcement__wrapper--top{% endif %}{% if show_border %} announcement__wrapper--borders{% endif %}"
@@ -1223,8 +1232,8 @@
     </style>
     
     <script>
-        /* Ticker.js implementation */
-        !function(){"use strict";const t="[data-ticker-scale]",e="[data-ticker-text]",i="data-clone",s="autoplay",c="speed",h="ticker--animated",r="ticker--unloaded",a="ticker__comparitor",o=1.63,n=100;customElements.get("ticker-bar")||customElements.define("ticker-bar",class extends HTMLElement{constructor(){super(),this.autoplay=this.hasAttribute(s),this.scale=this.querySelector(t),this.text=this.querySelector(e),this.speed=this.hasAttribute(c)?this.getAttribute(c):o,this.comparitor=this.text.cloneNode(!0),this.comparitor.classList.add(a),this.appendChild(this.comparitor),this.scale.classList.remove(r),this.checkWidthEvent=this.checkWidth.bind(this)}connectedCallback(){this.checkWidth(),this.addEventListener("theme:ticker:refresh",function(t,e){let i;return function(){if(t){const s=()=>t.apply(this,arguments);clearTimeout(i),i=setTimeout(s,e)}}}((()=>this.checkWidthEvent()),50)),screen.orientation.addEventListener("change",this.checkWidthEvent),document.addEventListener("theme:resize:width",this.checkWidthEvent)}disconnectedCallback(){document.removeEventListener("theme:resize:width",this.checkWidthEvent)}checkWidth(){this.text=this.querySelector(e);const t=2*window.getComputedStyle(this).paddingLeft.replace("px",""),s=this.clientWidth-t<this.comparitor.clientWidth;if(s||this.autoplay){this.text.classList.remove(h);const c=this.scale.querySelectorAll(`[${i}]`),r=this.autoplay?parseInt((window.innerWidth-t)/this.text.clientWidth):2;if(c?.forEach((t=>{t.remove()})),this.autoplay||s)for(let t=0;t<=r;t++){const t=this.text.cloneNode(!0);t.setAttribute(i,""),this.scale.appendChild(t)}const a=(this.text.clientWidth/n*Number(this.speed)).toFixed(2);this.scale.style.removeProperty("--animation-time"),this.scale.style.setProperty("--animation-time",`${a}s`),this.scale.querySelectorAll(e)?.forEach((t=>{t.classList.add(h)}))}else{this.text.classList.add(h);this.scale.querySelectorAll(`[${i}]`).forEach((t=>{t.parentNode.removeChild(t)})),this.text.classList.remove(h)}}})}();
+      /* Ticker.js implementation */
+      !function(){"use strict";const t="[data-ticker-scale]",e="[data-ticker-text]",i="data-clone",s="autoplay",c="speed",h="ticker--animated",r="ticker--unloaded",a="ticker__comparitor",o=1.63,n=100;customElements.get("ticker-bar")||customElements.define("ticker-bar",class extends HTMLElement{constructor(){super(),this.autoplay=this.hasAttribute(s),this.scale=this.querySelector(t),this.text=this.querySelector(e),this.speed=this.hasAttribute(c)?this.getAttribute(c):o,this.comparitor=this.text.cloneNode(!0),this.comparitor.classList.add(a),this.appendChild(this.comparitor),this.scale.classList.remove(r),this.checkWidthEvent=this.checkWidth.bind(this)}connectedCallback(){this.checkWidth(),this.addEventListener("theme:ticker:refresh",function(t,e){let i;return function(){if(t){const s=()=>t.apply(this,arguments);clearTimeout(i),i=setTimeout(s,e)}}}((()=>this.checkWidthEvent()),50)),screen.orientation.addEventListener("change",this.checkWidthEvent),document.addEventListener("theme:resize:width",this.checkWidthEvent)}disconnectedCallback(){document.removeEventListener("theme:resize:width",this.checkWidthEvent)}checkWidth(){this.text=this.querySelector(e);const t=2*window.getComputedStyle(this).paddingLeft.replace("px",""),s=this.clientWidth-t<this.comparitor.clientWidth;if(s||this.autoplay){this.text.classList.remove(h);const c=this.scale.querySelectorAll(`[${i}]`),r=this.autoplay?parseInt((window.innerWidth-t)/this.text.clientWidth):2;if(c?.forEach((t=>{t.remove()})),this.autoplay||s)for(let t=0;t<=r;t++){const t=this.text.cloneNode(!0);t.setAttribute(i,""),this.scale.appendChild(t)}const a=(this.text.clientWidth/n*Number(this.speed)).toFixed(2);this.scale.style.removeProperty("--animation-time"),this.scale.style.setProperty("--animation-time",`${a}s`),this.scale.querySelectorAll(e)?.forEach((t=>{t.classList.add(h)}))}else{this.text.classList.add(h);this.scale.querySelectorAll(`[${i}]`).forEach((t=>{t.parentNode.removeChild(t)})),this.text.classList.remove(h)}}})}();
     </script>
     
     <script>
@@ -1235,12 +1244,13 @@
     
           this.slider = this.querySelector('[data-slider]');
           this.slidesCount = this.querySelectorAll('.announcement__slide').length;
-          this.initSliderEvent = (event) => this.initSlider(event);
+          this.sliderOptions = this.slider?.dataset.options ? JSON.parse(this.slider.dataset.options) : {};
         }
     
         connectedCallback() {
-          if (this.slider) {
-            this.initSliders();
+          if (this.slider && this.slidesCount > 1) {
+            // Initialize slider immediately if we have multiple slides
+            this.initSlider();
           }
     
           this.addEventListener('theme:block:select', (e) => {
@@ -1279,80 +1289,25 @@
           document.dispatchEvent(new CustomEvent('theme:announcement:init', {bubbles: true}));
         }
     
-        initSliders() {
-          this.initSlider();
-          document.addEventListener('theme:resize:width', this.initSliderEvent);
-    
-          this.addEventListener('theme:slider:loaded', () => {
-            this.querySelectorAll('ticker-bar')?.forEach((ticker) => {
-              ticker.dispatchEvent(new CustomEvent('theme:ticker:refresh'));
-            });
-          });
-        }
-    
         initSlider() {
-          // Always initialize slider regardless of viewport size
-          // First, clean up any existing slider
-          if (this.slider.flkty) {
-            this.slider.flkty.destroy();
-          }
+          if (!this.slider || this.slidesCount <= 1) return;
           
-          // Check if Flickity is available, load it as a fallback if needed
-          const initFlickity = () => {
-            if (window.themeVendor && window.themeVendor.Flickity) {
-              const options = this.slider.dataset.options ? JSON.parse(this.slider.dataset.options) : {};
-              this.slider.flkty = new window.themeVendor.Flickity(this.slider, {
-                fade: options.fade !== undefined ? options.fade : true,
-                pageDots: options.pageDots !== undefined ? options.pageDots : false,
-                adaptiveHeight: options.adaptiveHeight !== undefined ? options.adaptiveHeight : false,
-                autoPlay: options.autoPlay !== undefined ? options.autoPlay : 7000,
-                prevNextButtons: options.prevNextButtons !== undefined ? options.prevNextButtons : false,
-                draggable: options.draggable !== undefined ? options.draggable : ">1"
-              });
-              this.dispatchEvent(new CustomEvent('theme:slider:loaded'));
-            } else if (window.Flickity) {
-              const options = this.slider.dataset.options ? JSON.parse(this.slider.dataset.options) : {};
-              this.slider.flkty = new Flickity(this.slider, {
-                fade: options.fade !== undefined ? options.fade : true,
-                pageDots: options.pageDots !== undefined ? options.pageDots : false,
-                adaptiveHeight: options.adaptiveHeight !== undefined ? options.adaptiveHeight : false,
-                autoPlay: options.autoPlay !== undefined ? options.autoPlay : 7000,
-                prevNextButtons: options.prevNextButtons !== undefined ? options.prevNextButtons : false,
-                draggable: options.draggable !== undefined ? options.draggable : ">1"
-              });
-              this.dispatchEvent(new CustomEvent('theme:slider:loaded'));
-            } else {
-              console.warn('Flickity not found. Loading from CDN...');
-              const flickityScript = document.createElement('script');
-              flickityScript.src = 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js';
-              document.head.appendChild(flickityScript);
-              
-              flickityScript.onload = () => {
-                const options = this.slider.dataset.options ? JSON.parse(this.slider.dataset.options) : {};
-                this.slider.flkty = new Flickity(this.slider, {
-                  fade: options.fade !== undefined ? options.fade : true,
-                  pageDots: options.pageDots !== undefined ? options.pageDots : false,
-                  adaptiveHeight: options.adaptiveHeight !== undefined ? options.adaptiveHeight : false,
-                  autoPlay: options.autoPlay !== undefined ? options.autoPlay : 7000,
-                  prevNextButtons: options.prevNextButtons !== undefined ? options.prevNextButtons : false,
-                  draggable: options.draggable !== undefined ? options.draggable : ">1"
-                });
-                this.dispatchEvent(new CustomEvent('theme:slider:loaded'));
-              };
-              
-              // Also load the CSS if needed
-              if (!document.querySelector('link[href*="flickity"]')) {
-                const flickityCSS = document.createElement('link');
-                flickityCSS.rel = 'stylesheet';
-                flickityCSS.href = 'https://unpkg.com/flickity@2/dist/flickity.min.css';
-                document.head.appendChild(flickityCSS);
-              }
+          // Use Flickity directly without any conditional logic
+          if (typeof Flickity !== 'undefined') {
+            if (this.slider.flkty) {
+              this.slider.flkty.destroy();
             }
-          };
-          
-          // Initialize the slider if we have more than one slide
-          if (this.slidesCount > 1) {
-            initFlickity();
+            
+            this.slider.flkty = new Flickity(this.slider, {
+              fade: true,
+              pageDots: false,
+              adaptiveHeight: false,
+              autoPlay: {{ section.settings.slider_speed | times: 1000 }},
+              prevNextButtons: {{ section.settings.show_arrows }},
+              draggable: true
+            });
+          } else {
+            console.error('Flickity not found. Slider will not function properly.');
           }
         }
     
@@ -1382,24 +1337,16 @@
     
         onBlockDeselect(e) {
           if (this.slider && this.slider.flkty) {
-            const options = this.slider.dataset.options ? JSON.parse(this.slider.dataset.options) : {};
-            const autoPlay = options.autoPlay || 7000;
-            if (autoPlay > 0) {
+            if ({{ section.settings.slider_speed }} > 0) {
               this.slider.flkty.playPlayer();
             }
           }
         }
     
         disconnectedCallback() {
-          document.removeEventListener('theme:resize:width', this.initSliderEvent);
-    
-          this.removeEventListener('theme:block:select', (e) => {
-            this.onBlockSelect(e);
-          });
-    
-          this.removeEventListener('theme:block:deselect', (e) => {
-            this.onBlockDeselect(e);
-          });
+          if (this.slider && this.slider.flkty) {
+            this.slider.flkty.destroy();
+          }
         }
       }
     
@@ -1407,33 +1354,29 @@
         customElements.define('announcement-bar', AnnouncementBar);
       }
     
-      // Helper functions to mimic theme functionality
+      // Force initialization when page loads
       document.addEventListener('DOMContentLoaded', function() {
-        // Initialize announcement bars
+        // Initialize all announcement bars with sliders
         document.querySelectorAll('announcement-bar').forEach(bar => {
-          // Force refresh any ticker bars
+          // Force slider initialization
+          if (typeof bar.initSlider === 'function') {
+            bar.initSlider();
+            
+            // Add backup initialization with a delay to ensure Flickity is loaded
+            setTimeout(() => {
+              if (typeof Flickity !== 'undefined') {
+                const slider = bar.querySelector('[data-slider]');
+                if (slider && !slider.classList.contains('flickity-enabled') && slider.children.length > 1) {
+                  bar.initSlider();
+                }
+              }
+            }, 500);
+          }
+          
+          // Force refresh ticker bars
           bar.querySelectorAll('ticker-bar')?.forEach(ticker => {
             ticker.dispatchEvent(new CustomEvent('theme:ticker:refresh'));
           });
-          
-          // Ensure sliders are initialized
-          const slider = bar.querySelector('[data-slider]');
-          if (slider && !slider.classList.contains('flickity-enabled') && slider.children.length > 1) {
-            // Force initialization of the slider
-            const announceBar = bar;
-            if (typeof announceBar.initSlider === 'function') {
-              announceBar.initSlider();
-            }
-          }
-        });
-        
-        // Dispatch resize events for responsive behavior
-        let resizeTimer;
-        window.addEventListener('resize', function() {
-          clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(function() {
-            document.dispatchEvent(new CustomEvent('theme:resize:width'));
-          }, 250);
         });
       });
     </script>
