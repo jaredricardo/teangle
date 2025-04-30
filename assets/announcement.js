@@ -98,7 +98,7 @@
 
     onBlockDeselect(e) {
       if (this.slider && this.slider.flkty) {
-        if ({{ section.settings.slider_speed }} > 0) {
+        if (this.sliderOptions.autoPlay > 0) {
           this.slider.flkty.playPlayer();
         }
       }
