@@ -1296,7 +1296,7 @@
       if (!this.slider || this.slidesCount <= 1) return;
 
       // Use Flickity directly without any conditional logic
-      if (typeof Flickity !== 'undefined') {
+      if (Flickity) {
         if (this.slider.flkty) {
           this.slider.flkty.destroy();
         }
