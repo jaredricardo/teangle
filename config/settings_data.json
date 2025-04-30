@@ -425,7 +425,7 @@
           "text_nMajUw": {
             "type": "text",
             "settings": {
-              "text": "<p>New customers save 10% with code <strong>GET10</strong></p>",
+              "text": "<p>New customers save 10% with code <strong>GET1000</strong></p>",
               "target_url_enabled": false,
               "target_url": "",
               "target_referrer_enabled": false,
