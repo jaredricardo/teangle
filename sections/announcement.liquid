@@ -287,10 +287,8 @@
 {%- liquid
   assign is_top = false
   assign show_browser_error = false
-  if section.location == 'header'
     assign is_top = true
     assign show_browser_error = true
-  endif
 
   assign href = request.origin | append: request.path
   assign padding_top = section.settings.padding_top | default: 0
