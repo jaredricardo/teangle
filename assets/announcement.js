@@ -6,7 +6,6 @@
       this.slider = this.querySelector('[data-slider]');
       this.slidesCount = this.querySelectorAll('.announcement__slide').length;
       this.sliderOptions = this.slider?.dataset.options ? JSON.parse(this.slider.dataset.options) : {};
-      console.log(this.sliderOptions)
     }
 
     connectedCallback() {
@@ -64,9 +63,9 @@
           fade: true,
           pageDots: false,
           adaptiveHeight: false,
-          autoPlay: {{ section.settings.slider_speed | times: 1000 }},
-          prevNextButtons: {{ section.settings.show_arrows }},
-          draggable: true
+          autoPlay: this.sliderOptions.autoPlay,
+          prevNextButtons: this.sliderOptions.prevNextButtons,
+          draggable: false
         });
       } else {
         console.error('Flickity not found. Slider will not function properly.');
