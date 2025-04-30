@@ -130,7 +130,8 @@
     {
       "type": "color",
       "id": "border_color",
-      "label": "Border"
+      "label": "Border",
+      "default": "#1c1d1d"
     },
     {
       "type": "header",
@@ -157,6 +158,7 @@
       "default": 5
     }
   ],
+
   "blocks" : [
     {
       "type": "text",
@@ -217,77 +219,7 @@
         }
       ]
     },
-    {
-      "type": "message",
-      "name": "Free shipping message",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show_wheel",
-          "label": "Show progress wheel",
-          "default": false
-        },
-        {
-          "type": "textarea",
-          "id": "message",
-          "label": "Message",
-          "info": "Use ||amount|| to display progress towards free shipping.",
-          "default": "You are ||amount|| away from free shipping."
-        },
-        {
-          "type": "paragraph",
-          "content": "Navigate to Theme settings -> \"Cart -> Free shipping message\" to set the amount."
-        },
-        {
-          "type": "header",
-          "content": "Target page"
-        },
-        {
-          "id": "target_url_enabled",
-          "type": "checkbox",
-          "label": "Limit to specific page"
-        },
-        {
-          "id": "target_url",
-          "type": "url",
-          "label": "Targeted page"
-        },
-        {
-          "type": "header",
-          "content": "Target referrer"
-        },
-        {
-          "id": "target_referrer_enabled",
-          "type": "checkbox",
-          "label": "Limit to specific referrer path"
-        },
-        {
-          "id": "target_referrer",
-          "type": "text",
-          "label": "Targeted referrer"
-        },
-        {
-          "type": "header",
-          "content": "Target device"
-        },
-        {
-          "id": "target_device_enabled",
-          "type": "checkbox",
-          "label": "Limit to desktop or mobile"
-        },
-        {
-          "type": "select",
-          "id": "target_device",
-          "label": "Device ",
-          "default": "mobile",
-          "options": [
-            {"value": "mobile", "label": "Only show on mobile"},
-            {"value": "desktop", "label": "Only show on desktop"}
-          ]
-        }
-      ]
-    },
+    
     {
       "type": "code",
       "name": "Custom code",
@@ -346,56 +278,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "countdown",
-      "name": "Countdown timer",
-      "settings": [
-        {
-          "type": "text",
-          "id": "end_date",
-          "label": "End date",
-          "placeholder": "2023-12-31 23:59",
-          "default": "2024-12-31",
-          "info": "Use format \"YYYY-MM-DD\". Expiration date is based on the [store primary timezone](/admin/settings/general)."
-        },
-        {
-          "type": "text",
-          "id": "end_time",
-          "label": "End time",
-          "default": "11:59",
-          "placeholder": "11:59",
-          "info": "Use 12-hour time convention in format \"HH:MM\""
-        },
-        {
-          "type": "radio",
-          "id": "period",
-          "label": "AM/PM",
-          "options": [
-            { "value": "am", "label": "AM" },
-            { "value": "pm", "label": "PM" }
-          ],
-          "default": "am"
-        },
-        {
-          "type": "richtext",
-          "id": "end_message",
-          "label": "End of timer message",
-          "default": "<p>Offer has expired</p>"
-        },
-        {
-          "type": "checkbox",
-          "id": "hide_on_complete",
-          "label": "Hide block after end of timer",
-          "default": true
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text",
-          "default": "<p>Limited time offer</p>"
-        }
-      ]
     }
   ]
 }
@@ -403,12 +285,10 @@
 
 <!-- @prettify-ignore -->
 {%- liquid
-  assign is_top = false
+
   assign show_browser_error = false
-  if section.location == 'header'
     assign is_top = true
     assign show_browser_error = true
-  endif
 
   assign href = request.origin | append: request.path
   assign padding_top = section.settings.padding_top | default: 0
@@ -432,10 +312,9 @@
   assign blocks_counter = 0
   assign block_count_desktop = 0
   assign block_count_mobile = 0
-  assign announcement_height = 'max(var(--font-' | append: text_font_size | append: ') * var(--line-height-normal)), 36px)'
+  assign announcement_height = 'max(36px, 24px)'
   assign announcement_modifier = ''
   assign style_root = ''
-  assign marquee_time = 1.63
 -%}
 
 {%- for block in section.blocks -%}
@@ -463,6 +342,15 @@
         echo '--text:' | append: color | append: ';'
       endcapture
     endunless
+
+    comment
+      100px going to move for 1.63s
+    endcomment
+    assign marquee_time = 1.63
+
+    if section.settings.layout == 'slider'
+      assign classes = classes | append: ' announcement__bar'
+    endif
 
     assign show_bar = true
 
@@ -502,136 +390,136 @@
   -%}
 
   {%- capture block_attributes -%}
-    {%- if classes != blank -%}
-      class="{{ classes }}"
-    {%- endif -%}
+  {%- if classes != blank -%}
+    class="{{ classes }}"
+  {%- endif -%}
 
-    data-slide="{{ block.id }}"
-    data-slide-index="{{ forloop.index0 }}"
-    data-block-id="{{ block.id }}"
-    {{ block.shopify_attributes }}
-  {%- endcapture -%}
+  data-slide="{{ block.id }}"
+  data-slide-index="{{ forloop.index0 }}"
+  data-block-id="{{ block.id }}"
+  {{ block.shopify_attributes }}
+{%- endcapture -%}
 
   {%- if show_bar -%}
     {%- capture block_content -%}
-      {%- if block.type == 'image' -%}
-        {%- liquid
-          assign image = block.settings.image
-          assign image_aspect_ratio = image.aspect_ratio | default: 1
-          assign image_width = block.settings.image_width
-          assign sizes = image_width | append: 'px'
-          assign width = image_width | times: 2
-          assign width_retina = image_width | times: 2
-          assign widths = '100, 120, 140, 160, 180, 200, 240, 280, 320, 360, ' | append: image_width | append: ', ' | append: width_retina
-        -%}
+    {%- if block.type == 'image' -%}
+      {%- liquid
+        assign image = block.settings.image
+        assign image_aspect_ratio = image.aspect_ratio | default: 1
+        assign image_width = block.settings.image_width
+        assign sizes = image_width | append: 'px'
+        assign width = image_width | times: 2
+        assign width_retina = image_width | times: 2
+        assign widths = '100, 120, 140, 160, 180, 200, 240, 280, 320, 360, ' | append: image_width | append: ', ' | append: width_retina
+      -%}
 
-        <div{% if section.settings.layout == 'slider' %} data-ticker-text{% endif %} class="announcement__image" style="width: {{ image_width }}px; height: {{ image_width | divided_by: image_aspect_ratio }}px; --mobile-image-width:{{ image_width | divided_by: 1.6 }}px;">
-          {%- render 'image' image: image, sizes: sizes, width: width, widths: widths, show_backfill: false -%}
-        </div>
-      {%- else -%}
-        <div class="{{ font_class | strip }}">
-          {%- case block.type -%}
-            {%- when 'heading' -%}
+      <div{% if section.settings.layout == 'slider' %} data-ticker-text{% endif %} class="announcement__image" style="width: {{ image_width }}px; height: {{ image_width | divided_by: image_aspect_ratio }}px; --mobile-image-width:{{ image_width | divided_by: 1.6 }}px;">
+        {%- render 'image' image: image, sizes: sizes, width: width, widths: widths, show_backfill: false -%}
+      </div>
+    {%- else -%}
+      <div class="{{ font_class | strip }}">
+        {%- case block.type -%}
+          {%- when 'heading' -%}
 
-              {%- if block.settings.heading != blank -%}
-                {{ block.settings.heading }}
-              {%- endif -%}
+            {%- if block.settings.heading != blank -%}
+              {{ block.settings.heading }}
+            {%- endif -%}
 
-            {%- when 'text' -%}
+          {%- when 'text' -%}
 
-              {%- if block.settings.text != blank -%}
-                {{ block.settings.text | replace: '|', '<span class="announcement__divider"></span>' }}
-              {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              {{ block.settings.text | replace: '|', '<span class="announcement__divider"></span>' }}
+            {%- endif -%}
 
-            {%- when 'message' -%}
-              {%- if block.settings.message -%}
-                {%- render 'free-shipping' message: block.settings.message, gradient: block.settings.free_shipping_gradient, show_wheel: block.settings.show_wheel, show_progress_bar: false -%}
-              {%- endif -%}
+          {%- when 'message' -%}
+            {%- if block.settings.message -%}
+              {%- render 'free-shipping' message: block.settings.message, gradient: block.settings.free_shipping_gradient, show_wheel: block.settings.show_wheel, show_progress_bar: false -%}
+            {%- endif -%}
 
-            {%- when 'code' -%}
-              {%- if block.settings.code != blank -%}
-                {{ block.settings.code }}
-              {%- endif -%}
+          {%- when 'code' -%}
+            {%- if block.settings.code != blank -%}
+              {{ block.settings.code }}
+            {%- endif -%}
 
-            {%- when 'countdown' -%}
-              <div class="countdown-block" data-countdown-block>
-                <div class="countdown-block__text">
-                  {%- if block.settings.text != blank -%}
-                    {{ block.settings.text }}
-                  {%- endif -%}
-                </div>
-
-                <div class="countdown-block__timer">
-                  {%- render 'countdown-timer',
-                    digits_size_desktop: 1,
-                    digits_size_mobile: 1,
-                    end_date: block.settings.end_date,
-                    end_time: block.settings.end_time,
-                    period: block.settings.period,
-                    end_message: block.settings.end_message,
-                    hide_on_complete: block.settings.hide_on_complete,
-                  -%}
-                </div>
+          {%- when 'countdown' -%}
+            <div class="countdown-block" data-countdown-block>
+              <div class="countdown-block__text">
+                {%- if block.settings.text != blank -%}
+                  {{ block.settings.text }}
+                {%- endif -%}
               </div>
 
-            {%- when 'collection' -%}
-              {%- assign collection = collections[block.settings.collection] -%}
+              <div class="countdown-block__timer">
+                {%- render 'countdown-timer',
+                  digits_size_desktop: 1,
+                  digits_size_mobile: 1,
+                  end_date: block.settings.end_date,
+                  end_time: block.settings.end_time,
+                  period: block.settings.period,
+                  end_message: block.settings.end_message,
+                  hide_on_complete: block.settings.hide_on_complete,
+                -%}
+              </div>
+            </div>
 
-              <span>
-                {%- if collection != empty -%}
-                  {{ collection.title }}
+          {%- when 'collection' -%}
+            {%- assign collection = collections[block.settings.collection] -%}
 
-                  {%- render 'superscript', superscript_collection: collection -%}
-                {%- else -%}
-                  {{ 'collections.general.items.heading' | t }}
-                {%- endif -%}
-              </span>
+            <span>
+              {%- if collection != empty -%}
+                {{ collection.title }}
 
-            {%- when 'advanced-text' -%}
-              {%- if block.settings.text != blank -%}
-                {%- assign scrolling_font = block.settings.type_font -%}
-
-                {%- style -%}
-                  #Announcement--{{ section.id }} .announcement__content--{{ block.id }} {
-                    --scrolling-font-family: {{ scrolling_font.family }}, {{ scrolling_font.fallback_families }};
-                    --scrolling-font-size: {{ block.settings.text_font_size_px }}px;
-                    --scrolling-font-style: {{ scrolling_font.style }};
-                    --scrolling-font-weight: {{ scrolling_font.weight }};
-                    --scrolling-letter-spacing: {{ block.settings.type_letter_spacing | divided_by: 1000.0 | append: 'em' }};
-                  }
-                  {{ scrolling_font | font_face: font_display: 'swap' }}
-                {%- endstyle -%}
-
-                <div class="announcement__content announcement__content--{{ block.id }}">
-                  {{ block.settings.text | replace: '|', '<span class="announcement__divider"></span>' }}
-                </div>
+                {%- render 'superscript', superscript_collection: collection -%}
+              {%- else -%}
+                {{ 'collections.general.items.heading' | t }}
               {%- endif -%}
-          {%- endcase -%}
-        </div>
-      {%- endif -%}
-    {%- endcapture -%}
+            </span>
+
+          {%- when 'advanced-text' -%}
+            {%- if block.settings.text != blank -%}
+              {%- assign scrolling_font = block.settings.type_font -%}
+
+              {%- style -%}
+                #Announcement--{{ section.id }} .announcement__content--{{ block.id }} {
+                  --scrolling-font-family: {{ scrolling_font.family }}, {{ scrolling_font.fallback_families }};
+                  --scrolling-font-size: {{ block.settings.text_font_size_px }}px;
+                  --scrolling-font-style: {{ scrolling_font.style }};
+                  --scrolling-font-weight: {{ scrolling_font.weight }};
+                  --scrolling-letter-spacing: {{ block.settings.type_letter_spacing | divided_by: 1000.0 | append: 'em' }};
+                }
+                {{ scrolling_font | font_face: font_display: 'swap' }}
+              {%- endstyle -%}
+
+              <div class="announcement__content announcement__content--{{ block.id }}">
+                {{ block.settings.text | replace: '|', '<span class="announcement__divider"></span>' }}
+              </div>
+            {%- endif -%}
+        {%- endcase -%}
+      </div>
+    {%- endif -%}
+  {%- endcapture -%}
 
     {%- capture bar_html -%}
-      {%- if section.settings.layout == 'marquee' -%}
-        <div class="announcement__slide{{ target_device_class }}" style="{{ block_style }}" {{ block.shopify_attributes }}>
-          {{ block_content }}
-        </div>
-      {%- else -%}
-        <ticker-bar style="{{ block_style }}" {{ block_attributes }}>
-          <div data-ticker-frame class="announcement__message">
-            <div data-ticker-scale class="announcement__scale ticker--unloaded">
-              {%- if block.type == 'image' -%}
+    {%- if section.settings.layout == 'marquee' -%}
+      <div class="announcement__slide{{ target_device_class }}" style="{{ block_style }}" {{ block.shopify_attributes }}>
+        {{ block_content }}
+      </div>
+    {%- else -%}
+      <ticker-bar style="{{ block_style }}" {{ block_attributes }}>
+        <div data-ticker-frame class="announcement__message">
+          <div data-ticker-scale class="announcement__scale ticker--unloaded">
+            {%- if block.type == 'image' -%}
+              {{ block_content }}
+            {%- else -%}
+              <div data-ticker-text class="announcement__text">
                 {{ block_content }}
-              {%- else -%}
-                <div data-ticker-text class="announcement__text">
-                  {{ block_content }}
-                </div>
-              {%- endif -%}
-            </div>
+              </div>
+            {%- endif -%}
           </div>
-        </ticker-bar>
-      {%- endif -%}
-    {%- endcapture -%}
+        </div>
+      </ticker-bar>
+    {%- endif -%}
+  {%- endcapture -%}
 
     {%- assign bar_markup = bar_markup | append: bar_html -%}
     {%- assign blocks_counter = blocks_counter | plus: 1 -%}
@@ -639,61 +527,61 @@
 {%- endfor -%}
 
 {%- capture style -%}
-  --PT: {{ padding_top }}px;
-  --PB: {{ padding_bottom }}px;
+--PT: {{ padding_top }}px;
+--PB: {{ padding_bottom }}px;
 
-  --ticker-direction: {{ section.settings.direction | default: 'ticker-rtl' }};
+--ticker-direction: {{ section.settings.direction | default: 'ticker-rtl' }};
 
-  {%- unless color_scheme -%}
-    {%- unless bg_color == 'rgba(0,0,0,0)' or bg_color == blank -%}
-      --bg: {{ bg_color }};
-      --bg-transparent: {{ bg_color | color_modify: 'alpha', 0 }};
-    {%- else -%}
-      --bg: transparent;
-    {%- endunless -%}
+{%- unless color_scheme -%}
+  {%- unless bg_color == 'rgba(0,0,0,0)' or bg_color == blank -%}
+    --bg: {{ bg_color }};
+    --bg-transparent: {{ bg_color | color_modify: 'alpha', 0 }};
+  {%- else -%}
+    --bg: transparent;
   {%- endunless -%}
+{%- endunless -%}
 
-  {%- unless text_color == 'rgba(0,0,0,0)' or text_color == blank -%}
-    --text: {{ text_color }};
-    --link: {{ text_color }};
-    --link-hover: {{ text_color }};
-  {%- endunless -%}
+{%- unless text_color == 'rgba(0,0,0,0)' or text_color == blank -%}
+  --text: {{ text_color }};
+  --link: {{ text_color }};
+  --link-hover: {{ text_color }};
+{%- endunless -%}
 
-  {%- unless border_color == 'rgba(0,0,0,0)' or border_color == blank -%}
-    --border: {{ border_color }};
-  {%- endunless -%}
+{%- unless border_color == 'rgba(0,0,0,0)' or border_color == blank -%}
+  --border: {{ border_color }};
+{%- endunless -%}
 
-  --text-size: var(--font-{{ text_font_size }});
-  --text-align: {{ text_align }};
-  --justify-content: {{ justify_content }};
+--text-size: var(--font-{{ text_font_size }});
+--text-align: {{ text_align }};
+--justify-content: {{ justify_content }};
 {%- endcapture -%}
 
 {%- if blocks_counter == 0 -%}
   {%- capture style_root -%}
-    {{ style_root }}
-    --ANNOUNCEMENT-HEIGHT-DESKTOP: 0px;
-    --ANNOUNCEMENT-HEIGHT-MOBILE: 0px;
-  {%- endcapture -%}
+  {{ style_root }}
+  --ANNOUNCEMENT-HEIGHT-DESKTOP: 0px;
+  --ANNOUNCEMENT-HEIGHT-MOBILE: 0px;
+{%- endcapture -%}
 {%- elsif blocks_counter == block_count_desktop -%}
   {%- assign announcement_modifier = ' announcement__bar-outer--desktop' -%}
   {%- capture style_root -%}
-    {{ style_root }}
-    --ANNOUNCEMENT-HEIGHT-DESKTOP: {{ announcement_height }};
-    --ANNOUNCEMENT-HEIGHT-MOBILE: 0px;
-  {%- endcapture -%}
+  {{ style_root }}
+  --ANNOUNCEMENT-HEIGHT-DESKTOP: {{ announcement_height }};
+  --ANNOUNCEMENT-HEIGHT-MOBILE: 0px;
+{%- endcapture -%}
 {%- elsif blocks_counter == block_count_mobile -%}
   {%- assign announcement_modifier = ' announcement__bar-outer--mobile' -%}
   {%- capture style_root -%}
-    {{ style_root }}
-    --ANNOUNCEMENT-HEIGHT-DESKTOP: 0px;
-    --ANNOUNCEMENT-HEIGHT-MOBILE: {{ announcement_height }};
-  {%- endcapture -%}
+  {{ style_root }}
+  --ANNOUNCEMENT-HEIGHT-DESKTOP: 0px;
+  --ANNOUNCEMENT-HEIGHT-MOBILE: {{ announcement_height }};
+{%- endcapture -%}
 {%- else -%}
   {%- capture style_root -%}
-    {{ style_root }}
-    --ANNOUNCEMENT-HEIGHT-DESKTOP: {{ announcement_height }};
-    --ANNOUNCEMENT-HEIGHT-MOBILE: {{ announcement_height }};
-  {%- endcapture -%}
+  {{ style_root }}
+  --ANNOUNCEMENT-HEIGHT-DESKTOP: {{ announcement_height }};
+  --ANNOUNCEMENT-HEIGHT-MOBILE: {{ announcement_height }};
+{%- endcapture -%}
 {%- endif -%}
 
 {%- if is_top -%}
@@ -706,14 +594,17 @@
 
 {%- if section.blocks.size > 0 -%}
   <script src="{{ 'ticker.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'announcement.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<div id="Announcement--{{ section.id }}"
+<div
+  id="Announcement--{{ section.id }}"
   class="announcement__wrapper{% if is_top %} announcement__wrapper--top{% endif %}{% if show_border %} announcement__wrapper--borders{% endif %} {{ color_scheme }}"
   data-announcement-wrapper
   data-section-id="{{ section.id }}"
   data-section-type="announcement"
-  style="{{ style }}">
+  style="{{ style }}"
+>
   {%- if show_browser_error -%}
     <div class="announcement__bar announcement__bar--error section-padding">
       <div class="announcement__message">
@@ -726,20 +617,23 @@
 
   {%- if is_top == false and section.settings.background_image != blank -%}
     <div class="announcement__bg-image">
-      {%- render 'image' image: section.settings.background_image, sizes: '100vw', cover: true -%}
+      {%- render 'image', image: section.settings.background_image, sizes: '100vw', cover: true -%}
     </div>
   {%- endif -%}
 
   {%- if section.blocks.size > 0 -%}
     {%- if bar_markup != blank -%}
-      <announcement-bar class="announcement__bar-outer section-padding{{ announcement_modifier }}"
-        style="--padding-scrolling: {{ section.settings.message_spacing }}px;">
+      <announcement-bar
+        class="announcement__bar-outer section-padding{{ announcement_modifier }}"
+        style="--padding-scrolling: {{ section.settings.message_spacing }}px;"
+      >
         {%- if section.settings.layout == 'slider' -%}
-
           <div class="announcement__bar-holder announcement__bar-holder--slider{% if show_arrows and section.blocks.size > 1 %} announcement__bar-holder--arrows{% endif %}">
-            <div class="announcement__slider"
+            <div
+              class="announcement__slider"
               data-slider
-              data-options='{"fade": true, "pageDots": false, "adaptiveHeight": false, "autoPlay": {{ section.settings.slider_speed | times: 1000 }}, "prevNextButtons": {{ show_arrows }}, "draggable": ">1"}'>
+              data-options='{"fade": true, "pageDots": false, "adaptiveHeight": false, "autoPlay": {{ section.settings.slider_speed | times: 1000 }}, "prevNextButtons": {{ show_arrows }}, "draggable": ">1"}'
+            >
               {{ bar_markup }}
             </div>
           </div>
@@ -748,12 +642,14 @@
         {%- if section.settings.layout == 'marquee' -%}
           <div class="announcement__bar-holder announcement__bar-holder--marquee">
             <div class="announcement__bar">
-
               {%- comment -%}
                 The "autoplay" attribute forces ticker to start playing by cloning its text elements 10 times
               {%- endcomment -%}
 
-              <ticker-bar autoplay speed="{{ 100.0 | divided_by: section.settings.marquee_speed | times: marquee_time }}">
+              <ticker-bar
+                autoplay
+                speed="{{ 100.0 | divided_by: section.settings.marquee_speed | times: marquee_time }}"
+              >
                 <div data-ticker-frame class="announcement__message">
                   <div data-ticker-scale class="announcement__scale ticker--unloaded">
                     <div data-ticker-text class="announcement__text">
@@ -784,587 +680,532 @@
 {%- endif -%}
 
 <style>
-/* Announcement Bar CSS */
-announcement-bar {
-  --padding: var(--padding-scrolling, var(--outer));
-  display: block;
-}
-
-.announcement__wrapper {
-  --icon-offset: 0.2;
-  --icon-size: max(var(--text-size) * 0.8, 18px);
-  --btn-size: var(--icon-size);
-  position: relative;
-  overflow: hidden;
-  background: var(--bg);
-  line-height: var(--line-height-normal);
-  transition: opacity 0.5s ease;
-}
-.announcement__wrapper .free-shipping__graph svg {
-  width: var(--icon-size);
-  height: var(--icon-size);
-}
-
-html:not(.no-js) body:not(.is-loaded) .announcement__wrapper {
-  opacity: 0;
-}
-
-.announcement__wrapper--top {
-  z-index: 5500;
-}
-
-.announcement__wrapper--top.announcement__wrapper--borders {
-  border-top: 0;
-}
-
-.announcement__wrapper--borders {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.js .announcement__bar-holder--slider div:not(.flickity-enabled) .announcement__slide + .announcement__slide {
-  opacity: 0;
-}
-
-@keyframes ticker-rtl {
-  0% {
-    transform: none;
-    visibility: visible;
+  /* Announcement Bar CSS */
+  announcement-bar {
+    --padding: var(--padding-scrolling, var(--outer));
+    display: block;
   }
-  100% {
-    transform: translateX(-100%);
+  announcement-bar.section-padding {
+    --padding-top: var(--PT);
+    --padding-bottom: var(--PB);
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    /* min-height: var(--ANNOUNCEMENT-HEIGHT-MOBILE); */
+}
+
+  .announcement__wrapper {
+    --icon-offset: 0.2;
+    --icon-size: max(var(--text-size) * 0.8, 18px);
+    --btn-size: var(--icon-size);
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+    line-height: var(--line-height-normal);
   }
-}
-@keyframes ticker-ltr {
-  0% {
-    transform: translateX(-100%);
-    visibility: visible;
+  .announcement__wrapper .free-shipping__graph svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
   }
-  100% {
-    transform: none;
+
+
+  .announcement__wrapper--top {
+    z-index: 5500;
   }
-}
-.announcement__bar .flickity-slider {
-  display: flex;
-  align-items: center;
-}
 
-.announcement__slide {
-  padding: 0 var(--padding) 0 0;
-  width: 100%;
-  color: var(--text);
-}
-@media (max-width: 749px){
-  .scrolling-icons .announcement__slide {
-    padding: 0 calc(var(--padding) / 2) 0 0;
+  .announcement__wrapper--top.announcement__wrapper--borders {
+    border-top: 0;
   }
-  .scrolling-icons .announcement__image{
-    width: var(--mobile-image-width) !important;
+
+  .announcement__wrapper--borders {
+    border-bottom: 1px solid var(--border, {{ settings.color_borders }});
   }
-}
-.announcement__slide.announcement__bar {
-  padding: 0 var(--outer);
-}
 
-.announcement__slide > div {
-  display: flex;
-  min-height: var(--announcement-height);
-  align-items: center;
-  justify-content: var(--justify-content, center);
-}
-
-.announcement__content {
-  font-family: var(--scrolling-font-family, inherit);
-  font-size: var(--scrolling-font-size, inherit);
-  font-style: var(--scrolling-font-style, inherit);
-  font-weight: var(--scrolling-font-weight, inherit);
-  letter-spacing: var(--scrolling-letter-spacing, normal);
-}
-
-.announcement__content strong {
-  font-weight: var(--scrolling-font-weight-bold, var(--FONT-WEIGHT-BODY-BOLD));
-}
-
-.announcement__bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.announcement__slide:not(.announcement__bar) {
-  white-space: nowrap;
-}
-
-.announcement__slide:not(.announcement__bar) > * {
-  width: 100%;
-}
-
-.announcement__bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-
-.announcement__bar:not(.desktop):not(.mobile) {
-  width: 100%;
-}
-
-.announcement__bar.desktop {
-  width: 100%;
-}
-@media only screen and (max-width: 749px) {
-  .announcement__bar.desktop {
-    display: none;
+  .js .announcement__bar-holder--slider div:not(.flickity-enabled) .announcement__slide + .announcement__slide {
+    opacity: 0;
   }
-}
 
-@media only screen and (min-width: 750px) {
-  .announcement__bar.mobile {
-    display: none;
-    width: 0;
+  @keyframes ticker-rtl {
+    0% {
+      transform: none;
+      visibility: visible;
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-}
-@media only screen and (max-width: 749px) {
-  .announcement__bar.mobile {
+  @keyframes ticker-ltr {
+    0% {
+      transform: translateX(-100%);
+      visibility: visible;
+    }
+    100% {
+      transform: none;
+    }
+  }
+  .announcement__bar .flickity-slider {
+    display: flex;
+    align-items: center;
+  }
+
+  .announcement__slide {
+    padding: 0 var(--padding) 0 0;
+    width: 100%;
+    color: var(--text, {{ settings.color_announcement_text }});
+    text-align: var(--text-align, center);
+  }
+  @media (max-width: 749px){
+    .scrolling-icons .announcement__slide {
+      padding: 0 calc(var(--padding) / 2) 0 0;
+    }
+    .scrolling-icons .announcement__image{
+      width: var(--mobile-image-width) !important;
+    }
+  }
+  .announcement__slide.announcement__bar {
+    padding: 0 var(--outer);
+    min-height: var(--ANNOUNCEMENT-HEIGHT-MOBILE);
+  }
+
+  .announcement__slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: var(--justify-content, center);
+  }
+
+  .announcement__content {
+    font-family: var(--scrolling-font-family, inherit);
+    font-size: var(--scrolling-font-size, inherit);
+    font-style: var(--scrolling-font-style, inherit);
+    font-weight: var(--scrolling-font-weight, inherit);
+    letter-spacing: var(--scrolling-letter-spacing, normal);
+  }
+
+  .announcement__content strong {
+    font-weight: var(--scrolling-font-weight-bold, var(--FONT-WEIGHT-BODY-BOLD));
+  }
+
+  .announcement__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .announcement__slide:not(.announcement__bar) {
+    white-space: nowrap;
+  }
+
+  .announcement__slide:not(.announcement__bar) > * {
     width: 100%;
   }
-}
 
-.announcement__bar .icon {
-  fill: currentcolor;
-}
+  .announcement__bar {
+    display: flex;
+    justify-content: var(--justify-content, center);
+    align-items: center;
+    text-align: var(--text-align, center);
+  }
 
-.announcement__bar--error {
-  display: none;
-}
+  .announcement__bar:not(.desktop):not(.mobile) {
+    width: 100%;
+  }
 
-.announcement__main {
-  font-family: var(--FONT-STACK-BODY);
-  font-weight: var(--FONT-WEIGHT-BODY-BOLD);
-  font-style: var(--FONT-STYLE-BODY);
-  letter-spacing: var(--LETTER-SPACING-BODY);
-}
+  .announcement__bar.desktop {
+    width: 100%;
+  }
+  @media only screen and (max-width: 749px) {
+    .announcement__bar.desktop {
+      display: none;
+    }
+  }
 
-.announcement__text {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  white-space: nowrap;
-  min-height: var(--announcement-height);
-}
-.announcement__text p,
-.announcement__text h1,
-.announcement__text h2,
-.announcement__text h3,
-.announcement__text h4,
-.announcement__text h5,
-.announcement__text h6 {
-  font-family: inherit;
-  margin: 0;
-}
+  @media only screen and (min-width: 750px) {
+    .announcement__bar.mobile {
+      display: none;
+      width: 0;
+    }
+  }
+  @media only screen and (max-width: 749px) {
+    .announcement__bar.mobile {
+      width: 100%;
+    }
+  }
 
-.announcement__text.ticker--animated > .announcement__slide:first-child {
-  padding-left: 0;
-}
+  .announcement__bar .icon {
+    fill: currentcolor;
+  }
 
-.announcement__bar-holder--marquee .announcement__text {
-  min-height: 0;
-}
-
-.announcement__bar-holder--marquee .announcement__slide {
-  min-height: var(--announcement-height);
-}
-
-.announcement__text > div {
-  display: inline-flex;
-  align-items: center;
-}
-
-@media only screen and (min-width: 750px) {
-  .announcement__text > .mobile {
+  .announcement__bar--error {
     display: none;
   }
-}
 
-@media only screen and (max-width: 749px) {
-  .announcement__text > .desktop {
+  .announcement__main {
+    font-family: var(--FONT-STACK-BODY);
+    font-weight: var(--FONT-WEIGHT-BODY-BOLD);
+    font-style: var(--FONT-STYLE-BODY);
+    letter-spacing: var(--LETTER-SPACING-BODY);
+  }
+
+  .announcement__text {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    white-space: nowrap;
+    font-size: var(--text-size, 14px);
+  }
+  .announcement__text p,
+  .announcement__text h1,
+  .announcement__text h2,
+  .announcement__text h3,
+  .announcement__text h4,
+  .announcement__text h5,
+  .announcement__text h6 {
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .announcement__text.ticker--animated > .announcement__slide:first-child {
+    padding-left: 0;
+  }
+
+  .announcement__bar-holder--marquee .announcement__text {
+    min-height: 0;
+  }
+
+  .announcement__bar-holder--marquee .announcement__slide {
+  }
+
+  .announcement__text > div {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 750px) {
+    .announcement__text > .mobile {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 749px) {
+    .announcement__text > .desktop {
+      display: none;
+    }
+  }
+
+  .announcement__text a {
+    position: relative;
+  }
+
+  .announcement__text .free-shipping {
+    padding: 0;
+    border: none;
+    font-size: inherit;
+    line-height: inherit;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .announcement__text .free-shipping circle + circle {
+    stroke: currentcolor;
+  }
+
+  .announcement__divider {
+    margin-left: 10px;
+    width: 0;
+    height: 10%;
+    border-left: 1px solid currentcolor;
+  }
+
+  .announcement__message {
+    width: 100%;
+    text-align: var(--text-align, center);
+    font-size: var(--text-size, 14px);
+  }
+
+  .announcement__scale {
+    display: inline-flex;
+    transition: opacity 0.5s linear;
+  }
+
+  .announcement__scale.ticker--unloaded {
+    width: max-content;
+  }
+
+  .announcement__bar-holder--slider > div {
+    justify-content: var(--justify-content, center);
+  }
+
+  .announcement__bar-holder--slider.flickity-enabled .announcement__scale.ticker--unloaded {
+    position: static;
+  }
+
+  .announcement__image {
+    display: block;
+    margin: 0 auto;
+  }
+  .announcement__image.svg-placeholder {
+    background-color: transparent;
+  }
+
+  html:not(.js) .announcement__scale.ticker--unloaded {
+    opacity: 1;
+    position: static;
+    width: auto;
+  }
+
+  .ticker--animated {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: var(--ticker-direction);
+    animation-duration: var(--animation-time);
+    animation-play-state: paused;
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+  }
+  .ticker--animated:hover {
+    animation-play-state: paused;
+  }
+
+  .announcement__slide:not(:only-child):not(.is-selected) .ticker--animated {
+    animation-play-state: paused;
+  }
+
+  .announcement__bar-holder {
+    position: relative;
+  }
+  .announcement__bar-holder .flickity-slider {
+    display: flex;
+    align-items: center;
+  }
+
+  .announcement__slider:not(.flickity-enabled) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .announcement__slider:not(.flickity-enabled)::-webkit-scrollbar {
     display: none;
   }
-}
-
-.announcement__text a {
-  position: relative;
-}
-
-.announcement__text .free-shipping {
-  padding: 0;
-  border: none;
-  font-size: inherit;
-  line-height: inherit;
-  flex-wrap: nowrap;
-  position: relative;
-}
-
-.announcement__text .free-shipping circle + circle {
-  stroke: currentcolor;
-}
-
-.announcement__divider {
-  margin-left: 10px;
-  width: 0;
-  height: 10%;
-  border-left: 1px solid currentcolor;
-}
-
-.announcement__message {
-  width: 100%;
-  text-align: var(--text-align, center);
-  font-size: 0;
-}
-
-.announcement__scale {
-  display: inline-flex;
-  transition: opacity 0.5s linear;
-}
-
-.announcement__scale.ticker--unloaded {
-  width: max-content;
-}
-
-.announcement__bar-holder--slider > div {
-  justify-content: var(--justify-content, center);
-}
-
-.announcement__bar-holder--slider.flickity-enabled .announcement__scale.ticker--unloaded {
-  position: static;
-}
-
-.announcement__image {
-  display: block;
-  margin: 0 auto;
-}
-.announcement__image.svg-placeholder {
-  background-color: transparent;
-}
-
-html:not(.js) .announcement__scale.ticker--unloaded {
-  opacity: 1;
-  position: static;
-  width: auto;
-}
-
-.ticker--animated {
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: var(--ticker-direction);
-  animation-duration: var(--animation-time);
-  animation-play-state: paused;
-  display: inline-flex;
-  align-items: center;
-  width: max-content;
-}
-.ticker--animated:hover {
-  animation-play-state: paused;
-}
-
-.announcement__slide:not(:only-child):not(.is-selected) .ticker--animated {
-  animation-play-state: paused;
-}
-
-.announcement__bar-holder {
-  position: relative;
-}
-.announcement__bar-holder .flickity-slider {
-  display: flex;
-  align-items: center;
-}
-
-.announcement__slider:not(.flickity-enabled) {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: auto;
-  justify-content: flex-start;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.announcement__slider:not(.flickity-enabled)::-webkit-scrollbar {
-  display: none;
-}
-.announcement__slider:not(.flickity-enabled) .announcement__slide {
-  flex: 1 0 100%;
-}
-
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) {
-  --arrow-space: var(--icon-size);
-  --arrow-space-offset: calc(var(--arrow-space) * -1);
-  margin-left: calc(var(--outer) + var(--icon-size));
-  margin-right: calc(var(--outer) + var(--icon-size));
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .announcement__slide.announcement__bar {
-  padding: 0 20px;
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-viewport::before, 
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-viewport::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  width: calc(var(--arrow-space) + 20px);
-  pointer-events: none;
-  transition: transform 0.2s ease-in-out;
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-viewport::before {
-  left: var(--arrow-space-offset);
-  background: linear-gradient(90deg, var(--COLOR-BG) 80%, var(--COLOR-BG-TRANSPARENT, rgba(255, 255, 255, 0)) 100%);
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-viewport::after {
-  right: var(--arrow-space-offset);
-  background: linear-gradient(-90deg, var(--COLOR-BG) 80%, var(--COLOR-BG-TRANSPARENT, rgba(255, 255, 255, 0)) 100%);
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button {
-  --icon-size: inherit;
-  --btn-size: inherit;
-  display: block;
-  background-color: transparent;
-  overflow: unset;
-  box-shadow: none;
-  z-index: 2;
-  opacity: 1;
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40px;
-  height: 40px;
-  transform: translate(-50%, -50%);
-  background: transparent;
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button::before {
-  background-color: var(--text);
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button.previous {
-  transform: none;
-  left: var(--arrow-space-offset);
-}
-.announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button.next {
-  transform: none;
-  right: var(--arrow-space-offset);
-}
-
-.no-js .announcement__bar-holder--slider .announcement__bar {
-  top: 0;
-  transform: none;
-}
-
-.announcement__bar-outer {
-  width: 100%;
-}
-
-@media only screen and (max-width: 749px) {
-  .announcement__bar-outer--desktop {
-    padding-top: 0;
-    padding-bottom: 0;
+  .announcement__slider:not(.flickity-enabled) .announcement__slide {
+    flex: 1 0 100%;
   }
-}
 
-@media only screen and (min-width: 750px) {
-  .announcement__bar-outer--mobile {
-    padding-top: 0;
-    padding-bottom: 0;
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) {
+    --arrow-space: var(--icon-size);
+    --arrow-space-offset: calc(var(--arrow-space) * -1);
+    margin-left: calc(var(--outer) + var(--icon-size));
+    margin-right: calc(var(--outer) + var(--icon-size));
   }
-}
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .announcement__slide.announcement__bar {
+    padding: 0 20px;
+  }
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-viewport::before,
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-viewport::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    width: calc(var(--arrow-space) + 20px);
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+  }
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-viewport::before {
+    left: var(--arrow-space-offset);
+    background: linear-gradient(90deg, var(--COLOR-BG) 80%, var(--COLOR-BG-TRANSPARENT, rgba(255, 255, 255, 0)) 100%);
+  }
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-viewport::after {
+    right: var(--arrow-space-offset);
+    background: linear-gradient(-90deg, var(--COLOR-BG) 80%, var(--COLOR-BG-TRANSPARENT, rgba(255, 255, 255, 0)) 100%);
+  }
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button {
+    --icon-size: inherit;
+    --btn-size: inherit;
+    display: block;
+    background-color: transparent;
+    overflow: unset;
+    box-shadow: none;
+    z-index: 2;
+    opacity: 1;
+  }
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    background: transparent;
+  }
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button::before {
+    background-color: var(--text, {{ settings.color_announcement_text }});
+  }
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button.previous {
+    transform: none;
+    left: var(--arrow-space-offset);
+  }
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button.next {
+    transform: none;
+    right: var(--arrow-space-offset);
+  }
 
-.announcement__bar-outer:not(:hover) .is-selected ticker-bar:not([paused]) .ticker--animated,
-.announcement__bar-outer:not(:hover) ticker-bar[autoplay]:not([paused]) .ticker--animated,
-.announcement__bar-outer:not(:hover) ticker-bar[data-slide]:not([paused]) .ticker--animated {
-  animation-play-state: running;
-}
+  .no-js .announcement__bar-holder--slider .announcement__bar {
+    top: 0;
+    transform: none;
+  }
 
-html.supports-touch .is-selected ticker-bar:not([paused]) .ticker--animated,
-html.supports-touch ticker-bar[autoplay]:not([paused]) .ticker--animated,
-html.supports-touch ticker-bar[data-slide]:not([paused]) .ticker--animated {
-  animation-play-state: running;
-}
+  .announcement__bar-outer {
+    width: 100%;
+  }
 
-.ticker__comparitor {
-  position: absolute;
-  transform: translateY(-5000px);
-  visibility: hidden;
-}
+  @media only screen and (max-width: 749px) {
+    .announcement__bar-outer--desktop {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 
-.ie .announcement__bar--error {
-  display: block;
-  height: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+  @media only screen and (min-width: 750px) {
+    .announcement__bar-outer--mobile {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .announcement__bar-outer:not(:hover) .is-selected ticker-bar:not([paused]) .ticker--animated,
+  .announcement__bar-outer:not(:hover) ticker-bar[autoplay]:not([paused]) .ticker--animated,
+  .announcement__bar-outer:not(:hover) ticker-bar[data-slide]:not([paused]) .ticker--animated {
+    animation-play-state: running;
+  }
+
+  html.supports-touch .is-selected ticker-bar:not([paused]) .ticker--animated,
+  html.supports-touch ticker-bar[autoplay]:not([paused]) .ticker--animated,
+  html.supports-touch ticker-bar[data-slide]:not([paused]) .ticker--animated {
+    animation-play-state: running;
+  }
+
+  .ticker__comparitor {
+    position: absolute;
+    transform: translateY(-5000px);
+    visibility: hidden;
+  }
+
+  .ie .announcement__bar--error {
+    display: block;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 </style>
 
 <script>
-/* Ticker.js implementation */
-!function(){"use strict";const t="[data-ticker-scale]",e="[data-ticker-text]",i="data-clone",s="autoplay",c="speed",h="ticker--animated",r="ticker--unloaded",a="ticker__comparitor",o=1.63,n=100;customElements.get("ticker-bar")||customElements.define("ticker-bar",class extends HTMLElement{constructor(){super(),this.autoplay=this.hasAttribute(s),this.scale=this.querySelector(t),this.text=this.querySelector(e),this.speed=this.hasAttribute(c)?this.getAttribute(c):o,this.comparitor=this.text.cloneNode(!0),this.comparitor.classList.add(a),this.appendChild(this.comparitor),this.scale.classList.remove(r),this.checkWidthEvent=this.checkWidth.bind(this)}connectedCallback(){this.checkWidth(),this.addEventListener("theme:ticker:refresh",function(t,e){let i;return function(){if(t){const s=()=>t.apply(this,arguments);clearTimeout(i),i=setTimeout(s,e)}}}((()=>this.checkWidthEvent()),50)),screen.orientation.addEventListener("change",this.checkWidthEvent),document.addEventListener("theme:resize:width",this.checkWidthEvent)}disconnectedCallback(){document.removeEventListener("theme:resize:width",this.checkWidthEvent)}checkWidth(){this.text=this.querySelector(e);const t=2*window.getComputedStyle(this).paddingLeft.replace("px",""),s=this.clientWidth-t<this.comparitor.clientWidth;if(s||this.autoplay){this.text.classList.remove(h);const c=this.scale.querySelectorAll(`[${i}]`),r=this.autoplay?parseInt((window.innerWidth-t)/this.text.clientWidth):2;if(c?.forEach((t=>{t.remove()})),this.autoplay||s)for(let t=0;t<=r;t++){const t=this.text.cloneNode(!0);t.setAttribute(i,""),this.scale.appendChild(t)}const a=(this.text.clientWidth/n*Number(this.speed)).toFixed(2);this.scale.style.removeProperty("--animation-time"),this.scale.style.setProperty("--animation-time",`${a}s`),this.scale.querySelectorAll(e)?.forEach((t=>{t.classList.add(h)}))}else{this.text.classList.add(h);this.scale.querySelectorAll(`[${i}]`).forEach((t=>{t.parentNode.removeChild(t)})),this.text.classList.remove(h)}}})}();
+
 </script>
 
-<script>
-/* JavaScript implementation for AnnouncementBar */
-class AnnouncementBar extends HTMLElement {
-  constructor() {
-    super();
-
-    this.slider = this.querySelector('[data-slider]');
-    this.enableSlider = window.innerWidth >= 750; // isDesktop
-    this.slidesCount = this.querySelectorAll('.announcement__slide').length;
-    this.initSliderEvent = (event) => this.initSlider(event);
+<style>
+  /* Theme color overrides */
+  .announcement__wrapper {
+    background-color: var(--bg, {{ settings.color_announcement }});
+    color: var(--text, {{ settings.color_announcement_text }});
+    border-color: var(--border, {{ settings.color_borders }});
   }
 
-  connectedCallback() {
-    if (this.slider) {
-      this.initSliders();
-    }
-
-    this.addEventListener('theme:block:select', (e) => {
-      this.onBlockSelect(e);
-    });
-
-    this.addEventListener('theme:block:deselect', (e) => {
-      this.onBlockDeselect(e);
-    });
-
-    this.addEventListener('theme:countdown:hide', (e) => {
-      if (window.Shopify && window.Shopify.designMode) return;
-
-      const isMarquee = e.target.closest('.announcement__bar-holder--marquee');
-
-      if (this.slidesCount === 1) {
-        const tickerBar = this.querySelector('ticker-bar');
-        tickerBar.style.display = 'none';
-      }
-
-      if (isMarquee) {
-        const tickerText = e.target.closest('.announcement__slide');
-        this.removeTickerText(tickerText);
-      } else {
-        const slide = e.target.closest('[data-slide]');
-        this.removeSlide(slide);
-      }
-    });
-
-    this.addEventListener('theme:countdown:expire', () => {
-      this.querySelectorAll('ticker-bar')?.forEach((ticker) => {
-        ticker.dispatchEvent(new CustomEvent('theme:ticker:refresh'));
-      });
-    });
-
-    document.dispatchEvent(new CustomEvent('theme:announcement:init', {bubbles: true}));
+  .announcement__wrapper--borders {
+    border-bottom: 1px solid var(--border, {{ settings.color_borders }});
   }
 
-  initSliders() {
-    this.initSlider();
-    document.addEventListener('theme:resize:width', this.initSliderEvent);
-
-    this.addEventListener('theme:slider:loaded', () => {
-      this.querySelectorAll('ticker-bar')?.forEach((ticker) => {
-        ticker.dispatchEvent(new CustomEvent('theme:ticker:refresh'));
-      });
-    });
+  .announcement__slide,
+  .announcement__text,
+  .announcement__content {
+    color: var({{ settings.color_announcement_text }}, --text);
   }
 
-  initSlider() {
-    const isDesktopView = window.innerWidth >= 750;
-    const isMobileView = !isDesktopView;
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button::before {
+    background-color: var(--text, {{ settings.color_announcement_text }});
+  }
+</style>
 
-    if ((isDesktopView && this.enableSlider) || (isMobileView && !this.enableSlider)) {
-      if (this.slider.flkty) {
-        this.slider.flkty.destroy();
-      }
-
-      if (isDesktopView && this.enableSlider) {
-        this.enableSlider = false;
-      } else if (isMobileView && !this.enableSlider) {
-        this.enableSlider = true;
-      }
-
-      // Note: Slider initialization would typically be handled by a Slider class
-      // For this standalone implementation, we'll use Flickity directly if available
-      if (window.Flickity) {
-        this.slider.flkty = new Flickity(this.slider, {
-          fade: true, 
-          pageDots: false, 
-          adaptiveHeight: false, 
-          autoPlay: parseInt(this.slider.dataset.options?.autoPlay || 7000), 
-          prevNextButtons: this.slider.dataset.options?.prevNextButtons || false, 
-          draggable: ">1"
-        });
-        this.dispatchEvent(new CustomEvent('theme:slider:loaded'));
-      }
-    }
+<style>
+  /* Theme color overrides */
+  .announcement__wrapper {
+    background-color: var(--bg, {{ settings.color_announcement }});
+    color: var(--text, {{ settings.color_announcement_text }});
+    border-color: var(--border, {{ settings.color_borders }});
   }
 
-  removeSlide(slide) {
-    if (this.slider.flkty) {
-      this.slider.flkty.remove(slide);
-      
-      if (this.slider.flkty.cells.length === 0) {
-        this.closest('.announcement__wrapper').classList.add('hidden');
-      }
-    }
+  .announcement__wrapper--borders {
+    border-bottom: 1px solid var(--border, {{ settings.color_borders }});
   }
 
-  removeTickerText(tickerText) {
-    const ticker = tickerText.closest('ticker-bar');
-    tickerText.remove();
-    ticker.dispatchEvent(new CustomEvent('theme:ticker:refresh'));
+  .announcement__slide,
+  .announcement__text,
+  .announcement__content {
+    color: var(--text, {{ settings.color_announcement_text }});
+    text-align: var(--text-align, center);
   }
 
-  onBlockSelect(e) {
-    if (this.slider && this.slider.flkty) {
-      const index = parseInt(e.detail.blockId.split('-').pop()) - 1;
-      this.slider.flkty.select(index);
-      this.slider.flkty.pausePlayer();
-    }
+  .announcement__bar {
+    justify-content: var(--justify-content, center);
   }
 
-  onBlockDeselect(e) {
-    if (this.slider && this.slider.flkty) {
-      const autoPlay = parseInt(this.slider.dataset.options?.autoPlay || 7000);
-      if (autoPlay > 0) {
-        this.slider.flkty.playPlayer();
-      }
-    }
+  .announcement__message {
+    font-size: var(--text-size, 14px);
   }
 
-  disconnectedCallback() {
-    document.removeEventListener('theme:resize:width', this.initSliderEvent);
-
-    this.removeEventListener('theme:block:select', (e) => {
-      this.onBlockSelect(e);
-    });
-
-    this.removeEventListener('theme:block:deselect', (e) => {
-      this.onBlockDeselect(e);
-    });
+  /* Slider layout specific styles */
+  .announcement__bar-holder--slider {
+    --slider-speed: {{ slider_speed }}ms;
   }
+
+  /* Marquee layout specific styles */
+  .announcement__bar-holder--marquee {
+    --marquee-speed: {{ marquee_speed }}%;
+    --message-spacing: {{ message_spacing }}px;
+  }
+
+  /* Arrow controls */
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button {
+    display: {{ show_arrows | default: 'none' }};
+  }
+
+  .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button::before {
+    background-color: var(--text, {{ settings.color_announcement_text }});
+  }
+
+  
+/* flickity-fade */
+.flickity-enabled.is-fade .flickity-slider > * {
+	pointer-events: none;
+	z-index: 0;
 }
 
-if (!customElements.get('announcement-bar')) {
-  customElements.define('announcement-bar', AnnouncementBar);
+.flickity-enabled.is-fade .flickity-slider > .is-selected {
+	pointer-events: auto;
+	z-index: 1;
 }
 
-// Helper functions to mimic theme functionality
-document.addEventListener('DOMContentLoaded', function() {
-  // Dispatch resize events for responsive behavior
-  let resizeTimer;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      document.dispatchEvent(new CustomEvent('theme:resize:width'));
-    }, 250);
-  });
-});
-</script> 
+/* Flickty overwrite */
+.is-fade .announcement__slide {
+	opacity: 0 !important;
+	visibility: hidden;
+	transition: opacity 0.8s ease, visibility 0.8s;
+	will-change: transform, opacity;
+}
+
+.is-fade .announcement__slide.is-selected {
+	opacity: 1 !important;
+	visibility: visible;
+}
+
+  .is-fade .announcement__slide {
+	opacity: 0 ;
+	visibility: visible;
+}
+
+</style>
