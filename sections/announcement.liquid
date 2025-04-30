@@ -734,7 +734,7 @@
   style="{{ style }}"
 >
   {%- if show_browser_error -%}
-    <div class="announcement__bar announcement__bar--error section-padding">
+    <div class="announcement__bar announcement__bar--error">
       <div class="announcement__message">
         <div class="announcement__text {{ text_font_size }}">
           <div class="announcement__main">{{ 'general.ie11_support_message' | t }}</div>
@@ -752,7 +752,7 @@
   {%- if section.blocks.size > 0 -%}
     {%- if bar_markup != blank -%}
       <announcement-bar
-        class="announcement__bar-outer section-padding{{ announcement_modifier }}"
+        class="announcement__bar-outer {{ announcement_modifier }}"
         style="--padding-scrolling: {{ message_spacing }}px;"
       >
         {%- if section.settings.layout == 'slider' -%}
