@@ -406,6 +406,42 @@
           "speed": 120,
           "align_icons_row": false
         }
+      },
+      "announcement": {
+        "type": "announcement",
+        "blocks": {
+          "message_GMzWyz": {
+            "type": "message",
+            "settings": {
+              "show_wheel": true,
+              "message": "You are ||amount|| away from free shipping.",
+              "target_url_enabled": false,
+              "target_url": "",
+              "target_referrer_enabled": false,
+              "target_referrer": "",
+              "target_device_enabled": false,
+              "target_device": "mobile"
+            }
+          }
+        },
+        "block_order": [
+          "message_GMzWyz"
+        ],
+        "settings": {
+          "show_border": false,
+          "layout": "slider",
+          "slider_speed": 7,
+          "text_alignment": "center",
+          "show_arrows": false,
+          "marquee_speed": 100,
+          "message_spacing": 10,
+          "text_font_size": "body-medium",
+          "bg_color": "#1c1d1d",
+          "color": "#ffffff",
+          "border_color": "#1c1d1d",
+          "padding_top": 5,
+          "padding_bottom": 5
+        }
       }
     },
     "content_for_index": [],
@@ -424,11 +460,6 @@
       },
       "17676059084223943535": {
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": false,
-        "settings": {}
-      },
-      "3868600829136772411": {
-        "type": "shopify://apps/lyve-video-marketing-chat/blocks/app-embed/59c1ba16-2c38-422a-a2a9-23074d5a3fd9",
         "disabled": false,
         "settings": {}
       },
