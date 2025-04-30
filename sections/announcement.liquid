@@ -818,6 +818,10 @@
   announcement-bar {
     --padding: var(--padding-scrolling, var(--outer));
     display: block;
+    --padding-top: var(--PT);
+    --padding-bottom: var(--PB);
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
   }
 
   .announcement__wrapper {
@@ -828,8 +832,6 @@
     overflow: hidden;
     background: var(--bg);
     line-height: var(--line-height-normal);
-    padding-top: var(--PT, 5px);
-    padding-bottom: var(--PB, 5px);
   }
   .announcement__wrapper .free-shipping__graph svg {
     width: var(--icon-size);
