@@ -5,7 +5,7 @@
   - Customizable text, colors, fonts
   - No layout shifts on load
 {% endcomment %}
-
+{% if section.settings.hide == true %}
 <div
   data-section-type="countdown-bar"
   data-section-id="sections--{{ section.id }}"
@@ -397,12 +397,19 @@
     }
   }
 </script>
+{% endif %}
 
 {% schema %}
 {
   "name": "Countdown Bar",
   "class": "shopify-section-countdown-bar",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide",
+      "label": "Hide Section?",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Layout Settings"
