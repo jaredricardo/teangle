@@ -721,10 +721,6 @@
       {%- endstyle -%}
     {%- endif -%}
     
-    {% if section.blocks.size > 0 %}
-      <script src="{{ 'ticker.js' | asset_url }}" defer="defer"></script>
-    {% endif %}
-    
     <div
       id="Announcement--{{ section.id }}"
       class="announcement__wrapper{% if is_top %} announcement__wrapper--top{% endif %}{% if show_border %} announcement__wrapper--borders{% endif %}"
