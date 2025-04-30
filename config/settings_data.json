@@ -410,11 +410,10 @@
       "announcement": {
         "type": "announcement",
         "blocks": {
-          "message_GMzWyz": {
-            "type": "message",
+          "text_dganLN": {
+            "type": "text",
             "settings": {
-              "show_wheel": true,
-              "message": "You are ||amount|| away from free shipping.",
+              "text": "<p>New customers save 10% with code <strong>GET10</strong></p>",
               "target_url_enabled": false,
               "target_url": "",
               "target_referrer_enabled": false,
@@ -425,7 +424,7 @@
           }
         },
         "block_order": [
-          "message_GMzWyz"
+          "text_dganLN"
         ],
         "settings": {
           "show_border": false,
