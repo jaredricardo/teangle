@@ -6,6 +6,7 @@
       this.slider = this.querySelector('[data-slider]');
       this.slidesCount = this.querySelectorAll('.announcement__slide').length;
       this.sliderOptions = this.slider?.dataset.options ? JSON.parse(this.slider.dataset.options) : {};
+      console.log(this.sliderOptions)
     }
 
     connectedCallback() {
