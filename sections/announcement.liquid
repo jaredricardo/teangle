@@ -285,7 +285,7 @@
 
 <!-- @prettify-ignore -->
 {%- liquid
-  assign is_top = false
+
   assign show_browser_error = false
     assign is_top = true
     assign show_browser_error = true
@@ -312,7 +312,7 @@
   assign blocks_counter = 0
   assign block_count_desktop = 0
   assign block_count_mobile = 0
-  assign announcement_height = 'max(36px, 36px)'
+  assign announcement_height = 'max(36px, 24px)'
   assign announcement_modifier = ''
   assign style_root = ''
 -%}
@@ -766,7 +766,7 @@
 
   .announcement__slide > div {
     display: flex;
-    min-height: var(--announcement-height);
+    min-height: var(--announcement-height-desktop);
     align-items: center;
     justify-content: var(--justify-content, center);
   }
@@ -851,7 +851,7 @@
     flex-flow: row nowrap;
     align-items: center;
     white-space: nowrap;
-    min-height: var(--announcement-height);
+    min-height: var(--announcement-height-mobile);
     font-size: var(--text-size, 14px);
   }
   .announcement__text p,
@@ -874,7 +874,7 @@
   }
 
   .announcement__bar-holder--marquee .announcement__slide {
-    min-height: var(--announcement-height);
+    min-height: var(--announcement-height-mobile);
   }
 
   .announcement__text > div {
