@@ -818,11 +818,13 @@
   announcement-bar {
     --padding: var(--padding-scrolling, var(--outer));
     display: block;
+  }
+  announcement-bar.section-padding {
     --padding-top: var(--PT);
     --padding-bottom: var(--PB);
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
-  }
+}
 
   .announcement__wrapper {
     --icon-offset: 0.2;
@@ -1256,7 +1258,7 @@
   .announcement__slide,
   .announcement__text,
   .announcement__content {
-    color: var(--text, {{ settings.color_announcement_text }});
+    color: var({{ settings.color_announcement_text }}, --text);
   }
 
   .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button::before {
