@@ -219,77 +219,7 @@
         }
       ]
     },
-    {
-      "type": "message",
-      "name": "Free shipping message",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show_wheel",
-          "label": "Show progress wheel",
-          "default": false
-        },
-        {
-          "type": "textarea",
-          "id": "message",
-          "label": "Message",
-          "info": "Use ||amount|| to display progress towards free shipping.",
-          "default": "You are ||amount|| away from free shipping."
-        },
-        {
-          "type": "paragraph",
-          "content": "Navigate to Theme settings -> \"Cart -> Free shipping message\" to set the amount."
-        },
-        {
-          "type": "header",
-          "content": "Target page"
-        },
-        {
-          "id": "target_url_enabled",
-          "type": "checkbox",
-          "label": "Limit to specific page"
-        },
-        {
-          "id": "target_url",
-          "type": "url",
-          "label": "Targeted page"
-        },
-        {
-          "type": "header",
-          "content": "Target referrer"
-        },
-        {
-          "id": "target_referrer_enabled",
-          "type": "checkbox",
-          "label": "Limit to specific referrer path"
-        },
-        {
-          "id": "target_referrer",
-          "type": "text",
-          "label": "Targeted referrer"
-        },
-        {
-          "type": "header",
-          "content": "Target device"
-        },
-        {
-          "id": "target_device_enabled",
-          "type": "checkbox",
-          "label": "Limit to desktop or mobile"
-        },
-        {
-          "type": "select",
-          "id": "target_device",
-          "label": "Device ",
-          "default": "mobile",
-          "options": [
-            {"value": "mobile", "label": "Only show on mobile"},
-            {"value": "desktop", "label": "Only show on desktop"}
-          ]
-        }
-      ]
-    },
+    
     {
       "type": "code",
       "name": "Custom code",
@@ -346,56 +276,6 @@
             {"value": "mobile", "label": "Only show on mobile"},
             {"value": "desktop", "label": "Only show on desktop"}
           ]
-        }
-      ]
-    },
-    {
-      "type": "countdown",
-      "name": "Countdown timer",
-      "settings": [
-        {
-          "type": "text",
-          "id": "end_date",
-          "label": "End date",
-          "placeholder": "2023-12-31 23:59",
-          "default": "2024-12-31",
-          "info": "Use format \"YYYY-MM-DD\". Expiration date is based on the [store primary timezone](/admin/settings/general)."
-        },
-        {
-          "type": "text",
-          "id": "end_time",
-          "label": "End time",
-          "default": "11:59",
-          "placeholder": "11:59",
-          "info": "Use 12-hour time convention in format \"HH:MM\""
-        },
-        {
-          "type": "radio",
-          "id": "period",
-          "label": "AM/PM",
-          "options": [
-            { "value": "am", "label": "AM" },
-            { "value": "pm", "label": "PM" }
-          ],
-          "default": "am"
-        },
-        {
-          "type": "richtext",
-          "id": "end_message",
-          "label": "End of timer message",
-          "default": "<p>Offer has expired</p>"
-        },
-        {
-          "type": "checkbox",
-          "id": "hide_on_complete",
-          "label": "Hide block after end of timer",
-          "default": true
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "Text",
-          "default": "<p>Limited time offer</p>"
         }
       ]
     }
