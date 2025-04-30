@@ -1308,4 +1308,30 @@
   .announcement__bar-holder--arrows .announcement__slider:not(.single-slide) .flickity-prev-next-button::before {
     background-color: var(--text, {{ settings.color_announcement_text }});
   }
+
+  
+/* flickity-fade */
+.flickity-enabled.is-fade .flickity-slider > * {
+	pointer-events: none;
+	z-index: 0;
+}
+
+.flickity-enabled.is-fade .flickity-slider > .is-selected {
+	pointer-events: auto;
+	z-index: 1;
+}
+
+/* Flickty overwrite */
+.is-fade .flickity-cell {
+	opacity: 0 !important;
+	visibility: hidden;
+	transition: opacity 0.8s ease, visibility 0.8s;
+	will-change: transform, opacity;
+}
+
+.is-fade .flickity-cell.is-selected {
+	opacity: 1 !important;
+	visibility: visible;
+}
+
 </style>
