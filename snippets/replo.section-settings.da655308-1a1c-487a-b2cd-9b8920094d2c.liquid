@@ -1,5 +1,14 @@
 {%- comment -%}replo-liquid-chunk-begin{%- endcomment -%}
     <script id="replo-deps-section-settings" data-section-id="{{ section.id }}">{
-      
+      {%- assign replo_text_09cb4224-a8d8-456f-80c5-5a69073f04f5 = section.settings['replo_text_09cb4224-a8d8-456f-80c5-5a69073f04f5'] -%}
+    {%- capture default_replo_text_09cb4224-a8d8-456f-80c5-5a69073f04f5 -%}<p>Sans crash de caféine</p>{%- endcapture -%}
+    {%- assign replo_text_09cb4224-a8d8-456f-80c5-5a69073f04f5 = replo_text_09cb4224-a8d8-456f-80c5-5a69073f04f5 | default: default_replo_text_09cb4224-a8d8-456f-80c5-5a69073f04f5 -%}
+    "replo_text_09cb4224-a8d8-456f-80c5-5a69073f04f5": {{ replo_text_09cb4224-a8d8-456f-80c5-5a69073f04f5 | json }}, {%- assign replo_text_147fbc03-9ea4-478a-bc3a-074ec4ebc79a = section.settings['replo_text_147fbc03-9ea4-478a-bc3a-074ec4ebc79a'] -%}
+    {%- capture default_replo_text_147fbc03-9ea4-478a-bc3a-074ec4ebc79a -%}<p>Sans Sucre</p>{%- endcapture -%}
+    {%- assign replo_text_147fbc03-9ea4-478a-bc3a-074ec4ebc79a = replo_text_147fbc03-9ea4-478a-bc3a-074ec4ebc79a | default: default_replo_text_147fbc03-9ea4-478a-bc3a-074ec4ebc79a -%}
+    "replo_text_147fbc03-9ea4-478a-bc3a-074ec4ebc79a": {{ replo_text_147fbc03-9ea4-478a-bc3a-074ec4ebc79a | json }}, {%- assign replo_text_1fc7b66a-0437-42df-b0d3-821b8de59a93 = section.settings['replo_text_1fc7b66a-0437-42df-b0d3-821b8de59a93'] -%}
+    {%- capture default_replo_text_1fc7b66a-0437-42df-b0d3-821b8de59a93 -%}<p>Sans Produits Laitiers</p>{%- endcapture -%}
+    {%- assign replo_text_1fc7b66a-0437-42df-b0d3-821b8de59a93 = replo_text_1fc7b66a-0437-42df-b0d3-821b8de59a93 | default: default_replo_text_1fc7b66a-0437-42df-b0d3-821b8de59a93 -%}
+    "replo_text_1fc7b66a-0437-42df-b0d3-821b8de59a93": {{ replo_text_1fc7b66a-0437-42df-b0d3-821b8de59a93 | json }}
     }</script>
   {%- comment -%}replo-liquid-chunk-end{%- endcomment -%}
