@@ -9,6 +9,35 @@
  */
 {
   "sections": {
+    "rich_text_p83UTi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LTeTxW": {
+          "type": "heading",
+          "settings": {
+            "title": "THIS WORKS"
+          }
+        },
+        "text_RMTqLG": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LTeTxW",
+        "text_RMTqLG"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "large_header": false,
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "replo_s_p_hero_AHFzbD": {
       "type": "replo-s-p-hero",
       "name": "s_p - Hero",
@@ -49,9 +78,11 @@
         "replo_text_ac1d6126-42eb-4acd-9085-0441195226b9": "<p>$173.40</p>",
         "replo_text_cb556774-a0ef-459d-9f17-de6ee222c08f": "<p>$204.00</p>",
         "replo_text_234a798d-87b5-4fad-b76b-499bda2576c0": "<p>101 Matcha Recipes</p>",
-        "replo_text_b318c525-48eb-44bd-bbaa-78630a15186c": "<p>Free CA Shipping</p>",
+        "replo_text_ece2199a-9aee-4fb3-b5aa-69fc83fac7c7": "<p>Free CA Shipping</p>",
+        "replo_text_77eb5ee4-5152-439c-af01-0a4d15f1cfc2": "<p>Free CA Shipping</p>",
         "replo_text_9afcff3f-ae4f-4150-88b3-e587fc5f5ac2": "<p>101 Delicious Matcha Recipes</p>",
         "replo_text_45f22a5e-f4cb-4903-9c34-a1d6e152926d": "<p>101 Matcha Recipes</p>",
+        "replo_text_b318c525-48eb-44bd-bbaa-78630a15186c": "<p>Free CA Shipping</p>",
         "replo_text_8313b3d6-1a48-4ff4-b0c4-256de53c0261": "<p>Why You'll Love It</p>",
         "replo_text_5f327cd9-790b-436c-886a-2410f2c1f385": "<p><span>Taste &amp; Feel</span></p>",
         "replo_text_53093ad4-ce5c-4cd8-92a4-77fed9ecc7eb": "<p><span>How to Enjoy</span></p>",
@@ -63,7 +94,7 @@
     "fullwidth_html_p66iPk": {
       "type": "fullwidth-html",
       "custom_css": [
-        "section{display: none;}"
+        "section {display: none;}"
       ],
       "name": "Fullwidth Liquid",
       "settings": {
@@ -414,6 +445,7 @@
     }
   },
   "order": [
+    "rich_text_p83UTi",
     "replo_s_p_hero_AHFzbD",
     "fullwidth_html_p66iPk",
     "main",
