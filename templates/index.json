@@ -156,6 +156,26 @@
         "align_icons_row": true
       }
     },
+    "replo_homepage_products_hcAX7x": {
+      "type": "replo-homepage-products",
+      "name": "Homepage Products",
+      "settings": {}
+    },
+    "replo_homepage_4_reasons_gNJmNg": {
+      "type": "replo-homepage-4-reasons",
+      "name": "Homepage 4 Reasons",
+      "settings": {}
+    },
+    "replo_homepage_our_mission_j9TDRG": {
+      "type": "replo-homepage-our-mission",
+      "name": "Homepage Our Mission",
+      "settings": {}
+    },
+    "replo_homepage_videowise_7pw3nJ": {
+      "type": "replo-homepage-videowise",
+      "name": "Homepage Videowise",
+      "settings": {}
+    },
     "jr_columns_i7YrXX": {
       "type": "jr-columns",
       "blocks": {
@@ -207,6 +227,7 @@
         "value_Rq8UQd",
         "value_UATty4"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "#ffffff",
         "text_color": "#1e4845",
@@ -485,6 +506,10 @@
     "ff04fe8e-3989-4e29-be10-2b3919db90ac",
     "jr_hp_hero_L6V6WV",
     "scrolling_announcement_pCahRV",
+    "replo_homepage_videowise_7pw3nJ",
+    "replo_homepage_products_hcAX7x",
+    "replo_homepage_4_reasons_gNJmNg",
+    "replo_homepage_our_mission_j9TDRG",
     "jr_columns_i7YrXX",
     "9c3ab650-e9f8-40eb-b530-62b31a19c4c0",
     "1641763180ab99d00f",
