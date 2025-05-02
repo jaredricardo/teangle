@@ -141,6 +141,7 @@
         "text_zgY8h6",
         "text_hxfffb"
       ],
+      "disabled": true,
       "settings": {
         "append_as_sticky_header": false,
         "text_margin": 80,
