@@ -156,8 +156,14 @@
         "align_icons_row": true
       }
     },
+    "replo_homepage_videowise_7pw3nJ": {
+      "type": "replo-homepage-videowise",
+      "name": "Homepage Videowise",
+      "settings": {}
+    },
     "replo_homepage_products_hcAX7x": {
       "type": "replo-homepage-products",
+      "disabled": true,
       "name": "Homepage Products",
       "settings": {}
     },
@@ -171,14 +177,23 @@
       "name": "Homepage Our Mission",
       "settings": {}
     },
-    "replo_homepage_videowise_7pw3nJ": {
-      "type": "replo-homepage-videowise",
-      "name": "Homepage Videowise",
-      "settings": {}
-    },
     "jr_columns_i7YrXX": {
       "type": "jr-columns",
       "blocks": {
+        "value_Rq8UQd": {
+          "type": "value",
+          "settings": {
+            "link": "shopify://products/matcha-collagen",
+            "link_text": "Shop Now",
+            "image": "shopify://shop_images/3_2_1500x1000_-_8.jpg",
+            "title": "",
+            "title_fr": "",
+            "subheader": "Matcha Collagen+",
+            "subheader_fr": "Matcha Collagène+",
+            "text_body": "All-in-one matcha latte with collagen for energy, beauty, and a creamy, radiant boost—unsweetened for pure enjoyment.",
+            "text_body_fr": "Un matcha latte tout-en-un avec collagène pour l’énergie, la beauté et un boost crémeux et éclatant—non sucré pour un plaisir pur."
+          }
+        },
         "value_mzBMtW": {
           "type": "value",
           "settings": {
@@ -191,20 +206,6 @@
             "subheader_fr": "Matcha avec superaliments",
             "text_body": "A modern take on matcha, infused with organic superfoods and crafted to mix instantly for a delicious and effortless way to enjoy its benefits.",
             "text_body_fr": "Une approche moderne du matcha, infusée avec des superaliments biologiques et conçue pour se mélanger instantanément, offrant une façon délicieuse et facile de profiter de ses bienfaits."
-          }
-        },
-        "value_Rq8UQd": {
-          "type": "value",
-          "settings": {
-            "link": "shopify://products/matcha-collagen",
-            "link_text": "Shop Now",
-            "image": "shopify://shop_images/Teangle_Matcha_Collagen_Hero_Image.jpg",
-            "title": "",
-            "title_fr": "",
-            "subheader": "Matcha Collagen+",
-            "subheader_fr": "Matcha Collagène+",
-            "text_body": "All-in-one matcha latte with collagen for energy, beauty, and a creamy, radiant boost—unsweetened for pure enjoyment.",
-            "text_body_fr": "Un matcha latte tout-en-un avec collagène pour l’énergie, la beauté et un boost crémeux et éclatant—non sucré pour un plaisir pur."
           }
         },
         "value_UATty4": {
@@ -223,11 +224,10 @@
         }
       },
       "block_order": [
-        "value_mzBMtW",
         "value_Rq8UQd",
+        "value_mzBMtW",
         "value_UATty4"
       ],
-      "disabled": true,
       "settings": {
         "bg_color": "#ffffff",
         "text_color": "#1e4845",
