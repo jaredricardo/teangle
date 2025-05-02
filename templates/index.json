@@ -399,6 +399,7 @@
         "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-2",
         "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-3"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "title": "As seen in",
@@ -450,6 +451,7 @@
     },
     "9276e944-3cca-447d-a592-23523cdc229e": {
       "type": "text-and-image",
+      "disabled": true,
       "custom_css": [
         ".image-wrap img {border-radius: 20px;}",
         ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
@@ -470,6 +472,7 @@
     },
     "1d43b673-0e08-4551-b692-fed1fce94bd3": {
       "type": "icons-and-image-text",
+      "disabled": true,
       "custom_css": [
         ".image-wrap img {border-radius: 20px;}",
         ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
