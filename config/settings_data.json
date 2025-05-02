@@ -425,7 +425,7 @@
           "sticky_bar": false,
           "allow_dismiss": true,
           "persist_dismissed_state": false,
-          "background_color": "#f7eee3",
+          "background_color": "#becdbe",
           "background_gradient": "",
           "close_button_color": "#000000",
           "show_message_1": true,
