@@ -35,9 +35,8 @@
         "replo_text_88e6ab6e-7634-44d4-b152-305bdb62abc3": "<p>Choisissez une Saveur:</p>",
         "replo_text_5ade8cf0-b246-4357-8784-2d7b69efed29": "<p>Choisissez votre plan</p>",
         "replo_text_f5d070fa-d32c-42a0-b802-39eb3ebf1392": "<p>Type d'achat</p>",
-        "replo_text_3f9e1f9b-f951-476e-b397-7e227d1b5309": "<p>Abonnez-vous &amp;</p>",
-        "replo_text_767f93b7-6c50-4d02-9b87-7a54885150ae": "<p>Économisez jusqu'à</p>",
-        "replo_text_f4d07534-4402-44e7-8228-bfc764c29c19": "<p>20%</p>",
+        "replo_text_3f9e1f9b-f951-476e-b397-7e227d1b5309": "<p>Abonnez-vous &</p>",
+        "replo_text_61297ea4-868d-48c9-b381-bdfe3d495e1f": "<p>ÉCONOMISEZ</p>",
         "replo_text_a4331d97-6ae8-47c0-a3f1-0928e6205f7f": "<p>Achat unique</p>",
         "replo_text_787c6d05-9eea-4566-82db-a4e28938c5c8": "<p>Portions:</p>",
         "replo_text_83d07c83-7839-49ce-b77d-d95af8e3fb20": "<p>portions</p>",
@@ -69,11 +68,11 @@
         "replo_text_8a209c7d-28ef-4a48-a5bf-6ac50ad17c58": "<p>Cuillère à Matcha</p>",
         "replo_text_e7cdf040-362f-4799-855f-ceec9d8c6342": "<p>Bouteille Luxe pour Matcha</p>",
         "replo_text_d659aa64-52d8-4604-804d-c263d45c1d0c": "<p>AJOUTER AU PANIER</p>",
-        "replo_text_b1d585f3-8d4d-44b8-b572-0bfab3c3464b": "<p>Why You'll Love It</p>",
-        "replo_text_bd1bbe1f-9ac1-4326-b8f7-224476bcbecb": "<p><span>Taste &amp; Feel</span></p>",
-        "replo_text_aa42dbd5-ca54-443e-af19-5eac5c4acfb6": "<p><span>How to Enjoy</span></p>",
-        "replo_text_9d6e4431-c3a6-409e-902d-956732cba275": "<p><span>Is This For You?</span></p>",
-        "replo_text_d10e82b7-2cc5-47f6-a9ef-ac6da49209ec": "<p><span>Ingredients &amp; Quality</span></p>"
+        "replo_text_b1d585f3-8d4d-44b8-b572-0bfab3c3464b": "<p> Pourquoi vous allez l'adorer</p>",
+        "replo_text_bd1bbe1f-9ac1-4326-b8f7-224476bcbecb": "<p>Goût & sensation </p>",
+        "replo_text_aa42dbd5-ca54-443e-af19-5eac5c4acfb6": "<p>Comment en profiter</p>",
+        "replo_text_9d6e4431-c3a6-409e-902d-956732cba275": "<p>Est-ce pour moi?</p>",
+        "replo_text_d10e82b7-2cc5-47f6-a9ef-ac6da49209ec": "<p>Ingrédients & Qualité</p>"
       }
     },
     "replo_french_s_p_ticker_phdmmf": {
@@ -88,14 +87,16 @@
     "replo_fr_s_p_5_reasons_7Ujtdx": {
       "type": "replo-fr-s-p-5-reasons",
       "name": "FR - s_p - 5 Reasons",
-      "settings": {
-        "replo_text_b9f3de83-dfe7-406b-85d7-25c9f7ade318": "<p>Why Over 100,000 Canadians Have Replaced Coffee </p><p>With Teangle’s Delicious Matcha Collagen</p>"
-      }
+      "settings": {}
     },
     "replo_fr_s_p_comparison_T8M7rn": {
       "type": "replo-fr-s-p-comparison",
       "name": "FR - s_p - Comparison",
-      "settings": {}
+      "settings": {
+        "replo_text_55606c29-1ab9-4310-81c7-bbbf635c979a": "<p>Autres</p>",
+        "replo_text_d9831a25-b429-4a31-a4a7-c750b3046d08": "<p>Fabriqué au Canada</p>",
+        "replo_text_1b88a887-d554-4277-8ae3-dd660c6a6c80": "<p>Aimé pour son goût</p>"
+      }
     },
     "replo_french_s_p_videowise_xAnkfd": {
       "type": "replo-french-s-p-videowise",
@@ -111,12 +112,20 @@
       "type": "replo-french-s-p-faq",
       "name": "French - s_p - FAQ",
       "settings": {
+        "replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b": "<p>Quand puis-je m'attendre à voir des résultats ? 🤓</p>",
+        "replo_text_2a1d4b64-d32d-4844-a564-6f148d43d228": "<p>Concernant les bienfaits énergétiques et d'amélioration de l'humeur, ils se manifestent en 15-20 minutes. Pour les bienfaits anti-âge, la magie opère différemment d'une personne à l'autre, donc les résultats peuvent varier. Notre clientèle plus âgée constate les résultats les plus visibles. Cela est dû à leur faible niveau de collagène. Bien que certains clients remarquent des changements dans leur vitalité dès 2 semaines, il faut généralement 6 à 8 semaines pour voir des résultats sur votre peau, vos cheveux et vos ongles. Si vous utilisez le Collagène Matcha pour vos douleurs articulaires, cela peut prendre un peu plus de temps avant de constater une amélioration. C'est pourquoi nous recommandons d'essayer notre Collagène Matcha Teangle pendant 2-3 mois, afin de profiter de ses nombreux bienfaits.</p>",
         "replo_text_7f71c5d3-f584-4f3c-98d3-7c3f82a2c11d": "<p>Are you certified by a third party? ✅</p>",
+        "replo_text_34bf9c0e-6a45-4737-b619-b29702df2d05": "<p>Soyez rassuré, notre collagène matcha est fièrement fabriqué au Canada dans une installation qui respecte les plus hauts standards de qualité. Notre co-fabricant est certifié BPF (Bonnes Pratiques de Fabrication) et enregistré NSF.</p>",
         "replo_text_6e65a3e6-c74f-46b0-b7c2-7cdbb164961b": "<p>What does it taste like ? 🐥</p>",
+        "replo_text_bc815a8f-24ca-47fa-b6f3-6e5ce592cb9b": "<p>Vous apprécierez le goût doux, crémeux et naturellement délicieux du Matcha à chaque gorgée. Il est sans sucre, vous pouvez donc le sucrer selon votre goût avec un peu de miel à la vanille ou une touche de sirop d'érable. * Psst ! Il ne goûte PAS la noix de coco.</p>",
         "replo_text_bdb30b74-b526-4d13-a883-534e6347dcbf": "<p>Best time to drink it? ⏰</p>",
+        "replo_text_98d13d81-e291-45d6-8b86-d4904af8f0a2": "<p>Les matins sont parfaits ! Mais n'oubliez pas, vous pouvez le boire à tout moment ou quand vous voulez vous offrir un petit moment de bien-être et briller ! Assurez-vous simplement de ne pas le boire le soir si vous avez l'intention de dormir - le Collagène Matcha Teangle vous donnera 4-6 heures d'énergie stable et durable !</p>",
         "replo_text_0ac97647-eb0b-4d78-acbf-c775861287e6": "<p>Do I have to get a subscription? 🧐</p>",
+        "replo_text_c28b3415-1487-48e7-83a4-69bb44af04fa": "<p>Non ! Nous avons une option d'achat unique, mais lorsque vous vous abonnez, vous bénéficiez d'une réduction considérable. Donc ça en vaut vraiment la peine !</p>",
         "replo_text_6e8c76cf-f9c2-4e95-ba96-7375f7d1be3c": "<p>How much caffeine? 🍵</p>",
+        "replo_text_b569758d-ec8c-4bf7-9d74-6ce549992db5": "<p>Chaque cuillère de notre collagène matcha contient environ 30-35 mg de caféine, ce qui est 70% de moins qu'une tasse de café traditionnelle ! Vous pouvez en profiter sans les désagréables tremblements et la chute soudaine d'énergie.</p>",
         "replo_text_2dcc8f37-0e79-4c6e-8f0b-8fb218afe4a1": "<p>Do you have samples? 👀</p>",
+        "replo_text_af6ef4cb-f465-47cf-8b84-a42a695da7b9": "<p>Malheureusement, nous n'en avons pas. Nos produits sont vraiment coûteux à fabriquer et à expédier.</p>",
         "replo_text_3bcbc3f6-a447-4ed3-aedd-a4e95a8dcb16": "<p>Question</p>"
       }
     },
