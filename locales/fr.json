@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "shopify": {
     "sentence": {
@@ -73,8 +82,8 @@
         "address2_label": "Appartement, suite, etc.",
         "optional_address2_label": "Appartement, suite, etc. (optionnel)",
         "city_label": "Ville",
-        "country_label": "Pays\/région",
-        "country_code": "Code de pays\/région",
+        "country_label": "Pays/région",
+        "country_code": "Code de pays/région",
         "province_label": "Province",
         "province_placeholder": "Province",
         "county_label": "Comté",
@@ -90,8 +99,8 @@
         "governorate_placeholder": "Gouvernorat",
         "emirate_label": "Émirat",
         "emirate_placeholder": "Émirat",
-        "state_and_territory_label": "État\/territoire",
-        "state_and_territory_placeholder": "État\/territoire",
+        "state_and_territory_label": "État/territoire",
+        "state_and_territory_placeholder": "État/territoire",
         "phone_label": "Téléphone",
         "optional_phone_label": "Téléphone (optionnel)",
         "phone_placeholder": "Téléphone",
@@ -167,18 +176,18 @@
         "free_shipping_discount_label": "Expédition gratuite",
         "applied_free_shipping_discount_label": "Appliqué",
         "apply_discount_button_label": "Appliquer",
-        "applied_discount_message": "%{amount} a\/ont été déduit(s) du prix total",
+        "applied_discount_message": "%{amount} a/ont été déduit(s) du prix total",
         "discount_has_been_applied": "La réduction a été appliquée",
         "discount_has_been_removed": "La réduction a été retirée",
         "gift_card_has_been_applied": "La carte-cadeau a été appliquée",
         "gift_card_has_been_removed": "La carte-cadeau a été retirée",
         "gift_card_subscriptions_notice": "Les cartes-cadeaux ne s'appliqueront qu'à votre premier paiement",
         "discount_already_applied": "Une réduction a déjà été appliquée à cette commande. Vous ne pouvez pas appliquer d'autre réduction.",
-        "cart_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}<\/strong> n'est pas valide pour les articles de votre panier",
-        "discount_requires_customer_notice": "Saisissez vos informations d'expédition pour appliquer le code de réduction <strong style=\"text-transform:uppercase\">%{code}<\/strong>",
-        "customer_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}<\/strong> n'est pas disponible pour vous pour le moment",
-        "shipping_information_does_not_meet_discount_requirements_notice": "Le code de réduction<strong style=\"text-transform:uppercase\"> %{code}<\/strong> n'est pas disponible pour votre adresse d'expédition",
-        "customer_already_used_once_per_customer_discount_notice": "Le code promo <strong style=\"text-transform:uppercase\">%{code}<\/strong> a déjà été utilisé",
+        "cart_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> n'est pas valide pour les articles de votre panier",
+        "discount_requires_customer_notice": "Saisissez vos informations d'expédition pour appliquer le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "Le code de réduction <strong style=\"text-transform:uppercase\">%{code}</strong> n'est pas disponible pour vous pour le moment",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Le code de réduction<strong style=\"text-transform:uppercase\"> %{code}</strong> n'est pas disponible pour votre adresse d'expédition",
+        "customer_already_used_once_per_customer_discount_notice": "Le code promo <strong style=\"text-transform:uppercase\">%{code}</strong> a déjà été utilisé",
         "subtotal_label": "Sous-total",
         "shipping_label": "Livraison",
         "pickup_label": "Récupérer",
@@ -374,8 +383,8 @@
         "name_on_card_label": "Nom sur la carte",
         "name_on_card_placeholder": "Nom sur la carte",
         "card_expired": "Expiré",
-        "card_expiry_label": "Date d’expiration (MM\/AA)",
-        "card_expiry_placeholder": "Date d’expiration (MM\/AA)",
+        "card_expiry_label": "Date d’expiration (MM/AA)",
+        "card_expiry_placeholder": "Date d’expiration (MM/AA)",
         "credit_card_start_month": "Mois d'émission",
         "credit_card_start_year": "Année d'émission",
         "delete_customer_mandate_modal_title": "Supprimer cette carte ?",
@@ -391,8 +400,8 @@
         "card_verification_value_explanation": "Code de sécurité à 3 chiffres généralement situé au dos de votre carte. Le code de sécurité des cartes American Express est composé de 4 chiffres situés sur le devant de la carte.",
         "card_verification_value_explanation_amex": "Le code de sécurité à 4 chiffres sur le devant de votre carte",
         "card_verification_value_explanation_other": "Le code de sécurité à 3 chiffres au dos de votre carte",
-        "card_start_label": "Date d’émission (MM\/AA)",
-        "card_start_placeholder": "Date d’émission (MM\/AA)",
+        "card_start_label": "Date d’émission (MM/AA)",
+        "card_start_placeholder": "Date d’émission (MM/AA)",
         "card_issue_number_label": "Numéro d'émission",
         "card_issue_number_placeholder": "Numéro d'émission",
         "card_change_label": "Modifier",
@@ -406,7 +415,7 @@
         "different_billing_address_label": "Utiliser une adresse de facturation différente",
         "billing_address_associated_with_mandate": "Utiliser l'adresse associée au moyen de paiement",
         "billing_address_associated_with_mandate_info": "Si vous souhaitez modifier votre adresse de facturation, veuillez supprimer et ressaisir les informations de votre carte de crédit",
-        "free_order_notice_html": "Votre commande est <strong>gratuite<\/strong>. Aucun paiement n'est requis.",
+        "free_order_notice_html": "Votre commande est <strong>gratuite</strong>. Aucun paiement n'est requis.",
         "express_checkout_free_order": "Vous ne serez pas facturé pour une commande gratuite",
         "order_covered_by_gift_cards_notice": {
           "one": "Votre commande est couverte par votre carte-cadeau.",
@@ -420,8 +429,8 @@
         "no_js_credit_card_fields_redirect_hint": "Vous serez redirigé(e) pour ajouter vos informations de paiement.",
         "card_fields_container_prefix": "Cadre pour le champ :",
         "card_fields_unavailable_html": {
-          "one": "Les paiements par carte de crédit et de débit ne sont pas disponibles pour le moment.<br><a href=\"%{current_url}\">Actualisez cette page<\/a> ou réessayez plus tard.",
-          "other": "Les paiements par carte de crédit et de débit ne sont pas disponibles pour le moment.<br><a href=\"%{current_url}\">Actualisez cette page<\/a> ou essayez un autre moyen de paiement."
+          "one": "Les paiements par carte de crédit et de débit ne sont pas disponibles pour le moment.<br><a href=\"%{current_url}\">Actualisez cette page</a> ou réessayez plus tard.",
+          "other": "Les paiements par carte de crédit et de débit ne sont pas disponibles pour le moment.<br><a href=\"%{current_url}\">Actualisez cette page</a> ou essayez un autre moyen de paiement."
         },
         "card_fields_processing_error": "Un problème est survenu lors du traitement du paiement. Essayez de rafraîchir cette page ou de vérifier votre connexion Internet.",
         "technical_error": "Les paiements ne peuvent pas être traités pour le moment en raison d'un problème technique. Réessayez dans quelques minutes.",
@@ -441,7 +450,7 @@
         "subscription_card_update_agreement_label": "Le changement du moyen de paiement mettra à jour votre abonnement et vos futurs paiements récurrents.",
         "subscription_agreement_label": "Je comprends que je suis en train d'accepter un abonnement. Celui-ci se renouvellera au prix et à la fréquence indiqués et ce, jusqu'à ce qu'il prenne fin ou soit %{cancelled}.",
         "subscription_agreement_cancelled": "politique de résiliation",
-        "subscription_agreement_label_html": "Je comprends que je suis en train d'accepter un abonnement. Celui-ci se renouvellera au prix et à la fréquence indiqués, et ce, jusqu'à ce qu'il prenne fin ou soit\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">annulé<\/a>.\n",
+        "subscription_agreement_label_html": "Je comprends que je suis en train d'accepter un abonnement. Celui-ci se renouvellera au prix et à la fréquence indiqués, et ce, jusqu'à ce qu'il prenne fin ou soit\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">annulé</a>.\n",
         "change_currency_section_description": "Sélectionnez une option de devise",
         "no_real_orders_dev_store": "Cette boutique ne peut accepter ni les commandes réelles ni les paiements réels.",
         "waiting_on_payment_methods": "Moyens de paiement disponibles en cours d'obtention...",
@@ -456,8 +465,8 @@
           "not_available": "Apple Pay n'est pas disponible sur ce navigateur. Pour connecter votre compte Apple Pay, vous devrez utiliser Safari sur un appareil Apple."
         },
         "account_connected": "Compte connecté",
-        "expiry_long": "(Expire le %{month}\/%{year})",
-        "expiry_short": "(Exp %{month}\/%{year})",
+        "expiry_long": "(Expire le %{month}/%{year})",
+        "expiry_short": "(Exp %{month}/%{year})",
         "paypal_label": "PayPal",
         "google": {
           "connect": "Cliquez pour connecter avec votre compte Google Pay",
@@ -465,7 +474,7 @@
         },
         "email_connected": "Compte connecté : ",
         "klarna_label": "Klarna",
-        "mor_disclaimer_html": "En cliquant ci-dessous et en finalisant votre commande, vous acceptez d’acheter vos articles auprès de Flow I.O en tant que Merchant of Record\npour cette transaction, conformément aux <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Conditions générales d’utilisation<\/a>\net à la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Politique de confidentialité<\/a> de Flow I.O. Flow I.O est un fournisseur international de\nservices de traitement pour %{shop_name}\n",
+        "mor_disclaimer_html": "En cliquant ci-dessous et en finalisant votre commande, vous acceptez d’acheter vos articles auprès de Flow I.O en tant que Merchant of Record\npour cette transaction, conformément aux <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Conditions générales d’utilisation</a>\net à la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Politique de confidentialité</a> de Flow I.O. Flow I.O est un fournisseur international de\nservices de traitement pour %{shop_name}\n",
         "saved_credit_card_actions": {
           "edit": "Éditer"
         },
@@ -491,7 +500,7 @@
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "Solde actuel %{amount}",
-        "credit_card_expires_on_notice": "Expire le %{month}\/%{year}",
+        "credit_card_expires_on_notice": "Expire le %{month}/%{year}",
         "express_payment_gateway_label": "Express",
         "manual_payment_gateway_label": "Manuel",
         "billing_address_title": "Adresse de facturation",
@@ -518,9 +527,9 @@
         "address_city_blank": "Entrez une ville",
         "address_city_too_long": "Le nom de la ville est trop long (le maximum est de 255 caractères)",
         "address_city_contains_html_tags": "La ville ne peut pas contenir de balises HTML.",
-        "address_country_blank": "Sélectionnez un pays\/une région",
-        "address_country_not_supported": "Nous ne livrons pas actuellement à ce pays\/cette région. Veuillez saisir une nouvelle adresse d'expédition et réessayer.",
-        "address_province_blank": "Sélectionnez un État\/une province",
+        "address_country_blank": "Sélectionnez un pays/une région",
+        "address_country_not_supported": "Nous ne livrons pas actuellement à ce pays/cette région. Veuillez saisir une nouvelle adresse d'expédition et réessayer.",
+        "address_province_blank": "Sélectionnez un État/une province",
         "address_company_blank": "Entrez un nom d'entreprise",
         "address_company_too_long": "Le nom de l’entreprise est trop long (le maximum est de 255 caractères)",
         "address_company_contains_html_tags": "L'entreprise ne peut pas contenir de balises HTML.",
@@ -1083,7 +1092,7 @@
       "prefecture": "Préfecture",
       "province": "Province",
       "state": "État",
-      "state_and_territory": "État\/territoire",
+      "state_and_territory": "État/territoire",
       "county": "Comté",
       "emirate": "Émirat",
       "governorate": "Gouvernorat",
@@ -1141,7 +1150,7 @@
       "expired": "La carte de crédit a expiré",
       "invalid_start_date_or_issue_number_for_debit": "Une date valide de début ou d'émission est requise",
       "invalid_expiry_year": "n'est pas une année d'expiration valide",
-      "reset_password_html": "Cette adresse e-mail est déjà associée à un compte. Si ce compte vous appartient, vous pouvez <a href=\"\/account\/login#recover\">reconfigurer votre mot de passe<\/a>",
+      "reset_password_html": "Cette adresse e-mail est déjà associée à un compte. Si ce compte vous appartient, vous pouvez <a href=\"/account/login#recover\">reconfigurer votre mot de passe</a>",
       "verify_email": "Un e-mail a été envoyé à %{customer_email} veuillez cliquer sur le lien contenu dans le e-mail pour confirmer votre adresse."
     },
     "notices": {
@@ -1189,7 +1198,7 @@
           "declined": "Paiement refusé",
           "inventory": "Produits indisponibles",
           "fraud": "Commande frauduleuse",
-          "customer": "Le client a modifié\/annulé la commande",
+          "customer": "Le client a modifié/annulé la commande",
           "other": "Autre"
         },
         "cash_on_delivery": "Paiement à la livraison"
@@ -1204,7 +1213,7 @@
         "too_many_line_items_error": "Votre panier ne peux pas contenir plus de %{max} articles.",
         "link_expired": "Le lien a expiré",
         "link_no_longer_exists": "Le lien n'existe plus.",
-        "stock_problems_html": "Un ou plusieurs articles ne sont plus disponibles. Voici votre <a href='%{link}'>panier mis à jour<\/a>.",
+        "stock_problems_html": "Un ou plusieurs articles ne sont plus disponibles. Voici votre <a href='%{link}'>panier mis à jour</a>.",
         "changed": "Le panier a été modifié",
         "items_changed": "Un ou plusieurs articles ont été modifiés.",
         "product_sold_out": "Le produit « %{name} » n'est déjà plus en stock.",
@@ -1239,29 +1248,29 @@
       },
       "open_tracking": {
         "opt_in": {
-          "opted_in_html": "<b>Vous avez accepté le suivi des ouvertures d'e-mails.<\/b>",
+          "opted_in_html": "<b>Vous avez accepté le suivi des ouvertures d'e-mails.</b>",
           "visibility": "Les taux d'ouverture d'e-mails seront signalés anonymement dans un rapport. Nous verrons si vous avez ouvert un e-mail uniquement sous la forme d'un taux agrégé d'ouverture d'e-mail.",
-          "opt_out_html": "Vous pouvez <a style='text-decoration:underline;' href='%{link}'>désactiver<\/a> le suivi des ouvertures d'e-mails si vous ne souhaitez pas communiquer cette information.",
+          "opt_out_html": "Vous pouvez <a style='text-decoration:underline;' href='%{link}'>désactiver</a> le suivi des ouvertures d'e-mails si vous ne souhaitez pas communiquer cette information.",
           "preview_bar": "Vous êtes en train de consulter un aperçu de ce que les clients verront lorsqu'ils s'abonneront au suivi des ouvertures d'e-mails."
         },
         "opt_out": {
-          "opted_out_html": "<b>Vous avez désactivé le suivi des ouvertures d'e-mails.<\/b>",
+          "opted_out_html": "<b>Vous avez désactivé le suivi des ouvertures d'e-mails.</b>",
           "visibility": "Nous ne verrons pas si vous avez ouvert nos e-mails.",
-          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Activez<\/a> le suivi des ouvertures d'e-mails.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Activez</a> le suivi des ouvertures d'e-mails.",
           "preview_bar": "Vous êtes en train de consulter un aperçu de ce que les clients verront lorsqu'ils se désabonneront le suivi des ouvertures d'e-mails."
         },
         "no_longer_track": {
-          "status_html": "<b>Nous ne suivons plus aucune ouverture d'e-mail.<\/b>",
+          "status_html": "<b>Nous ne suivons plus aucune ouverture d'e-mail.</b>",
           "privacy_policy": "Après l'envoi de cet e-mail, nous avons mis à jour notre politique de confidentialité et nous ne suivons plus les ouvertures."
         },
         "track": {
-          "status_html": "<b>Le suivi des ouvertures d'e-mails fait l'objet d'un rapport.<\/b>",
+          "status_html": "<b>Le suivi des ouvertures d'e-mails fait l'objet d'un rapport.</b>",
           "visibility": "Nous verrons si vous avez ouvert l'e-mail uniquement sous la forme de son taux d'ouverture global."
         },
         "updated_policy": {
-          "status_html": "<b>Le suivi des ouvertures d'e-mails fait l'objet d'un rapport.<\/b>",
+          "status_html": "<b>Le suivi des ouvertures d'e-mails fait l'objet d'un rapport.</b>",
           "visibility": "Nous avons mis à jour notre politique, et nous suivons désormais les ouvertures d'e-mails. Les taux d'ouverture d'e-mails seront signalés anonymement dans un rapport. Nous verrons si vous avez ouvert un e-mail uniquement sous la forme de son taux d'ouverture global.",
-          "opt_out_html": "Si vous ne souhaitez pas communiquer cette information, vous pouvez vous <a style='text-decoration:underline;' href='%{link}'>désabonner<\/a>."
+          "opt_out_html": "Si vous ne souhaitez pas communiquer cette information, vous pouvez vous <a style='text-decoration:underline;' href='%{link}'>désabonner</a>."
         }
       }
     },
@@ -1336,8 +1345,8 @@
       "get_directions": "Obtenir des directions",
       "address_error": "Erreur lors de la recherche d'adresse",
       "address_no_results": "Aucun résultat pour cette adresse",
-      "address_query_limit_html": "Vous avez dépassé la limite de Google utilisation de l'API. Envisager la mise à niveau à un <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">régime spécial<\/a>.",
-      "auth_error_html": "Il y avait un problème authentifier votre compte Google Maps . Créer et activer <a href=\"https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key\">l'API JavaScript<\/a> et <a href=\"https:\/\/developers.google.com\/maps\/documentation\/geocoding\/get-api-key\">l'API de géocodage<\/a> les autorisations de application."
+      "address_query_limit_html": "Vous avez dépassé la limite de Google utilisation de l'API. Envisager la mise à niveau à un <a href=\"https://developers.google.com/maps/premium/usage-limits\">régime spécial</a>.",
+      "auth_error_html": "Il y avait un problème authentifier votre compte Google Maps . Créer et activer <a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">l'API JavaScript</a> et <a href=\"https://developers.google.com/maps/documentation/geocoding/get-api-key\">l'API de géocodage</a> les autorisations de application."
     },
     "slideshow": {
       "play_slideshow": "Lire le diaporama",
@@ -1357,7 +1366,7 @@
     },
     "404": {
       "title": "404 - Page non trouvée",
-      "subtext_html": "Cette page n'est pas disponible. <a href='{{ url }}'>Retourner au magasinage<\/a>"
+      "subtext_html": "Cette page n'est pas disponible. <a href='{{ url }}'>Retourner au magasinage</a>"
     },
     "pagination": {
       "previous": "Précédent",
@@ -1370,7 +1379,7 @@
       "login_form_submit": "Entrer",
       "signup_form_email_label": "Courriel",
       "signup_form_success": "Nous vous ferons parvenir un courriel juste avant l'ouverture!",
-      "admin_link_html": "Êtes-vous le propriétaire de la boutique? <a href=\"\/admin\" class=\"text-link\">Connectez-vous ici<\/a>.",
+      "admin_link_html": "Êtes-vous le propriétaire de la boutique? <a href=\"/admin\" class=\"text-link\">Connectez-vous ici</a>.",
       "password_link": "Mot de passe",
       "powered_by_shopify_html": "Cette boutique sera propulsée par {{ shopify }}"
     },
@@ -1454,12 +1463,12 @@
       "update": "Mettre à jour",
       "checkout": "Procéder au paiement",
       "empty": "Votre panier est vide.",
-      "continue_browsing_html": "<a href='{{ url }}'>Retourner au magasinage<\/a>.",
+      "continue_browsing_html": "<a href='{{ url }}'>Retourner au magasinage</a>.",
       "close_cart": "Fermer le panier",
       "reduce_quantity": "Réduire la quantité de l'article de un",
       "increase_quantity": "Augmenter la quantité de l'article de un",
       "terms": "Je suis d'accord avec les termes et conditions",
-      "terms_html": "Je suis d'accord avec les <a href='{{ url }}' target='_blank'>termes et conditions<\/a>",
+      "terms_html": "Je suis d'accord avec les <a href='{{ url }}' target='_blank'>termes et conditions</a>",
       "terms_confirm": "Vous devez accepter les termes et conditions de vente pour vérifier"
     },
     "label": {
@@ -1646,7 +1655,7 @@
       "add_to_cart": "Ajouter au panier",
       "preorder": "Pré-commander",
       "include_taxes": "Taxes incluses.",
-      "shipping_policy_html": "<a href='{{ link }}'>Frais d'expédition<\/a> calculés lors du passage à la caisse.",
+      "shipping_policy_html": "<a href='{{ link }}'>Frais d'expédition</a> calculés lors du passage à la caisse.",
       "will_not_ship_until": "Sera expédié après {{ date }}",
       "will_be_in_stock_after": "Sera en stock à compter de {{ date }}",
       "waiting_for_stock": "Inventaire sur le chemin",
@@ -1660,8 +1669,8 @@
       "check_other_stores": "Vérifier la disponibilité dans d'autres magasins",
       "pick_up_available": "Récupération disponible",
       "pick_up_currently_unavailable": "Récupération actuellement indisponible",
-      "pick_up_available_at_html": "Récupération disponible à <strong> {{location_name}} <\/strong>",
-      "pick_up_unavailable_at_html": "Récupération actuellement indisponible à <strong> {{location_name}} <\/strong>"
+      "pick_up_available_at_html": "Récupération disponible à <strong> {{location_name}} </strong>",
+      "pick_up_unavailable_at_html": "Récupération actuellement indisponible à <strong> {{location_name}} </strong>"
     }
   },
   "gift_cards": {
@@ -1764,6 +1773,12 @@
       "extension": {
         "remove_tooltip": "Retirer"
       }
+    }
+  },
+  "locksmith": {
+    "forms": {
+      "submit_button_text": "Continue",
+      "loading_text": "One moment..."
     }
   }
 }
