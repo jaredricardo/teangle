@@ -1,6 +1,11 @@
+{%- comment %}<locksmith:27fb>{% endcomment -%}
+  {%- include 'locksmith' -%}
+{%- comment %}</locksmith:27fb>{% endcomment -%}
+
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
 <head>
+  {{ locksmith_initializations }}
   {% if product.metafields.custom.custom_redirect != blank %}
   <script> window.location.href = '{{ product.metafields.custom.custom_redirect }}'; </script>
  {% endif %}
@@ -123,7 +128,10 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
   {%- render 'seo-title' -%}
 
   {%- if page_description -%}
-  <meta name="description" content="{{ page_description | escape }}">
+  {%- comment %}<locksmith:a3dc>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
+    {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
+  {%- comment %}</locksmith:a3dc>{% endcomment -%}
   {%- endif -%}
 
   {%- render 'social-meta-tags' -%}

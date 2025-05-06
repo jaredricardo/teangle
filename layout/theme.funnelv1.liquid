@@ -1,6 +1,11 @@
+{%- comment %}<locksmith:4790>{% endcomment -%}
+  {%- include 'locksmith' -%}
+{%- comment %}</locksmith:4790>{% endcomment -%}
+
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{% comment %}ly_dir_replace_for_[{{ settings.text_direction }}]_begin{% endcomment %} {%- assign language_code = '_' | append: request.locale.iso_code -%}{%- if '_ar_he_fa_ur' contains language_code -%}{%- assign dir = 'rtl' -%}{%- else -%}{%- assign dir = '{{ settings.text_direction }}' -%}{%- endif -%} {{- dir -}}{% comment %}ly_dir_replace_end{% endcomment %}">
 <head>
+{{ locksmith_initializations }}
 <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
 <link rel='preconnect dns-prefetch' href='https://whale.camera/' crossorigin />
@@ -34,7 +39,10 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
   {%- render 'seo-title' -%}
 
   {%- if page_description -%}
-  <meta name="description" content="{{ page_description | escape }}">
+  {%- comment %}<locksmith:1ca9>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
+    {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
+  {%- comment %}</locksmith:1ca9>{% endcomment -%}
   {%- endif -%}
 
   {%- render 'social-meta-tags' -%}
