@@ -19,7 +19,10 @@
   "config": {
     "store": "fr-hellodarknessmyoldfriend.myshopify.com"
   },
-  "author": "Jonah Madeya",
+  "author": "Jared Ricardo",
+  "contributors": [
+    "Jonah Madeya"
+  ],
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
