@@ -11,19 +11,23 @@
   "sections": {
     "replo_s_p_hero_AHFzbD": {
       "type": "replo-s-p-hero",
+      "custom_css": [
+        ".r-1932yf9.alchemy-rte:not(.r-1crfg01) {opacity: 0;}",
+        ".r-rg2flb.alchemy-rte:not(.r-fsfq5u) {opacity: 0;}"
+      ],
       "name": "s_p - Hero",
       "settings": {
         "replo_text_d607686f-381f-4c55-ada3-3bf11173d246": "<p>Why You'll Love It</p>",
-        "replo_text_11ad847d-2087-449b-b48f-82c6a4f20e4f": "<p><span>Taste &amp; Feel</span></p>",
-        "replo_text_cf7bfff2-a31e-4b44-9a39-88bdb8f47452": "<p><span>How to Enjoy</span></p>",
-        "replo_text_12e89045-49b0-40c6-a45c-faa5f3d7cba7": "<p><span>Is This For You?</span></p>",
-        "replo_text_bf0fff86-ca4a-48b1-a083-db971321d155": "<p><span>Ingredients &amp; Quality</span></p>",
+        "replo_text_11ad847d-2087-449b-b48f-82c6a4f20e4f": "<p>Taste & Feel</p>",
+        "replo_text_cf7bfff2-a31e-4b44-9a39-88bdb8f47452": "<p>How to Enjoy</p>",
+        "replo_text_12e89045-49b0-40c6-a45c-faa5f3d7cba7": "<p>Is This For You?</p>",
+        "replo_text_bf0fff86-ca4a-48b1-a083-db971321d155": "<p>Ingredients & Quality</p>",
         "replo_text_3260c342-8c80-4dfa-bbba-32eb02900ce1": "<p>Matcha Energy  Meets Beauty Collagen</p>",
         "replo_text_5e5c7462-aae1-429e-b804-ba36c7406fa0": "<p>Delicious coconut and vanilla flavours</p>",
         "replo_text_a2bd43bb-e53b-407c-940b-8e76a550b1ff": "<p>Choose Your Flavor</p>",
         "replo_text_8ace8963-2d90-49fd-9a52-1336a1b9e440": "<p>Choose Your Plan</p>",
         "replo_text_953f694a-f81d-48b7-8f6d-cc4c0d4434e9": "<p>Purchase Type:</p>",
-        "replo_text_f7cccbb7-da83-4c0f-a526-e2d235bfdded": "<p>Subscribe &amp;</p>",
+        "replo_text_f7cccbb7-da83-4c0f-a526-e2d235bfdded": "<p>Subscribe &</p>",
         "replo_text_ba161cbf-146f-4f72-b257-048a1af3a787": "<p>SAVE UP TO</p>",
         "replo_text_580b4bc3-7df1-4950-a000-13d3ab47f8c6": "<p>20%</p>",
         "replo_text_640481c0-3229-4b21-a067-0dbb817eca01": "<p>One-time purchase</p>",
@@ -57,11 +61,11 @@
         "replo_text_45f22a5e-f4cb-4903-9c34-a1d6e152926d": "<p>101 Matcha Recipes</p>",
         "replo_text_b318c525-48eb-44bd-bbaa-78630a15186c": "<p>Free CA Shipping</p>",
         "replo_text_8313b3d6-1a48-4ff4-b0c4-256de53c0261": "<p>Why You'll Love It</p>",
-        "replo_text_5f327cd9-790b-436c-886a-2410f2c1f385": "<p><span>Taste &amp; Feel</span></p>",
-        "replo_text_53093ad4-ce5c-4cd8-92a4-77fed9ecc7eb": "<p><span>How to Enjoy</span></p>",
-        "replo_text_7c10a02d-3ddc-4ea0-9e72-3813657d040b": "<p><span>Is This For You?</span></p>",
-        "replo_text_a007104d-e02b-479a-8d68-5de1adf60532": "<p><span>Ingredients &amp; Quality</span></p>",
-        "replo_text_0e54d10b-25de-4017-b348-325a4045b902": "<p><span>Hear What Canadians Say About Teangle 🇨🇦</span></p>"
+        "replo_text_5f327cd9-790b-436c-886a-2410f2c1f385": "<p>Taste & Feel</p>",
+        "replo_text_53093ad4-ce5c-4cd8-92a4-77fed9ecc7eb": "<p>How to Enjoy</p>",
+        "replo_text_7c10a02d-3ddc-4ea0-9e72-3813657d040b": "<p>Is This For You?</p>",
+        "replo_text_a007104d-e02b-479a-8d68-5de1adf60532": "<p>Ingredients & Quality</p>",
+        "replo_text_0e54d10b-25de-4017-b348-325a4045b902": "<p>Hear What Canadians Say About Teangle 🇨🇦</p>"
       }
     },
     "fullwidth_html_p66iPk": {
