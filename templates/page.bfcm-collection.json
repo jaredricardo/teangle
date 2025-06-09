@@ -55,6 +55,7 @@
         "sticker_6R3mLP",
         "sticker_CiGtEp"
       ],
+      "disabled": true,
       "settings": {
         "desktop_img": "shopify://shop_images/Teangle0256_2.jpg",
         "mobile_img": "shopify://shop_images/Teangle0256_2.jpg",
@@ -181,17 +182,24 @@
         "products_DBwRMP",
         "products_GHnMfC"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "",
         "header": "Teangle was created to give you the positive energy you need to prioritize your well-being.",
         "header_fr": "Notre mission chez Teangle c'est de t'offrir l'énergie positive pour t'aider à prioriser ton bien-être."
       }
+    },
+    "replo_collection_MCdfxn": {
+      "type": "replo-collection",
+      "name": "collection",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "jr_hp_hero_9GTcXt",
     "jr_bfcm_hero_Hz8YKi",
-    "jr_bfcm_collection_FaLMrP"
+    "jr_bfcm_collection_FaLMrP",
+    "replo_collection_MCdfxn"
   ]
 }
