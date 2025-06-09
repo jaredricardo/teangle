@@ -158,6 +158,7 @@
     },
     "replo_homepage_videowise_7pw3nJ": {
       "type": "replo-homepage-videowise",
+      "disabled": true,
       "name": "Homepage Videowise",
       "settings": {}
     },
