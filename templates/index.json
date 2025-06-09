@@ -161,6 +161,11 @@
       "name": "Homepage Videowise",
       "settings": {}
     },
+    "replo_homepage_products_GaYppJ": {
+      "type": "replo-homepage-products",
+      "name": "Homepage Products",
+      "settings": {}
+    },
     "jr_columns_i7YrXX": {
       "type": "jr-columns",
       "blocks": {
@@ -212,6 +217,7 @@
         "value_mzBMtW",
         "value_UATty4"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "#ffffff",
         "text_color": "#1e4845",
@@ -510,6 +516,7 @@
     "jr_hp_hero_L6V6WV",
     "scrolling_announcement_pCahRV",
     "replo_homepage_videowise_7pw3nJ",
+    "replo_homepage_products_GaYppJ",
     "jr_columns_i7YrXX",
     "replo_homepage_products_hcAX7x",
     "replo_homepage_4_reasons_gNJmNg",
