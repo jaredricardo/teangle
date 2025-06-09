@@ -508,6 +508,24 @@
         "layout": "right",
         "divider": false
       }
+    },
+    "1749489398cc7e670a": {
+      "type": "apps",
+      "blocks": {
+        "videowise_video_commerce_videowise_page_widgets_cKECVg": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_68079d119029cf0057ead527\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "videowise_video_commerce_videowise_page_widgets_cKECVg"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
     }
   },
   "order": [
@@ -527,6 +545,7 @@
     "eeaa9a58-5149-4edb-bd84-6735b8e4c5ce",
     "cbeef862-dbee-42e9-b022-4bed3277e134",
     "9276e944-3cca-447d-a592-23523cdc229e",
-    "1d43b673-0e08-4551-b692-fed1fce94bd3"
+    "1d43b673-0e08-4551-b692-fed1fce94bd3",
+    "1749489398cc7e670a"
   ]
 }
