@@ -468,6 +468,24 @@
           "mobile_stack_elements": true,
           "mobile_element_spacing": 8
         }
+      },
+      "custom-redirects": {
+        "type": "custom-redirects",
+        "blocks": {
+          "redirect_Uy7FFh": {
+            "type": "redirect",
+            "settings": {
+              "from_path": "/products/test-product-english",
+              "to_path": "/pages/test-fr",
+              "hostname_match": "fr.teangle.ca",
+              "locale_match": ""
+            }
+          }
+        },
+        "block_order": [
+          "redirect_Uy7FFh"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [],
