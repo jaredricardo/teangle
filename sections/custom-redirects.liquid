@@ -1,6 +1,78 @@
+{% if section.blocks.size > 0 %}
+  <script>
+    (function() {
+      const currentPath = window.location.pathname;
+      const hostname = window.location.hostname;
+      const locale = Shopify && Shopify.locale ? Shopify.locale : '';
+
+      const redirects = [
+        {% for block in section.blocks %}
+          {
+            from: "{{ block.settings.from_path | escape }}",
+            to: "{{ block.settings.to_path | escape }}",
+            domain: "{{ block.settings.hostname_match | escape }}",
+            locale: "{{ block.settings.locale_match | escape }}"
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ];
+
+      redirects.forEach(({ from, to, domain, locale: requiredLocale }) => {
+        const domainMatch = !domain || hostname.includes(domain);
+        const pathMatch = currentPath === from;
+        const localeMatch = !requiredLocale || locale === requiredLocale;
+        const alreadyRedirected = currentPath === to;
+
+        if (domainMatch && pathMatch && localeMatch && !alreadyRedirected) {
+          window.location.replace(to);
+        }
+      });
+    })();
+  </script>
+{% endif %}
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Custom Redirects",
+  "tag": "section",
+  "class": "section-custom-redirects",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "redirect",
+      "name": "Redirect Rule",
+      "settings": [
+        {
+          "type": "text",
+          "id": "from_path",
+          "label": "Source path (e.g. /products/matcha)",
+          "default": "/products/matcha"
+        },
+        {
+          "type": "text",
+          "id": "to_path",
+          "label": "Redirect to (e.g. /pages/matcha-francais)",
+          "default": "/pages/matcha-francais"
+        },
+        {
+          "type": "text",
+          "id": "hostname_match",
+          "label": "Only redirect on domain (optional)",
+          "info": "e.g. fr.example.com — leave blank to match all domains"
+        },
+        {
+          "type": "text",
+          "id": "locale_match",
+          "label": "Only redirect if locale is (optional)",
+          "info": "e.g. 'fr' or 'en' — leave blank to match all"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Custom Redirects"
+    }
+  ]
+}
 {% endschema %}
