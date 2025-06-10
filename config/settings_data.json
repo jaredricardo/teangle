@@ -170,6 +170,7 @@
           },
           "b4967b17-aef8-42f9-9e09-62f32943f1e5": {
             "type": "mega",
+            "disabled": true,
             "settings": {
               "mega_image": "shopify://shop_images/teangle-matcha-396b_dd2e5385-567e-4035-8634-2339ef75f353.jpg",
               "mega_title": "Matcha Spoon",
