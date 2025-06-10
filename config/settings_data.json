@@ -475,8 +475,8 @@
           "redirect_Uy7FFh": {
             "type": "redirect",
             "settings": {
-              "from_path": "/products/test-product-english",
-              "to_path": "/pages/test-page-fr",
+              "from_path": "/products/matcha-collagen-3",
+              "to_path": "/pages/matcha-collagen-fr",
               "hostname_match": "fr.teangle.ca",
               "locale_match": ""
             }
