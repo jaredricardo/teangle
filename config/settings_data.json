@@ -476,7 +476,7 @@
             "type": "redirect",
             "settings": {
               "from_path": "/products/test-product-english",
-              "to_path": "/pages/test-fr",
+              "to_path": "/pages/test-page-fr",
               "hostname_match": "fr.teangle.ca",
               "locale_match": ""
             }
