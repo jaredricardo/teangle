@@ -507,13 +507,23 @@
               "hostname_match": "fr.teangle.ca",
               "locale_match": ""
             }
+          },
+          "redirect_HXEx7L": {
+            "type": "redirect",
+            "settings": {
+              "from_path": "/pages/matcha-collagen-product-page-test",
+              "to_path": "/pages/matcha-collagen-fr",
+              "hostname_match": "fr.teangle.ca",
+              "locale_match": ""
+            }
           }
         },
         "block_order": [
           "redirect_Uy7FFh",
           "redirect_NXWdMx",
           "redirect_UUchQG",
-          "redirect_NRzzJb"
+          "redirect_NRzzJb",
+          "redirect_HXEx7L"
         ],
         "settings": {}
       }
