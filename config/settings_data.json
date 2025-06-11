@@ -472,15 +472,6 @@
       "custom-redirects": {
         "type": "custom-redirects",
         "blocks": {
-          "redirect_i93dWy": {
-            "type": "redirect",
-            "settings": {
-              "from_path": "/blogs/recipes/Recette Santée Matcha",
-              "to_path": "/blogs/matcha",
-              "hostname_match": "",
-              "locale_match": ""
-            }
-          },
           "redirect_QtdMig": {
             "type": "redirect",
             "settings": {
@@ -609,7 +600,6 @@
           }
         },
         "block_order": [
-          "redirect_i93dWy",
           "redirect_QtdMig",
           "redirect_Uy7FFh",
           "redirect_QwhLhi",
