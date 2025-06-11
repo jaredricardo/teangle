@@ -523,7 +523,7 @@
             "settings": {
               "from_path": "/products/teangle-matcha-collagen-2-tubs",
               "to_path": "/pages/matcha-collagen-fr",
-              "hostname_match": "fr.teangle.ca",
+              "hostname_match": "",
               "locale_match": ""
             }
           },
