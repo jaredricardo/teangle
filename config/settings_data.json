@@ -475,7 +475,7 @@
           "redirect_i93dWy": {
             "type": "redirect",
             "settings": {
-              "from_path": "/collections/matcha-traditionnelle/products/matcha-collagen",
+              "from_path": "/collections/matcha/products/matcha-collagen",
               "to_path": "/products/matcha-collagen-3",
               "hostname_match": "",
               "locale_match": ""
