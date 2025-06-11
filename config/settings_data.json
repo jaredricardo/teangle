@@ -574,6 +574,15 @@
           "redirect_4yr4Tf": {
             "type": "redirect",
             "settings": {
+              "from_path": "/collections/matcha-collagene/products/teangle-matcha-collagen-3-tubs",
+              "to_path": "/products/matcha-collagen-3",
+              "hostname_match": "",
+              "locale_match": ""
+            }
+          },
+          "redirect_ADz6fF": {
+            "type": "redirect",
+            "settings": {
               "from_path": "/collections/matcha-traditionnelle/products/teangle-matcha-collagen-3-tubs",
               "to_path": "/products/matcha-collagen-3",
               "hostname_match": "",
@@ -593,7 +602,8 @@
           "redirect_HXEx7L",
           "redirect_TTgmHH",
           "redirect_pCxwUq",
-          "redirect_4yr4Tf"
+          "redirect_4yr4Tf",
+          "redirect_ADz6fF"
         ],
         "settings": {}
       }
