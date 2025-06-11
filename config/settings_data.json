@@ -528,7 +528,6 @@
           },
           "redirect_NRzzJb": {
             "type": "redirect",
-            "disabled": true,
             "settings": {
               "from_path": "/products/teangle-matcha-collagen-3-tubs",
               "to_path": "/pages/matcha-collagen-fr",
