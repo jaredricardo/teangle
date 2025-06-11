@@ -1,3 +1,35 @@
+<style>
+  
+
+  .canadian-flag {
+    width: 25px!important;
+  }
+
+  @media only screen and (min-width: 600px) {
+  .lang_fr,
+  .lang_en {
+    display: flex!important;
+    column-gap: 0.5rem;
+    padding: 3.75px 0;
+  }
+    .header_lang { display: inline; position: relative; top: 4px; }
+}
+@media only screen and (max-width: 600px) {
+  .site-nav__icons {
+    white-space: nowrap;
+    display: flex!important;
+    align-items: center!important;
+    column-gap: 0.5rem;
+  }
+
+  .canadian-flag {
+    width: 25px!important;
+  }
+
+  .header_lang { display: inline; position: relative; top: -4px; }
+}
+</style>
+
 <div class="site-nav">
   <div class="site-nav__icons">
     <div class="header_lang small--hide">
