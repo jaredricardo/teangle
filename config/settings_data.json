@@ -597,6 +597,15 @@
               "hostname_match": "",
               "locale_match": ""
             }
+          },
+          "redirect_mTN6rF": {
+            "type": "redirect",
+            "settings": {
+              "from_path": "/pages/ceremonial",
+              "to_path": "/pages/ceremonial-matcha",
+              "hostname_match": "",
+              "locale_match": ""
+            }
           }
         },
         "block_order": [
@@ -613,7 +622,8 @@
           "redirect_pCxwUq",
           "redirect_4yr4Tf",
           "redirect_Xx7Fxr",
-          "redirect_ADz6fF"
+          "redirect_ADz6fF",
+          "redirect_mTN6rF"
         ],
         "settings": {}
       }
