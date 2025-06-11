@@ -490,6 +490,15 @@
               "locale_match": ""
             }
           },
+          "redirect_VFGVwT": {
+            "type": "redirect",
+            "settings": {
+              "from_path": "/products/matcha-starter-pack",
+              "to_path": "/products/matcha-discovery-bundle",
+              "hostname_match": "",
+              "locale_match": ""
+            }
+          },
           "redirect_UUchQG": {
             "type": "redirect",
             "disabled": true,
@@ -524,6 +533,7 @@
         "block_order": [
           "redirect_Uy7FFh",
           "redirect_NXWdMx",
+          "redirect_VFGVwT",
           "redirect_UUchQG",
           "redirect_NRzzJb",
           "redirect_HXEx7L"
