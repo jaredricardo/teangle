@@ -475,7 +475,7 @@
           "redirect_i93dWy": {
             "type": "redirect",
             "settings": {
-              "from_path": "/blogs/recipes/Recette%20Santée%20Matcha",
+              "from_path": "/blogs/recipes/Recette Santée Matcha",
               "to_path": "/blogs/matcha",
               "hostname_match": "",
               "locale_match": ""
