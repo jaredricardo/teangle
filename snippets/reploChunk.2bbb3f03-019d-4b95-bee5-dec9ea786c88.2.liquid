@@ -3,7 +3,7 @@
       {% assign reploExistingProduct = product %}
     {% endif %}
 
-    {% assign product = all_products['matcha-collagen-3'] %} 
+    {% assign product = all_products['matcha-collagen-3'] %} <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
 
     {% if reploExistingProduct %}
       {% assign product = reploExistingProduct %} 
