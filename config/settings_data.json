@@ -552,6 +552,15 @@
               "hostname_match": "",
               "locale_match": ""
             }
+          },
+          "redirect_pCxwUq": {
+            "type": "redirect",
+            "settings": {
+              "from_path": "/collections/matcha-traditionnelle/products/matcha-collagen",
+              "to_path": "/products/matcha-collagen-3",
+              "hostname_match": "",
+              "locale_match": ""
+            }
           }
         },
         "block_order": [
@@ -563,7 +572,8 @@
           "redirect_UUchQG",
           "redirect_NRzzJb",
           "redirect_HXEx7L",
-          "redirect_TTgmHH"
+          "redirect_TTgmHH",
+          "redirect_pCxwUq"
         ],
         "settings": {}
       }
