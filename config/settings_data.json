@@ -481,6 +481,15 @@
               "locale_match": ""
             }
           },
+          "redirect_QwhLhi": {
+            "type": "redirect",
+            "settings": {
+              "from_path": "/products/matcha",
+              "to_path": "/pages/matcha-francais",
+              "hostname_match": "",
+              "locale_match": ""
+            }
+          },
           "redirect_NXWdMx": {
             "type": "redirect",
             "settings": {
@@ -494,6 +503,15 @@
             "type": "redirect",
             "settings": {
               "from_path": "/products/matcha-starter-pack",
+              "to_path": "/products/matcha-discovery-bundle",
+              "hostname_match": "",
+              "locale_match": ""
+            }
+          },
+          "redirect_ppnyQd": {
+            "type": "redirect",
+            "settings": {
+              "from_path": "/products/collagen-starter-pack",
               "to_path": "/products/matcha-discovery-bundle",
               "hostname_match": "",
               "locale_match": ""
@@ -532,8 +550,10 @@
         },
         "block_order": [
           "redirect_Uy7FFh",
+          "redirect_QwhLhi",
           "redirect_NXWdMx",
           "redirect_VFGVwT",
+          "redirect_ppnyQd",
           "redirect_UUchQG",
           "redirect_NRzzJb",
           "redirect_HXEx7L"
