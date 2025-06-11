@@ -483,11 +483,10 @@
           },
           "redirect_NXWdMx": {
             "type": "redirect",
-            "disabled": true,
             "settings": {
-              "from_path": "/products/matcha-collagen",
-              "to_path": "/pages/matcha-collagen-fr",
-              "hostname_match": "fr.teangle.ca",
+              "from_path": "/products/bottle-free-gift",
+              "to_path": " /products/matcha-bottle",
+              "hostname_match": "",
               "locale_match": ""
             }
           },
