@@ -293,7 +293,12 @@ RESPONSIVE
 .bbarticle_oto { top: -100px; position: relative; }
   .drawer__inner { padding: 50px 0 0; }
   #CartDrawer .drawer__fixed-header { height: 70px; }
-  .drawer_lang { max-width: 200px; float: right; padding: 10px 10px 0; }
+  .drawer_lang {     max-width: 200px;
+    float: right;
+    padding: 10px 10px 0;
+    bottom: 95.8dvh;
+    position: absolute;
+    right: 4rem;}
   .product__main-photos { margin-bottom: 0px !important; }
   .memeber_lisst li { background-position: 0px 3px; background-size: 15px;  line-height: 20px; font-size: 15px; padding-bottom: 10px;  }
   #CollectionSidebar { text-align: center; }
