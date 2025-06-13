@@ -1,0 +1,32 @@
+{
+  "name": "fr-hellodarknessmyoldfriend",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "shopify theme check",
+    "prettier": "prettier",
+    "login": "shopify auth logout; shopify theme list --store=$npm_package_config_store",
+    "dev": "shopify theme dev --store=$npm_package_config_store",
+    "dev:net": "shopify theme dev --host \"$(ipconfig getifaddr en0)\" --port 9191 --store=$npm_package_config_store",
+    "dev:sync": "shopify theme dev --theme-editor-sync --store=$npm_package_config_store",
+    "format": "prettier --write '**/*.liquid'",
+    "check": "shopify theme check",
+    "check:fix": "shopify theme check --auto-correct"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredricardo/fr-hellodarknessmyoldfriend.git"
+  },
+  "config": {
+    "store": "fr-hellodarknessmyoldfriend.myshopify.com"
+  },
+  "author": "Jared Ricardo",
+  "contributors": [
+    "Jonah Madeya"
+  ],
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jaredricardo/fr-hellodarknessmyoldfriend/issues"
+  },
+  "homepage": "https://github.com/jaredricardo/fr-hellodarknessmyoldfriend#readme"
+}
