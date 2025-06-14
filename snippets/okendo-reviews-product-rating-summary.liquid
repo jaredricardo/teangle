@@ -1,1 +1,3 @@
-<div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
+<div data-oke-reviews-product-listing-rating>
+  {{ product.metafields.okendo.ProductListingSnippet | remove: 'Avis' }}
+</div>

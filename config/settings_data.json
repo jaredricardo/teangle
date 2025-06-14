@@ -503,7 +503,7 @@
             "type": "redirect",
             "settings": {
               "from_path": "/products/bottle-free-gift",
-              "to_path": " /products/matcha-bottle",
+              "to_path": "/products/matcha-bottle",
               "hostname_match": "",
               "locale_match": ""
             }
