@@ -3,7 +3,17 @@
       {% assign reploExistingProduct = product %}
     {% endif %}
 
-    {% assign product = all_products['matcha-collagen-3'] %} <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
+    {% assign product = all_products['matcha-collagen-3'] %} <div
+  data-oke-reviews-product-listing-rating
+  style="display: flex; align-items: center; gap: .5rem;"
+>{{ product.metafields.okendo.ProductListingSnippet | remove: 'Avis' }}
+{% if request.locale.iso_code == 'fr' %}
+  Avis
+{% elsif request.locale.iso_code == 'en' %}
+  Reviews
+{% endif %}
+</div>
+
 
     {% if reploExistingProduct %}
       {% assign product = reploExistingProduct %} 
