@@ -490,6 +490,15 @@
               "locale_match": ""
             }
           },
+          "redirect_RLEnjC": {
+            "type": "redirect",
+            "settings": {
+              "from_path": "/products/matcha-collagen",
+              "to_path": "/pages/matcha-collagen-fr",
+              "hostname_match": "fr.teangle.ca",
+              "locale_match": ""
+            }
+          },
           "redirect_QwhLhi": {
             "type": "redirect",
             "settings": {
@@ -611,6 +620,7 @@
         "block_order": [
           "redirect_QtdMig",
           "redirect_Uy7FFh",
+          "redirect_RLEnjC",
           "redirect_QwhLhi",
           "redirect_NXWdMx",
           "redirect_VFGVwT",
