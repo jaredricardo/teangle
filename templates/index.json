@@ -67,7 +67,7 @@
           "settings": {
             "button_text": "Get Balance",
             "button_text_color": "#ffffff",
-            "button_link": "shopify://products/matcha-collagen",
+            "button_link": "shopify://products/matcha-collagen-o",
             "button_bg_color": "#1e4845",
             "margin_top": 0,
             "margin_bottom": 0
@@ -173,7 +173,7 @@
         "value_Rq8UQd": {
           "type": "value",
           "settings": {
-            "link": "shopify://products/matcha-collagen",
+            "link": "shopify://products/matcha-collagen-o",
             "link_text": "Shop Now",
             "image": "shopify://shop_images/3_2_1500x1000_-_8.jpg",
             "title": "",
@@ -273,7 +273,7 @@
             "title": "Matcha Collagen  Beauty Blend",
             "text": "<p>A superfood matcha latte blend that promotes healthy ageing.</p>",
             "button_label": "SHOP MATCHA COLLAGEN",
-            "button_link": "shopify://products/matcha-collagen"
+            "button_link": "shopify://products/matcha-collagen-o"
           }
         },
         "text_block_K9Tqct": {

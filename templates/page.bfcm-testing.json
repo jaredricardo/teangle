@@ -1,1 +1,484 @@
-{"sections":{"2a8fe613-9564-404e-955e-109b60572367":{"type":"jr-simple-image","settings":{"image_d":"shopify:\/\/shop_images\/OPT-IN_PAGE.png"}},"8f93686f-f78d-4fd9-9f23-01a527472880":{"type":"jr-countdown","settings":{"bg_color":"","header_color":"#0f0f0f","header":"Time Remaining","year":2023,"month":11,"day":24,"hour":0,"minute":0}},"90a462ce-4ee9-4943-a302-4cd26e9d6e2d":{"type":"jr-product-cards","blocks":{"de04b5eb-e1da-4b9b-b26b-3eacaf7e6800":{"type":"product-card","settings":{"card_product":"6-signature-pack-buy-6-get-2","product_alt_image":"shopify:\/\/shop_images\/Frame_25_1.png","product_alt_title":"6 Signature Pack","product_subtitle":"buy 6 get 2 free","enable_savings_callout":true,"free_gift_text":"<p>🎁 Free Gift value $54<\/p>","shipping_callout":"🚚 Free Shipping Included","sticker":"shopify:\/\/shop_images\/Star_2.svg","sticker_text":"2 free bags","sticker_top":16,"sticker_left":90,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"02c6f569-3b27-435c-a7eb-a7618349fb01":{"type":"product-card","settings":{"card_product":"4-signature-pack-buy-4-get-1-free","product_alt_image":"shopify:\/\/shop_images\/Frame_25_2.png","product_alt_title":"4 Signature Pack","product_subtitle":"buy 4 get 1","enable_savings_callout":true,"free_gift_text":"<p>🎁 Free Gift value $63<\/p>","shipping_callout":"🚚 Free Shipping Included","sticker":"shopify:\/\/shop_images\/Union.svg","sticker_text":"1 free pack","sticker_top":90,"sticker_left":88,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":-15,"sticker_text_color":"#ffffff"}},"1e972c77-a33c-46ed-9dc2-a27ca69a8781":{"type":"product-card","settings":{"card_product":"6-ceremonial-pack-buy-6-get-2","product_alt_image":"shopify:\/\/shop_images\/Frame_25_3.png","product_alt_title":"Ceremonial Matcha","product_subtitle":"Buy 6 get 2 free","enable_savings_callout":true,"free_gift_text":"<p>🎁 Free Gift value $58<\/p>","shipping_callout":"🚚 Free Shipping Included","sticker":"shopify:\/\/shop_images\/Polygon_1.svg","sticker_text":"2  free bags","sticker_top":12,"sticker_left":82,"translate_y":-55,"translate_x":-25,"sticker_text_rotation":-10,"sticker_text_color":"#ffffff"}},"5d8bfaf3-47d2-4b36-8fcb-ed0d7ab1d5d5":{"type":"product-card","settings":{"card_product":"4-ceremonial-pack-buy-4-get-1-free","product_alt_image":"shopify:\/\/shop_images\/Frame_32_1.png","product_alt_title":"Ceremonial Matcha","product_subtitle":"Buy 4 get 1 free","enable_savings_callout":true,"free_gift_text":"<p>🎁 Free Gift value $29<\/p>","shipping_callout":"🚚 Free Shipping Included","sticker":"shopify:\/\/shop_images\/Star_4.svg","sticker_text":"1 free bag","sticker_top":90,"sticker_left":90,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":17,"sticker_text_color":"#6178f4"}},"82f36e33-f0da-4d51-a73f-5697bab8af14":{"type":"product-card","settings":{"card_product":"matcha-collagen-buy-4-get-1-free","product_alt_image":"shopify:\/\/shop_images\/Frame_25_4.png","product_alt_title":"Matcha Collagen","product_subtitle":"Buy 4 get 1 free","enable_savings_callout":true,"free_gift_text":"<p><strong>🎁 Free Gift value $54<\/strong><\/p>","shipping_callout":"🚚 Free Shipping Included","sticker":"shopify:\/\/shop_images\/Ellipse_8.svg","sticker_text":"1 free tub","sticker_top":0,"sticker_left":13,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":-7,"sticker_text_color":"#819427"}}},"block_order":["de04b5eb-e1da-4b9b-b26b-3eacaf7e6800","02c6f569-3b27-435c-a7eb-a7618349fb01","1e972c77-a33c-46ed-9dc2-a27ca69a8781","5d8bfaf3-47d2-4b36-8fcb-ed0d7ab1d5d5","82f36e33-f0da-4d51-a73f-5697bab8af14"],"settings":{"make_gradient":true,"bg_1":"#fdca9e","bg_2":"#f7eee3","text_color":"#0f0f0f","callout_color":"#9a70d0","border_color":"#9a70d0","button_color":"#6178f4","card_bg_color":"#ffffff","header":"Best Deals","subheader":"Buy and Get Free Matcha","button_text":"Buy Now","contain_image":false}},"a7647c44-7465-4334-893b-b220f2851a82":{"type":"jr-product-cards","blocks":{"2d4ca7ac-383d-4d8b-aa25-2447c5993f3e":{"type":"product-card","settings":{"card_product":"starter-pack","product_alt_title":"Teangle Starter Pack","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker":"shopify:\/\/shop_images\/Star_4_0a153300-3dd7-4754-9b91-a0658e9b7ceb.svg","sticker_text":"35% Off","sticker_top":42,"sticker_left":0,"translate_y":-50,"translate_x":-57,"sticker_text_rotation":-25,"sticker_text_color":"#9a70d0"}},"4cefebfb-ae75-4a82-b443-e3cc6e3c37a9":{"type":"product-card","settings":{"card_product":"collagen-starter-pack","product_alt_title":"Matcha Collagen","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker":"shopify:\/\/shop_images\/Union.png","sticker_text":"30% off","sticker_top":92,"sticker_left":93,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":16,"sticker_text_color":"#6178f4"}}},"block_order":["2d4ca7ac-383d-4d8b-aa25-2447c5993f3e","4cefebfb-ae75-4a82-b443-e3cc6e3c37a9"],"settings":{"make_gradient":false,"bg_1":"#819427","bg_2":"","text_color":"#ffffff","callout_color":"","border_color":"#dc98bb","button_color":"#ffa768","card_bg_color":"","header":"Matcha Bundles","subheader":"Huge savings on our matcha bundles","button_text":"Buy Now","contain_image":false}},"ac282d2a-083d-4ab3-b04b-a535e99d20ba":{"type":"jr-product-cards","blocks":{"df4b7635-a59d-4ac6-b655-b63696a5139c":{"type":"product-card","settings":{"card_product":"matcha-bottle","product_alt_image":"shopify:\/\/shop_images\/Teangle-BottlePink.jpg","product_alt_title":"Matcha Bottle","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"4d35c1a0-c377-4777-98ed-f8d1c41ac894":{"type":"product-card","settings":{"card_product":"teangle-milk-frother","product_alt_image":"shopify:\/\/shop_images\/Milk-Frother-Shopify-01.jpg","product_alt_title":"Milk Frother","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"e807e798-c740-4907-84c8-bacc64ff9e90":{"type":"product-card","settings":{"card_product":"luxe-bottle","product_alt_image":"shopify:\/\/shop_images\/TeangleLuxeBottleSuperNova6.jpg","product_alt_title":"","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"3c504da5-efd8-483b-b842-42a110b592ec":{"type":"product-card","settings":{"card_product":"matcha-mug-matchawaitingfor","product_alt_image":"shopify:\/\/shop_images\/Matcha-Mug1b.jpg","product_alt_title":"","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"36ec04e2-f744-4399-985a-e1d22092a65a":{"type":"product-card","settings":{"card_product":"matchawaitingfor-tumbler","product_alt_image":"shopify:\/\/shop_images\/1_pink_ed.png","product_alt_title":"MatchaWaitingFor Tumbler","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"a14b56e2-a2df-4ec3-9c06-0cba9553a93f":{"type":"product-card","settings":{"card_product":"matcha-spoon","product_alt_image":"shopify:\/\/shop_images\/spoon.jpg","product_alt_title":"Spoon","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}}},"block_order":["df4b7635-a59d-4ac6-b655-b63696a5139c","4d35c1a0-c377-4777-98ed-f8d1c41ac894","e807e798-c740-4907-84c8-bacc64ff9e90","3c504da5-efd8-483b-b842-42a110b592ec","36ec04e2-f744-4399-985a-e1d22092a65a","a14b56e2-a2df-4ec3-9c06-0cba9553a93f"],"settings":{"make_gradient":true,"bg_1":"#eaffcd","bg_2":"#caebed","text_color":"#000000","callout_color":"","border_color":"#9a70d0","button_color":"#6178f4","card_bg_color":"","header":"Accessories","subheader":"","button_text":"Buy Now","contain_image":false}},"ebcc8912-5548-42c6-8981-1698a30c3861":{"type":"jr-product-cards","blocks":{"e27c07cc-f924-4266-a56b-0d58fd413fbb":{"type":"product-card","settings":{"card_product":"ceremonial-matcha","product_alt_title":"Ceremonial","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"ebd7774f-303b-404f-9ca6-9a72f5c9ec46":{"type":"product-card","settings":{"card_product":"matcha-chai","product_alt_title":"Chai","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"b0fd9039-b71c-462d-b99b-a458e67aff3e":{"type":"product-card","settings":{"card_product":"teangle-ginger-lemongrass-matcha","product_alt_title":"Ginger & Lemongrass","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"aefb6050-b718-4658-a1bb-9ad8e5b8f0db":{"type":"product-card","settings":{"card_product":"matcha-collagen","product_alt_title":"Matcha Collagen","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}},"9d520e7e-8661-4a4a-9a54-bad21145cbaf":{"type":"product-card","settings":{"card_product":"teangle-peppermint-matcha","product_alt_title":"Peppermint","product_subtitle":"","enable_savings_callout":true,"free_gift_text":"","shipping_callout":"🚚 Free Shipping Included","sticker_text":"","sticker_top":0,"sticker_left":0,"translate_y":-50,"translate_x":-50,"sticker_text_rotation":0,"sticker_text_color":"#ffffff"}}},"block_order":["e27c07cc-f924-4266-a56b-0d58fd413fbb","ebd7774f-303b-404f-9ca6-9a72f5c9ec46","b0fd9039-b71c-462d-b99b-a458e67aff3e","aefb6050-b718-4658-a1bb-9ad8e5b8f0db","9d520e7e-8661-4a4a-9a54-bad21145cbaf"],"settings":{"make_gradient":false,"bg_1":"#f7eee3","bg_2":"","text_color":"#1e4845","callout_color":"","border_color":"#1e4845","button_color":"#1e4845","card_bg_color":"","header":"Matcha","subheader":"","button_text":"Buy Now","contain_image":false}}},"order":["2a8fe613-9564-404e-955e-109b60572367","8f93686f-f78d-4fd9-9f23-01a527472880","90a462ce-4ee9-4943-a302-4cd26e9d6e2d","a7647c44-7465-4334-893b-b220f2851a82","ac282d2a-083d-4ab3-b04b-a535e99d20ba","ebcc8912-5548-42c6-8981-1698a30c3861"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "2a8fe613-9564-404e-955e-109b60572367": {
+      "type": "jr-simple-image",
+      "settings": {
+        "image_d": "shopify://shop_images/OPT-IN_PAGE.png"
+      }
+    },
+    "8f93686f-f78d-4fd9-9f23-01a527472880": {
+      "type": "jr-countdown",
+      "settings": {
+        "bg_color": "",
+        "header_color": "#0f0f0f",
+        "header": "Time Remaining",
+        "year": 2023,
+        "month": 11,
+        "day": 24,
+        "hour": 0,
+        "minute": 0
+      }
+    },
+    "90a462ce-4ee9-4943-a302-4cd26e9d6e2d": {
+      "type": "jr-product-cards",
+      "blocks": {
+        "de04b5eb-e1da-4b9b-b26b-3eacaf7e6800": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "6-signature-pack-buy-6-get-2",
+            "product_alt_image": "shopify://shop_images/Frame_25_1.png",
+            "product_alt_title": "6 Signature Pack",
+            "product_subtitle": "buy 6 get 2 free",
+            "enable_savings_callout": true,
+            "free_gift_text": "<p>🎁 Free Gift value $54</p>",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker": "shopify://shop_images/Star_2.svg",
+            "sticker_text": "2 free bags",
+            "sticker_top": 16,
+            "sticker_left": 90,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "02c6f569-3b27-435c-a7eb-a7618349fb01": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "4-signature-pack-buy-4-get-1-free",
+            "product_alt_image": "shopify://shop_images/Frame_25_2.png",
+            "product_alt_title": "4 Signature Pack",
+            "product_subtitle": "buy 4 get 1",
+            "enable_savings_callout": true,
+            "free_gift_text": "<p>🎁 Free Gift value $63</p>",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker": "shopify://shop_images/Union.svg",
+            "sticker_text": "1 free pack",
+            "sticker_top": 90,
+            "sticker_left": 88,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": -15,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "1e972c77-a33c-46ed-9dc2-a27ca69a8781": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "6-ceremonial-pack-buy-6-get-2",
+            "product_alt_image": "shopify://shop_images/Frame_25_3.png",
+            "product_alt_title": "Ceremonial Matcha",
+            "product_subtitle": "Buy 6 get 2 free",
+            "enable_savings_callout": true,
+            "free_gift_text": "<p>🎁 Free Gift value $58</p>",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker": "shopify://shop_images/Polygon_1.svg",
+            "sticker_text": "2  free bags",
+            "sticker_top": 12,
+            "sticker_left": 82,
+            "translate_y": -55,
+            "translate_x": -25,
+            "sticker_text_rotation": -10,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "5d8bfaf3-47d2-4b36-8fcb-ed0d7ab1d5d5": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "4-ceremonial-pack-buy-4-get-1-free",
+            "product_alt_image": "shopify://shop_images/Frame_32_1.png",
+            "product_alt_title": "Ceremonial Matcha",
+            "product_subtitle": "Buy 4 get 1 free",
+            "enable_savings_callout": true,
+            "free_gift_text": "<p>🎁 Free Gift value $29</p>",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker": "shopify://shop_images/Star_4.svg",
+            "sticker_text": "1 free bag",
+            "sticker_top": 90,
+            "sticker_left": 90,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 17,
+            "sticker_text_color": "#6178f4"
+          }
+        },
+        "82f36e33-f0da-4d51-a73f-5697bab8af14": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "matcha-collagen-buy-4-get-1-free",
+            "product_alt_image": "shopify://shop_images/Frame_25_4.png",
+            "product_alt_title": "Matcha Collagen",
+            "product_subtitle": "Buy 4 get 1 free",
+            "enable_savings_callout": true,
+            "free_gift_text": "<p><strong>🎁 Free Gift value $54</strong></p>",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker": "shopify://shop_images/Ellipse_8.svg",
+            "sticker_text": "1 free tub",
+            "sticker_top": 0,
+            "sticker_left": 13,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": -7,
+            "sticker_text_color": "#819427"
+          }
+        }
+      },
+      "block_order": [
+        "de04b5eb-e1da-4b9b-b26b-3eacaf7e6800",
+        "02c6f569-3b27-435c-a7eb-a7618349fb01",
+        "1e972c77-a33c-46ed-9dc2-a27ca69a8781",
+        "5d8bfaf3-47d2-4b36-8fcb-ed0d7ab1d5d5",
+        "82f36e33-f0da-4d51-a73f-5697bab8af14"
+      ],
+      "settings": {
+        "make_gradient": true,
+        "bg_1": "#fdca9e",
+        "bg_2": "#f7eee3",
+        "text_color": "#0f0f0f",
+        "callout_color": "#9a70d0",
+        "border_color": "#9a70d0",
+        "button_color": "#6178f4",
+        "card_bg_color": "#ffffff",
+        "header": "Best Deals",
+        "subheader": "Buy and Get Free Matcha",
+        "button_text": "Buy Now",
+        "contain_image": false
+      }
+    },
+    "a7647c44-7465-4334-893b-b220f2851a82": {
+      "type": "jr-product-cards",
+      "blocks": {
+        "2d4ca7ac-383d-4d8b-aa25-2447c5993f3e": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "starter-pack",
+            "product_alt_title": "Teangle Starter Pack",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker": "shopify://shop_images/Star_4_0a153300-3dd7-4754-9b91-a0658e9b7ceb.svg",
+            "sticker_text": "35% Off",
+            "sticker_top": 42,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -57,
+            "sticker_text_rotation": -25,
+            "sticker_text_color": "#9a70d0"
+          }
+        },
+        "4cefebfb-ae75-4a82-b443-e3cc6e3c37a9": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "collagen-starter-pack",
+            "product_alt_title": "Matcha Collagen",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker": "shopify://shop_images/Union.png",
+            "sticker_text": "30% off",
+            "sticker_top": 92,
+            "sticker_left": 93,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 16,
+            "sticker_text_color": "#6178f4"
+          }
+        }
+      },
+      "block_order": [
+        "2d4ca7ac-383d-4d8b-aa25-2447c5993f3e",
+        "4cefebfb-ae75-4a82-b443-e3cc6e3c37a9"
+      ],
+      "settings": {
+        "make_gradient": false,
+        "bg_1": "#819427",
+        "bg_2": "",
+        "text_color": "#ffffff",
+        "callout_color": "",
+        "border_color": "#dc98bb",
+        "button_color": "#ffa768",
+        "card_bg_color": "",
+        "header": "Matcha Bundles",
+        "subheader": "Huge savings on our matcha bundles",
+        "button_text": "Buy Now",
+        "contain_image": false
+      }
+    },
+    "ac282d2a-083d-4ab3-b04b-a535e99d20ba": {
+      "type": "jr-product-cards",
+      "blocks": {
+        "df4b7635-a59d-4ac6-b655-b63696a5139c": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "matcha-bottle",
+            "product_alt_image": "shopify://shop_images/Teangle-BottlePink.jpg",
+            "product_alt_title": "Matcha Bottle",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "4d35c1a0-c377-4777-98ed-f8d1c41ac894": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "teangle-milk-frother",
+            "product_alt_image": "shopify://shop_images/Milk-Frother-Shopify-01.jpg",
+            "product_alt_title": "Milk Frother",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "e807e798-c740-4907-84c8-bacc64ff9e90": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "luxe-bottle",
+            "product_alt_image": "shopify://shop_images/TeangleLuxeBottleSuperNova6.jpg",
+            "product_alt_title": "",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "3c504da5-efd8-483b-b842-42a110b592ec": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "matcha-mug-matchawaitingfor",
+            "product_alt_image": "shopify://shop_images/Matcha-Mug1b.jpg",
+            "product_alt_title": "",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "36ec04e2-f744-4399-985a-e1d22092a65a": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "matchawaitingfor-tumbler",
+            "product_alt_image": "shopify://shop_images/1_pink_ed.png",
+            "product_alt_title": "MatchaWaitingFor Tumbler",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "a14b56e2-a2df-4ec3-9c06-0cba9553a93f": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "matcha-spoon",
+            "product_alt_image": "shopify://shop_images/spoon.jpg",
+            "product_alt_title": "Spoon",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "df4b7635-a59d-4ac6-b655-b63696a5139c",
+        "4d35c1a0-c377-4777-98ed-f8d1c41ac894",
+        "e807e798-c740-4907-84c8-bacc64ff9e90",
+        "3c504da5-efd8-483b-b842-42a110b592ec",
+        "36ec04e2-f744-4399-985a-e1d22092a65a",
+        "a14b56e2-a2df-4ec3-9c06-0cba9553a93f"
+      ],
+      "settings": {
+        "make_gradient": true,
+        "bg_1": "#eaffcd",
+        "bg_2": "#caebed",
+        "text_color": "#000000",
+        "callout_color": "",
+        "border_color": "#9a70d0",
+        "button_color": "#6178f4",
+        "card_bg_color": "",
+        "header": "Accessories",
+        "subheader": "",
+        "button_text": "Buy Now",
+        "contain_image": false
+      }
+    },
+    "ebcc8912-5548-42c6-8981-1698a30c3861": {
+      "type": "jr-product-cards",
+      "blocks": {
+        "e27c07cc-f924-4266-a56b-0d58fd413fbb": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "ceremonial-matcha",
+            "product_alt_title": "Ceremonial",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "ebd7774f-303b-404f-9ca6-9a72f5c9ec46": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "matcha-chai",
+            "product_alt_title": "Chai",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "b0fd9039-b71c-462d-b99b-a458e67aff3e": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "teangle-ginger-lemongrass-matcha",
+            "product_alt_title": "Ginger & Lemongrass",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "aefb6050-b718-4658-a1bb-9ad8e5b8f0db": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "matcha-collagen-o",
+            "product_alt_title": "Matcha Collagen",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        },
+        "9d520e7e-8661-4a4a-9a54-bad21145cbaf": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "teangle-peppermint-matcha",
+            "product_alt_title": "Peppermint",
+            "product_subtitle": "",
+            "enable_savings_callout": true,
+            "free_gift_text": "",
+            "shipping_callout": "🚚 Free Shipping Included",
+            "sticker_text": "",
+            "sticker_top": 0,
+            "sticker_left": 0,
+            "translate_y": -50,
+            "translate_x": -50,
+            "sticker_text_rotation": 0,
+            "sticker_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "e27c07cc-f924-4266-a56b-0d58fd413fbb",
+        "ebd7774f-303b-404f-9ca6-9a72f5c9ec46",
+        "b0fd9039-b71c-462d-b99b-a458e67aff3e",
+        "aefb6050-b718-4658-a1bb-9ad8e5b8f0db",
+        "9d520e7e-8661-4a4a-9a54-bad21145cbaf"
+      ],
+      "settings": {
+        "make_gradient": false,
+        "bg_1": "#f7eee3",
+        "bg_2": "",
+        "text_color": "#1e4845",
+        "callout_color": "",
+        "border_color": "#1e4845",
+        "button_color": "#1e4845",
+        "card_bg_color": "",
+        "header": "Matcha",
+        "subheader": "",
+        "button_text": "Buy Now",
+        "contain_image": false
+      }
+    }
+  },
+  "order": [
+    "2a8fe613-9564-404e-955e-109b60572367",
+    "8f93686f-f78d-4fd9-9f23-01a527472880",
+    "90a462ce-4ee9-4943-a302-4cd26e9d6e2d",
+    "a7647c44-7465-4334-893b-b220f2851a82",
+    "ac282d2a-083d-4ab3-b04b-a535e99d20ba",
+    "ebcc8912-5548-42c6-8981-1698a30c3861"
+  ]
+}

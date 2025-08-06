@@ -1,1 +1,116 @@
-{"sections":{"main":{"type":"main-collagen-landing","disabled":true,"settings":{}},"164323326268bd3675":{"type":"fullwidth-image-text","settings":{"image":"shopify:\/\/shop_images\/collagen2.jpg","section_html":"<div style=\" color: #fff;\">\n<h2>IT'S TIME TO GLOW!<\/h2>\n\t\t\t\t<p>Powered with 3 super ingredients to give you long-lasting energy, boost your immune system & give your skin that extra bounce! Ready to get glowing?<\/p>\n\t\t\t\t<a href=\"\/products\/matcha-collagen\" class=\"btn\">Choose Offer<\/a>\n<\/div>","sec_color":"#ede1d1","layout":"left"}},"1643233990c9df471e":{"type":"fullwidth-html","settings":{"section_html":"{% if request.locale.iso_code == 'fr' %}\n<div class=\"page-width collagen-l2 pblock\" style=\" margin: 0 auto; max-width: 1080px; \">\n  <div class=\"feature-row aos-init aos-animate \" >\n      <img class=\"odesktop\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1835\/6147\/files\/collagen-icons-1b.png?v=1610627804\">\n      <img class=\"omobile\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1835\/6147\/files\/collagen-icons-bb.png?v=1610566801\">\n  <\/div>\n<\/div>\n{% else %}\n<div class=\"page-width collagen-l2 pblock\" style=\" margin: 0 auto; max-width: 1080px; \">\n  <div class=\"feature-row aos-init aos-animate \">\n      <img class=\"odesktop\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0263\/3606\/7666\/files\/collagen-icons-1bca.png?v=1610656183\">\n      <img class=\"omobile\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0263\/3606\/7666\/files\/collagen-icons-bbca.png?v=1610656179\">\n  <\/div>\n<\/div>\n{% endif %}","sec_color":"#ffffff"}},"1643234098f1eed963":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/matcha-collagen6-_1.jpg","image_width":700,"subtitle":"","title":"Why Teangle's Collagen Matcha?","text":"<p>Glowing skin, hair & nails support<\/p><p>Clean, long Lasting Energy<\/p><p>Boosts your immune system<\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"right","divider":false}},"1643234367acf26c06":{"type":"fullwidth-html","settings":{"section_html":"{% render 'sslider-collagen' %}","sec_color":"#f2f5f1"}},"164323426359905afa":{"type":"text-and-image","settings":{"image":"shopify:\/\/shop_images\/collagen-landing-9_9086c356-e534-458c-8372-66cd83d6d6d9.png","image_width":700,"subtitle":"","title":"Cheers to that!","text":"<p>Teangle's collagen matcha mixes easily with warm water. You can enjoy it as it, or add your own sweeteners. You can even add your favourite plant-based milk to turn in into a latte and still get all the amazing health benefits.<\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"left","divider":false}},"1643234351c3c79600":{"type":"slideshow","blocks":{"16432343511ad7a724-0":{"type":"image","settings":{"top_subheading":"","title":"matcha waiting for ?","title_size":70,"subheading":"","link":"shopify:\/\/products\/matcha-collagen","link_text":"SHOP NOW","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-center","image":"shopify:\/\/shop_images\/Web-Banner-Collagen-Deskop-Footer_1728x_d2276d68-332b-4ae9-99df-d35dfa9a2a02.jpg","overlay_opacity":0,"focal_point":"center center"}}},"block_order":["16432343511ad7a724-0"],"settings":{"section_height":"550px","mobile_height":"300px","parallax":false,"style":"bars","autoplay":true,"autoplay_speed":5}}},"order":["main","164323326268bd3675","1643233990c9df471e","1643234098f1eed963","1643234367acf26c06","164323426359905afa","1643234351c3c79600"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collagen-landing",
+      "disabled": true,
+      "settings": {}
+    },
+    "164323326268bd3675": {
+      "type": "fullwidth-image-text",
+      "settings": {
+        "image": "shopify://shop_images/collagen2.jpg",
+        "section_html": "<div style=\" color: #fff;\">\n<h2>IT'S TIME TO GLOW!</h2>\n\t\t\t\t<p>Powered with 3 super ingredients to give you long-lasting energy, boost your immune system & give your skin that extra bounce! Ready to get glowing?</p>\n\t\t\t\t<a href=\"/products/matcha-collagen\" class=\"btn\">Choose Offer</a>\n</div>",
+        "sec_color": "#ede1d1",
+        "layout": "left"
+      }
+    },
+    "1643233990c9df471e": {
+      "type": "fullwidth-html",
+      "settings": {
+        "section_html": "{% if request.locale.iso_code == 'fr' %}\n<div class=\"page-width collagen-l2 pblock\" style=\" margin: 0 auto; max-width: 1080px; \">\n  <div class=\"feature-row aos-init aos-animate \" >\n      <img class=\"odesktop\" src=\"https://cdn.shopify.com/s/files/1/1835/6147/files/collagen-icons-1b.png?v=1610627804\">\n      <img class=\"omobile\" src=\"https://cdn.shopify.com/s/files/1/1835/6147/files/collagen-icons-bb.png?v=1610566801\">\n  </div>\n</div>\n{% else %}\n<div class=\"page-width collagen-l2 pblock\" style=\" margin: 0 auto; max-width: 1080px; \">\n  <div class=\"feature-row aos-init aos-animate \">\n      <img class=\"odesktop\" src=\"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/collagen-icons-1bca.png?v=1610656183\">\n      <img class=\"omobile\" src=\"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/collagen-icons-bbca.png?v=1610656179\">\n  </div>\n</div>\n{% endif %}",
+        "sec_color": "#ffffff"
+      }
+    },
+    "1643234098f1eed963": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/matcha-collagen6-_1.jpg",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Why Teangle's Collagen Matcha?",
+        "text": "<p>Glowing skin, hair & nails support</p><p>Clean, long Lasting Energy</p><p>Boosts your immune system</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "1643234367acf26c06": {
+      "type": "fullwidth-html",
+      "settings": {
+        "section_html": "{% render 'sslider-collagen' %}",
+        "sec_color": "#f2f5f1"
+      }
+    },
+    "164323426359905afa": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/collagen-landing-9_9086c356-e534-458c-8372-66cd83d6d6d9.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Cheers to that!",
+        "text": "<p>Teangle's collagen matcha mixes easily with warm water. You can enjoy it as it, or add your own sweeteners. You can even add your favourite plant-based milk to turn in into a latte and still get all the amazing health benefits.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "1643234351c3c79600": {
+      "type": "slideshow",
+      "blocks": {
+        "16432343511ad7a724-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "matcha waiting for ?",
+            "title_size": 70,
+            "subheading": "",
+            "link": "shopify://products/matcha-collagen-o",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Web-Banner-Collagen-Deskop-Footer_1728x_d2276d68-332b-4ae9-99df-d35dfa9a2a02.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "16432343511ad7a724-0"
+      ],
+      "settings": {
+        "section_height": "550px",
+        "mobile_height": "300px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164323326268bd3675",
+    "1643233990c9df471e",
+    "1643234098f1eed963",
+    "1643234367acf26c06",
+    "164323426359905afa",
+    "1643234351c3c79600"
+  ]
+}
