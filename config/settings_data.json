@@ -492,6 +492,7 @@
           },
           "redirect_RLEnjC": {
             "type": "redirect",
+            "disabled": true,
             "settings": {
               "from_path": "/products/matcha-collagen",
               "to_path": "/pages/matcha-collagen-fr",
