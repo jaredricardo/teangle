@@ -1,7 +1,12 @@
-
     {% if request.page_type == "page" and page.metafields.replo.page_featured_image != blank %}
-      <meta property="og:image" content="{{ page.metafields.replo.page_featured_image }}"/>
-      <meta property="og:image:secure_url" content="{{ page.metafields.replo.page_featured_image }}"/>
+      {%- comment %}<locksmith:211b>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:image" content="{{ page.metafields.replo.page_featured_image }}"/>{% endif -%}
+        {%- comment %}original: <meta property="og:image" content="{{ page.metafields.replo.page_featured_image }}"/>{%- endcomment %}
+      {%- comment %}</locksmith:211b>{% endcomment -%}
+      {%- comment %}<locksmith:5e25>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:image:secure_url" content="{{ page.metafields.replo.page_featured_image }}"/>{% endif -%}
+        {%- comment %}original: <meta property="og:image:secure_url" content="{{ page.metafields.replo.page_featured_image }}"/>{%- endcomment %}
+      {%- comment %}</locksmith:5e25>{% endcomment -%}
       <meta property="twitter:image" content="{{ page.metafields.replo.page_featured_image }}"/>
     {% endif %}
     {% # theme-check-disable %}
