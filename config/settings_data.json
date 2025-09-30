@@ -418,7 +418,7 @@
       "countdown-bar": {
         "type": "countdown-bar",
         "settings": {
-          "hide": true,
+          "hide": false,
           "content_max_width": 1200,
           "content_alignment": "center",
           "padding_y": 10,
@@ -431,7 +431,7 @@
           "background_gradient": "",
           "close_button_color": "#000000",
           "show_message_1": true,
-          "message_1": "Notre nouveau matcha collagène à la vanille est disponible ! ⏱️",
+          "message_1": "5 reasons why you'll love our Matcha Collagen",
           "message_1_color": "#000000",
           "message_1_size": 18,
           "message_1_size_mobile": 16,
@@ -451,8 +451,8 @@
           "timer_unit_spacing": 5,
           "button_type": "solid",
           "show_combined_button": true,
-          "button_text": "MAGASINER!",
-          "button_link": "",
+          "button_text": "Read the blog!",
+          "button_link": "https://teangle.ca/pages/5-reasons-matcha-collagen",
           "button_copyable": true,
           "button_bg_color": "#1e4845",
           "button_text_color": "#ffffff",
