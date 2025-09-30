@@ -127,29 +127,18 @@
               "link": "tel:18003166320"
             }
           },
-          "34df6dfd-a60d-441c-b53d-d3c042cc9001": {
-            "type": "mega",
-            "settings": {
-              "mega_image": "shopify://shop_images/Group_1484580834_1.webp",
-              "mega_title": "Matcha+",
-              "mega_text": "<p>Most Popular</p>",
-              "mega_url": "shopify://pages/new-pdp-2",
-              "mega_assignment": 1
-            }
-          },
           "93d74be2-73aa-40c8-b76e-86293feeb870": {
             "type": "mega",
             "settings": {
               "mega_image": "shopify://shop_images/COLLAGEN_440x_035b4f05-dcbb-4f3e-a14f-4bccb59e0654.webp",
               "mega_title": "Matcha Collagen",
               "mega_text": "<p>Matcha and Collagen for your self-care routine</p>",
-              "mega_url": "shopify://collections/matcha-collagene",
+              "mega_url": "",
               "mega_assignment": 1
             }
           },
           "691b79fa-3a88-4a9c-9e7c-3ec249ff8bde": {
             "type": "mega",
-            "disabled": true,
             "settings": {
               "mega_image": "shopify://shop_images/CEREMONIAL_440x_d3599a7d-ec10-40c7-be2e-9602cd9eaa90.webp",
               "mega_title": "Ceremonial Matcha",
@@ -166,6 +155,17 @@
               "mega_text": "<p>Perfect for your active lifestyle! </p>",
               "mega_url": "shopify://products/luxe-bottle",
               "mega_assignment": 3
+            }
+          },
+          "34df6dfd-a60d-441c-b53d-d3c042cc9001": {
+            "type": "mega",
+            "disabled": true,
+            "settings": {
+              "mega_image": "shopify://shop_images/Group_1484580834_1.webp",
+              "mega_title": "Matcha+",
+              "mega_text": "<p>Most Popular</p>",
+              "mega_url": "shopify://pages/new-pdp-2",
+              "mega_assignment": 1
             }
           },
           "b4967b17-aef8-42f9-9e09-62f32943f1e5": {
@@ -224,10 +224,10 @@
           "1524770014057",
           "610aad82-47d4-4ffb-aa5b-1c33b87be65b",
           "b16b902e-93c1-4190-b7bb-c19b09205957",
-          "34df6dfd-a60d-441c-b53d-d3c042cc9001",
           "93d74be2-73aa-40c8-b76e-86293feeb870",
           "691b79fa-3a88-4a9c-9e7c-3ec249ff8bde",
           "90264629-791f-47c5-9888-eb9203eded82",
+          "34df6dfd-a60d-441c-b53d-d3c042cc9001",
           "b4967b17-aef8-42f9-9e09-62f32943f1e5",
           "38075c7c-fc5f-4bf9-99e8-01e87a41bf75",
           "ce94ea53-449f-4245-9084-ba666caf1383",
