@@ -113,6 +113,7 @@
           },
           "610aad82-47d4-4ffb-aa5b-1c33b87be65b": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Free Shipping on Orders $70+ <u>SHOP NOW</u>",
               "link_text": "",
@@ -121,6 +122,7 @@
           },
           "b16b902e-93c1-4190-b7bb-c19b09205957": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Need Help?  <u>Speak with our Team</u>",
               "link_text": "",
