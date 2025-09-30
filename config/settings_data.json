@@ -450,7 +450,7 @@
           "seconds_label": "secs",
           "timer_unit_spacing": 5,
           "button_type": "solid",
-          "show_combined_button": true,
+          "show_combined_button": false,
           "button_text": "Read the blog!",
           "button_link": "https://teangle.ca/pages/5-reasons-matcha-collagen",
           "button_copyable": false,
