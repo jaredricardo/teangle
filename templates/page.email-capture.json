@@ -57,7 +57,7 @@
       "settings": {
         "append_as_sticky_header": false,
         "text_margin": 10,
-        "enabled": true,
+        "enabled": false,
         "icon_max_width": 50,
         "padding_y": 10,
         "home-page-only": false,
