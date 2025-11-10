@@ -1,0 +1,142 @@
+{% doc %}
+  @prompt
+    simple banner announcement banner with FR message and EN message. Text should be linkable., I need the english and french links to be different , The FR message needs to only show when the locale is FR and the EN message needs to only show when the locale is EN
+{% enddoc %}
+
+{% style %}
+  .announcement-banner {
+    background-color: {{ section.settings.background_color }};
+    padding: {{ section.settings.padding }}px 20px;
+    text-align: center;
+  }
+
+  .announcement-banner__link {
+    display: inline-block;
+    color: {{ section.settings.text_color }};
+    text-decoration: none;
+    font-size: {{ section.settings.font_size }}px;
+    transition: opacity 0.3s ease;
+    font-weight: 700;
+  }
+
+  .announcement-banner__link:hover {
+    text-decoration: underline;
+    color: {{ section.settings.text_color }};
+  }
+
+  .announcement-banner__text {
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.font_size }}px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+
+{% endstyle %}
+
+<div class="announcement-banner" {{ section.shopify_attributes }}>
+  {% if request.locale.iso_code == 'fr' %}
+    {% if section.settings.message_fr != blank %}
+      {% if section.settings.link_fr != blank %}
+        <a href="{{ section.settings.link_fr }}" class="announcement-banner__link">
+          {{ section.settings.message_fr }}
+        </a>
+      {% else %}
+        <p class="announcement-banner__text">
+          {{ section.settings.message_fr }}
+        </p>
+      {% endif %}
+    {% endif %}
+  {% else %}
+    {% if section.settings.message_en != blank %}
+      {% if section.settings.link_en != blank %}
+        <a href="{{ section.settings.link_en }}" class="announcement-banner__link">
+          {{ section.settings.message_en }}
+        </a>
+      {% else %}
+        <p class="announcement-banner__text">
+          {{ section.settings.message_en }}
+        </p>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Announcement banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "French"
+    },
+    {
+      "type": "text",
+      "id": "message_fr",
+      "label": "Message",
+      "default": "Message en français"
+    },
+    {
+      "type": "url",
+      "id": "link_fr",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "English"
+    },
+    {
+      "type": "text",
+      "id": "message_en",
+      "label": "Message",
+      "default": "Message in English"
+    },
+    {
+      "type": "url",
+      "id": "link_en",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#3b7d52"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement banner"
+    }
+  ]
+}
+{% endschema %}

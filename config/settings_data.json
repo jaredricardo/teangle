@@ -639,6 +639,22 @@
           "redirect_mTN6rF"
         ],
         "settings": {}
+      },
+      "jr-simple-pencil-announcement": {
+        "type": "jr-simple-pencil-announcement",
+        "custom_css": [
+          "p {font-weight: 700;}"
+        ],
+        "settings": {
+          "message_fr": "Accès VIP Black Friday 🎁 → Je m’inscris!",
+          "link_fr": "https://fr.teangle.ca/pages/black-friday-vip-2025",
+          "message_en": "Black Friday VIPs get early access + a surprise gift 🎁 — Join now",
+          "link_en": "https://teangle.ca/pages/black-friday-vip-2025",
+          "background_color": "#3b7d52",
+          "text_color": "#ffffff",
+          "font_size": 14,
+          "padding": 12
+        }
       }
     },
     "content_for_index": [],
