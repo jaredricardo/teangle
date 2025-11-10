@@ -1,6 +1,128 @@
+{% doc %}
+  @prompt
+    simple banner announcement banner with FR message and EN message. Text should be linkable., I need the english and french links to be different , The FR message needs to only show when the locale is FR and the EN message needs to only show when the locale is EN
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-announcement-banner-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding }}px 20px;
+    text-align: center;
+  }
+
+  .ai-announcement-banner__link-{{ ai_gen_id }} {
+    display: block;
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    font-size: {{ block.settings.font_size }}px;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-announcement-banner__link-{{ ai_gen_id }}:hover {
+    opacity: 0.8;
+  }
+
+  .ai-announcement-banner__text-{{ ai_gen_id }} {
+    margin: 0;
+  }
+{% endstyle %}
+
+<div class="ai-announcement-banner-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if request.locale.iso_code == 'fr' %}
+    {% if block.settings.fr_link != blank %}
+      <a href="{{ block.settings.fr_link }}" class="ai-announcement-banner__link-{{ ai_gen_id }}">
+        <p class="ai-announcement-banner__text-{{ ai_gen_id }}">{{ block.settings.fr_message }}</p>
+      </a>
+    {% else %}
+      <p class="ai-announcement-banner__text-{{ ai_gen_id }}" style="color: {{ block.settings.text_color }};">{{ block.settings.fr_message }}</p>
+    {% endif %}
+  {% else %}
+    {% if block.settings.en_link != blank %}
+      <a href="{{ block.settings.en_link }}" class="ai-announcement-banner__link-{{ ai_gen_id }}">
+        <p class="ai-announcement-banner__text-{{ ai_gen_id }}">{{ block.settings.en_message }}</p>
+      </a>
+    {% else %}
+      <p class="="ai-announcement-banner__text-{{ ai_gen_id }}" style="color: {{ block.settings.text_color }};">{{ block.settings.en_message }}</p>
+    {% endif %}
+  {% endif %}
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Announcement banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "English content"
+    },
+    {
+      "type": "text",
+      "id": "en_message",
+      "label": "Message",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "url",
+      "id": "en_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "French content"
+    },
+    {
+      "type": "text",
+      "id": "fr_message",
+      "label": "Message",
+      "default": "Bienvenue dans notre boutique"
+    },
+    {
+      "type": "url",
+      "id": "fr_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#3b7d52"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement banner"
+    }
+  ]
+}
 {% endschema %}
