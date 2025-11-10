@@ -16,58 +16,6 @@
         "logo": "shopify://shop_images/Group.svg"
       }
     },
-    "f2aac7e3-d9e0-4f43-b602-93dd4ee9406b": {
-      "type": "scrolling-announcement",
-      "blocks": {
-        "bf3f22ac-0d7e-4a4e-8651-fb87895c5938": {
-          "type": "text",
-          "settings": {
-            "text": "BLACK FRIDAY PRIORITY ACCESS⚡",
-            "link": ""
-          }
-        },
-        "68987572-7c56-45aa-946f-44b13e5a4ec0": {
-          "type": "text",
-          "settings": {
-            "text": "BLACK FRIDAY PRIORITY ACCESS⚡",
-            "link": ""
-          }
-        },
-        "d14319b1-a68b-41e7-90cc-4308b0097601": {
-          "type": "text",
-          "settings": {
-            "text": "BLACK FRIDAY PRIORITY ACCESS⚡",
-            "link": ""
-          }
-        },
-        "f6253513-551e-462d-b07d-975a7bcaed4d": {
-          "type": "text",
-          "settings": {
-            "text": "BLACK FRIDAY PRIORITY ACCESS⚡",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "bf3f22ac-0d7e-4a4e-8651-fb87895c5938",
-        "68987572-7c56-45aa-946f-44b13e5a4ec0",
-        "d14319b1-a68b-41e7-90cc-4308b0097601",
-        "f6253513-551e-462d-b07d-975a7bcaed4d"
-      ],
-      "settings": {
-        "append_as_sticky_header": false,
-        "text_margin": 10,
-        "enabled": false,
-        "icon_max_width": 50,
-        "padding_y": 10,
-        "home-page-only": false,
-        "bg_color": "#f7eee3",
-        "color": "#3b7d52",
-        "alternative-color": true,
-        "speed": 60,
-        "align_icons_row": false
-      }
-    },
     "55e5f2b5-d039-4419-8239-a140b0d92ed7": {
       "type": "jr-page-overrides",
       "settings": {
@@ -90,7 +38,6 @@
   },
   "order": [
     "833027b2-3355-424b-b03b-bd8dfaae0f50",
-    "f2aac7e3-d9e0-4f43-b602-93dd4ee9406b",
     "55e5f2b5-d039-4419-8239-a140b0d92ed7",
     "jr-email-capture"
   ]

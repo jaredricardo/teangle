@@ -9,6 +9,30 @@
  */
 {
   "sections": {
+    "17627846576ce3662c": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f76f6c0_CEDBkj": {
+          "type": "ai_gen_block_f76f6c0",
+          "settings": {
+            "en_message": "Welcome to our store",
+            "en_link": "",
+            "fr_message": "Bienvenue dans notre boutique",
+            "fr_link": "",
+            "background_color": "#3b7d52",
+            "text_color": "#ffffff",
+            "font_size": 15,
+            "padding": 12
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f76f6c0_CEDBkj"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
     "replo_homepage_hero_mGNAET": {
       "type": "replo-homepage-hero",
       "name": "Homepage Hero",
@@ -548,6 +572,7 @@
     }
   },
   "order": [
+    "17627846576ce3662c",
     "replo_homepage_hero_mGNAET",
     "ff04fe8e-3989-4e29-be10-2b3919db90ac",
     "jr_hp_hero_L6V6WV",
