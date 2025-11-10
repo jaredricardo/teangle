@@ -1,8 +1,3 @@
-{% doc %}
-  @prompt
-    simple banner announcement banner with FR message and EN message. Text should be linkable., I need the english and french links to be different , The FR message needs to only show when the locale is FR and the EN message needs to only show when the locale is EN
-{% enddoc %}
-
 {% style %}
   .announcement-banner {
     background-color: {{ section.settings.background_color }};
@@ -34,38 +29,46 @@
 
 {% endstyle %}
 
-<div class="announcement-banner" {{ section.shopify_attributes }}>
-  {% if request.locale.iso_code == 'fr' %}
-    {% if section.settings.message_fr != blank %}
-      {% if section.settings.link_fr != blank %}
-        <a href="{{ section.settings.link_fr }}" class="announcement-banner__link">
-          {{ section.settings.message_fr }}
-        </a>
-      {% else %}
-        <p class="announcement-banner__text">
-          {{ section.settings.message_fr }}
-        </p>
+{% if section.settings.enable_banner %}
+  <div class="announcement-banner" {{ section.shopify_attributes }}>
+    {% if request.locale.iso_code == 'fr' %}
+      {% if section.settings.message_fr != blank %}
+        {% if section.settings.link_fr != blank %}
+          <a href="{{ section.settings.link_fr }}" class="announcement-banner__link">
+            {{ section.settings.message_fr }}
+          </a>
+        {% else %}
+          <p class="announcement-banner__text">
+            {{ section.settings.message_fr }}
+          </p>
+        {% endif %}
+      {% endif %}
+    {% else %}
+      {% if section.settings.message_en != blank %}
+        {% if section.settings.link_en != blank %}
+          <a href="{{ section.settings.link_en }}" class="announcement-banner__link">
+            {{ section.settings.message_en }}
+          </a>
+        {% else %}
+          <p class="announcement-banner__text">
+            {{ section.settings.message_en }}
+          </p>
+        {% endif %}
       {% endif %}
     {% endif %}
-  {% else %}
-    {% if section.settings.message_en != blank %}
-      {% if section.settings.link_en != blank %}
-        <a href="{{ section.settings.link_en }}" class="announcement-banner__link">
-          {{ section.settings.message_en }}
-        </a>
-      {% else %}
-        <p class="announcement-banner__text">
-          {{ section.settings.message_en }}
-        </p>
-      {% endif %}
-    {% endif %}
-  {% endif %}
-</div>
+  </div>
+{% endif %}
 
 {% schema %}
 {
   "name": "Announcement banner",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_banner",
+      "label": "Enabkle Announcement Banner",
+      "default": true
+    },
     {
       "type": "header",
       "content": "French"
