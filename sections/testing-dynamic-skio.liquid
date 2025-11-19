@@ -1,0 +1,31 @@
+<script>
+    async function skioDynamicBundleData() {
+        const response = await fetch('https://api.skio.com/storefront-http/get-dynamic-box', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ "productPlatformId": "7506796249170" })
+        })
+        const data = await response.json()
+        console.log('////////////!!')
+        console.log(data)
+    }
+    skioDynamicBundleData()
+</script>
+
+<div data-section-id="{{ section.id }}">
+
+
+ 
+</div>
+
+{% schema %}
+{
+    "name": "JR Testing Dynamic SKIO",
+    "settings": [],
+    "presets": [
+        {
+            "name": "JR Testing Dynamic SKIO"
+        }
+    ]
+}
+{% endschema %}
