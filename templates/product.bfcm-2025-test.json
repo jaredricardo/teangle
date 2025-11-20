@@ -1,60 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "product-top": {
-            "type": "product-top",
-            "blocks": {
-                "70da19e8-257f-4cb0-8a8c-cd59ee46f539": {
-                    "type": "tab",
-                    "settings": {
-                        "title": "{{ product.metafields.product_fields.product_tab_2_title.value }}",
-                        "content": "{{ product.metafields.product_fields.product_tab_2_description  }}",
-                        "page": ""
-                    }
-                },
-                "7ecbfa34-6c1d-4bae-9483-5fee262f76b1": {
-                    "type": "tab",
-                    "settings": {
-                        "title": "{{ product.metafields.product_fields.product_tab_3_title.value }}",
-                        "content": "{{ product.metafields.product_fields.product_tab_3_description.value }}",
-                        "page": ""
-                    }
-                },
-                "68623231-bb56-4b33-aed0-89963a6c431f": {
-                    "type": "tab",
-                    "disabled": true,
-                    "settings": {
-                        "title": "Shipping information",
-                        "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $70. <\/li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!<\/li> <\/ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $70<\/li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!<\/li> <\/ul>\n                         \n                    {% endif %}",
-                        "page": ""
-                    }
-                }
-            },
-            "block_order": [
-                "70da19e8-257f-4cb0-8a8c-cd59ee46f539",
-                "7ecbfa34-6c1d-4bae-9483-5fee262f76b1",
-                "68623231-bb56-4b33-aed0-89963a6c431f"
-            ],
-            "settings": {
-                "sku_enable": false,
-                "image_position": "left",
-                "image_size": "medium",
-                "product_zoom_enable": true,
-                "thumbnail_position": "beside",
-                "thumbnail_arrows": false,
-                "mobile_layout": "partial",
-                "enable_video_looping": true,
-                "product_video_style": "muted",
-                "subheader": "Glow From the Inside Out!",
-                "percent_rating": "93% of reviewers would recommend this product to a friend",
-                "sub_callout": "30 servings per tub (1-month-supply)",
-                "simple_alt_solo_title": "Single Tub",
-                "chosen_sub_product": "teangle-matcha-collagen-3-tubs",
-                "chosen_sub_product_index": 2,
-                "divide_by_amount": 3
-            }
+  "sections": {
+    "product-top": {
+      "type": "product-top",
+      "blocks": {
+        "70da19e8-257f-4cb0-8a8c-cd59ee46f539": {
+          "type": "tab",
+          "settings": {
+            "title": "{{ product.metafields.product_fields.product_tab_2_title.value }}",
+            "content": "{{ product.metafields.product_fields.product_tab_2_description  }}",
+            "page": ""
+          }
+        },
+        "7ecbfa34-6c1d-4bae-9483-5fee262f76b1": {
+          "type": "tab",
+          "settings": {
+            "title": "{{ product.metafields.product_fields.product_tab_3_title.value }}",
+            "content": "{{ product.metafields.product_fields.product_tab_3_description.value }}",
+            "page": ""
+          }
+        },
+        "68623231-bb56-4b33-aed0-89963a6c431f": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping information",
+            "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $70. </li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!</li> </ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $70</li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!</li> </ul>\n                         \n                    {% endif %}",
+            "page": ""
+          }
         }
+      },
+      "block_order": [
+        "70da19e8-257f-4cb0-8a8c-cd59ee46f539",
+        "7ecbfa34-6c1d-4bae-9483-5fee262f76b1",
+        "68623231-bb56-4b33-aed0-89963a6c431f"
+      ],
+      "disabled": true,
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted",
+        "subheader": "Glow From the Inside Out!",
+        "percent_rating": "93% of reviewers would recommend this product to a friend",
+        "sub_callout": "30 servings per tub (1-month-supply)",
+        "simple_alt_solo_title": "Single Tub",
+        "chosen_sub_product": "teangle-matcha-collagen-3-tubs",
+        "chosen_sub_product_index": 2,
+        "divide_by_amount": 3
+      }
     },
-    "order": [
-        "product-top"
-    ]
+    "testing_dynamic_skio_kLcReQ": {
+      "type": "testing-dynamic-skio",
+      "name": "JR Testing Dynamic SKIO",
+      "settings": {}
+    }
+  },
+  "order": [
+    "product-top",
+    "testing_dynamic_skio_kLcReQ"
+  ]
 }
