@@ -989,7 +989,7 @@ body {
 
         <!-- Purchase Type Selection -->
         <div class="purchase-type">
-            <div class="purchase-type__savings-badge" js-total-savings-badge>SAVE $0.00</div>
+            <div class="purchase-type__savings-badge" js-total-savings-badge>YOU ARE SAVING $0.00</div>
             <div class="purchase-type__label">Purchase Type:</div>
             <div class="purchase-type__options">
                 <!-- Subscription Option -->
@@ -1464,7 +1464,7 @@ class BundleBuilder extends HTMLElement {
         }
         
         // Update the badge with dollar amount
-        this.totalSavingsBadge.textContent = `SAVE $${dollarSavings.toFixed(2)}`;
+        this.totalSavingsBadge.textContent = `YOU ARE SAVING $${dollarSavings.toFixed(2)}`;
     }
     
     updateProgressBar() {
@@ -1593,6 +1593,8 @@ async function skioDynamicBundleData() {
     });
 
     const data = await response.json();
+    console.log('//////')
+    console.log(data.DynamicBox)
 
     const selectableProductVariants = data?.DynamicBox?.selectableProductVariants || [];
     skioDynamicBundlesizeInterval = data?.DynamicBox?.sizeInterval || [];
