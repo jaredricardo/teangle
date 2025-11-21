@@ -23,7 +23,43 @@ body {
 
 /* Buybox Container */
 .bundle-buybox {
-    padding: 32px;
+    padding: 0;
+}
+
+/* Rating Section */
+.bundle-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.bundle-rating__stars {
+    display: flex;
+    gap: 2px;
+}
+
+.bundle-rating__star {
+    width: 18px;
+    height: 18px;
+}
+
+.bundle-rating__text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #323232;
+}
+
+/* Title Section */
+.bundle-title {
+    margin-bottom: 20px;
+}
+
+.bundle-title__heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e4845;
+    line-height: 1.2;
 }
 
 /* Price Section */
@@ -76,7 +112,7 @@ body {
     font-weight: 600;
     color: #323232;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .bundle-progress__track {
@@ -145,8 +181,8 @@ body {
 .bundle-progress__stop-label {
     position: absolute;
     top: 50px;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     color: #666;
     white-space: nowrap;
 }
@@ -158,7 +194,8 @@ body {
 .bundle-progress__stop-price {
     position: absolute;
     top: 68px;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 600;
     color: #999;
     white-space: nowrap;
 }
@@ -266,6 +303,7 @@ body {
 .quantity-selector {
     display: none;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background: #FFFBF7FF;
     border-radius: 8px;
@@ -387,6 +425,7 @@ body {
     background: #FFFBF7FF;
     border-radius: 12px;
     border: 2px solid #e0e0e0;
+    position: relative;
 }
 
 .purchase-type__label {
@@ -398,71 +437,150 @@ body {
 
 .purchase-type__options {
     display: flex;
+    flex-direction: column;
     gap: 12px;
-    margin-bottom: 16px;
 }
 
-.purchase-type__option {
-    flex: 1;
+.purchase-type__option-box {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px;
+    flex-direction: column;
+    padding: 16px;
     background: white;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
-    cursor: pointer;
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
-.purchase-type__option:has(input:checked) {
+.purchase-type__option-box.selected {
     border-color: #1e4845;
     background: white;
 }
 
-.purchase-type__option:hover {
+.purchase-type__option-box:hover {
     border-color: #1e4845;
 }
 
-.purchase-type__option input[type="radio"] {
+.purchase-type__option-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.purchase-type__option-box.selected .purchase-type__option-header {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.purchase-type__option-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.purchase-type__option-box input[type="radio"] {
     margin: 0;
     accent-color: #1e4845;
+    cursor: pointer;
+}
+
+.purchase-type__option-content {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .purchase-type__option-label {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     color: #323232;
 }
 
-.purchase-type__select-field {
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: all 0.3s ease;
+.purchase-type__option-price {
+    font-size: 13px;
+    color: #1e4845;
+    font-weight: 600;
+    margin-top: 2px;
 }
 
-.purchase-type__select-field.visible {
-    max-height: 100px;
-    opacity: 1;
-    visibility: visible;
+.purchase-type__option-right {
+    flex-shrink: 0;
 }
 
 .purchase-type__select {
-    width: 100%;
-    padding: 12px;
+    padding: 8px 12px;
     border: 2px solid #1e4845;
-    border-radius: 8px;
-    font-size: 14px;
+    border-radius: 6px;
+    font-size: 13px;
     background: white;
     cursor: pointer;
     color: #323232;
+    min-width: 140px;
 }
 
 .purchase-type__select:focus {
     outline: none;
     border-color: #1e4845;
+}
+
+.purchase-type__benefits {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Hide benefits on one-time box since it has none */
+[js-onetime-box] .purchase-type__benefits {
+    display: none;
+}
+
+.purchase-type__benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #323232;
+    font-weight: 600;
+}
+
+.purchase-type__benefit:last-child {
+    margin-bottom: 0;
+}
+
+.purchase-type__benefit-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+.purchase-type__benefit--no-check {
+    padding-left: 24px;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Savings Badge on Purchase Type Box */
+.purchase-type__savings-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2a6460;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 12px;
+    white-space: nowrap;
+    z-index: 10;
 }
 
 /* Add to Cart Button */
@@ -560,7 +678,20 @@ body {
     }
 
     .bundle-buybox {
-        padding: 20px 0;
+        padding: 0;
+    }
+
+    .bundle-rating__star {
+        width: 16px;
+        height: 16px;
+    }
+
+    .bundle-rating__text {
+        font-size: 13px;
+    }
+
+    .bundle-title__heading {
+        font-size: 24px;
     }
 
     .bundle-price__current {
@@ -595,12 +726,14 @@ body {
     }
 
     .bundle-progress__stop-label {
-        font-size: 10px;
+        font-size: 11px;
+        font-weight: 700;
         top: 45px;
     }
 
     .bundle-progress__stop-price {
-        font-size: 10px;
+        font-size: 10.5px;
+        font-weight: 600;
         top: 60px;
     }
 
@@ -671,22 +804,50 @@ body {
         font-size: 14px;
     }
 
-    .purchase-type__options {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .purchase-type__option {
-        padding: 10px;
+    .purchase-type__option-box {
+        padding: 12px;
     }
 
     .purchase-type__option-label {
         font-size: 13px;
     }
 
+    .purchase-type__option-price {
+        font-size: 12px;
+    }
+
     .purchase-type__select {
-        padding: 10px;
-        font-size: 13px;
+        padding: 6px 10px;
+        font-size: 12px;
+        min-width: 120px;
+    }
+
+    .purchase-type__benefit {
+        font-size: 12px;
+    }
+
+    .purchase-type__benefit-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .purchase-type__benefit--no-check {
+        padding-left: 22px;
+        font-size: 11px;
+    }
+
+    .purchase-type__option-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .purchase-type__option-right {
+        width: 100%;
+    }
+
+    .purchase-type__select {
+        width: 100%;
     }
 
     .cart-section {
@@ -718,7 +879,11 @@ body {
 
 @media (max-width: 480px) {
     .bundle-buybox {
-        padding: 16px 0;
+        padding: 0;
+    }
+
+    .bundle-title__heading {
+        font-size: 22px;
     }
 
     .bundle-price__current {
@@ -750,6 +915,33 @@ body {
 
 <bundle-builder class="bundle-builder">
     <div class="bundle-buybox">
+        <!-- Rating -->
+        <div class="bundle-rating">
+            <div class="bundle-rating__stars">
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+            </div>
+            <span class="bundle-rating__text">4.8 (2566)</span>
+        </div>
+
+        <!-- Title -->
+        <div class="bundle-title">
+            <h1 class="bundle-title__heading">Build Your Bundle</h1>
+        </div>
+
         <!-- Price Display -->
         <div class="bundle-price">
             <div class="bundle-price__display">
@@ -797,21 +989,62 @@ body {
 
         <!-- Purchase Type Selection -->
         <div class="purchase-type">
+            <div class="purchase-type__savings-badge" js-total-savings-badge>SAVE $0.00</div>
             <div class="purchase-type__label">Purchase Type:</div>
             <div class="purchase-type__options">
-                <label class="purchase-type__option">
-                    <input type="radio" name="purchase_type" value="subscription" js-skio-bundle-subscription checked>
-                    <span class="purchase-type__option-label">Subscribe & Save 20%</span>
-                </label>
-                <label class="purchase-type__option">
-                    <input type="radio" name="purchase_type" value="onetime" js-skio-bundle-onetime>
-                    <span class="purchase-type__option-label">One-time purchase</span>
-                </label>
-            </div>
-            <div class="purchase-type__select-field visible" js-skio-bundle-select-field>
-                <select class="purchase-type__select" js-custom-option-select js-byob-custom-option-select>
-                    <!-- Options will be injected here -->
-                </select>
+                <!-- Subscription Option -->
+                <div class="purchase-type__option-box selected" js-subscription-box>
+                    <div class="purchase-type__option-header" js-subscription-header>
+                        <div class="purchase-type__option-left">
+                            <input type="radio" name="purchase_type" value="subscription" js-skio-bundle-subscription checked>
+                            <div class="purchase-type__option-content">
+                                <span class="purchase-type__option-label">Subscribe & Save 20%</span>
+                                <span class="purchase-type__option-price" js-subscription-price>$0.00/pack</span>
+                            </div>
+                        </div>
+                        <div class="purchase-type__option-right">
+                            <select class="purchase-type__select" js-custom-option-select js-byob-custom-option-select>
+                                <!-- Options will be injected here -->
+                            </select>
+                        </div>
+                    </div>
+                    <ul class="purchase-type__benefits">
+                        <li class="purchase-type__benefit">
+                            <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                            <span>FREE SHAKER CUP on your first order</span>
+                        </li>
+                        <li class="purchase-type__benefit">
+                            <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                            <span>FREE SHIPPING on every order</span>
+                        </li>
+                        <li class="purchase-type__benefit">
+                            <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                            <span>Skip or pause anytime</span>
+                        </li>
+                        <li class="purchase-type__benefit purchase-type__benefit--no-check">
+                            <span>Minimum of 2 orders required*</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- One-time Option -->
+                <div class="purchase-type__option-box" js-onetime-box>
+                    <div class="purchase-type__option-header" js-onetime-header>
+                        <div class="purchase-type__option-left">
+                            <input type="radio" name="purchase_type" value="onetime" js-skio-bundle-onetime>
+                            <div class="purchase-type__option-content">
+                                <span class="purchase-type__option-label">One-time purchase</span>
+                                <span class="purchase-type__option-price" js-onetime-price>$0.00/pack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -869,11 +1102,17 @@ class BundleBuilder extends HTMLElement {
         this.totalPrice = this.querySelectorAll("[js-total-price]");
         this.totalDiscountedPrice = this.querySelectorAll("[js-total-discounted-price]");
         this.progressLineFill = this.querySelector("[js-progress-line-fill]");
+        this.subscriptionPriceDisplay = this.querySelector("[js-subscription-price]");
+        this.onetimePriceDisplay = this.querySelector("[js-onetime-price]");
+        this.totalSavingsBadge = this.querySelector("[js-total-savings-badge]");
         
-        // Radio buttons and select field
+        // Radio buttons and boxes
         this.oneTimeRadio = this.querySelector("[js-skio-bundle-onetime]");
         this.subscriptionRadio = this.querySelector("[js-skio-bundle-subscription]");
-        this.selectField = this.querySelector("[js-skio-bundle-select-field]");
+        this.subscriptionBox = this.querySelector("[js-subscription-box]");
+        this.onetimeBox = this.querySelector("[js-onetime-box]");
+        this.subscriptionHeader = this.querySelector("[js-subscription-header]");
+        this.onetimeHeader = this.querySelector("[js-onetime-header]");
         
         // State
         this.products = [];
@@ -892,6 +1131,7 @@ class BundleBuilder extends HTMLElement {
             this.updateStatus();
             this.updatePrice();
             this.setInitialPrice();
+            this.updatePerPackPrices();
         });
     }
     
@@ -908,6 +1148,25 @@ class BundleBuilder extends HTMLElement {
             this.totalDiscountedPrice.forEach((discountPrice) => {
                 discountPrice.innerText = `$${pricing.subscription.discountedPrice.toFixed(2)}`;
             });
+        }
+    }
+
+    updatePerPackPrices() {
+        const totalItems = Math.max(this.products.length, this.minLimit);
+        const pricing = skioDynamicBundlePrices[totalItems];
+        
+        if (!pricing) return;
+
+        // Update subscription per pack price
+        if (this.subscriptionPriceDisplay) {
+            const subPerPack = pricing.subscription.discountedPrice / totalItems;
+            this.subscriptionPriceDisplay.textContent = `$${subPerPack.toFixed(2)}/pack`;
+        }
+
+        // Update one-time per pack price
+        if (this.onetimePriceDisplay) {
+            const oneTimePerPack = pricing.oneTime.discountedPrice / totalItems;
+            this.onetimePriceDisplay.textContent = `$${oneTimePerPack.toFixed(2)}/pack`;
         }
     }
     
@@ -953,6 +1212,43 @@ class BundleBuilder extends HTMLElement {
                 }
             });
         });
+
+        // Handle clicks on option box headers
+        if (this.subscriptionHeader) {
+            this.subscriptionHeader.addEventListener("click", (e) => {
+                // Don't trigger if clicking on the select dropdown
+                if (!e.target.closest('.purchase-type__select')) {
+                    this.subscriptionRadio.checked = true;
+                    this.subscriptionRadio.dispatchEvent(new Event('change'));
+                }
+            });
+        }
+
+        // Make entire subscription box clickable
+        if (this.subscriptionBox) {
+            this.subscriptionBox.addEventListener("click", (e) => {
+                // Don't trigger if clicking on the select dropdown
+                if (!e.target.closest('.purchase-type__select')) {
+                    this.subscriptionRadio.checked = true;
+                    this.subscriptionRadio.dispatchEvent(new Event('change'));
+                }
+            });
+        }
+
+        if (this.onetimeHeader) {
+            this.onetimeHeader.addEventListener("click", () => {
+                this.oneTimeRadio.checked = true;
+                this.oneTimeRadio.dispatchEvent(new Event('change'));
+            });
+        }
+
+        // Make entire one-time box clickable
+        if (this.onetimeBox) {
+            this.onetimeBox.addEventListener("click", () => {
+                this.oneTimeRadio.checked = true;
+                this.oneTimeRadio.dispatchEvent(new Event('change'));
+            });
+        }
         
         // Selling plan change listener
         if (this.sellingPlanSelect) {
@@ -1050,7 +1346,7 @@ class BundleBuilder extends HTMLElement {
             }
             
             const data = await response.json();
-            
+
             window.setTimeout(() => {
                 window.Rebuy.SmartCart.show();
             }, 1500);
@@ -1098,12 +1394,14 @@ class BundleBuilder extends HTMLElement {
                 }
             }
             this.updateProgressBar();
+            this.updatePerPackPrices();
             return;
         }
         
         const pricing = skioDynamicBundlePrices[totalItems];
         if (!pricing) {
             this.updateProgressBar();
+            this.updatePerPackPrices();
             return;
         }
         
@@ -1146,6 +1444,27 @@ class BundleBuilder extends HTMLElement {
         }
         
         this.updateProgressBar();
+        this.updatePerPackPrices();
+        this.updateSavingsBadges();
+    }
+    
+    updateSavingsBadges() {
+        const totalItems = Math.max(this.products.length, this.minLimit);
+        const pricing = skioDynamicBundlePrices[totalItems];
+        
+        if (!pricing || !this.totalSavingsBadge) return;
+
+        // Calculate the actual dollar savings based on purchase type
+        let dollarSavings = 0;
+        
+        if (this.subscriptionRadio?.checked) {
+            dollarSavings = pricing.subscription.originalPrice - pricing.subscription.discountedPrice;
+        } else {
+            dollarSavings = pricing.oneTime.originalPrice - pricing.oneTime.discountedPrice;
+        }
+        
+        // Update the badge with dollar amount
+        this.totalSavingsBadge.textContent = `SAVE $${dollarSavings.toFixed(2)}`;
     }
     
     updateProgressBar() {
@@ -1241,15 +1560,17 @@ class BundleBuilder extends HTMLElement {
     }
 
     handleSubscriptionToggle() {
-        if (!this.oneTimeRadio || !this.subscriptionRadio || !this.selectField) {
+        if (!this.oneTimeRadio || !this.subscriptionRadio || !this.subscriptionBox || !this.onetimeBox) {
             return;
         }
         
         const toggleVisibility = () => {
             if (this.subscriptionRadio.checked) {
-                this.selectField.classList.add("visible");
+                this.subscriptionBox.classList.add("selected");
+                this.onetimeBox.classList.remove("selected");
             } else if (this.oneTimeRadio.checked) {
-                this.selectField.classList.remove("visible");
+                this.subscriptionBox.classList.remove("selected");
+                this.onetimeBox.classList.add("selected");
             }
             
             this.updatePrice();
@@ -1449,3 +1770,5 @@ if (document.readyState === 'loading') {
     ]
 }
 {% endschema %}
+
+
