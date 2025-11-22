@@ -590,6 +590,26 @@
         "full_width": false,
         "space_around": true
       }
+    },
+    "replo_homepage_hero_HG3TBx": {
+      "type": "replo-homepage-hero",
+      "name": "Homepage Hero",
+      "settings": {
+        "replo_text_b17c3ec1-db23-45bf-b51f-2c33ce55660f": "",
+        "replo_text_126269c8-e0b2-4bee-b15b-ebdc25be2fb2": "",
+        "replo_url_4deb05a2-8cc5-4e3f-b04e-26c08cdbb25a": "",
+        "replo_text_22d96388-370b-4897-8d49-27d9fb890ec1": "",
+        "replo_text_3e9937b7-66e2-44b1-b339-466be46b8f86": "",
+        "replo_text_bc2ff150-9a8f-4102-a63f-bbcda005244b": "",
+        "replo_text_6a401ab3-1353-428a-842b-2f4386f54507": "<p>Steady, All-Day Energy</p>",
+        "replo_text_09a9ca03-1b4c-4c66-9ce1-2a1cf3eb6328": "",
+        "replo_text_ee3e757d-b2f4-4384-920d-72909814917e": "",
+        "replo_text_1f265ac9-422e-4b25-b179-c7bb306fca6c": "<p>Delicious Flavor</p>",
+        "replo_text_e0ea2c12-3933-4b2c-bfec-294bb3938cc4": "",
+        "replo_text_568c61d2-8c2b-431e-b8bd-500de4d7d503": "",
+        "replo_text_a7454834-9086-4983-9fa3-8eab1e77e4ff": "",
+        "replo_text_bbaf1877-a863-4867-b6cd-d83c78775b02": ""
+      }
     }
   },
   "order": [
@@ -613,6 +633,7 @@
     "1d43b673-0e08-4551-b692-fed1fce94bd3",
     "1749489398cc7e670a",
     "1749490319c6f8621c",
-    "176354710174ee1d57"
+    "176354710174ee1d57",
+    "replo_homepage_hero_HG3TBx"
   ]
 }
