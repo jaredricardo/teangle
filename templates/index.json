@@ -33,26 +33,6 @@
       "disabled": true,
       "settings": {}
     },
-    "replo_homepage_hero_mGNAET": {
-      "type": "replo-homepage-hero",
-      "name": "Homepage Hero",
-      "settings": {
-        "replo_text_b17c3ec1-db23-45bf-b51f-2c33ce55660f": "<p>Trusted by over 150,000 Canadians</p>",
-        "replo_text_126269c8-e0b2-4bee-b15b-ebdc25be2fb2": "<p>Replace your coffee with our delicious 2-in-1 formula for energy and beauty.</p>",
-        "replo_url_4deb05a2-8cc5-4e3f-b04e-26c08cdbb25a": "shopify://products/matcha-collagen-3",
-        "replo_text_22d96388-370b-4897-8d49-27d9fb890ec1": "<p>SHOP TEANGLE</p>",
-        "replo_text_3e9937b7-66e2-44b1-b339-466be46b8f86": "<p>Delicious Flavor</p>",
-        "replo_text_bc2ff150-9a8f-4102-a63f-bbcda005244b": "<p>Easy to Make</p>",
-        "replo_text_6a401ab3-1353-428a-842b-2f4386f54507": "<p>Steady, All-Day Energy</p>",
-        "replo_text_09a9ca03-1b4c-4c66-9ce1-2a1cf3eb6328": "<p>Organic ingredients</p>",
-        "replo_text_ee3e757d-b2f4-4384-920d-72909814917e": "<p>No Caffeine Crash</p>",
-        "replo_text_1f265ac9-422e-4b25-b179-c7bb306fca6c": "<p>Delicious Flavor</p>",
-        "replo_text_e0ea2c12-3933-4b2c-bfec-294bb3938cc4": "<p>Easy to Make</p>",
-        "replo_text_568c61d2-8c2b-431e-b8bd-500de4d7d503": "<p>Steady, All-Day Energy</p>",
-        "replo_text_a7454834-9086-4983-9fa3-8eab1e77e4ff": "<p>Organic ingredients</p>",
-        "replo_text_bbaf1877-a863-4867-b6cd-d83c78775b02": "<p>No Caffeine Crash</p>"
-      }
-    },
     "ff04fe8e-3989-4e29-be10-2b3919db90ac": {
       "type": "jr-hp-hero",
       "disabled": true,
@@ -573,7 +553,6 @@
   },
   "order": [
     "17627846576ce3662c",
-    "replo_homepage_hero_mGNAET",
     "ff04fe8e-3989-4e29-be10-2b3919db90ac",
     "jr_hp_hero_L6V6WV",
     "scrolling_announcement_pCahRV",
