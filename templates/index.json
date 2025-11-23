@@ -54,29 +54,6 @@
         "replo_text_e5070524-8b4d-4ef7-aa84-2d1498adea6f": "<p>No Caffeine Crash</p>"
       }
     },
-    "replo_test_homepage_hero_DzDjTT": {
-      "type": "replo-test-homepage-hero",
-      "name": "(BFCM) Homepage Hero",
-      "settings": {
-        "replo_style_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/ensembleClaudiaWebsitePictures.jpg",
-        "replo_stylesm_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Screenshot2025-11-18at5.20.02PM.png",
-        "replo_text_e2704724-673b-44e9-90f3-fd7d33fbd8dd": "<p>whatever needs to be changed</p>",
-        "replo_text_0d6e77ae-a1dc-440c-a8a6-a5b0e2da2623": "<p>test etst test </p>",
-        "replo_text_3d5f86be-299b-4eb1-bca6-a589a77e5ca9": "<p>replace  asd</p>",
-        "replo_url_0bd98f1d-c323-4070-8f92-335129707a92": "/products/matcha-collagen-3",
-        "replo_text_e8e56f19-afdc-408b-9360-5a442276d58d": "<p>SHOP TEANGLE</p>",
-        "replo_text_ccede953-95a3-40fd-a491-a5b426025281": "<p>Delicious Flavor</p>",
-        "replo_text_75b31f32-3331-4ec5-94f3-e0f60d20a878": "<p>Easy to Make</p>",
-        "replo_text_61f2022b-41ae-43e9-80e2-66bcc08e341c": "<p>Steady, All-Day Energy</p>",
-        "replo_text_00043964-8621-4345-b21a-ed27d16edb64": "<p>Organic ingredients</p>",
-        "replo_text_324c997e-badf-414b-b5e3-19bedd3b1619": "<p>No Caffeine Crash</p>",
-        "replo_text_b499ea93-5571-40cf-887a-296649e41e03": "<p>Delicious Flavor</p>",
-        "replo_text_d817d844-52e9-4c74-80c8-e17ffb31756d": "<p>Easy to Make</p>",
-        "replo_text_f99c86bf-f4a9-4e85-944b-9e9aeb8b8b22": "<p>Steady, All-Day Energy</p>",
-        "replo_text_4fd530ce-7429-403d-b7cb-3e8bac4d95a8": "<p>Organic ingredients</p>",
-        "replo_text_e5070524-8b4d-4ef7-aa84-2d1498adea6f": "<p>No Caffeine Crash</p>"
-      }
-    },
     "ff04fe8e-3989-4e29-be10-2b3919db90ac": {
       "type": "jr-hp-hero",
       "disabled": true,
@@ -598,7 +575,6 @@
   "order": [
     "17627846576ce3662c",
     "replo_test_homepage_hero_7XDMhX",
-    "replo_test_homepage_hero_DzDjTT",
     "ff04fe8e-3989-4e29-be10-2b3919db90ac",
     "jr_hp_hero_L6V6WV",
     "scrolling_announcement_pCahRV",
