@@ -156,7 +156,7 @@
     "164720478103804f2f": {
       "type": "fullwidth-html",
       "settings": {
-        "section_html": "{% if product.metafields.product_fields.faq_type contains \"matcha\" %}\n\t{% render 'faqs-matcha' %}\n{% elsif  product.metafields.product_fields.faq_type contains \"collagen\" %}\t\n   {% render 'faqs-collagen' %}  \n{% else %}\n<br> \n{% endif %}",
+        "section_html": "{% render 'faqs-matcha' %}",
         "sec_color": "#fffbf7"
       }
     },
