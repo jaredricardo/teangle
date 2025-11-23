@@ -211,16 +211,10 @@
         "product_recommendations_heading": "You may also like",
         "related_count": 3
       }
-    },
-    "replo_ceremonial_below_fold_kfR3rm": {
-      "type": "replo-ceremonial-below-fold",
-      "name": "Ceremonial Below Fold",
-      "settings": {}
     }
   },
   "order": [
     "main",
-    "replo_ceremonial_below_fold_kfR3rm",
     "sub",
     "16421132209c7ae105",
     "recently-viewed",
