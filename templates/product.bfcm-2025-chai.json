@@ -156,6 +156,45 @@
         "product_video_style": "muted"
       }
     },
+    "eaa96b8d-56bb-4b5c-8fca-dde0879cc384": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--14472967094354__eaa96b8d-56bb-4b5c-8fca-dde0879cc384-1683571077bd75f712-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "{% render 'ugc-marqueev1' %}",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "e1303077-15e0-4ed0-9660-735d2e924b4a": {
+          "type": "liquid",
+          "settings": {
+            "code": "{% render 'pblock-ingredientsv2' %} \n\n{% render 'pblock-no-crash' %}\n{% render 'pblock-hassle-free' %}",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "16673e34-9d09-40c3-be1e-3070ff19cd77": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.metafields.product_fields.description_block1 == \"matcha_discover\" %}\n \n{% render 'pblock-iconstack-img' %}\n{% elsif product.metafields.product_fields.description_block1 == \"collagen_discover\" %}\n {% render 'pblock-discover-collagen' %}\n{% else %}\n{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} \n{% render 'pblock-us-vsthem' %}\n{% endif %}\n{% endif %}",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14472967094354__eaa96b8d-56bb-4b5c-8fca-dde0879cc384-1683571077bd75f712-1",
+        "e1303077-15e0-4ed0-9660-735d2e924b4a",
+        "16673e34-9d09-40c3-be1e-3070ff19cd77"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": false
+      }
+    },
     "sub": {
       "type": "product-full-width",
       "blocks": {
@@ -179,6 +218,40 @@
       "disabled": true,
       "settings": {
         "max_width": false
+      }
+    },
+    "164720475056b2cb28": {
+      "type": "fullwidth-html",
+      "settings": {
+        "section_html": "{% if product.metafields.prodcut_fields.social_slider != blank %}\n{% render 'tg-social-slider' %}\n{% endif %}",
+        "sec_color": "#f7eee3"
+      }
+    },
+    "1642074017b7cdf51c": {
+      "type": "advanced-content",
+      "blocks": {
+        "1642074017b421de19-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<!-- render Okendo reviews  -->\n<div class=\"page-width okendo_widget\" style=\"padding-top: 30px;max-width: 1180px;\">\n    {% render 'okendo-reviews-widget', product: product %}   \n</div>\n<!-- render Okendo stars review ends -->",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1642074017b421de19-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "164720478103804f2f": {
+      "type": "fullwidth-html",
+      "settings": {
+        "section_html": "{% render 'faqs-matcha' %}",
+        "sec_color": "#fffbf7"
       }
     },
     "16421132209c7ae105": {
@@ -212,19 +285,50 @@
         "related_count": 3
       }
     },
-    "replo_ceremonial_below_fold_kfR3rm": {
-      "type": "replo-ceremonial-below-fold",
-      "name": "Ceremonial Below Fold",
-      "settings": {}
+    "f3da4c40-ccae-4ecd-baed-e3e29b2b286c": {
+      "type": "icons-and-image-text",
+      "custom_css": [
+        ".image-wrap {border-radius: 20px;}",
+        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/teangle-44.jpg",
+        "image_width": 520,
+        "subtitle": "HAPPINESS GUARANTEE",
+        "title": "Love it, or it’s on us.",
+        "text": "<p> </p>",
+        "icon1": "shopify://shop_images/teangle-33.png",
+        "icon1_title": "TRY RISK-FREE",
+        "icon1_text": "<p>We offer a 30 day money-back guarantee.</p>",
+        "icon2": "shopify://shop_images/teangle-36.png",
+        "icon2_title": "FLAVOUR",
+        "icon2_text": "<p>Our tried and tasted matcha blends are delicious.</p>",
+        "icon3": "shopify://shop_images/teangle-35.png",
+        "icon3_title": "ALL NATURAL INGREDIENTS",
+        "icon3_text": "<p>The health benefits you deserve.</p>",
+        "icon4": "shopify://shop_images/teangle-34.png",
+        "icon4_title": "CANADIAN OWNED",
+        "icon4_text": "<p>Fast-shipping across North-America.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
     }
   },
   "order": [
     "main",
-    "replo_ceremonial_below_fold_kfR3rm",
+    "eaa96b8d-56bb-4b5c-8fca-dde0879cc384",
     "sub",
+    "164720475056b2cb28",
+    "1642074017b7cdf51c",
+    "164720478103804f2f",
     "16421132209c7ae105",
     "recently-viewed",
     "collection-return",
-    "product-recommendations"
+    "product-recommendations",
+    "f3da4c40-ccae-4ecd-baed-e3e29b2b286c"
   ]
 }
