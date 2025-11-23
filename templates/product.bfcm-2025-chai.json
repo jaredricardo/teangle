@@ -9,108 +9,18 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "product-top": {
+      "type": "product-top",
       "blocks": {
-        "61927f64-552d-4b58-a830-64ad8831f653": {
-          "type": "custom",
-          "settings": {
-            "code": "<!-- render Okendo stars -->\n            \t{% render 'okendo-reviews-product-rating-summary', product: product %}\n            <!-- render Okendo stars END -->"
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "7cd9b1ce-895f-4cb9-8e86-a5524e0b0723": {
-          "type": "custom",
-          "settings": {
-            "code": "<div class=\"afterpay_message\"><!-- Afterpay Messaging  -->\n                <afterpay-placement\n                    {% if request.locale.iso_code == 'fr' %}\n                        data-locale=\"fr_CA\"\n                    {% else %}\n                        data-locale=\"en_CA\"\n                    {% endif %}\n                        data-currency=\"CAD\"\n                        data-amount-selector=\".product__price\"\n                        data-amount=\"{{ product.price | money_without_currency }}\"\n                        data-show-upper-limit=\"false\"\n                        data-modal-theme=\"white\"\n                        \ndata-size=\"xs\"\ndata-badge-theme=\"white-on-black\">\n                </afterpay-placement>\n              <!-- Afterpay Messaging  --></div>\n\n\n{% if product.metafields.custom.custom_quantity_selector != blank %}\n        <div class=\"gbl_form_items\"  >\n          {{ product.metafields.custom.custom_quantity_selector }}\n        </div>\n<style>\n  .product-block--price , .product-block--buy-btn , .afterpay_message { display: none !important;  }\n  .bmns_formi { display: block; margin-top: 15px; }\n  .bmns_formt p { margin: 10px 0 0; font-weight: 700; letter-spacing: 1px;  }\n  .bmns_forms { display: block; float: left; width: 33%; padding: 20px 10px 5px; text-align: center; position: relative; }\n  .radio { display: flex; cursor: pointer; position: relative; overflow: hidden; margin-bottom: 12px; }\n  .radio:last-child { margin-bottom: 0; }\n  .radio .radio__input { position: absolute; left: -9999px; }\n  .radio .radio__span { display: block; align-items: center; transition: background-color 0.25s ease; width: 100%; background-color: #fffbf7; border-radius: 10px; font-weight: 500; font-size: 13px; line-height: 1.2; letter-spacing: 1px; color: #1e4845; padding: 10px 7px; border: 2px solid #f7eee3; font-weight: 300 !important; }\n  .radio .radio__input:checked + span { background: #f7eee3; font-weight: 600; color: #1b4a45; border: 2px solid #d19b71; }\n  .radio__span strong { display: block; font-size: 12px; margin-bottom: 3px; margin-top: 5px; font-weight: 400; }\n  .radio__span > img { max-width: 60px;}\n  .radio .radio__input:checked + span img { max-width: 70px; }\n\n  .glpprice { font-size: 15px; font-weight: 800; display: block;}\n  .glprbs { display: block; font-size: 9px; margin: 6px 0 0; }\n  .bmns_formsmp, .bmns_formsbv { position: relative; top: -10px; text-align: center; display: block; width: 100%; background: #CA3857; margin-bottom: -25px; z-index: 20; border-radius: 20px; color: #fff; font-size: 11px; }\n   #bmns_dsc { display: block; margin: 10px 0 0; font-size: 13px; }\n  @media only screen and (max-width: 768px) {\n   .bmns_forms { padding: 20px 2px 5px;   }\n  }\n</style>\n\n<script>\n  $(document).ready(function(){\n    $(\"#buybtn\").click(function() {\n       \n      var subvarID = $('input[name=\"radiocss\"]:checked').data('variant');\n       \n            console.log(subvarID);\n       Shopify.addItem(subvarID,1)\n      fbq('track', 'AddToCart', {\n              content_name: $('input[name=\"radiocss\"]:checked').data('ptitle'),\n              content_ids: [subvarID],\n              content_type: 'product',\n              value: $('input[name=\"radiocss\"]:checked').data('newprice'),\n              currency: 'CAD' \n            }); \n\n      gtag(\"event\", \"add_to_cart\", {\n        currency: \"CAD\",\n        value: $('input[name=\"radiocss\"]:checked').data('newprice'),\n        items: [\n          {\n            item_id: subvarID,\n            item_name: $('input[name=\"radiocss\"]:checked').data('ptitle'),\n            discount: $('input[name=\"radiocss\"]:checked').data('savings'),\n            index: 0,\n            item_brand: \"Teangle\",\n            price: $('input[name=\"radiocss\"]:checked').data('newprice'),\n            quantity: 1\n          }\n        ]\n      });\n\n    });\n  });\n</script>\n{% if product.id == 4202159636562 or product.id == 4931353542738 %}\n<style>\n  .bmns_formtot { margin: 10px 0 0; font-weight: 700; letter-spacing: 1px; } \n  .bmns_formtiim { max-width: 230px; font-size: 12px; }\n  .bmns_formtiimo { max-width: 100px; float: left; padding: 10px 9px 0; cursor: pointer;  margin-right: 15px; text-align: center; border-radius: 10px; border: 2px solid #f7eee3; margin-top: 15px;}\n  .fmtiimact {  border: 2px solid #d19b71; background: #f7eee3;}\n\n  .bmns_switch  {display: block; font-size: 14px; line-height: 20px; margin: 10px 0 20px; }\n  .slider.round { border-radius: 34px; } .slider.round:before { border-radius: 50%; }\n  .switch { position: relative; display: inline-block; width: 60px; height: 21px; margin: 0 10px; }\n  .switch input { opacity: 0; width: 0; height: 0; } .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1e4845; -webkit-transition: .4s; transition: .4s; } \n   .slider:before { position: absolute; content: \"\"; height: 16px; width: 16px; left: 4px; bottom: 3px; background-color: white; -webkit-transition: .4s; transition: .4s; }\n    input:checked + .slider { background-color: #1e4845; } \n    input:focus + .slider { box-shadow: 0 0 1px #2196F3; } \n    input:checked + .slider:before { -webkit-transform: translateX(36px); -ms-transform: translateX(26px); transform: translateX(36px); }\n</style>\n{% endif %}\n{% if product.id == 4202159636562 %}\n<script>\n  $(document).ready(function(){\n\n    $(\"input[name=pack-type]\").change(function(){\n      if($(this).prop('checked')) {\n        $(\".bmns_forma2\").show();\n          $(\".bmns_forma1\").hide();\n          $(\".radio__inputrps2\").click();\n          $(\".lp1s10bimg img\").attr(\"src\", \"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-travelpack.jpg?v=1683748037\");\n          \n           $(\".product__thumb-item:nth-child(5) > .image-wrap > a > img\").click();\n           {% if request.locale.iso_code == 'fr' %}\n           \t\t$(\".lp1s10bmeta p:first , #bmns_dsc , #acc_desc\").text(\"ⓘ Boîte avec 20 bâtonnets, 2g de matcha chacun (40g au total)\");\n\n           {% else %}\n           \t\t$(\".lp1s10bmeta p:first , #bmns_dsc , #acc_desc\").text(\"ⓘ Box with 20 sticks, 2g of Matcha each (40g total).\");\n           {% endif %}\n      }\n      else {\n          $(\".bmns_forma1\").show();\n          $(\".bmns_forma2\").hide();\n          $(\".radio__inputrps1\").click();\n          $(\".lp1s10bimg img\").attr(\"src\", \"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps44.jpg?v=1664574834\");\n           \n          $(\".product__thumb-item:nth-child(1) > .image-wrap > a > img\").click();\n\n          {% if request.locale.iso_code == 'fr' %}\n           \t\t$(\".lp1s10bmeta p:first , #bmns_dsc , #acc_desc\").text(\"ⓘ 30g de matcha par sachet.\");\n\n           {% else %}\n           \t\t$(\".lp1s10bmeta p:first , #bmns_dsc , #acc_desc\").text(\"ⓘ Each bag contains 30 servings.\");\n           {% endif %}\n      }\n        \n      });\n    });\n </script>\n{% endif %}\n{% if product.id == 4931353542738 %}\n<script>\n  $(document).ready(function(){\n\n    $(\"input[name=pack-type]\").change(function(){\n      if($(this).prop('checked')) {\n        $(\".bmns_forma2\").show();\n          $(\".bmns_forma1\").hide();\n          $(\".radio__inputrps2\").click();\n          $(\".product__thumb-item:nth-child(5) > .image-wrap > a > img\").click();\n      }\n      else {\n          $(\".bmns_forma1\").show();\n          $(\".bmns_forma2\").hide();\n          $(\".radio__inputrps1\").click();\n          $(\".product__thumb-item:nth-child(1) > .image-wrap > a > img\").click();\n      }\n        \n      });\n    });\n </script>\n{% endif %}\n      {% endif %}"
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "variant_labels": true,
-            "picker_type": "dropdown",
-            "color_swatches": true
-          }
-        },
-        "12319ff3-c565-4037-baf2-7945b1bcc1a0": {
-          "type": "custom",
-          "disabled": true,
-          "settings": {
-            "code": "<!-- LINE ITEMS METAFIELD -->\n\n\n      {% if product.metafields.general_fields.line_items != blank %}\n        <div class=\"gbl_line_items\"  >\n          {{ product.metafields.general_fields.line_items }}\n        </div>\n      {% endif %}\n\n\n    <!-- LINE ITEMS METAFIELD END HERE -->\n\n\n<!-- BFCM LINE ITEMS METAFIELD -->\n\n\n      {% if product.metafields.bfcm.bf2022 != blank %}\n       <style>\n.product-single__form  { display: none !important; }\n</style>\n      {% endif %}\n\n\n    <!-- BFCM LINE ITEMS METAFIELD END HERE -->"
-          }
-        },
-        "74d50b9f-7435-429e-b976-9f5b6180d353": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false,
-            "surface_pickup_enable": false
-          }
-        },
-        "skio_subscriptions_yc_s20_app_block_DpbB4i": {
-          "type": "shopify://apps/skio-subscriptions-yc-s20/blocks/app-block/de50f7a4-0bb0-4d4c-84e2-c03dce83436d",
-          "disabled": true,
-          "settings": {
-            "form_id": "product-form-{{section.id}}",
-            "start_onetime": "false",
-            "onetime_first": "false",
-            "default_subscription": "",
-            "group_border_radius": 5,
-            "group_border_shadow": true,
-            "group_border_selected_color": "#000000",
-            "onetime_title": "One Time",
-            "subscription_title": "Subscribe",
-            "prepaid_title": "Prepaid",
-            "discount_format": "percent",
-            "discount_style": "bubble",
-            "discount_prefix": "Save",
-            "discount_suffix": "",
-            "discount_color": "#0fa573"
-          }
-        },
-        "6b975a6e-ee43-4c8d-9a17-2a267fa8846d": {
-          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-          "disabled": true,
-          "settings": {
-            "enabled": true,
-            "id": "24119",
-            "product_id_enabled": true,
-            "collection_id_enabled": false
-          }
-        },
-        "41b407f9-34d3-432b-9b11-a5d8592b960e": {
-          "type": "custom",
-          "disabled": true,
-          "settings": {
-            "code": "{% if request.locale.iso_code == 'en' %}\n\n<div class=\"trust_ctaimg  \">\n <img src=\"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-71B_34d6fb8d-dee8-4337-aa45-f207da1b07a1_700x.png?v=1669233320\" style=\" MARGIN: 10px 0 10px; \">\n</div>  \n \n <div id=\"coundowntimer\">\n              <div class=\"countdowninner hide\">\n                 <p id=\"timerpara\" style=\"text-align: center;margin: 15px 0 20px;font-weight: 600;padding: 5px;background: #f7eee3;border-radius: 10px;\"> ❤️ TREAT YO'SELF WITH 15% OFF <br> USE CODE  <strong style=\" color: #bf0000; \">LOVEYOU</strong> AT CHECKOUT</p>\n              </div>\n            </div> \n{% else %}\n\n<div class=\"trust_ctaimg \">\n <img style=\" MARGIN: 10px 0 10px; \" src=\"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-71B_9bcf3c9d-32dd-4e3c-bd75-5f6e9c1c0144.png?v=1669247824\">\n</div>\n \n<div id=\"coundowntimer\">\n              <div class=\"countdowninner hide\">\n                <p id=\"timerpara\" style=\"text-align: center;margin: 15px 0 20px;font-weight: 600;padding: 5px;background: #f7eee3;border-radius: 10px;\"> ❤️ GÂTE-TOI AVEC 15% DE RABAIS <br>  CODE :   <strong style=\" color: #bf0000; \">LOVEYOU</strong> </p>\n              </div>\n            </div> \n{% endif %}"
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "is_tab": false
-          }
-        },
-        "604a5a9f-1232-4231-8c3f-98f85f9166eb": {
-          "type": "tab",
-          "settings": {
-            "title": "{{ product.metafields.product_fields.product_tab_1_title.value }}",
-            "content": "{{ product.metafields.product_fields.product_tab_1_description  }}",
-            "page": ""
-          }
-        },
-        "2273c561-d3d8-4236-b224-4e9bc815fa55": {
+        "70da19e8-257f-4cb0-8a8c-cd59ee46f539": {
           "type": "tab",
           "settings": {
             "title": "{{ product.metafields.product_fields.product_tab_2_title.value }}",
-            "content": "{{ product.metafields.product_fields.product_tab_2_description.value }}",
+            "content": "{{ product.metafields.product_fields.product_tab_2_description  }}",
             "page": ""
           }
         },
-        "110fb42e-9eda-4e48-9571-53bdd2ce1281": {
+        "7ecbfa34-6c1d-4bae-9483-5fee262f76b1": {
           "type": "tab",
           "settings": {
             "title": "{{ product.metafields.product_fields.product_tab_3_title.value }}",
@@ -118,42 +28,77 @@
             "page": ""
           }
         },
-        "7fa25097-d507-4ed4-a780-dc52c525b9c2": {
+        "68623231-bb56-4b33-aed0-89963a6c431f": {
           "type": "tab",
           "disabled": true,
           "settings": {
-            "title": "Shipping & Returns",
+            "title": "Shipping information",
             "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $70. </li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!</li> </ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $70</li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!</li> </ul>\n                         \n                    {% endif %}",
             "page": ""
           }
         }
       },
       "block_order": [
-        "61927f64-552d-4b58-a830-64ad8831f653",
-        "price",
-        "7cd9b1ce-895f-4cb9-8e86-a5524e0b0723",
-        "variant_picker",
-        "12319ff3-c565-4037-baf2-7945b1bcc1a0",
-        "74d50b9f-7435-429e-b976-9f5b6180d353",
-        "skio_subscriptions_yc_s20_app_block_DpbB4i",
-        "6b975a6e-ee43-4c8d-9a17-2a267fa8846d",
-        "41b407f9-34d3-432b-9b11-a5d8592b960e",
-        "description",
-        "604a5a9f-1232-4231-8c3f-98f85f9166eb",
-        "2273c561-d3d8-4236-b224-4e9bc815fa55",
-        "110fb42e-9eda-4e48-9571-53bdd2ce1281",
-        "7fa25097-d507-4ed4-a780-dc52c525b9c2"
+        "70da19e8-257f-4cb0-8a8c-cd59ee46f539",
+        "7ecbfa34-6c1d-4bae-9483-5fee262f76b1",
+        "68623231-bb56-4b33-aed0-89963a6c431f"
       ],
       "settings": {
         "sku_enable": false,
         "image_position": "left",
         "image_size": "medium",
-        "product_zoom_enable": false,
-        "thumbnail_position": "below",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
         "thumbnail_arrows": false,
         "mobile_layout": "partial",
         "enable_video_looping": true,
-        "product_video_style": "muted"
+        "product_video_style": "muted",
+        "subheader": "Glow From the Inside Out!",
+        "percent_rating": "93% of reviewers would recommend this product to a friend",
+        "sub_callout": "30 servings per tub (1-month-supply)",
+        "simple_alt_solo_title": "Single Tub",
+        "chosen_sub_product": "teangle-matcha-collagen-3-tubs",
+        "chosen_sub_product_index": 2,
+        "divide_by_amount": 3
+      }
+    },
+    "eaa96b8d-56bb-4b5c-8fca-dde0879cc384": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--14472967094354__eaa96b8d-56bb-4b5c-8fca-dde0879cc384-1683571077bd75f712-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} {% render 'ugc-marqueev1' %} \n \n{% else %}\n{% endif %}",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "e1303077-15e0-4ed0-9660-735d2e924b4a": {
+          "type": "liquid",
+          "settings": {
+            "code": "{% render 'pblock-ingredientsv2' %} \n\n{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} \n\n{% render 'pblock-no-crash' %}\n{% render 'pblock-hassle-free' %}\n{% else %}\n{% endif %}",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "16673e34-9d09-40c3-be1e-3070ff19cd77": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "code": "{% if product.metafields.product_fields.description_block1 == \"matcha_discover\" %}\n \n{% render 'pblock-iconstack-img' %}\n{% elsif product.metafields.product_fields.description_block1 == \"collagen_discover\" %}\n {% render 'pblock-discover-collagen' %}\n{% else %}\n{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} \n{% render 'pblock-us-vsthem' %}\n{% endif %}\n{% endif %}",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14472967094354__eaa96b8d-56bb-4b5c-8fca-dde0879cc384-1683571077bd75f712-1",
+        "e1303077-15e0-4ed0-9660-735d2e924b4a",
+        "16673e34-9d09-40c3-be1e-3070ff19cd77"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": false
       }
     },
     "sub": {
@@ -179,6 +124,40 @@
       "disabled": true,
       "settings": {
         "max_width": false
+      }
+    },
+    "164720475056b2cb28": {
+      "type": "fullwidth-html",
+      "settings": {
+        "section_html": "{% if product.metafields.prodcut_fields.social_slider != blank %}\n{% render 'tg-social-slider' %}\n{% endif %}",
+        "sec_color": "#f7eee3"
+      }
+    },
+    "1642074017b7cdf51c": {
+      "type": "advanced-content",
+      "blocks": {
+        "1642074017b421de19-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<!-- render Okendo reviews  -->\n<div class=\"page-width okendo_widget\" style=\"padding-top: 30px;max-width: 1180px;\">\n    {% render 'okendo-reviews-widget', product: product %}   \n</div>\n<!-- render Okendo stars review ends -->",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1642074017b421de19-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "164720478103804f2f": {
+      "type": "fullwidth-html",
+      "settings": {
+        "section_html": "{% if product.metafields.product_fields.faq_type contains \"matcha\" %}\n\t{% render 'faqs-matcha' %}\n{% elsif  product.metafields.product_fields.faq_type contains \"collagen\" %}\t\n   {% render 'faqs-collagen' %}  \n{% else %}\n<br> \n{% endif %}",
+        "sec_color": "#fffbf7"
       }
     },
     "16421132209c7ae105": {
@@ -212,19 +191,50 @@
         "related_count": 3
       }
     },
-    "replo_ceremonial_below_fold_kfR3rm": {
-      "type": "replo-ceremonial-below-fold",
-      "name": "Ceremonial Below Fold",
-      "settings": {}
+    "f3da4c40-ccae-4ecd-baed-e3e29b2b286c": {
+      "type": "icons-and-image-text",
+      "custom_css": [
+        ".image-wrap {border-radius: 20px;}",
+        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/teangle-44.jpg",
+        "image_width": 520,
+        "subtitle": "HAPPINESS GUARANTEE",
+        "title": "Love it, or it’s on us.",
+        "text": "<p> </p>",
+        "icon1": "shopify://shop_images/teangle-33.png",
+        "icon1_title": "TRY RISK-FREE",
+        "icon1_text": "<p>We offer a 30 day money-back guarantee.</p>",
+        "icon2": "shopify://shop_images/teangle-36.png",
+        "icon2_title": "FLAVOUR",
+        "icon2_text": "<p>Our tried and tasted matcha blends are delicious.</p>",
+        "icon3": "shopify://shop_images/teangle-35.png",
+        "icon3_title": "ALL NATURAL INGREDIENTS",
+        "icon3_text": "<p>The health benefits you deserve.</p>",
+        "icon4": "shopify://shop_images/teangle-34.png",
+        "icon4_title": "CANADIAN OWNED",
+        "icon4_text": "<p>Fast-shipping across North-America.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
     }
   },
   "order": [
-    "main",
-    "replo_ceremonial_below_fold_kfR3rm",
+    "product-top",
+    "eaa96b8d-56bb-4b5c-8fca-dde0879cc384",
     "sub",
+    "164720475056b2cb28",
+    "1642074017b7cdf51c",
+    "164720478103804f2f",
     "16421132209c7ae105",
     "recently-viewed",
     "collection-return",
-    "product-recommendations"
+    "product-recommendations",
+    "f3da4c40-ccae-4ecd-baed-e3e29b2b286c"
   ]
 }
