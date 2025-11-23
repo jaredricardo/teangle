@@ -233,7 +233,7 @@
         "1642074017b421de19-1": {
           "type": "liquid",
           "settings": {
-            "code": "<!-- render Okendo reviews  -->\n<div class=\"page-width okendo_widget\" style=\"padding-top: 30px;max-width: 1180px;\">\n    {% render 'okendo-reviews-widget', product: product %}   \n</div>\n<!-- render Okendo stars review ends -->",
+            "code": "<!-- render Okendo reviews  -->\n<div class=\"page-width okendo_widget\" style=\"padding-top: 30px;max-width: 1180px;\">\n    {% assign product = all_products['teangle-ginger-lemongrass-matcha'] %}\n    {% render 'okendo-reviews-widget', product: product %}   \n</div>\n<!-- render Okendo stars review ends -->",
             "width": "100%",
             "alignment": "center"
           }
