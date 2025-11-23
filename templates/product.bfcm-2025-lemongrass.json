@@ -76,7 +76,7 @@
         "e1303077-15e0-4ed0-9660-735d2e924b4a": {
           "type": "liquid",
           "settings": {
-            "code": "{% render 'pblock-ingredientsv2' %} \n\n{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} \n\n{% render 'pblock-no-crash' %}\n{% render 'pblock-hassle-free' %}\n{% else %}\n{% endif %}",
+            "code": "{% render 'pblock-ingredientsv2' %} \n\n{% render 'pblock-no-crash' %}\n{% render 'pblock-hassle-free' %}",
             "width": "100%",
             "alignment": "center"
           }
