@@ -68,7 +68,7 @@
         "template--14472967094354__eaa96b8d-56bb-4b5c-8fca-dde0879cc384-1683571077bd75f712-1": {
           "type": "liquid",
           "settings": {
-            "code": "{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} {% render 'ugc-marqueev1' %} \n \n{% else %}\n{% endif %}",
+            "code": "{% render 'ugc-marqueev1' %}",
             "width": "100%",
             "alignment": "center"
           }
