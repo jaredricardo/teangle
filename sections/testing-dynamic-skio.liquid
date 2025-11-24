@@ -1604,11 +1604,9 @@ async function skioDynamicBundleData() {
 
     // Preserve your explicit ordering logic
     const productsData = [];
-    selectableProductVariants.forEach(product => {
-        if (product.productTitle === "A") productsData[0] = product;
-        if (product.productTitle === "B") productsData[1] = product;
-        if (product.productTitle === "C") productsData[2] = product;
-    });
+    selectableProductVariants.forEach((product, i) => {
+       productsData[i] = product;
+    })
 
     const sellingPlanGroupConvertedInArray = Object.values(data?.DynamicBox?.sellingPlanGroup || {});
     const variantMappingConvertedInArray = sellingPlanGroupConvertedInArray?.[0]
