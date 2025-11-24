@@ -1,0 +1,454 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "replo_s_p_hero_AHFzbD": {
+      "type": "replo-s-p-hero",
+      "disabled": true,
+      "custom_css": [
+        ".r-1932yf9.alchemy-rte:not(.r-1crfg01) {opacity: 0;}",
+        ".r-rg2flb.alchemy-rte:not(.r-fsfq5u) {opacity: 0;}"
+      ],
+      "name": "s_p - Hero",
+      "settings": {
+        "replo_text_d607686f-381f-4c55-ada3-3bf11173d246": "<p>Why You'll Love It</p>",
+        "replo_text_11ad847d-2087-449b-b48f-82c6a4f20e4f": "<p>Taste & Feel</p>",
+        "replo_text_cf7bfff2-a31e-4b44-9a39-88bdb8f47452": "<p>How to Enjoy</p>",
+        "replo_text_12e89045-49b0-40c6-a45c-faa5f3d7cba7": "<p>Is This For You?</p>",
+        "replo_text_bf0fff86-ca4a-48b1-a083-db971321d155": "<p>Ingredients & Quality</p>",
+        "replo_text_3260c342-8c80-4dfa-bbba-32eb02900ce1": "<p>Matcha Energy  Meets Beauty Collagen</p>",
+        "replo_text_5e5c7462-aae1-429e-b804-ba36c7406fa0": "<p>Delicious coconut and vanilla flavours</p>",
+        "replo_text_a2bd43bb-e53b-407c-940b-8e76a550b1ff": "<p>Choose Your Flavor</p>",
+        "replo_text_8ace8963-2d90-49fd-9a52-1336a1b9e440": "<p>Choose Your Plan</p>",
+        "replo_text_953f694a-f81d-48b7-8f6d-cc4c0d4434e9": "<p>Purchase Type:</p>",
+        "replo_text_f7cccbb7-da83-4c0f-a526-e2d235bfdded": "<p>Subscribe &</p>",
+        "replo_text_ba161cbf-146f-4f72-b257-048a1af3a787": "<p>SAVE UP TO</p>",
+        "replo_text_580b4bc3-7df1-4950-a000-13d3ab47f8c6": "<p>20%</p>",
+        "replo_text_640481c0-3229-4b21-a067-0dbb817eca01": "<p>One-time purchase</p>",
+        "replo_text_31fad969-38b5-405f-b854-0f9d4cd6778a": "<p>Servings:</p>",
+        "replo_text_e40e76fc-8308-40c5-b730-9fb905851278": "<p>servings</p>",
+        "replo_text_6faf899d-056c-4957-a369-b2a9c70ff97e": "<p>1 Tub</p>",
+        "replo_text_e52920fd-dc16-4154-af71-74184310d8ff": "<p>SAVE</p>",
+        "replo_text_671a4677-9e60-4dc7-a3c3-6981b5017dd4": "<p>$6.80</p>",
+        "replo_text_2b0e054a-2e88-4394-aca5-d390464948a7": "<p>$61.20</p>",
+        "replo_text_74d2d27f-564f-4eee-8d8c-9dbaa058176d": "<p>$68.00</p>",
+        "replo_text_a1e84ba3-26a4-42b5-b18d-da9f36937354": "<p>$68.00</p>",
+        "replo_text_be1e852d-2f2a-46c7-ba44-fd6a4ff01210": "<p>servings</p>",
+        "replo_text_2836d639-bd40-4c0f-a3ab-93351059caf1": "<p>2 Tubs</p>",
+        "replo_text_a85fad5b-e693-4841-a227-ca926e5d6519": "<p>SAVE</p>",
+        "replo_text_44ef15a5-10d6-4a11-8612-1edccf46c5fb": "<p>$20.40</p>",
+        "replo_text_91e0ed3e-27c2-4863-8464-17821b54d3d5": "<p>$13.60</p>",
+        "replo_text_5deb4cf6-83c3-4ab3-adda-7a02ba377819": "<p>$115.55</p>",
+        "replo_text_5b34e462-dfc5-4e4d-8078-9b2e50507268": "<p>$122.40</p>",
+        "replo_text_02e394c7-cd60-4d7f-a38d-c51c53577bdf": "<p>$136.00</p>",
+        "replo_text_c3c8bd32-09af-4cf8-9269-b13504785d43": "<p>servings</p>",
+        "replo_text_aed86516-0241-41af-9921-2026e4a45e3a": "<p>3 Tubs</p>",
+        "replo_text_e3fb7214-beda-4737-9e18-827faf25fed8": "<p>SAVE</p>",
+        "replo_text_4b08632b-47f7-4086-8036-cdd5df075d46": "<p>$40.80</p>",
+        "replo_text_52183dcc-eedc-4cf1-9a9b-5c1ae9ad9308": "<p>$30.60</p>",
+        "replo_text_ac1d6126-42eb-4acd-9085-0441195226b9": "<p>$173.40</p>",
+        "replo_text_cb556774-a0ef-459d-9f17-de6ee222c08f": "<p>$204.00</p>",
+        "replo_text_234a798d-87b5-4fad-b76b-499bda2576c0": "<p>101 Matcha Recipes</p>",
+        "replo_text_ece2199a-9aee-4fb3-b5aa-69fc83fac7c7": "<p>Free CA Shipping</p>",
+        "replo_text_77eb5ee4-5152-439c-af01-0a4d15f1cfc2": "<p>Free CA Shipping</p>",
+        "replo_text_9afcff3f-ae4f-4150-88b3-e587fc5f5ac2": "<p>101 Delicious Matcha Recipes</p>",
+        "replo_text_45f22a5e-f4cb-4903-9c34-a1d6e152926d": "<p>101 Matcha Recipes</p>",
+        "replo_text_b318c525-48eb-44bd-bbaa-78630a15186c": "<p>Free CA Shipping</p>",
+        "replo_text_8313b3d6-1a48-4ff4-b0c4-256de53c0261": "<p>Why You'll Love It</p>",
+        "replo_text_5f327cd9-790b-436c-886a-2410f2c1f385": "<p>Taste & Feel</p>",
+        "replo_text_53093ad4-ce5c-4cd8-92a4-77fed9ecc7eb": "<p>How to Enjoy</p>",
+        "replo_text_7c10a02d-3ddc-4ea0-9e72-3813657d040b": "<p>Is This For You?</p>",
+        "replo_text_a007104d-e02b-479a-8d68-5de1adf60532": "<p>Ingredients & Quality</p>",
+        "replo_text_0e54d10b-25de-4017-b348-325a4045b902": "<p>Hear What Canadians Say About Teangle 🇨🇦</p>"
+      }
+    },
+    "replo_chocolate_collagen_buybox_J6t7zB": {
+      "type": "replo-chocolate-collagen-buybox",
+      "name": "Chocolate Collagen Buybox",
+      "settings": {}
+    },
+    "fullwidth_html_p66iPk": {
+      "type": "fullwidth-html",
+      "disabled": true,
+      "custom_css": [
+        "section {display: none;}"
+      ],
+      "name": "rebuy auto add gifts (off)",
+      "settings": {
+        "section_html": "<div data-rebuy-id=\"211396\"></div>",
+        "sec_color": "#fffef2"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "61927f64-552d-4b58-a830-64ad8831f653": {
+          "type": "custom",
+          "settings": {
+            "code": "<!-- render Okendo stars -->\n            \t{% render 'okendo-reviews-product-rating-summary', product: product %}\n            <!-- render Okendo stars END -->"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "7cd9b1ce-895f-4cb9-8e86-a5524e0b0723": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"afterpay_message\"><!-- Afterpay Messaging  -->\n                <afterpay-placement\n                    {% if request.locale.iso_code == 'fr' %}\n                        data-locale=\"fr_CA\"\n                    {% else %}\n                        data-locale=\"en_CA\"\n                    {% endif %}\n                        data-currency=\"CAD\"\n                        data-amount-selector=\".product__price\"\n                        data-amount=\"{{ product.price | money_without_currency }}\"\n                        data-show-upper-limit=\"false\"\n                        data-modal-theme=\"white\"\n                        \ndata-size=\"xs\"\ndata-badge-theme=\"white-on-black\">\n                </afterpay-placement>\n              <!-- Afterpay Messaging  --></div>\n\n\n{% if product.metafields.custom.custom_quantity_selector != blank %}\n        <div class=\"gbl_form_items\"  >\n          {{ product.metafields.custom.custom_quantity_selector }}\n        </div>\n<style>\n  .product-block--price , .product-block--buy-btn , .afterpay_message { display: none !important;  }\n  .bmns_formi { display: block; margin-top: 15px; }\n  .bmns_formt p { margin: 10px 0 0; font-weight: 700; letter-spacing: 1px;  }\n  .bmns_forms { display: block; float: left; width: 33%; padding: 20px 10px 5px; text-align: center; position: relative; }\n  .radio { display: flex; cursor: pointer; position: relative; overflow: hidden; margin-bottom: 12px; }\n  .radio:last-child { margin-bottom: 0; }\n  .radio .radio__input { position: absolute; left: -9999px; }\n  .radio .radio__span { display: block; align-items: center; transition: background-color 0.25s ease; width: 100%; background-color: #fffbf7; border-radius: 10px; font-weight: 500; font-size: 13px; line-height: 1.2; letter-spacing: 1px; color: #1e4845; padding: 10px 7px; border: 2px solid #f7eee3; font-weight: 300 !important; }\n  .radio .radio__input:checked + span { background: #f7eee3; font-weight: 600; color: #1b4a45; border: 2px solid #d19b71; }\n  .radio__span strong { display: block; font-size: 12px; margin-bottom: 3px; margin-top: 5px; font-weight: 400; }\n  .radio__span > img { max-width: 60px;}\n  .radio .radio__input:checked + span img { max-width: 70px; }\n\n  .glpprice { font-size: 15px; font-weight: 800; display: block;}\n  .glprbs { display: block; font-size: 9px; margin: 6px 0 0; }\n  .bmns_formsmp, .bmns_formsbv { position: relative; top: -10px; text-align: center; display: block; width: 100%; background: #CA3857; margin-bottom: -25px; z-index: 20; border-radius: 20px; color: #fff; font-size: 11px; }\n   #bmns_dsc { display: block; margin: 10px 0 0; font-size: 13px; }\n  @media only screen and (max-width: 768px) {\n   .bmns_forms { padding: 20px 2px 5px;   }\n  }\n</style>\n\n<script>\n  $(document).ready(function(){\n    $(\"#buybtn\").click(function() {\n       \n      var subvarID = $('input[name=\"radiocss\"]:checked').data('variant');\n       \n            console.log(subvarID);\n       Shopify.addItem(subvarID,1)\n      fbq('track', 'AddToCart', {\n              content_name: $('input[name=\"radiocss\"]:checked').data('ptitle'),\n              content_ids: [subvarID],\n              content_type: 'product',\n              value: $('input[name=\"radiocss\"]:checked').data('newprice'),\n              currency: 'CAD' \n            }); \n\n      gtag(\"event\", \"add_to_cart\", {\n        currency: \"CAD\",\n        value: $('input[name=\"radiocss\"]:checked').data('newprice'),\n        items: [\n          {\n            item_id: subvarID,\n            item_name: $('input[name=\"radiocss\"]:checked').data('ptitle'),\n            discount: $('input[name=\"radiocss\"]:checked').data('savings'),\n            index: 0,\n            item_brand: \"Teangle\",\n            price: $('input[name=\"radiocss\"]:checked').data('newprice'),\n            quantity: 1\n          }\n        ]\n      });\n\n    });\n  });\n</script>\n{% if product.id == 4202159636562 or product.id == 4931353542738 %}\n<style>\n  .bmns_formtot { margin: 10px 0 0; font-weight: 700; letter-spacing: 1px; } \n  .bmns_formtiim { max-width: 230px; font-size: 12px; }\n  .bmns_formtiimo { max-width: 100px; float: left; padding: 10px 9px 0; cursor: pointer;  margin-right: 15px; text-align: center; border-radius: 10px; border: 2px solid #f7eee3; margin-top: 15px;}\n  .fmtiimact {  border: 2px solid #d19b71; background: #f7eee3;}\n\n  .bmns_switch  {display: block; font-size: 14px; line-height: 20px; margin: 10px 0 20px; }\n  .slider.round { border-radius: 34px; } .slider.round:before { border-radius: 50%; }\n  .switch { position: relative; display: inline-block; width: 60px; height: 21px; margin: 0 10px; }\n  .switch input { opacity: 0; width: 0; height: 0; } .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1e4845; -webkit-transition: .4s; transition: .4s; } \n   .slider:before { position: absolute; content: \"\"; height: 16px; width: 16px; left: 4px; bottom: 3px; background-color: white; -webkit-transition: .4s; transition: .4s; }\n    input:checked + .slider { background-color: #1e4845; } \n    input:focus + .slider { box-shadow: 0 0 1px #2196F3; } \n    input:checked + .slider:before { -webkit-transform: translateX(36px); -ms-transform: translateX(26px); transform: translateX(36px); }\n</style>\n{% endif %}\n{% if product.id == 4202159636562 %}\n<script>\n  $(document).ready(function(){\n\n    $(\"input[name=pack-type]\").change(function(){\n      if($(this).prop('checked')) {\n        $(\".bmns_forma2\").show();\n          $(\".bmns_forma1\").hide();\n          $(\".radio__inputrps2\").click();\n          $(\".lp1s10bimg img\").attr(\"src\", \"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-travelpack.jpg?v=1683748037\");\n          \n           $(\".product__thumb-item:nth-child(5) > .image-wrap > a > img\").click();\n           {% if request.locale.iso_code == 'fr' %}\n           \t\t$(\".lp1s10bmeta p:first , #bmns_dsc , #acc_desc\").text(\"ⓘ Boîte avec 20 bâtonnets, 2g de matcha chacun (40g au total)\");\n\n           {% else %}\n           \t\t$(\".lp1s10bmeta p:first , #bmns_dsc , #acc_desc\").text(\"ⓘ Box with 20 sticks, 2g of Matcha each (40g total).\");\n           {% endif %}\n      }\n      else {\n          $(\".bmns_forma1\").show();\n          $(\".bmns_forma2\").hide();\n          $(\".radio__inputrps1\").click();\n          $(\".lp1s10bimg img\").attr(\"src\", \"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/teangle-q4-lps44.jpg?v=1664574834\");\n           \n          $(\".product__thumb-item:nth-child(1) > .image-wrap > a > img\").click();\n\n          {% if request.locale.iso_code == 'fr' %}\n           \t\t$(\".lp1s10bmeta p:first , #bmns_dsc , #acc_desc\").text(\"ⓘ 30g de matcha par sachet.\");\n\n           {% else %}\n           \t\t$(\".lp1s10bmeta p:first , #bmns_dsc , #acc_desc\").text(\"ⓘ Each bag contains 30 servings.\");\n           {% endif %}\n      }\n        \n      });\n    });\n </script>\n{% endif %}\n{% if product.id == 4931353542738 %}\n<script>\n  $(document).ready(function(){\n\n    $(\"input[name=pack-type]\").change(function(){\n      if($(this).prop('checked')) {\n        $(\".bmns_forma2\").show();\n          $(\".bmns_forma1\").hide();\n          $(\".radio__inputrps2\").click();\n          $(\".product__thumb-item:nth-child(5) > .image-wrap > a > img\").click();\n      }\n      else {\n          $(\".bmns_forma1\").show();\n          $(\".bmns_forma2\").hide();\n          $(\".radio__inputrps1\").click();\n          $(\".product__thumb-item:nth-child(1) > .image-wrap > a > img\").click();\n      }\n        \n      });\n    });\n </script>\n{% endif %}\n      {% endif %}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "color_swatches": true
+          }
+        },
+        "12319ff3-c565-4037-baf2-7945b1bcc1a0": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<!-- LINE ITEMS METAFIELD -->\n\n\n      {% if product.metafields.general_fields.line_items != blank %}\n        <div class=\"gbl_line_items\"  >\n          {{ product.metafields.general_fields.line_items }}\n        </div>\n      {% endif %}\n\n\n    <!-- LINE ITEMS METAFIELD END HERE -->\n\n\n<!-- BFCM LINE ITEMS METAFIELD -->\n\n\n      {% if product.metafields.bfcm.bf2022 != blank %}\n       <style>\n.product-single__form  { display: none !important; }\n</style>\n      {% endif %}\n\n\n    <!-- BFCM LINE ITEMS METAFIELD END HERE -->"
+          }
+        },
+        "74d50b9f-7435-429e-b976-9f5b6180d353": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "skio_subscriptions_yc_s20_app_block_DpbB4i": {
+          "type": "shopify://apps/skio-subscriptions-yc-s20/blocks/app-block/de50f7a4-0bb0-4d4c-84e2-c03dce83436d",
+          "disabled": true,
+          "settings": {
+            "form_id": "product-form-{{section.id}}",
+            "start_onetime": "false",
+            "onetime_first": "false",
+            "default_subscription": "",
+            "group_border_radius": 5,
+            "group_border_shadow": true,
+            "group_border_selected_color": "#000000",
+            "onetime_title": "One Time",
+            "subscription_title": "Subscribe",
+            "prepaid_title": "Prepaid",
+            "discount_format": "percent",
+            "discount_style": "bubble",
+            "discount_prefix": "Save",
+            "discount_suffix": "",
+            "discount_color": "#0fa573"
+          }
+        },
+        "6b975a6e-ee43-4c8d-9a17-2a267fa8846d": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "disabled": true,
+          "settings": {
+            "enabled": true,
+            "id": "24119",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        },
+        "41b407f9-34d3-432b-9b11-a5d8592b960e": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "{% if request.locale.iso_code == 'en' %}\n\n<div class=\"trust_ctaimg  \">\n <img src=\"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-71B_34d6fb8d-dee8-4337-aa45-f207da1b07a1_700x.png?v=1669233320\" style=\" MARGIN: 10px 0 10px; \">\n</div>  \n \n <div id=\"coundowntimer\">\n              <div class=\"countdowninner hide\">\n                 <p id=\"timerpara\" style=\"text-align: center;margin: 15px 0 20px;font-weight: 600;padding: 5px;background: #f7eee3;border-radius: 10px;\"> ❤️ TREAT YO'SELF WITH 15% OFF <br> USE CODE  <strong style=\" color: #bf0000; \">LOVEYOU</strong> AT CHECKOUT</p>\n              </div>\n            </div> \n{% else %}\n\n<div class=\"trust_ctaimg \">\n <img style=\" MARGIN: 10px 0 10px; \" src=\"https://cdn.shopify.com/s/files/1/0263/3606/7666/files/bfcm-71B_9bcf3c9d-32dd-4e3c-bd75-5f6e9c1c0144.png?v=1669247824\">\n</div>\n \n<div id=\"coundowntimer\">\n              <div class=\"countdowninner hide\">\n                <p id=\"timerpara\" style=\"text-align: center;margin: 15px 0 20px;font-weight: 600;padding: 5px;background: #f7eee3;border-radius: 10px;\"> ❤️ GÂTE-TOI AVEC 15% DE RABAIS <br>  CODE :   <strong style=\" color: #bf0000; \">LOVEYOU</strong> </p>\n              </div>\n            </div> \n{% endif %}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "604a5a9f-1232-4231-8c3f-98f85f9166eb": {
+          "type": "tab",
+          "settings": {
+            "title": "{{ product.metafields.product_fields.product_tab_1_title.value }}",
+            "content": "{{ product.metafields.product_fields.product_tab_1_description  }}",
+            "page": ""
+          }
+        },
+        "2273c561-d3d8-4236-b224-4e9bc815fa55": {
+          "type": "tab",
+          "settings": {
+            "title": "{{ product.metafields.product_fields.product_tab_2_title.value }}",
+            "content": "{{ product.metafields.product_fields.product_tab_2_description.value }}",
+            "page": ""
+          }
+        },
+        "110fb42e-9eda-4e48-9571-53bdd2ce1281": {
+          "type": "tab",
+          "settings": {
+            "title": "{{ product.metafields.product_fields.product_tab_3_title.value }}",
+            "content": "{{ product.metafields.product_fields.product_tab_3_description.value }}",
+            "page": ""
+          }
+        },
+        "7fa25097-d507-4ed4-a780-dc52c525b9c2": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping & Returns",
+            "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $70. </li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!</li> </ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $70</li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!</li> </ul>\n                         \n                    {% endif %}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "61927f64-552d-4b58-a830-64ad8831f653",
+        "price",
+        "7cd9b1ce-895f-4cb9-8e86-a5524e0b0723",
+        "variant_picker",
+        "12319ff3-c565-4037-baf2-7945b1bcc1a0",
+        "74d50b9f-7435-429e-b976-9f5b6180d353",
+        "skio_subscriptions_yc_s20_app_block_DpbB4i",
+        "6b975a6e-ee43-4c8d-9a17-2a267fa8846d",
+        "41b407f9-34d3-432b-9b11-a5d8592b960e",
+        "description",
+        "604a5a9f-1232-4231-8c3f-98f85f9166eb",
+        "2273c561-d3d8-4236-b224-4e9bc815fa55",
+        "110fb42e-9eda-4e48-9571-53bdd2ce1281",
+        "7fa25097-d507-4ed4-a780-dc52c525b9c2"
+      ],
+      "disabled": true,
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "00d21124-67c9-401a-984b-8d9b7df64319": {
+          "type": "custom",
+          "settings": {
+            "code": ""
+          }
+        },
+        "6a53bde8-9168-4bcf-a948-0071cf739b57": {
+          "type": "custom",
+          "settings": {
+            "code": ""
+          }
+        }
+      },
+      "block_order": [
+        "00d21124-67c9-401a-984b-8d9b7df64319",
+        "6a53bde8-9168-4bcf-a948-0071cf739b57"
+      ],
+      "disabled": true,
+      "settings": {
+        "max_width": false
+      }
+    },
+    "164720475056b2cb28": {
+      "type": "fullwidth-html",
+      "disabled": true,
+      "settings": {
+        "section_html": "{% if product.metafields.prodcut_fields.social_slider != blank %}\n{% render 'tg-social-slider' %}\n{% endif %}",
+        "sec_color": "#f7eee3"
+      }
+    },
+    "1642074017b7cdf51c": {
+      "type": "advanced-content",
+      "blocks": {
+        "1642074017b421de19-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<!-- render Okendo reviews  -->\n<div class=\"page-width okendo_widget\" style=\"padding-top: 30px;max-width: 1180px;\">\n    {% render 'okendo-reviews-widget', product: product %}   \n</div>\n<!-- render Okendo stars review ends -->",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1642074017b421de19-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "164720478103804f2f": {
+      "type": "fullwidth-html",
+      "disabled": true,
+      "settings": {
+        "section_html": "{% if product.metafields.product_fields.faq_type contains \"matcha\" %}\n\t{% render 'faqs-matcha' %}\n{% elsif  product.metafields.product_fields.faq_type contains \"collagen\" %}\t\n   {% render 'faqs-collagen' %}  \n{% else %}\n<br> \n{% endif %}",
+        "sec_color": "#fffbf7"
+      }
+    },
+    "16421132209c7ae105": {
+      "type": "fullwidth-image-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/philXjade.jpg",
+        "section_html": "<p class=\"h5\">30 Day Moneyback Guarantee</p>\n<h2>The Teangle Promise</h2>\n<p>We put our money where our benefits are. That's how much we believe in our products. And if you're not into it - totally fine. More for us.</p>",
+        "sec_color": "#f2f5f1",
+        "layout": "left"
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {}
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 3
+      }
+    },
+    "f3da4c40-ccae-4ecd-baed-e3e29b2b286c": {
+      "type": "icons-and-image-text",
+      "disabled": true,
+      "custom_css": [
+        ".image-wrap {border-radius: 20px;}",
+        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/teangle-44.jpg",
+        "image_width": 520,
+        "subtitle": "HAPPINESS GUARANTEE",
+        "title": "Love it, or it’s on us.",
+        "text": "<p> </p>",
+        "icon1": "shopify://shop_images/teangle-33.png",
+        "icon1_title": "TRY RISK-FREE",
+        "icon1_text": "<p>We offer a 30 day money-back guarantee.</p>",
+        "icon2": "shopify://shop_images/teangle-36.png",
+        "icon2_title": "FLAVOUR",
+        "icon2_text": "<p>Our tried and tasted matcha blends are delicious.</p>",
+        "icon3": "shopify://shop_images/teangle-35.png",
+        "icon3_title": "ALL NATURAL INGREDIENTS",
+        "icon3_text": "<p>The health benefits you deserve.</p>",
+        "icon4": "shopify://shop_images/teangle-34.png",
+        "icon4_title": "CANADIAN OWNED",
+        "icon4_text": "<p>Fast-shipping across North-America.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "replo_s_p_ticker_Her7Mk": {
+      "type": "replo-s-p-ticker",
+      "name": "s_p - Ticker",
+      "settings": {}
+    },
+    "replo_s_p_5_reasons_Jknga7": {
+      "type": "replo-s-p-5-reasons",
+      "name": "s_p - 5 Reasons",
+      "settings": {
+        "replo_text_bc9c81ef-7d2b-4309-b6f1-967c72728bfd": ""
+      }
+    },
+    "replo_s_p_comparison_Mak4tt": {
+      "type": "replo-s-p-comparison",
+      "name": "s_p - Comparison",
+      "settings": {}
+    },
+    "replo_s_p_videowise_K4Gx3V": {
+      "type": "replo-s-p-videowise",
+      "name": "s_p - Videowise",
+      "settings": {
+        "replo_text_89f16ee6-a951-4170-b54a-92986c98ab48": "<p>The Delicious Matcha Collagen Everyone's Talking About</p>"
+      }
+    },
+    "replo_s_p_reviews_yDcnbU": {
+      "type": "replo-s-p-reviews",
+      "name": "s_p - Reviews",
+      "settings": {}
+    },
+    "replo_s_p_faq_mC9TVd": {
+      "type": "replo-s-p-faq",
+      "name": "s_p - FAQ",
+      "settings": {
+        "replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236": "<p>Are you certified by a third party? ✅</p>",
+        "replo_text_ae4de7b7-ad66-400c-a8f5-e62dd5cb3529": "<p>What does it taste like ? 🐥</p>",
+        "replo_text_7e17e2f6-efa1-4a14-b87f-4ac057a63053": "<p>Best time to drink it? ⏰</p>",
+        "replo_text_7a604543-e4d4-46cd-be60-dbb21960507d": "<p>Do I have to get a subscription? 🧐</p>",
+        "replo_text_cb888d59-95f2-435c-8c8b-7877a294a43c": "<p>How much caffeine? 🍵</p>",
+        "replo_text_2f3d73c8-eb53-428b-91a4-9aec43ce0fb7": "<p>Do you have samples? 👀</p>",
+        "replo_text_6c8e9c47-f389-4d32-bf6a-d5b74e552dba": "<p>Question</p>"
+      }
+    },
+    "174561029589a75392": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_7FnDPr": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "matcha-collagen",
+            "widget_type": "combined_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_7FnDPr"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
+    "replo_s_p_sticky_cta_CYEBAT": {
+      "type": "replo-s-p-sticky-cta",
+      "name": "s_p - Sticky CTA",
+      "settings": {}
+    }
+  },
+  "order": [
+    "replo_s_p_hero_AHFzbD",
+    "replo_chocolate_collagen_buybox_J6t7zB",
+    "fullwidth_html_p66iPk",
+    "main",
+    "sub",
+    "164720475056b2cb28",
+    "1642074017b7cdf51c",
+    "164720478103804f2f",
+    "16421132209c7ae105",
+    "recently-viewed",
+    "collection-return",
+    "product-recommendations",
+    "f3da4c40-ccae-4ecd-baed-e3e29b2b286c",
+    "replo_s_p_ticker_Her7Mk",
+    "replo_s_p_5_reasons_Jknga7",
+    "replo_s_p_comparison_Mak4tt",
+    "replo_s_p_videowise_K4Gx3V",
+    "replo_s_p_reviews_yDcnbU",
+    "replo_s_p_faq_mC9TVd",
+    "174561029589a75392",
+    "replo_s_p_sticky_cta_CYEBAT"
+  ]
+}
