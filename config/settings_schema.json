@@ -213,6 +213,30 @@
         ]
     },
     {
+        "name": "Bundle Settings",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Black Friday / Cyber Monday 2025 Bundle"
+            },
+            {
+                "type": "product",
+                "id": "bfcm_2025_bundle_product",
+                "label": "Bundle product"
+            },
+            {
+                "type": "collection",
+                "id": "bfcm_2025_bundle_collection",
+                "label": "Cerem, Chai, Ginger bundle"
+            },
+            {
+                "type": "image_picker",
+                "id": "bfcm_2025_bundle_image",
+                "label": "Bundle image"
+            }
+        ]
+    },
+    {
         "name": "Typography",
         "settings": [
             {

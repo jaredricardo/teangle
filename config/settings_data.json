@@ -34,6 +34,8 @@
     "color_modal_overlays": "#e6e6e6",
     "color_image_overlay": "#000000",
     "color_image_overlay_text_shadow": 20,
+    "bfcm_2025_bundle_collection": "bfcm-2025-items",
+    "bfcm_2025_bundle_image": "shopify://shop_images/bundle-up-and-save.gif",
     "type_header_font_family": "roboto_n7",
     "type_header_spacing": "0",
     "type_header_base_size": 32,
