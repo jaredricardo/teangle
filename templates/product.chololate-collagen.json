@@ -69,12 +69,18 @@
         "replo_text_0e54d10b-25de-4017-b348-325a4045b902": "<p>Hear What Canadians Say About Teangle 🇨🇦</p>"
       }
     },
+    "replo_chocolate_collagen_buybox_J6t7zB": {
+      "type": "replo-chocolate-collagen-buybox",
+      "name": "Chocolate Collagen Buybox",
+      "settings": {}
+    },
     "fullwidth_html_p66iPk": {
       "type": "fullwidth-html",
+      "disabled": true,
       "custom_css": [
         "section {display: none;}"
       ],
-      "name": "Fullwidth Liquid",
+      "name": "rebuy auto add gifts (off)",
       "settings": {
         "section_html": "<div data-rebuy-id=\"211396\"></div>",
         "sec_color": "#fffef2"
@@ -424,6 +430,7 @@
   },
   "order": [
     "replo_s_p_hero_AHFzbD",
+    "replo_chocolate_collagen_buybox_J6t7zB",
     "fullwidth_html_p66iPk",
     "main",
     "sub",
