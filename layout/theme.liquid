@@ -51,14 +51,17 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
 <script>
 
     document.addEventListener('rebuy:smartcart.ready', (e) => {
+      console.log('rebuy:smartcart.ready event detected')
       consolidateBundleItemsInSmartCart()
     })
 
     document.addEventListener('rebuy:cart.change', (event) => {
+      console.log('rebuy:cart.change event detected')
       consolidateBundleItemsInSmartCart()
     })
 
     async function consolidateBundleItemsInSmartCart() {
+      console.log('CONSOLIDATING BUNDLE ITEMS')
       const smartCartUL = document.querySelector('ul[data-smartcart-items]')
       const bundleProduct = {{ all_products[settings.bfcm_2025_bundle_product] | json }}
       const bundleImage = bundleProduct.featured_image
@@ -68,40 +71,54 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
       // clear previously added visual bundle items
       document.querySelectorAll('.bundle-item--needs-removed-on-change').forEach(el => el.remove())
 
-      if (!smartCartUL) return
-
       const bundleItems = []
       const { items } = await getCart()
 
-      console.log('cart items')
-      console.log(items)
+      // this implies the cart was empty and the DOM just has not updated yet, so we must wait
+      if(items.length > 0 && !smartCartUL) {
+        
+        // Wait for smartCartUL to appear in the DOM
+        const maxAttempts = 200 // Maximum 5 seconds (200 * 25ms)
+        let attempts = 0
+        
+        while (!document.querySelector('ul[data-smartcart-items]') && attempts < maxAttempts) {
+          await new Promise(resolve => setTimeout(resolve, 25))
+          attempts++
+        }
+        
+        // Re-check if smartCartUL exists now
+        const foundSmartCartUL = document.querySelector('ul[data-smartcart-items]')
+        // return foundSmartCartUL ? consolidateBundleItemsInSmartCart() : null
+        if (foundSmartCartUL) {
+          console.log('SmartCart UL found after waiting attempts ' + attempts)
+          // Re-run the function now that the DOM is ready
+          return consolidateBundleItemsInSmartCart()
+        } else {
+          console.log('SmartCart UL still not found after waiting, aborting')
+          return
+        }
+      }
 
+      if (!smartCartUL) return
+     
       {% for product in settings.bfcm_2025_bundle_collection.products %}
         bundleItems.push({{ product | json }})
       {% endfor %}
 
-      console.log('bundle items')
-      console.log(bundleItems)
-
       bundleItems.forEach((item) => {
-        const lineToRemove = smartCartUL.querySelectorAll(`li.product-${item.handle}`) || null
+        const lineToRemove = smartCartUL.querySelectorAll(`li.product-${item.handle}`) || ''
         if (!lineToRemove) return
-        console.log('removing line for item')
-        console.log(lineToRemove)
         lineToRemove.forEach(line => line.classList.add('hidden'))
       })
 
       const bundleProductIds = new Set(bundleItems.map(item => item.variants[0].id))
-
-      console.log('bundle product ids')
-      console.log(bundleProductIds)
 
       items.forEach((item) => {
         // Check if this item is in the bundle collection
         if (!bundleProductIds.has(item.id)) return
 
         // Determine selling plan name
-        const sellingPlanName = item.selling_plan_allocation?.selling_plan?.name || 'One Time Purchase'
+        const sellingPlanName = item.selling_plan_allocation?.selling_plan?.name || ''
 
         // Initialize selling plan object if it doesn't exist
         if (!bundleFinalObject[sellingPlanName]) {
@@ -110,8 +127,9 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
 
         // Check if this variant already exists in the selling plan
         if (bundleFinalObject[sellingPlanName][item.variant_id]) {
-          // Add to existing variant
+          // Add to existing variant - increment quantity and add line key
           bundleFinalObject[sellingPlanName][item.variant_id].quantity += item.quantity
+          bundleFinalObject[sellingPlanName][item.variant_id].line_keys.push(item.key)
         } else {
           // Create new variant entry
           bundleFinalObject[sellingPlanName][item.variant_id] = {
@@ -120,7 +138,7 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
             final_price: item.final_price,
             title: item.product_title,
             image: item.image,
-            line_key: item.key
+            line_keys: [item.key] // Store as array to handle multiple line items
           }
         }
       })
@@ -174,16 +192,8 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
             </div>
           </li>
         `
-
         smartCartUL.insertAdjacentHTML('afterbegin', template)
       })
-
-      console.log('Bundle Final Object:')
-      console.log(bundleFinalObject)
-      console.log('cart items')
-      console.log(items)
-      console.log('bundle items')
-      console.log(bundleItems)
     }
 
     getCart = async () => {
@@ -211,16 +221,18 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
           const bundleData = JSON.parse(bundleItem.getAttribute('data-bundle-info'))
           icon.classList = 'far fa-sync-alt fa-fast-spin'
 
-          console.log('Removing bundle items:', bundleData)
-
           // Build updates object with line keys set to 0 quantity (removes them)
           const updates = {}
           
           Object.entries(bundleData.variants).forEach(([variantId, variantData]) => {
-            updates[variantData.line_key] = 0
+            // Iterate through all line_keys for this variant (handles multiple cart lines)
+            variantData.line_keys.forEach(lineKey => {
+              updates[lineKey] = 0
+            })
           })
 
-          console.log('Updates object:', updates)
+          console.log('updates')
+          console.log(updates)
 
           try {
             const response = await fetch(window.Shopify.routes.root + 'cart/update.js', {
@@ -232,7 +244,6 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
             })
 
             const result = await response.json()
-            console.log('Cart updated successfully:', result)
             
             // The cart will automatically refresh via rebuy:cart.change event
           } catch (error) {
@@ -347,7 +358,6 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
 
   {% if template contains 'replo' %}
     <script type="module">
-      console.log('replo elevar loaded!')
       const settings = {};
       const config = (await import("https://shopify-gtm-suite.getelevar.com/configs/5df7fa303b72e7da3f48acea7d56d9542b8a05c6/config.js")).default;
       const scriptUrl = settings.proxyPath
