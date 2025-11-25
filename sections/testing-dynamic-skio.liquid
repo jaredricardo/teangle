@@ -415,24 +415,36 @@ body {
     border-radius: 12px;
     color: white;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .free-gift-banner__content {
-    position: relative;
-    z-index: 1;
+    flex: 1;
 }
 
 .free-gift-banner__text {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.4;
-    padding-right: 80px;
+}
+
+.free-gift-banner__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.free-gift-banner__image {
+    height: 120px;
+    width: auto;
+    margin-right: 1rem;
 }
 
 .free-gift-banner__value-badge {
-    position: absolute;
-    top: 16px;
-    right: 16px;
     background: #FFD93D;
     color: #323232;
     font-size: 12px;
@@ -441,6 +453,7 @@ body {
     border-radius: 20px;
     transform: rotate(5deg);
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    white-space: nowrap;
 }
 
 /* Purchase Type Selection */
@@ -824,18 +837,24 @@ body {
 
     .free-gift-banner {
         padding: 16px;
+        gap: 12px;
     }
 
     .free-gift-banner__text {
         font-size: 14px;
-        padding-right: 70px;
+    }
+
+    .free-gift-banner__right {
+        gap: 8px;
+    }
+
+    .free-gift-banner__image {
+        height: 90px;
     }
 
     .free-gift-banner__value-badge {
         font-size: 10px;
         padding: 6px 10px;
-        top: 12px;
-        right: 12px;
     }
 
     .purchase-type {
@@ -1048,11 +1067,14 @@ html:not([lang]) .lang-fr {
                     Shaker Gratuit avec Votre Premier Abonnement!
                 </div>
             </div>
-            <div class="free-gift-banner__value-badge lang-en">
-                $20 value
-            </div>
-            <div class="free-gift-banner__value-badge lang-fr">
-                Valeur de 20$
+            <div class="free-gift-banner__right">
+                <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/free-shaker-bottle_cc3618ca-1102-46b8-8933-5cff4cbee975.png?v=1764095984" alt="Free Shaker Bottle" class="free-gift-banner__image">
+                <div class="free-gift-banner__value-badge lang-en">
+                    $20 value
+                </div>
+                <div class="free-gift-banner__value-badge lang-fr">
+                    Valeur de 20$
+                </div>
             </div>
         </div>
 
@@ -1071,8 +1093,8 @@ html:not([lang]) .lang-fr {
                         <div class="purchase-type__option-left">
                             <input type="radio" name="purchase_type" value="subscription" js-skio-bundle-subscription checked>
                             <div class="purchase-type__option-content">
-                                <span class="purchase-type__option-label lang-en">Subscribe & Save 20%</span>
-                                <span class="purchase-type__option-label lang-fr">Abonnez-vous & Économisez 20%</span>
+                                <span class="purchase-type__option-label lang-en" js-subscription-label-en>Subscribe & Save 20%</span>
+                                <span class="purchase-type__option-label lang-fr" js-subscription-label-fr>Abonnez-vous & Économisez 20%</span>
                                 <span class="purchase-type__option-price" js-subscription-price>$0.00/pack</span>
                             </div>
                         </div>
@@ -1194,12 +1216,18 @@ function translate(key, replacements = {}) {
     return text;
 }
 
-// Global variables for Skio data
-let skioDynamicBundlesizeInterval = [];
-let skioDynamicBundleVariantPrice = 0;
-let skioDynamicBundleMinLimit = 3;
-let skioDynamicBundleMaxLimit = 5;
-let skioDynamicBundlePrices = {};
+// Utility function to format price in cents to localized currency
+function formatPrice(priceInCents) {
+    const priceInDollars = priceInCents / 100;
+    const currencySymbol = window.Shopify?.currency?.active || '$';
+    return `${currencySymbol}${priceInDollars.toFixed(2)}`;
+}
+
+// Global variables for bundle data
+let bundleSizeInterval = [3, 4, 5];
+let bundleMinLimit = 3;
+let bundleMaxLimit = 5;
+let bundlePrices = {};
 
 // Subscription shaker variant ID to add
 const SUBSCRIPTION_SHAKER_VARIANT_ID = 42218766467154;
@@ -1228,6 +1256,8 @@ class BundleBuilder extends HTMLElement {
         this.subscriptionPriceDisplay = this.querySelector("[js-subscription-price]");
         this.onetimePriceDisplay = this.querySelector("[js-onetime-price]");
         this.totalSavingsBadge = this.querySelector("[js-total-savings-badge]");
+        this.subscriptionLabelEn = this.querySelector("[js-subscription-label-en]");
+        this.subscriptionLabelFr = this.querySelector("[js-subscription-label-fr]");
         
         // Radio buttons and boxes
         this.oneTimeRadio = this.querySelector("[js-skio-bundle-onetime]");
@@ -1247,10 +1277,10 @@ class BundleBuilder extends HTMLElement {
         this.handleSubscriptionToggle();
         this.initializeEventListeners();
         
-        // Listen for Skio data initialization
-        document.addEventListener('skioBundlePrice:init', () => {
-            this.minLimit = skioDynamicBundleMinLimit;
-            this.maxLimit = skioDynamicBundleMaxLimit;
+        // Listen for bundle data initialization
+        document.addEventListener('bundlePrice:init', () => {
+            this.minLimit = bundleMinLimit;
+            this.maxLimit = bundleMaxLimit;
             this.updateStatus();
             this.updatePrice();
             this.setInitialPrice();
@@ -1260,8 +1290,8 @@ class BundleBuilder extends HTMLElement {
     
     setInitialPrice() {
         // Set initial price for 3 items with subscription
-        if (skioDynamicBundlePrices[3]) {
-            const pricing = skioDynamicBundlePrices[3];
+        if (bundlePrices[3]) {
+            const pricing = bundlePrices[3];
             
             this.totalPrice.forEach((price) => {
                 price.innerText = `$${pricing.subscription.originalPrice.toFixed(2)}`;
@@ -1287,7 +1317,7 @@ class BundleBuilder extends HTMLElement {
 
     updatePerPackPrices() {
         const totalItems = Math.max(this.products.length, this.minLimit);
-        const pricing = skioDynamicBundlePrices[totalItems];
+        const pricing = bundlePrices[totalItems];
         
         if (!pricing) return;
 
@@ -1301,6 +1331,28 @@ class BundleBuilder extends HTMLElement {
         if (this.onetimePriceDisplay) {
             const oneTimePerPack = pricing.oneTime.discountedPrice / totalItems;
             this.onetimePriceDisplay.textContent = `$${oneTimePerPack.toFixed(2)}/pack`;
+        }
+
+        // Update subscription label with dynamic percentage
+        this.updateSubscriptionLabel(totalItems);
+    }
+
+    updateSubscriptionLabel(totalItems) {
+        const size = Math.max(totalItems, this.minLimit);
+        const pricing = bundlePrices[size];
+        
+        if (!pricing) return;
+
+        // Calculate the actual percentage discount
+        const percentageOff = ((pricing.subscription.originalPrice - pricing.subscription.discountedPrice) / pricing.subscription.originalPrice * 100);
+        const roundedPercentage = Math.round(percentageOff);
+
+        // Update the labels
+        if (this.subscriptionLabelEn) {
+            this.subscriptionLabelEn.textContent = `Subscribe & Save ${roundedPercentage}%`;
+        }
+        if (this.subscriptionLabelFr) {
+            this.subscriptionLabelFr.textContent = `Abonnez-vous & Économisez ${roundedPercentage}%`;
         }
     }
     
@@ -1504,8 +1556,8 @@ class BundleBuilder extends HTMLElement {
         
         if (totalItems < this.minLimit) {
             // Show default 3-pack pricing when no items selected
-            if (skioDynamicBundlePrices[3]) {
-                const pricing = skioDynamicBundlePrices[3];
+            if (bundlePrices[3]) {
+                const pricing = bundlePrices[3];
                 
                 if (this.subscriptionRadio?.checked) {
                     this.totalPrice.forEach((price) => {
@@ -1532,7 +1584,7 @@ class BundleBuilder extends HTMLElement {
             return;
         }
         
-        const pricing = skioDynamicBundlePrices[totalItems];
+        const pricing = bundlePrices[totalItems];
         if (!pricing) {
             this.updateProgressBar();
             this.updatePerPackPrices();
@@ -1584,7 +1636,7 @@ class BundleBuilder extends HTMLElement {
     
     updateSavingsBadges() {
         const totalItems = Math.max(this.products.length, this.minLimit);
-        const pricing = skioDynamicBundlePrices[totalItems];
+        const pricing = bundlePrices[totalItems];
         
         if (!pricing || !this.totalSavingsBadge) return;
 
@@ -1621,9 +1673,9 @@ class BundleBuilder extends HTMLElement {
         });
         
         // Update progress line fill
-        if (this.progressLineFill && skioDynamicBundlesizeInterval.length > 0) {
-            const minSize = skioDynamicBundlesizeInterval[0];
-            const maxSize = skioDynamicBundlesizeInterval[skioDynamicBundlesizeInterval.length - 1];
+        if (this.progressLineFill && bundleSizeInterval.length > 0) {
+            const minSize = bundleSizeInterval[0];
+            const maxSize = bundleSizeInterval[bundleSizeInterval.length - 1];
             const range = maxSize - minSize;
             
             let percentage = 0;
@@ -1723,50 +1775,78 @@ class BundleBuilder extends HTMLElement {
 
 customElements.define("bundle-builder", BundleBuilder);
 
-// Skio Dynamic Bundle Data Fetcher
-async function skioDynamicBundleData() {
-    const response = await fetch('https://api.skio.com/storefront-http/get-dynamic-box', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ "productPlatformId": "7506796249170" }),
-    });
+// Bundle Data Initialization
+function initializeBundleData() {
+    // Get products from Shopify collection
+    const bundleItems = []
+    {% for product in settings.bfcm_2025_bundle_collection.products %}
+      bundleItems.push({{ product | json }})
+    {% endfor %}
 
-    const data = await response.json();
+    if (!bundleItems || !bundleItems.length) {
+        console.error('No bundle products found');
+        return;
+    }
 
-    const selectableProductVariants = data?.DynamicBox?.selectableProductVariants || [];
-    skioDynamicBundlesizeInterval = data?.DynamicBox?.sizeInterval || [];
-    skioDynamicBundleVariantPrice = selectableProductVariants?.[0]?.productVariants?.[0]?.price || 0;
-
-    const fixedDiscountTier = data?.DynamicBox?.fixedDiscountTier;
-
-    // Preserve your explicit ordering logic
-    const productsData = [];
-    selectableProductVariants.forEach((product, i) => {
-       productsData[i] = product;
-    })
-
-    const sellingPlanGroupConvertedInArray = Object.values(data?.DynamicBox?.sellingPlanGroup || {});
-    const variantMappingConvertedInArray = sellingPlanGroupConvertedInArray?.[0]
-        ? Object.values(sellingPlanGroupConvertedInArray[0].variantMapping || {})
-        : [];
-    const bundleVariantSubscriptionPrice = variantMappingConvertedInArray?.[0]?.adjustedPrice || 0;
-
-    if (!productsData || !productsData.length) return;
-
-    window.skioDynamicBoxId = data?.DynamicBox?.boxId;
-    window.skioBynamicSellingPlanGroup = data?.DynamicBox?.sellingPlanGroup;
+    console.log('/////././././././')
+    console.log(bundleItems)
 
     const bundleproductGrid = document.querySelector('[js-byob-product-bundle-grid]');
     const bundleProgressBar = document.querySelector('[js-bundle-progress-bar]');
     const bundleproductSubcriptionOptions = document.querySelector('[js-byob-custom-option-select]');
+    
     if (bundleproductGrid) bundleproductGrid.innerHTML = '';
     if (bundleProgressBar) bundleProgressBar.innerHTML = '';
 
-    skioDynamicBundleMinLimit = skioDynamicBundlesizeInterval[0];
-    skioDynamicBundleMaxLimit = skioDynamicBundlesizeInterval[skioDynamicBundlesizeInterval.length - 1];
+    // Set hardcoded limits
+    bundleMinLimit = 3;
+    bundleMaxLimit = 5;
+    bundleSizeInterval = [3, 4, 5];
+
+    // Get base product prices (in cents) - using first product as reference
+    // Use compare_at_price as the original price, fall back to price if not set
+    const baseOriginalPrice = bundleItems[0]?.compare_at_price || bundleItems[0]?.price || 2100;
+    
+    console.log('Base original price (cents):', baseOriginalPrice);
+
+    // Percentage-based discount structure
+    // These percentages are calculated from cart prices to ensure UI matches cart exactly. We need to find a way to load them dynamically in the future.
+    // Supa Easy is wher the discounts are defined
+    const discountStructure = {
+        3: {
+            oneTime: 3.14,    
+            subscription: 19
+        },
+        4: {    
+            oneTime: 19.05,   
+            subscription: 30.95  
+        },
+        5: {
+            oneTime: 23.81,   
+            subscription: 35.24  
+        }
+    };
+
+    // Calculate dynamic pricing based on product prices and discount percentages
+    const calculatePricing = (size) => {
+        const originalPrice = (baseOriginalPrice * size) / 100; // Convert cents to dollars
+        const oneTimeDiscount = discountStructure[size].oneTime / 100;
+        const subscriptionDiscount = discountStructure[size].subscription / 100;
+
+        return {
+            oneTime: {
+                originalPrice: originalPrice,
+                discountedPrice: originalPrice * (1 - oneTimeDiscount)
+            },
+            subscription: {
+                originalPrice: originalPrice,
+                discountedPrice: originalPrice * (1 - subscriptionDiscount)
+            }
+        };
+    };
 
     // Build progress bar stops + price tiers
-    skioDynamicBundlesizeInterval.forEach((size, index) => {
+    bundleSizeInterval.forEach((size, index) => {
         // Pack names based on size
         let packNameEn = '';
         let packNameFr = '';
@@ -1782,13 +1862,9 @@ async function skioDynamicBundleData() {
             packNameFr = 'Plan familial';
         }
         
-        // Calculate per-unit price with fixed discount applied
-        let perUnitPrice = skioDynamicBundleVariantPrice;
-        if (fixedDiscountTier && fixedDiscountTier[size.toString()]) {
-            const discount = parseFloat(fixedDiscountTier[size.toString()]);
-            const totalPrice = (skioDynamicBundleVariantPrice * size) - discount;
-            perUnitPrice = totalPrice / size;
-        }
+        // Calculate pricing dynamically
+        const pricing = calculatePricing(size);
+        const perUnitPrice = pricing.subscription.discountedPrice / size;
         
         const progressStopHtml = `
             <div class="bundle-progress__stop" data-pack="${size}" js-progress-bar-stop data-index="${index}">
@@ -1802,28 +1878,28 @@ async function skioDynamicBundleData() {
         `;
         bundleProgressBar.insertAdjacentHTML('beforeend', progressStopHtml);
 
-        if (fixedDiscountTier) {
-            const discount = parseFloat(fixedDiscountTier[size.toString()] || 0);
-            
-            skioDynamicBundlePrices[size] = {
-                oneTime: {
-                    originalPrice: skioDynamicBundleVariantPrice * size,
-                    discountedPrice: ((skioDynamicBundleVariantPrice * size) - discount),
-                },
-                subscription: {
-                    originalPrice: skioDynamicBundleVariantPrice * size,
-                    discountedPrice: ((bundleVariantSubscriptionPrice * size) - discount),
-                }
-            };
-        }
+        // Set the pricing
+        bundlePrices[size] = {
+            oneTime: {
+                originalPrice: pricing.oneTime.originalPrice,
+                discountedPrice: pricing.oneTime.discountedPrice,
+            },
+            subscription: {
+                originalPrice: pricing.subscription.originalPrice,
+                discountedPrice: pricing.subscription.discountedPrice,
+            }
+        };
     });
 
     // Render products in stacked format
-    productsData.forEach((product) => {
+    bundleItems.forEach((product) => {
         if (!product) return;
 
-        const originalTitle = product.productTitle;
-        const basePrice = product.productVariants?.[0]?.price || 0;
+        const originalTitle = product.title;
+        const basePrice = product.price;
+        const variantId = product.variants[0].id;
+        const productId = product.id;
+        const imageUrl = product.featured_image.startsWith('//') ? 'https:' + product.featured_image : product.featured_image;
 
         // Translation logic for product titles and descriptions
         let titleEn = originalTitle;
@@ -1832,19 +1908,19 @@ async function skioDynamicBundleData() {
         let descriptionFr = 'Saveur délicieuse et rafraîchissante';
 
         // Ceremonial Matcha
-        if (originalTitle.includes('Ceremonial Matcha')) {
+        if (originalTitle.includes('Ceremonial')) {
             titleFr = 'Matcha Cérémonial';
             descriptionEn = 'Smooth, vibrant, and pure. Perfect for lattes, morning rituals, and classic matcha lovers.';
             descriptionFr = 'Doux, vibrant et pur. Parfait pour les lattés, les rituels du matin et les amateurs de matcha classique.';
         }
         // Ginger & Lemongrass Matcha
-        else if (originalTitle.includes('Ginger & Lemongrass')) {
+        else if (originalTitle.includes('Ginger') || originalTitle.includes('Lemongrass')) {
             titleFr = 'Matcha Citronnelle Gingembre';
             descriptionEn = 'Light, fresh, and invigorating. Ideal for a wellness break or a brighter, more soothing flavor.';
             descriptionFr = 'Léger, frais et revigorant. Idéal pour une pause bien-être ou une saveur plus lumineuse et apaisante.';
         }
         // Chai Matcha
-        else if (originalTitle.includes('Chai Matcha')) {
+        else if (originalTitle.includes('Chai')) {
             titleFr = 'Matcha Chaï';
             descriptionEn = 'Warm, spicy, and comforting. A perfect blend for chai lovers and creamy latte fans.';
             descriptionFr = 'Chaleureux, épicé et réconfortant. Un mélange parfait pour les amateurs de chaï et de lattés crémeux.';
@@ -1852,17 +1928,17 @@ async function skioDynamicBundleData() {
 
         const productHTML = `
             <div class="product-card"
-                data-variant-id="${product.productVariants[0].platformId.split("/").pop()}"
-                data-product-id="${product.productPlatformId.split("/").pop()}"
+                data-variant-id="${variantId}"
+                data-product-id="${productId}"
                 data-product-title="${originalTitle}"
-                data-product-image-url="${product.productImageSrc}"
+                data-product-image-url="${imageUrl}"
                 data-product-price="${basePrice}"
-                data-product-compare-price="${product.productVariants[0].compareAtPrice}"
-                data-product-handle="${product.productHandle}"
+                data-product-compare-price="${product.compare_at_price || ''}"
+                data-product-handle="${product.handle}"
                 js-product-wrapper
             >
                 <div class="product-card__image-wrapper">
-                    <img src="${product.productImageSrc}" alt="${titleEn}" class="product-card__image">
+                    <img src="${imageUrl}" alt="${titleEn}" class="product-card__image">
                 </div>
                 <div class="product-card__content">
                     <div class="product-card__info">
@@ -1888,69 +1964,83 @@ async function skioDynamicBundleData() {
 
     document.querySelector('[js-bundle-progress-bar-wrapper]').style.opacity = 1;
 
-    // Subscription options
-    const sellingPlanGroup = data?.DynamicBox?.sellingPlanGroup || {};
-    const subscriptionPlans = Object.entries(sellingPlanGroup).map(([key, plan]) => {
-        const id = key.split('/').pop();
-        return { id, title: plan.title };
-    });
+    // Get selling plans from first product
+    const firstProduct = bundleItems[0];
+    const sellingPlanGroups = firstProduct.selling_plan_groups || [];
+    const sellingPlanGroup = sellingPlanGroups.find(group => group.app_id === 'SKIO') || sellingPlanGroups[0];
 
-    const customOrderSubscriptionPlans = [];
-    subscriptionPlans.forEach(plan => {
-        if (plan.title === 'Every 30 Days') customOrderSubscriptionPlans[0] = plan;
-        if (plan.title === 'Every 45 Days') customOrderSubscriptionPlans[1] = plan;
-        if (plan.title === 'Every 60 Days') customOrderSubscriptionPlans[2] = plan;
-    });
+    if (sellingPlanGroup && sellingPlanGroup.selling_plans) {
+        const sellingPlans = sellingPlanGroup.selling_plans;
+        
+        // Extract unique selling plans (deduplicate by name)
+        const uniquePlans = [];
+        const seenNames = new Set();
+        
+        sellingPlans.forEach(plan => {
+            if (!seenNames.has(plan.name)) {
+                seenNames.add(plan.name);
+                uniquePlans.push(plan);
+            }
+        });
 
-    // Auto-select "Every 30 Days" option
-    customOrderSubscriptionPlans.forEach((plan, index) => {
-        if (!plan) return;
-        
-        const isEvery30Days = plan.title === 'Every 30 Days';
-        
-        // Translate plan titles
-        let translatedTitleEn = plan.title;
-        let translatedTitleFr = plan.title;
-        
-        if (plan.title === 'Every 30 Days') {
-            translatedTitleFr = 'Tous les 30 jours';
-        } else if (plan.title === 'Every 45 Days') {
-            translatedTitleFr = 'Tous les 45 jours';
-        } else if (plan.title === 'Every 60 Days') {
-            translatedTitleFr = 'Tous les 60 jours';
-        }
-        
-        const lang = getLang();
-        const displayTitle = lang === 'fr' ? translatedTitleFr : translatedTitleEn;
-        
-        const subscriptionOption = `
-            <option data-plan-name="${plan.title}" value="${plan.id}" ${isEvery30Days ? 'selected' : ''}>
-                ${displayTitle}
-            </option>
-        `;
-        bundleproductSubcriptionOptions.insertAdjacentHTML('beforeend', subscriptionOption);
-    });
+        // Sort plans by frequency (30, 45, 60)
+        const customOrderSubscriptionPlans = [];
+        uniquePlans.forEach(plan => {
+            if (plan.name === 'Every 30 Days') customOrderSubscriptionPlans[0] = plan;
+            if (plan.name === 'Every 45 Days') customOrderSubscriptionPlans[1] = plan;
+            if (plan.name === 'Every 60 Days') customOrderSubscriptionPlans[2] = plan;
+        });
 
-    // Set the initial selling plan ID for "Every 30 Days"
-    const every30DaysPlan = customOrderSubscriptionPlans.find(plan => plan?.title === 'Every 30 Days');
-    if (every30DaysPlan) {
-        const bundleBuilder = document.querySelector('bundle-builder');
-        if (bundleBuilder) {
-            bundleBuilder.sellingPlanId = every30DaysPlan.id;
-            bundleBuilder.sellingPlanName = every30DaysPlan.title;
+        // Auto-select "Every 30 Days" option
+        customOrderSubscriptionPlans.forEach((plan, index) => {
+            if (!plan) return;
+            
+            const isEvery30Days = plan.name === 'Every 30 Days';
+            
+            // Translate plan titles
+            let translatedTitleEn = plan.name;
+            let translatedTitleFr = plan.name;
+            
+            if (plan.name === 'Every 30 Days') {
+                translatedTitleFr = 'Tous les 30 jours';
+            } else if (plan.name === 'Every 45 Days') {
+                translatedTitleFr = 'Tous les 45 jours';
+            } else if (plan.name === 'Every 60 Days') {
+                translatedTitleFr = 'Tous les 60 jours';
+            }
+            
+            const lang = getLang();
+            const displayTitle = lang === 'fr' ? translatedTitleFr : translatedTitleEn;
+            
+            const subscriptionOption = `
+                <option data-plan-name="${plan.name}" value="${plan.id}" ${isEvery30Days ? 'selected' : ''}>
+                    ${displayTitle}
+                </option>
+            `;
+            bundleproductSubcriptionOptions.insertAdjacentHTML('beforeend', subscriptionOption);
+        });
+
+        // Set the initial selling plan ID for "Every 30 Days"
+        const every30DaysPlan = customOrderSubscriptionPlans.find(plan => plan?.name === 'Every 30 Days');
+        if (every30DaysPlan) {
+            const bundleBuilder = document.querySelector('bundle-builder');
+            if (bundleBuilder) {
+                bundleBuilder.sellingPlanId = every30DaysPlan.id;
+                bundleBuilder.sellingPlanName = every30DaysPlan.name;
+            }
         }
     }
 
     document.querySelector('[js-product-bundle-subscription-wrapper]').style.opacity = 1;
 
-    document.dispatchEvent(new CustomEvent('skioBundlePrice:init'));
+    document.dispatchEvent(new CustomEvent('bundlePrice:init'));
 }
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', skioDynamicBundleData);
+    document.addEventListener('DOMContentLoaded', initializeBundleData);
 } else {
-    skioDynamicBundleData();
+    initializeBundleData();
 }
 </script>
 
