@@ -228,11 +228,6 @@
                 "type": "collection",
                 "id": "bfcm_2025_bundle_collection",
                 "label": "Cerem, Chai, Ginger bundle"
-            },
-            {
-                "type": "image_picker",
-                "id": "bfcm_2025_bundle_image",
-                "label": "Bundle image"
             }
         ]
     },

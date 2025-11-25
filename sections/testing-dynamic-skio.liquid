@@ -664,10 +664,6 @@ body {
     to { transform: rotate(360deg); }
 }
 
-.hidden {
-    display: none !important;
-}
-
 /* Mobile Responsive */
 @media (max-width: 768px) {
     body {
@@ -1068,71 +1064,6 @@ body {
     </div>
 </bundle-builder>
 
-{% comment %} remember to add to theme.liquid {% endcomment %}
-<script>
-
-    document.addEventListener('rebuy:smartcart.ready', (e) => {
-        consolidateBundleItemsInSmartCart()
-    })  
-
-    document.addEventListener('rebuy:cart.change', (event) => { 
-        consolidateBundleItemsInSmartCart()
-    })
-
-
-    async function consolidateBundleItemsInSmartCart(){
-        const smartCartUL = document.querySelector('ul[data-smartcart-items]')
-        const bundleImage = "{{ settings.bfcm_2025_bundle_product.featured_image | image_url: width: 400 }}"
-        const bundleProductLink = "{{ settings.bfcm_2025_bundle_product.handle }}"
-    
-        if (!smartCartUL) return
-
-        const bundleItems = []
-        const { items } = await getCart()
-
-        {% for product in settings.bfcm_2025_bundle_collection.products %}
-            bundleItems.push({{ product | json }})
-        {% endfor %}
-
-        bundleItems.forEach((item) => {
-            console.log(`li.product-${item.handle}`)
-            const lineToRemove = smartCartUL.querySelector(`li.product-${item.handle}`) || null
-            if (lineToRemove) {
-                // lineToRemove.remove()
-            }
-        })
-
-        const template = `
-            <li class="rebuy-cart__flyout-item">
-                <div class="rebuy-cart__flyout-item-media">
-                    <a href="${bundleProductLink}" aria-label="View details for {{ settings.bfcm_2025_bundle_product.title }}">
-                        <img src="${bundleImage.src}" alt="Teangle Ceremonial Matcha Bundle">
-                    </a>
-                    <div class="rebuy-cart__flyout-item-info">
-                        test
-                    </div>
-                </div>
-            </li>
-        `
-
-        smartCartUL.insertAdjacentHTML('afterbegin', template)
-
-        console.log('/////')
-        console.log(bundleImage)
-        console.log(smartCartUL)
-        console.log('cart items')
-        console.log(items)
-        console.log('bundle items')
-        console.log(bundleItems)
-    }
-
-    getCart = async () => {
-        const response = await fetch(`/cart.json`)
-        const json = await response.json()
-        return json
-    }
-</script>
-
 <script>
 // Global variables for Skio data
 let skioDynamicBundlesizeInterval = [];
@@ -1211,6 +1142,12 @@ class BundleBuilder extends HTMLElement {
             this.totalDiscountedPrice.forEach((discountPrice) => {
                 discountPrice.innerText = `$${pricing.subscription.discountedPrice.toFixed(2)}`;
             });
+
+            // Set initial savings badge
+            const initialSavings = pricing.subscription.originalPrice - pricing.subscription.discountedPrice;
+            if (this.totalSavingsBadge) {
+                this.totalSavingsBadge.textContent = `YOU ARE SAVING $${initialSavings.toFixed(2)}`;
+            }
         }
     }
 
