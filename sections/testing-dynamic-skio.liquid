@@ -60,6 +60,15 @@ body {
     font-weight: 700;
     color: #1e4845;
     line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.bundle-title__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 8px;
 }
 
 /* Price Section */
@@ -101,18 +110,18 @@ body {
 /* Progress Bar - New Design */
 .bundle-progress {
     margin-bottom: 24px;
-    padding: 20px 20px 50px 20px;
+    padding: 10px 20px 40px 20px;
     background: #FFFBF7FF;
     border-radius: 12px;
     border: 2px solid #e0e0e0;
 }
 
 .bundle-progress__label {
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 600;
-    color: #323232;
+    color: #1e4845;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .bundle-progress__track {
@@ -178,11 +187,24 @@ body {
     color: white;
 }
 
+.bundle-progress__stop-name {
+    position: absolute;
+    top: -30px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e4845;
+    white-space: nowrap;
+}
+
+.bundle-progress__stop.active .bundle-progress__stop-name {
+    color: #1e4845;
+}
+
 .bundle-progress__stop-label {
     position: absolute;
     top: 50px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: 600;
     color: #666;
     white-space: nowrap;
 }
@@ -193,8 +215,8 @@ body {
 
 .bundle-progress__stop-price {
     position: absolute;
-    top: 68px;
-    font-size: 12px;
+    top: 65px;
+    font-size: 11px;
     font-weight: 600;
     color: #999;
     white-space: nowrap;
@@ -299,6 +321,8 @@ body {
     flex-shrink: 0;
     display: flex;
     gap: 8px;
+    min-width: 120px;
+    justify-content: flex-end;
 }
 
 .quantity-selector {
@@ -470,12 +494,6 @@ body {
     cursor: pointer;
 }
 
-.purchase-type__option-box.selected .purchase-type__option-header {
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
 .purchase-type__option-left {
     display: flex;
     align-items: center;
@@ -540,6 +558,20 @@ body {
     display: none;
 }
 
+/* Remove margin, padding, and border-bottom from one-time purchase option header */
+[js-onetime-box] .purchase-type__option-header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+/* Add margin, padding, and border-bottom to subscription box header when selected */
+[js-subscription-box] .purchase-type__option-header {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
 .purchase-type__benefit {
     display: flex;
     align-items: flex-start;
@@ -571,7 +603,7 @@ body {
 /* Savings Badge on Purchase Type Box */
 .purchase-type__savings-badge {
     position: absolute;
-    top: -12px;
+    top: -14px;
     left: 50%;
     transform: translateX(-50%);
     background: #2a6460;
@@ -691,6 +723,10 @@ body {
         font-size: 24px;
     }
 
+    .bundle-title__subtitle {
+        font-size: 14px;
+    }
+
     .bundle-price__current {
         font-size: 24px;
     }
@@ -704,13 +740,12 @@ body {
     }
 
     .bundle-progress {
-        padding: 10px 0px 30px 0px;
+        padding: 20px 5px 30px 5px;
     }
 
     .bundle-progress__track {
         padding: 0 20px;
     }
-
     .bundle-progress__line {
         left: 20px;
         right: 20px;
@@ -722,16 +757,22 @@ body {
         font-size: 14px;
     }
 
-    .bundle-progress__stop-label {
+    .bundle-progress__stop-name {
         font-size: 11px;
         font-weight: 700;
+        top: -25px;
+    }
+
+    .bundle-progress__stop-label {
+        font-size: 9px;
+        font-weight: 600;
         top: 45px;
     }
 
     .bundle-progress__stop-price {
-        font-size: 10.5px;
+        font-size: 9px;
         font-weight: 600;
-        top: 60px;
+        top: 57px;
     }
 
     .bundle-progress__badge {
@@ -761,6 +802,10 @@ body {
         font-size: 12px;
     }
 
+    .product-card__controls {
+        min-width: 107px;
+    }
+
     .quantity-button {
         width: 28px;
         height: 28px;
@@ -768,7 +813,7 @@ body {
     }
 
     .quantity-input {
-        width: 35px;
+        width: 20px;
         font-size: 14px;
     }
 
@@ -908,6 +953,20 @@ body {
         font-size: 11px;
     }
 }
+
+/* Language-based visibility */
+html[lang="en"] .lang-fr {
+    display: none !important;
+}
+
+html[lang="fr"] .lang-en {
+    display: none !important;
+}
+
+/* Default to English if no lang attribute */
+html:not([lang]) .lang-fr {
+    display: none !important;
+}
 </style>
 
 <bundle-builder class="bundle-builder">
@@ -936,7 +995,10 @@ body {
 
         <!-- Title -->
         <div class="bundle-title">
-            <h1 class="bundle-title__heading">Build Your Bundle</h1>
+            <h1 class="bundle-title__heading lang-en">Build Your Teangle Matcha Set</h1>
+            <h1 class="bundle-title__heading lang-fr">Créez Votre Ensemble Teangle Matcha</h1>
+            <p class="bundle-title__subtitle lang-en">Choose your flavours. Create your ritual. Save as you sip</p>
+            <p class="bundle-title__subtitle lang-fr">Choisissez vos saveurs. Créez votre rituel. Économisez en savourant.</p>
         </div>
 
         <!-- Price Display -->
@@ -949,14 +1011,18 @@ body {
 
         <!-- Description -->
         <div class="bundle-description">
-            <p class="bundle-description__text">
-                Providing your body the hydration and gut-supporting ingredients it needs to help balance your microbiome and improve digestion. Delivering probiotics, apple cider vinegar, fibre and trace minerals to strengthen your gut – which is essential for removing toxins, building a healthy immune system and guarding against inflammation.
+            <p class="bundle-description__text lang-en">
+                Mix and match our bestselling matcha bags — Chai, Lemongrass Ginger, and Ceremonial — to craft the perfect set for your daily ritual. Whether you want something warm and cozy, fresh and zesty, or clean and classic, your perfect matcha routine starts here.
+            </p>
+            <p class="bundle-description__text lang-fr">
+                Personnalisez votre ensemble avec nos sacs matcha les plus populaires — Chaï, Citronnelle Gingembre et Cérémonial. Que vous aimiez les saveurs chaleureuses, les notes fraîches et vivifiantes ou le matcha pur et classique, votre rituel parfait commence ici.
             </p>
         </div>
 
         <!-- Progress Bar -->
         <div class="bundle-progress">
-            <div class="bundle-progress__label">BUILD YOUR BUNDLE</div>
+            <div class="bundle-progress__label lang-en">BUILD YOUR BUNDLE</div>
+            <div class="bundle-progress__label lang-fr">CRÉEZ VOTRE PANIER</div>
             <div class="bundle-progress__track">
                 <div class="bundle-progress__line">
                     <div class="bundle-progress__line-fill" js-progress-line-fill></div>
@@ -975,19 +1041,29 @@ body {
         <!-- Free Gift Banner -->
         <div class="free-gift-banner">
             <div class="free-gift-banner__content">
-                <div class="free-gift-banner__text">
+                <div class="free-gift-banner__text lang-en">
                     Free Shaker Cup with Your First Subscription!
                 </div>
+                <div class="free-gift-banner__text lang-fr">
+                    Shaker Gratuit avec Votre Premier Abonnement!
+                </div>
             </div>
-            <div class="free-gift-banner__value-badge">
+            <div class="free-gift-banner__value-badge lang-en">
                 $20 value
+            </div>
+            <div class="free-gift-banner__value-badge lang-fr">
+                Valeur de 20$
             </div>
         </div>
 
         <!-- Purchase Type Selection -->
         <div class="purchase-type">
-            <div class="purchase-type__savings-badge" js-total-savings-badge>YOU ARE SAVING $0.00</div>
-            <div class="purchase-type__label">Purchase Type:</div>
+            <div class="purchase-type__savings-badge" js-total-savings-badge>
+                <span class="lang-en">YOU ARE SAVING $0.00</span>
+                <span class="lang-fr">VOUS ÉCONOMISEZ 0,00$</span>
+            </div>
+            <div class="purchase-type__label lang-en">Purchase Type:</div>
+            <div class="purchase-type__label lang-fr">Type d'Achat:</div>
             <div class="purchase-type__options">
                 <!-- Subscription Option -->
                 <div class="purchase-type__option-box selected" js-subscription-box>
@@ -995,7 +1071,8 @@ body {
                         <div class="purchase-type__option-left">
                             <input type="radio" name="purchase_type" value="subscription" js-skio-bundle-subscription checked>
                             <div class="purchase-type__option-content">
-                                <span class="purchase-type__option-label">Subscribe & Save 20%</span>
+                                <span class="purchase-type__option-label lang-en">Subscribe & Save 20%</span>
+                                <span class="purchase-type__option-label lang-fr">Abonnez-vous & Économisez 20%</span>
                                 <span class="purchase-type__option-price" js-subscription-price>$0.00/pack</span>
                             </div>
                         </div>
@@ -1010,19 +1087,22 @@ body {
                             <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                             </svg>
-                            <span>FREE SHAKER CUP on your first order</span>
+                            <span class="lang-en">FREE SHAKER CUP on your first order</span>
+                            <span class="lang-fr">SHAKER GRATUIT avec votre première commande</span>
                         </li>
                         <li class="purchase-type__benefit">
                             <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                             </svg>
-                            <span>FREE SHIPPING on every order</span>
+                            <span class="lang-en">FREE SHIPPING on every order</span>
+                            <span class="lang-fr">LIVRAISON GRATUITE sur chaque commande</span>
                         </li>
                         <li class="purchase-type__benefit">
                             <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                             </svg>
-                            <span>Skip or pause anytime</span>
+                            <span class="lang-en">Skip or pause anytime</span>
+                            <span class="lang-fr">Passez ou mettez en pause à tout moment</span>
                         </li>
                     </ul>
                 </div>
@@ -1033,7 +1113,8 @@ body {
                         <div class="purchase-type__option-left">
                             <input type="radio" name="purchase_type" value="onetime" js-skio-bundle-onetime>
                             <div class="purchase-type__option-content">
-                                <span class="purchase-type__option-label">One-time purchase</span>
+                                <span class="purchase-type__option-label lang-en">One-time purchase</span>
+                                <span class="purchase-type__option-label lang-fr">Achat unique</span>
                                 <span class="purchase-type__option-price" js-onetime-price>$0.00/pack</span>
                             </div>
                         </div>
@@ -1065,6 +1146,54 @@ body {
 </bundle-builder>
 
 <script>
+// Translation helper
+const translations = {
+    en: {
+        selectItems: 'Select {count} more {items}',
+        addToCart: 'Add Bundle to Cart',
+        item: 'item',
+        items: 'items',
+        pack: 'Pack',
+        ea: 'ea',
+        youAreSaving: 'YOU ARE SAVING ${amount}',
+        mostPopular: 'MOST POPULAR',
+        bestDeal: 'BEST DEAL',
+        delicious: 'Delicious and refreshing flavor',
+        add: 'ADD',
+        everyDays: 'Every {days} Days'
+    },
+    fr: {
+        selectItems: 'Sélectionnez {count} {items} de plus',
+        addToCart: 'Ajouter le Panier au Panier',
+        item: 'article',
+        items: 'articles',
+        pack: 'Paquet',
+        ea: 'ch',
+        youAreSaving: 'VOUS ÉCONOMISEZ {amount}$',
+        mostPopular: 'LE PLUS POPULAIRE',
+        bestDeal: 'MEILLEURE OFFRE',
+        delicious: 'Saveur délicieuse et rafraîchissante',
+        add: 'AJOUTER',
+        everyDays: 'Tous les {days} jours'
+    }
+};
+
+function getLang() {
+    return document.documentElement.getAttribute('lang') || 'en';
+}
+
+function translate(key, replacements = {}) {
+    const lang = getLang();
+    let text = translations[lang]?.[key] || translations['en'][key] || key;
+    
+    // Replace placeholders
+    Object.keys(replacements).forEach(placeholder => {
+        text = text.replace(`{${placeholder}}`, replacements[placeholder]);
+    });
+    
+    return text;
+}
+
 // Global variables for Skio data
 let skioDynamicBundlesizeInterval = [];
 let skioDynamicBundleVariantPrice = 0;
@@ -1146,7 +1275,12 @@ class BundleBuilder extends HTMLElement {
             // Set initial savings badge
             const initialSavings = pricing.subscription.originalPrice - pricing.subscription.discountedPrice;
             if (this.totalSavingsBadge) {
-                this.totalSavingsBadge.textContent = `YOU ARE SAVING $${initialSavings.toFixed(2)}`;
+                const lang = getLang();
+                if (lang === 'fr') {
+                    this.totalSavingsBadge.innerHTML = `<span class="lang-fr">VOUS ÉCONOMISEZ ${initialSavings.toFixed(2)}$</span>`;
+                } else {
+                    this.totalSavingsBadge.innerHTML = `<span class="lang-en">YOU ARE SAVING $${initialSavings.toFixed(2)}</span>`;
+                }
             }
         }
     }
@@ -1463,8 +1597,13 @@ class BundleBuilder extends HTMLElement {
             dollarSavings = pricing.oneTime.originalPrice - pricing.oneTime.discountedPrice;
         }
         
-        // Update the badge with dollar amount
-        this.totalSavingsBadge.textContent = `YOU ARE SAVING $${dollarSavings.toFixed(2)}`;
+        // Update the badge with dollar amount in both languages
+        const lang = getLang();
+        if (lang === 'fr') {
+            this.totalSavingsBadge.innerHTML = `<span class="lang-fr">VOUS ÉCONOMISEZ ${dollarSavings.toFixed(2)}$</span>`;
+        } else {
+            this.totalSavingsBadge.innerHTML = `<span class="lang-en">YOU ARE SAVING $${dollarSavings.toFixed(2)}</span>`;
+        }
     }
     
     updateProgressBar() {
@@ -1549,12 +1688,12 @@ class BundleBuilder extends HTMLElement {
         // Update button text and state
         if (totalItems >= this.minLimit) {
             this.addToCartBtn.disabled = false;
-            this.buttonText.textContent = "Add Bundle to Cart";
+            this.buttonText.textContent = translate('addToCart');
             this.bundlePrices.classList.remove("hidden");
         } else {
             this.addToCartBtn.disabled = true;
-            const itemWord = remaining === 1 ? 'item' : 'items';
-            this.buttonText.textContent = `Select ${remaining} more ${itemWord}`;
+            const itemWord = remaining === 1 ? translate('item') : translate('items');
+            this.buttonText.textContent = translate('selectItems', { count: remaining, items: itemWord });
             this.bundlePrices.classList.add("hidden");
         }
     }
@@ -1593,8 +1732,6 @@ async function skioDynamicBundleData() {
     });
 
     const data = await response.json();
-    console.log('//////')
-    console.log(data.DynamicBox)
 
     const selectableProductVariants = data?.DynamicBox?.selectableProductVariants || [];
     skioDynamicBundlesizeInterval = data?.DynamicBox?.sizeInterval || [];
@@ -1630,8 +1767,20 @@ async function skioDynamicBundleData() {
 
     // Build progress bar stops + price tiers
     skioDynamicBundlesizeInterval.forEach((size, index) => {
-        const badge = skioDynamicBundlesizeInterval.length - 2 == index ? '<div class="bundle-progress__badge bundle-progress__badge--popular">MOST POPULAR</div>' : 
-                      skioDynamicBundlesizeInterval.length - 1 == index ? '<div class="bundle-progress__badge">BEST DEAL</div>' : '';
+        // Pack names based on size
+        let packNameEn = '';
+        let packNameFr = '';
+        
+        if (size === 3) {
+            packNameEn = 'Starter Trio';
+            packNameFr = 'Trio découverte';
+        } else if (size === 4) {
+            packNameEn = 'Matcha lover';
+            packNameFr = 'Matcha lover';
+        } else if (size === 5) {
+            packNameEn = 'Family Plan';
+            packNameFr = 'Plan familial';
+        }
         
         // Calculate per-unit price with fixed discount applied
         let perUnitPrice = skioDynamicBundleVariantPrice;
@@ -1643,10 +1792,12 @@ async function skioDynamicBundleData() {
         
         const progressStopHtml = `
             <div class="bundle-progress__stop" data-pack="${size}" js-progress-bar-stop data-index="${index}">
-                ${badge}
+                <div class="bundle-progress__stop-name lang-en">${packNameEn}</div>
+                <div class="bundle-progress__stop-name lang-fr">${packNameFr}</div>
                 <div class="bundle-progress__stop-circle">${size}</div>
-                <div class="bundle-progress__stop-label">${size} Pack</div>
-                <div class="bundle-progress__stop-price">$${perUnitPrice.toFixed(2)}/ea</div>
+                <div class="bundle-progress__stop-label lang-en">${size} Pack</div>
+                <div class="bundle-progress__stop-label lang-fr">${size} Paquet</div>
+                <div class="bundle-progress__stop-price">$${perUnitPrice.toFixed(2)}/<span class="lang-en">ea</span><span class="lang-fr">ch</span></div>
             </div>
         `;
         bundleProgressBar.insertAdjacentHTML('beforeend', progressStopHtml);
@@ -1671,14 +1822,39 @@ async function skioDynamicBundleData() {
     productsData.forEach((product) => {
         if (!product) return;
 
-        const translatedTitle = product.productTitle;
+        const originalTitle = product.productTitle;
         const basePrice = product.productVariants?.[0]?.price || 0;
+
+        // Translation logic for product titles and descriptions
+        let titleEn = originalTitle;
+        let titleFr = originalTitle;
+        let descriptionEn = 'Delicious and refreshing flavor';
+        let descriptionFr = 'Saveur délicieuse et rafraîchissante';
+
+        // Ceremonial Matcha
+        if (originalTitle.includes('Ceremonial Matcha')) {
+            titleFr = 'Matcha Cérémonial';
+            descriptionEn = 'Smooth, vibrant, and pure. Perfect for lattes, morning rituals, and classic matcha lovers.';
+            descriptionFr = 'Doux, vibrant et pur. Parfait pour les lattés, les rituels du matin et les amateurs de matcha classique.';
+        }
+        // Ginger & Lemongrass Matcha
+        else if (originalTitle.includes('Ginger & Lemongrass')) {
+            titleFr = 'Matcha Citronnelle Gingembre';
+            descriptionEn = 'Light, fresh, and invigorating. Ideal for a wellness break or a brighter, more soothing flavor.';
+            descriptionFr = 'Léger, frais et revigorant. Idéal pour une pause bien-être ou une saveur plus lumineuse et apaisante.';
+        }
+        // Chai Matcha
+        else if (originalTitle.includes('Chai Matcha')) {
+            titleFr = 'Matcha Chaï';
+            descriptionEn = 'Warm, spicy, and comforting. A perfect blend for chai lovers and creamy latte fans.';
+            descriptionFr = 'Chaleureux, épicé et réconfortant. Un mélange parfait pour les amateurs de chaï et de lattés crémeux.';
+        }
 
         const productHTML = `
             <div class="product-card"
                 data-variant-id="${product.productVariants[0].platformId.split("/").pop()}"
                 data-product-id="${product.productPlatformId.split("/").pop()}"
-                data-product-title="${translatedTitle}"
+                data-product-title="${originalTitle}"
                 data-product-image-url="${product.productImageSrc}"
                 data-product-price="${basePrice}"
                 data-product-compare-price="${product.productVariants[0].compareAtPrice}"
@@ -1686,12 +1862,14 @@ async function skioDynamicBundleData() {
                 js-product-wrapper
             >
                 <div class="product-card__image-wrapper">
-                    <img src="${product.productImageSrc}" alt="${translatedTitle}" class="product-card__image">
+                    <img src="${product.productImageSrc}" alt="${titleEn}" class="product-card__image">
                 </div>
                 <div class="product-card__content">
                     <div class="product-card__info">
-                        <h3 class="product-card__title">${translatedTitle}</h3>
-                        <p class="product-card__description">Delicious and refreshing flavor</p>
+                        <h3 class="product-card__title lang-en">${titleEn}</h3>
+                        <h3 class="product-card__title lang-fr">${titleFr}</h3>
+                        <p class="product-card__description lang-en">${descriptionEn}</p>
+                        <p class="product-card__description lang-fr">${descriptionFr}</p>
                     </div>
                     <div class="product-card__controls">
                         <div class="quantity-selector">
@@ -1699,7 +1877,8 @@ async function skioDynamicBundleData() {
                             <input type="number" class="quantity-input" min="0" value="0" readonly js-quantity-input>
                             <button class="quantity-button" js-quantity-increment>+</button>
                         </div>
-                        <button class="add-button" js-ats-btn>ADD</button>
+                        <button class="add-button lang-en" js-ats-btn>ADD</button>
+                        <button class="add-button lang-fr" js-ats-btn>AJOUTER</button>
                     </div>
                 </div>
             </div>
@@ -1728,9 +1907,25 @@ async function skioDynamicBundleData() {
         if (!plan) return;
         
         const isEvery30Days = plan.title === 'Every 30 Days';
+        
+        // Translate plan titles
+        let translatedTitleEn = plan.title;
+        let translatedTitleFr = plan.title;
+        
+        if (plan.title === 'Every 30 Days') {
+            translatedTitleFr = 'Tous les 30 jours';
+        } else if (plan.title === 'Every 45 Days') {
+            translatedTitleFr = 'Tous les 45 jours';
+        } else if (plan.title === 'Every 60 Days') {
+            translatedTitleFr = 'Tous les 60 jours';
+        }
+        
+        const lang = getLang();
+        const displayTitle = lang === 'fr' ? translatedTitleFr : translatedTitleEn;
+        
         const subscriptionOption = `
             <option data-plan-name="${plan.title}" value="${plan.id}" ${isEvery30Days ? 'selected' : ''}>
-                ${plan.title}
+                ${displayTitle}
             </option>
         `;
         bundleproductSubcriptionOptions.insertAdjacentHTML('beforeend', subscriptionOption);

@@ -18,10 +18,6 @@
 <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  console.log('//////////////////////////')
-  console.log({{ cart | json }})
-</script>
 
 <!--Gorgias Chat Widget Start-->
 <script id="gorgias-chat-widget-install-v3" 
@@ -65,26 +61,22 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
 {% comment %} remember to add to theme.liquid {% endcomment %}
 <script>
 
+
     document.addEventListener('rebuy:smartcart.ready', (e) => {
-      console.log('rebuy:smartcart.ready event detected')
       consolidateBundleItemsInSmartCart()
     })
 
     document.addEventListener('rebuy:cart.change', (event) => {
-      console.log('rebuy:cart.change event detected')
       consolidateBundleItemsInSmartCart()
     })
 
     async function consolidateBundleItemsInSmartCart() {
-      console.log('CONSOLIDATING BUNDLE ITEMS')
+      console.log('//// CONSOLIDATE BUNDLE ITEMS IN SMART CART ////')
       const smartCartUL = document.querySelector('ul[data-smartcart-items]')
       const bundleProduct = {{ all_products[settings.bfcm_2025_bundle_product] | json }}
       const bundleImage = bundleProduct.featured_image
       const bundleProductLink = `/products/${bundleProduct.handle}`
       const bundleFinalObject = {}
-
-      // clear previously added visual bundle items
-      document.querySelectorAll('.bundle-item--needs-removed-on-change').forEach(el => el.remove())
 
       const bundleItems = []
       const { items } = await getCart()
@@ -115,6 +107,9 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
       }
 
       if (!smartCartUL) return
+
+      // clear previously added visual bundle items
+      document.querySelectorAll('.bundle-item--needs-removed-on-change').forEach(el => el.remove())
      
       {% for product in settings.bfcm_2025_bundle_collection.products %}
         bundleItems.push({{ product | json }})
@@ -245,9 +240,6 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
               updates[lineKey] = 0
             })
           })
-
-          console.log('updates')
-          console.log(updates)
 
           try {
             const response = await fetch(window.Shopify.routes.root + 'cart/update.js', {
