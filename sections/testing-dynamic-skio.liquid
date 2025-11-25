@@ -1788,9 +1788,6 @@ function initializeBundleData() {
         return;
     }
 
-    console.log('/////././././././')
-    console.log(bundleItems)
-
     const bundleproductGrid = document.querySelector('[js-byob-product-bundle-grid]');
     const bundleProgressBar = document.querySelector('[js-bundle-progress-bar]');
     const bundleproductSubcriptionOptions = document.querySelector('[js-byob-custom-option-select]');
@@ -1806,9 +1803,8 @@ function initializeBundleData() {
     // Get base product prices (in cents) - using first product as reference
     // Use compare_at_price as the original price, fall back to price if not set
     const baseOriginalPrice = bundleItems[0]?.compare_at_price || bundleItems[0]?.price || 2100;
-    
-    console.log('Base original price (cents):', baseOriginalPrice);
 
+    
     // Percentage-based discount structure
     // These percentages are calculated from cart prices to ensure UI matches cart exactly. We need to find a way to load them dynamically in the future.
     // Supa Easy is wher the discounts are defined
