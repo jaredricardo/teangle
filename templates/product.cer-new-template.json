@@ -144,6 +144,7 @@
         "110fb42e-9eda-4e48-9571-53bdd2ce1281",
         "7fa25097-d507-4ed4-a780-dc52c525b9c2"
       ],
+      "disabled": true,
       "settings": {
         "sku_enable": false,
         "image_position": "left",
@@ -155,6 +156,16 @@
         "enable_video_looping": true,
         "product_video_style": "muted"
       }
+    },
+    "replo_sm_ceremonial_matcha_94jidk": {
+      "type": "replo-sm-ceremonial-matcha",
+      "name": "SM-Ceremonial Matcha",
+      "settings": {}
+    },
+    "replo_ceremonial_below_fold_KCRfDJ": {
+      "type": "replo-ceremonial-below-fold",
+      "name": "Ceremonial Below Fold",
+      "settings": {}
     },
     "eaa96b8d-56bb-4b5c-8fca-dde0879cc384": {
       "type": "advanced-content",
@@ -319,6 +330,8 @@
   },
   "order": [
     "main",
+    "replo_sm_ceremonial_matcha_94jidk",
+    "replo_ceremonial_below_fold_KCRfDJ",
     "eaa96b8d-56bb-4b5c-8fca-dde0879cc384",
     "sub",
     "164720475056b2cb28",
