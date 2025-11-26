@@ -1811,7 +1811,7 @@ function initializeBundleData() {
     const discountStructure = {
         3: {
             oneTime: 3.14,    
-            subscription: 19
+            subscription: 19.05
         },
         4: {    
             oneTime: 19.05,   
@@ -1889,6 +1889,7 @@ function initializeBundleData() {
 
     // Render products in stacked format
     bundleItems.forEach((product) => {
+        console.log(product)
         if (!product) return;
 
         const originalTitle = product.title;
