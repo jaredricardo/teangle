@@ -157,9 +157,9 @@
         "product_video_style": "muted"
       }
     },
-    "replo_sm_ceremonial_matcha_94jidk": {
-      "type": "replo-sm-ceremonial-matcha",
-      "name": "SM-Ceremonial Matcha",
+    "replo_sm_ceremonial_matha_frc_FKNnDq": {
+      "type": "replo-sm-ceremonial-matha-frc",
+      "name": "SM-Ceremonial Matha - FRc",
       "settings": {}
     },
     "replo_ceremonial_below_fold_KCRfDJ": {
@@ -279,7 +279,7 @@
   },
   "order": [
     "main",
-    "replo_sm_ceremonial_matcha_94jidk",
+    "replo_sm_ceremonial_matha_frc_FKNnDq",
     "replo_ceremonial_below_fold_KCRfDJ",
     "eaa96b8d-56bb-4b5c-8fca-dde0879cc384",
     "sub",
