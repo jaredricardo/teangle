@@ -986,10 +986,10 @@ html:not([lang]) .lang-fr {
 
         <!-- Title -->
         <div class="bundle-title">
-            <h1 class="bundle-title__heading lang-en">Build Your Teangle Matcha Set</h1>
+            <h1 class="bundle-title__heading lang-en">Build Your Matcha Bag Set</h1>
             <h1 class="bundle-title__heading lang-fr">Créez Votre Ensemble Teangle Matcha</h1>
-            <p class="bundle-title__subtitle lang-en">Choose your flavours. Create your ritual. Save as you sip</p>
-            <p class="bundle-title__subtitle lang-fr">Choisissez vos saveurs. Créez votre rituel. Économisez en savourant.</p>
+            {% comment %} <p class="bundle-title__subtitle lang-en">Choose your flavours. Create your ritual. Save as you sip</p>
+            <p class="bundle-title__subtitle lang-fr">Choisissez vos saveurs. Créez votre rituel. Économisez en savourant.</p> {% endcomment %}
         </div>
 
         <!-- Price Display -->
@@ -1033,10 +1033,10 @@ html:not([lang]) .lang-fr {
         <div class="free-gift-banner">
             <div class="free-gift-banner__content">
                 <div class="free-gift-banner__text lang-en">
-                    Free Shaker Cup with Your First Subscription!
+                    Free bottle with your first subcription!
                 </div>
                 <div class="free-gift-banner__text lang-fr">
-                    Shaker Gratuit avec Votre Premier Abonnement!
+                    Bouteille gratuite avec votre premier abonnement
                 </div>
             </div>
             <div class="free-gift-banner__right">
@@ -1066,7 +1066,7 @@ html:not([lang]) .lang-fr {
                             <input type="radio" name="purchase_type" value="subscription" js-skio-bundle-subscription checked>
                             <div class="purchase-type__option-content">
                                 <span class="purchase-type__option-label lang-en">Subscribe & Save</span>
-                                <span class="purchase-type__option-label lang-fr">Abonnez-vous & Économisez</span>
+                                <span class="purchase-type__option-label lang-fr">Abonnez & Économisez</span>
                                 <span class="purchase-type__option-price" js-subscription-price>$0.00</span>
                             </div>
                         </div>
@@ -1081,22 +1081,22 @@ html:not([lang]) .lang-fr {
                             <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                             </svg>
-                            <span class="lang-en">FREE SHAKER CUP on your first order</span>
-                            <span class="lang-fr">SHAKER GRATUIT avec votre première commande</span>
+                            <span class="lang-en">FREE BOTTLE on your first orde</span>
+                            <span class="lang-fr">Bouteille gratuite avec ta première commande</span>
                         </li>
                         <li class="purchase-type__benefit">
                             <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                             </svg>
                             <span class="lang-en">FREE SHIPPING on every order</span>
-                            <span class="lang-fr">LIVRAISON GRATUITE sur chaque commande</span>
+                            <span class="lang-fr">Livraison gratuite sur chaque commande</span>
                         </li>
                         <li class="purchase-type__benefit">
                             <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                             </svg>
-                            <span class="lang-en">Skip or pause anytime</span>
-                            <span class="lang-fr">Passez ou mettez en pause à tout moment</span>
+                            <span class="lang-en">Full flexibility — manage your plan your way</span>
+                            <span class="lang-fr">Flexibilité totale — gère ton plan à ta façon</span>
                         </li>
                     </ul>
                 </div>
@@ -1854,19 +1854,19 @@ function initializeBundleData() {
         if (originalTitle.includes('Ceremonial')) {
             titleFr = 'Matcha Cérémonial';
             descriptionEn = 'Smooth, vibrant, and pure. Perfect for lattes, morning rituals, and classic matcha lovers.';
-            descriptionFr = 'Doux, vibrant et pur. Parfait pour les lattés, les rituels du matin et les amateurs de matcha classique.';
+            descriptionFr = 'Parfait pour les lattés, les rituels du matin et les amateurs de matcha classique.';
         }
         // Ginger & Lemongrass Matcha
         else if (originalTitle.includes('Ginger') || originalTitle.includes('Lemongrass')) {
             titleFr = 'Matcha Citronnelle Gingembre';
             descriptionEn = 'Light, fresh, and invigorating. Ideal for a wellness break or a brighter, more soothing flavor.';
-            descriptionFr = 'Léger, frais et revigorant. Idéal pour une pause bien-être ou une saveur plus lumineuse et apaisante.';
+            descriptionFr = 'Léger, frais et rafraîchissant. Idéal pour une pause bien-être ou une saveur plus douce et apaisante.';
         }
         // Chai Matcha
         else if (originalTitle.includes('Chai')) {
             titleFr = 'Matcha Chaï';
             descriptionEn = 'Warm, spicy, and comforting. A perfect blend for chai lovers and creamy latte fans.';
-            descriptionFr = 'Chaleureux, épicé et réconfortant. Un mélange parfait pour les amateurs de chaï et de lattés crémeux.';
+            descriptionFr = 'Chaud, épicé et réconfortant. Un mélange parfait pour les amateurs de chaï et de lattés crémeux.';
         }
 
         const productHTML = `
