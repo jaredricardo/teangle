@@ -56,7 +56,8 @@
     },
     "replo_test_homepage_hero_Nq8bRX": {
       "type": "replo-test-homepage-hero",
-      "name": "(fixed) Homepage Hero",
+      "disabled": true,
+      "name": "(bfcm) Homepage Hero",
       "settings": {
         "replo_style_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Teangle3710_banner.jpg",
         "replo_stylesm_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Gemini_Generated_Image_ng4c8wng4c8wng4c.png",
@@ -79,7 +80,8 @@
     },
     "replo_test_homepage_hero_LTgxRG": {
       "type": "replo-test-homepage-hero",
-      "name": "(fixed) Homepage Hero",
+      "disabled": true,
+      "name": "(bfcm) Homepage Hero",
       "settings": {
         "replo_style_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Teangle3710_banner.jpg",
         "replo_stylesm_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Gemini_Generated_Image_m1yycgm1yycgm1yy.png",
