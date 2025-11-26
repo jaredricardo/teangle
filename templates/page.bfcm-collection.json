@@ -193,6 +193,12 @@
       "type": "replo-collection",
       "name": "collection (regular)",
       "settings": {}
+    },
+    "replo_post_bfcm_collection_eyeTrL": {
+      "type": "replo-post-bfcm-collection",
+      "disabled": true,
+      "name": "(post BFCM) collection",
+      "settings": {}
     }
   },
   "order": [
@@ -200,6 +206,7 @@
     "jr_hp_hero_9GTcXt",
     "jr_bfcm_hero_Hz8YKi",
     "jr_bfcm_collection_FaLMrP",
-    "replo_collection_xfRPmq"
+    "replo_collection_xfRPmq",
+    "replo_post_bfcm_collection_eyeTrL"
   ]
 }
