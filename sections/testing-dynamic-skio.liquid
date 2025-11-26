@@ -1,0 +1,2056 @@
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.bundle-builder {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid #e0e0e0;
+}
+
+/* Buybox Container */
+.bundle-buybox {
+    padding: 0;
+}
+
+/* Rating Section */
+.bundle-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.bundle-rating__stars {
+    display: flex;
+    gap: 2px;
+}
+
+.bundle-rating__star {
+    width: 18px;
+    height: 18px;
+}
+
+.bundle-rating__text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #323232;
+}
+
+/* Title Section */
+.bundle-title {
+    margin-bottom: 20px;
+}
+
+.bundle-title__heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e4845;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.bundle-title__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 8px;
+}
+
+/* Price Section */
+.bundle-price {
+    margin-bottom: 20px;
+}
+
+.bundle-price__display {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.bundle-price__current {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e4845;
+}
+
+.bundle-price__original {
+    font-size: 20px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Description Section */
+.bundle-description {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.bundle-description__text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #323232;
+}
+
+/* Progress Bar - New Design */
+.bundle-progress {
+    margin-bottom: 24px;
+    padding: 10px 20px 40px 20px;
+    background: #FFFBF7FF;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+}
+
+.bundle-progress__label {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e4845;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bundle-progress__track {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.bundle-progress__line {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    top: 40px;
+}
+
+.bundle-progress__line-fill {
+    height: 100%;
+    background: #1e4845;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.bundle-progress__stops {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2;
+}
+
+.bundle-progress__stop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.bundle-progress__stop-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #999;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bundle-progress__stop.active .bundle-progress__stop-circle {
+    border-color: #1e4845;
+    background: #1e4845;
+    color: white;
+}
+
+.bundle-progress__stop-name {
+    position: absolute;
+    top: -30px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e4845;
+    white-space: nowrap;
+}
+
+.bundle-progress__stop.active .bundle-progress__stop-name {
+    color: #1e4845;
+}
+
+.bundle-progress__stop-label {
+    position: absolute;
+    top: 50px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #666;
+    white-space: nowrap;
+}
+
+.bundle-progress__stop.active .bundle-progress__stop-label {
+    color: #1e4845;
+}
+
+.bundle-progress__stop-price {
+    position: absolute;
+    top: 65px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    white-space: nowrap;
+}
+
+.bundle-progress__stop.active .bundle-progress__stop-price {
+    color: #1e4845;
+    font-weight: 600;
+}
+
+.bundle-progress__badge {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e4845;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 3px 6px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.bundle-progress__badge--popular {
+    background: #1e4845;
+    color: white;
+}
+
+/* Product Grid - Stacked Layout */
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.product-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    background: #FFFBF7FF;
+    overflow: hidden;
+}
+
+.product-card.selected {
+    border-color: #1e4845;
+    background: #FFFBF7FF;
+}
+
+.product-card__image-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 120px;
+    align-self: stretch;
+    overflow: hidden;
+    background: #f5f5f5;
+    border-radius: 10px 0 0 10px;
+}
+
+.product-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1/1;
+}
+
+.product-card__content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.product-card__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-card__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #323232;
+    margin-bottom: 4px;
+}
+
+.product-card__description {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.product-card__controls {
+    flex-shrink: 0;
+    display: flex;
+    gap: 8px;
+    min-width: 120px;
+    justify-content: flex-end;
+}
+
+.quantity-selector {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #FFFBF7FF;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.product-card.selected .quantity-selector {
+    display: flex;
+}
+
+.product-card.selected .add-button {
+    display: none;
+}
+
+.quantity-button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #1e4845;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.quantity-button:hover:not(:disabled) {
+    background: #153634;
+}
+
+.quantity-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: #323232;
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button {
+    padding: 10px 20px;
+    background: #1e4845;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.add-button:hover {
+    background: #153634;
+}
+
+.add-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Free Gift Banner */
+.free-gift-banner {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #1e4845 0%, #2a6460 100%);
+    border-radius: 12px;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.free-gift-banner__content {
+    flex: 1;
+}
+
+.free-gift-banner__text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.free-gift-banner__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.free-gift-banner__image {
+    height: 120px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.free-gift-banner__value-badge {
+    background: #FFD93D;
+    color: #323232;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transform: rotate(5deg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    white-space: nowrap;
+}
+
+/* Purchase Type Selection */
+.purchase-type {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #FFFBF7FF;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    position: relative;
+}
+
+.purchase-type__label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #323232;
+    margin-bottom: 12px;
+}
+
+.purchase-type__options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.purchase-type__option-box {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.purchase-type__option-box.selected {
+    border-color: #1e4845;
+    background: white;
+}
+
+.purchase-type__option-box:hover {
+    border-color: #1e4845;
+}
+
+.purchase-type__option-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.purchase-type__option-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.purchase-type__option-box input[type="radio"] {
+    margin: 0;
+    accent-color: #1e4845;
+    cursor: pointer;
+}
+
+.purchase-type__option-content {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.purchase-type__option-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #323232;
+}
+
+.purchase-type__option-price {
+    font-size: 13px;
+    color: #1e4845;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.purchase-type__option-right {
+    flex-shrink: 0;
+}
+
+.purchase-type__select {
+    padding: 8px 12px;
+    border: 2px solid #1e4845;
+    border-radius: 6px;
+    font-size: 13px;
+    background: white;
+    cursor: pointer;
+    color: #323232;
+    min-width: 140px;
+}
+
+.purchase-type__select:focus {
+    outline: none;
+    border-color: #1e4845;
+}
+
+.purchase-type__benefits {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Hide benefits on one-time box since it has none */
+[js-onetime-box] .purchase-type__benefits {
+    display: none;
+}
+
+/* Remove margin, padding, and border-bottom from one-time purchase option header */
+[js-onetime-box] .purchase-type__option-header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+/* Add margin, padding, and border-bottom to subscription box header when selected */
+[js-subscription-box] .purchase-type__option-header {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.purchase-type__benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #323232;
+    font-weight: 600;
+}
+
+.purchase-type__benefit:last-child {
+    margin-bottom: 0;
+}
+
+.purchase-type__benefit-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+.purchase-type__benefit--no-check {
+    padding-left: 24px;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Savings Badge on Purchase Type Box */
+.purchase-type__savings-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2a6460;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 12px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Add to Cart Button */
+.cart-section {
+    padding: 0 32px 32px 32px;
+}
+
+.add-to-cart-button {
+    width: 100%;
+    padding: 18px;
+    background: #1e4845;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.add-to-cart-button:hover:not(:disabled) {
+    background: #153634;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 72, 69, 0.3);
+}
+
+.add-to-cart-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.add-to-cart-button__content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.add-to-cart-button__prices {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-to-cart-button__price {
+    font-size: 18px;
+}
+
+.add-to-cart-button__savings {
+    font-size: 14px;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.loading-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.bundle-progress__stop.active:after {
+    display: none;
+}
+
+.add-to-cart-button.loading .loading-spinner {
+    display: block;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .bundle-builder {
+        border-radius: 12px;
+    }
+
+    .bundle-buybox {
+        padding: 0;
+    }
+
+    .bundle-rating__star {
+        width: 16px;
+        height: 16px;
+    }
+
+    .bundle-rating__text {
+        font-size: 13px;
+    }
+
+    .bundle-title__heading {
+        font-size: 24px;
+    }
+
+    .bundle-title__subtitle {
+        font-size: 14px;
+    }
+
+    .bundle-price__current {
+        font-size: 24px;
+    }
+
+    .bundle-price__original {
+        font-size: 18px;
+    }
+
+    .bundle-description__text {
+        font-size: 13px;
+    }
+
+    .bundle-progress {
+        padding: 20px 5px 30px 5px;
+    }
+
+    .bundle-progress__track {
+        padding: 0 20px;
+    }
+    .bundle-progress__line {
+        left: 20px;
+        right: 20px;
+    }
+
+    .bundle-progress__stop-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .bundle-progress__stop-name {
+        font-size: 11px;
+        font-weight: 700;
+        top: -25px;
+    }
+
+    .bundle-progress__stop-label {
+        font-size: 9px;
+        font-weight: 600;
+        top: 45px;
+    }
+
+    .bundle-progress__stop-price {
+        font-size: 9px;
+        font-weight: 600;
+        top: 57px;
+    }
+
+    .bundle-progress__badge {
+        font-size: 8px;
+        padding: 2px 5px;
+        top: -20px;
+    }
+
+    .product-card {
+        padding: 0;
+    }
+
+    .product-card__image-wrapper {
+        width: 80px;
+    }
+
+    .product-card__content {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .product-card__title {
+        font-size: 14px;
+    }
+
+    .product-card__description {
+        font-size: 12px;
+    }
+
+    .product-card__controls {
+        min-width: 107px;
+    }
+
+    .quantity-button {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .quantity-input {
+        width: 20px;
+        font-size: 14px;
+    }
+
+    .add-button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .free-gift-banner {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .free-gift-banner__text {
+        font-size: 14px;
+    }
+
+    .free-gift-banner__right {
+        gap: 8px;
+    }
+
+    .free-gift-banner__image {
+        height: 90px;
+    }
+
+    .free-gift-banner__value-badge {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+
+    .purchase-type {
+        padding: 16px;
+    }
+
+    .purchase-type__label {
+        font-size: 14px;
+    }
+
+    .purchase-type__option-box {
+        padding: 12px;
+    }
+
+    .purchase-type__option-label {
+        font-size: 13px;
+    }
+
+    .purchase-type__option-price {
+        font-size: 12px;
+    }
+
+    .purchase-type__select {
+        padding: 6px 10px;
+        font-size: 12px;
+        min-width: 120px;
+    }
+
+    .purchase-type__benefit {
+        font-size: 12px;
+    }
+
+    .purchase-type__benefit-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .purchase-type__benefit--no-check {
+        padding-left: 22px;
+        font-size: 11px;
+    }
+
+    .purchase-type__option-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .purchase-type__option-right {
+        width: 100%;
+    }
+
+    .purchase-type__select {
+        width: 100%;
+    }
+
+    .cart-section {
+        padding: 0 20px 20px 20px;
+    }
+
+    .add-to-cart-button {
+        padding: 14px 12px;
+        font-size: 15px;
+    }
+
+    .add-to-cart-button__content {
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .add-to-cart-button__text {
+        white-space: nowrap;
+    }
+
+    .add-to-cart-button__price {
+        font-size: 15px;
+    }
+
+    .add-to-cart-button__savings {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bundle-buybox {
+        padding: 0;
+    }
+
+    .bundle-title__heading {
+        font-size: 22px;
+    }
+
+    .bundle-price__current {
+        font-size: 22px;
+    }
+
+    .bundle-price__original {
+        font-size: 16px;
+    }
+
+    .cart-section {
+        padding: 0 16px 16px 16px;
+    }
+
+    .add-to-cart-button {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+
+    .add-to-cart-button__price {
+        font-size: 14px;
+    }
+
+    .add-to-cart-button__savings {
+        font-size: 11px;
+    }
+}
+
+/* Language-based visibility */
+html[lang="en"] .lang-fr {
+    display: none !important;
+}
+
+html[lang="fr"] .lang-en {
+    display: none !important;
+}
+
+/* Default to English if no lang attribute */
+html:not([lang]) .lang-fr {
+    display: none !important;
+}
+</style>
+
+<bundle-builder class="bundle-builder">
+    <div class="bundle-buybox">
+        <!-- Rating -->
+        <div class="bundle-rating">
+            <div class="bundle-rating__stars">
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <svg class="bundle-rating__star" viewBox="0 0 24 24" fill="#FFD700" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+            </div>
+            <span class="bundle-rating__text">4.8 (2566)</span>
+        </div>
+
+        <!-- Title -->
+        <div class="bundle-title">
+            <h1 class="bundle-title__heading lang-en">Build Your Teangle Matcha Set</h1>
+            <h1 class="bundle-title__heading lang-fr">Créez Votre Ensemble Teangle Matcha</h1>
+            <p class="bundle-title__subtitle lang-en">Choose your flavours. Create your ritual. Save as you sip</p>
+            <p class="bundle-title__subtitle lang-fr">Choisissez vos saveurs. Créez votre rituel. Économisez en savourant.</p>
+        </div>
+
+        <!-- Price Display -->
+        <div class="bundle-price">
+            <div class="bundle-price__display">
+                <span class="bundle-price__current" js-total-discounted-price>$0.00</span>
+                <span class="bundle-price__original hidden" js-total-price>$0.00</span>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="bundle-description">
+            <p class="bundle-description__text lang-en">
+                Mix and match our bestselling matcha bags — Chai, Lemongrass Ginger, and Ceremonial — to craft the perfect set for your daily ritual. Whether you want something warm and cozy, fresh and zesty, or clean and classic, your perfect matcha routine starts here.
+            </p>
+            <p class="bundle-description__text lang-fr">
+                Personnalisez votre ensemble avec nos sacs matcha les plus populaires — Chaï, Citronnelle Gingembre et Cérémonial. Que vous aimiez les saveurs chaleureuses, les notes fraîches et vivifiantes ou le matcha pur et classique, votre rituel parfait commence ici.
+            </p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="bundle-progress">
+            <div class="bundle-progress__label lang-en">BUILD YOUR BUNDLE</div>
+            <div class="bundle-progress__label lang-fr">CRÉEZ VOTRE PANIER</div>
+            <div class="bundle-progress__track">
+                <div class="bundle-progress__line">
+                    <div class="bundle-progress__line-fill" js-progress-line-fill></div>
+                </div>
+                <div class="bundle-progress__stops" js-bundle-progress-bar>
+                    <!-- Progress stops will be injected here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid - Stacked Layout -->
+        <div class="product-grid" js-byob-product-bundle-grid>
+            <!-- Product cards will be injected here -->
+        </div>
+
+        <!-- Free Gift Banner -->
+        <div class="free-gift-banner">
+            <div class="free-gift-banner__content">
+                <div class="free-gift-banner__text lang-en">
+                    Free Shaker Cup with Your First Subscription!
+                </div>
+                <div class="free-gift-banner__text lang-fr">
+                    Shaker Gratuit avec Votre Premier Abonnement!
+                </div>
+            </div>
+            <div class="free-gift-banner__right">
+                <img src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/free-shaker-bottle_cc3618ca-1102-46b8-8933-5cff4cbee975.png?v=1764095984" alt="Free Shaker Bottle" class="free-gift-banner__image">
+                <div class="free-gift-banner__value-badge lang-en">
+                    $20 value
+                </div>
+                <div class="free-gift-banner__value-badge lang-fr">
+                    Valeur de 20$
+                </div>
+            </div>
+        </div>
+
+        <!-- Purchase Type Selection -->
+        <div class="purchase-type">
+            <div class="purchase-type__savings-badge" js-total-savings-badge>
+                <span class="lang-en">YOU ARE SAVING $0.00</span>
+                <span class="lang-fr">VOUS ÉCONOMISEZ 0,00$</span>
+            </div>
+            <div class="purchase-type__label lang-en">Purchase Type:</div>
+            <div class="purchase-type__label lang-fr">Type d'Achat:</div>
+            <div class="purchase-type__options">
+                <!-- Subscription Option -->
+                <div class="purchase-type__option-box selected" js-subscription-box>
+                    <div class="purchase-type__option-header" js-subscription-header>
+                        <div class="purchase-type__option-left">
+                            <input type="radio" name="purchase_type" value="subscription" js-skio-bundle-subscription checked>
+                            <div class="purchase-type__option-content">
+                                <span class="purchase-type__option-label lang-en" js-subscription-label-en>Subscribe & Save 20%</span>
+                                <span class="purchase-type__option-label lang-fr" js-subscription-label-fr>Abonnez-vous & Économisez 20%</span>
+                                <span class="purchase-type__option-price" js-subscription-price>$0.00/pack</span>
+                            </div>
+                        </div>
+                        <div class="purchase-type__option-right">
+                            <select class="purchase-type__select" js-custom-option-select js-byob-custom-option-select>
+                                <!-- Options will be injected here -->
+                            </select>
+                        </div>
+                    </div>
+                    <ul class="purchase-type__benefits">
+                        <li class="purchase-type__benefit">
+                            <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                            <span class="lang-en">FREE SHAKER CUP on your first order</span>
+                            <span class="lang-fr">SHAKER GRATUIT avec votre première commande</span>
+                        </li>
+                        <li class="purchase-type__benefit">
+                            <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                            <span class="lang-en">FREE SHIPPING on every order</span>
+                            <span class="lang-fr">LIVRAISON GRATUITE sur chaque commande</span>
+                        </li>
+                        <li class="purchase-type__benefit">
+                            <svg class="purchase-type__benefit-icon" viewBox="0 0 24 24" fill="#1e4845" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                            <span class="lang-en">Skip or pause anytime</span>
+                            <span class="lang-fr">Passez ou mettez en pause à tout moment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- One-time Option -->
+                <div class="purchase-type__option-box" js-onetime-box>
+                    <div class="purchase-type__option-header" js-onetime-header>
+                        <div class="purchase-type__option-left">
+                            <input type="radio" name="purchase_type" value="onetime" js-skio-bundle-onetime>
+                            <div class="purchase-type__option-content">
+                                <span class="purchase-type__option-label lang-en">One-time purchase</span>
+                                <span class="purchase-type__option-label lang-fr">Achat unique</span>
+                                <span class="purchase-type__option-price" js-onetime-price>$0.00/pack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add to Cart Section -->
+    <div class="cart-section">
+        <button class="add-to-cart-button" js-bundle-addToCart-btn disabled>
+            <div class="add-to-cart-button__content">
+                <span class="add-to-cart-button__text" js-bundle-button-text>Select 3 more items</span>
+                <div class="add-to-cart-button__prices hidden" js-bundle-prices>
+                    <span class="add-to-cart-button__price" js-bundle-button-price>$0.00</span>
+                    <span class="add-to-cart-button__savings hidden" js-bundle-button-savings>$0.00</span>
+                </div>
+            </div>
+            <div class="loading-spinner loading__spinner"></div>
+        </button>
+    </div>
+
+    <!-- Hidden data attributes -->
+    <div style="display: none;">
+        <div js-bundle-progress-bar-wrapper style="opacity: 0;"></div>
+        <div js-product-bundle-subscription-wrapper style="opacity: 0;"></div>
+    </div>
+</bundle-builder>
+
+<script>
+// Translation helper
+const translations = {
+    en: {
+        selectItems: 'Select {count} more {items}',
+        addToCart: 'Add Bundle to Cart',
+        item: 'item',
+        items: 'items',
+        pack: 'Pack',
+        ea: 'ea',
+        youAreSaving: 'YOU ARE SAVING ${amount}',
+        mostPopular: 'MOST POPULAR',
+        bestDeal: 'BEST DEAL',
+        delicious: 'Delicious and refreshing flavor',
+        add: 'ADD',
+        everyDays: 'Every {days} Days'
+    },
+    fr: {
+        selectItems: 'Sélectionnez {count} {items} de plus',
+        addToCart: 'Ajouter le Panier au Panier',
+        item: 'article',
+        items: 'articles',
+        pack: 'Paquet',
+        ea: 'ch',
+        youAreSaving: 'VOUS ÉCONOMISEZ {amount}$',
+        mostPopular: 'LE PLUS POPULAIRE',
+        bestDeal: 'MEILLEURE OFFRE',
+        delicious: 'Saveur délicieuse et rafraîchissante',
+        add: 'AJOUTER',
+        everyDays: 'Tous les {days} jours'
+    }
+};
+
+function getLang() {
+    return document.documentElement.getAttribute('lang') || 'en';
+}
+
+function translate(key, replacements = {}) {
+    const lang = getLang();
+    let text = translations[lang]?.[key] || translations['en'][key] || key;
+    
+    // Replace placeholders
+    Object.keys(replacements).forEach(placeholder => {
+        text = text.replace(`{${placeholder}}`, replacements[placeholder]);
+    });
+    
+    return text;
+}
+
+// Utility function to format price in cents to localized currency
+function formatPrice(priceInCents) {
+    const priceInDollars = priceInCents / 100;
+    const currencySymbol = window.Shopify?.currency?.active || '$';
+    return `${currencySymbol}${priceInDollars.toFixed(2)}`;
+}
+
+// Global variables for bundle data
+let bundleSizeInterval = [3, 4, 5];
+let bundleMinLimit = 3;
+let bundleMaxLimit = 5;
+let bundlePrices = {};
+
+// Subscription shaker variant ID to add
+const SUBSCRIPTION_SHAKER_VARIANT_ID = 42218766467154;
+
+class BundleBuilder extends HTMLElement {
+    constructor() {
+        super();
+        
+        // Selectors
+        this.productWrapperSelector = "[js-product-wrapper]";
+        this.addToSetBtn = "[js-ats-btn]";
+        this.incrementBtnSelector = "[js-quantity-increment]";
+        this.decrementBtnSelector = "[js-quantity-decrement]";
+        this.quantityInputSelector = "[js-quantity-input]";
+        
+        // DOM elements
+        this.addToCartBtn = this.querySelector("[js-bundle-addToCart-btn]");
+        this.buttonText = this.querySelector("[js-bundle-button-text]");
+        this.bundlePrices = this.querySelector("[js-bundle-prices]");
+        this.bundleButtonPrice = this.querySelector("[js-bundle-button-price]");
+        this.bundleButtonSavings = this.querySelector("[js-bundle-button-savings]");
+        this.sellingPlanSelect = this.querySelector("[js-custom-option-select]");
+        this.totalPrice = this.querySelectorAll("[js-total-price]");
+        this.totalDiscountedPrice = this.querySelectorAll("[js-total-discounted-price]");
+        this.progressLineFill = this.querySelector("[js-progress-line-fill]");
+        this.subscriptionPriceDisplay = this.querySelector("[js-subscription-price]");
+        this.onetimePriceDisplay = this.querySelector("[js-onetime-price]");
+        this.totalSavingsBadge = this.querySelector("[js-total-savings-badge]");
+        this.subscriptionLabelEn = this.querySelector("[js-subscription-label-en]");
+        this.subscriptionLabelFr = this.querySelector("[js-subscription-label-fr]");
+        
+        // Radio buttons and boxes
+        this.oneTimeRadio = this.querySelector("[js-skio-bundle-onetime]");
+        this.subscriptionRadio = this.querySelector("[js-skio-bundle-subscription]");
+        this.subscriptionBox = this.querySelector("[js-subscription-box]");
+        this.onetimeBox = this.querySelector("[js-onetime-box]");
+        this.subscriptionHeader = this.querySelector("[js-subscription-header]");
+        this.onetimeHeader = this.querySelector("[js-onetime-header]");
+        
+        // State
+        this.products = [];
+        this.sellingPlanId = this.sellingPlanSelect?.value || null;
+        this.sellingPlanName = null;
+        this.minLimit = 3;
+        this.maxLimit = 5;
+        
+        this.handleSubscriptionToggle();
+        this.initializeEventListeners();
+        
+        // Listen for bundle data initialization
+        document.addEventListener('bundlePrice:init', () => {
+            this.minLimit = bundleMinLimit;
+            this.maxLimit = bundleMaxLimit;
+            this.updateStatus();
+            this.updatePrice();
+            this.setInitialPrice();
+            this.updatePerPackPrices();
+        });
+    }
+    
+    setInitialPrice() {
+        // Set initial price for 3 items with subscription
+        if (bundlePrices[3]) {
+            const pricing = bundlePrices[3];
+            
+            this.totalPrice.forEach((price) => {
+                price.innerText = `$${pricing.subscription.originalPrice.toFixed(2)}`;
+                price.classList.remove("hidden");
+            });
+            
+            this.totalDiscountedPrice.forEach((discountPrice) => {
+                discountPrice.innerText = `$${pricing.subscription.discountedPrice.toFixed(2)}`;
+            });
+
+            // Set initial savings badge
+            const initialSavings = pricing.subscription.originalPrice - pricing.subscription.discountedPrice;
+            if (this.totalSavingsBadge) {
+                const lang = getLang();
+                if (lang === 'fr') {
+                    this.totalSavingsBadge.innerHTML = `<span class="lang-fr">VOUS ÉCONOMISEZ ${initialSavings.toFixed(2)}$</span>`;
+                } else {
+                    this.totalSavingsBadge.innerHTML = `<span class="lang-en">YOU ARE SAVING $${initialSavings.toFixed(2)}</span>`;
+                }
+            }
+        }
+    }
+
+    updatePerPackPrices() {
+        const totalItems = Math.max(this.products.length, this.minLimit);
+        const pricing = bundlePrices[totalItems];
+        
+        if (!pricing) return;
+
+        // Update subscription per pack price
+        if (this.subscriptionPriceDisplay) {
+            const subPerPack = pricing.subscription.discountedPrice / totalItems;
+            this.subscriptionPriceDisplay.textContent = `$${subPerPack.toFixed(2)}/pack`;
+        }
+
+        // Update one-time per pack price
+        if (this.onetimePriceDisplay) {
+            const oneTimePerPack = pricing.oneTime.discountedPrice / totalItems;
+            this.onetimePriceDisplay.textContent = `$${oneTimePerPack.toFixed(2)}/pack`;
+        }
+
+        // Update subscription label with dynamic percentage
+        this.updateSubscriptionLabel(totalItems);
+    }
+
+    updateSubscriptionLabel(totalItems) {
+        const size = Math.max(totalItems, this.minLimit);
+        const pricing = bundlePrices[size];
+        
+        if (!pricing) return;
+
+        // Calculate the actual percentage discount
+        const percentageOff = ((pricing.subscription.originalPrice - pricing.subscription.discountedPrice) / pricing.subscription.originalPrice * 100);
+        const roundedPercentage = Math.round(percentageOff);
+
+        // Update the labels
+        if (this.subscriptionLabelEn) {
+            this.subscriptionLabelEn.textContent = `Subscribe & Save ${roundedPercentage}%`;
+        }
+        if (this.subscriptionLabelFr) {
+            this.subscriptionLabelFr.textContent = `Abonnez-vous & Économisez ${roundedPercentage}%`;
+        }
+    }
+    
+    initializeEventListeners() {
+        // Click event listener
+        this.addEventListener("click", (event) => {
+            // Handle "Add to Set" button clicks
+            this.querySelectorAll(this.addToSetBtn).forEach((addToSet) => {
+                if (addToSet.contains(event.target)) {
+                    const parent = addToSet.closest(this.productWrapperSelector);
+                    parent.querySelector(this.quantityInputSelector).stepUp();
+                    parent.classList.add("selected");
+                    this.addProductToBox(parent);
+                    this.updatePrice();
+                }
+            });
+            
+            // Handle increment button clicks
+            this.querySelectorAll(this.incrementBtnSelector).forEach((incrementBtn) => {
+                if (incrementBtn.contains(event.target)) {
+                    const parent = incrementBtn.closest(this.productWrapperSelector);
+                    if (this.products.length < this.maxLimit) {
+                        parent.querySelector(this.quantityInputSelector).stepUp();
+                        this.addProductToBox(parent);
+                        this.updatePrice();
+                    }
+                }
+            });
+            
+            // Handle decrement button clicks
+            this.querySelectorAll(this.decrementBtnSelector).forEach((decrementBtn) => {
+                if (decrementBtn.contains(event.target)) {
+                    const parent = decrementBtn.closest(this.productWrapperSelector);
+                    const currentProductId = Number(parent.dataset.productId);
+                    const quantityField = parent.querySelector(this.quantityInputSelector);
+                    
+                    if (Number(quantityField.value) > 0) {
+                        quantityField.stepDown();
+                    }
+                    
+                    this.removeProductFromBox(currentProductId, parent);
+                    this.updatePrice();
+                }
+            });
+        });
+
+        // Handle clicks on option box headers
+        if (this.subscriptionHeader) {
+            this.subscriptionHeader.addEventListener("click", (e) => {
+                // Don't trigger if clicking on the select dropdown
+                if (!e.target.closest('.purchase-type__select')) {
+                    this.subscriptionRadio.checked = true;
+                    this.subscriptionRadio.dispatchEvent(new Event('change'));
+                }
+            });
+        }
+
+        // Make entire subscription box clickable
+        if (this.subscriptionBox) {
+            this.subscriptionBox.addEventListener("click", (e) => {
+                // Don't trigger if clicking on the select dropdown
+                if (!e.target.closest('.purchase-type__select')) {
+                    this.subscriptionRadio.checked = true;
+                    this.subscriptionRadio.dispatchEvent(new Event('change'));
+                }
+            });
+        }
+
+        if (this.onetimeHeader) {
+            this.onetimeHeader.addEventListener("click", () => {
+                this.oneTimeRadio.checked = true;
+                this.oneTimeRadio.dispatchEvent(new Event('change'));
+            });
+        }
+
+        // Make entire one-time box clickable
+        if (this.onetimeBox) {
+            this.onetimeBox.addEventListener("click", () => {
+                this.oneTimeRadio.checked = true;
+                this.oneTimeRadio.dispatchEvent(new Event('change'));
+            });
+        }
+        
+        // Selling plan change listener
+        if (this.sellingPlanSelect) {
+            this.sellingPlanSelect.addEventListener("change", (e) => {
+                this.sellingPlanId = e.currentTarget.value;
+                this.updatePrice();
+                
+                const selectedOption = e.target.options[e.target.selectedIndex];
+                this.sellingPlanName = selectedOption.getAttribute("data-plan-name");
+            });
+        }
+        
+        // Add to cart button listener
+        this.addToCartBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            this.addBundleToCart();
+        });
+    }
+    
+    async getCart() {
+        const response = await fetch(`/cart.json`);
+        const json = await response.json();
+        return json;
+    }
+    
+    async addBundleToCart() {
+        // Group products by variant ID and count quantities
+        const groupedProducts = {};
+        this.products.forEach(product => {
+            if (groupedProducts[product.id]) {
+                groupedProducts[product.id].quantity++;
+            } else {
+                groupedProducts[product.id] = { ...product, quantity: 1 };
+            }
+        });
+        
+        // Build cart items array according to Shopify format
+        const items = Object.values(groupedProducts).map(product => {
+            const item = {
+                id: product.id,
+                quantity: product.quantity
+            };
+            
+            // Add selling_plan if subscription is selected
+            if (this.subscriptionRadio?.checked && this.sellingPlanId) {
+                item.selling_plan = parseInt(this.sellingPlanId);
+            }
+            
+            // Add parent_id (Skio box ID) if available
+            if (window.skioDynamicBoxId) {
+                item.parent_id = parseInt(window.skioDynamicBoxId);
+            }
+            
+            return item;
+        });
+        
+        // Check if subscription is selected and add the subscription variant if needed
+        if (this.subscriptionRadio?.checked) {
+            try {
+                const cart = await this.getCart();
+                const hasSubscriptionVariant = cart.items.some(item => 
+                    item.variant_id === SUBSCRIPTION_SHAKER_VARIANT_ID
+                );
+                
+                if (!hasSubscriptionVariant) {
+                    items.push({
+                        id: SUBSCRIPTION_SHAKER_VARIANT_ID,
+                        quantity: 1
+                    });
+                }
+            } catch (error) {
+                console.error("Error checking cart:", error);
+            }
+        }
+        
+        const formData = {
+            items: items
+        };
+        
+        // Show loading state
+        this.addToCartBtn.classList.add("loading");
+        this.addToCartBtn.disabled = true;
+        
+        try {
+            const response = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+
+            window.setTimeout(() => {
+                window.Rebuy.SmartCart.show();
+            }, 1500);
+            
+            // Remove loading state
+            this.addToCartBtn.classList.remove("loading");
+            this.addToCartBtn.disabled = false;
+            
+        } catch (error) {
+            console.error('Error adding to cart:', error);
+            alert('There was an error adding items to cart. Please try again.');
+            
+            // Remove loading state
+            this.addToCartBtn.classList.remove("loading");
+            this.addToCartBtn.disabled = false;
+        }
+    }
+    
+    updatePrice() {
+        const totalItems = this.products.length;
+        
+        if (totalItems < this.minLimit) {
+            // Show default 3-pack pricing when no items selected
+            if (bundlePrices[3]) {
+                const pricing = bundlePrices[3];
+                
+                if (this.subscriptionRadio?.checked) {
+                    this.totalPrice.forEach((price) => {
+                        price.innerText = `$${pricing.subscription.originalPrice.toFixed(2)}`;
+                        price.classList.remove("hidden");
+                    });
+                    
+                    this.totalDiscountedPrice.forEach((discountPrice) => {
+                        discountPrice.innerText = `$${pricing.subscription.discountedPrice.toFixed(2)}`;
+                    });
+                } else {
+                    this.totalPrice.forEach((price) => {
+                        price.innerText = `$${pricing.oneTime.originalPrice.toFixed(2)}`;
+                        price.classList.remove("hidden");
+                    });
+                    
+                    this.totalDiscountedPrice.forEach((discountPrice) => {
+                        discountPrice.innerText = `$${pricing.oneTime.discountedPrice.toFixed(2)}`;
+                    });
+                }
+            }
+            this.updateProgressBar();
+            this.updatePerPackPrices();
+            return;
+        }
+        
+        const pricing = bundlePrices[totalItems];
+        if (!pricing) {
+            this.updateProgressBar();
+            this.updatePerPackPrices();
+            return;
+        }
+        
+        if (this.subscriptionRadio?.checked) {
+            this.totalPrice.forEach((price) => {
+                price.innerText = `$${pricing.subscription.originalPrice.toFixed(2)}`;
+                price.classList.remove("hidden");
+            });
+            
+            this.totalDiscountedPrice.forEach((discountPrice) => {
+                discountPrice.innerText = `$${pricing.subscription.discountedPrice.toFixed(2)}`;
+            });
+            
+            if (this.bundleButtonPrice) {
+                this.bundleButtonPrice.innerText = `$${pricing.subscription.discountedPrice.toFixed(2)}`;
+            }
+            
+            if (this.bundleButtonSavings) {
+                this.bundleButtonSavings.innerText = `$${pricing.subscription.originalPrice.toFixed(2)}`;
+                this.bundleButtonSavings.classList.remove("hidden");
+            }
+        } else {
+            this.totalPrice.forEach((price) => {
+                price.innerText = `$${pricing.oneTime.originalPrice.toFixed(2)}`;
+                price.classList.remove("hidden");
+            });
+            
+            this.totalDiscountedPrice.forEach((discountPrice) => {
+                discountPrice.innerText = `$${pricing.oneTime.discountedPrice.toFixed(2)}`;
+            });
+            
+            if (this.bundleButtonPrice) {
+                this.bundleButtonPrice.innerText = `$${pricing.oneTime.discountedPrice.toFixed(2)}`;
+            }
+            
+            if (this.bundleButtonSavings) {
+                this.bundleButtonSavings.innerText = `$${pricing.oneTime.originalPrice.toFixed(2)}`;
+                this.bundleButtonSavings.classList.remove("hidden");
+            }
+        }
+        
+        this.updateProgressBar();
+        this.updatePerPackPrices();
+        this.updateSavingsBadges();
+    }
+    
+    updateSavingsBadges() {
+        const totalItems = Math.max(this.products.length, this.minLimit);
+        const pricing = bundlePrices[totalItems];
+        
+        if (!pricing || !this.totalSavingsBadge) return;
+
+        // Calculate the actual dollar savings based on purchase type
+        let dollarSavings = 0;
+        
+        if (this.subscriptionRadio?.checked) {
+            dollarSavings = pricing.subscription.originalPrice - pricing.subscription.discountedPrice;
+        } else {
+            dollarSavings = pricing.oneTime.originalPrice - pricing.oneTime.discountedPrice;
+        }
+        
+        // Update the badge with dollar amount in both languages
+        const lang = getLang();
+        if (lang === 'fr') {
+            this.totalSavingsBadge.innerHTML = `<span class="lang-fr">VOUS ÉCONOMISEZ ${dollarSavings.toFixed(2)}$</span>`;
+        } else {
+            this.totalSavingsBadge.innerHTML = `<span class="lang-en">YOU ARE SAVING $${dollarSavings.toFixed(2)}</span>`;
+        }
+    }
+    
+    updateProgressBar() {
+        const totalItems = this.products.length;
+        
+        // Update progress stops
+        this.querySelectorAll("[js-progress-bar-stop]").forEach((stop) => {
+            const packSize = parseInt(stop.dataset.pack);
+            
+            if (totalItems >= packSize) {
+                stop.classList.add("active");
+            } else {
+                stop.classList.remove("active");
+            }
+        });
+        
+        // Update progress line fill
+        if (this.progressLineFill && bundleSizeInterval.length > 0) {
+            const minSize = bundleSizeInterval[0];
+            const maxSize = bundleSizeInterval[bundleSizeInterval.length - 1];
+            const range = maxSize - minSize;
+            
+            let percentage = 0;
+            if (totalItems >= maxSize) {
+                percentage = 100;
+            } else if (totalItems >= minSize) {
+                percentage = ((totalItems - minSize) / range) * 100;
+            }
+            
+            this.progressLineFill.style.width = `${percentage}%`;
+        }
+    }
+    
+    addProductToBox(parent) {
+        const imageUrl = parent.dataset.productImageUrl;
+        const variantId = Number(parent.dataset.variantId);
+        const productId = Number(parent.dataset.productId);
+        const title = parent.dataset.productTitle;
+        const price = Number(parent.dataset.productPrice);
+        const customPrice = Number(parent.dataset.productCustomPrice) || 0;
+        
+        this.products.push({
+            id: variantId,
+            productId,
+            imageUrl,
+            title,
+            price,
+            customPrice,
+            quantity: 1
+        });
+        
+        this.updateStatus();
+    }
+    
+    removeProductFromBox(id, parent) {
+        const otherProducts = this.products.filter((product) => product.productId !== id);
+        const currentProducts = this.products.filter((product) => product.productId === id);
+        
+        currentProducts.splice(0, 1);
+        
+        if (currentProducts.length === 0) {
+            parent.classList.remove("selected");
+        }
+        
+        this.products = [...currentProducts, ...otherProducts];
+        this.updateStatus();
+    }
+    
+    updateStatus() {
+        const totalItems = this.products.length;
+        const remaining = this.minLimit - totalItems;
+        
+        // Update increment buttons based on max limit
+        if (totalItems >= this.maxLimit) {
+            this.querySelectorAll(this.incrementBtnSelector).forEach((item) => item.disabled = true);
+            this.querySelectorAll(this.addToSetBtn).forEach((item) => item.disabled = true);
+        } else {
+            this.querySelectorAll(this.incrementBtnSelector).forEach((item) => item.disabled = false);
+            this.querySelectorAll(this.addToSetBtn).forEach((item) => item.disabled = false);
+        }
+        
+        // Update button text and state
+        if (totalItems >= this.minLimit) {
+            this.addToCartBtn.disabled = false;
+            this.buttonText.textContent = translate('addToCart');
+            this.bundlePrices.classList.remove("hidden");
+        } else {
+            this.addToCartBtn.disabled = true;
+            const itemWord = remaining === 1 ? translate('item') : translate('items');
+            this.buttonText.textContent = translate('selectItems', { count: remaining, items: itemWord });
+            this.bundlePrices.classList.add("hidden");
+        }
+    }
+
+    handleSubscriptionToggle() {
+        if (!this.oneTimeRadio || !this.subscriptionRadio || !this.subscriptionBox || !this.onetimeBox) {
+            return;
+        }
+        
+        const toggleVisibility = () => {
+            if (this.subscriptionRadio.checked) {
+                this.subscriptionBox.classList.add("selected");
+                this.onetimeBox.classList.remove("selected");
+            } else if (this.oneTimeRadio.checked) {
+                this.subscriptionBox.classList.remove("selected");
+                this.onetimeBox.classList.add("selected");
+            }
+            
+            this.updatePrice();
+        };
+        
+        toggleVisibility();
+        this.oneTimeRadio.addEventListener("change", toggleVisibility);
+        this.subscriptionRadio.addEventListener("change", toggleVisibility);
+    }
+}
+
+customElements.define("bundle-builder", BundleBuilder);
+
+// Bundle Data Initialization
+function initializeBundleData() {
+    // Get products from Shopify collection
+    const bundleItems = []
+    {% for product in settings.bfcm_2025_bundle_collection.products %}
+      bundleItems.push({{ product | json }})
+    {% endfor %}
+
+    if (!bundleItems || !bundleItems.length) {
+        console.error('No bundle products found');
+        return;
+    }
+
+    const bundleproductGrid = document.querySelector('[js-byob-product-bundle-grid]');
+    const bundleProgressBar = document.querySelector('[js-bundle-progress-bar]');
+    const bundleproductSubcriptionOptions = document.querySelector('[js-byob-custom-option-select]');
+    
+    if (bundleproductGrid) bundleproductGrid.innerHTML = '';
+    if (bundleProgressBar) bundleProgressBar.innerHTML = '';
+
+    // Set hardcoded limits
+    bundleMinLimit = 3;
+    bundleMaxLimit = 5;
+    bundleSizeInterval = [3, 4, 5];
+
+    // Get base product prices (in cents) - using first product as reference
+    // Use compare_at_price as the original price, fall back to price if not set
+    const baseOriginalPrice = bundleItems[0]?.compare_at_price || bundleItems[0]?.price || 2100;
+
+    
+    // Percentage-based discount structure
+    // These percentages are calculated from cart prices to ensure UI matches cart exactly. We need to find a way to load them dynamically in the future.
+    // Supa Easy is wher the discounts are defined
+    const discountStructure = {
+        3: {
+            oneTime: 3.14,    
+            subscription: 19.05
+        },
+        4: {    
+            oneTime: 19.05,   
+            subscription: 30.95  
+        },
+        5: {
+            oneTime: 23.81,   
+            subscription: 35.24  
+        }
+    };
+
+    // Calculate dynamic pricing based on product prices and discount percentages
+    const calculatePricing = (size) => {
+        const originalPrice = (baseOriginalPrice * size) / 100; // Convert cents to dollars
+        const oneTimeDiscount = discountStructure[size].oneTime / 100;
+        const subscriptionDiscount = discountStructure[size].subscription / 100;
+
+        return {
+            oneTime: {
+                originalPrice: originalPrice,
+                discountedPrice: originalPrice * (1 - oneTimeDiscount)
+            },
+            subscription: {
+                originalPrice: originalPrice,
+                discountedPrice: originalPrice * (1 - subscriptionDiscount)
+            }
+        };
+    };
+
+    // Build progress bar stops + price tiers
+    bundleSizeInterval.forEach((size, index) => {
+        // Pack names based on size
+        let packNameEn = '';
+        let packNameFr = '';
+        
+        if (size === 3) {
+            packNameEn = 'Starter Trio';
+            packNameFr = 'Trio découverte';
+        } else if (size === 4) {
+            packNameEn = 'Matcha lover';
+            packNameFr = 'Matcha lover';
+        } else if (size === 5) {
+            packNameEn = 'Family Plan';
+            packNameFr = 'Plan familial';
+        }
+        
+        // Calculate pricing dynamically
+        const pricing = calculatePricing(size);
+        const perUnitPrice = pricing.subscription.discountedPrice / size;
+        
+        const progressStopHtml = `
+            <div class="bundle-progress__stop" data-pack="${size}" js-progress-bar-stop data-index="${index}">
+                <div class="bundle-progress__stop-name lang-en">${packNameEn}</div>
+                <div class="bundle-progress__stop-name lang-fr">${packNameFr}</div>
+                <div class="bundle-progress__stop-circle">${size}</div>
+                <div class="bundle-progress__stop-label lang-en">${size} Pack</div>
+                <div class="bundle-progress__stop-label lang-fr">${size} Paquet</div>
+                <div class="bundle-progress__stop-price">$${perUnitPrice.toFixed(2)}/<span class="lang-en">ea</span><span class="lang-fr">ch</span></div>
+            </div>
+        `;
+        bundleProgressBar.insertAdjacentHTML('beforeend', progressStopHtml);
+
+        // Set the pricing
+        bundlePrices[size] = {
+            oneTime: {
+                originalPrice: pricing.oneTime.originalPrice,
+                discountedPrice: pricing.oneTime.discountedPrice,
+            },
+            subscription: {
+                originalPrice: pricing.subscription.originalPrice,
+                discountedPrice: pricing.subscription.discountedPrice,
+            }
+        };
+    });
+
+    // Render products in stacked format
+    bundleItems.forEach((product) => {
+        console.log(product)
+        if (!product) return;
+
+        const originalTitle = product.title;
+        const basePrice = product.price;
+        const variantId = product.variants[0].id;
+        const productId = product.id;
+        const imageUrl = product.featured_image.startsWith('//') ? 'https:' + product.featured_image : product.featured_image;
+
+        // Translation logic for product titles and descriptions
+        let titleEn = originalTitle;
+        let titleFr = originalTitle;
+        let descriptionEn = 'Delicious and refreshing flavor';
+        let descriptionFr = 'Saveur délicieuse et rafraîchissante';
+
+        // Ceremonial Matcha
+        if (originalTitle.includes('Ceremonial')) {
+            titleFr = 'Matcha Cérémonial';
+            descriptionEn = 'Smooth, vibrant, and pure. Perfect for lattes, morning rituals, and classic matcha lovers.';
+            descriptionFr = 'Doux, vibrant et pur. Parfait pour les lattés, les rituels du matin et les amateurs de matcha classique.';
+        }
+        // Ginger & Lemongrass Matcha
+        else if (originalTitle.includes('Ginger') || originalTitle.includes('Lemongrass')) {
+            titleFr = 'Matcha Citronnelle Gingembre';
+            descriptionEn = 'Light, fresh, and invigorating. Ideal for a wellness break or a brighter, more soothing flavor.';
+            descriptionFr = 'Léger, frais et revigorant. Idéal pour une pause bien-être ou une saveur plus lumineuse et apaisante.';
+        }
+        // Chai Matcha
+        else if (originalTitle.includes('Chai')) {
+            titleFr = 'Matcha Chaï';
+            descriptionEn = 'Warm, spicy, and comforting. A perfect blend for chai lovers and creamy latte fans.';
+            descriptionFr = 'Chaleureux, épicé et réconfortant. Un mélange parfait pour les amateurs de chaï et de lattés crémeux.';
+        }
+
+        const productHTML = `
+            <div class="product-card"
+                data-variant-id="${variantId}"
+                data-product-id="${productId}"
+                data-product-title="${originalTitle}"
+                data-product-image-url="${imageUrl}"
+                data-product-price="${basePrice}"
+                data-product-compare-price="${product.compare_at_price || ''}"
+                data-product-handle="${product.handle}"
+                js-product-wrapper
+            >
+                <div class="product-card__image-wrapper">
+                    <img src="${imageUrl}" alt="${titleEn}" class="product-card__image">
+                </div>
+                <div class="product-card__content">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title lang-en">${titleEn}</h3>
+                        <h3 class="product-card__title lang-fr">${titleFr}</h3>
+                        <p class="product-card__description lang-en">${descriptionEn}</p>
+                        <p class="product-card__description lang-fr">${descriptionFr}</p>
+                    </div>
+                    <div class="product-card__controls">
+                        <div class="quantity-selector">
+                            <button class="quantity-button" js-quantity-decrement>−</button>
+                            <input type="number" class="quantity-input" min="0" value="0" readonly js-quantity-input>
+                            <button class="quantity-button" js-quantity-increment>+</button>
+                        </div>
+                        <button class="add-button lang-en" js-ats-btn>ADD</button>
+                        <button class="add-button lang-fr" js-ats-btn>AJOUTER</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        bundleproductGrid.insertAdjacentHTML('beforeend', productHTML);
+    });
+
+    document.querySelector('[js-bundle-progress-bar-wrapper]').style.opacity = 1;
+
+    // Get selling plans from first product
+    const firstProduct = bundleItems[0];
+    const sellingPlanGroups = firstProduct.selling_plan_groups || [];
+    const sellingPlanGroup = sellingPlanGroups.find(group => group.app_id === 'SKIO') || sellingPlanGroups[0];
+
+    if (sellingPlanGroup && sellingPlanGroup.selling_plans) {
+        const sellingPlans = sellingPlanGroup.selling_plans;
+        
+        // Extract unique selling plans (deduplicate by name)
+        const uniquePlans = [];
+        const seenNames = new Set();
+        
+        sellingPlans.forEach(plan => {
+            if (!seenNames.has(plan.name)) {
+                seenNames.add(plan.name);
+                uniquePlans.push(plan);
+            }
+        });
+
+        // Sort plans by frequency (30, 45, 60)
+        const customOrderSubscriptionPlans = [];
+        uniquePlans.forEach(plan => {
+            if (plan.name === 'Every 30 Days') customOrderSubscriptionPlans[0] = plan;
+            if (plan.name === 'Every 45 Days') customOrderSubscriptionPlans[1] = plan;
+            if (plan.name === 'Every 60 Days') customOrderSubscriptionPlans[2] = plan;
+        });
+
+        // Auto-select "Every 30 Days" option
+        customOrderSubscriptionPlans.forEach((plan, index) => {
+            if (!plan) return;
+            
+            const isEvery30Days = plan.name === 'Every 30 Days';
+            
+            // Translate plan titles
+            let translatedTitleEn = plan.name;
+            let translatedTitleFr = plan.name;
+            
+            if (plan.name === 'Every 30 Days') {
+                translatedTitleFr = 'Tous les 30 jours';
+            } else if (plan.name === 'Every 45 Days') {
+                translatedTitleFr = 'Tous les 45 jours';
+            } else if (plan.name === 'Every 60 Days') {
+                translatedTitleFr = 'Tous les 60 jours';
+            }
+            
+            const lang = getLang();
+            const displayTitle = lang === 'fr' ? translatedTitleFr : translatedTitleEn;
+            
+            const subscriptionOption = `
+                <option data-plan-name="${plan.name}" value="${plan.id}" ${isEvery30Days ? 'selected' : ''}>
+                    ${displayTitle}
+                </option>
+            `;
+            bundleproductSubcriptionOptions.insertAdjacentHTML('beforeend', subscriptionOption);
+        });
+
+        // Set the initial selling plan ID for "Every 30 Days"
+        const every30DaysPlan = customOrderSubscriptionPlans.find(plan => plan?.name === 'Every 30 Days');
+        if (every30DaysPlan) {
+            const bundleBuilder = document.querySelector('bundle-builder');
+            if (bundleBuilder) {
+                bundleBuilder.sellingPlanId = every30DaysPlan.id;
+                bundleBuilder.sellingPlanName = every30DaysPlan.name;
+            }
+        }
+    }
+
+    document.querySelector('[js-product-bundle-subscription-wrapper]').style.opacity = 1;
+
+    document.dispatchEvent(new CustomEvent('bundlePrice:init'));
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeBundleData);
+} else {
+    initializeBundleData();
+}
+</script>
+
+{% schema %}
+{
+    "name": "JR Testing Dynamic SKIO",
+    "settings": [],
+    "presets": [
+        {
+            "name": "JR Testing Dynamic SKIO"
+        }
+    ]
+}
+{% endschema %}
+
+

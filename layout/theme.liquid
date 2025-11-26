@@ -18,10 +18,6 @@
 <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  console.log('//////////////////////////')
-  console.log({{ cart | json }})
-</script>
 
 <!--Gorgias Chat Widget Start-->
 <script id="gorgias-chat-widget-install-v3" 
@@ -62,6 +58,214 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
 </script>
 
 
+{% comment %} remember to add to theme.liquid {% endcomment %}
+<script>
+
+
+    document.addEventListener('rebuy:smartcart.ready', (e) => {
+      consolidateBundleItemsInSmartCart()
+    })
+
+    document.addEventListener('rebuy:cart.change', (event) => {
+      consolidateBundleItemsInSmartCart()
+    })
+
+    async function consolidateBundleItemsInSmartCart() {
+      console.log('//// CONSOLIDATE BUNDLE ITEMS IN SMART CART ////')
+      const smartCartUL = document.querySelector('ul[data-smartcart-items]')
+      const bundleProduct = {{ all_products[settings.bfcm_2025_bundle_product] | json }}
+      const bundleImage = bundleProduct.featured_image
+      const bundleProductLink = `/products/${bundleProduct.handle}`
+      const bundleFinalObject = {}
+
+      const bundleItems = []
+      const { items } = await getCart()
+
+      // this implies the cart was empty and the DOM just has not updated yet, so we must wait
+      if(items.length > 0 && !smartCartUL) {
+        
+        // Wait for smartCartUL to appear in the DOM
+        const maxAttempts = 200 // Maximum 5 seconds (200 * 25ms)
+        let attempts = 0
+        
+        while (!document.querySelector('ul[data-smartcart-items]') && attempts < maxAttempts) {
+          await new Promise(resolve => setTimeout(resolve, 25))
+          attempts++
+        }
+        
+        // Re-check if smartCartUL exists now
+        const foundSmartCartUL = document.querySelector('ul[data-smartcart-items]')
+        // return foundSmartCartUL ? consolidateBundleItemsInSmartCart() : null
+        if (foundSmartCartUL) {
+          console.log('SmartCart UL found after waiting attempts ' + attempts)
+          // Re-run the function now that the DOM is ready
+          return consolidateBundleItemsInSmartCart()
+        } else {
+          console.log('SmartCart UL still not found after waiting, aborting')
+          return
+        }
+      }
+
+      if (!smartCartUL) return
+
+      // clear previously added visual bundle items
+      document.querySelectorAll('.bundle-item--needs-removed-on-change').forEach(el => el.remove())
+     
+      {% for product in settings.bfcm_2025_bundle_collection.products %}
+        bundleItems.push({{ product | json }})
+      {% endfor %}
+
+      bundleItems.forEach((item) => {
+        const lineToRemove = smartCartUL.querySelectorAll(`li.product-${item.handle}`) || ''
+        if (!lineToRemove) return
+        lineToRemove.forEach(line => line.classList.add('hidden'))
+      })
+
+      const bundleProductIds = new Set(bundleItems.map(item => item.variants[0].id))
+
+      items.forEach((item) => {
+        // Check if this item is in the bundle collection
+        if (!bundleProductIds.has(item.id)) return
+
+        // Determine selling plan name
+        const sellingPlanName = item.selling_plan_allocation?.selling_plan?.name || ''
+
+        // Initialize selling plan object if it doesn't exist
+        if (!bundleFinalObject[sellingPlanName]) {
+          bundleFinalObject[sellingPlanName] = {}
+        }
+
+        // Check if this variant already exists in the selling plan
+        if (bundleFinalObject[sellingPlanName][item.variant_id]) {
+          // Add to existing variant - increment quantity and add line key
+          bundleFinalObject[sellingPlanName][item.variant_id].quantity += item.quantity
+          bundleFinalObject[sellingPlanName][item.variant_id].line_keys.push(item.key)
+        } else {
+          // Create new variant entry
+          bundleFinalObject[sellingPlanName][item.variant_id] = {
+            quantity: item.quantity,
+            full_price: item.original_price,
+            final_price: item.final_price,
+            title: item.product_title,
+            image: item.image,
+            line_keys: [item.key] // Store as array to handle multiple line items
+          }
+        }
+      })
+
+      // Iterate over each selling plan in bundleFinalObject
+      Object.entries(bundleFinalObject).forEach(([sellingPlanName, variants]) => {
+        // Calculate total prices for this selling plan
+        let totalFullPrice = 0
+        let totalFinalPrice = 0
+
+        // Build variant properties HTML and calculate totals
+        const variantPropertiesHTML = Object.entries(variants).map(([variantId, variantData]) => {
+          totalFullPrice += variantData.full_price * variantData.quantity
+          totalFinalPrice += variantData.final_price * variantData.quantity
+
+          return `<div class="rebuy-cart__flyout-item-property">
+            ${variantData.title} x ${variantData.quantity}
+          </div>`
+        }).join('')
+
+        // Format prices (divide by 100 since Shopify stores in cents)
+        const formattedFullPrice = (totalFullPrice / 100).toFixed(2)
+        const formattedFinalPrice = (totalFinalPrice / 100).toFixed(2)
+
+        // Create bundle data object for this selling plan
+        const bundleData = {
+          sellingPlanName: sellingPlanName,
+          variants: variants,
+          totalFullPrice: formattedFullPrice,
+          totalFinalPrice: formattedFinalPrice
+        }
+
+        const template = `
+          <li class="rebuy-cart__flyout-item bundle-item--needs-removed-on-change" data-bundle-info='${JSON.stringify(bundleData)}'>
+            <div class="rebuy-cart__flyout-item-media">
+              <a href="${bundleProductLink}" aria-label="View details for ${bundleProduct.title}">
+                <img src="${bundleImage}" alt="${bundleProduct.title}">
+              </a>
+            </div>
+            <div class="rebuy-cart__flyout-item-info" style="place-content: center;">
+              <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.25rem;">
+                <a role="heading" aria-level="5" href="${bundleProductLink}" class="rebuy-cart__flyout-item-product-title" style="margin-bottom: 0;">${bundleProduct.title}</a>
+                <rebuy-bundle-remove-button type="button" aria-label="Remove Bundle"><i aria-hidden="true" class="far fa-trash"></i></rebuy-bundle-remove-button>
+              </div>
+              <div class="rebuy-cart__flyout-item-properties">
+                ${variantPropertiesHTML}
+                <div class="rebuy-cart__flyout-item-property rebuy-cart__flyout-item-property--delivery-frequency" style="margin-top: 0.5rem; font-weight: 400; color: black; display: flex;">
+                  ${sellingPlanName}  <span class="rebuy-money sale" style="margin-left: auto;">$${formattedFinalPrice}</span> <span class="rebuy-money compare-at" style="margin-left: 0.25rem;">$${formattedFullPrice}</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        `
+        smartCartUL.insertAdjacentHTML('afterbegin', template)
+      })
+    }
+
+    getCart = async () => {
+      const response = await fetch(`/cart.json`)
+      const cart = await response.json()
+      return cart
+    }
+
+    // Custom element for bundle remove button
+    class RebuyBundleRemoveButton extends HTMLElement {
+      constructor() {
+        super()
+        this.addEventListener('click', this.handleClick.bind(this))
+      }
+
+      async handleClick(event) {
+        event.preventDefault()
+        event.stopPropagation()
+        
+        // Find the parent li element that contains the data-bundle-info
+        const bundleItem = this.closest('.bundle-item--needs-removed-on-change')
+        const icon = this.querySelector('i')
+        
+        if (bundleItem) {
+          const bundleData = JSON.parse(bundleItem.getAttribute('data-bundle-info'))
+          icon.classList = 'far fa-sync-alt fa-fast-spin'
+
+          // Build updates object with line keys set to 0 quantity (removes them)
+          const updates = {}
+          
+          Object.entries(bundleData.variants).forEach(([variantId, variantData]) => {
+            // Iterate through all line_keys for this variant (handles multiple cart lines)
+            variantData.line_keys.forEach(lineKey => {
+              updates[lineKey] = 0
+            })
+          })
+
+          try {
+            const response = await fetch(window.Shopify.routes.root + 'cart/update.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ updates })
+            })
+
+            const result = await response.json()
+            
+            // The cart will automatically refresh via rebuy:cart.change event
+          } catch (error) {
+            console.error('Error removing bundle items:', error)
+            // Reset icon on error
+            icon.classList = 'far fa-trash'
+          }
+        }
+      }
+    }
+
+    // Register the custom element
+    customElements.define('rebuy-bundle-remove-button', RebuyBundleRemoveButton)
+</script>
+
 
 {% if request.page_type == "product" and product.handle == "matcha-collagen" %}
   <style>
@@ -80,7 +284,9 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
 {% comment %} new font overrides {% endcomment %}
 <style>
 
-
+  .hidden {
+    display: none !important;
+  }
   body h1,
   body .product-header,
   body h2,
@@ -159,7 +365,6 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
 
   {% if template contains 'replo' %}
     <script type="module">
-      console.log('replo elevar loaded!')
       const settings = {};
       const config = (await import("https://shopify-gtm-suite.getelevar.com/configs/5df7fa303b72e7da3f48acea7d56d9542b8a05c6/config.js")).default;
       const scriptUrl = settings.proxyPath
@@ -427,7 +632,7 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
     });
   </script>
  <!-- Widget : Saint Jean -->
-<div data-rebuy-id="154725"></div>
+{% comment %}<div data-rebuy-id="154725"></div> {% endcomment %} 
 <!-- End Widget : Saint Jean -->
 
 </body>

@@ -382,3 +382,11 @@ RESPONSIVE
     font-size: 14px;
   }
 }
+
+rebuy-bundle-remove-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #999;
+}
