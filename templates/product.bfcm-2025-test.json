@@ -73,11 +73,17 @@
       "type": "replo-bundle-below-the-fold",
       "name": "Bundle Below the fold",
       "settings": {}
+    },
+    "replo_bundle_builder_above_fold_RNHWXn": {
+      "type": "replo-bundle-builder-above-fold",
+      "name": "Bundle Builder Above Fold",
+      "settings": {}
     }
   },
   "order": [
     "product-top",
     "testing_dynamic_skio_kLcReQ",
+    "replo_bundle_builder_above_fold_RNHWXn",
     "replo_bundle_below_the_fold_DzPtpj"
   ]
 }
