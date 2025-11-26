@@ -1065,9 +1065,9 @@ html:not([lang]) .lang-fr {
                         <div class="purchase-type__option-left">
                             <input type="radio" name="purchase_type" value="subscription" js-skio-bundle-subscription checked>
                             <div class="purchase-type__option-content">
-                                <span class="purchase-type__option-label lang-en" js-subscription-label-en>Subscribe & Save 20%</span>
-                                <span class="purchase-type__option-label lang-fr" js-subscription-label-fr>Abonnez-vous & Économisez 20%</span>
-                                <span class="purchase-type__option-price" js-subscription-price>$0.00/pack</span>
+                                <span class="purchase-type__option-label lang-en">Subscribe & Save</span>
+                                <span class="purchase-type__option-label lang-fr">Abonnez-vous & Économisez</span>
+                                <span class="purchase-type__option-price" js-subscription-price>$0.00</span>
                             </div>
                         </div>
                         <div class="purchase-type__option-right">
@@ -1228,8 +1228,6 @@ class BundleBuilder extends HTMLElement {
         this.subscriptionPriceDisplay = this.querySelector("[js-subscription-price]");
         this.onetimePriceDisplay = this.querySelector("[js-onetime-price]");
         this.totalSavingsBadge = this.querySelector("[js-total-savings-badge]");
-        this.subscriptionLabelEn = this.querySelector("[js-subscription-label-en]");
-        this.subscriptionLabelFr = this.querySelector("[js-subscription-label-fr]");
         
         // Radio buttons and boxes
         this.oneTimeRadio = this.querySelector("[js-skio-bundle-onetime]");
@@ -1293,38 +1291,14 @@ class BundleBuilder extends HTMLElement {
         
         if (!pricing) return;
 
-        // Update subscription per pack price
+        // Update subscription total price
         if (this.subscriptionPriceDisplay) {
-            const subPerPack = pricing.subscription.discountedPrice / totalItems;
-            this.subscriptionPriceDisplay.textContent = `$${subPerPack.toFixed(2)}/pack`;
+            this.subscriptionPriceDisplay.textContent = `$${pricing.subscription.discountedPrice.toFixed(2)}`;
         }
 
-        // Update one-time per pack price
+        // Update one-time total price
         if (this.onetimePriceDisplay) {
-            const oneTimePerPack = pricing.oneTime.discountedPrice / totalItems;
-            this.onetimePriceDisplay.textContent = `$${oneTimePerPack.toFixed(2)}/pack`;
-        }
-
-        // Update subscription label with dynamic percentage
-        this.updateSubscriptionLabel(totalItems);
-    }
-
-    updateSubscriptionLabel(totalItems) {
-        const size = Math.max(totalItems, this.minLimit);
-        const pricing = bundlePrices[size];
-        
-        if (!pricing) return;
-
-        // Calculate the actual percentage discount
-        const percentageOff = ((pricing.subscription.originalPrice - pricing.subscription.discountedPrice) / pricing.subscription.originalPrice * 100);
-        const roundedPercentage = Math.round(percentageOff);
-
-        // Update the labels
-        if (this.subscriptionLabelEn) {
-            this.subscriptionLabelEn.textContent = `Subscribe & Save ${roundedPercentage}%`;
-        }
-        if (this.subscriptionLabelFr) {
-            this.subscriptionLabelFr.textContent = `Abonnez-vous & Économisez ${roundedPercentage}%`;
+            this.onetimePriceDisplay.textContent = `$${pricing.oneTime.discountedPrice.toFixed(2)}`;
         }
     }
     
