@@ -9,6 +9,11 @@
  */
 {
   "sections": {
+    "replo_sm_lemongrass_ginger_pdp_FLbGXL": {
+      "type": "replo-sm-lemongrass-ginger-pdp",
+      "name": "SM-Lemongrass Ginger PDP",
+      "settings": {}
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -144,6 +149,7 @@
         "110fb42e-9eda-4e48-9571-53bdd2ce1281",
         "7fa25097-d507-4ed4-a780-dc52c525b9c2"
       ],
+      "disabled": true,
       "settings": {
         "sku_enable": false,
         "image_position": "left",
@@ -154,44 +160,6 @@
         "mobile_layout": "partial",
         "enable_video_looping": true,
         "product_video_style": "muted"
-      }
-    },
-    "eaa96b8d-56bb-4b5c-8fca-dde0879cc384": {
-      "type": "advanced-content",
-      "blocks": {
-        "template--14472967094354__eaa96b8d-56bb-4b5c-8fca-dde0879cc384-1683571077bd75f712-1": {
-          "type": "liquid",
-          "settings": {
-            "code": "{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} {% render 'ugc-marqueev1' %} \n \n{% else %}\n{% endif %}",
-            "width": "100%",
-            "alignment": "center"
-          }
-        },
-        "e1303077-15e0-4ed0-9660-735d2e924b4a": {
-          "type": "liquid",
-          "settings": {
-            "code": "{% render 'pblock-ingredientsv2' %} \n\n{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} \n\n{% render 'pblock-no-crash' %}\n{% render 'pblock-hassle-free' %}\n{% else %}\n{% endif %}",
-            "width": "100%",
-            "alignment": "center"
-          }
-        },
-        "16673e34-9d09-40c3-be1e-3070ff19cd77": {
-          "type": "liquid",
-          "settings": {
-            "code": "{% if product.metafields.product_fields.description_block1 == \"matcha_discover\" %}\n \n{% render 'pblock-iconstack-img' %}\n{% elsif product.metafields.product_fields.description_block1 == \"collagen_discover\" %}\n {% render 'pblock-discover-collagen' %}\n{% else %}\n{% if product.id == 4202159636562 or product.id == 4202158063698 or  product.id == 7014599917650 or product.id == 7014600998994 or product.id == 4202158751826 %} \n{% render 'pblock-us-vsthem' %}\n{% endif %}\n{% endif %}",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--14472967094354__eaa96b8d-56bb-4b5c-8fca-dde0879cc384-1683571077bd75f712-1",
-        "e1303077-15e0-4ed0-9660-735d2e924b4a",
-        "16673e34-9d09-40c3-be1e-3070ff19cd77"
-      ],
-      "settings": {
-        "full_width": true,
-        "space_around": false
       }
     },
     "sub": {
@@ -318,8 +286,8 @@
     }
   },
   "order": [
+    "replo_sm_lemongrass_ginger_pdp_FLbGXL",
     "main",
-    "eaa96b8d-56bb-4b5c-8fca-dde0879cc384",
     "sub",
     "164720475056b2cb28",
     "1642074017b7cdf51c",
