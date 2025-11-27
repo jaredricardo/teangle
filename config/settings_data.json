@@ -36,7 +36,6 @@
     "color_image_overlay_text_shadow": 20,
     "bfcm_2025_bundle_product": "build-your-bundle",
     "bfcm_2025_bundle_collection": "bfcm-2025-items",
-    "bfcm_2025_bundle_image": "shopify://shop_images/bundle-up-and-save.gif",
     "type_header_font_family": "roboto_n7",
     "type_header_spacing": "0",
     "type_header_base_size": 32,
@@ -92,6 +91,7 @@
     "bogo_ended": true,
     "bogo_ended_message_en": "⏰ PEPPERMINT BOGO HAS ENDED!",
     "bogo_ended_message_fr": "⏰  LA PROMOTION BOGO EST MAINETNAT TERMINÉE",
+    "bfcm_2025_bundle_image": "shopify://shop_images/bundle-up-and-save.gif",
     "checkout_logo_image": "shopify://shop_images/logo1.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
@@ -421,7 +421,7 @@
       "countdown-bar": {
         "type": "countdown-bar",
         "settings": {
-          "hide": true,
+          "hide": false,
           "content_max_width": 1200,
           "content_alignment": "center",
           "padding_y": 10,
@@ -649,7 +649,7 @@
           "p {font-weight: 700;}"
         ],
         "settings": {
-          "enable_banner": true,
+          "enable_banner": false,
           "message_fr": "Accès VIP Black Friday 🎁 → Je m’inscris!",
           "link_fr": "https://fr.teangle.ca/pages/black-friday-vip-2025",
           "message_en": "Black Friday VIPs get early access + a surprise gift 🎁 — Join now",
