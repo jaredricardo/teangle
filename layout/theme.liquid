@@ -79,7 +79,13 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
       const bundleFinalObject = {}
 
       const bundleItems = []
-      const { items } = await getCart()
+      const data = await getCart()
+
+      const items = data.items
+
+      console.log('????')
+      console.log(data)
+      
 
       // this implies the cart was empty and the DOM just has not updated yet, so we must wait
       if(items.length > 0 && !smartCartUL) {
@@ -153,6 +159,18 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
         }
       })
 
+      // Extract cart-level discount percentage
+      let cartLevelDiscountPercentage = 0
+      let cartLevelDiscountTitles = []
+      if (data.cart_level_discount_applications && data.cart_level_discount_applications.length > 0) {
+        data.cart_level_discount_applications.forEach(discount => {
+          if (discount.value_type === 'percentage') {
+            cartLevelDiscountPercentage += parseFloat(discount.value)
+            cartLevelDiscountTitles.push(discount.title)
+          }
+        })
+      }
+
       // Iterate over each selling plan in bundleFinalObject
       Object.entries(bundleFinalObject).forEach(([sellingPlanName, variants]) => {
         // Calculate total prices for this selling plan
@@ -169,9 +187,22 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
           </div>`
         }).join('')
 
+        // Apply cart-level discount to final price if applicable
+        if (cartLevelDiscountPercentage > 0) {
+          const discountMultiplier = (100 - cartLevelDiscountPercentage) / 100
+          totalFinalPrice = totalFinalPrice * discountMultiplier
+        }
+
         // Format prices (divide by 100 since Shopify stores in cents)
         const formattedFullPrice = (totalFullPrice / 100).toFixed(2)
         const formattedFinalPrice = (totalFinalPrice / 100).toFixed(2)
+
+        // Build cart-level discount HTML if applicable
+        const cartDiscountHTML = cartLevelDiscountTitles.length > 0 
+          ? `<div class="rebuy-cart__flyout-item-property" style="color: #1e4845; font-weight: 600; margin-top: 0.35rem;">
+              ${cartLevelDiscountTitles.join(', ')}
+            </div>`
+          : ''
 
         // Create bundle data object for this selling plan
         const bundleData = {
@@ -198,6 +229,7 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
                 <div class="rebuy-cart__flyout-item-property rebuy-cart__flyout-item-property--delivery-frequency" style="margin-top: 0.5rem; font-weight: 400; color: black; display: flex;">
                   ${sellingPlanName}  <span class="rebuy-money sale" style="margin-left: auto;">$${formattedFinalPrice}</span> <span class="rebuy-money compare-at" style="margin-left: 0.25rem;">$${formattedFullPrice}</span>
                 </div>
+                ${cartDiscountHTML}
               </div>
             </div>
           </li>
