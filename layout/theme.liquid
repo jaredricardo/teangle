@@ -14,7 +14,8 @@
 
 
  {% endif %}
- {% if request.path contains "" %}
+ {% if request.path contains "dynamic-box" %}
+  <style> .dyn_smalld { max-width: 780px;font-weight: 500; } </style>
   <script> 
     document.addEventListener('rebuy:cart.change', (event) => { 
       console.log('rebuy:cart.change event', event.detail); 
