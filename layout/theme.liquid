@@ -14,7 +14,59 @@
 
 
  {% endif %}
- <script>console.log("{{ request.path }}");</script>
+ {% if request.path contains "" %}
+  <script> 
+    document.addEventListener('rebuy:cart.change', (event) => { 
+      console.log('rebuy:cart.change event', event.detail); 
+    }); 
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const checkAndReplace = () => {
+    // 1. Check page language
+    const htmlEl = document.documentElement;
+    if (!htmlEl || htmlEl.lang !== 'fr') return;
+
+    // 2. Wait for Skio dynamic box content
+    const replaceSubheader = () => {
+      const subheader = document.querySelector('#skio-root h3[data-dynamic-box-subheader]');
+      if (!subheader) {
+        setTimeout(replaceSubheader, 300);
+        return;
+      }
+
+      // 3. Create new div with language-specific content
+      const div = document.createElement('div');
+      div.className = 'dyn_smalld';
+      
+      // Check language again (in case DOM changed)
+      const isFrench = document.documentElement.lang === 'fr';
+      if (isFrench) {
+        div.innerHTML = 'Personnalisez votre ensemble avec nos sacs matcha les plus populaires — Chaï, Citronnelle Gingembre et Cérémonial. Que vous aimiez les saveurs chaleureuses, les notes fraîches et vivifiantes ou le matcha pur et classique, votre rituel parfait commence ici.';
+      } else {
+        div.innerHTML = 'Mix and match our bestselling matcha bags — Chai, Lemongrass Ginger, and Ceremonial — to craft the perfect set for your daily ritual. Whether you want something warm and cozy, fresh and zesty, or clean and classic, your perfect matcha routine starts here.';
+      }
+      
+      // Copy data attribute
+      div.setAttribute('data-dynamic-box-subheader', '');
+
+      // 4. Replace the old h3 with new div
+      subheader.replaceWith(div);
+    };
+
+    replaceSubheader();
+  };
+
+  checkAndReplace();
+});
+
+
+  </script>
+
+ 
+
+
+ {% endif %}
+ 
   
   {% render 'skio-head' %}
 <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
