@@ -19,7 +19,39 @@
   <script> 
     document.addEventListener('rebuy:cart.change', (event) => { 
       console.log('rebuy:cart.change event', event.detail); 
-      console.log("cart changed");
+      //console.log("cart changed");
+
+      // Spit the JSON data to console
+  const cartData = event.detail;
+  console.log('Full cart JSON:', JSON.stringify(cartData, null, 2));
+  
+  // Check if any item has _dynamicBoxIndex property
+  const hasDynamicBox = cartData.items?.some(item => 
+    item.properties?._dynamicBoxIndex !== undefined
+  );
+  
+  if (hasDynamicBox) {
+    console.log('Dynamic Box item found! Adding companion product...');
+    
+    // Add the specific variant ID
+    const companionProduct = {
+      variant_id: 42218766467154,
+      quantity: 1
+    };
+    
+    // Trigger Rebuy add to cart
+    window.Rebuy?.cart.addItem(companionProduct)
+      .then(response => {
+        console.log('Companion product added:', response);
+      })
+      .catch(error => {
+        console.error('Failed to add companion product:', error);
+      });
+  } else {
+    console.log('No Dynamic Box items found in cart.');
+  }
+
+  
     }); 
 
     document.addEventListener('DOMContentLoaded', () => {
