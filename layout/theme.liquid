@@ -23,27 +23,30 @@
 
 
        async function addCompanionProduct() {
-          try {
-            const response = await fetch('/cart/add.js', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-              },
-              body: JSON.stringify({
-                id: 42218766467154,
-                quantity: 1 
-              })
-            });
-            
-            const result = await response.json();
-            console.log('✅ Variant added:', result);
-            return result;
-          } catch (error) {
-            console.error('❌ Failed to add variant:', error);
-            throw error;
-          }
-        }
+      try {
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            id: 42218766467154,
+            quantity: 1,
+            properties: {
+              '_added_by': 'dynamic_box_trigger'
+            }
+          })
+        });
+        
+        const result = await response.json();
+        console.log('✅ Variant added:', result);
+        return result;
+      } catch (error) {
+        console.error('❌ Failed to add variant:', error);
+        throw error;
+      }
+    }
 
 
       // Spit the JSON data to console
@@ -58,7 +61,20 @@
   if (hasDynamicBox) {
     console.log('Dynamic Box item found! Adding companion product...');
     
-    addCompanionProduct();
+    // Add the specific variant ID
+    const companionProduct = {
+      variant_id: 42218766467154,
+      quantity: 1
+    };
+    
+    // Trigger Rebuy add to cart
+    window.Rebuy?.cart.addItem(companionProduct)
+      .then(response => {
+        console.log('Companion product added:', response);
+      })
+      .catch(error => {
+        console.error('Failed to add companion product:', error);
+      });
   } else {
     console.log('No Dynamic Box items found in cart.');
   }
