@@ -6,9 +6,13 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
 <head>
   {{ locksmith_initializations }}
+  {% if product.id == 7506796249170 %}
+  <script> window.location.href = '/a/account/custom-tools/dynamic-box?product=7506796249170'; </script>
+ {% endif %}
   {% if product.metafields.custom.custom_redirect != blank %}
   <script> window.location.href = '{{ product.metafields.custom.custom_redirect }}'; </script>
  {% endif %}
+ 
   
   {% render 'skio-head' %}
 <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
