@@ -21,6 +21,34 @@
       console.log('rebuy:cart.change event', event.detail); 
        console.log("cart changed");
 
+
+       async function addCompanionProduct() {
+          try {
+            const response = await fetch('/cart/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                id: 42218766467154,
+                quantity: 1,
+                properties: {
+                  '_added_by': 'dynamic_box_trigger'
+                }
+              })
+            });
+            
+            const result = await response.json();
+            console.log('✅ Variant added:', result);
+            return result;
+          } catch (error) {
+            console.error('❌ Failed to add variant:', error);
+            throw error;
+          }
+        }
+
+
       // Spit the JSON data to console
   const cartData = event.detail.cart.cart;
   console.log('Full cart JSON:', JSON.stringify(cartData, null, 2));
@@ -33,20 +61,7 @@
   if (hasDynamicBox) {
     console.log('Dynamic Box item found! Adding companion product...');
     
-    // Add the specific variant ID
-    const companionProduct = {
-      variant_id: 42218766467154,
-      quantity: 1
-    };
-    
-    // Trigger Rebuy add to cart
-    window.Rebuy?.cart.addItem(companionProduct)
-      .then(response => {
-        console.log('Companion product added:', response);
-      })
-      .catch(error => {
-        console.error('Failed to add companion product:', error);
-      });
+    addCompanionProduct();
   } else {
     console.log('No Dynamic Box items found in cart.');
   }
