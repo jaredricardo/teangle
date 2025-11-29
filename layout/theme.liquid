@@ -19,7 +19,7 @@
   <script> 
     document.addEventListener('rebuy:cart.change', (event) => { 
       console.log('rebuy:cart.change event', event.detail); 
-      //console.log("cart changed");
+       console.log("cart changed");
 
       // Spit the JSON data to console
   const cartData = event.detail;
@@ -51,7 +51,7 @@
     console.log('No Dynamic Box items found in cart.');
   }
 
-  
+
     }); 
 
     document.addEventListener('DOMContentLoaded', () => {
