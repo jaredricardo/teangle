@@ -421,7 +421,7 @@
       "countdown-bar": {
         "type": "countdown-bar",
         "settings": {
-          "hide": false,
+          "hide": true,
           "content_max_width": 1200,
           "content_alignment": "center",
           "padding_y": 10,
