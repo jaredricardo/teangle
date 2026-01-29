@@ -368,11 +368,5 @@
         "gift_card_and_discount_label": "Only 1 code allowed"
       }
     }
-  },
-  "locksmith": {
-    "forms": {
-      "submit_button_text": "Continue",
-      "loading_text": "One moment..."
-    }
   }
 }
