@@ -316,6 +316,15 @@
       "name": "Homepage Products",
       "settings": {}
     },
+    "replo_homepage_our_mission_Gt8kbJ": {
+      "type": "replo-homepage-our-mission",
+      "name": "Homepage Our Mission",
+      "settings": {
+        "replo_text_1bccfeaa-cc38-42a3-831a-b56997a40976": "<p>Our Mission - Add Balance to Your Life! </p>",
+        "replo_text_a5317f83-ae11-45ae-b07c-d16b93ddabfa": "<p>Whether you're balancing work, kids, or both, our easy, feel-good rituals are here to support your energy, mood, and glow without complicating your routine.</p>",
+        "replo_text_ee7e65ef-b955-4305-82ac-aeb57a7167d6": "<p>-Phil, Founder</p>"
+      }
+    },
     "replo_homepage_4_reasons_gNJmNg": {
       "type": "replo-homepage-4-reasons",
       "name": "Homepage 4 Reasons",
@@ -634,6 +643,7 @@
     "replo_homepage_products_GaYppJ",
     "jr_columns_i7YrXX",
     "replo_homepage_products_hcAX7x",
+    "replo_homepage_our_mission_Gt8kbJ",
     "replo_homepage_4_reasons_gNJmNg",
     "9c3ab650-e9f8-40eb-b530-62b31a19c4c0",
     "1641763180ab99d00f",
