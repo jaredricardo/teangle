@@ -311,6 +311,29 @@
       "name": "Homepage Products",
       "settings": {}
     },
+    "replo_ama_bf_homepage_products_ngwki6": {
+      "type": "replo-ama-bf-homepage-products",
+      "name": "AMA BF Homepage Products",
+      "settings": {
+        "replo_text_ac7f6b93-2b95-42b0-885b-751b3dd4d443": "<p>Shop Best-Sellers for Energy, Glow &amp; Balance</p>",
+        "replo_text_4c9e1d4e-56cf-4eb6-b6ab-026c2260ca43": "<p>Best Seller</p>",
+        "replo_text_99200eef-c59a-44f3-8d9c-9c047fa7d196": "<p>Matcha Collagen</p>",
+        "replo_text_50224a6a-ad4d-4397-a108-1ed58e2c3f4d": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Chocolate, Vanilla or classic Original.</p>",
+        "replo_text_814cf46f-1fdb-463f-bb79-71c0e3d09086": "<p>Shop Now</p>",
+        "replo_text_dbd9824c-c9f6-4901-b79a-bda8219b3f1f": "<p>Build Your Matcha Bag Set</p>",
+        "replo_text_28819125-c88e-4447-ad32-da108d4728d9": "<p>Mix and match our healthy and delicious matcha blends.</p>",
+        "replo_text_1b105c6d-9fa8-48c3-8061-ab936ac9ddd2": "<p>Shop Now</p>",
+        "replo_text_4b71a636-4f14-43ec-b619-7daf4aa0595d": "<p><span>Zesty ginger, bright lemongrass, and feel-good focus.</span></p>",
+        "replo_text_69c5d3bb-6406-4c11-86c7-04a9ac9dc7da": "<p><span>Spiced chai meets matcha for cozy energy without the crash.</span></p>",
+        "replo_url_dc1283f4-cb7a-4719-a28d-4b45bdf3b367": "",
+        "replo_text_8b624b07-97b6-468a-9e93-3be82728ac63": "<p>Shop All</p>",
+        "replo_text_6f74d08a-d5c7-44a4-a4be-aa655d3a9718": "<p>VIP GIFT</p>",
+        "replo_text_cba19843-aa38-44a7-8e18-731e377aecf2": "<p>FREE Teangle Milk Frother</p>",
+        "replo_text_cefd66a5-0206-48e6-991a-2bf4ba271240": "<p>*Automatically added to cart</p>",
+        "replo_text_fca11323-df24-418d-a9a0-65405f2f5541": "<p>Shop Now</p>",
+        "replo_text_8c3611f0-8eb6-4c82-8d50-1f421b532ff2": "<p>Over 80,000 Five Star Reviews!</p>"
+      }
+    },
     "replo_homepage_our_mission_Gt8kbJ": {
       "type": "replo-homepage-our-mission",
       "name": "Homepage Our Mission",
@@ -637,6 +660,7 @@
     "replo_homepage_products_GaYppJ",
     "jr_columns_i7YrXX",
     "replo_homepage_products_hcAX7x",
+    "replo_ama_bf_homepage_products_ngwki6",
     "replo_homepage_our_mission_Gt8kbJ",
     "replo_homepage_4_reasons_gNJmNg",
     "9c3ab650-e9f8-40eb-b530-62b31a19c4c0",
