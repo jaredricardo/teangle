@@ -235,11 +235,6 @@
       "name": "Homepage Videowise",
       "settings": {}
     },
-    "replo_ama_bf_homepage_products_UdpChn": {
-      "type": "replo-ama-bf-homepage-products",
-      "name": "AMA BF Homepage Products",
-      "settings": {}
-    },
     "replo_homepage_products_GaYppJ": {
       "type": "replo-homepage-products",
       "disabled": true,
@@ -314,6 +309,11 @@
       "type": "replo-homepage-products",
       "disabled": true,
       "name": "Homepage Products",
+      "settings": {}
+    },
+    "replo_ama_bf_homepage_products_fWAE3q": {
+      "type": "replo-ama-bf-homepage-products",
+      "name": "AMA BF Homepage Products",
       "settings": {}
     },
     "replo_homepage_our_mission_Gt8kbJ": {
@@ -639,10 +639,10 @@
     "jr_hp_hero_L6V6WV",
     "scrolling_announcement_pCahRV",
     "replo_homepage_videowise_7pw3nJ",
-    "replo_ama_bf_homepage_products_UdpChn",
     "replo_homepage_products_GaYppJ",
     "jr_columns_i7YrXX",
     "replo_homepage_products_hcAX7x",
+    "replo_ama_bf_homepage_products_fWAE3q",
     "replo_homepage_our_mission_Gt8kbJ",
     "replo_homepage_4_reasons_gNJmNg",
     "9c3ab650-e9f8-40eb-b530-62b31a19c4c0",
