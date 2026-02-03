@@ -311,29 +311,6 @@
       "name": "Homepage Products",
       "settings": {}
     },
-    "replo_ama_bf_homepage_products_ngwki6": {
-      "type": "replo-ama-bf-homepage-products",
-      "name": "AMA BF Homepage Products",
-      "settings": {
-        "replo_text_ac7f6b93-2b95-42b0-885b-751b3dd4d443": "<p>Shop Best-Sellers for Energy, Glow &amp; Balance</p>",
-        "replo_text_4c9e1d4e-56cf-4eb6-b6ab-026c2260ca43": "<p>Best Seller</p>",
-        "replo_text_99200eef-c59a-44f3-8d9c-9c047fa7d196": "<p>Matcha Collagen</p>",
-        "replo_text_50224a6a-ad4d-4397-a108-1ed58e2c3f4d": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Chocolate, Vanilla or classic Original.</p>",
-        "replo_text_814cf46f-1fdb-463f-bb79-71c0e3d09086": "<p>Shop Now</p>",
-        "replo_text_dbd9824c-c9f6-4901-b79a-bda8219b3f1f": "<p>Build Your Matcha Bag Set</p>",
-        "replo_text_28819125-c88e-4447-ad32-da108d4728d9": "<p>Mix and match our healthy and delicious matcha blends.</p>",
-        "replo_text_1b105c6d-9fa8-48c3-8061-ab936ac9ddd2": "<p>Shop Now</p>",
-        "replo_text_4b71a636-4f14-43ec-b619-7daf4aa0595d": "<p><span>Zesty ginger, bright lemongrass, and feel-good focus.</span></p>",
-        "replo_text_69c5d3bb-6406-4c11-86c7-04a9ac9dc7da": "<p><span>Spiced chai meets matcha for cozy energy without the crash.</span></p>",
-        "replo_url_dc1283f4-cb7a-4719-a28d-4b45bdf3b367": "",
-        "replo_text_8b624b07-97b6-468a-9e93-3be82728ac63": "<p>Shop All</p>",
-        "replo_text_6f74d08a-d5c7-44a4-a4be-aa655d3a9718": "<p>VIP GIFT</p>",
-        "replo_text_cba19843-aa38-44a7-8e18-731e377aecf2": "<p>FREE Teangle Milk Frother</p>",
-        "replo_text_cefd66a5-0206-48e6-991a-2bf4ba271240": "<p>*Automatically added to cart</p>",
-        "replo_text_fca11323-df24-418d-a9a0-65405f2f5541": "<p>Shop Now</p>",
-        "replo_text_8c3611f0-8eb6-4c82-8d50-1f421b532ff2": "<p>Over 80,000 Five Star Reviews!</p>"
-      }
-    },
     "replo_homepage_our_mission_Gt8kbJ": {
       "type": "replo-homepage-our-mission",
       "name": "Homepage Our Mission",
@@ -341,6 +318,21 @@
         "replo_text_1bccfeaa-cc38-42a3-831a-b56997a40976": "<p>Our Mission - Add Balance to Your Life! </p>",
         "replo_text_a5317f83-ae11-45ae-b07c-d16b93ddabfa": "<p>Whether you're balancing work, kids, or both, our easy, feel-good rituals are here to support your energy, mood, and glow without complicating your routine.</p>",
         "replo_text_ee7e65ef-b955-4305-82ac-aeb57a7167d6": "<p>-Phil, Founder</p>"
+      }
+    },
+    "replo_homepage_4_reasons_MmMDTQ": {
+      "type": "replo-homepage-4-reasons",
+      "name": "Homepage 4 Reasons",
+      "settings": {
+        "replo_text_af82958b-994b-4270-9ba5-ad92ec429e54": "<p>4 Reasons You’ll Never Go Back to Coffee</p>",
+        "replo_text_f3178f64-c563-4e53-a5d7-87f87743aeb3": "<p>Better Than Coffee</p>",
+        "replo_text_6c9a9e5b-3cf2-4fa8-97f8-0e5eab6413ca": "<p>Ditch the jitters and crashes.</p><p>Teangle gives you calm, stable energy.</p>",
+        "replo_text_8055fb4d-4911-4593-a3bd-7bc53f8d8edf": "<p>Real Ingredients Only</p>",
+        "replo_text_844de26e-9dc6-48b5-ab4a-77bfd0843551": "<p>No junk. No fillers. Just natural, </p><p>feel-good fuel for your body.</p>",
+        "replo_text_c7f02648-ea50-4120-a279-b90fa8dfdd96": "<p>Built for Your Routine</p>",
+        "replo_text_17e3eec2-4b1b-4b93-88af-afbd0ea37f51": "<p>Easy to mix, easy to love - fits your</p><p> life, not the other way around.</p>",
+        "replo_text_ac3c3350-bdcc-4a81-9052-2578bfc54271": "<p>Canadian-Owned, Duh!</p>",
+        "replo_text_e2de1ad8-762b-4be7-beb4-05fe281c7a64": "<p>Proudly based in Canada with fast </p><p>and secure North American </p><p>shipping.</p>"
       }
     },
     "9c3ab650-e9f8-40eb-b530-62b31a19c4c0": {
@@ -655,8 +647,8 @@
     "replo_homepage_products_GaYppJ",
     "jr_columns_i7YrXX",
     "replo_homepage_products_hcAX7x",
-    "replo_ama_bf_homepage_products_ngwki6",
     "replo_homepage_our_mission_Gt8kbJ",
+    "replo_homepage_4_reasons_MmMDTQ",
     "9c3ab650-e9f8-40eb-b530-62b31a19c4c0",
     "1641763180ab99d00f",
     "0c582d46-3982-4a95-81b4-dc9d778d38ff",
