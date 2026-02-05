@@ -69,7 +69,7 @@
         "replo_text_0e54d10b-25de-4017-b348-325a4045b902": "<p>Hear What Canadians Say About Teangle 🇨🇦</p>"
       }
     },
-    "replo_s_p_hero_no_vanilla_ikbh6U": {
+    "replo_s_p_hero_no_vanilla_Twzpzq": {
       "type": "replo-s-p-hero-no-vanilla",
       "name": "s_p - Hero - no vanilla",
       "settings": {
@@ -499,7 +499,7 @@
   },
   "order": [
     "replo_s_p_hero_AHFzbD",
-    "replo_s_p_hero_no_vanilla_ikbh6U",
+    "replo_s_p_hero_no_vanilla_Twzpzq",
     "fullwidth_html_p66iPk",
     "main",
     "sub",
