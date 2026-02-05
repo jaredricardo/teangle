@@ -399,10 +399,12 @@
         "divider": false
       }
     },
-    "replo_s_p_ticker_Her7Mk": {
+    "replo_s_p_ticker_MrDDdg": {
       "type": "replo-s-p-ticker",
       "name": "s_p - Ticker",
-      "settings": {}
+      "settings": {
+        "replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24": "<p>Delicious Flavor</p>"
+      }
     },
     "replo_s_p_5_reasons_Jknga7": {
       "type": "replo-s-p-5-reasons",
@@ -481,7 +483,7 @@
     "collection-return",
     "product-recommendations",
     "f3da4c40-ccae-4ecd-baed-e3e29b2b286c",
-    "replo_s_p_ticker_Her7Mk",
+    "replo_s_p_ticker_MrDDdg",
     "replo_s_p_5_reasons_Jknga7",
     "replo_s_p_comparison_Mak4tt",
     "replo_s_p_videowise_K4Gx3V",
