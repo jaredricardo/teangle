@@ -69,10 +69,48 @@
         "replo_text_0e54d10b-25de-4017-b348-325a4045b902": "<p>Hear What Canadians Say About Teangle 🇨🇦</p>"
       }
     },
-    "replo_chocolate_collagen_buybox_J6t7zB": {
+    "replo_chocolate_collagen_buybox_7YPGBE": {
       "type": "replo-chocolate-collagen-buybox",
       "name": "Chocolate Collagen Buybox",
-      "settings": {}
+      "settings": {
+        "replo_text_9ba324d0-b8e4-4c64-91bb-22c10715a01e": "<p>Why You'll Love It</p>",
+        "replo_text_482f7683-7c67-4e94-99a6-4a9dd1debb66": "<p>Taste & Feel</p>",
+        "replo_text_9a81afaa-8fb3-4cdc-97c1-c5956c04c28c": "<p>How to Enjoy</p>",
+        "replo_text_688e7a0d-23e8-493a-ac18-8abc3eb98ab5": "<p>Is This For You?</p>",
+        "replo_text_39ecfbf1-0752-44ef-993b-90b36532c7d4": "<p>Ingredients & Quality</p>",
+        "replo_text_36f3457a-0f71-45d8-81a0-a98601f2992e": "<p>Chocolate Matcha Collagen</p>",
+        "replo_text_57de078a-d1f4-4300-9fc5-6bab1641c051": "<p>Matcha Energy Meets Beauty Collagen</p>",
+        "replo_text_ee4147b7-de6e-4ade-98d7-c46ca887ee14": "<p>Delicious matcha and chocolate flavour</p>",
+        "replo_text_3691314a-a308-4406-85c7-eaaf5bd5d5a0": "<p>Servings:</p>",
+        "replo_text_aff33981-e188-448c-a7ba-1e3127e239c1": "<p>servings</p>",
+        "replo_text_6e262922-0e48-4c7e-b41e-fb643e06cd45": "<p>1 Tub</p>",
+        "replo_text_7e058d65-0370-4af0-b42c-efffd8a1a909": "<p>SAVE</p>",
+        "replo_text_443dab93-af02-4ea3-bb48-b98593bd0e06": "<p>$6.80</p>",
+        "replo_text_e2984ba3-2499-401f-a5a1-fad4dc250287": "<p>$68.00</p>",
+        "replo_text_24a848ba-f1ee-4fdf-8514-6365c7b94417": "<p>$68.00</p>",
+        "replo_text_7d229e03-5be8-4d51-befe-fcc8bd30cb78": "<p>servings</p>",
+        "replo_text_57118cb6-b255-4bc2-b729-fcb96778dfa8": "<p>2 Tubs</p>",
+        "replo_text_cda3a6a0-20ef-4a7c-99db-f0e30e80ab6a": "<p>SAVE</p>",
+        "replo_text_09047436-53b3-46d2-bba7-3be4d81eb9b1": "<p>$13.60</p>",
+        "replo_text_d1ea7073-b321-4d50-95a2-1010d947d7e0": "<p>$13.60</p>",
+        "replo_text_3fb394a4-d2b0-451a-a950-43d7c9fd2b84": "<p>$122.40</p>",
+        "replo_text_132f3397-903b-4769-9111-1ef714d2c4e5": "<p>$122.40</p>",
+        "replo_text_19dac39d-ad38-413e-9f6d-089895911bdd": "<p>$136.00</p>",
+        "replo_text_fc42768c-2c57-4770-be86-78e88966174f": "<p>servings</p>",
+        "replo_text_a0780519-d7f4-45fe-b7c9-da00dba24b12": "<p>3 Tubs</p>",
+        "replo_text_c1ff8925-3dd2-443c-b332-712f913e0b04": "<p>SAVE</p>",
+        "replo_text_7fcf0371-451e-45b8-880b-b28c11f7571d": "<p>$30.60</p>",
+        "replo_text_0a4262ab-26e2-45b3-b550-8419e42032e3": "<p>$30.60</p>",
+        "replo_text_90ae5770-9852-477a-9b58-bda9d2168b71": "<p>$173.40</p>",
+        "replo_text_44de2341-ba7d-4dbf-a865-4ba8e7910372": "<p>$173.40</p>",
+        "replo_text_0f3ca1c0-3d6d-4869-85c2-162910471b2e": "<p>$204.00</p>",
+        "replo_text_6e4d7132-0510-4240-9d0d-0e4b45287a23": "<p>Why You'll Love It</p>",
+        "replo_text_8f10f1ff-159e-4e71-b24d-c50af1c88435": "<p>Taste & Feel</p>",
+        "replo_text_c4fc4ccc-d245-46d2-8658-aa3d824e2a2f": "<p>How to Enjoy</p>",
+        "replo_text_8d7e8cd9-f95b-4e8c-80ba-08be4eb4b3d8": "<p>Is This For You?</p>",
+        "replo_text_8258ed70-6895-47c1-9a38-6457f149c241": "<p>Ingredients & Quality</p>",
+        "replo_text_1793f7ce-2692-465f-8efa-23d7d9bdfab7": "<p>Hear What Canadians Say About Teangle 🇨🇦</p>"
+      }
     },
     "fullwidth_html_p66iPk": {
       "type": "fullwidth-html",
@@ -430,7 +468,7 @@
   },
   "order": [
     "replo_s_p_hero_AHFzbD",
-    "replo_chocolate_collagen_buybox_J6t7zB",
+    "replo_chocolate_collagen_buybox_7YPGBE",
     "fullwidth_html_p66iPk",
     "main",
     "sub",
