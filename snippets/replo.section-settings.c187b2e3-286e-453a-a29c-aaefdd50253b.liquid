@@ -1,5 +1,8 @@
 {%- comment -%}replo-liquid-chunk-begin{%- endcomment -%}
     <script id="replo-deps-section-settings" data-section-id="{{ section.id }}">{
-      
+      {%- assign replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24 = section.settings['replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24'] -%}
+    {%- capture default_replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24 -%}<p>Delicious Flavor</p>{%- endcapture -%}
+    {%- assign replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24 = replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24 | default: default_replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24 -%}
+    "replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24": {{ replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24 | json }}
     }</script>
   {%- comment -%}replo-liquid-chunk-end{%- endcomment -%}
