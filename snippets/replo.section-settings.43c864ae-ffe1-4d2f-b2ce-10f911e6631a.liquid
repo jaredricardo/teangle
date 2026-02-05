@@ -1,6 +1,9 @@
 {%- comment -%}replo-liquid-chunk-begin{%- endcomment -%}
     <script id="replo-deps-section-settings" data-section-id="{{ section.id }}">{
-      {%- assign replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236 = section.settings['replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236'] -%}
+      {%- assign replo_text_79877f04-cdfa-4eac-8eae-187e630b221d = section.settings['replo_text_79877f04-cdfa-4eac-8eae-187e630b221d'] -%}
+    {%- capture default_replo_text_79877f04-cdfa-4eac-8eae-187e630b221d -%}<p>Frequently Asked Questions</p>{%- endcapture -%}
+    {%- assign replo_text_79877f04-cdfa-4eac-8eae-187e630b221d = replo_text_79877f04-cdfa-4eac-8eae-187e630b221d | default: default_replo_text_79877f04-cdfa-4eac-8eae-187e630b221d -%}
+    "replo_text_79877f04-cdfa-4eac-8eae-187e630b221d": {{ replo_text_79877f04-cdfa-4eac-8eae-187e630b221d | json }}, {%- assign replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236 = section.settings['replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236'] -%}
     {%- capture default_replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236 -%}<p>Are you certified by a third party? ✅</p>{%- endcapture -%}
     {%- assign replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236 = replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236 | default: default_replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236 -%}
     "replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236": {{ replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236 | json }}, {%- assign replo_text_ae4de7b7-ad66-400c-a8f5-e62dd5cb3529 = section.settings['replo_text_ae4de7b7-ad66-400c-a8f5-e62dd5cb3529'] -%}
