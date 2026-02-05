@@ -69,11 +69,12 @@
         "replo_text_0e54d10b-25de-4017-b348-325a4045b902": "<p>Hear What Canadians Say About Teangle 🇨🇦</p>"
       }
     },
-    "replo_chocolate_collagen_buybox_7YPGBE": {
+    "replo_chocolate_collagen_buybox_Y94tUn": {
       "type": "replo-chocolate-collagen-buybox",
       "name": "Chocolate Collagen Buybox",
       "settings": {
-        "replo_text_9ba324d0-b8e4-4c64-91bb-22c10715a01e": "<p>Why You'll Love It</p>",
+        "replo_text_134f6ff4-868e-4b4e-afa3-e76b514c6a2a": "<p>\"I’ve convinced all of my friends to switch from coffee to Teangle matcha collagen.”</p>",
+        "replo_text_8f1864d4-53e1-4edd-a46b-26b45eab98e2": "<p>Why You'll Love It</p>",
         "replo_text_482f7683-7c67-4e94-99a6-4a9dd1debb66": "<p>Taste & Feel</p>",
         "replo_text_9a81afaa-8fb3-4cdc-97c1-c5956c04c28c": "<p>How to Enjoy</p>",
         "replo_text_688e7a0d-23e8-493a-ac18-8abc3eb98ab5": "<p>Is This For You?</p>",
@@ -468,7 +469,7 @@
   },
   "order": [
     "replo_s_p_hero_AHFzbD",
-    "replo_chocolate_collagen_buybox_7YPGBE",
+    "replo_chocolate_collagen_buybox_Y94tUn",
     "fullwidth_html_p66iPk",
     "main",
     "sub",
