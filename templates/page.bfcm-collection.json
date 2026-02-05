@@ -189,11 +189,6 @@
         "header_fr": "Notre mission chez Teangle c'est de t'offrir l'énergie positive pour t'aider à prioriser ton bien-être."
       }
     },
-    "replo_ama_bf_collection_JkXLFC": {
-      "type": "replo-ama-bf-collection",
-      "name": "AMA BF collection",
-      "settings": {}
-    },
     "replo_collection_xfRPmq": {
       "type": "replo-collection",
       "disabled": true,
@@ -212,7 +207,6 @@
     "jr_hp_hero_9GTcXt",
     "jr_bfcm_hero_Hz8YKi",
     "jr_bfcm_collection_FaLMrP",
-    "replo_ama_bf_collection_JkXLFC",
     "replo_collection_xfRPmq",
     "replo_post_bfcm_collection_eyeTrL"
   ]
