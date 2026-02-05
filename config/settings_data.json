@@ -289,6 +289,9 @@
               "show_footer_title": true,
               "title": "HOW CAN WE HELP?",
               "text": "<p>If you have questions, testimonials or suggestions to improve our products and services, feel free to contact us.</p>",
+              "call_contact": "<strong>Call Us:  </strong><a href=\"tel:8003166320\">800-316-6320</a>",
+              "email_contact": "<strong>Email Us: </strong><a href=\"mailto:info@teangle.com\">info@teangle.com</a>",
+              "fb_contact": "<strong>Chat on  fb: </strong><a href=\"https://m.me/teanglematcha\">@teanglematcha</a>",
               "container_width": 40
             }
           }
