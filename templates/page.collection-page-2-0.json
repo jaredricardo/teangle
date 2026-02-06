@@ -11,10 +11,58 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
+    },
+    "replo_collection_fYBxLE": {
+      "type": "replo-collection",
+      "name": "collection",
+      "settings": {
+        "replo_text_7a1731c8-82b2-4c28-a077-27516ff2945b": "<p>Shop All Matcha Blends for Energy, Glow & Balance</p>",
+        "replo_text_ce204156-5ac4-41bf-80ea-49fd039bc331": "<p> Shop All</p>",
+        "replo_text_e9897df3-ecf4-4758-99d8-fb50bf682b86": "<p>Matcha</p>",
+        "replo_text_81c3375b-88ad-4dda-ab33-f6f3feeb9e93": "<p>Bundles</p>",
+        "replo_text_a446ac34-56d9-4cb1-bf70-e037a9f01dcb": "<p>Accessories</p>",
+        "replo_text_d136c66e-11cf-4029-9203-9e1035a13e33": "<p>Matcha Collagen</p>",
+        "replo_text_0443c4a7-d195-420b-af7e-6653a52e474b": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Vanilla or classic Original.</p>",
+        "replo_text_c83e10bc-a44a-4dea-afa3-f83d1e4e2703": "<p>Shop Now</p>",
+        "replo_text_315def31-4914-4290-9966-093b57abd03f": "<p>Teangle Ceremonial Matcha</p>",
+        "replo_text_b6c1a881-6788-423a-9cb7-eba9e72eaa87": "<p>Skip the jitters, keep the focus. Pure Japanese ceremonial matcha for clean, all-day energy.</p>",
+        "replo_text_a032ad7d-1b88-4ded-91db-650b01963cd8": "<p>Shop Now</p>",
+        "replo_text_dd5ecd56-ada0-45b8-aabf-1803ee985bbf": "<p>Zesty ginger, bright lemongrass, and feel-good focus.</p>",
+        "replo_text_056f5dcd-0042-43e2-bedb-41bf21b35398": "<p>Spiced chai meets matcha for cozy energy without the crash.</p>",
+        "replo_text_51742872-5e67-4bd2-842c-44c364860c65": "<p>The ultimate starter kit - 3 blends, bottle, and spoon included.</p>",
+        "replo_text_b88b825d-66ba-4041-9d5c-07de8ae2ca29": "<p>All 4 flavours in one pack - because choosing one is impossible.</p>",
+        "replo_text_3beeb81b-c810-4375-922c-a8edfd989dd4": "<p>Three blends, three different ways to make your daily energy ritual.</p>",
+        "replo_text_ef9b7d72-3277-408b-9a80-224d06de4cd9": "<p>All 4 blends + bottle + spoon - it doesn’t get more matcha than this.</p>",
+        "replo_text_fd63f9bc-56ad-4167-966f-fb55bb3bb0cf": "<p>Matcha Collagen</p>",
+        "replo_text_2254773f-ed64-49c4-8d6c-f2edc7241384": "<p>Coconut-flavored matcha energy meets beauty collagen.</p>",
+        "replo_text_2fada9fa-5941-416b-96d2-6f88fea863ab": "<p>Shop Now</p>",
+        "replo_text_54bd93cc-7507-432a-9ef7-ea8c5426255d": "<p>Teangle Ceremonial Matcha</p>",
+        "replo_text_2efc3231-b428-4647-921a-64f27946e6e6": "<p>Traditional Japanese matcha for jitter-free mornings.</p>",
+        "replo_text_7664fc76-6d8c-49ab-8327-ac55e0a4c898": "<p>Shop Now</p>",
+        "replo_text_fabe49a2-bbc6-4452-9a3d-f849080ff748": "<p>Zesty ginger, bright lemongrass, and feel-good focus.</p>",
+        "replo_text_5a818417-db43-49a4-9df4-fb18626d85d3": "<p>Spiced chai meets matcha for cozy energy without the crash.</p>",
+        "replo_text_6ee393bd-83a1-443a-b95f-34e7296a47c1": "<p>The ultimate starter kit - 3 blends, bottle, and spoon included.</p>",
+        "replo_text_f59edbae-a895-4efc-8784-b9d040867c44": "<p>All 4 flavours in one pack - because choosing one is impossible.</p>",
+        "replo_text_c2eaa70a-4a46-4e04-ab9c-7f6403938e61": "<p>Three blends, three different ways to make your daily energy ritual.</p>",
+        "replo_text_f4dcb897-fbe1-4490-ae3b-b89117c5ba45": "<p>All 4 blends + bottle + spoon - it doesn’t get more matcha than this.</p>",
+        "replo_text_6e6ee4ec-30ae-4625-a62b-0494cad6b52a": "<p>Best Seller</p>",
+        "replo_text_093d5cfc-626f-4947-a356-08ba0ee53f37": "<p>Luxe Bottle</p>",
+        "replo_text_2d456abc-1889-48ef-ad0a-32bf66b10494": "<p>Shake your matcha in style with our dreamy gradient bottle.</p>",
+        "replo_text_05ffc40c-b3ef-43f1-970c-d26c5f5c4fc4": "<p>Shop Now</p>",
+        "replo_text_c341666f-299b-4dd0-ba9d-04136fdfd7f3": "<p>MatchaWaitingFor Mug</p>",
+        "replo_text_0d3b1037-1e22-45cb-a542-31e16872b7e6": "<p>Matcha mornings just got a whole lot cuter.</p>",
+        "replo_text_c3a48b4d-903b-42e3-bd72-f875a6aaa74f": "<p>Shop Now</p>",
+        "replo_text_0b5a55b6-2c76-4f83-8a7f-c608df5806aa": "<p>Teangle Matcha Bottle</p>",
+        "replo_text_0c446a30-51c8-48fb-b682-30e113b7ff6c": "<p>Quick, clean, and made to shake - matcha goes where you go.</p>",
+        "replo_text_2446bd8f-e6d2-4b31-86f2-22fa0720b2c3": "<p>Shop Now</p>",
+        "replo_text_257b7597-39ca-4ac7-8d4c-382b6e44c602": "<p>Why Over 100,000 Canadians Are Ditching Coffee for Teangle Matcha</p>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "replo_collection_fYBxLE"
   ]
 }
