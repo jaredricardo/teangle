@@ -42,7 +42,7 @@
         "replo_text_b43c7df5-0cad-4340-9968-f852adeabfac": "<p>Why Over 100,000 Canadians Are Ditching Coffee for Teangle Matcha</p>"
       }
     },
-    "replo_homepage_products_NCpjqq": {
+    "replo_homepage_products_6fQcWb": {
       "type": "replo-homepage-products",
       "name": "Homepage Products",
       "settings": {
@@ -79,14 +79,30 @@
     "replo_homepage_recipes_LixzKb": {
       "type": "replo-homepage-recipes",
       "name": "Homepage Recipes",
-      "settings": {}
+      "settings": {
+        "replo_text_ed1babde-fa5f-4f54-9eb3-8b230a0da930": "<p>Delicious &amp; Healthy Teangle Recipes</p>",
+        "replo_url_ceb49585-b42a-49c1-a329-03a1776324d2": "",
+        "replo_text_8e3a9cd7-bd9e-4c10-ab68-1e6c4fb5c5bb": "<p>Iced Chai Matcha Collagen Latte</p>",
+        "replo_url_349bbb57-b67b-4e6c-9c2c-88df2c519579": "",
+        "replo_text_31343a15-a6c8-4387-8fdb-d34737cc293d": "<p>VIEW RECIPE</p>",
+        "replo_url_44bf30d6-e532-42aa-a134-11cae3db9d60": "",
+        "replo_text_dff8b507-2057-4860-a30d-5a84f7638803": "<p>Matcha Mojito</p>",
+        "replo_url_d56b80cd-76ef-4336-b4a0-bd4025def412": "",
+        "replo_url_0721f092-ebc0-4050-ba6d-435cb2aff1a1": "",
+        "replo_text_590cfb4d-e896-4fbd-a114-462acebe765c": "<p>Matcha Collagen Latte</p>",
+        "replo_url_47ec452f-4cd8-4764-b5ab-f737243c5b41": "",
+        "replo_url_f4b81cbe-8fa6-4404-815c-4c0c000fb3a3": "",
+        "replo_text_754a77c0-6f8b-4221-a4fc-d4e519110990": "<p>Matcha Cinnamon Rolls</p>",
+        "replo_url_67854c26-d068-4820-9307-cd55391bf2af": "",
+        "replo_text_b9e471af-1db2-4ee1-9bee-0de666935655": "<p>View All Recipes</p>"
+      }
     }
   },
   "order": [
     "main",
     "replo_homepage_hero_XYYV88",
     "replo_homepage_videowise_3yNY4r",
-    "replo_homepage_products_NCpjqq",
+    "replo_homepage_products_6fQcWb",
     "replo_homepage_4_reasons_rfycHn",
     "replo_homepage_our_mission_Ghd9rE",
     "replo_homepage_recipes_LixzKb"
