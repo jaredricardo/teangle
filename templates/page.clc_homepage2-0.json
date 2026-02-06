@@ -19,7 +19,9 @@
       "name": "Homepage Hero",
       "settings": {
         "replo_text_b17c3ec1-db23-45bf-b51f-2c33ce55660f": "<p>Trusted by over 100,000 Canadians</p>",
-        "replo_text_126269c8-e0b2-4bee-b15b-ebdc25be2fb2": "<p>Replace your coffee with a delicious ritual that gives you steady, all-day energy and glowing skin, nails and hair.</p>",
+        "replo_text_1174e18d-6d98-43af-9cce-e46e2ee4d0d3": "<p>Matcha Energy Meets Beauty Collagen</p>",
+        "replo_text_26720868-e177-4f6f-874d-64893cd9d0bf": "<p>Replace your coffee with our delicious 2-in-1 formula for energy and beauty.</p>",
+        "replo_url_4deb05a2-8cc5-4e3f-b04e-26c08cdbb25a": "",
         "replo_text_22d96388-370b-4897-8d49-27d9fb890ec1": "<p>SHOP TEANGLE</p>",
         "replo_text_3e9937b7-66e2-44b1-b339-466be46b8f86": "<p>Delicious Flavor</p>",
         "replo_text_bc2ff150-9a8f-4102-a63f-bbcda005244b": "<p>Easy to Make</p>",
@@ -36,22 +38,43 @@
     "replo_homepage_videowise_3yNY4r": {
       "type": "replo-homepage-videowise",
       "name": "Homepage Videowise",
-      "settings": {}
+      "settings": {
+        "replo_text_b43c7df5-0cad-4340-9968-f852adeabfac": "<p>Why Over 100,000 Canadians Are Ditching Coffee for Teangle Matcha</p>"
+      }
     },
-    "replo_homepage_products_tJ7CrQ": {
+    "replo_homepage_products_NCpjqq": {
       "type": "replo-homepage-products",
       "name": "Homepage Products",
-      "settings": {}
+      "settings": {
+        "replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Vanilla or classic Original.</p>",
+        "replo_text_93a63e36-22d2-40e7-a499-fb8e36d3baa2": "<p>Skip the jitters, keep the focus. Pure Japanese ceremonial matcha for clean, all-day energy.</p>",
+        "replo_text_09e976a1-3160-4006-a633-bfcb23abb6fd": "<p>Zesty ginger, bright lemongrass, and feel-good focus.</p>",
+        "replo_text_c7f0a17d-54a4-48e1-af73-8e7b299f3a8c": "<p>Spiced chai meets matcha for cozy energy without the crash.</p>"
+      }
     },
     "replo_homepage_4_reasons_rfycHn": {
       "type": "replo-homepage-4-reasons",
       "name": "Homepage 4 Reasons",
-      "settings": {}
+      "settings": {
+        "replo_text_af82958b-994b-4270-9ba5-ad92ec429e54": "<p>4 Reasons You’ll Never Go Back to Coffee</p>",
+        "replo_text_f3178f64-c563-4e53-a5d7-87f87743aeb3": "<p>Better Than Coffee</p>",
+        "replo_text_6c9a9e5b-3cf2-4fa8-97f8-0e5eab6413ca": "<p>Ditch the jitters and crashes.</p><p>Teangle gives you calm, stable energy.</p>",
+        "replo_text_8055fb4d-4911-4593-a3bd-7bc53f8d8edf": "<p>Real Ingredients Only</p>",
+        "replo_text_844de26e-9dc6-48b5-ab4a-77bfd0843551": "<p>No junk. No fillers. Just natural, </p><p>feel-good fuel for your body.</p>",
+        "replo_text_c7f02648-ea50-4120-a279-b90fa8dfdd96": "<p>Built for Your Routine</p>",
+        "replo_text_17e3eec2-4b1b-4b93-88af-afbd0ea37f51": "<p>Easy to mix, easy to love - fits your</p><p> life, not the other way around.</p>",
+        "replo_text_ac3c3350-bdcc-4a81-9052-2578bfc54271": "<p>Canadian-Owned, Duh!</p>",
+        "replo_text_e2de1ad8-762b-4be7-beb4-05fe281c7a64": "<p>Proudly based in Canada with fast </p><p>and secure North American </p><p>shipping.</p>"
+      }
     },
     "replo_homepage_our_mission_Ghd9rE": {
       "type": "replo-homepage-our-mission",
       "name": "Homepage Our Mission",
-      "settings": {}
+      "settings": {
+        "replo_text_1bccfeaa-cc38-42a3-831a-b56997a40976": "<p>Our Mission - Add Balance to Your Life!&nbsp;</p>",
+        "replo_text_a5317f83-ae11-45ae-b07c-d16b93ddabfa": "<p>Whether you're balancing work, kids, or both, our easy, feel-good rituals are here to support your energy, mood, and glow without complicating your routine.</p>",
+        "replo_text_ee7e65ef-b955-4305-82ac-aeb57a7167d6": "<p>-Phil, Founder</p>"
+      }
     },
     "replo_homepage_recipes_LixzKb": {
       "type": "replo-homepage-recipes",
@@ -63,7 +86,7 @@
     "main",
     "replo_homepage_hero_XYYV88",
     "replo_homepage_videowise_3yNY4r",
-    "replo_homepage_products_tJ7CrQ",
+    "replo_homepage_products_NCpjqq",
     "replo_homepage_4_reasons_rfycHn",
     "replo_homepage_our_mission_Ghd9rE",
     "replo_homepage_recipes_LixzKb"
