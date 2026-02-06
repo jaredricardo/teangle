@@ -1,5 +1,8 @@
 {%- comment -%}replo-liquid-chunk-begin{%- endcomment -%}
     <script id="replo-deps-section-settings" data-section-id="{{ section.id }}">{
-      
+      {%- assign replo_text_b43c7df5-0cad-4340-9968-f852adeabfac = section.settings['replo_text_b43c7df5-0cad-4340-9968-f852adeabfac'] -%}
+    {%- capture default_replo_text_b43c7df5-0cad-4340-9968-f852adeabfac -%}<p>Why Over 100,000 Canadians Are Ditching Coffee for Teangle Matcha</p>{%- endcapture -%}
+    {%- assign replo_text_b43c7df5-0cad-4340-9968-f852adeabfac = replo_text_b43c7df5-0cad-4340-9968-f852adeabfac | default: default_replo_text_b43c7df5-0cad-4340-9968-f852adeabfac -%}
+    "replo_text_b43c7df5-0cad-4340-9968-f852adeabfac": {{ replo_text_b43c7df5-0cad-4340-9968-f852adeabfac | json }}
     }</script>
   {%- comment -%}replo-liquid-chunk-end{%- endcomment -%}
