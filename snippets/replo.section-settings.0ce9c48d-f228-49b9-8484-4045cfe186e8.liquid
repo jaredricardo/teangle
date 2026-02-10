@@ -1,6 +1,9 @@
 {%- comment -%}replo-liquid-chunk-begin{%- endcomment -%}
     <script id="replo-deps-section-settings" data-section-id="{{ section.id }}">{
-      {%- assign replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4 = section.settings['replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4'] -%}
+      {%- assign replo_text_f0cd998c-fade-41f3-a700-510c92626a73 = section.settings['replo_text_f0cd998c-fade-41f3-a700-510c92626a73'] -%}
+    {%- capture default_replo_text_f0cd998c-fade-41f3-a700-510c92626a73 -%}<p>Shop Best-Sellers for Energy, Glow & Balance</p>{%- endcapture -%}
+    {%- assign replo_text_f0cd998c-fade-41f3-a700-510c92626a73 = replo_text_f0cd998c-fade-41f3-a700-510c92626a73 | default: default_replo_text_f0cd998c-fade-41f3-a700-510c92626a73 -%}
+    "replo_text_f0cd998c-fade-41f3-a700-510c92626a73": {{ replo_text_f0cd998c-fade-41f3-a700-510c92626a73 | json }}, {%- assign replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4 = section.settings['replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4'] -%}
     {%- capture default_replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4 -%}<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Vanilla or classic Original.</p>{%- endcapture -%}
     {%- assign replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4 = replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4 | default: default_replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4 -%}
     "replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4": {{ replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4 | json }}, {%- assign replo_text_93a63e36-22d2-40e7-a499-fb8e36d3baa2 = section.settings['replo_text_93a63e36-22d2-40e7-a499-fb8e36d3baa2'] -%}
