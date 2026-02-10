@@ -1,6 +1,9 @@
 {%- comment -%}replo-liquid-chunk-begin{%- endcomment -%}
     <script id="replo-deps-section-settings" data-section-id="{{ section.id }}">{
-      {%- assign replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b = section.settings['replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b'] -%}
+      {%- assign replo_text_a854dceb-9305-490f-b049-e30c7f737979 = section.settings['replo_text_a854dceb-9305-490f-b049-e30c7f737979'] -%}
+    {%- capture default_replo_text_a854dceb-9305-490f-b049-e30c7f737979 -%}<p>Foire aux questions</p>{%- endcapture -%}
+    {%- assign replo_text_a854dceb-9305-490f-b049-e30c7f737979 = replo_text_a854dceb-9305-490f-b049-e30c7f737979 | default: default_replo_text_a854dceb-9305-490f-b049-e30c7f737979 -%}
+    "replo_text_a854dceb-9305-490f-b049-e30c7f737979": {{ replo_text_a854dceb-9305-490f-b049-e30c7f737979 | json }}, {%- assign replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b = section.settings['replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b'] -%}
     {%- capture default_replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b -%}<p>Quand puis-je m'attendre à voir des résultats ? 🤓</p>{%- endcapture -%}
     {%- assign replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b = replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b | default: default_replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b -%}
     "replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b": {{ replo_text_dcf5059b-7f9e-40d9-8340-c75871753e7b | json }}, {%- assign replo_text_2a1d4b64-d32d-4844-a564-6f148d43d228 = section.settings['replo_text_2a1d4b64-d32d-4844-a564-6f148d43d228'] -%}
