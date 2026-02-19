@@ -419,7 +419,9 @@
         "replo_text_0804a113-013c-4519-9d8a-3b55527738c9": "<p>Steady, All-Day Energy</p>",
         "replo_text_56667002-6d30-4d5a-aa9c-df1722fb4892": "<p>Organic ingredients</p>",
         "replo_text_b688689d-8fb7-46af-8a8d-041384ba0fe3": "<p>No Caffeine Crash</p>",
-        "replo_text_fb31f612-dc20-4667-ab0e-ba1b4bbc23af": "<p>Zero Sugar</p>"
+        "replo_text_fb31f612-dc20-4667-ab0e-ba1b4bbc23af": "<p>Zero Sugar</p>",
+        "replo_text_ee1c9043-63c8-45ec-bbe0-3209702e1d9f": "<p>Dairy-Free</p>",
+        "replo_text_7fe867ea-f586-4ad1-ad40-46d5098bf2a3": "<p>Gluten-free</p>"
       }
     },
     "replo_s_p_5_reasons_Jknga7": {
@@ -441,6 +443,13 @@
       "type": "replo-s-p-comparison",
       "name": "s_p - Comparison",
       "settings": {
+        "replo_text_e8e28339-19b2-4a60-9de0-9b2f44a777d9": "<p>Pure Marine Collagen</p>",
+        "replo_text_702645a7-33d7-45f5-9921-e1b901cec08a": "<p>Organic Ingredients</p>",
+        "replo_text_72badb8a-526c-4a93-b33e-95c4f4b0194d": "<p>High-Quality Matcha</p>",
+        "replo_text_6125058a-49cf-4a99-8943-e4826904481b": "<p>Naturally Low-Calorie</p>",
+        "replo_text_867925dd-b1d2-4b35-ade7-ce6749baca87": "<p>Sugar-Free & Additive-Free</p>",
+        "replo_text_324fe599-adc1-4df3-8987-8fde7a1e5e9a": "<p>Made in Canada</p>",
+        "replo_text_876a297a-6df3-47a8-9ee0-408c81d8d942": "<p>Loved for the Taste</p>",
         "replo_text_4cbd56dd-2e8f-4ca5-85a9-034258ee7c5c": "<p>Teangle Isn’t Just Better - It’s Built Different</p>",
         "replo_text_0b18eb12-5ea3-441c-a67f-9f3ff9a9cf3f": "<p>When it comes to ingredients, taste, and trust, Teangle stands out. We kept the good stuff (like organic matcha and marine collagen) and ditched the junk. Just check the chart, the difference is clear.</p>"
       }
