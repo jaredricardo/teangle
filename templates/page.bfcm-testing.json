@@ -140,6 +140,7 @@
         "82f36e33-f0da-4d51-a73f-5697bab8af14"
       ],
       "settings": {
+        "scroll_to_id": "",
         "make_gradient": true,
         "bg_1": "#fdca9e",
         "bg_2": "#f7eee3",
@@ -201,6 +202,7 @@
         "4cefebfb-ae75-4a82-b443-e3cc6e3c37a9"
       ],
       "settings": {
+        "scroll_to_id": "",
         "make_gradient": false,
         "bg_1": "#819427",
         "bg_2": "",
@@ -342,6 +344,7 @@
         "a14b56e2-a2df-4ec3-9c06-0cba9553a93f"
       ],
       "settings": {
+        "scroll_to_id": "",
         "make_gradient": true,
         "bg_1": "#eaffcd",
         "bg_2": "#caebed",
@@ -458,6 +461,7 @@
         "9d520e7e-8661-4a4a-9a54-bad21145cbaf"
       ],
       "settings": {
+        "scroll_to_id": "",
         "make_gradient": false,
         "bg_1": "#f7eee3",
         "bg_2": "",
