@@ -19,6 +19,7 @@
  	 
       	<div class="collection-mwrap small--hide">
           <h4> Quick Links </h4>
+          <h4> {{ section.settings.menu_title }} </h4>
           <ul class="no-bullets collection-menu">
             {%- for link in linklists[section.settings.collection_menu].links -%}
               <li><a href="{{ link.url }}">{{ link.title }}</a></li>
