@@ -81,7 +81,10 @@
         "replo_text_39ecfbf1-0752-44ef-993b-90b36532c7d4": "<p>Ingredients & Quality</p>",
         "replo_text_36f3457a-0f71-45d8-81a0-a98601f2992e": "<p>Chocolate Matcha Collagen</p>",
         "replo_text_57de078a-d1f4-4300-9fc5-6bab1641c051": "<p>Matcha Energy Meets Beauty Collagen</p>",
+        "replo_text_d79c7f2f-a3e7-4adb-9a96-fc544c5edd8b": "<p>More energy, focus with no jitters</p>",
         "replo_text_ee4147b7-de6e-4ade-98d7-c46ca887ee14": "<p>Delicious matcha and chocolate flavour</p>",
+        "replo_text_03e1ceff-77d1-46cb-a88f-337570175f2e": "<p>Super easy to mix with milk, water etc</p>",
+        "replo_text_4baecc5a-eb36-4988-a126-2c07030c060c": "<p>Glowing skin, hair & nails support</p>",
         "replo_text_3691314a-a308-4406-85c7-eaaf5bd5d5a0": "<p>Servings:</p>",
         "replo_text_aff33981-e188-448c-a7ba-1e3127e239c1": "<p>servings</p>",
         "replo_text_6e262922-0e48-4c7e-b41e-fb643e06cd45": "<p>1 Tub</p>",
@@ -403,20 +406,36 @@
       "type": "replo-s-p-ticker",
       "name": "s_p - Ticker",
       "settings": {
-        "replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24": "<p>Delicious Flavor</p>"
+        "replo_text_92100064-b9e8-4eb6-8cb7-5173c3d02a24": "<p>Delicious Flavor</p>",
+        "replo_text_abb93948-c591-4720-aeb1-a81d5ca89853": "<p>Easy to Make</p>",
+        "replo_text_0804a113-013c-4519-9d8a-3b55527738c9": "<p>Steady, All-Day Energy</p>",
+        "replo_text_56667002-6d30-4d5a-aa9c-df1722fb4892": "<p>Organic ingredients</p>",
+        "replo_text_b688689d-8fb7-46af-8a8d-041384ba0fe3": "<p>No Caffeine Crash</p>",
+        "replo_text_fb31f612-dc20-4667-ab0e-ba1b4bbc23af": "<p>Zero Sugar</p>"
       }
     },
     "replo_s_p_5_reasons_Jknga7": {
       "type": "replo-s-p-5-reasons",
       "name": "s_p - 5 Reasons",
       "settings": {
-        "replo_text_bc9c81ef-7d2b-4309-b6f1-967c72728bfd": ""
+        "replo_text_adc13c45-8229-495d-b3cd-c969ad8e109a": "<p>Why Over 150,000 Canadians Have Replaced Coffee With Teangle’s Delicious Matcha Collagen</p>",
+        "replo_text_7143f674-bfb4-4435-9062-0c3b84d36925": "<p>Smooth, Crash-Free Energy That Lasts for Hours</p>",
+        "replo_text_da4fc2a5-1de3-4bfa-87d1-fbdf686b2532": "<p>Say goodbye to jitters, anxiety, and that dreaded 2 PM crash. Teangle Matcha Collagen+ gives you smooth, long-lasting energy that keeps you feeling calm, focused, and balanced - without the rollercoaster of coffee or energy drinks.</p>",
+        "replo_text_79ce2bb7-7dac-4eb0-b205-04144363fa08": "<p>Beauty Collagen for Glowing Skin, Hair &amp; Nails</p>",
+        "replo_text_bbbc48d2-d49b-4df9-9e7c-f76d362b4024": "<p>Matcha’s great - but when you add 5g of pure marine collagen? You’re not just sipping for energy, you’re fueling smoother skin, stronger hair, and nails that don’t quit. One scoop a day = keeps the wrinkles and ageing away.</p>",
+        "replo_text_ea2fc6f8-1309-4751-85f6-b9d598c9040e": "<p>Easy to Make and Endless Ways to Enjoy</p>",
+        "replo_text_7cc67197-846f-4f0e-9eae-18ac418582bc": "<p>Hot water. Oat milk. In a smoothie. However you like it, Teangle blends smoothly, dissolves instantly, and fits your routine. Plus, you’ll get 101 Delicious Matcha Recipes, so you’ll never run out of tasty ideas.</p>",
+        "replo_text_0cb22297-5dc6-4b93-b1f9-94894afa1fed": "<p>Clean, Natural Ingredients You Can Feel Good About</p>",
+        "replo_text_3deb6093-9f2c-404a-bdff-c76249937baa": "<p>Every scoop is made with real, organic ingredients - no sugar, no weird fillers, no junk. Just ceremonial-grade matcha, marine collagen, coconut milk powder, and gut-loving acacia gum. That’s it.</p>"
       }
     },
     "replo_s_p_comparison_Mak4tt": {
       "type": "replo-s-p-comparison",
       "name": "s_p - Comparison",
-      "settings": {}
+      "settings": {
+        "replo_text_4cbd56dd-2e8f-4ca5-85a9-034258ee7c5c": "<p>Teangle Isn’t Just Better - It’s Built Different</p>",
+        "replo_text_0b18eb12-5ea3-441c-a67f-9f3ff9a9cf3f": "<p>When it comes to ingredients, taste, and trust, Teangle stands out. We kept the good stuff (like organic matcha and marine collagen) and ditched the junk. Just check the chart, the difference is clear.</p>"
+      }
     },
     "replo_s_p_videowise_K4Gx3V": {
       "type": "replo-s-p-videowise",
@@ -434,6 +453,8 @@
       "type": "replo-s-p-faq",
       "name": "s_p - FAQ",
       "settings": {
+        "replo_text_79877f04-cdfa-4eac-8eae-187e630b221d": "<p>Frequently Asked Questions</p>",
+        "replo_text_6ed6577c-5ef5-41f8-b952-e57fbe65d116": "<p>When can I expect to see results? 🤓</p>",
         "replo_text_d07360d1-b277-421d-a5a7-2f50cb4df236": "<p>Are you certified by a third party? ✅</p>",
         "replo_text_ae4de7b7-ad66-400c-a8f5-e62dd5cb3529": "<p>What does it taste like ? 🐥</p>",
         "replo_text_7e17e2f6-efa1-4a14-b87f-4ac057a63053": "<p>Best time to drink it? ⏰</p>",
