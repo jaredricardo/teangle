@@ -1,1 +1,45 @@
-{"sections":{"main":{"type":"article-template","settings":{"image_hero":false,"blog_show_tags":false,"blog_show_date":false,"blog_show_comments":false,"blog_show_author":false,"social_sharing_blog":true}},"blog-posts":{"type":"blog-posts","settings":{"title":"You may also like","blog":"matcha","post_limit":3,"blog_show_tags":false,"blog_show_date":false,"blog_show_comments":false,"blog_show_author":false,"view_all":false,"blog_image_size":"wide","divider":false}}},"order":["main","blog-posts"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "settings": {
+        "image_hero": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": true,
+        "share_blog": "Share Blog"
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "You may also like",
+        "hide_current": false,
+        "blog": "matcha",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": false,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "blog-posts"
+  ]
+}
