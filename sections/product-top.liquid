@@ -565,13 +565,13 @@ specific otp turn off for peppermint subscriptions
                     <div class="svg-container">
                       {% render 'icon-shipping' %}
                     </div>
-                    <div class="value-text">Free Shipping</div>
+                    <div class="value-text">{{ section.settings.free }}</div>
                   </div>
                   <div class="col">
                     <div class="svg-container">
                       {% render 'icon-cancel' %}
                     </div>
-                    <div class="value-text">Cancel Any Time</div>
+                    <div class="value-text">{{ section.settings.cancel }}</div>
                   </div>
                 </div>
               </div>
@@ -1108,6 +1108,18 @@ specific otp turn off for peppermint subscriptions
         "type": "text",
         "id": "simple_alt_solo_title",
         "label": "Solo Product Alt title"
+      },
+      {
+        "type": "text",
+        "id": "free",
+        "label": "Icon With Text 1",
+        "default" : "FREE SHIPPING"
+      }, 
+      {
+        "type": "text",
+        "id": "cancel",
+        "label": "Icon with text 2",
+        "default" : "CANCEL ANYTIME"
       },
       {
         "type": "product",
