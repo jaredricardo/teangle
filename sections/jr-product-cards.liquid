@@ -104,7 +104,7 @@
                                     {% if block.settings.enable_savings_callout %}
                                         {% if product.compare_at_price != product.price and product.compare_at_price != nil %}
                                             {% assign savings = product.compare_at_price | minus: product.price %}
-                                                <div class="value-prop">💰 You Save {{ savings | money }}</div>
+                                                <div class="value-prop">💰 {{ block.settings.you_save }} {{ savings | money }}</div>
                                         {% endif %}
                                     {% endif %}
                                     {% if block.settings.free_gift_text != blank %}
@@ -233,6 +233,12 @@
                     "type": "text",
                     "id": "product_subtitle",
                     "label": "Product Subtitle"
+                },
+                {
+                    "type": "text",
+                    "id" : "you_save",
+                    "label": "Text For Money Save",
+                    "default": "You Save"
                 },
                 {
                     "type": "checkbox",
