@@ -97,7 +97,7 @@
           <div class="article__author">by {{ article.author }}</div>
         {%- endif -%}
         <div class="odesktop">
-          {% include 'social-sharing-amais', share_title: article.title, share_permalink: article.url, share_image: article.image, %}
+          {% include 'social-sharing-amais', share_title: article.title, share_permalink: article.url, share_image: article.image, share_label: section.settings.share_blog%}
         </div>
       </header>
     {%- endunless -%}
