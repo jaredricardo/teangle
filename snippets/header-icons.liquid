@@ -49,10 +49,11 @@
 <div class="site-nav">
   <div class="site-nav__icons">
     <div class="header_lang small--hide">
-      <span class="ly-custom-1000"></span>
+      {% render 'lang-switch-native', location: 'header' %}
+      {% comment %} <span class="ly-custom-1000"></span>
       <div class="hidess" style="position: relative;top: 5px;overflow: hidden;max-width: 40px;display: inherit;">
         {% render 'custom-lang-switch-june2023' %}
-      </div>
+      </div> {% endcomment %}
     </div>
 
     {%- if shop.customer_accounts_enabled -%}
