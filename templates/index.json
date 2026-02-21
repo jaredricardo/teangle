@@ -233,13 +233,23 @@
       "type": "replo-homepage-videowise",
       "disabled": true,
       "name": "Homepage Videowise",
-      "settings": {}
+      "settings": {
+        "replo_text_b43c7df5-0cad-4340-9968-f852adeabfac": "<p>Why Over 100,000 Canadians Are Ditching Coffee for Teangle Matcha</p>"
+      }
     },
     "replo_homepage_products_GaYppJ": {
       "type": "replo-homepage-products",
       "disabled": true,
       "name": "Homepage Products",
-      "settings": {}
+      "settings": {
+        "replo_text_f0cd998c-fade-41f3-a700-510c92626a73": "<p>Shop Best-Sellers for Energy, Glow & Balance</p>",
+        "replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Vanilla or classic Original.</p>",
+        "replo_text_b75b7caa-4044-4eb6-a488-8920f5fcb3c6": "<p>Shop Now</p>",
+        "replo_text_93a63e36-22d2-40e7-a499-fb8e36d3baa2": "<p>Skip the jitters, keep the focus. Pure Japanese ceremonial matcha for clean, all-day energy.</p>",
+        "replo_text_114cbfc6-3a82-4655-aba2-a3cdc0f15210": "<p>Shop Now</p>",
+        "replo_text_09e976a1-3160-4006-a633-bfcb23abb6fd": "<p><span>Zesty ginger, bright lemongrass, and feel-good focus.</span></p>",
+        "replo_text_c7f0a17d-54a4-48e1-af73-8e7b299f3a8c": "<p><span>Spiced chai meets matcha for cozy energy without the crash.</span></p>"
+      }
     },
     "jr_columns_i7YrXX": {
       "type": "jr-columns",
@@ -309,13 +319,21 @@
       "type": "replo-homepage-products",
       "disabled": true,
       "name": "Homepage Products",
-      "settings": {}
+      "settings": {
+        "replo_text_f0cd998c-fade-41f3-a700-510c92626a73": "<p>Shop Best-Sellers for Energy, Glow & Balance</p>",
+        "replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Vanilla or classic Original.</p>",
+        "replo_text_b75b7caa-4044-4eb6-a488-8920f5fcb3c6": "<p>Shop Now</p>",
+        "replo_text_93a63e36-22d2-40e7-a499-fb8e36d3baa2": "<p>Skip the jitters, keep the focus. Pure Japanese ceremonial matcha for clean, all-day energy.</p>",
+        "replo_text_114cbfc6-3a82-4655-aba2-a3cdc0f15210": "<p>Shop Now</p>",
+        "replo_text_09e976a1-3160-4006-a633-bfcb23abb6fd": "<p><span>Zesty ginger, bright lemongrass, and feel-good focus.</span></p>",
+        "replo_text_c7f0a17d-54a4-48e1-af73-8e7b299f3a8c": "<p><span>Spiced chai meets matcha for cozy energy without the crash.</span></p>"
+      }
     },
     "replo_ama_bf_homepage_products_RHx9DE": {
       "type": "replo-ama-bf-homepage-products",
       "name": "AMA BF Homepage Products",
       "settings": {
-        "replo_text_ac7f6b93-2b95-42b0-885b-751b3dd4d443": "<p>Shop Best-Sellers for Energy, Glow &amp; Balance</p>",
+        "replo_text_ac7f6b93-2b95-42b0-885b-751b3dd4d443": "<p>Shop Best-Sellers for Energy, Glow & Balance</p>",
         "replo_text_4c9e1d4e-56cf-4eb6-b6ab-026c2260ca43": "<p>Best Seller</p>",
         "replo_text_99200eef-c59a-44f3-8d9c-9c047fa7d196": "<p>Matcha Collagen</p>",
         "replo_text_50224a6a-ad4d-4397-a108-1ed58e2c3f4d": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Chocolate, Vanilla or classic Original.</p>",
@@ -323,9 +341,9 @@
         "replo_text_dbd9824c-c9f6-4901-b79a-bda8219b3f1f": "<p>Build Your Matcha Bag Set</p>",
         "replo_text_28819125-c88e-4447-ad32-da108d4728d9": "<p>Mix and match our healthy and delicious matcha blends.</p>",
         "replo_text_1b105c6d-9fa8-48c3-8061-ab936ac9ddd2": "<p>Shop Now</p>",
-        "replo_text_4b71a636-4f14-43ec-b619-7daf4aa0595d": "<p><span>Zesty ginger, bright lemongrass, and feel-good focus.</span></p>",
-        "replo_text_69c5d3bb-6406-4c11-86c7-04a9ac9dc7da": "<p><span>Spiced chai meets matcha for cozy energy without the crash.</span></p>",
-        "replo_url_dc1283f4-cb7a-4719-a28d-4b45bdf3b367": "",
+        "replo_text_4b71a636-4f14-43ec-b619-7daf4aa0595d": "<p>Zesty ginger, bright lemongrass, and feel-good focus.</p>",
+        "replo_text_69c5d3bb-6406-4c11-86c7-04a9ac9dc7da": "<p>Spiced chai meets matcha for cozy energy without the crash.</p>",
+        "replo_url_dc1283f4-cb7a-4719-a28d-4b45bdf3b367": "shopify://pages/shop-teangle",
         "replo_text_8b624b07-97b6-468a-9e93-3be82728ac63": "<p>Shop All</p>",
         "replo_text_6f74d08a-d5c7-44a4-a4be-aa655d3a9718": "<p>VIP GIFT</p>",
         "replo_text_cba19843-aa38-44a7-8e18-731e377aecf2": "<p>FREE Teangle Milk Frother</p>",
