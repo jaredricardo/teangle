@@ -1,6 +1,6 @@
 {%- assign formId = 'localization_form' | append: location -%}
 {%- form 'localization', id: formId, class: 'multi-selectors', data-disclosure-form: '' -%}
-  <div class="multi-selectors__item">
+  <div class="multi-selectors__item {{ class }}">
     <h2 class="visually-hidden" id="LangHeading-{{ location }}">
       {{ 'general.language.dropdown_label' | t }}
     </h2>

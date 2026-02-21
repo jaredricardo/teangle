@@ -43,13 +43,14 @@
       position: absolute;
       right: 4rem;
     }
+    .multi-selectors__item.hide-mob{ display:none;}
   }
   #carttopr{ opacity: 1;}
 </style>
 
 <div class="site-nav">
   <div class="site-nav__icons" style="display:flex; align-items:center;">
-    {% render 'lang-switch-native', location: 'header' %}
+    {% render 'lang-switch-native', location: 'header', class: 'hide-mob' %}
     {% comment %} 
       <div class="header_lang small--hide">
         <span class="ly-custom-1000"></span>
