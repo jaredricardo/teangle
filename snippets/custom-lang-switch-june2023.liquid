@@ -2,7 +2,7 @@
 
   {% render 'lang-switch-native', location: 'header', class: 'hide-desk' %}
 
-  {% if request.locale.iso_code == 'en' %}
+  {% comment %} {% if request.locale.iso_code == 'en' %}
     <p style="margin-bottom: 0;">
       <a class="lang_fr" style="display: flex; column-gap: 0.5rem;">
         <svg
@@ -34,7 +34,7 @@
         <span class="small--show medium-up--hide">EN</span>
       </a>
     </p>
-  {% endif %}
+  {% endif %} {% endcomment %}
 </div>
 
 
