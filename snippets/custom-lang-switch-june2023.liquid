@@ -1,4 +1,7 @@
 <div class="custom-lang-switch" sss>
+
+  {% render 'lang-switch-native', location: 'header', class: 'hide-desk' %}
+
   {% if request.locale.iso_code == 'en' %}
     <p style="margin-bottom: 0;">
       <a class="lang_fr" style="display: flex; column-gap: 0.5rem;">
@@ -33,6 +36,8 @@
     </p>
   {% endif %}
 </div>
+
+
 <style>
   .ddjun23swt {
     position: relative;
