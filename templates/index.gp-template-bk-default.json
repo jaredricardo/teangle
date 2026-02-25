@@ -1,0 +1,704 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17627846576ce3662c": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f76f6c0_CEDBkj": {
+          "type": "ai_gen_block_f76f6c0",
+          "settings": {
+            "en_message": "Welcome to our store",
+            "en_link": "",
+            "fr_message": "Bienvenue dans notre boutique",
+            "fr_link": "",
+            "background_color": "#3b7d52",
+            "text_color": "#ffffff",
+            "font_size": 15,
+            "padding": 12
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f76f6c0_CEDBkj"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "replo_test_homepage_hero_7XDMhX": {
+      "type": "replo-test-homepage-hero",
+      "disabled": true,
+      "name": "(fixed) Homepage Hero",
+      "settings": {
+        "replo_text_e2704724-673b-44e9-90f3-fd7d33fbd8dd": "<p>Trusted by over 100,000 Canadians</p>",
+        "replo_text_0d6e77ae-a1dc-440c-a8a6-a5b0e2da2623": "<p>Matcha Energy Meets Beauty Collagen</p>",
+        "replo_text_3d5f86be-299b-4eb1-bca6-a589a77e5ca9": "<p>Replace your coffee with our delicious 2-in-1 formula for energy and beauty.</p>",
+        "replo_url_0bd98f1d-c323-4070-8f92-335129707a92": "/products/matcha-collagen-3",
+        "replo_text_e8e56f19-afdc-408b-9360-5a442276d58d": "<p>SHOP TEANGLE</p>",
+        "replo_text_ccede953-95a3-40fd-a491-a5b426025281": "<p>Delicious Flavor</p>",
+        "replo_text_75b31f32-3331-4ec5-94f3-e0f60d20a878": "<p>Easy to Make</p>",
+        "replo_text_61f2022b-41ae-43e9-80e2-66bcc08e341c": "<p>Steady, All-Day Energy</p>",
+        "replo_text_00043964-8621-4345-b21a-ed27d16edb64": "<p>Organic ingredients</p>",
+        "replo_text_324c997e-badf-414b-b5e3-19bedd3b1619": "<p>No Caffeine Crash</p>",
+        "replo_text_b499ea93-5571-40cf-887a-296649e41e03": "<p>Delicious Flavor</p>",
+        "replo_text_d817d844-52e9-4c74-80c8-e17ffb31756d": "<p>Easy to Make</p>",
+        "replo_text_f99c86bf-f4a9-4e85-944b-9e9aeb8b8b22": "<p>Steady, All-Day Energy</p>",
+        "replo_text_4fd530ce-7429-403d-b7cb-3e8bac4d95a8": "<p>Organic ingredients</p>",
+        "replo_text_e5070524-8b4d-4ef7-aa84-2d1498adea6f": "<p>No Caffeine Crash</p>"
+      }
+    },
+    "replo_test_homepage_hero_Nq8bRX": {
+      "type": "replo-test-homepage-hero",
+      "disabled": true,
+      "name": "(bfcm) Homepage Hero",
+      "settings": {
+        "replo_style_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Teangle3710_banner.jpg",
+        "replo_stylesm_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Gemini_Generated_Image_ng4c8wng4c8wng4c.png",
+        "replo_text_e2704724-673b-44e9-90f3-fd7d33fbd8dd": "<p>Trusted by over 100,000 Canadians</p>",
+        "replo_text_0d6e77ae-a1dc-440c-a8a6-a5b0e2da2623": "<p>New Matcha Chocolate Collagen</p>",
+        "replo_text_3d5f86be-299b-4eb1-bca6-a589a77e5ca9": "<p>Snag yours now- this sweet Black Friday treat won't stick around.</p>",
+        "replo_url_0bd98f1d-c323-4070-8f92-335129707a92": "/products/matcha-collagen-3",
+        "replo_text_e8e56f19-afdc-408b-9360-5a442276d58d": "<p>SHOP TEANGLE</p>",
+        "replo_text_ccede953-95a3-40fd-a491-a5b426025281": "<p>Delicious Flavor</p>",
+        "replo_text_75b31f32-3331-4ec5-94f3-e0f60d20a878": "<p>Easy to Make</p>",
+        "replo_text_61f2022b-41ae-43e9-80e2-66bcc08e341c": "<p>Steady, All-Day Energy</p>",
+        "replo_text_00043964-8621-4345-b21a-ed27d16edb64": "<p>Organic ingredients</p>",
+        "replo_text_324c997e-badf-414b-b5e3-19bedd3b1619": "<p>No Caffeine Crash</p>",
+        "replo_text_b499ea93-5571-40cf-887a-296649e41e03": "<p>Delicious Flavor</p>",
+        "replo_text_d817d844-52e9-4c74-80c8-e17ffb31756d": "<p>Easy to Make</p>",
+        "replo_text_f99c86bf-f4a9-4e85-944b-9e9aeb8b8b22": "<p>Steady, All-Day Energy</p>",
+        "replo_text_4fd530ce-7429-403d-b7cb-3e8bac4d95a8": "<p>Organic ingredients</p>",
+        "replo_text_e5070524-8b4d-4ef7-aa84-2d1498adea6f": "<p>No Caffeine Crash</p>"
+      }
+    },
+    "replo_test_homepage_hero_LTgxRG": {
+      "type": "replo-test-homepage-hero",
+      "name": "(bfcm) Homepage Hero",
+      "settings": {
+        "replo_style_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Teangle3710_banner.jpg",
+        "replo_stylesm_image_650b1048-23b5-41cf-b5b7-2c2d35cb23f4": "shopify://shop_images/Teangle3929.jpg",
+        "replo_text_e2704724-673b-44e9-90f3-fd7d33fbd8dd": "<p>Loved by over 150,000 Canadians</p>",
+        "replo_text_0d6e77ae-a1dc-440c-a8a6-a5b0e2da2623": "<p>Matcha that doesn't taste like grass</p>",
+        "replo_text_3d5f86be-299b-4eb1-bca6-a589a77e5ca9": "<p>Delicious daily energy you can feel — in 30 seconds.</p>",
+        "replo_url_0bd98f1d-c323-4070-8f92-335129707a92": "shopify://pages/shop-teangle",
+        "replo_text_e8e56f19-afdc-408b-9360-5a442276d58d": "<p>SHOP TEANGLE</p>",
+        "replo_text_ccede953-95a3-40fd-a491-a5b426025281": "<p>Delicious Flavor</p>",
+        "replo_text_75b31f32-3331-4ec5-94f3-e0f60d20a878": "<p>Easy to Make</p>",
+        "replo_text_61f2022b-41ae-43e9-80e2-66bcc08e341c": "<p>Steady, All-Day Energy</p>",
+        "replo_text_00043964-8621-4345-b21a-ed27d16edb64": "<p>Organic ingredients</p>",
+        "replo_text_324c997e-badf-414b-b5e3-19bedd3b1619": "<p>No Caffeine Crash</p>",
+        "replo_text_b499ea93-5571-40cf-887a-296649e41e03": "<p>Delicious Flavor</p>",
+        "replo_text_d817d844-52e9-4c74-80c8-e17ffb31756d": "<p>Easy to Make</p>",
+        "replo_text_f99c86bf-f4a9-4e85-944b-9e9aeb8b8b22": "<p>Steady, All-Day Energy</p>",
+        "replo_text_4fd530ce-7429-403d-b7cb-3e8bac4d95a8": "<p>Organic ingredients</p>",
+        "replo_text_e5070524-8b4d-4ef7-aa84-2d1498adea6f": "<p>No Caffeine Crash</p>"
+      }
+    },
+    "ff04fe8e-3989-4e29-be10-2b3919db90ac": {
+      "type": "jr-hp-hero",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#f1e0d6",
+        "desktop_img": "shopify://shop_images/Matcha_Collagen_3_Banner_1.jpg",
+        "mobile_img": "shopify://shop_images/Matcha_Collagen_4_34fb152d-9818-47e7-9f74-c5a712ec9e8c.jpg",
+        "image_overlay_opacity": 40,
+        "top_alignment_d": 15,
+        "top_alignment_m": 15
+      }
+    },
+    "jr_hp_hero_L6V6WV": {
+      "type": "jr-hp-hero",
+      "blocks": {
+        "subheader_cbiFTG": {
+          "type": "subheader",
+          "settings": {
+            "subheader": "<h4>TRUSTED BY 100,000+ WOMEN</h4>",
+            "text_color": "#ffffff",
+            "margin_top": 0,
+            "margin_bottom": -70
+          }
+        },
+        "header_AEnY8x": {
+          "type": "header",
+          "settings": {
+            "header": "<h1>Energy, Calm, and Focus in Every Cup</h1>",
+            "text_color": "#ffffff",
+            "margin_top": 100,
+            "margin_bottom": 20
+          }
+        },
+        "button_gmwTBa": {
+          "type": "button",
+          "settings": {
+            "button_text": "Get Balance",
+            "button_text_color": "#ffffff",
+            "button_link": "shopify://products/matcha-collagen",
+            "button_bg_color": "#1e4845",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheader_cbiFTG",
+        "header_AEnY8x",
+        "button_gmwTBa"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "bg_color": "",
+        "desktop_img": "shopify://shop_images/MatchaWaitingFor-Mug-_-Collagen-23.jpg",
+        "mobile_img": "shopify://shop_images/Teangle_lifestyle_picture.jpg",
+        "image_overlay_opacity": 10,
+        "top_alignment_d": 30,
+        "top_alignment_m": 8
+      }
+    },
+    "scrolling_announcement_pCahRV": {
+      "type": "scrolling-announcement",
+      "blocks": {
+        "text_Gjx4H4": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/frame_7.webp",
+            "text": "No Jitters or anxiety",
+            "link": ""
+          }
+        },
+        "text_rXNKjq": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/frame_5.webp",
+            "text": "Ready in seconds",
+            "link": ""
+          }
+        },
+        "text_RzpNhP": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/group_210315.webp",
+            "text": "Delicious!",
+            "link": ""
+          }
+        },
+        "text_zgY8h6": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/frame_8.webp",
+            "text": "All day energy",
+            "link": ""
+          }
+        },
+        "text_hxfffb": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/frame_6.webp",
+            "text": "Organic ingredients",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_Gjx4H4",
+        "text_rXNKjq",
+        "text_RzpNhP",
+        "text_zgY8h6",
+        "text_hxfffb"
+      ],
+      "disabled": true,
+      "settings": {
+        "append_as_sticky_header": false,
+        "text_margin": 80,
+        "enabled": true,
+        "icon_max_width": 50,
+        "padding_y": 12,
+        "home-page-only": true,
+        "bg_color": "#1f4745",
+        "color": "#ffffff",
+        "alternative-color": true,
+        "speed": 60,
+        "align_icons_row": true
+      }
+    },
+    "replo_homepage_videowise_7pw3nJ": {
+      "type": "replo-homepage-videowise",
+      "disabled": true,
+      "name": "Homepage Videowise",
+      "settings": {
+        "replo_text_b43c7df5-0cad-4340-9968-f852adeabfac": "<p>Why Over 100,000 Canadians Are Ditching Coffee for Teangle Matcha</p>"
+      }
+    },
+    "replo_homepage_products_GaYppJ": {
+      "type": "replo-homepage-products",
+      "disabled": true,
+      "name": "Homepage Products",
+      "settings": {
+        "replo_text_f0cd998c-fade-41f3-a700-510c92626a73": "<p>Shop Best-Sellers for Energy, Glow & Balance</p>",
+        "replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Vanilla or classic Original.</p>",
+        "replo_text_b75b7caa-4044-4eb6-a488-8920f5fcb3c6": "<p>Shop Now</p>",
+        "replo_text_93a63e36-22d2-40e7-a499-fb8e36d3baa2": "<p>Skip the jitters, keep the focus. Pure Japanese ceremonial matcha for clean, all-day energy.</p>",
+        "replo_text_114cbfc6-3a82-4655-aba2-a3cdc0f15210": "<p>Shop Now</p>",
+        "replo_text_09e976a1-3160-4006-a633-bfcb23abb6fd": "<p><span>Zesty ginger, bright lemongrass, and feel-good focus.</span></p>",
+        "replo_text_c7f0a17d-54a4-48e1-af73-8e7b299f3a8c": "<p><span>Spiced chai meets matcha for cozy energy without the crash.</span></p>"
+      }
+    },
+    "jr_columns_i7YrXX": {
+      "type": "jr-columns",
+      "blocks": {
+        "value_Rq8UQd": {
+          "type": "value",
+          "settings": {
+            "link": "shopify://products/matcha-collagen",
+            "link_text": "Shop Now",
+            "image": "shopify://shop_images/3_2_1500x1000_-_8.jpg",
+            "title": "",
+            "title_fr": "",
+            "subheader": "Matcha Collagen+",
+            "subheader_fr": "Matcha Collagène+",
+            "text_body": "Matcha energy meets beauty collagen in two delicious flavors",
+            "text_body_fr": "L'énergie du Matcha rencontre la beauté du collagène en deux saveurs délicieuses"
+          }
+        },
+        "value_mzBMtW": {
+          "type": "value",
+          "settings": {
+            "link": "shopify://pages/new-pdp-2",
+            "link_text": "Shop Now",
+            "image": "shopify://shop_images/Teangle_Ginger_and_Lemongrass_Matcha_Hero_Image.jpg",
+            "title": "",
+            "title_fr": "",
+            "subheader": "Superfood Matcha Blends",
+            "subheader_fr": "Matcha avec superaliments",
+            "text_body": "A modern take on matcha, infused with organic superfoods and crafted to mix instantly for a delicious and effortless way to enjoy its benefits.",
+            "text_body_fr": "Une approche moderne du matcha, infusée avec des superaliments biologiques et conçue pour se mélanger instantanément, offrant une façon délicieuse et facile de profiter de ses bienfaits."
+          }
+        },
+        "value_UATty4": {
+          "type": "value",
+          "settings": {
+            "link": "shopify://pages/ceremonial-matcha",
+            "link_text": "Shop Now",
+            "image": "shopify://shop_images/Teangle_Ceremonial_Matcha_Hero_Image.jpg",
+            "title": "",
+            "title_fr": "",
+            "subheader": "Ceremonial Matcha",
+            "subheader_fr": "Matcha Cérémonial",
+            "text_body": "Traditional Japanese matcha for jitter-free mornings.",
+            "text_body_fr": "Le matcha traditionnel japonais pour des matins énergisants sans nervosité"
+          }
+        }
+      },
+      "block_order": [
+        "value_Rq8UQd",
+        "value_mzBMtW",
+        "value_UATty4"
+      ],
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#1e4845",
+        "title": "Shop Best-Sellers for Energy, Glow & Balance",
+        "title_fr": "Nos best-sellers pour une énergie rayonnante et un éclat naturel",
+        "section_subtitle": "",
+        "section_subtitle_fr": "",
+        "collapse_mobile": false,
+        "size": "small",
+        "make_carousel_on_mobile": true
+      }
+    },
+    "replo_homepage_products_hcAX7x": {
+      "type": "replo-homepage-products",
+      "disabled": true,
+      "name": "Homepage Products",
+      "settings": {
+        "replo_text_f0cd998c-fade-41f3-a700-510c92626a73": "<p>Shop Best-Sellers for Energy, Glow & Balance</p>",
+        "replo_text_24c9d2a4-a825-4dc3-91b0-89a48c9574f4": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Vanilla or classic Original.</p>",
+        "replo_text_b75b7caa-4044-4eb6-a488-8920f5fcb3c6": "<p>Shop Now</p>",
+        "replo_text_93a63e36-22d2-40e7-a499-fb8e36d3baa2": "<p>Skip the jitters, keep the focus. Pure Japanese ceremonial matcha for clean, all-day energy.</p>",
+        "replo_text_114cbfc6-3a82-4655-aba2-a3cdc0f15210": "<p>Shop Now</p>",
+        "replo_text_09e976a1-3160-4006-a633-bfcb23abb6fd": "<p><span>Zesty ginger, bright lemongrass, and feel-good focus.</span></p>",
+        "replo_text_c7f0a17d-54a4-48e1-af73-8e7b299f3a8c": "<p><span>Spiced chai meets matcha for cozy energy without the crash.</span></p>"
+      }
+    },
+    "replo_ama_bf_homepage_products_RHx9DE": {
+      "type": "replo-ama-bf-homepage-products",
+      "name": "AMA BF Homepage Products",
+      "settings": {
+        "replo_text_ac7f6b93-2b95-42b0-885b-751b3dd4d443": "<p>Shop Best-Sellers for Energy, Glow & Balance</p>",
+        "replo_text_4c9e1d4e-56cf-4eb6-b6ab-026c2260ca43": "<p>Best Seller</p>",
+        "replo_text_99200eef-c59a-44f3-8d9c-9c047fa7d196": "<p>Matcha Collagen</p>",
+        "replo_text_50224a6a-ad4d-4397-a108-1ed58e2c3f4d": "<p>Your all-in-one latte for clean energy and glowing beauty. Available in smooth Chocolate, Vanilla or classic Original.</p>",
+        "replo_text_814cf46f-1fdb-463f-bb79-71c0e3d09086": "<p>Shop Now</p>",
+        "replo_text_dbd9824c-c9f6-4901-b79a-bda8219b3f1f": "<p>Build Your Matcha Bag Set</p>",
+        "replo_text_28819125-c88e-4447-ad32-da108d4728d9": "<p>Mix and match our healthy and delicious matcha blends.</p>",
+        "replo_text_1b105c6d-9fa8-48c3-8061-ab936ac9ddd2": "<p>Shop Now</p>",
+        "replo_text_4b71a636-4f14-43ec-b619-7daf4aa0595d": "<p>Zesty ginger, bright lemongrass, and feel-good focus.</p>",
+        "replo_text_69c5d3bb-6406-4c11-86c7-04a9ac9dc7da": "<p>Spiced chai meets matcha for cozy energy without the crash.</p>",
+        "replo_url_dc1283f4-cb7a-4719-a28d-4b45bdf3b367": "shopify://pages/shop-teangle",
+        "replo_text_8b624b07-97b6-468a-9e93-3be82728ac63": "<p>Shop All</p>",
+        "replo_text_6f74d08a-d5c7-44a4-a4be-aa655d3a9718": "<p>VIP GIFT</p>",
+        "replo_text_cba19843-aa38-44a7-8e18-731e377aecf2": "<p>FREE Teangle Milk Frother</p>",
+        "replo_text_cefd66a5-0206-48e6-991a-2bf4ba271240": "<p>*Automatically added to cart</p>",
+        "replo_text_fca11323-df24-418d-a9a0-65405f2f5541": "<p>Shop Now</p>",
+        "replo_text_8c3611f0-8eb6-4c82-8d50-1f421b532ff2": "<p>Over 80,000 Five Star Reviews!</p>"
+      }
+    },
+    "replo_homepage_our_mission_Gt8kbJ": {
+      "type": "replo-homepage-our-mission",
+      "name": "Homepage Our Mission",
+      "settings": {
+        "replo_text_1bccfeaa-cc38-42a3-831a-b56997a40976": "<p>Our Mission - Add Balance to Your Life! </p>",
+        "replo_text_a5317f83-ae11-45ae-b07c-d16b93ddabfa": "<p>Whether you're balancing work, kids, or both, our easy, feel-good rituals are here to support your energy, mood, and glow without complicating your routine.</p>",
+        "replo_text_ee7e65ef-b955-4305-82ac-aeb57a7167d6": "<p>-Phil, Founder</p>"
+      }
+    },
+    "replo_homepage_4_reasons_MmMDTQ": {
+      "type": "replo-homepage-4-reasons",
+      "name": "Homepage 4 Reasons",
+      "settings": {
+        "replo_text_af82958b-994b-4270-9ba5-ad92ec429e54": "<p>4 Reasons You’ll Never Go Back to Coffee</p>",
+        "replo_text_f3178f64-c563-4e53-a5d7-87f87743aeb3": "<p>Better Than Coffee</p>",
+        "replo_text_6c9a9e5b-3cf2-4fa8-97f8-0e5eab6413ca": "<p>Ditch the jitters and crashes.</p><p>Teangle gives you calm, stable energy.</p>",
+        "replo_text_8055fb4d-4911-4593-a3bd-7bc53f8d8edf": "<p>Real Ingredients Only</p>",
+        "replo_text_844de26e-9dc6-48b5-ab4a-77bfd0843551": "<p>No junk. No fillers. Just natural, </p><p>feel-good fuel for your body.</p>",
+        "replo_text_c7f02648-ea50-4120-a279-b90fa8dfdd96": "<p>Built for Your Routine</p>",
+        "replo_text_17e3eec2-4b1b-4b93-88af-afbd0ea37f51": "<p>Easy to mix, easy to love - fits your</p><p> life, not the other way around.</p>",
+        "replo_text_ac3c3350-bdcc-4a81-9052-2578bfc54271": "<p>Canadian-Owned, Duh!</p>",
+        "replo_text_e2de1ad8-762b-4be7-beb4-05fe281c7a64": "<p>Proudly based in Canada with fast </p><p>and secure North American </p><p>shipping.</p>"
+      }
+    },
+    "9c3ab650-e9f8-40eb-b530-62b31a19c4c0": {
+      "type": "product-columns-ama",
+      "blocks": {
+        "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-0": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Group_1484580834_1.webp",
+            "image_width": 470,
+            "title": "Matcha+",
+            "text": "<p>Everything you need to replace your coffee and feel so MATCHA better!</p>",
+            "button_label": "SHOP THE LIMITED TIME OFFER",
+            "button_link": "shopify://pages/new-pdp-2"
+          }
+        },
+        "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-1": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Instagram_post_-_11.png",
+            "image_width": 470,
+            "title": "Matcha Collagen  Beauty Blend",
+            "text": "<p>A superfood matcha latte blend that promotes healthy ageing.</p>",
+            "button_label": "SHOP MATCHA COLLAGEN",
+            "button_link": "shopify://products/matcha-collagen"
+          }
+        },
+        "text_block_K9Tqct": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "text_block_dAXPEg": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/fijibishh3_2.jpg",
+            "image_width": 650,
+            "title": "La Vida Verde!",
+            "text": "<p>Remember energy? That thing you used to have? Well, this foursome is bringing it back! Our four best-selling matcha, all in one pack.</p>",
+            "button_label": "TRY THEM ALL",
+            "button_link": "https://teangle.ca/products/la-vida-verde"
+          }
+        },
+        "text_block_pahxMp": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/01_Chai_Matcha_886b3835-3854-40d3-96c1-75b3028bdb87.png",
+            "image_width": 650,
+            "title": "Chai Matcha",
+            "text": "<p>Replace your morning coffee with a healthy matcha that's packed with delicious natural flavor. Can you smell the spices yet?</p>",
+            "button_label": "Shop MATCHA CHAI",
+            "button_link": "shopify://products/matcha-chai"
+          }
+        },
+        "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-2": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/ceremonialmatcha_556de0fb-53bd-4df5-a0d1-a7ebd48b4d79.png",
+            "image_width": 470,
+            "title": "Traditional Ceremonial Matcha",
+            "text": "<p>A pure bliss for lovers of traditional matcha. Carefully selected for its smooth, velvety taste.</p><p></p>",
+            "button_label": "SHOP CEREMONIAL MATCHA",
+            "button_link": "shopify://products/ceremonial-matcha"
+          }
+        }
+      },
+      "block_order": [
+        "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-0",
+        "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-1",
+        "text_block_K9Tqct",
+        "text_block_dAXPEg",
+        "text_block_pahxMp",
+        "template--14472966307922__9c3ab650-e9f8-40eb-b530-62b31a19c4c0-16834104047ab53b82-2"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".lpp_card {border-radius: 20px; overflow: hidden; background: #fff; padding-bottom: 25px;}",
+        ".lpp_card .text-spacing {padding: 0;}"
+      ],
+      "settings": {
+        "title": "Best Sellers ❤️",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "1641763180ab99d00f": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Best Selling Matcha",
+        "home_featured_products": "best-selling-matcha",
+        "per_row": 2,
+        "rows": 2,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "0c582d46-3982-4a95-81b4-dc9d778d38ff": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_image_AmwUEJ": {
+          "type": "logo_image",
+          "disabled": true,
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/featured_teangle4b.png",
+            "link": ""
+          }
+        },
+        "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/featured_teangle2b.png",
+            "link": ""
+          }
+        },
+        "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/featured_teangle3b.png",
+            "link": ""
+          }
+        },
+        "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/featured_teangle1b.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_AmwUEJ",
+        "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-0",
+        "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-1",
+        "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-2",
+        "template--14472966307922__0c582d46-3982-4a95-81b4-dc9d778d38ff-1683411123647665b0-3"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "title": "As seen in",
+        "logo_opacity": 100,
+        "divider": false
+      }
+    },
+    "eeaa9a58-5149-4edb-bd84-6735b8e4c5ce": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".image-wrap img {border-radius: 20px;}",
+        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/teangle-13.jpg",
+        "image_width": 600,
+        "subtitle": "Unlock your full-potential",
+        "title": "A Community of 50,000+ to Support Your Journey",
+        "text": "<p>Join the TeangleFam, a movement of people just like you who are working towards improving their health and being a force of good for their loves one's!</p>",
+        "button_label": "Join the teangle fam!",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "cbeef862-dbee-42e9-b022-4bed3277e134": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".image-wrap img {border-radius: 20px;}",
+        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/teangle-17.jpg",
+        "image_width": 600,
+        "subtitle": "How are got here",
+        "title": "For us, it's personal",
+        "text": "<p>Unlock Your Potential with TEANGLE Matcha! Join the movement of empowered women who are living life to the fullest. Say goodbye to stress and hello to confidence, energy, and clarity. </p><p><em><strong>Don't miss out on this life-changing discovery—try TEANGLE Matcha today!</strong></em></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": true
+      }
+    },
+    "9276e944-3cca-447d-a592-23523cdc229e": {
+      "type": "text-and-image",
+      "disabled": true,
+      "custom_css": [
+        ".image-wrap img {border-radius: 20px;}",
+        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_4.png",
+        "image_width": 510,
+        "subtitle": "",
+        "title": "Our mission for balance",
+        "text": "<p>At Teangle, we believe balance isn’t the enemy of ambition—it’s the secret to thriving. Inspired by my mom’s selflessness, I created Teangle to help women reclaim their energy, find balance, and achieve success without sacrifice.</p><p>  -Phil, Founder</p>",
+        "button_label": "Learn more about the movement",
+        "button_link": "shopify://pages/about-teangle",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "1d43b673-0e08-4551-b692-fed1fce94bd3": {
+      "type": "icons-and-image-text",
+      "disabled": true,
+      "custom_css": [
+        ".image-wrap img {border-radius: 20px;}",
+        ".subheading {text-transform: uppercase; letter-spacing: 1px; font-size: 12px; margin-bottom: 7px; font-weight: 800; color: #d19b71;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/teangle-44.jpg",
+        "image_width": 500,
+        "subtitle": "HAPPINESS GUARANTEE",
+        "title": "Love it, or it’s on us.",
+        "text": "<p> </p>",
+        "icon1": "shopify://shop_images/teangle-33.png",
+        "icon1_title": "TRY RISK-FREE",
+        "icon1_text": "<p>We offer a 30 day money-back guarantee.</p>",
+        "icon2": "shopify://shop_images/teangle-36.png",
+        "icon2_title": "FLAVOUR",
+        "icon2_text": "<p>Our tried and tasted matcha blends are delicious.</p>",
+        "icon3": "shopify://shop_images/teangle-35.png",
+        "icon3_title": "ALL NATURAL INGREDIENTS",
+        "icon3_text": "<p>The health benefits you deserve.</p>",
+        "icon4": "shopify://shop_images/teangle-34.png",
+        "icon4_title": "CANADIAN OWNED",
+        "icon4_text": "<p>Fast-shipping across North-America.</p>",
+        "button_label": "",
+        "button_link": "#shopmatcha",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "1749489398cc7e670a": {
+      "type": "apps",
+      "blocks": {
+        "videowise_video_commerce_videowise_page_widgets_cKECVg": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_68079d119029cf0057ead527\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "videowise_video_commerce_videowise_page_widgets_cKECVg"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "1749490319c6f8621c": {
+      "type": "apps",
+      "blocks": {
+        "videowise_video_commerce_videowise_page_widgets_qYYNtm": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_68079d119029cf0057ead527\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "videowise_video_commerce_videowise_page_widgets_qYYNtm"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "17627846576ce3662c",
+    "replo_test_homepage_hero_7XDMhX",
+    "replo_test_homepage_hero_Nq8bRX",
+    "replo_test_homepage_hero_LTgxRG",
+    "ff04fe8e-3989-4e29-be10-2b3919db90ac",
+    "jr_hp_hero_L6V6WV",
+    "scrolling_announcement_pCahRV",
+    "replo_homepage_videowise_7pw3nJ",
+    "replo_homepage_products_GaYppJ",
+    "jr_columns_i7YrXX",
+    "replo_homepage_products_hcAX7x",
+    "replo_ama_bf_homepage_products_RHx9DE",
+    "replo_homepage_our_mission_Gt8kbJ",
+    "replo_homepage_4_reasons_MmMDTQ",
+    "9c3ab650-e9f8-40eb-b530-62b31a19c4c0",
+    "1641763180ab99d00f",
+    "0c582d46-3982-4a95-81b4-dc9d778d38ff",
+    "eeaa9a58-5149-4edb-bd84-6735b8e4c5ce",
+    "cbeef862-dbee-42e9-b022-4bed3277e134",
+    "9276e944-3cca-447d-a592-23523cdc229e",
+    "1d43b673-0e08-4551-b692-fed1fce94bd3",
+    "1749489398cc7e670a",
+    "1749490319c6f8621c"
+  ]
+}
