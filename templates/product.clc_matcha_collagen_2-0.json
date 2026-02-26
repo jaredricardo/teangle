@@ -69,10 +69,12 @@
         "replo_text_0e54d10b-25de-4017-b348-325a4045b902": "<p>Hear What Canadians Say About Teangle 🇨🇦</p>"
       }
     },
-    "replo_s_p_hero_no_vanilla_M7cnGe": {
+    "replo_s_p_hero_no_vanilla_ENzhg9": {
       "type": "replo-s-p-hero-no-vanilla",
       "name": "s_p - Hero - no vanilla",
       "settings": {
+        "replo_text_e335c741-2671-49a7-91d4-7585cc840187": "<p>\"I’ve convinced all of my friends to switch from coffee to Teangle matcha collagen.”</p>",
+        "replo_text_06b2ca68-04c9-4396-9678-029d96eb1df9": "<p>Emily K. Verified Customer</p>",
         "replo_text_a0cf2e24-d500-4dd3-b79d-befdddccd300": "<p>Why You'll Love It</p>",
         "replo_text_caca4603-b9cb-44a3-b7d6-e6487be6f64b": "<p>Taste & Feel</p>",
         "replo_text_8fbe176e-7e6c-418f-8e68-e233f23cf7ec": "<p>How to Enjoy</p>",
@@ -512,7 +514,7 @@
   },
   "order": [
     "replo_s_p_hero_AHFzbD",
-    "replo_s_p_hero_no_vanilla_M7cnGe",
+    "replo_s_p_hero_no_vanilla_ENzhg9",
     "fullwidth_html_p66iPk",
     "main",
     "sub",
