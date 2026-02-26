@@ -189,7 +189,7 @@ li {
   <script type="application/json" id="replo-deps-products">
     [{"id":"7454135713874","handle": "matcha-collagen-3","data":
 {% if request.locale.iso_code == 'fr' 
-      and all_products['matcha-collagen-3'].metafields.custom.product_image != blank %}
+      and all_products['matcha-collagen-3'].metafields.custom.product_images != blank %}
 
   {{ all_products['matcha-collagen-3'] 
      | json 
@@ -205,7 +205,7 @@ li {
 document.addEventListener("DOMContentLoaded", function() {
   if (Shopify.locale === "fr") {
 
-    const frenchImages = {{ product.metafields.custom.product_image.value | json }};
+    const frenchImages = {{ product.metafields.custom.product_images.value | json }};
 
     if (window.Replo && frenchImages) {
       window.Replo.deps.products.forEach(p => {
