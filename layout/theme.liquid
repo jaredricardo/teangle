@@ -766,6 +766,28 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
  <!-- Widget : Saint Jean -->
 {% comment %}<div data-rebuy-id="154725"></div> {% endcomment %} 
 <!-- End Widget : Saint Jean -->
+<script>
+  console.group("SEO Debugging: Teangle");
+  
+  // 1. Check what the current template/page type is
+  console.log("Current Page Type:", {{ request.page_type | json }});
+  console.log("Current Template:", {{ template | json }});
 
+  // 2. Check if Replo Metafields exist on this product
+  {% if product.metafields.replo != blank %}
+    console.log("Replo Product Metafields found!");
+    console.log("Head Content Content:", {{ product.metafields.replo.before_head_end_content | json }});
+  {% else %}
+    console.log("No Replo Metafields found on this Product object.");
+  {% endif %}
+
+  // 3. Check if Replo Metafields exist on the Page object (if applicable)
+  {% if page.metafields.replo != blank %}
+    console.log("Replo Page Metafields found!");
+    console.log("Head Content:", {{ page.metafields.replo.before_head_end_content | json }});
+  {% endif %}
+
+  console.groupEnd();
+</script>
 </body>
 </html>
