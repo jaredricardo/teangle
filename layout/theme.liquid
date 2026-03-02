@@ -551,18 +551,8 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
     };
   </script>
 
-{%- capture header_scripts -%}
   {{ content_for_header }}
-{%- endcapture -%}
-
-{%- if template contains 'product' or template == 'index' -%}
-  {%- assign header_scripts = header_scripts | replace: 'noindex', 'index' | replace: 'nofollow', 'follow' -%}
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-{%- endif -%}
-
-{{ header_scripts }}
-
+  
   <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop={{ shop.permanent_domain }}"></script>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="{{ 'vendor-scripts-v10.js' | asset_url | split: '?' | first }}" defer="defer"></script>
