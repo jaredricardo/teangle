@@ -627,14 +627,17 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
     })(window, document, "clarity", "script", "joduiltc94");
   </script>
 
-  {%- unless 
-    request.page_type == 'cart' or 
-    request.page_type == 'checkout' or 
-    request.path contains '/account' or 
-    request.path contains '/challenge' 
-  -%}
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  {%- endunless -%}
+{%- liquid
+  assign should_index = true
+  if request.page_type == 'cart' or request.page_type == 'checkout' or request.path contains '/account' or request.path contains '/challenge'
+    assign should_index = false
+  endif
+-%}
+
+{%- if should_index -%}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+{%- endif -%}
 
 </head>
 
