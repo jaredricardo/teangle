@@ -78,7 +78,7 @@
     "gp_section_609034224476881842": {
       "type": "gp-section-609034224476881842",
       "settings": {
-        "checksum": "292bbff285631d37d72a2444aa73413e5bbd9e19c8160bac5e8e8b6d4ce653d4_1_1_1_0__1"
+        "checksum": "ba328efc6f7892f04992a678fd8d5348144b70757de93b11850a8c4e980d0ff3_1_1_1_0__1"
       }
     },
     "gp_section_609038777611977410": {
@@ -94,6 +94,18 @@
         "gg-jhShMp7Z_text": "Gut Comfort",
         "gghnbwNRpG3_text": "No Crash"
       }
+    },
+    "gp_section_609039170517599192": {
+      "type": "gp-section-609039170517599192",
+      "settings": {
+        "checksum": "b13851436d7d83f3e8a79b132e9c0cb4bf915cd8418a4909bfcadbe75d95c39e_1_1_1_0__1",
+        "ggJ2Vn5qARA_text": "All-Natural Matcha Collagen Formula",
+        "gg3B-FaZMwc_text": "<p>Pure ingredients. No hidden nasties.</p>",
+        "gg1xaEZyM3e_text": "Açai Berry",
+        "ggdWRr5nnHU_text": "Blueberry",
+        "ggS_JrDL29G_text": "Goji Berry",
+        "ggds4Fo7aIm_text": "Kale"
+      }
     }
   },
   "order": [
@@ -102,6 +114,7 @@
     "gp_section_609029916893119448",
     "gp_section_609029337106088642",
     "gp_section_609031597013861024",
+    "gp_section_609039170517599192",
     "gp_section_609033271296131744",
     "gp_section_609034224476881842"
   ]
