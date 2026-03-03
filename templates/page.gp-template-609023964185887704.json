@@ -10,9 +10,7 @@
 {
   "sections": {
     "gp_section_609024031898731480": {
-      "block_order": [
-        "gp_app_okendo-reviews-loyalty_glfKypoJLs"
-      ],
+      "type": "gp-section-609024031898731480",
       "blocks": {
         "gp_app_okendo-reviews-loyalty_glfKypoJLs": {
           "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
@@ -21,18 +19,19 @@
           }
         }
       },
+      "block_order": [
+        "gp_app_okendo-reviews-loyalty_glfKypoJLs"
+      ],
       "settings": {
-        "checksum": "009282dba8061dbb84b00baa067fa99dd26de9f7cb75dde3f0f3d9a6a4acb3fa_1_1_1_0__1",
+        "section_preload": "true",
+        "checksum": "cdafd9f70b3c021930acf4dde8a4e17c27e4da3ca369420801f6770ee309ef67_1_1_1_0__1",
         "ggU5PwO8ES1_text": "Matcha Energy &nbsp;Meets&nbsp;<br>Beauty Collagen",
         "ggczQlFQuMx_text": "<p>☀️ <strong>More energy, focus with no jitters</strong></p><p>🥥 <strong>Delicious coconut and vanilla flavours</strong></p><p>🥛 <strong>Super easy to mix with milk, water etc</strong></p><p>✨ <strong>Glowing skin, hair &amp; nails support</strong></p>",
         "ggo2UoYdPvX_label": "Add to cart",
         "ggo2UoYdPvX_outOfStockLabel": "Out of stock",
         "ggo2UoYdPvX_unavailableLabel": "Unavailable",
-        "ggo2UoYdPvX_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "ggpG3goE7hd_text": "Quantity",
-        "section_preload": "true"
-      },
-      "type": "gp-section-609024031898731480"
+        "ggo2UoYdPvX_variantSelectionRequiredMessage": "Please select a variant to add product to cart"
+      }
     }
   },
   "order": [
