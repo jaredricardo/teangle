@@ -10,15 +10,17 @@
 {
   "sections": {
     "gp_section_609048657630593730": {
-      "type": "gp-section-609048657630593730",
       "settings": {
         "checksum": "3b7f895a9e519b5b4b7113c39ec4f496cbf10e7bdeac896c340832f5e0f9c4f9_1_1_1_0__1",
-        "ggb5f3EeaWC_text": "Energy That Works With You",
-        "ggPBhPhnaF__text": "<p>Coffee may give you a quick boost, but it often comes with jitters and a hard crash. Vanilla Matcha Collagen delivers smooth, steady energy from organic ceremonial matcha, combined with 5g of marine collagen to support your glow from within. Feel focused, balanced, and consistent — without the rollercoaster.</p>"
-      }
+        "ggPBhPhnaF__text": "<p>Coffee may give you a quick boost, but it often comes with jitters and a hard crash. Vanilla Matcha Collagen delivers smooth, steady energy from organic ceremonial matcha, combined with 5g of marine collagen to support your glow from within. Feel focused, balanced, and consistent — without the rollercoaster.</p>",
+        "ggb5f3EeaWC_text": "Energy That Works With You"
+      },
+      "type": "gp-section-609048657630593730"
     },
     "gp_section_609048657630659266": {
-      "type": "gp-section-609048657630659266",
+      "block_order": [
+        "gp_app_okendo-reviews-loyalty_glfKypoJLs"
+      ],
       "blocks": {
         "gp_app_okendo-reviews-loyalty_glfKypoJLs": {
           "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
@@ -27,91 +29,89 @@
           }
         }
       },
-      "block_order": [
-        "gp_app_okendo-reviews-loyalty_glfKypoJLs"
-      ],
       "settings": {
-        "section_preload": "true",
-        "checksum": "48c4be5ddcd6bf03836f182f09988b8504b119efb58f01cc7b7909f9b8edabde_1_1_1_0__1",
-        "ggU5PwO8ES1_text": "Matcha Energy Meets&nbsp;<br>Beauty Collagen",
-        "ggczQlFQuMx_text": "<p>☀️ More energy, focus with no jitters&nbsp;</p><p>🥥 Delicious coconut and vanilla flavours&nbsp;</p><p>🥛 Super easy to mix with milk, water etc&nbsp;</p><p>✨ Glowing skin, hair &amp; nails support</p>",
+        "checksum": "02561c860b1e3182cdec557c0058ab65e419f889b8d44a112a3800db95a6c069_1_1_1_0__1",
+        "gg9FxdHduyz_text": "<p>Enjoy it your way - hot or iced, in the morning or as an afternoon boost.</p><p>&nbsp;</p><p>Just add a scoop to water, milk, or your favourite alt-milk. It dissolves easily and tastes great every time.</p><p>&nbsp;</p><p>Want to get creative?</p><p>You’ll get our free 101 Matcha Recipes book with your first order - packed with easy ideas like smoothies, snacks, baked treats, and more.</p><p>&nbsp;</p><p>There’s no wrong way to matcha.</p>",
+        "ggQvk1UkYw3_text": "<p>If you're looking for a healthy daily ritual that actually makes you feel good - this is for you.</p><p>&nbsp;</p><p>You want to replace coffee but still feel energized<br>You want healthier skin, hair, nails and a glow<br>You want collagen, but not in pill, capsule, or powder<br>You care about clean ingredients and no added sugars<br>You want something quick, easy, and actually delicious<br>Sounds like you? You’ll love Matcha Collagen.</p>",
         "ggTMwAK8DSU_label": "ADD TO CART",
         "ggTMwAK8DSU_outOfStockLabel": "Out of stock",
         "ggTMwAK8DSU_unavailableLabel": "Unavailable",
         "ggTMwAK8DSU_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "ggybyXK4vI5_text": "<p>Free Shipping on Orders $50+</p>",
-        "ggxrBsoh4hk_text": "<p>\"I’ve convinced all of my friends to switch from <strong>coffee to Teangle matcha collagen</strong>.”</p><p>Emily K. ✓ Verified Customer</p>",
+        "ggU5PwO8ES1_text": "Matcha Energy Meets&nbsp;<br>Beauty Collagen",
+        "ggUNyRmu8Q4_text": "<p>When it comes to ingredients, taste, and trust, Teangle stands out. We kept the good stuff (like organic matcha and marine collagen) and ditched the junk.</p><p>&nbsp;</p><p>OG Flavor: 5g of pure marine collagen, 1g of organic ceremonial Matcha, organic coconut milk powder and organic acacia gum</p><p>ALLERGEN: FISH</p>",
+        "ggYwsvXRD_l_text": "<p>Matcha Collagen+ comes in two delicious flavours:</p><p>&nbsp;</p><p>Original: Smooth with a light coconutty finish<br>Vanilla: Subtle, creamy, and naturally sweet</p><p><br>And the feel? Calm and sustained energy, no jitters, no crash. Just focus, glow, and a little daily “ahhh.”</p>",
+        "ggczQlFQuMx_text": "<p>☀️ More energy, focus with no jitters&nbsp;</p><p>🥥 Delicious coconut and vanilla flavours&nbsp;</p><p>🥛 Super easy to mix with milk, water etc&nbsp;</p><p>✨ Glowing skin, hair &amp; nails support</p>",
+        "ggfZlhvHMuV_text": "<p>Matcha Collagen+ is your new delicious ritual where matcha energy meets collagen beauty without the afternoon crash</p><p>&nbsp;</p><p>- Supports skin, hair, joints and nail health&nbsp;</p><p>- Helps increase energy, focus and clarity<br>- Two flavours: Original (Coconuty) and Vanilla<br>- Easy to mix, hot or cold, in drinks or food<br>- No added sugar, dairy, gluten, or weird stuff</p>",
         "ggnW-zlbTEF_childItem_0": "<p>Why You'll Love It</p>",
         "ggnW-zlbTEF_childItem_1": "<p>Taste &amp; Feel</p>",
         "ggnW-zlbTEF_childItem_2": "<p>How to Enjoy</p>",
         "ggnW-zlbTEF_childItem_3": "<p>Is This For You?</p>",
         "ggnW-zlbTEF_childItem_4": "<p>Ingredients &amp; Quality</p>",
-        "ggfZlhvHMuV_text": "<p>Matcha Collagen+ is your new delicious ritual where matcha energy meets collagen beauty without the afternoon crash</p><p>&nbsp;</p><p>- Supports skin, hair, joints and nail health&nbsp;</p><p>- Helps increase energy, focus and clarity<br>- Two flavours: Original (Coconuty) and Vanilla<br>- Easy to mix, hot or cold, in drinks or food<br>- No added sugar, dairy, gluten, or weird stuff</p>",
-        "ggYwsvXRD_l_text": "<p>Matcha Collagen+ comes in two delicious flavours:</p><p>&nbsp;</p><p>Original: Smooth with a light coconutty finish<br>Vanilla: Subtle, creamy, and naturally sweet</p><p><br>And the feel? Calm and sustained energy, no jitters, no crash. Just focus, glow, and a little daily “ahhh.”</p>",
-        "gg9FxdHduyz_text": "<p>Enjoy it your way - hot or iced, in the morning or as an afternoon boost.</p><p>&nbsp;</p><p>Just add a scoop to water, milk, or your favourite alt-milk. It dissolves easily and tastes great every time.</p><p>&nbsp;</p><p>Want to get creative?</p><p>You’ll get our free 101 Matcha Recipes book with your first order - packed with easy ideas like smoothies, snacks, baked treats, and more.</p><p>&nbsp;</p><p>There’s no wrong way to matcha.</p>",
-        "ggQvk1UkYw3_text": "<p>If you're looking for a healthy daily ritual that actually makes you feel good - this is for you.</p><p>&nbsp;</p><p>You want to replace coffee but still feel energized<br>You want healthier skin, hair, nails and a glow<br>You want collagen, but not in pill, capsule, or powder<br>You care about clean ingredients and no added sugars<br>You want something quick, easy, and actually delicious<br>Sounds like you? You’ll love Matcha Collagen.</p>",
-        "ggUNyRmu8Q4_text": "<p>When it comes to ingredients, taste, and trust, Teangle stands out. We kept the good stuff (like organic matcha and marine collagen) and ditched the junk.</p><p>&nbsp;</p><p>OG Flavor: 5g of pure marine collagen, 1g of organic ceremonial Matcha, organic coconut milk powder and organic acacia gum</p><p>ALLERGEN: FISH</p>"
-      }
+        "ggxrBsoh4hk_text": "<p>\"I’ve convinced all of my friends to switch from <strong>coffee to Teangle matcha collagen</strong>.”</p><p>Emily K. ✓ Verified Customer</p>",
+        "ggybyXK4vI5_text": "<p>Free Shipping on Orders $50+</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-609048657630659266"
     },
     "gp_section_609048657630724802": {
-      "type": "gp-section-609048657630724802",
       "settings": {
         "checksum": "db1bbe36d5a00dff5d849a4518fd33017913e6beb4f70778401179d3d553aafd_1_1_1_0__1",
-        "ggjn__d6abd_text": "Glow Starts From Within",
-        "gggXEdXFdqh_text": "<p>Pure marine collagen, designed to support smoother skin, stronger hair, and a naturally healthy glow.</p><p>&nbsp;</p><p>Every scoop delivers 5g of high-quality collagen peptides to nourish your beauty routine from the inside out — without adding extra steps to your day.</p><p>&nbsp;</p><p>Simple.<br>Effective.<br>Made to be taken daily.</p>"
-      }
+        "gggXEdXFdqh_text": "<p>Pure marine collagen, designed to support smoother skin, stronger hair, and a naturally healthy glow.</p><p>&nbsp;</p><p>Every scoop delivers 5g of high-quality collagen peptides to nourish your beauty routine from the inside out — without adding extra steps to your day.</p><p>&nbsp;</p><p>Simple.<br>Effective.<br>Made to be taken daily.</p>",
+        "ggjn__d6abd_text": "Glow Starts From Within"
+      },
+      "type": "gp-section-609048657630724802"
     },
     "gp_section_609048657630790338": {
-      "type": "gp-section-609048657630790338",
       "settings": {
         "checksum": "d3fa3f1a4aad9329da640d8e85216cc5273a5654fb9563f77490b67a23ba5a98_1_1_1_0__1"
-      }
+      },
+      "type": "gp-section-609048657630790338"
     },
     "gp_section_609048657630855874": {
-      "type": "gp-section-609048657630855874",
       "settings": {
         "checksum": "1a87448dca1308acdd2c10fa65677a3f96c0d24ce3a80cb9f78db9af02e08ab1_1_1_1_0__1",
-        "ggjkksF2zRg_text": "Easy to Make and Endless Ways to Enjoy",
-        "gg9YjgyUmvl_text": "<p>Hot water. Oat milk. In a smoothie. However you like it, Teangle blends smoothly, dissolves instantly, and fits your routine. Plus, you’ll get 101 Delicious Matcha Recipes, so you’ll never run out of tasty ideas.</p>"
-      }
+        "gg9YjgyUmvl_text": "<p>Hot water. Oat milk. In a smoothie. However you like it, Teangle blends smoothly, dissolves instantly, and fits your routine. Plus, you’ll get 101 Delicious Matcha Recipes, so you’ll never run out of tasty ideas.</p>",
+        "ggjkksF2zRg_text": "Easy to Make and Endless Ways to Enjoy"
+      },
+      "type": "gp-section-609048657630855874"
     },
     "gp_section_609048657630921410": {
-      "type": "gp-section-609048657630921410",
       "settings": {
         "checksum": "5dd32f04ce26e890e9354a14ad63736d2ad7d616627d0dd2b89bb6fe27c40579_1_1_1_0__1"
-      }
+      },
+      "type": "gp-section-609048657630921410"
     },
     "gp_section_609048657630986946": {
-      "type": "gp-section-609048657630986946",
       "settings": {
         "checksum": "d625572ff69470a43c5b50ce15de1f47ccabfb81ce89044bba08d661461e26b0_1_1_1_0__1",
-        "ggpR5h0mS-t_text": "Designed to Support Women — Daily",
-        "gglZuPam_Iw_text": "<p>A smarter ritual that supports your energy, glow, balance, and confidence — all in one simple scoop.</p>",
-        "gg1oq-AAK1N_text": "Calm Energy",
-        "ggUgeTjPcBy_text": "Balance Support",
-        "ggES2PKsFAC_text": "Glow Support",
-        "gga-4SyoZyd_text": "Stronger Hair",
         "gg-jhShMp7Z_text": "Gut Comfort",
-        "gghnbwNRpG3_text": "No Crash"
-      }
+        "gg1oq-AAK1N_text": "Calm Energy",
+        "ggES2PKsFAC_text": "Glow Support",
+        "ggUgeTjPcBy_text": "Balance Support",
+        "gga-4SyoZyd_text": "Stronger Hair",
+        "gghnbwNRpG3_text": "No Crash",
+        "gglZuPam_Iw_text": "<p>A smarter ritual that supports your energy, glow, balance, and confidence — all in one simple scoop.</p>",
+        "ggpR5h0mS-t_text": "Designed to Support Women — Daily"
+      },
+      "type": "gp-section-609048657630986946"
     },
     "gp_section_609048657631052482": {
-      "type": "gp-section-609048657631052482",
       "settings": {
         "checksum": "beff6f0011e94cee7ba668d25c4c6f08d0875962c5566f598b9749e06fa71549_1_1_1_0__1",
-        "ggJ2Vn5qARA_text": "All-Natural Matcha Collagen Formula",
-        "gg3B-FaZMwc_text": "<p>Pure ingredients. No hidden nasties.</p>",
         "gg1xaEZyM3e_text": "Organic Ceremonial Matcha",
-        "ggdWRr5nnHU_text": "Marine Collagen&nbsp;<br>Peptides",
+        "gg3B-FaZMwc_text": "<p>Pure ingredients. No hidden nasties.</p>",
+        "ggJ2Vn5qARA_text": "All-Natural Matcha Collagen Formula",
         "ggS_JrDL29G_text": "Organic Coconut Milk Powder",
+        "ggdWRr5nnHU_text": "Marine Collagen&nbsp;<br>Peptides",
         "ggds4Fo7aIm_text": "Acacia&nbsp;<br>Fiber"
-      }
+      },
+      "type": "gp-section-609048657631052482"
     },
     "gp_section_609048657631118018": {
-      "type": "gp-section-609048657631118018",
       "settings": {
         "checksum": "c0360c9d8733ce0f9acf2d1f8cdb4ce2ad207a9dab54658e4cb18593942e58d0_1_1_1_0__1"
-      }
+      },
+      "type": "gp-section-609048657631118018"
     }
   },
   "order": [
