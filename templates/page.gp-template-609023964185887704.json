@@ -48,7 +48,7 @@
     "gp_section_609029337106088642": {
       "type": "gp-section-609029337106088642",
       "settings": {
-        "checksum": "17ebc41a08ac605cee8a6db7faf147509776ddec45c8b26c611edb39979206fa_1_1_1_0__1"
+        "checksum": "f385670bf00e1093bfdbffe0e62f99f34618a158fc923c9d4abfbc4a6d7a5a15_1_1_1_0__1"
       }
     },
     "gp_section_609029916893119448": {
@@ -78,7 +78,7 @@
     "gp_section_609034224476881842": {
       "type": "gp-section-609034224476881842",
       "settings": {
-        "checksum": "ba328efc6f7892f04992a678fd8d5348144b70757de93b11850a8c4e980d0ff3_1_1_1_0__1"
+        "checksum": "440701cefc959a47bb8c99e561974db6515eb967945cead150502dd8d4e24801_1_1_1_0__1"
       }
     },
     "gp_section_609038777611977410": {
@@ -98,13 +98,19 @@
     "gp_section_609039170517599192": {
       "type": "gp-section-609039170517599192",
       "settings": {
-        "checksum": "aea7f93214df3cd614b30e87cd477a74766b6d0600cb78460de421d5d9e5c04a_1_1_1_0__1",
+        "checksum": "985c6f5690e200d4478c125d5c42edda0b1860020cab0a3f4706d5664e049f71_1_1_1_0__1",
         "ggJ2Vn5qARA_text": "All-Natural Matcha Collagen Formula",
         "gg3B-FaZMwc_text": "<p>Pure ingredients. No hidden nasties.</p>",
         "gg1xaEZyM3e_text": "Organic Ceremonial Matcha",
         "ggdWRr5nnHU_text": "Marine Collagen&nbsp;<br>Peptides",
         "ggS_JrDL29G_text": "Organic Coconut Milk Powder",
         "ggds4Fo7aIm_text": "Acacia&nbsp;<br>Fiber"
+      }
+    },
+    "gp_section_609041208664130208": {
+      "type": "gp-section-609041208664130208",
+      "settings": {
+        "checksum": "21ac85084f71c3e0a7fb6791db3ec7b438e6e9dd8f94c8469c664fa9c3bf8f75_1_1_1_0__1"
       }
     }
   },
@@ -116,6 +122,7 @@
     "gp_section_609031597013861024",
     "gp_section_609039170517599192",
     "gp_section_609033271296131744",
+    "gp_section_609041208664130208",
     "gp_section_609034224476881842"
   ]
 }
