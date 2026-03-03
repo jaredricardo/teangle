@@ -64,11 +64,20 @@
         "ggb5f3EeaWC_text": "Stop Riding the Coffee&nbsp;<br>Rollercoaster",
         "ggPBhPhnaF__text": "<p>Coffee spikes your energy fast.<br>Then it drops you just as quickly.</p><p>&nbsp;</p><p>Vanilla Matcha Collagen delivers calm, sustained focus powered by organic matcha — without jitters, anxiety, or that 2 PM crash.</p><p>&nbsp;</p><p>Steady in.<br>Steady through.<br>No crash out.</p>"
       }
+    },
+    "gp_section_609031597013861024": {
+      "type": "gp-section-609031597013861024",
+      "settings": {
+        "checksum": "fbda0dcc613ba3ff7ac017872569f6db9f823b306e553ffd77fa9aee84066b6b_1_1_1_0__1",
+        "ggjn__d6abd_text": "Glow Starts From Within",
+        "gggXEdXFdqh_text": "<p>Pure marine collagen, designed to support smoother skin, stronger hair, and a naturally healthy glow.</p><p>&nbsp;</p><p>Every scoop delivers 5g of high-quality collagen peptides to nourish your beauty routine from the inside out — without adding extra steps to your day.</p><p>&nbsp;</p><p>Simple.<br>Effective.<br>Made to be taken daily.</p>"
+      }
     }
   },
   "order": [
     "gp_section_609024031898731480",
     "gp_section_609029337106088642",
-    "gp_section_609029916893119448"
+    "gp_section_609029916893119448",
+    "gp_section_609031597013861024"
   ]
 }
