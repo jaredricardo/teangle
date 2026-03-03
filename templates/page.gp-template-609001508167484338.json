@@ -21,7 +21,7 @@
     },
     "gp_section_609001508217815986": {
       "settings": {
-        "checksum": "b8eb996018f9382694631157a4a0cebc8cbfb5bbf6781c10cf37b21bdd86a689_1_1_1_0__1",
+        "checksum": "b1f274afecb641682800bb3ee6ca093305c27435a400a2a8f9e65f5ab0df27fb_1_1_1_0__1",
         "gPxXnmOFubHLy_text": "<p>90% feel the benefits after 2+ months.</p>",
         "gdiJtZaeqcTSC_text": "<p><strong>LIMITED TIME OFFER • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
         "gg71ha8Isw0_label": "<p>BUY NOW | UP TO 37% OFF<br><span style=\"font-size:14px;\">From $1.98 per day | Ships from Sydney&nbsp;</span></p>",
@@ -33,8 +33,7 @@
         "gglsZaH_70Y_text": "<p><strong>60-DAY GLOW PEAK MONEY-BACK GUARANTEE</strong></p>",
         "ggtWTM3PBuz_text": "<p>3-in-1 blend of premium marine peptides + 25 superfoods + gut support.</p>",
         "gguTKJvsvfS_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
-        "ggxaFHHWQRO_text": "<p>Tri-Phase System™ ensures your body absorbs nutrients instead of wasting them.</p>",
-        "gnrFANyhVWsXY_label": "<p>BUY NOW | UP TO 37% OFF<br><span style=\"font-size:14px;\">From $1.98 per day | Ships from Sydney&nbsp;</span></p>"
+        "ggxaFHHWQRO_text": "<p>Tri-Phase System™ ensures your body absorbs nutrients instead of wasting them.</p>"
       },
       "type": "gp-section-609001508217815986"
     },
@@ -334,10 +333,13 @@
     },
     "gp_section_609002705691607812": {
       "settings": {
-        "checksum": "34dcc778c078278e8fb885cce933f6ab25e7fe4e8bf2061f3a954ae0e44dd035_1_1_1_0__1",
-        "gAIlAPSglzUkQ_text": "Strong Nails, Healthy Hair &amp; Radiant Skin—The 3-in-1 Way.",
+        "checksum": "14572254533564790731b14825851899086011ca35c4ca2e021c91cdb7ee6494_1_1_1_0__1",
+        "gAIlAPSglzUkQ_text": "Replace Coffee.&nbsp;<br>Glow Smarter.",
+        "gg2Bo7VqXvG_text": "<p>90% feel the benefits after 3+ months.</p>",
         "ggdLZzQDwLn_text": "<p>Excellent <span style=\"font-size:20px;\">★★★★★</span> 4.8 Rating • 3,000+ Verified Reviews<br>150,000+ Happy Canadian Customers</p>",
-        "ggee0IiSh4H_label": "<p>CANADIAN MATCHA RITUAL</p>"
+        "ggee0IiSh4H_label": "<p>CANADIAN MATCHA RITUAL</p>",
+        "ggl3c44jxui_text": "<p>💧 5g Marine Collagen Per Scoop<br>🍵 1g Organic Ceremonial Matcha<br>✨ No Jitters. No Crash. No Added Sugar.<br>📦 30 Servings Per Tub</p>",
+        "gnrFANyhVWsXY_label": "<p>BUY NOW | 20% OFF</p>"
       },
       "type": "gp-section-609002705691607812"
     }
