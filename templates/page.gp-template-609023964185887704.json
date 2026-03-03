@@ -48,23 +48,15 @@
     "gp_section_609029337106088642": {
       "type": "gp-section-609029337106088642",
       "settings": {
-        "checksum": "c3087e691ddd950f9dd1f0dd08507e19e199b40fb50945e6550be9bf399f2da5_1_1_1_0__1",
-        "ggpR5h0mS-t_text": "Designed to Support Women — Daily",
-        "gglZuPam_Iw_text": "<p>A smarter ritual that supports your energy, glow, balance, and confidence — all in one simple scoop.</p>",
-        "gg1oq-AAK1N_text": "Calm Energy",
-        "ggUgeTjPcBy_text": "Balance Support",
-        "ggES2PKsFAC_text": "Glow Support",
-        "gga-4SyoZyd_text": "Stronger Hair",
-        "gg-jhShMp7Z_text": "Gut Comfort",
-        "gghnbwNRpG3_text": "No Crash"
+        "checksum": "17ebc41a08ac605cee8a6db7faf147509776ddec45c8b26c611edb39979206fa_1_1_1_0__1"
       }
     },
     "gp_section_609029916893119448": {
       "type": "gp-section-609029916893119448",
       "settings": {
-        "checksum": "953df730ce1ead0227c7b50628a6fc017ff0d349df8d5ca526cfa09bc02de2ca_1_1_1_0__1",
-        "ggb5f3EeaWC_text": "Stop Riding the Coffee&nbsp;<br>Rollercoaster",
-        "ggPBhPhnaF__text": "<p>Coffee spikes your energy fast.<br>Then it drops you just as quickly.</p><p>&nbsp;</p><p>Vanilla Matcha Collagen delivers calm, sustained focus powered by organic matcha — without jitters, anxiety, or that 2 PM crash.</p><p>&nbsp;</p><p>Steady in.<br>Steady through.<br>No crash out.</p>"
+        "checksum": "858c92cff2be06a8f06502d187d4b6cf263f9b1d0d21a4159f9bd2fd1a8d600c_1_1_1_0__1",
+        "ggb5f3EeaWC_text": "Energy That Works With You",
+        "ggPBhPhnaF__text": "<p>Coffee may give you a quick boost, but it often comes with jitters and a hard crash. Vanilla Matcha Collagen delivers smooth, steady energy from organic ceremonial matcha, combined with 5g of marine collagen to support your glow from within. Feel focused, balanced, and consistent — without the rollercoaster.</p>"
       }
     },
     "gp_section_609031597013861024": {
@@ -86,14 +78,29 @@
     "gp_section_609034224476881842": {
       "type": "gp-section-609034224476881842",
       "settings": {
-        "checksum": "dfa8d34ed952f0046a44bf4d48ca58895e8c5ca0326c14f0d81439bea4d02ce1_1_1_1_0__1"
+        "checksum": "292bbff285631d37d72a2444aa73413e5bbd9e19c8160bac5e8e8b6d4ce653d4_1_1_1_0__1"
+      }
+    },
+    "gp_section_609038777611977410": {
+      "type": "gp-section-609038777611977410",
+      "settings": {
+        "checksum": "aa2d207737c755c6fa7972e74e1df95e443f31abdbff2ba1e3113009715305cf_1_1_1_0__1",
+        "ggpR5h0mS-t_text": "Designed to Support Women — Daily",
+        "gglZuPam_Iw_text": "<p>A smarter ritual that supports your energy, glow, balance, and confidence — all in one simple scoop.</p>",
+        "gg1oq-AAK1N_text": "Calm Energy",
+        "ggUgeTjPcBy_text": "Balance Support",
+        "ggES2PKsFAC_text": "Glow Support",
+        "gga-4SyoZyd_text": "Stronger Hair",
+        "gg-jhShMp7Z_text": "Gut Comfort",
+        "gghnbwNRpG3_text": "No Crash"
       }
     }
   },
   "order": [
     "gp_section_609024031898731480",
-    "gp_section_609029337106088642",
+    "gp_section_609038777611977410",
     "gp_section_609029916893119448",
+    "gp_section_609029337106088642",
     "gp_section_609031597013861024",
     "gp_section_609033271296131744",
     "gp_section_609034224476881842"
