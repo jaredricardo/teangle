@@ -275,7 +275,7 @@
     },
     "gp_section_609001508385588146": {
       "settings": {
-        "checksum": "67bf2777efe86d4c48b308f0940ca6f18ffaccc8c218c01f63dc7a017d298197_1_1_1_0__1",
+        "checksum": "2e888c792a6796fae4bd85767cdca084fc9519ebaeeb6ce6c8bab4b634a0ffbc_1_1_1_0__1",
         "ggPHbjwJ9ap_text": "As featured in"
       },
       "type": "gp-section-609001508385588146"
@@ -304,18 +304,18 @@
     },
     "gp_section_609001508402430898": {
       "settings": {
-        "checksum": "7c373c7a10f3e0175cfe502237ebf842fdc927dd9887d90b18722c2d9dce08f7_1_1_1_0__1",
-        "gFKCpbKENXhIO_label": "<p>BUY NOW | UP TO 37% OFF</p>",
-        "gaknTEegdbsUM_text": "Our Story",
-        "gfUXXINnGpISC_text": "<p>Glowactiv was born from one frustration: the supplement shelf. Cluttered cupboards, expensive stacks, and clumpy collagen that tasted bad, so you’d quit before consistency kicked in.&nbsp;</p><p>&nbsp;</p><p>We’re Meghan &amp; Brett, and we wanted one premium, daily ritual you’d actually stick to.&nbsp;</p><p>&nbsp;</p><p>That’s why we created the Glowactiv 3-in-1 Glow Matrix™—gut support + marine collagen + superfoods in one scoop. No juggling tubs. No “punishment drink.” An effortless daily glow ritual.</p>",
-        "gg-yWslpSws_text": "<p><strong>LIMITED TIME OFFER • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
-        "ggMKyMhsnaC_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>"
+        "checksum": "06acae6bc871693306669541798d793e329c60865b57a24e19ef17c60aa1917b_1_1_1_0__1",
+        "gaknTEegdbsUM_text": "The Daily Glow Ritual Your Body Actually Needs.",
+        "gfUXXINnGpISC_text": "<p>Vanilla Matcha Collagen delivers calm, sustained focus from organic ceremonial matcha while nourishing your skin, hair, nails, and joints with 5g of marine collagen per scoop.</p><p>&nbsp;</p><p>No jitters.<br>No sugar.<br>No afternoon slump.</p><p>&nbsp;</p><p>Just steady energy and visible glow</p>",
+        "ggJKUqRCzLo_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
+        "ggMKyMhsnaC_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
+        "ggn0LPthH0O_label": "<p>BUY NOW | 20% OFF</p>"
       },
       "type": "gp-section-609001508402430898"
     },
     "gp_section_609002705691607812": {
       "settings": {
-        "checksum": "9874e14347af2a540ff6ea2674ac619879083bdc1618ce0e9bb3cd34cca1514f_1_1_1_0__1",
+        "checksum": "c3b31df9aba17f9a10664d2356acc4246a74b1997f61d05ebdb162d496976a31_1_1_1_0__1",
         "gAIlAPSglzUkQ_text": "Replace Coffee.&nbsp;<br>Glow Smarter.",
         "gg2Bo7VqXvG_text": "<p>90% feel the benefits after 3+ months.</p>",
         "ggS9LwWBrB-_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
@@ -325,6 +325,17 @@
         "gnrFANyhVWsXY_label": "<p>BUY NOW | 20% OFF</p>"
       },
       "type": "gp-section-609002705691607812"
+    },
+    "gp_section_609005170650514180": {
+      "settings": {
+        "checksum": "cf56722a730ad2263e21beacb415313bc635b4595ffd028fc2870fbbb1277185_1_1_1_0__1",
+        "ggBPv88RwYu_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
+        "ggEv-nycDM__label": "<p>BUY NOW | UP TO 37% OFF</p>",
+        "ggY3GV6fDaJ_text": "<p>Glowactiv was born from one frustration: the supplement shelf. Cluttered cupboards, expensive stacks, and clumpy collagen that tasted bad, so you’d quit before consistency kicked in.&nbsp;</p><p>&nbsp;</p><p>We’re Meghan &amp; Brett, and we wanted one premium, daily ritual you’d actually stick to.&nbsp;</p><p>&nbsp;</p><p>That’s why we created the Glowactiv 3-in-1 Glow Matrix™—gut support + marine collagen + superfoods in one scoop. No juggling tubs. No “punishment drink.” An effortless daily glow ritual.</p>",
+        "ggcpY3s2Ogw_text": "Our Story",
+        "ggfejtXkVIx_text": "<p><strong>LIMITED TIME OFFER • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>"
+      },
+      "type": "gp-section-609005170650514180"
     }
   },
   "order": [
@@ -332,6 +343,7 @@
     "gp_section_609002705691607812",
     "gp_section_609001508385588146",
     "gp_section_609001508234724274",
+    "gp_section_609001508402430898",
     "gp_section_609001508251435954",
     "gp_section_609001508184261554",
     "gp_section_609001508268147634",
@@ -340,7 +352,7 @@
     "gp_section_609001508402365362",
     "gp_section_609001508368942002",
     "gp_section_609001508368810930",
-    "gp_section_609001508402430898",
+    "gp_section_609005170650514180",
     "gp_section_609001508385653682",
     "gp_section_609001508234593202",
     "gp_section_609001508268213170",
