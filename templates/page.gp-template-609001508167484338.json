@@ -73,7 +73,7 @@
     },
     "gp_section_609001508335387570": {
       "settings": {
-        "checksum": "dfacbbaaea7cfee74ed7866b3bb7b416925e90b2f8b70e1261ea323f94f4f084_1_1_1_0__1",
+        "checksum": "7b0274da069d39bfd4db35198754b93ae2a2c2a95d7b5f226c6d4a99c1c251ec_1_1_1_0__1",
         "ggXGrWwOKW8_label": "<p>BUY NOW | 20% OFF</p>",
         "gga2XBHkZRc_label": "<p>BUY NOW | 20% OFF</p>",
         "ggx1h3wY82k_text": "<p>Limited Time Offer - 20% off your first 3 months</p>",
@@ -219,5 +219,6 @@
     "gp_section_609001508234593202",
     "gp_section_609001508268213170",
     "gp_section_609001508369007538"
-  ]
+  ],
+  "layout": "theme.gempages.blank"
 }
