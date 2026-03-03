@@ -9,17 +9,6 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69B6sK3t.ttf) format('truetype');
 }
-
-
-@font-face {
-  font-family: 'Sofia Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69B6sK3t.ttf) format('truetype');
-}
-
-
 @font-face {
   font-family: 'Sofia Sans';
   font-style: normal;
@@ -183,7 +172,7 @@
     }
   '
       section-id="{{section.id}}" data-id="gtMBbrY4o-"
-      style="--mb:0px;--mb-tablet:0px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%"
+      style="--mb:0px;--mb-tablet:0px;--mb-mobile:15px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--pos:sticky;--top:0px"
       class="gp-relative gp-w-full gtMBbrY4o- "
     >
       <div
@@ -1109,7 +1098,342 @@
         </div>
       </div>
     </div>
-    <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:var(--g-s-l)" class="g2IrhyX3VF ">
+    
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:var(--g-s-l);--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gEETpbqHdo gp-custom-code">
+      <div>
+    {%- comment -%}
+Teangle Matcha Collagen | GemPages Variant UI
+Row 1: Flavour dropdown (with emoji)
+Row 2: Number of servings cards (3 columns) with images pulled from VARIANT images automatically
+Updates real Shopify variant id input so Add to Cart works
+
+Paste inside a GemPages HTML/Liquid block on the PRODUCT page.
+{%- endcomment -%}
+
+<div class="tgx-variants" data-product-handle="{{ product.handle }}">
+  <!-- Row 1: Flavor dropdown -->
+  <div class="tgx-row">
+    <label class="tgx-label" for="tgxFlavor">Choose Your Flavour 🍵</label>
+    <select class="tgx-select" id="tgxFlavor" aria-label="Choose flavour"></select>
+  </div>
+
+  <!-- Row 2: Servings cards -->
+  <div class="tgx-row">
+    <div class="tgx-label">Choose Your Supply 📦</div>
+    <div class="tgx-grid" id="tgxServingsGrid"></div>
+  </div>
+</div>
+
+<script type="application/json" id="tgxProductJson">
+  {{ product | json }}
+</script>
+
+<style>
+/* Wrapper */
+.tgx-variants{ width:100%; font-family: inherit; }
+
+/* Rows */
+.tgx-row{ margin: 14px 0; }
+.tgx-label{
+  display:block;
+  margin-bottom: 10px;
+  font-weight: 800;
+  font-size: 14px;
+  color:#111;
+}
+
+/* Dropdown */
+.tgx-select{
+  width: 100%;
+  border: 2px solid rgba(0,0,0,.14);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 15px;
+  background:#fff;
+  outline: none;
+}
+
+/* Cards grid */
+.tgx-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Card */
+.tgx-card{
+  border: 2px solid rgba(0,0,0,.14);
+  border-radius: 18px;
+  background:#fff;
+  padding: 12px;
+  cursor:pointer;
+  position:relative;
+  text-align:center;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.tgx-card:hover{ transform: translateY(-2px); }
+.tgx-card.is-active{
+  border-color:#5B4CC9;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+}
+
+/* Image */
+.tgx-img{
+  width:100%;
+  height: 92px;
+  object-fit: contain;
+  display:block;
+  margin: 2px auto 8px;
+}
+
+/* Text */
+.tgx-title{
+  font-weight: 900;
+  font-size: 15px;
+  color:#111;
+  line-height: 1.1;
+}
+.tgx-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  border: 2px solid #5B4CC9;
+  color:#5B4CC9;
+  background:#fff;
+  margin-top: 8px;
+}
+.tgx-card.is-active .tgx-pill{
+  background:#5B4CC9;
+  color:#fff;
+}
+
+/* Discount badge */
+.tgx-discount{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom:-10px;
+  background:#FF6FB5;
+  color:#fff;
+  font-weight:900;
+  font-size:12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+  display:none;
+}
+.tgx-card.has-discount .tgx-discount{ display:block; }
+
+/* Mobile */
+@media (max-width: 768px){
+  .tgx-grid{ grid-template-columns: 1fr; }
+  .tgx-img{ height: 110px; }
+}
+</style>
+
+<script>
+(function(){
+  const jsonEl = document.getElementById('tgxProductJson');
+  if(!jsonEl) return;
+
+  let product = {};
+  try { product = JSON.parse(jsonEl.textContent || "{}"); } catch(e){ return; }
+  if(!product || !product.variants || !product.variants.length) return;
+
+  const flavorSelect = document.getElementById('tgxFlavor');
+  const grid = document.getElementById('tgxServingsGrid');
+  if(!flavorSelect || !grid) return;
+
+  // Helper: unique array
+  const uniq = (arr) => Array.from(new Set(arr.filter(v => v !== null && v !== undefined && String(v).trim() !== "")));
+
+  // Shopify variant fields option1/2/3
+  const getOpt = (v, idx) => idx === 0 ? v.option1 : idx === 1 ? v.option2 : v.option3;
+
+  // Detect option indices by name (Flavour / Number of servings)
+  const optionNames = (product.options || []).map(o => (o || "").toLowerCase());
+  let flavorI = optionNames.findIndex(n => n.includes("flav"));
+  let servingsI = optionNames.findIndex(n => n.includes("serv"));
+
+  // Fallback if theme/product json is odd
+  if(flavorI < 0) flavorI = 0;
+  if(servingsI < 0) servingsI = 1;
+
+  const flavors = uniq(product.variants.map(v => getOpt(v, flavorI)));
+  const servings = uniq(product.variants.map(v => getOpt(v, servingsI)));
+
+  // Discount labels (edit if you want)
+  const discountMap = { "60":"12% Off", "90":"16% Off" };
+
+  // Emoji per flavor
+  const flavorEmoji = (name) => {
+    const n = (name || "").toLowerCase();
+    if(n.includes("vanilla")) return "🍦";
+    if(n.includes("choco")) return "🍫";
+    if(n.includes("original")) return "🍵";
+    return "✨";
+  };
+
+  // Find the real Shopify variant id input used by Add to Cart
+  const findVariantIdInput = () => {
+    const forms = Array.from(document.querySelectorAll('form[action*="/cart/add"]'));
+    for(const form of forms){
+      const idInput = form.querySelector('input[name="id"]');
+      if(idInput) return idInput;
+    }
+    return document.querySelector('input[name="id"]');
+  };
+  const idInput = findVariantIdInput();
+
+  // Match variant by options (flavor + servings)
+  const findVariant = (flavorVal, servingsVal) => {
+    // Prefer available variant
+    return product.variants.find(v =>
+      getOpt(v, flavorI) === flavorVal &&
+      getOpt(v, servingsI) === servingsVal &&
+      v.available !== false
+    ) || product.variants.find(v =>
+      getOpt(v, flavorI) === flavorVal &&
+      getOpt(v, servingsI) === servingsVal
+    ) || null;
+  };
+
+  // Get variant image URL (works for your product because variants have image_id and product.images have variant_ids)
+  const getVariantImg = (variant) => {
+    if(!variant) return "";
+    // If featured_image exists (some themes/storefront json)
+    if(variant.featured_image && variant.featured_image.src) return variant.featured_image.src;
+    if(typeof variant.featured_image === "string") return variant.featured_image;
+
+    // Use image_id + product.images list (your JSON includes variant_ids on images)
+    if(variant.image_id && Array.isArray(product.images)){
+      const imgObj = product.images.find(img => img && img.id === variant.image_id);
+      if(imgObj && imgObj.src) return imgObj.src;
+
+      // Fallback: find image with this variant id in variant_ids
+      const imgObj2 = product.images.find(img => img.variant_ids && img.variant_ids.includes(variant.id));
+      if(imgObj2 && imgObj2.src) return imgObj2.src;
+    }
+
+    // Fallback product featured
+    if(product.featured_image) return product.featured_image;
+    if(product.images && product.images[0] && product.images[0].src) return product.images[0].src;
+    return "";
+  };
+
+  const setVariantId = (variant) => {
+    if(!variant || !idInput) return;
+    idInput.value = variant.id;
+    idInput.dispatchEvent(new Event('input', { bubbles:true }));
+    idInput.dispatchEvent(new Event('change', { bubbles:true }));
+  };
+
+  // UI state
+  let currentFlavor = flavors[0] || "";
+  let currentServings = servings[0] || "";
+
+  // If page already has a selected variant, sync from it
+  const syncFromExisting = () => {
+    if(!idInput) return;
+    const currentId = parseInt(idInput.value, 10);
+    if(!currentId) return;
+    const v = product.variants.find(x => x.id === currentId);
+    if(!v) return;
+    currentFlavor = getOpt(v, flavorI) || currentFlavor;
+    currentServings = getOpt(v, servingsI) || currentServings;
+  };
+
+  const setActiveCard = (servVal) => {
+    Array.from(grid.querySelectorAll('.tgx-card')).forEach(card => {
+      card.classList.toggle('is-active', card.dataset.value === servVal);
+    });
+  };
+
+  const renderFlavorDropdown = () => {
+    flavorSelect.innerHTML = "";
+    flavors.forEach(f => {
+      const opt = document.createElement("option");
+      opt.value = f;
+      opt.textContent = `${flavorEmoji(f)} ${f}`;
+      flavorSelect.appendChild(opt);
+    });
+    flavorSelect.value = currentFlavor;
+  };
+
+  const renderServingsCards = () => {
+    grid.innerHTML = "";
+
+    servings.forEach(sv => {
+      const v = findVariant(currentFlavor, sv);
+      const img = getVariantImg(v);
+
+      const numericMatch = String(sv).match(/\d+/);
+      const numeric = numericMatch ? numericMatch[0] : String(sv);
+      const discountText = discountMap[numeric];
+
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "tgx-card";
+      card.dataset.value = sv;
+
+      if(discountText) card.classList.add("has-discount");
+
+      card.innerHTML = `
+        ${img ? `<img class="tgx-img" src="${img}" alt="${sv}">` : ``}
+        <div class="tgx-title">${numeric} DAY SUPPLY</div>
+        <div class="tgx-pill">${sv} Servings</div>
+        <div class="tgx-discount">${discountText || ""}</div>
+      `;
+
+      card.addEventListener("click", () => {
+        currentServings = sv;
+        setActiveCard(sv);
+        const match = findVariant(currentFlavor, currentServings);
+        setVariantId(match);
+      });
+
+      grid.appendChild(card);
+    });
+
+    setActiveCard(currentServings);
+  };
+
+  // INIT
+  syncFromExisting();
+  renderFlavorDropdown();
+
+  // Ensure servings exists for selected flavor
+  if(!findVariant(currentFlavor, currentServings)) currentServings = servings[0] || "";
+
+  renderServingsCards();
+
+  // Set initial variant in form
+  setVariantId(findVariant(currentFlavor, currentServings));
+
+  // Events
+  flavorSelect.addEventListener("change", () => {
+    currentFlavor = flavorSelect.value;
+
+    // keep same servings if possible
+    if(!findVariant(currentFlavor, currentServings)) currentServings = servings[0] || "";
+
+    renderServingsCards();
+    setVariantId(findVariant(currentFlavor, currentServings));
+  });
+})();
+</script>
+    </div>
+    </div>
+  <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:var(--g-s-l)" class="g2IrhyX3VF ">
       
       {% render 'loop-subscriptions' type: 'product-widget', product: product %}
     
@@ -1439,7 +1763,7 @@
       role="presentation"
       data-id="gZo4fdrS4F"
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1772538285849 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gZo4fdrS4F"
+      class="gp-group/image gp-relative force-publish-1772538326613 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gZo4fdrS4F"
     >
       <div
         
