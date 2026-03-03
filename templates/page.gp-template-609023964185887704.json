@@ -24,9 +24,9 @@
       ],
       "settings": {
         "section_preload": "true",
-        "checksum": "7d6911bbc8b4e4887285679da5aeb93e4e0813b73b98de0e5b524cfc90b28c3e_1_1_1_0__1",
+        "checksum": "05cc6531d02213c5a39ed07c46a5a776097c21106fe8ac261bed80981a6abc09_1_1_1_0__1",
         "ggU5PwO8ES1_text": "Matcha Energy Meets&nbsp;<br>Beauty Collagen",
-        "ggczQlFQuMx_text": "<p>☀️ <strong>More energy, focus with no jitters</strong></p><p>🥥 <strong>Delicious coconut and vanilla flavours</strong></p><p>🥛 <strong>Super easy to mix with milk, water etc</strong></p><p>✨ <strong>Glowing skin, hair &amp; nails support</strong></p>",
+        "ggczQlFQuMx_text": "<p><span style=\"font-size:18px;\">☀️ <strong>More energy, focus with no jitters</strong></span></p><p><span style=\"font-size:18px;\">🥥 <strong>Delicious coconut and vanilla flavours</strong></span></p><p><span style=\"font-size:18px;\">🥛 <strong>Super easy to mix with milk, water etc</strong></span></p><p><span style=\"font-size:18px;\">✨ <strong>Glowing skin, hair &amp; nails support</strong></span></p>",
         "ggTMwAK8DSU_label": "ADD TO CART",
         "ggTMwAK8DSU_outOfStockLabel": "Out of stock",
         "ggTMwAK8DSU_unavailableLabel": "Unavailable",
@@ -48,7 +48,7 @@
     "gp_section_609029337106088642": {
       "type": "gp-section-609029337106088642",
       "settings": {
-        "checksum": "eeadc26bf974190430fdedae1d19ca47891c39687e4e103649430a2a47362c24_1_1_1_0__1",
+        "checksum": "c3087e691ddd950f9dd1f0dd08507e19e199b40fb50945e6550be9bf399f2da5_1_1_1_0__1",
         "ggpR5h0mS-t_text": "Designed to Support Women — Daily",
         "gglZuPam_Iw_text": "<p>A smarter ritual that supports your energy, glow, balance, and confidence — all in one simple scoop.</p>",
         "gg1oq-AAK1N_text": "Calm Energy",
@@ -62,7 +62,7 @@
     "gp_section_609029916893119448": {
       "type": "gp-section-609029916893119448",
       "settings": {
-        "checksum": "dbba695e5dc3163ede3672d949d3c2fe44bde004ab90baa5d152b4c0f110a24e_1_1_1_0__1",
+        "checksum": "953df730ce1ead0227c7b50628a6fc017ff0d349df8d5ca526cfa09bc02de2ca_1_1_1_0__1",
         "ggb5f3EeaWC_text": "Stop Riding the Coffee&nbsp;<br>Rollercoaster",
         "ggPBhPhnaF__text": "<p>Coffee spikes your energy fast.<br>Then it drops you just as quickly.</p><p>&nbsp;</p><p>Vanilla Matcha Collagen delivers calm, sustained focus powered by organic matcha — without jitters, anxiety, or that 2 PM crash.</p><p>&nbsp;</p><p>Steady in.<br>Steady through.<br>No crash out.</p>"
       }
@@ -70,7 +70,7 @@
     "gp_section_609031597013861024": {
       "type": "gp-section-609031597013861024",
       "settings": {
-        "checksum": "fbda0dcc613ba3ff7ac017872569f6db9f823b306e553ffd77fa9aee84066b6b_1_1_1_0__1",
+        "checksum": "b23ccf54c93fdf1d29fae064f243a06b54415a71055a9e6b51b53ecb0b9e2824_1_1_1_0__1",
         "ggjn__d6abd_text": "Glow Starts From Within",
         "gggXEdXFdqh_text": "<p>Pure marine collagen, designed to support smoother skin, stronger hair, and a naturally healthy glow.</p><p>&nbsp;</p><p>Every scoop delivers 5g of high-quality collagen peptides to nourish your beauty routine from the inside out — without adding extra steps to your day.</p><p>&nbsp;</p><p>Simple.<br>Effective.<br>Made to be taken daily.</p>"
       }
@@ -78,9 +78,15 @@
     "gp_section_609033271296131744": {
       "type": "gp-section-609033271296131744",
       "settings": {
-        "checksum": "e2dabc3798ccd8f78d26b0ef564dfcdaa4608953e9934d81d5640542ed2cdb19_1_1_1_0__1",
-        "ggjkksF2zRg_text": "Easy to Make and Endless&nbsp;<br>Ways to Enjoy",
+        "checksum": "099bbba7f6242e76814028abca38a9a957ccc945c67eb6eb21dec1b67949bd2d_1_1_1_0__1",
+        "ggjkksF2zRg_text": "Easy to Make and Endless Ways to Enjoy",
         "gg9YjgyUmvl_text": "<p>Hot water. Oat milk. In a smoothie. However you like it, Teangle blends smoothly, dissolves instantly, and fits your routine. Plus, you’ll get 101 Delicious Matcha Recipes, so you’ll never run out of tasty ideas.</p>"
+      }
+    },
+    "gp_section_609034224476881842": {
+      "type": "gp-section-609034224476881842",
+      "settings": {
+        "checksum": "5837b19f95797efe6309fa5654d39ce1d426ef32198db584deab3d62bfc27bbe_1_1_1_0__1"
       }
     }
   },
@@ -89,6 +95,7 @@
     "gp_section_609029337106088642",
     "gp_section_609029916893119448",
     "gp_section_609031597013861024",
-    "gp_section_609033271296131744"
+    "gp_section_609033271296131744",
+    "gp_section_609034224476881842"
   ]
 }
