@@ -85,26 +85,6 @@
       },
       "type": "gp-section-609001508268213170"
     },
-    "gp_section_609001508335256498": {
-      "settings": {
-        "checksum": "8c60a6dc4b8b9904f1e69135f540750ddb66e6a2b46ea75d01e5095b4636b2a0_1_1_1_0__1",
-        "gg0kAuh8qt-_text": "<p>“Vanilla Matcha Collagen has become part of my daily routine. I love how smooth and calm my energy feels throughout the morning. After a few weeks, I noticed my skin looking healthier and more refreshed. If you want glow and focus, this is it.”</p>",
-        "gg2dIloCbfO_text": "Goji Berry",
-        "gg4ZdlHbMCa_text": "<p>Verified Buyer</p>",
-        "ggOvQ-cemsZ_text": "Verified Buyer",
-        "ggQNLPMhuZU_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
-        "ggSb4Ef5Hp8_text": "Lana C.",
-        "ggXqgMLVMKS_label": "<p>BUY NOW | 20% OFF</p>",
-        "gga5EdRdtzD_text": "Blueberry",
-        "ggbFU43phfB_text": "<p>“It’s so nice to finally replace coffee with something clean and natural. I feel steady energy without the crash, and my skin looks brighter too. It honestly does exactly what it promises and has become my favorite morning ritual.”</p>",
-        "ggi2RlRWFjN_text": "All-Natural Matcha Collagen Formula",
-        "ggiR2FFYMjY_text": "Kale",
-        "ggvJcGj_zy8_text": "<p>Pure ingredients. No hidden nasties.</p>",
-        "ggxGD0jFtPt_text": "Açai Berry",
-        "ggzneOZJaCZ_text": "<p>Maria D.</p>"
-      },
-      "type": "gp-section-609001508335256498"
-    },
     "gp_section_609001508335322034": {
       "settings": {
         "checksum": "7c0321e57167b1fa1d8673481fb565ccaefd376206d39ba0664f8e0dbab57315_1_1_1_0__1"
@@ -113,7 +93,7 @@
     },
     "gp_section_609001508335387570": {
       "settings": {
-        "checksum": "8cfaa7ba9a3d0463689788802d4a2f046e7eaed8ed50715c40cb9353fd85e2b4_1_1_1_0__1",
+        "checksum": "9bdbce0cb5276ad9d0dde3d496346f5a8acdb3e2fd844ab48b850a7a33f732fa_1_1_1_0__1",
         "ggXGrWwOKW8_label": "<p>BUY NOW | 20% OFF</p>",
         "gga2XBHkZRc_label": "<p>BUY NOW | 20% OFF</p>",
         "ggx1h3wY82k_text": "<p>Limited Time Offer - 20% off your first 3 months</p>",
@@ -225,6 +205,26 @@
         "ggcpY3s2Ogw_text": "Our Story"
       },
       "type": "gp-section-609005170650514180"
+    },
+    "gp_section_609032985731138242": {
+      "settings": {
+        "checksum": "63e120ab0517109662bc3c860464a8d52bcf932303d5cf3545ce8d80050cee06_1_1_1_0__1",
+        "gg8P7TRlIAD_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
+        "gg8hcPNpQaP_text": "Açai Berry",
+        "ggACaeMMVE8_text": "<p>Maria D.</p>",
+        "ggAIaUT4M6V_text": "Verified Buyer",
+        "ggGQpeEacW4_text": "<p>“It’s so nice to finally replace coffee with something clean and natural. I feel steady energy without the crash, and my skin looks brighter too. It honestly does exactly what it promises and has become my favorite morning ritual.”</p>",
+        "ggHJebQHjW3_text": "Kale",
+        "ggMqijeJ6_C_label": "<p>BUY NOW | 20% OFF</p>",
+        "ggOwkkjG_5a_text": "<p>“Vanilla Matcha Collagen has become part of my daily routine. I love how smooth and calm my energy feels throughout the morning. After a few weeks, I noticed my skin looking healthier and more refreshed. If you want glow and focus, this is it.”</p>",
+        "ggRzJq_OG7A_text": "All-Natural Matcha Collagen Formula",
+        "ggfZ12L2xjv_text": "Lana C.",
+        "ggkBbnoE9Jq_text": "<p>Verified Buyer</p>",
+        "ggqV29prDn-_text": "<p>Pure ingredients. No hidden nasties.</p>",
+        "ggx9PgSiDC3_text": "Blueberry",
+        "ggxzkbL7yc8_text": "Goji Berry"
+      },
+      "type": "gp-section-609032985731138242"
     }
   },
   "order": [
@@ -233,7 +233,7 @@
     "gp_section_609001508385588146",
     "gp_section_609001508402430898",
     "gp_section_609001508268147634",
-    "gp_section_609001508335256498",
+    "gp_section_609032985731138242",
     "gp_section_609001508402365362",
     "gp_section_609001508368942002",
     "gp_section_609001508368810930",
@@ -246,6 +246,5 @@
     "gp_section_609001508368876466",
     "gp_section_609001508335322034",
     "gp_section_609001508234658738"
-  ],
-  "layout": "theme.gempages.blank"
+  ]
 }
