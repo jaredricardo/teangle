@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_609024031898731480": {
+      "block_order": [
+        "gp_app_okendo-reviews-loyalty_glfKypoJLs"
+      ],
+      "blocks": {
+        "gp_app_okendo-reviews-loyalty_glfKypoJLs": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "matcha-collagen-3"
+          }
+        }
+      },
+      "settings": {
+        "checksum": "1d19845d92c4016d215fdf37620300bd5bf65b51aa58ff71ac11812d6eef7cf7_1_1_1_0__1",
+        "ggAHiiy9cc7_viewLessText": "Show less",
+        "ggAHiiy9cc7_viewMoreText": "Show more",
+        "ggo2UoYdPvX_label": "Add to cart",
+        "ggo2UoYdPvX_outOfStockLabel": "Out of stock",
+        "ggo2UoYdPvX_unavailableLabel": "Unavailable",
+        "ggo2UoYdPvX_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "ggpG3goE7hd_text": "Quantity",
+        "section_preload": "true"
+      },
+      "type": "gp-section-609024031898731480"
+    }
+  },
+  "order": [
+    "gp_section_609024031898731480"
+  ]
+}
