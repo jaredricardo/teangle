@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "gp_section_609001508184261554": {
-      "settings": {
-        "checksum": "0215bcadb2afdb7b9eaca9c536cafe9fb280d18b44cdeabf0d73352de04f8b00_1_1_1_0__1",
-        "gg1d-N0IkoH_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
-        "ggOVsVDv_I5_label": "<p>BUY NOW | UP TO 37% OFF</p>",
-        "ggmE0dne2uh_text": "Powered By The Tri-Phase Glow Support System™",
-        "ggvc_pnuJXO_text": "The Daily Ritual Your Body&nbsp;Needs to Glow"
-      },
-      "type": "gp-section-609001508184261554"
-    },
     "gp_section_609001508217881522": {
       "settings": {
         "checksum": "8c3361c868a6dff1f79b80fc3c6223f3c389047d08b7915e2dab5c72c63e1897_1_1_1_0__1"
@@ -47,13 +37,6 @@
         "ggjOrLd1Hpp_text": "<p><strong>1.5x Better Absorption:&nbsp;</strong><br>Smaller molecules reach your bloodstream faster for quicker, visible results.</p><p>&nbsp;</p><p><strong>Targeted for Beauty:&nbsp;</strong><br>Rich in Type I collagen—the specific building block for skin elasticity and hair strength.</p><p>&nbsp;</p><p><strong>Remarkably Clean:&nbsp;</strong><br>Sustainably wild-caught, hormone-free, and 100% tasteless in your coffee.</p><p>&nbsp;</p><p><strong>The Verdict:&nbsp;</strong><br>Bioavailability is the key to a real glow. Marine delivers where bovine falls short.</p>"
       },
       "type": "gp-section-609001508234658738"
-    },
-    "gp_section_609001508234724274": {
-      "settings": {
-        "checksum": "0794a5f81450abc119166062a71260ccefdd1edb3118a9baecbd61447d13e88f_1_1_1_0__1",
-        "ggM8fW_DL10_text": "As featured in"
-      },
-      "type": "gp-section-609001508234724274"
     },
     "gp_section_609001508251370418": {
       "settings": {
@@ -141,37 +124,19 @@
     },
     "gp_section_609001508335256498": {
       "settings": {
-        "checksum": "d5cadddade67d832c4b20abfb2561586bd3e08992c1877ebe777005af3af822a_1_1_1_0__1",
+        "checksum": "e30bcf69bbfb93a0e4b7b3159b36b082aa76021685287f2a792a9c6f1082fa4c_1_1_1_0__1",
         "gg0kAuh8qt-_text": "<p>“Vanilla Matcha Collagen has become part of my daily routine. I love how smooth and calm my energy feels throughout the morning. After a few weeks, I noticed my skin looking healthier and more refreshed. If you want glow and focus, this is it.”</p>",
         "gg2dIloCbfO_text": "Goji Berry",
         "gg4ZdlHbMCa_text": "<p>Verified Buyer</p>",
-        "gg6ns888WwG_text": "<p>High in vitamin C to support collagen and radiance. Helps smooth and protect for a healthier glow.</p>",
-        "gg9rBVmDqEx_text": "<p>Amino acids support collagen strength and skin renewal. Helps detoxify for a smoother, clearer complexion.</p>",
-        "ggACZrDZWAd_text": "Turmeric",
-        "ggDsS2JCp86_label": "<p>BUY NOW | UP TO 37% OFF</p>",
-        "ggEIv08aH3T_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
-        "ggHtdsssGIV_text": "Green Tea",
-        "ggIljoadqFS_text": "<p>Antioxidant-rich to support collagen and skin firmness. Helps visibly brighten and protect against daily skin stress.</p>",
-        "ggIw2twZ5dd_text": "Goji Berry",
-        "ggJWUXvciCD_text": "<p>Mineral-rich seaweed that supports hydration and elasticity. Helps defend skin from environmental damage.</p>",
-        "ggMwgKuHOTX_text": "Kelp",
         "ggOvQ-cemsZ_text": "Verified Buyer",
         "ggQNLPMhuZU_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
-        "ggRRgLcVuCo_text": "<p>Rich in vitamin C to support collagen and elasticity. Helps smooth fine lines and boost hydration.</p>",
         "ggSb4Ef5Hp8_text": "Lana C.",
         "ggXqgMLVMKS_label": "<p>BUY NOW | 20% OFF</p>",
-        "gg_ubJnOvmS_text": "Blueberry",
-        "gg_yD25BKvP_text": "Kale",
         "gga5EdRdtzD_text": "Blueberry",
         "ggbFU43phfB_text": "<p>“It’s so nice to finally replace coffee with something clean and natural. I feel steady energy without the crash, and my skin looks brighter too. It honestly does exactly what it promises and has become my favorite morning ritual.”</p>",
-        "ggdMORzSoLQ_text": "<p>Loaded with skin-loving vitamins for firmness and glow. Helps protect against ageing and dullness.</p>",
         "ggi2RlRWFjN_text": "All-Natural Matcha Collagen Formula",
         "ggiR2FFYMjY_text": "Kale",
-        "ggkS9dNJ676_text": "<p>Naturally calms irritation and supports skin repair. Helps reduce redness and promote a brighter look.</p>",
-        "ggmezUqmlXr_text": "<p>Powerful antioxidants help protect skin from daily damage. Supports hydration, elasticity, and a clearer glow.</p>",
-        "ggqdEf4Dj3-_text": "Spirulina",
         "ggvJcGj_zy8_text": "<p>Pure ingredients. No hidden nasties.</p>",
-        "ggvm-pvN9UT_text": "Açai Berry",
         "ggxGD0jFtPt_text": "Açai Berry",
         "ggzneOZJaCZ_text": "<p>Maria D.</p>"
       },
@@ -185,8 +150,8 @@
     },
     "gp_section_609001508335387570": {
       "settings": {
-        "checksum": "22c985b129885e23b0379965b14bc5edfed2e94b080e4b71fb8b8b599d7689c9_1_1_1_0__1",
-        "ggXGrWwOKW8_label": "<p>BUY NOW | UP TO 37% OFF</p>",
+        "checksum": "8cfaa7ba9a3d0463689788802d4a2f046e7eaed8ed50715c40cb9353fd85e2b4_1_1_1_0__1",
+        "ggXGrWwOKW8_label": "<p>BUY NOW | 20% OFF</p>",
         "gga2XBHkZRc_label": "<p>BUY NOW | 20% OFF</p>",
         "ggx1h3wY82k_text": "<p>Limited Time Offer - 20% off your first 3 months</p>",
         "section_preload": "true"
@@ -195,16 +160,14 @@
     },
     "gp_section_609001508368810930": {
       "settings": {
-        "checksum": "13c8416310483f090af0d070d7201d339183fd982e3819bb59b0a3f219c9b0b0_1_1_1_0__1",
+        "checksum": "f840516b8976cecedd4bf52d229787d84b373986d654dec83a3931ac31ecb7ed_1_1_1_0__1",
         "g-W3yJp4Um0_text": "<p>“I’ve tried collagen powders before but this one actually fits into my routine. I feel steady throughout the morning and don’t get that anxious spike anymore. It’s clean, simple, and actually enjoyable.”</p>",
         "gcmBD1SmVWU_text": "<p>Verified Buyer</p>",
-        "gg4rb_4Lto0_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
-        "gg50OoqvXNH_label": "<p>BUY NOW | UP TO 37% OFF</p>",
         "gg7LPS4015n_text": "<p>Janet F.</p>",
         "gg83dMb0uqc_text": "<p>Sophie R.</p>",
         "ggEZS20gtUC_text": "<p>Verified Buyer</p>",
         "ggJaL0QPUE8_text": "<p>Verified Buyer</p>",
-        "ggSbL3-nPAj_text": "Join 5,245 Australians Who Finally Look &amp; Feel Their Best",
+        "ggSbL3-nPAj_text": "Why 150,000+ Canadians&nbsp;Replaced Coffee",
         "ggVpedDgEKG_text": "<p>“I replaced my morning coffee with Vanilla Matcha Collagen and I honestly don’t miss it. My energy feels smooth and steady, and after a few weeks my skin looked noticeably brighter. It’s become my favorite part of the day.”</p>",
         "ggbZXbe8tnK_text": "<p>“The vanilla flavour is subtle and creamy, not overly sweet. I’ve been using it every morning and feel more consistent energy without jitters. My nails have been growing stronger too, which was a nice surprise.”</p>",
         "gghXDgj4qLA_text": "<p>“I was tired of the afternoon crash from coffee. Since switching to this, my focus feels calmer and more balanced. I also love that it supports my skin and hair at the same time. It just feels like a smarter ritual.”</p>",
@@ -223,11 +186,9 @@
     },
     "gp_section_609001508368942002": {
       "settings": {
-        "checksum": "f8f5db9c042c230f54e3f72822464d66989fba1e6bb7f8c9c440b2bd2c425bb2_1_1_1_0__1",
+        "checksum": "de915834dc706660bb4810528c1568f7529a1f434df08feb17b124ac33ae70fb_1_1_1_0__1",
         "gg6lwc76leu_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
         "ggYpag6SU3K_label": "<p>BUY NOW | 20% OFF</p>",
-        "ggcSF46pKic_label": "<p>BUY NOW | UP TO 37% OFF</p>",
-        "ggguqKufu6z_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
         "ghCVmWsgUYyTP_text": "How To Use",
         "gjSPVvYQsuhQB_text": "<p>🍵 Mix Hot or Iced</p>",
         "gufaaKiYhsroG_text": "<p>🥣 Get Creative</p>",
@@ -244,7 +205,7 @@
     },
     "gp_section_609001508385588146": {
       "settings": {
-        "checksum": "2e888c792a6796fae4bd85767cdca084fc9519ebaeeb6ce6c8bab4b634a0ffbc_1_1_1_0__1",
+        "checksum": "dd98c72619b8d125d159a0f77cfaa6e4b37d85d0225d1ae8b0fbd6408abda720_1_1_1_0__1",
         "ggPHbjwJ9ap_text": "As featured in"
       },
       "type": "gp-section-609001508385588146"
@@ -261,11 +222,9 @@
     },
     "gp_section_609001508402365362": {
       "settings": {
-        "checksum": "374ad6340901aebc703492be7732fc91c6b3c41ceebb5ae8ecaa3cb93ebac5fa_1_1_1_0__1",
-        "ggT68vMAM7O_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
+        "checksum": "2bdf6e4c4c2c6338600aa57806d8e36cf102a2399a9f222c6945b030ae42cd6b_1_1_1_0__1",
         "ggkMFkn_Jk-_label": "<p>BUY NOW | 20% OFF</p>",
         "ggn-f-nGh3u_text": "<p>Vanilla Matcha Collagen supports what modern women actually struggle with.</p>",
-        "ggn_khercfA_label": "<p>BUY NOW | UP TO 37% OFF</p>",
         "ggsQckkj8K-_text": "From Coffee Crash to&nbsp;<br>Daily Glow",
         "ggsoygwgtJE_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>"
       },
@@ -273,18 +232,17 @@
     },
     "gp_section_609001508402430898": {
       "settings": {
-        "checksum": "b13af49577c529531d21730eb9fd54253e94bbc52f4f6fd31e189729637e0490_1_1_1_0__1",
+        "checksum": "48ac1286a0d01672eb38405723f684ac867831ca8559b09cc8e3b317a2d08389_1_1_1_0__1",
         "gaknTEegdbsUM_text": "The Daily Glow Ritual Your Body Actually Needs.",
         "gfUXXINnGpISC_text": "<p>Vanilla Matcha Collagen delivers calm, sustained focus from organic ceremonial matcha while nourishing your skin, hair, nails, and joints with 5g of marine collagen per scoop.</p><p>&nbsp;</p><p>No jitters.<br>No sugar.<br>No afternoon slump.</p><p>&nbsp;</p><p>Just steady energy and visible glow</p>",
         "ggJKUqRCzLo_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
-        "ggMKyMhsnaC_text": "<p><strong>LIMITED TIME • FREE BOTTLE, FROTHER &amp; RECIPE BOOK</strong></p>",
         "ggn0LPthH0O_label": "<p>BUY NOW | 20% OFF</p>"
       },
       "type": "gp-section-609001508402430898"
     },
     "gp_section_609002705691607812": {
       "settings": {
-        "checksum": "c3b31df9aba17f9a10664d2356acc4246a74b1997f61d05ebdb162d496976a31_1_1_1_0__1",
+        "checksum": "a1fc185a3db2711f3d2667b1321e641a7a03411021555c5fd7b1a9e28fd5d3e6_1_1_1_0__1",
         "gAIlAPSglzUkQ_text": "Replace Coffee.&nbsp;<br>Glow Smarter.",
         "gg2Bo7VqXvG_text": "<p>90% feel the benefits after 3+ months.</p>",
         "ggS9LwWBrB-_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
@@ -310,9 +268,7 @@
     "gp_section_609001508335387570",
     "gp_section_609002705691607812",
     "gp_section_609001508385588146",
-    "gp_section_609001508234724274",
     "gp_section_609001508402430898",
-    "gp_section_609001508184261554",
     "gp_section_609001508268147634",
     "gp_section_609001508251370418",
     "gp_section_609001508335256498",
