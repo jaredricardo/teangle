@@ -9,13 +9,8 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
 }
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
-}
+
+
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
@@ -26,28 +21,12 @@
 
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: 'Sofia Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69B6sK3t.ttf) format('truetype');
 }
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
-}
-
-
 @font-face {
   font-family: 'Sofia Sans';
   font-style: normal;
@@ -58,34 +37,18 @@
 
 
 @font-face {
-  font-family: 'Playfair';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: normal;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfair/v10/0nkQC9D7PO4KhmUJ5_zTZ_4MYQXznAK-TUcZXKO3UMnW6VNpe4-SiiZ4b8h5G3GutPkUetgd.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Playfair';
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: normal;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfair/v10/0nkQC9D7PO4KhmUJ5_zTZ_4MYQXznAK-TUcZXKO3UMnW6VNpe4-SiiZ4b8h5G3GutPnKfdgd.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/raleway/v37/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoooCP.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Sofia Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69B6sK3t.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sofia Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69Cdt63t.ttf) format('truetype');
 }
 </style>
   
@@ -1168,7 +1131,448 @@
         </div>
       </div>
     </div>
-    <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--mb:12px;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ml-mobile:0px;--mb-mobile:12px;--ml-tablet:-15px;--mb-tablet:12px" class="g3PEFjFpG6 ">
+    
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:10px;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="g6s4jIcstD gp-custom-code">
+      <div>
+    {%- comment -%}
+Teangle Matcha Collagen | GemPages Variant UI (Teangle colors)
+Row 1: Flavour dropdown (with emoji)
+Row 2: Number of servings cards (3 columns) with images pulled from VARIANT images automatically
+Updates real Shopify variant id input so Add to Cart works
+
+Teangle palette used:
+- Primary Green: #1E4845
+- Warm Beige: #F9F1E8
+
+Mobile update:
+- Keep "Choose Your Supply" cards in 3 columns on mobile (compact sizing)
+- More premium CRO styling (stronger active state, better spacing, cleaner look)
+{%- endcomment -%}
+
+<div class="tgx-variants" data-product-handle="{{ product.handle }}">
+  <!-- Row 1: Flavor dropdown -->
+  <div class="tgx-row">
+    <label class="tgx-label" for="tgxFlavor">Choose Your Flavour 🍵</label>
+    <select class="tgx-select" id="tgxFlavor" aria-label="Choose flavour"></select>
+  </div>
+
+  <!-- Row 2: Servings cards -->
+  <div class="tgx-row">
+    <div class="tgx-label">Choose Your Supply 📦</div>
+    <div class="tgx-grid" id="tgxServingsGrid"></div>
+  </div>
+</div>
+
+<script type="application/json" id="tgxProductJson">
+  {{ product | json }}
+</script>
+
+<style>
+/* =========================
+   Teangle Variant UI (scoped)
+   ========================= */
+
+/* Brand tokens */
+.tgx-variants{
+  --tgx-green:#1E4845 !important;
+  --tgx-beige:#F9F1E8 !important;
+  --tgx-ink:#111111 !important;
+
+  --tgx-line: rgba(30,72,69,.22) !important;
+  --tgx-soft: rgba(30,72,69,.08) !important;
+  --tgx-focus: rgba(30,72,69,.14) !important;
+
+  --tgx-shadow: 0 14px 30px rgba(0,0,0,.12) !important;
+  --tgx-shadow-soft: 0 10px 22px rgba(0,0,0,.10) !important;
+
+  width:100% !important;
+  font-family: inherit !important;
+}
+
+/* Rows */
+.tgx-row{ margin: 14px 0 !important; }
+.tgx-label{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:10px !important;
+  margin-bottom: 10px !important;
+  font-weight: 900 !important;
+  font-size: 14px !important;
+  letter-spacing: .2px !important;
+  color: var(--tgx-ink) !important;
+}
+
+/* Dropdown */
+.tgx-select{
+  width: 100% !important;
+  border: 2px solid var(--tgx-line) !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  font-size: 15px !important;
+  background: #fff !important;
+  outline: none !important;
+  transition: box-shadow .18s ease, border-color .18s ease !important;
+}
+.tgx-select:focus{
+  border-color: var(--tgx-green) !important;
+  box-shadow: 0 0 0 4px var(--tgx-focus) !important;
+}
+
+/* Cards grid (DESKTOP = 3 columns) */
+.tgx-grid{
+  display:grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+/* Card */
+.tgx-card{
+  border: 2px solid var(--tgx-line) !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  padding: 12px !important;
+  cursor:pointer !important;
+  position:relative !important;
+  text-align:center !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  user-select:none !important;
+}
+.tgx-card:hover{
+  transform: translateY(-2px) !important;
+  box-shadow: var(--tgx-shadow-soft) !important;
+}
+
+/* ACTIVE (highlight) */
+.tgx-card.is-active{
+  border-color: var(--tgx-green) !important;
+  background: var(--tgx-soft) !important;
+  box-shadow: var(--tgx-shadow) !important;
+}
+.tgx-card.is-active::after{
+  content:"" !important;
+  position:absolute !important;
+  inset: 8px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(30,72,69,.18) !important;
+  pointer-events:none !important;
+}
+
+/* Image wrapper (fixed size) */
+.tgx-imgwrap{
+  width: 100% !important;
+  height: 108px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin: 2px auto 10px !important;
+  border-radius: 14px !important;
+  background: var(--tgx-beige) !important;
+  overflow:hidden !important;
+}
+
+/* Image (fixed + consistent) */
+.tgx-img{
+  width: 96px !important;
+  height: 96px !important;
+  object-fit: contain !important;
+  display:block !important;
+  transform: translateZ(0) !important;
+}
+
+/* Text */
+.tgx-title{
+  font-weight: 950 !important;
+  font-size: 15px !important;
+  color: var(--tgx-ink) !important;
+  line-height: 1.1 !important;
+  letter-spacing: .2px !important;
+}
+
+/* Servings pill */
+.tgx-pill{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border-radius: 999px !important;
+  padding: 6px 10px !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  border: 2px solid var(--tgx-green) !important;
+  color: var(--tgx-green) !important;
+  background:#fff !important;
+  margin-top: 8px !important;
+  white-space: nowrap !important;
+}
+.tgx-card.is-active .tgx-pill{
+  background: var(--tgx-green) !important;
+  color:#fff !important;
+}
+
+/* Discount badge (Teangle green) */
+.tgx-discount{
+  position:absolute !important;
+  left:50% !important;
+  transform: translateX(-50%) !important;
+  bottom:-10px !important;
+  background: var(--tgx-green) !important;
+  color:#fff !important;
+  font-weight:900 !important;
+  font-size:12px !important;
+  padding: 6px 10px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12) !important;
+  display:none !important;
+  white-space: nowrap !important;
+}
+.tgx-card.has-discount .tgx-discount{ display:block !important; }
+
+/* =========================
+   MOBILE: keep 3 cards in a row
+   ========================= */
+@media (max-width: 768px){
+  .tgx-row{ margin: 12px 0 !important; }
+
+  /* keep 3 columns */
+  .tgx-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  /* compact card */
+  .tgx-card{
+    padding: 10px !important;
+    border-radius: 16px !important;
+  }
+
+  .tgx-imgwrap{
+    height: 84px !important;
+    border-radius: 12px !important;
+    margin: 0 auto 8px !important;
+  }
+  .tgx-img{
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .tgx-title{
+    font-size: 12.5px !important;
+    letter-spacing: .15px !important;
+  }
+
+  .tgx-pill{
+    font-size: 10.5px !important;
+    padding: 5px 8px !important;
+    border-width: 2px !important;
+  }
+
+  .tgx-discount{
+    font-size: 10.5px !important;
+    padding: 5px 8px !important;
+    bottom: -9px !important;
+  }
+}
+
+/* Extra small phones: still 3 columns but tighter */
+@media (max-width: 380px){
+  .tgx-grid{ gap: 8px !important; }
+  .tgx-card{ padding: 9px !important; }
+  .tgx-imgwrap{ height: 78px !important; }
+  .tgx-img{ width: 64px !important; height: 64px !important; }
+  .tgx-title{ font-size: 12px !important; }
+  .tgx-pill{ font-size: 10px !important; }
+}
+</style>
+
+<script>
+(function(){
+  const jsonEl = document.getElementById('tgxProductJson');
+  if(!jsonEl) return;
+
+  let product = {};
+  try { product = JSON.parse(jsonEl.textContent || "{}"); } catch(e){ return; }
+  if(!product || !product.variants || !product.variants.length) return;
+
+  const flavorSelect = document.getElementById('tgxFlavor');
+  const grid = document.getElementById('tgxServingsGrid');
+  if(!flavorSelect || !grid) return;
+
+  // Helper: unique array
+  const uniq = (arr) => Array.from(new Set(arr.filter(v => v !== null && v !== undefined && String(v).trim() !== "")));
+
+  // Shopify variant fields option1/2/3
+  const getOpt = (v, idx) => idx === 0 ? v.option1 : idx === 1 ? v.option2 : v.option3;
+
+  // Detect option indices by name (Flavour / Number of servings)
+  const optionNames = (product.options || []).map(o => (o || "").toLowerCase());
+  let flavorI = optionNames.findIndex(n => n.includes("flav"));
+  let servingsI = optionNames.findIndex(n => n.includes("serv"));
+
+  if(flavorI < 0) flavorI = 0;
+  if(servingsI < 0) servingsI = 1;
+
+  const flavors = uniq(product.variants.map(v => getOpt(v, flavorI)));
+  const servings = uniq(product.variants.map(v => getOpt(v, servingsI)));
+
+  // Correct discounts (based on your prices)
+  const discountMap = { "60":"10% Off", "90":"15% Off" };
+
+  const flavorEmoji = (name) => {
+    const n = (name || "").toLowerCase();
+    if(n.includes("vanilla")) return "🍦";
+    if(n.includes("choco")) return "🍫";
+    if(n.includes("original")) return "🍵";
+    return "✨";
+  };
+
+  const findVariantIdInput = () => {
+    const forms = Array.from(document.querySelectorAll('form[action*="/cart/add"]'));
+    for(const form of forms){
+      const idInput = form.querySelector('input[name="id"]');
+      if(idInput) return idInput;
+    }
+    return document.querySelector('input[name="id"]');
+  };
+  const idInput = findVariantIdInput();
+
+  const findVariant = (flavorVal, servingsVal) => {
+    return product.variants.find(v =>
+      getOpt(v, flavorI) === flavorVal &&
+      getOpt(v, servingsI) === servingsVal &&
+      v.available !== false
+    ) || product.variants.find(v =>
+      getOpt(v, flavorI) === flavorVal &&
+      getOpt(v, servingsI) === servingsVal
+    ) || null;
+  };
+
+  const getVariantImg = (variant) => {
+    if(!variant) return "";
+    if(variant.featured_image && variant.featured_image.src) return variant.featured_image.src;
+    if(typeof variant.featured_image === "string") return variant.featured_image;
+
+    if(variant.image_id && Array.isArray(product.images)){
+      const imgObj = product.images.find(img => img && img.id === variant.image_id);
+      if(imgObj && imgObj.src) return imgObj.src;
+
+      const imgObj2 = product.images.find(img => img.variant_ids && img.variant_ids.includes(variant.id));
+      if(imgObj2 && imgObj2.src) return imgObj2.src;
+    }
+
+    if(product.featured_image) return product.featured_image;
+    if(product.images && product.images[0] && product.images[0].src) return product.images[0].src;
+    return "";
+  };
+
+  const setVariantId = (variant) => {
+    if(!variant || !idInput) return;
+    idInput.value = variant.id;
+    idInput.dispatchEvent(new Event('input', { bubbles:true }));
+    idInput.dispatchEvent(new Event('change', { bubbles:true }));
+  };
+
+  let currentFlavor = flavors[0] || "";
+  let currentServings = servings[0] || "";
+
+  const syncFromExisting = () => {
+    if(!idInput) return;
+    const currentId = parseInt(idInput.value, 10);
+    if(!currentId) return;
+    const v = product.variants.find(x => x.id === currentId);
+    if(!v) return;
+    currentFlavor = getOpt(v, flavorI) || currentFlavor;
+    currentServings = getOpt(v, servingsI) || currentServings;
+  };
+
+  const setActiveCard = (servVal) => {
+    Array.from(grid.querySelectorAll('.tgx-card')).forEach(card => {
+      card.classList.toggle('is-active', card.dataset.value === servVal);
+    });
+  };
+
+  const renderFlavorDropdown = () => {
+    flavorSelect.innerHTML = "";
+    flavors.forEach(f => {
+      const opt = document.createElement("option");
+      opt.value = f;
+      opt.textContent = `${flavorEmoji(f)} ${f}`;
+      flavorSelect.appendChild(opt);
+    });
+    flavorSelect.value = currentFlavor;
+  };
+
+  const renderServingsCards = () => {
+    grid.innerHTML = "";
+
+    servings.forEach(sv => {
+      const v = findVariant(currentFlavor, sv);
+      const img = getVariantImg(v);
+
+      const numericMatch = String(sv).match(/\d+/);
+      const numeric = numericMatch ? numericMatch[0] : String(sv);
+      const discountText = discountMap[numeric];
+
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "tgx-card";
+      card.dataset.value = sv;
+
+      if(discountText) card.classList.add("has-discount");
+
+      card.innerHTML = `
+        ${img ? `
+          <div class="tgx-imgwrap">
+            <img class="tgx-img" src="${img}" alt="${sv}">
+          </div>
+        ` : ``}
+        <div class="tgx-title">${numeric} DAY SUPPLY</div>
+        <div class="tgx-pill">${sv} Servings</div>
+        <div class="tgx-discount">${discountText || ""}</div>
+      `;
+
+      card.addEventListener("click", () => {
+        currentServings = sv;
+        setActiveCard(sv);
+        const match = findVariant(currentFlavor, currentServings);
+        setVariantId(match);
+      });
+
+      grid.appendChild(card);
+    });
+
+    setActiveCard(currentServings);
+  };
+
+  // INIT
+  syncFromExisting();
+  renderFlavorDropdown();
+
+  if(!findVariant(currentFlavor, currentServings)) currentServings = servings[0] || "";
+
+  renderServingsCards();
+  setVariantId(findVariant(currentFlavor, currentServings));
+
+  // Events
+  flavorSelect.addEventListener("change", () => {
+    currentFlavor = flavorSelect.value;
+
+    if(!findVariant(currentFlavor, currentServings)) currentServings = servings[0] || "";
+
+    renderServingsCards();
+    setVariantId(findVariant(currentFlavor, currentServings));
+  });
+})();
+</script>
+    </div>
+    </div>
+  <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--mb:12px;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ml-mobile:0px;--mb-mobile:12px;--ml-tablet:-15px;--mb-tablet:12px" class="g3PEFjFpG6 ">
       
       {% assign app_blocks = section.blocks | where: "type", "@app" %}
 
@@ -1343,7 +1747,7 @@
       
       class="gp-flex gp-flex-col"
     >
-      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:10px;--pt:0px;--mt-mobile:0px;--mb-mobile:9px;--pt-mobile:0px;--mt-tablet:0px;--mb-tablet:10px;--pt-tablet:0px;--ta:left" class="{% unless variant.available %} !gp-hidden {% endunless %}">
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:15px;--pt:0px;--mt-tablet:0px;--mb-tablet:15px;--pt-tablet:0px;--mt-mobile:0px;--mb-mobile:9px;--pt-mobile:0px;--ta:left" class="{% unless variant.available %} !gp-hidden {% endunless %}">
         <style>[data-id="grpU1p24o4"].gp-button-base::before, [data-id="grpU1p24o4-interaction"].gp-button-base::before {
       
     content: "";
@@ -1427,7 +1831,7 @@
       
       class="gp-flex gp-flex-col"
     >
-      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:10px;--pt:0px;--mt-mobile:0px;--mb-mobile:9px;--pt-mobile:0px;--mt-tablet:0px;--mb-tablet:10px;--pt-tablet:0px;--ta:left" class="{% if variant.available %} !gp-hidden {% endif %}">
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:0px;--mb:15px;--pt:0px;--mt-tablet:0px;--mb-tablet:15px;--pt-tablet:0px;--mt-mobile:0px;--mb-mobile:9px;--pt-mobile:0px;--ta:left" class="{% if variant.available %} !gp-hidden {% endif %}">
         <style>[data-id="grpU1p24o4-sold-out"].gp-button-base::before, [data-id="grpU1p24o4-sold-out-interaction"].gp-button-base::before {
       
     content: "";
@@ -1752,7 +2156,7 @@
       role="presentation"
       data-id="g9UTllbVHV"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1772549005461 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g9UTllbVHV"
+      class="gp-group/image gp-relative force-publish-1772549276728 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g9UTllbVHV"
     >
       <div
         
