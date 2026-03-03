@@ -74,12 +74,21 @@
         "ggjn__d6abd_text": "Glow Starts From Within",
         "gggXEdXFdqh_text": "<p>Pure marine collagen, designed to support smoother skin, stronger hair, and a naturally healthy glow.</p><p>&nbsp;</p><p>Every scoop delivers 5g of high-quality collagen peptides to nourish your beauty routine from the inside out — without adding extra steps to your day.</p><p>&nbsp;</p><p>Simple.<br>Effective.<br>Made to be taken daily.</p>"
       }
+    },
+    "gp_section_609033271296131744": {
+      "type": "gp-section-609033271296131744",
+      "settings": {
+        "checksum": "e2dabc3798ccd8f78d26b0ef564dfcdaa4608953e9934d81d5640542ed2cdb19_1_1_1_0__1",
+        "ggjkksF2zRg_text": "Easy to Make and Endless&nbsp;<br>Ways to Enjoy",
+        "gg9YjgyUmvl_text": "<p>Hot water. Oat milk. In a smoothie. However you like it, Teangle blends smoothly, dissolves instantly, and fits your routine. Plus, you’ll get 101 Delicious Matcha Recipes, so you’ll never run out of tasty ideas.</p>"
+      }
     }
   },
   "order": [
     "gp_section_609024031898731480",
     "gp_section_609029337106088642",
     "gp_section_609029916893119448",
-    "gp_section_609031597013861024"
+    "gp_section_609031597013861024",
+    "gp_section_609033271296131744"
   ]
 }
