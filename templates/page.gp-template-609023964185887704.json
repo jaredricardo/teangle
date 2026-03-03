@@ -44,9 +44,20 @@
         "ggQvk1UkYw3_text": "<p>If you're looking for a healthy daily ritual that actually makes you feel good - this is for you.</p><p>&nbsp;</p><p>You want to replace coffee but still feel energized<br>You want healthier skin, hair, nails and a glow<br>You want collagen, but not in pill, capsule, or powder<br>You care about clean ingredients and no added sugars<br>You want something quick, easy, and actually delicious<br>Sounds like you? You’ll love Matcha Collagen.</p>",
         "ggUNyRmu8Q4_text": "<p>When it comes to ingredients, taste, and trust, Teangle stands out. We kept the good stuff (like organic matcha and marine collagen) and ditched the junk.</p><p>&nbsp;</p><p>OG Flavor: 5g of pure marine collagen, 1g of organic ceremonial Matcha, organic coconut milk powder and organic acacia gum</p><p>ALLERGEN: FISH</p>"
       }
+    },
+    "gp_section_609029337106088642": {
+      "type": "gp-section-609029337106088642",
+      "settings": {
+        "checksum": "0a8ef2b61a97844cdc2fa8a21540374eb3b6dada7691c7798d617439f68a6e86_1_1_1_0__1",
+        "gg1oq-AAK1N_text": "Calm Energy",
+        "ggUgeTjPcBy_text": "Glow Support",
+        "ggES2PKsFAC_text": "5g Collagen",
+        "gga-4SyoZyd_text": "No Crash"
+      }
     }
   },
   "order": [
-    "gp_section_609024031898731480"
+    "gp_section_609024031898731480",
+    "gp_section_609029337106088642"
   ]
 }
