@@ -121,16 +121,6 @@
       },
       "type": "gp-section-609001508385588146"
     },
-    "gp_section_609001508385653682": {
-      "settings": {
-        "checksum": "32ec3eec26387d1bddadb76707dc376ff493b49f3905de5e4c3281ff1b25253b_1_1_1_0__1",
-        "gHocbgOTmpgkh_text": "<p><span style=\"font-size:px;\">Subscribe &amp; Save</span></p>",
-        "gdffLGdBwTthe_text": "<p><span style=\"font-size:px;\">FREE Shipping</span></p>",
-        "ggRPLsKzpz3_text": "<p><span style=\"font-size:px;\">FREE Starter Kit</span></p>",
-        "ggdU93F3KhP_text": "<p><span style=\"font-size:px;\">FREE&nbsp;</span></p><p><span style=\"font-size:px;\">Shipping</span></p>"
-      },
-      "type": "gp-section-609001508385653682"
-    },
     "gp_section_609001508402365362": {
       "settings": {
         "checksum": "471a5bb28dfcfea215d6e87c6c309c586c2f4d4c3eff21bda853bd6aa1cecb44_1_1_1_0__1",
@@ -169,11 +159,11 @@
     },
     "gp_section_609005170650514180": {
       "settings": {
-        "checksum": "0b566d55e55cc6dc92a64f7e5c99faecd5fdf437ef68606f01bb994ed9d45e0c_1_1_1_0__1",
+        "checksum": "903baddd1315fcb6e73417eeef3b1a7fa849ff99796ba3ce5c208489ed2ff225_1_1_1_0__1",
         "gg4SFsW8oyf_label": "<p>START YOUR GLOW RITUAL</p><p>&nbsp;</p>",
         "ggO4UrlMw9D_label": "<p>Limited Time: Free Milk Frother on 2+ Tubs</p>",
-        "ggY3GV6fDaJ_text": "<p>Teangle was born from one simple frustration: why does healthy energy always come with a crash? Between endless coffee refills, jittery afternoons, and collagen powders that tasted like punishment, wellness started to feel complicated. We wanted something different — a single, premium ritual you would actually look forward to each day.</p><p>&nbsp;</p><p>That is why we created Vanilla Matcha Collagen. Organic ceremonial matcha delivers calm, steady focus while 5g of marine collagen supports your skin, hair, nails, and joints — all in one smooth, delicious scoop. No cluttered supplement shelves. No harsh caffeine spikes. No gritty drinks you force down. Just a daily ritual that feels good and works with your lifestyle.</p>",
-        "ggcpY3s2Ogw_text": "Our Story"
+        "ggY3GV6fDaJ_text": "<p>Teangle didn’t start as a business idea.<br>It started as a search for balance.</p><p><br>For years, I struggled with anxiety and energy crashes — chasing focus with coffee, then paying for it later. At the same time, I watched my mom spend her life taking care of everyone else… rarely herself.</p><p><br>What we needed wasn’t more stimulation.<br>We needed steadiness.</p><p><br>That’s where Teangle was born — inspired by the triangle, a symbol of balance. Mind. Body. Ritual.</p><p><br>We created a simple daily ritual designed to bring calm energy and support from within — without the crash, without the overwhelm.<br>Because self-care shouldn’t be another task.</p><p><br>It should be something you look forward to.</p>",
+        "ggcpY3s2Ogw_text": "Our Mission"
       },
       "type": "gp-section-609005170650514180"
     },
@@ -211,7 +201,6 @@
     "gp_section_609001508368942002",
     "gp_section_609001508368810930",
     "gp_section_609005170650514180",
-    "gp_section_609001508385653682",
     "gp_section_609001508234593202",
     "gp_section_609001508268213170",
     "gp_section_609001508369007538"
