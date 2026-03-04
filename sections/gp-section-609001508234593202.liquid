@@ -5,12 +5,33 @@
     <style {% if section.settings.section_preload == "false" %} class="gps-link" type="text/disabled-css" {% endif %}>@font-face {
   font-family: 'Sofia Sans';
   font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69B6sK3t.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sofia Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69BIsK3t.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sofia Sans';
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69Cdt63t.ttf) format('truetype');
 }
 
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
@@ -21,12 +42,26 @@
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
 }
 
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
@@ -42,6 +77,20 @@
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69B6sK3t.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sofia Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69BIsK3t.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sofia Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sofiasans/v20/Yq6E-LCVXSLy9uPBwlAThu1SY8Cx8rlT69Cdt63t.ttf) format('truetype');
 }
 </style>
   
@@ -1126,7 +1175,7 @@
     </div>
     
     <gp-button
-      gp-data='{"btnLink":{"type":"open-page","link":"","target":"_self"}}'
+      gp-data='{"btnLink":{"type":"open-popup","link":"#el-gAXbHvqpaz","target":"_self"}}'
       
       class="gp-flex gp-flex-col"
     >
@@ -1158,13 +1207,17 @@
     
     
   }</style>
-        
-        <button
+        <a
+            class="gp-trigger-button-link gp-hidden"
+            href=#el-gAXbHvqpaz
+            target=_self
+          ></a>
+        <a
           data-id="g0wKSbx1fK" dataId="g0wKSbx1fK" data-state="idle" aria-label="<p>Nutritional</p>"
           
-          type="button"
+          href="#el-gAXbHvqpaz" target="_self"
           style="--w:Auto;--w-tablet:Auto;--w-mobile:Auto;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--pl-mobile:24px;--pr-mobile:24px;--pt-mobile:10px;--pb-mobile:10px;--bblr:9999px;--bbrr:9999px;--btlr:9999px;--btrr:9999px;--bgi:;--bg:#1E4845;--c:#FFFFFF;--fs:normal;--ff:var(--g-font-Sofia-Sans, 'Sofia Sans'), var(--g-font-body, body);--weight:400;--size:18px;--size-tablet:14px;--size-mobile:14px;--lh:150%;--lh-tablet:180%;--lh-mobile:180%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal"
-          class="g0wKSbx1fK gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+          class="g0wKSbx1fK gp-text-center gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
         >
         
         <div class="gp-inline-flex">
@@ -1179,7 +1232,7 @@
     </span>
         </div>
         
-        </button>
+        </a>
       </div>
       <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
     </gp-button>
@@ -2352,7 +2405,7 @@ Mobile update:
       role="presentation"
       data-id="g9UTllbVHV"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1772649744357 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g9UTllbVHV"
+      class="gp-group/image gp-relative force-publish-1772650028310 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g9UTllbVHV"
     >
       <div
         
