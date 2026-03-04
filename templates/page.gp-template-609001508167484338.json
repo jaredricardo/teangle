@@ -11,7 +11,8 @@
   "sections": {
     "gp_section_609001508234593202": {
       "settings": {
-        "checksum": "a147248f35c833aa011a65b0d5545c8a45cf6bd0281ee9c13eb31f21535806fb_1_1_1_0__1",
+        "checksum": "b6ae8f70468f963e17733ee6b54198881b1b032f1c0c74e89e09a425e237e7ea_1_1_1_0__1",
+        "gg0wKSbx1fK_label": "<p>Nutritional</p>",
         "ggLyX9gUzYG_text": "<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 4.8 Rating 2,898</p>",
         "ggbprWAlgZG_text": "<p>Get your Free Milk frother when you order 2 tubs of more - worth $15.99. Limited time offer.</p>",
         "ggrlLEjwAmc_label": "<p>Limited Time: Free Shipping &amp; &nbsp;Free Milk Frother Included</p>",
@@ -187,6 +188,12 @@
         "ggpuKMK2INs_text": "<strong>5g of pure marine collagen</strong>"
       },
       "type": "gp-section-609032985731138242"
+    },
+    "gp_section_609213794274509715": {
+      "settings": {
+        "checksum": "63ca2c4af6d975f98b829af15db6ae9ffdd97343931c1b94869abfdc834dc5a9_1_1_1_0__1"
+      },
+      "type": "gp-section-609213794274509715"
     }
   },
   "order": [
@@ -201,7 +208,8 @@
     "gp_section_609005170650514180",
     "gp_section_609001508234593202",
     "gp_section_609001508268213170",
-    "gp_section_609001508369007538"
+    "gp_section_609001508369007538",
+    "gp_section_609213794274509715"
   ],
   "layout": "theme.gempages.header"
 }
