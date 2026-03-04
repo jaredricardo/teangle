@@ -71,16 +71,6 @@
       },
       "type": "gp-section-609001508268213170"
     },
-    "gp_section_609001508335387570": {
-      "settings": {
-        "checksum": "7b0274da069d39bfd4db35198754b93ae2a2c2a95d7b5f226c6d4a99c1c251ec_1_1_1_0__1",
-        "ggXGrWwOKW8_label": "<p>BUY NOW | 20% OFF</p>",
-        "gga2XBHkZRc_label": "<p>BUY NOW | 20% OFF</p>",
-        "ggx1h3wY82k_text": "<p>Limited Time Offer - 20% off your first 3 months</p>",
-        "section_preload": "true"
-      },
-      "type": "gp-section-609001508335387570"
-    },
     "gp_section_609001508368810930": {
       "settings": {
         "checksum": "4fd8880374cf76df82f201bcefc8db2d97a7da53aca6a9744e419c1563769205_1_1_1_0__1",
@@ -169,7 +159,8 @@
         "ggee0IiSh4H_label": "<p>CANADIAN MATCHA RITUAL</p>",
         "ggl3c44jxui_text": "<p>💧 5g Marine Collagen Per Scoop<br>🍵 1g Organic Ceremonial Matcha<br>✨ No Jitters. No Crash. No Added Sugar.<br>📦 30 Servings Per Tub</p>",
         "ggwffJ67P0K_text": "<p>Excellent <span style=\"font-size:20px;\">★★★★★</span> 4.8 Rating • 3,000+ Verified Reviews&nbsp;</p><p>150,000+ Happy Canadian Customers</p>",
-        "gnrFANyhVWsXY_label": "<p>BUY NOW | 20% OFF</p>"
+        "gnrFANyhVWsXY_label": "<p>BUY NOW | 20% OFF</p>",
+        "section_preload": "true"
       },
       "type": "gp-section-609002705691607812"
     },
@@ -205,7 +196,6 @@
     }
   },
   "order": [
-    "gp_section_609001508335387570",
     "gp_section_609002705691607812",
     "gp_section_609001508385588146",
     "gp_section_609001508402430898",
