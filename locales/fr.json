@@ -1061,6 +1061,9 @@
             "postal_code": "Cet emplacement n'est pas pris en charge."
           }
         }
+      },
+      "split_delivery": {
+        "items_for_shipping": "Articles à expédier"
       }
     },
     "pagination": {
@@ -1660,7 +1663,11 @@
       "will_be_in_stock_after": "Sera en stock à compter de {{ date }}",
       "waiting_for_stock": "Inventaire sur le chemin",
       "view_in_space": "Afficher dans votre espace",
-      "view_in_space_label": "Affichage dans votre espace, charge l'article dans une fenêtre de réalité augmentée"
+      "view_in_space_label": "Affichage dans votre espace, charge l'article dans une fenêtre de réalité augmentée",
+      "stock_label": {
+        "one": "Stock limité - {{ count }} articles restants",
+        "other": "Stock limité - {{ count }} articles restants"
+      }
     }
   },
   "store_availability": {
@@ -1818,6 +1825,52 @@
       "signup_form_email_label": "Email",
       "signup_form_success": "We will send you an email right before we open!",
       "password_link": "Enter using password"
+    }
+  },
+  "gempages": {
+    "Carousel": {
+      "no_slider": "Pas de curseur"
+    },
+    "CarouselV3": {
+      "no_slider": "Pas de curseur"
+    },
+    "Newsletter": {
+      "err_msg_default": "Impossible d'envoyer le courriel. Veuillez réessayer plus tard.",
+      "success_msg_default": "Merci de votre abonnement"
+    },
+    "IconListV2": {
+      "icons_not_found": "Icônes introuvables"
+    },
+    "IconList": {
+      "icons_not_found": "Icônes introuvables"
+    },
+    "IconListHoz": {
+      "icons_not_found": "Icônes introuvables"
+    },
+    "Product": {
+      "product_not_found": "Produit introuvable"
+    },
+    "ProductList": {
+      "product_not_found": "Produit introuvable !",
+      "no_products_found": "Aucun produit trouvé !",
+      "no_related_products": "Aucun produit associé !"
+    },
+    "ProductListV3": {
+      "product_not_found": "Produit introuvable !",
+      "no_products_found": "Aucun produit trouvé !",
+      "no_related_products": "Aucun produit associé !"
+    },
+    "ProductTitle": {
+      "product_not_found": "Produit introuvable"
+    },
+    "ProductVariants": {
+      "please_select": "Veuillez sélectionner une option"
+    },
+    "StockCounter": {
+      "let_buy_now": "<mark>DÉPÊCHEZ-VOUS!</mark> ACHETEZ MAINTENANT"
+    },
+    "Breadcrumb": {
+      "home": "Maison"
     }
   }
 }
