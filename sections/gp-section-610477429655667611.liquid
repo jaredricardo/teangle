@@ -19,34 +19,34 @@
 
 
 @font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9GnM.ttf) format('truetype');
+}
+@font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
 }
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
-}
 
 
-@font-face {
-  font-family: 'DM Serif Text';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmseriftext/v13/rnCu-xZa_krGokauCeNq1wWyafM.ttf) format('truetype');
-}
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pa8FsOs.ttf) format('truetype');
 }
 </style>
   
@@ -330,12 +330,12 @@
           {%- assign gpBkProducts = products -%}
           
       {%- liquid
-        assign productHandles = ''| split: ','
+        assign productHandles = 'original-matcha-collagen,chocolate-matcha-collagen-1,vanilla-matcha-collagen,teangle-peppermint-matcha-2,matcha-collagen-3'| split: ','
         assign products = null
         assign target_collection = null
-        assign productSrc = 'Collection'
+        assign productSrc = 'PickProduct'
         assign c = 0
-        assign limit = 10
+        assign limit = 4
 
         if request.page_type == 'collection' or preview_page_type == 'collection'
           assign target_collection = collection
@@ -373,7 +373,7 @@
               endfor
               assign limit = products.length
             else
-              if 0 == 0
+              if 5 == 0
                 paginate collections.all.products by 100000
                   assign products = collections.all.products  | sort : "created_at"  | reverse
                 endpaginate
@@ -404,8 +404,8 @@
     
           
     {%- if products == null -%}
-    {%- if count == 0 and 0 == 0 -%}
-      {% if 'Collection' == 'RelatedProduct' -%}
+    {%- if count == 0 and 5 == 0 -%}
+      {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ 'gempages.ProductList.no_related_products' | t }}</div>
         {% else %}
           <div>{{ 'gempages.ProductList.no_products_found' | t }}</div>
@@ -1034,8 +1034,8 @@
   
       {%- endif -%}
       {% endfor %}
-      {%- if count == 0 and 0 == 0 -%}
-        {% if 'Collection' == 'RelatedProduct' -%}
+      {%- if count == 0 and 5 == 0 -%}
+        {% if 'PickProduct' == 'RelatedProduct' -%}
           <div>{{ 'gempages.ProductList.no_related_products' | t }}</div>
         {% else %}
           <div>{{ 'gempages.ProductList.no_products_found' | t }}</div>
