@@ -131,7 +131,7 @@
     },
     "gp_section_610504966150292025": {
       "settings": {
-        "checksum": "3470a728d456017cbfdb9c2b3411e014c5eb5fc8f43678052a08cc7a48e3a830_1_1_1_0__1",
+        "checksum": "ab66b12663532633c2d968203926a1fdc2b7ee5eef79e89d8723407f8dbd8279_1_1_1_0__1",
         "ggGAPaYPs9t_text": "Clean, Steady Energy",
         "ggOyLXMhQxL_text": "⚡",
         "ggRSLw3NdTO_text": "⚡",
@@ -142,11 +142,19 @@
         "ggzfUV3zP9v_text": "Clean, Steady Energy"
       },
       "type": "gp-section-610504966150292025"
+    },
+    "gp_section_610505914968965689": {
+      "settings": {
+        "checksum": "b96c6334ef336ea69657cb2060bfdef20f16df26fe88dd24d45679aa5e9441b2_1_1_1_0__1",
+        "ggqSJfY_rHJ_text": "As featured in"
+      },
+      "type": "gp-section-610505914968965689"
     }
   },
   "order": [
     "gp_section_610477429655602075",
     "gp_section_610477429655536539",
+    "gp_section_610505914968965689",
     "gp_section_610504966150292025",
     "gp_section_610477429655667611",
     "gp_section_610477429655798683",
