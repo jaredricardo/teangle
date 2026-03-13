@@ -30,15 +30,11 @@
     },
     "gp_section_610477429655536539": {
       "settings": {
-        "checksum": "92057ab7a7ebaadb0a3aa2a855ab96eaaa326398709851b015e76b30ca5eb1ac_1_1_1_0__1",
+        "checksum": "90c2d206dbc3ec60095cefb4b9724f13ff033fd8a8746ac97cb3ac57a4ef2c83_1_1_1_0__1",
         "gg7bRP_XgaM_text": "Matcha that doesn't taste like grass",
         "gg9x-EvxDg6_text": "<p>Delicious daily energy you can feel — in 30 seconds.</p>",
-        "ggET6dVbQHd_text": "<p>🌱 <strong>Clean, Natural Ingredients</strong></p><p>&nbsp;</p>",
         "ggMyJseVcWW_text": "<p>Loved by over 150,000 Canadians</p>",
-        "ggSbjvsUXne_text": "<p>👨‍👩‍👧 <strong>Safe for Teens &amp; Adults</strong></p><p>&nbsp;</p>",
-        "ggV1QUcIj64_text": "<p>💚 <strong>30-Day Satisfaction Guarantee</strong></p>",
-        "ggXQos7jU5C_label": "<p>SHOP TEANGLE</p>",
-        "ggjqXT5qdwa_text": "<p>🏆 <strong>Ceremonial Grade Matcha</strong></p><p>&nbsp;</p>"
+        "ggXQos7jU5C_label": "<p>SHOP TEANGLE</p>"
       },
       "type": "gp-section-610477429655536539"
     },
@@ -110,17 +106,6 @@
       },
       "type": "gp-section-610477429655995291"
     },
-    "gp_section_610477429656060827": {
-      "settings": {
-        "checksum": "015188c1626c32fcc843165b70a819f2d31da0b57d98a4070eae587f430e30a0_1_1_1_0__1",
-        "ggCJ9SgkV99_text": "<p>Organic ingredients</p>",
-        "ggTTNIi0RNp_text": "<p>Delicious Flavor</p>",
-        "ggdMeeg3I-O_text": "<p>Steady, All-Day Energy</p>",
-        "ggohnpVyLBA_text": "<p>No Caffeine Crash</p>",
-        "ggwuYZrguVl_text": "<p>Easy to Make</p>"
-      },
-      "type": "gp-section-610477429656060827"
-    },
     "gp_section_610477429656126363": {
       "settings": {
         "checksum": "dceb6deac06f3c9efc605b4e36f6d1e0d4771d4c84b4e9714c02f65aec77e0f1_1_1_1_0__1",
@@ -143,12 +128,26 @@
         "ggoJYyKOZ8v_text": "<p>No junk. No fillers. Just natural, &nbsp;feel-good fuel for your body.</p>"
       },
       "type": "gp-section-610477429656191899"
+    },
+    "gp_section_610504966150292025": {
+      "settings": {
+        "checksum": "41663d1efe7c432a2b92b526094ecb24e4f51ce876f1719641c2d2ce7d81d63f_1_1_1_0__1",
+        "ggGAPaYPs9t_text": "Clean, Steady Energy",
+        "ggOyLXMhQxL_text": "⚡",
+        "ggRSLw3NdTO_text": "⚡",
+        "ggRucv0uqGu_text": "⚡",
+        "ggXLhYbQpOf_text": "⚡",
+        "ggaW7Y_sQlJ_text": "Clean, Steady Energy",
+        "gglxQW4QA83_text": "Clean, Steady Energy",
+        "ggzfUV3zP9v_text": "Clean, Steady Energy"
+      },
+      "type": "gp-section-610504966150292025"
     }
   },
   "order": [
     "gp_section_610477429655602075",
     "gp_section_610477429655536539",
-    "gp_section_610477429656060827",
+    "gp_section_610504966150292025",
     "gp_section_610477429655667611",
     "gp_section_610477429655798683",
     "gp_section_610477429655733147",
