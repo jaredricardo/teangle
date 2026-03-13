@@ -30,7 +30,7 @@
     },
     "gp_section_610477429655536539": {
       "settings": {
-        "checksum": "b56a0ab25cc9fd7d35b0fad0c2518da56162915ae3fac297892458910289918d_1_1_1_0__1",
+        "checksum": "3401d7e630a7de7cb8529b32b316cca75846aae62ada3dea2f47c9dc5956d560_1_1_1_0__1",
         "gg7bRP_XgaM_text": "Matcha that doesn't taste like grass",
         "gg9x-EvxDg6_text": "<p>Delicious daily energy you can feel — in 30 seconds.</p>",
         "ggMyJseVcWW_text": "<p>Loved by over 150,000 Canadians</p>",
@@ -129,20 +129,6 @@
       },
       "type": "gp-section-610477429656191899"
     },
-    "gp_section_610504966150292025": {
-      "settings": {
-        "checksum": "ab66b12663532633c2d968203926a1fdc2b7ee5eef79e89d8723407f8dbd8279_1_1_1_0__1",
-        "ggGAPaYPs9t_text": "Clean, Steady Energy",
-        "ggOyLXMhQxL_text": "⚡",
-        "ggRSLw3NdTO_text": "⚡",
-        "ggRucv0uqGu_text": "⚡",
-        "ggXLhYbQpOf_text": "⚡",
-        "ggaW7Y_sQlJ_text": "Clean, Steady Energy",
-        "gglxQW4QA83_text": "Clean, Steady Energy",
-        "ggzfUV3zP9v_text": "Clean, Steady Energy"
-      },
-      "type": "gp-section-610504966150292025"
-    },
     "gp_section_610505914968965689": {
       "settings": {
         "checksum": "b96c6334ef336ea69657cb2060bfdef20f16df26fe88dd24d45679aa5e9441b2_1_1_1_0__1",
@@ -155,7 +141,6 @@
     "gp_section_610477429655602075",
     "gp_section_610477429655536539",
     "gp_section_610505914968965689",
-    "gp_section_610504966150292025",
     "gp_section_610477429655667611",
     "gp_section_610477429655798683",
     "gp_section_610477429655733147",
