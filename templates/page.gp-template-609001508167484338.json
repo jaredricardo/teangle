@@ -9,217 +9,216 @@
  */
 {
   "sections": {
-    "gp_global_section_610505131791745830-1": {
-      "type": "gp-global-section-610505131791745830",
-      "settings": {
-        "section_preload": "false",
-        "checksum": "",
-        "ggQ0_wHcqSP_text_-2066779239": "FAQs",
-        "ggqGhy0jyiD_childItem_0_-392659873": "How many servings are in one tub?",
-        "ggqGhy0jyiD_childItem_1_1520952292": "Can this replace my coffee?",
-        "ggqGhy0jyiD_childItem_2_738520472": "What does it taste like?",
-        "ggqGhy0jyiD_childItem_3_1275868179": "When will I notice results?",
-        "ggqGhy0jyiD_childItem_4_-1620436060": "Can I take it while pregnant or breastfeeding?",
-        "ggqGhy0jyiD_childItem_5_-687557613": "Is it made in Canada?",
-        "ggaLQpIq_nF_text_-1306040660": "Each tub contains 30 servings. One scoop per day gives you a full 30-day ritual of calm energy and collagen support.",
-        "ggx4WepX4ed_text_-583667709": "Yes. Many customers switch from coffee to Vanilla Matcha Collagen because it delivers steady, focused energy without jitters or crashes. It’s a smoother alternative to traditional caffeine.",
-        "ggDFbLvIiDu_text_1032824152": "Vanilla Matcha Collagen has a subtle, creamy vanilla flavour with a smooth matcha finish. It’s not overly sweet and has no fishy or gritty aftertaste.",
-        "ggyVhfn5UPD_text_1651287408": "Energy benefits are often felt within the first week. Visible glow support for skin, hair, and nails typically becomes noticeable after consistent daily use over several weeks.",
-        "ggpniROefgo_text_1243272967": "If you are pregnant or breastfeeding, we recommend consulting your healthcare professional before adding any supplement to your routine.",
-        "ggH6pqVVx5J_text_-811856894": "Yes. Teangle is a Canadian brand committed to clean ingredients and premium quality standards.",
-        "ggWN0Dnv5Jr_label_-1687588854": "START YOUR GLOW RITUAL</p><p>&nbsp;",
-        "ggVlfrcC2zD_label_-1542789722": "Limited Time: Free Milk Frother Included"
-      }
-    },
     "gp_section_609001508234593202": {
-      "type": "gp-section-609001508234593202",
       "settings": {
-        "checksum": "c97b63466380f632f287320bb30d0af7d8990bf94abd39dcb854ad885a1fe2e9_1_1_1_0__1",
+        "checksum": "bcf2101f7f2704848c9bf97c46f4002710f5b1040ca883dbf987e8efb813341f_1_1_1_0__1",
         "ggLyX9gUzYG_text": "<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 4.8 Rating 2,898</p>",
         "ggbprWAlgZG_text": "<p>Get your Free Milk frother when you order 2 tubs of more - worth $15.99. Limited time offer.</p>",
+        "ggrlLEjwAmc_label": "<p>Limited Time: Free Milk Frother Included</p>",
         "ggrpU1p24o4_label": "BUY NOW",
         "ggrpU1p24o4_outOfStockLabel": "Out of stock",
         "ggrpU1p24o4_unavailableLabel": "Unavailable",
-        "ggrpU1p24o4_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "ggrlLEjwAmc_label": "<p>Limited Time: Free Shipping &amp; &nbsp;Free Milk Frother Included</p>"
-      }
+        "ggrpU1p24o4_variantSelectionRequiredMessage": "Please select a variant to add product to cart"
+      },
+      "type": "gp-section-609001508234593202"
     },
     "gp_section_609001508268147634": {
-      "type": "gp-section-609001508268147634",
       "settings": {
         "checksum": "d6dd47f929e55498bc0dd498d5b0274cc58ede2edc9dfeff9574d67b1dd13969_1_1_1_0__1",
-        "ggCkcwQYplX_text": "Glow + Energy",
-        "ggXOE02r7G1_text": "⚡",
-        "gga2-LW2T1y_text": "Clean, Steady Energy",
-        "ggyfXC_Q5tL_text": "<p>No jitters. No crash.</p>",
-        "gg54JFdn09v_text": "✨",
-        "ggKaPNpheI7_text": "Support From Within",
-        "ggXDzSIZbAR_text": "<p>Designed to complement your daily routine.</p>",
-        "ggq_VI5esE5_text": "☕",
-        "ggT2TNXaDJT_text": "<strong>A Better Morning Ritual</strong>",
-        "gg54wpJfkE3_text": "<p>One scoop. One simple upgrade.</p>",
-        "ggaLPAuJRnn_text": "🍵",
-        "ggNFbtXyZS-_text": "1g Ceremonial Matcha",
-        "gghjt6WUJh-_text": "<p>Calm, focused energy.</p>",
-        "gg3H_ENZC4n_text": "<strong>💚</strong>",
-        "ggR-upih92-_text": "<strong>5g Marine&nbsp;</strong><br><strong>Collagen</strong>",
-        "ggkgaYSJTGZ_text": "<p>High-quality hydrolyzed peptides.</p>",
+        "gg-7w_YyLHj_text": "🍵",
         "gg12nR4uPgg_text": "<strong>🌿</strong>",
-        "ggNFnSBQsVv_text": "<strong>Zero Sugar. No Dairy. No Gluten.</strong>",
-        "ggh9kvI-F87_text": "<p>Nothing unnecessary. Nothing weird.</p>",
-        "gggRweSIEss_text": "⚡",
-        "ggTLbgUz_cn_text": "Clean, Steady Energy",
-        "ggxEcO1irH1_text": "<p>No jitters. No crash.</p>",
-        "ggkwxCbdzzF_text": "✨",
-        "ggd1GvNtwBu_text": "Support From Within",
-        "ggCCEYO1Vol_text": "<p>Designed to complement your daily routine.</p>",
+        "gg3H_ENZC4n_text": "<strong>💚</strong>",
+        "gg54JFdn09v_text": "✨",
+        "gg54wpJfkE3_text": "<p>One scoop. One simple upgrade.</p>",
         "gg9GAb_3GVA_text": "😊",
+        "ggCCEYO1Vol_text": "<p>Designed to complement your daily routine.</p>",
+        "ggCkcwQYplX_text": "Glow + Energy",
         "ggDbJ1di-gq_text": "<strong>A Better Morning Ritual</strong>",
         "ggERyuKbERq_text": "<p>One scoop. One simple upgrade.</p>",
-        "gg-7w_YyLHj_text": "🍵",
-        "ggnRziGQZTt_text": "1g Ceremonial Matcha",
-        "ggs-HM3W18s_text": "<p>Calm, focused energy.</p>",
-        "ggKr5arhvsc_text": "<strong>💚</strong>",
-        "ggpk6T1JaRF_text": "<strong>5g Marine Collagen</strong>",
-        "ggVHYF2aXuS_text": "<p>High-quality hydrolyzed peptides.</p>",
-        "ggzo009WfZP_text": "<strong>🌿</strong>",
-        "ggZDI5PKS0__text": "<strong>Zero Sugar. No Dairy. No Gluten.</strong>",
         "ggH_ZTyArQ-_text": "<p>Nothing unnecessary. Nothing weird.</p>",
+        "ggKaPNpheI7_text": "Support From Within",
+        "ggKr5arhvsc_text": "<strong>💚</strong>",
+        "ggLlW8VlJoX_label": "<p>Limited Time: Free Milk Frother Included</p>",
+        "ggNFbtXyZS-_text": "1g Ceremonial Matcha",
+        "ggNFnSBQsVv_text": "<strong>Zero Sugar. No Dairy. No Gluten.</strong>",
+        "ggR-upih92-_text": "<strong>5g Marine&nbsp;</strong><br><strong>Collagen</strong>",
+        "ggT2TNXaDJT_text": "<strong>A Better Morning Ritual</strong>",
+        "ggTLbgUz_cn_text": "Clean, Steady Energy",
+        "ggVHYF2aXuS_text": "<p>High-quality hydrolyzed peptides.</p>",
+        "ggXDzSIZbAR_text": "<p>Designed to complement your daily routine.</p>",
+        "ggXOE02r7G1_text": "⚡",
+        "ggZDI5PKS0__text": "<strong>Zero Sugar. No Dairy. No Gluten.</strong>",
+        "gga2-LW2T1y_text": "Clean, Steady Energy",
+        "ggaLPAuJRnn_text": "🍵",
+        "ggd1GvNtwBu_text": "Support From Within",
+        "gggRweSIEss_text": "⚡",
+        "ggh9kvI-F87_text": "<p>Nothing unnecessary. Nothing weird.</p>",
         "ggheQhzW1ue_label": "<p>BUY NOW | 20% OFF</p>",
-        "ggLlW8VlJoX_label": "<p>Limited Time: Free Milk Frother Included</p>"
-      }
+        "gghjt6WUJh-_text": "<p>Calm, focused energy.</p>",
+        "ggkgaYSJTGZ_text": "<p>High-quality hydrolyzed peptides.</p>",
+        "ggkwxCbdzzF_text": "✨",
+        "ggnRziGQZTt_text": "1g Ceremonial Matcha",
+        "ggpk6T1JaRF_text": "<strong>5g Marine Collagen</strong>",
+        "ggq_VI5esE5_text": "☕",
+        "ggs-HM3W18s_text": "<p>Calm, focused energy.</p>",
+        "ggxEcO1irH1_text": "<p>No jitters. No crash.</p>",
+        "ggyfXC_Q5tL_text": "<p>No jitters. No crash.</p>",
+        "ggzo009WfZP_text": "<strong>🌿</strong>"
+      },
+      "type": "gp-section-609001508268147634"
     },
     "gp_section_609001508368810930": {
-      "type": "gp-section-609001508368810930",
       "settings": {
         "checksum": "77f4121b2f7e536f336898a99d51a8705ecdb8d749c4f32a79ddab0adafe533f_1_1_1_0__1",
-        "ggSbL3-nPAj_text": "Hear Why Over 150,000<br>Customers Love Teangle",
-        "ggyd0jGwLmK_text": "Hear Why Over 150,000<br>Customers Love Teangle",
-        "ggVpedDgEKG_text": "<p>“I replaced my morning coffee with Vanilla Matcha Collagen and I honestly don’t miss it. My energy feels smooth and steady, and after a few weeks my skin looked noticeably brighter. It’s become my favorite part of the day.”</p>",
-        "gg7LPS4015n_text": "<p>Janet F.</p>",
-        "ggEZS20gtUC_text": "<p>Verified Buyer</p>",
-        "gghXDgj4qLA_text": "<p>“I was tired of the afternoon crash from coffee. Since switching to this, my focus feels calmer and more balanced. I also love that it supports my skin and hair at the same time. It just feels like a smarter ritual.”</p>",
-        "ggxdVXY3kTh_text": "<p>Debra M.</p>",
-        "ggJaL0QPUE8_text": "<p>Verified Buyer</p>",
-        "ggbZXbe8tnK_text": "<p>“The vanilla flavour is subtle and creamy, not overly sweet. I’ve been using it every morning and feel more consistent energy without jitters. My nails have been growing stronger too, which was a nice surprise.”</p>",
-        "gg83dMb0uqc_text": "<p>Sophie R.</p>",
-        "ggs9DshFfEC_text": "<p>Verified Buyer</p>",
         "g-W3yJp4Um0_text": "<p>“I’ve tried collagen powders before but this one actually fits into my routine. I feel steady throughout the morning and don’t get that anxious spike anymore. It’s clean, simple, and actually enjoyable.”</p>",
-        "gxeGP7o5fRC_text": "<p>Linda S.</p>",
         "gcmBD1SmVWU_text": "<p>Verified Buyer</p>",
+        "gg7LPS4015n_text": "<p>Janet F.</p>",
+        "gg83dMb0uqc_text": "<p>Sophie R.</p>",
+        "ggEZS20gtUC_text": "<p>Verified Buyer</p>",
+        "ggJaL0QPUE8_text": "<p>Verified Buyer</p>",
         "ggNrPappqLD_label": "<p>BUY NOW | 20% OFF</p>",
-        "ggad_jOb71I_label": "<p>Limited Time: Free Milk Frother Included</p>"
-      }
+        "ggSbL3-nPAj_text": "Hear Why Over 150,000<br>Customers Love Teangle",
+        "ggVpedDgEKG_text": "<p>“I replaced my morning coffee with Vanilla Matcha Collagen and I honestly don’t miss it. My energy feels smooth and steady, and after a few weeks my skin looked noticeably brighter. It’s become my favorite part of the day.”</p>",
+        "ggad_jOb71I_label": "<p>Limited Time: Free Milk Frother Included</p>",
+        "ggbZXbe8tnK_text": "<p>“The vanilla flavour is subtle and creamy, not overly sweet. I’ve been using it every morning and feel more consistent energy without jitters. My nails have been growing stronger too, which was a nice surprise.”</p>",
+        "gghXDgj4qLA_text": "<p>“I was tired of the afternoon crash from coffee. Since switching to this, my focus feels calmer and more balanced. I also love that it supports my skin and hair at the same time. It just feels like a smarter ritual.”</p>",
+        "ggs9DshFfEC_text": "<p>Verified Buyer</p>",
+        "ggxdVXY3kTh_text": "<p>Debra M.</p>",
+        "ggyd0jGwLmK_text": "Hear Why Over 150,000<br>Customers Love Teangle",
+        "gxeGP7o5fRC_text": "<p>Linda S.</p>"
+      },
+      "type": "gp-section-609001508368810930"
     },
     "gp_section_609001508368942002": {
-      "type": "gp-section-609001508368942002",
       "settings": {
         "checksum": "a5748c709c849467a74c00ce82a10533ee9c9d6559470d3f6d39f27a739c224a_1_1_1_0__1",
-        "ghCVmWsgUYyTP_text": "How To Use",
+        "gg6lwc76leu_label": "<p>Limited Time: Free Milk Frother Included</p>",
         "ggWuuNNz8ia_childItem_0": "<p>Pour 250ml -350ml of hot water</p>",
         "ggWuuNNz8ia_childItem_1": "<p>Add 1 scoop of Teangle Matcha Collagen Powder</p>",
         "ggWuuNNz8ia_childItem_2": "<p>Stir with your Teangle Milk Frother until fully dissolved</p>",
         "ggWuuNNz8ia_childItem_3": "<p>Optionally, pour your choice of milk for some creamy goodness!</p>",
         "ggYpag6SU3K_label": "<p>BUY NOW | 20% OFF</p>",
-        "gg6lwc76leu_label": "<p>Limited Time: Free Milk Frother Included</p>"
-      }
+        "ghCVmWsgUYyTP_text": "How To Use"
+      },
+      "type": "gp-section-609001508368942002"
     },
     "gp_section_609001508369007538": {
-      "type": "gp-section-609001508369007538",
       "settings": {
         "checksum": "7597827e2d138acb9856404b3c57fb3d9107d9f0816d226d239c2ae5cdc0b069_1_1_1_0__1",
         "ggNmVSdYD26_text": "<p>Promotional T&amp;Cs (Teangle)</p><p>The Bundle and Free Gift offers are introductory promotions available for new customers only, while stocks last. If your order includes a free promotional item and you return part or all of your order without returning the unused free item, we reserve the right to deduct the value of the free item from your refund. Offers cannot be combined with other discounts or promotions. Using multiple promotions may remove the free gift from your order.</p><p>&nbsp;</p><p>Nutritional Claims (Teangle)</p><p>*Based on customer reported feedback after consistent daily use over 8 to 12 weeks. Results may vary by individual.<br>**Per serving: 5g marine collagen and 1g organic ceremonial matcha.<br>***Zero sugar claim refers to no added sugar. Always check the label for the most up to date nutrition information.</p>",
         "ggsyHH7duCX_text": "<p><a href=\"https://teangle.ca/policies/privacy-policy\" target=\"_blank\"><u>Privacy Policy</u></a> &nbsp;| &nbsp;<a href=\"https://teangle.ca/policies/terms-of-service\"><u>Terms &amp; Conditions&nbsp;</u></a><a href=\"https://glowactiv.com.au/pages/terms-and-conditions\" target=\"_blank\">&nbsp;</a></p><p>| &nbsp;@ 2026 Teangle</p>"
-      }
+      },
+      "type": "gp-section-609001508369007538"
     },
     "gp_section_609001508402365362": {
-      "type": "gp-section-609001508402365362",
       "settings": {
         "checksum": "587b65e52d37106ae2c3869e485d7b9718507cdf6fc962840f89d8bc99801f7b_1_1_1_0__1",
-        "ggsQckkj8K-_text": "Us vs. Them",
         "ggkMFkn_Jk-_label": "<p>BUY NOW | 20% OFF</p>",
+        "ggsQckkj8K-_text": "Us vs. Them",
         "ggsoygwgtJE_label": "<p>Limited Time: Free Milk Frother Included</p>"
-      }
+      },
+      "type": "gp-section-609001508402365362"
     },
     "gp_section_609001508402430898": {
-      "type": "gp-section-609001508402430898",
       "settings": {
         "checksum": "3bf82dca39c1b5e846dc978babc24aa1955743561398755551637d5457e9f0b3_1_1_1_0__1",
         "gaknTEegdbsUM_text": "The Glow Up Ritual&nbsp;",
         "gfUXXINnGpISC_text": "<p>Our Matcha blends ceremonial-grade matcha with hydrolyzed collagen peptides to support natural energy, glowing skin, and a feel-good daily routine you’ll actually stick to.&nbsp;</p><p>&nbsp;</p><p>With smooth, clean matcha energy (no jitters, no crash) and high-quality collagen to complement your wellness ritual, feeling confident in your skin is just one cup away.</p>",
-        "ggn0LPthH0O_label": "<p>BUY NOW | 20% OFF</p>",
-        "ggJKUqRCzLo_label": "<p>Limited Time: Free Milk Frother Included</p>"
-      }
+        "ggJKUqRCzLo_label": "<p>Limited Time: Free Milk Frother Included</p>",
+        "ggn0LPthH0O_label": "<p>BUY NOW | 20% OFF</p>"
+      },
+      "type": "gp-section-609001508402430898"
     },
     "gp_section_609002705691607812": {
-      "type": "gp-section-609002705691607812",
       "settings": {
-        "section_preload": "true",
         "checksum": "3608ab7292c443d58609f697d862c5cbba05d27c0d4762650e432d627c269143_1_1_1_0__1",
-        "ggdLZzQDwLn_text": "<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 4.8 Rating 2,898</p>",
-        "ggwffJ67P0K_text": "<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 2,898 reviews</p>",
-        "ggee0IiSh4H_label": "<p>PERFECT FOR A HEALTHY LIFESTYLE</p>",
         "gAIlAPSglzUkQ_text": "Replace Coffee.&nbsp;<br>Glow Smarter.",
         "gg2Bo7VqXvG_text": "<p>90% feel the benefits after 3+ months.</p>",
         "gg9y8_B8uLO_text": "<p>Daily support for energy &amp; wellbeing.</p>",
+        "ggEFmMImJPa_text": "<p>A delicious all-in-one latte without the calories or sugar.</p>",
         "ggGP6gOQEHM_text": "<p>Glowing skin, hair &amp; nail support.</p>",
-        "ggOBP-BtAbE_text": "<p>A delicious all-in-one latte without the calories or sugar.</p>",
-        "gnrFANyhVWsXY_label": "<p>BUY NOW | 20% OFF</p>",
-        "ggS9LwWBrB-_label": "<p>Limited Time: Free Milk Frother Included</p>",
         "ggNUVygnjmM_text": "<p>Daily support for energy &amp; wellbeing.</p>",
+        "ggOBP-BtAbE_text": "<p>A delicious all-in-one latte without the calories or sugar.</p>",
+        "ggS9LwWBrB-_label": "<p>Limited Time: Free Milk Frother Included</p>",
+        "ggdLZzQDwLn_text": "<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 4.8 Rating 2,898</p>",
+        "ggee0IiSh4H_label": "<p>PERFECT FOR A HEALTHY LIFESTYLE</p>",
         "ggtjx1jNWvC_text": "<p>Glowing skin, hair &amp; nail support.</p>",
-        "ggEFmMImJPa_text": "<p>A delicious all-in-one latte without the calories or sugar.</p>"
-      }
+        "ggwffJ67P0K_text": "<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 2,898 reviews</p>",
+        "gnrFANyhVWsXY_label": "<p>BUY NOW | 20% OFF</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-609002705691607812"
     },
     "gp_section_609005170650514180": {
-      "type": "gp-section-609005170650514180",
       "settings": {
-        "checksum": "88b2730a0a3ea1bc6a99835a863b32906d145d3bd6ffbf0d4a7f9e2d1c2391fa_1_1_1_0__1",
-        "ggcpY3s2Ogw_text": "Our Mission",
-        "ggY3GV6fDaJ_text": "<p>Teangle didn’t start as a business idea.<br>It started as a search for balance.</p><p><br>For years, I struggled with anxiety and energy crashes — chasing focus with coffee, then paying for it later. At the same time, I watched my mom spend her life taking care of everyone else… rarely herself.</p><p><br>What we needed wasn’t more stimulation.<br>We needed steadiness.</p><p><br>That’s where Teangle was born — inspired by the triangle, a symbol of balance. Mind. Body. Ritual.</p><p><br>We created a simple daily ritual designed to bring calm energy and support from within — without the crash, without the overwhelm.<br>Because self-care shouldn’t be another task.</p><p><br>It should be something you look forward to.</p>",
+        "checksum": "4589dbf30640a4ba79f9bf89297c214f25358023d06b85e4d1f4ad5560ee67af_1_1_1_0__1",
         "gg4SFsW8oyf_label": "<p>START YOUR GLOW RITUAL</p><p>&nbsp;</p>",
-        "ggO4UrlMw9D_label": "<p>Limited Time: Free Milk Frother Included</p>"
-      }
+        "ggO4UrlMw9D_label": "<p>Limited Time: Free Milk Frother Included</p>",
+        "ggY3GV6fDaJ_text": "<p>Teangle didn’t start as a business idea.<br>It started as a search for balance.</p><p><br>For years, I struggled with anxiety and energy crashes — chasing focus with coffee, then paying for it later. At the same time, I watched my mom spend her life taking care of everyone else… rarely herself.</p><p><br>What we needed wasn’t more stimulation.<br>We needed steadiness.</p><p><br>That’s where Teangle was born — inspired by the triangle, a symbol of balance. Mind. Body. Ritual.</p><p><br>We created a simple daily ritual designed to bring calm energy and support from within — without the crash, without the overwhelm.<br>Because self-care shouldn’t be another task.</p><p><br>It should be something you look forward to.</p>",
+        "ggcpY3s2Ogw_text": "Our Mission"
+      },
+      "type": "gp-section-609005170650514180"
     },
     "gp_section_609032985731138242": {
-      "type": "gp-section-609032985731138242",
       "settings": {
         "checksum": "46194a75e883c1b4c97b0f8c8f282627e718ac9f295863237a3c8cb967595fb4_1_1_1_0__1",
-        "ggGQpeEacW4_text": "<p>“It’s so nice to finally replace coffee with something clean and natural. I feel steady energy without the crash, and my skin looks brighter too. It honestly does exactly what it promises and has become my favorite morning ritual.”</p>",
-        "ggfZ12L2xjv_text": "Lana C.",
-        "ggkBbnoE9Jq_text": "<p>Verified Buyer</p>",
-        "ggOwkkjG_5a_text": "<p>“Vanilla Matcha Collagen has become part of my daily routine. I love how smooth and calm my energy feels throughout the morning. After a few weeks, I noticed my skin looking healthier and more refreshed. If you want glow and focus, this is it.”</p>",
+        "gg-GhQxOMik_text": "<strong>1g of organic ceremonial Matcha</strong>",
+        "gg8P7TRlIAD_label": "<p>Limited Time: Free Milk Frother Included</p>",
         "ggACaeMMVE8_text": "<p>Maria D.</p>",
         "ggAIaUT4M6V_text": "Verified Buyer",
+        "ggG12xtIJIv_text": "<p>Supports a healthy gut and digestion.<br>• Sourced from wild Acacia trees.</p>",
+        "ggG4pyob4f1_text": "<strong>organic acacia&nbsp;</strong><br><strong>gum</strong>",
+        "ggGQpeEacW4_text": "<p>“It’s so nice to finally replace coffee with something clean and natural. I feel steady energy without the crash, and my skin looks brighter too. It honestly does exactly what it promises and has become my favorite morning ritual.”</p>",
+        "ggMqijeJ6_C_label": "<p>BUY NOW | 20% OFF</p>",
+        "ggOwkkjG_5a_text": "<p>“Vanilla Matcha Collagen has become part of my daily routine. I love how smooth and calm my energy feels throughout the morning. After a few weeks, I noticed my skin looking healthier and more refreshed. If you want glow and focus, this is it.”</p>",
+        "ggP67bXmvr__text": "<p>Super creamy deliciousness that's dairy free and low calorie.<br>• Paleo, keto and 100% plant based<br>• Non-GMO</p>",
         "ggRzJq_OG7A_text": "We only use the best quality ingredients",
         "ggZGfApZMAM_text": "<strong>1g of organic ceremonial Matcha</strong>",
-        "ggoLtkGjLtP_text": "<strong>5g of pure marine</strong><br><strong>collagen</strong>",
-        "ggG4pyob4f1_text": "<strong>organic acacia&nbsp;</strong><br><strong>gum</strong>",
-        "ggyuDR3qmLM_text": "<strong>organic coconut milk&nbsp;</strong><br><strong>powder</strong>",
-        "gg-GhQxOMik_text": "<strong>1g of organic ceremonial Matcha</strong>",
-        "ggpGh7bxXG6_text": "<p>Your superhero when it comes to long-lasting energy, reduced stress and better focus.<br>• Sourced from a family farm in Japan<br>• Screened and tested for toxins</p>",
         "ggdcGYVqJ3u_text": "<strong>5g of pure marine collagen</strong>",
-        "ggk0-DsEQkY_text": "<p>Aka the fountain of youth. This stuff is amazing for your skin, hair, nails and just overall confidence.<br>• The most bioavailable form<br>• Sustainably sourced from wild-caught fish in Canada</p>",
+        "ggfZ12L2xjv_text": "Lana C.",
         "gggDtdseBI1_text": "<strong>organic acacia gum</strong>",
-        "ggG12xtIJIv_text": "<p>Supports a healthy gut and digestion.<br>• Sourced from wild Acacia trees.</p>",
+        "ggk0-DsEQkY_text": "<p>Aka the fountain of youth. This stuff is amazing for your skin, hair, nails and just overall confidence.<br>• The most bioavailable form<br>• Sustainably sourced from wild-caught fish in Canada</p>",
+        "ggkBbnoE9Jq_text": "<p>Verified Buyer</p>",
+        "ggoLtkGjLtP_text": "<strong>5g of pure marine</strong><br><strong>collagen</strong>",
+        "ggpGh7bxXG6_text": "<p>Your superhero when it comes to long-lasting energy, reduced stress and better focus.<br>• Sourced from a family farm in Japan<br>• Screened and tested for toxins</p>",
         "ggwpgu6Rhd-_text": "<strong>organic coconut milk powder</strong>",
-        "ggP67bXmvr__text": "<p>Super creamy deliciousness that's dairy free and low calorie.<br>• Paleo, keto and 100% plant based<br>• Non-GMO</p>",
-        "ggMqijeJ6_C_label": "<p>BUY NOW | 20% OFF</p>",
-        "gg8P7TRlIAD_label": "<p>Limited Time: Free Milk Frother Included</p>"
-      }
+        "ggyuDR3qmLM_text": "<strong>organic coconut milk&nbsp;</strong><br><strong>powder</strong>"
+      },
+      "type": "gp-section-609032985731138242"
     },
     "gp_section_609213794274509715": {
-      "type": "gp-section-609213794274509715",
       "settings": {
         "checksum": "63ca2c4af6d975f98b829af15db6ae9ffdd97343931c1b94869abfdc834dc5a9_1_1_1_0__1"
-      }
+      },
+      "type": "gp-section-609213794274509715"
     },
     "gp_section_610505096375042971": {
-      "type": "gp-section-610505096375042971",
       "settings": {
         "checksum": "a832b84d493b2636b9bfe88eccbe5ff42fc2139cb21e4e17f90d232ac101d14b_1_1_1_0__1",
         "ggOAv5tVUXf_text": "As featured in"
-      }
+      },
+      "type": "gp-section-610505096375042971"
+    },
+    "gp_section_611073605006000659": {
+      "settings": {
+        "checksum": "9b5f867d416b2600bf2e2ad2151ad2b9693f47ede5c21f09a6b7be52cb23c161_1_1_1_0__1",
+        "ggMhw-EDaTr_text": "FAQs",
+        "ggTJ001QG7P_text": "<p>Yes. Many customers switch from coffee to Vanilla Matcha Collagen because it delivers steady, focused energy without jitters or crashes. It’s a smoother alternative to traditional caffeine.</p>",
+        "ggVZBGreGm5_label": "<p>START YOUR GLOW RITUAL</p><p>&nbsp;</p>",
+        "ggfc159XPOc_text": "<p>Vanilla Matcha Collagen has a subtle, creamy vanilla flavour with a smooth matcha finish. It’s not overly sweet and has no fishy or gritty aftertaste.</p>",
+        "gggGCCiKzg5_text": "<p>If you are pregnant or breastfeeding, we recommend consulting your healthcare professional before adding any supplement to your routine.</p>",
+        "ggjo6DbPAJo_text": "<p>Energy benefits are often felt within the first week. Visible glow support for skin, hair, and nails typically becomes noticeable after consistent daily use over several weeks.</p>",
+        "ggq1bi_7_C-_text": "<p>Each tub contains 30 servings. One scoop per day gives you a full 30-day ritual of calm energy and collagen support.</p>",
+        "ggw4Xo9VSAq_label": "<p>Limited Time: Free Milk Frother Included</p>",
+        "ggzYq1rn_yQ_childItem_0": "<p>How many servings are in one tub?</p>",
+        "ggzYq1rn_yQ_childItem_1": "<p>Can this replace my coffee?</p>",
+        "ggzYq1rn_yQ_childItem_2": "<p>What does it taste like?</p>",
+        "ggzYq1rn_yQ_childItem_3": "<p>When will I notice results?</p>",
+        "ggzYq1rn_yQ_childItem_4": "<p>Can I take it while pregnant or breastfeeding?</p>",
+        "ggzYq1rn_yQ_childItem_5": "<p>Is it made in Canada?</p>",
+        "ggzm8hs2FIY_text": "<p>Yes. Teangle is a Canadian brand committed to clean ingredients and premium quality standards.</p>"
+      },
+      "type": "gp-section-611073605006000659"
     }
   },
   "order": [
@@ -233,8 +232,8 @@
     "gp_section_609001508368810930",
     "gp_section_609005170650514180",
     "gp_section_609001508234593202",
+    "gp_section_611073605006000659",
     "gp_section_609001508369007538",
-    "gp_global_section_610505131791745830-1",
     "gp_section_609213794274509715"
   ],
   "layout": "theme.gempages.header"
