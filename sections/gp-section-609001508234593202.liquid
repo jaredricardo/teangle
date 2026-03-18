@@ -1095,45 +1095,46 @@
 <!-- Paste this entire block into a GemPages "Custom Code" element -->
 
 <style>
-  .bw *{box-sizing:border-box;margin:0;padding:0}
-  .bw{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:640px;margin:0 auto;padding:2rem 1rem}
-  .section-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6b7280;margin-bottom:12px}
-  .bw-row{margin-bottom:1.75rem}
-  .flavor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-  .flavor-card{border:1.5px solid #e5e7eb;border-radius:12px;padding:14px 12px;cursor:pointer;transition:all 0.15s;background:#fff;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
-  .flavor-card:hover{border-color:#5DCAA5}
-  .flavor-card.active{border-color:#1D9E75;background:#F0FAF6}
-  .flavor-img{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:26px}
-  .fi-og{background:#EAF3DE}
-  .fi-ch{background:#F1EFE8}
-  .fi-va{background:#FAEEDA}
-  .flavor-name{font-size:12px;font-weight:600;color:#111;line-height:1.3}
-  .flavor-check{width:18px;height:18px;border-radius:50%;border:1.5px solid #d1d5db;display:flex;align-items:center;justify-content:center;transition:all 0.15s;margin-top:2px}
-  .flavor-check.on{background:#1D9E75;border-color:#1D9E75}
-  .flavor-check svg{width:10px;height:10px}
-  .qty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-  .qty-card{border:1.5px solid #e5e7eb;border-radius:12px;padding:16px 12px;cursor:pointer;transition:all 0.15s;background:#fff;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;position:relative}
-  .qty-card:hover{border-color:#5DCAA5}
-  .qty-card.active{border-color:#1D9E75;background:#F0FAF6}
-  .qty-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#1D9E75;color:#fff;font-size:10px;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap}
-  .qty-number{font-size:28px;font-weight:600;color:#111;line-height:1}
-  .qty-label{font-size:12px;color:#6b7280}
-  .qty-discount{font-size:12px;font-weight:600;color:#0F6E56;margin-top:2px}
-  .summary-box{border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;background:#f9fafb}
-  .sum-row{display:flex;justify-content:space-between;font-size:14px;color:#6b7280;margin-bottom:8px}
-  .sum-row.saving{color:#0F6E56;font-weight:600}
-  .sum-divider{border:none;border-top:1px solid #e5e7eb;margin:10px 0}
-  .sum-total{display:flex;justify-content:space-between;align-items:baseline}
-  .sum-total-label{font-size:15px;font-weight:600;color:#111}
-  .sum-total-price{font-size:24px;font-weight:700;color:#111}
-  .sum-per{font-size:12px;color:#6b7280;margin-top:4px;text-align:right}
-  .add-btn{width:100%;margin-top:14px;padding:14px;border-radius:8px;border:none;background:#1D9E75;color:#fff;font-size:15px;font-weight:600;cursor:pointer;transition:opacity 0.15s,background 0.2s;letter-spacing:0.01em}
-  .add-btn:hover{opacity:0.9}
-  .add-btn.success{background:#0F6E56}
+  .bw *{box-sizing:border-box !important;margin:0 !important;padding:0 !important}
+  .bw{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif !important;max-width:640px !important;margin:0 auto !important;padding:2rem 1rem !important}
+  .section-label{font-size:11px !important;font-weight:600 !important;letter-spacing:0.1em !important;text-transform:uppercase !important;color:#6b7280 !important;margin-bottom:12px !important}
+  .bw-row{margin-bottom:1.75rem !important}
+  .flavor-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:10px !important}
+  .flavor-card{border:1.5px solid #e5e7eb !important;border-radius:12px !important;padding:14px 12px !important;cursor:pointer !important;transition:all 0.15s !important;background:#fff !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:8px !important;text-align:center !important}
+  .flavor-card:hover{border-color:#5DCAA5 !important}
+  .flavor-card.active{border-color:#1D9E75 !important;background:#F0FAF6 !important}
+  .flavor-img{width:56px !important;height:56px !important;border-radius:10px !important;display:flex !important;align-items:center !important;justify-content:center !important;font-size:26px !important}
+  .fi-og{background:#EAF3DE !important}
+  .fi-ch{background:#F1EFE8 !important}
+  .fi-va{background:#FAEEDA !important}
+  .flavor-name{font-size:12px !important;font-weight:600 !important;color:#111 !important;line-height:1.3 !important}
+  .flavor-check{width:18px !important;height:18px !important;border-radius:50% !important;border:1.5px solid #d1d5db !important;display:flex !important;align-items:center !important;justify-content:center !important;transition:all 0.15s !important;margin-top:2px !important}
+  .flavor-check.on{background:#1D9E75 !important;border-color:#1D9E75 !important}
+  .flavor-check svg{width:10px !important;height:10px !important}
+  .qty-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:10px !important}
+  .qty-card{border:1.5px solid #e5e7eb !important;border-radius:12px !important;padding:16px 12px !important;cursor:pointer !important;transition:all 0.15s !important;background:#fff !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:4px !important;text-align:center !important;position:relative !important}
+  .qty-card:hover{border-color:#5DCAA5 !important}
+  .qty-card.active{border-color:#1D9E75 !important;background:#F0FAF6 !important}
+  .qty-badge{position:absolute !important;top:-10px !important;left:50% !important;transform:translateX(-50%) !important;background:#1D9E75 !important;color:#fff !important;font-size:10px !important;font-weight:700 !important;padding:2px 10px !important;border-radius:20px !important;white-space:nowrap !important}
+  .qty-number{font-size:28px !important;font-weight:600 !important;color:#111 !important;line-height:1 !important}
+  .qty-label{font-size:12px !important;color:#6b7280 !important}
+  .qty-discount{font-size:12px !important;font-weight:600 !important;color:#0F6E56 !important;margin-top:2px !important}
+  .summary-box{border:1px solid #e5e7eb !important;border-radius:12px !important;padding:16px 20px !important;background:#f9fafb !important}
+  .sum-row{display:flex !important;justify-content:space-between !important;font-size:14px !important;color:#6b7280 !important;margin-bottom:8px !important}
+  .sum-row.saving{color:#0F6E56 !important;font-weight:600 !important}
+  .sum-divider{border:none !important;border-top:1px solid #e5e7eb !important;margin:10px 0 !important}
+  .sum-total{display:flex !important;justify-content:space-between !important;align-items:baseline !important}
+  .sum-total-label{font-size:15px !important;font-weight:600 !important;color:#111 !important}
+  .sum-total-price{font-size:24px !important;font-weight:700 !important;color:#111 !important}
+  .sum-per{font-size:12px !important;color:#6b7280 !important;margin-top:4px !important;text-align:right !important}
+  .add-btn{width:100% !important;margin-top:14px !important;padding:14px !important;border-radius:8px !important;border:none !important;background:#1D9E75 !important;color:#fff !important;font-size:15px !important;font-weight:600 !important;cursor:pointer !important;letter-spacing:0.01em !important;display:block !important;text-align:center !important;text-decoration:none !important}
+  .add-btn:hover{opacity:0.9 !important}
+  .add-btn.loading{opacity:0.7 !important;cursor:wait !important}
+  .add-btn.success{background:#0F6E56 !important}
   @media(max-width:480px){
-    .flavor-name{font-size:11px}
-    .qty-number{font-size:22px}
-    .flavor-img{width:44px;height:44px;font-size:22px}
+    .flavor-name{font-size:11px !important}
+    .qty-number{font-size:22px !important}
+    .flavor-img{width:44px !important;height:44px !important;font-size:22px !important}
   }
 </style>
 
@@ -1216,7 +1217,6 @@
 <script>
 (function(){
   // ── CONFIG ─────────────────────────────────────────────
-  // Replace variant IDs with your real Shopify variant IDs
   var UNIT_PRICE = 39.99;
   var FLAVORS = ['Original Matcha Collagen','Chocolate Matcha Collagen','Vanilla Matcha Collagen'];
   var VARIANT_IDS = [
@@ -1260,32 +1260,34 @@
     document.getElementById('bw-per').textContent = '$'+per.toFixed(2)+' per bag';
     var btn = document.getElementById('bw-btn');
     btn.textContent = 'Add to cart';
-    btn.classList.remove('success');
+    btn.classList.remove('success','loading');
   }
 
   window.bwAddCart = function(){
     var variantId = VARIANT_IDS[selF];
     var qty = QTYS[selQ];
+    var btn = document.getElementById('bw-btn');
 
-    // Shopify Add to Cart
-    if(variantId && variantId !== 0){
-      fetch('/cart/add.js',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({id: variantId, quantity: qty})
-      }).then(function(){
-        var btn = document.getElementById('bw-btn');
-        btn.textContent = 'Added to cart!';
-        btn.classList.add('success');
-        setTimeout(function(){ btn.textContent='Add to cart'; btn.classList.remove('success'); }, 2000);
-      }).catch(function(){ alert('Something went wrong. Please try again.'); });
-    } else {
-      // Preview mode (no variant IDs set yet)
-      var btn = document.getElementById('bw-btn');
-      btn.textContent = 'Added to cart!';
+    btn.textContent = 'Adding...';
+    btn.classList.add('loading');
+
+    // Add to cart then redirect straight to checkout
+    fetch('/cart/add.js',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({id: variantId, quantity: qty})
+    })
+    .then(function(){
+      btn.textContent = 'Redirecting to checkout...';
+      btn.classList.remove('loading');
       btn.classList.add('success');
-      setTimeout(function(){ btn.textContent='Add to cart'; btn.classList.remove('success'); }, 2000);
-    }
+      window.location.href = '/checkout';
+    })
+    .catch(function(){
+      btn.textContent = 'Add to cart';
+      btn.classList.remove('loading');
+      alert('Something went wrong. Please try again.');
+    });
   };
 
   bwUpdate();
@@ -2021,7 +2023,7 @@
       role="presentation"
       data-id="g9UTllbVHV"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1773810812343 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g9UTllbVHV"
+      class="gp-group/image gp-relative force-publish-1773811141232 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto g9UTllbVHV"
     >
       <div
         
