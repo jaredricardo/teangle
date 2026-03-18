@@ -9,19 +9,6 @@
  */
 {
   "sections": {
-    "gp_section_609001508234593202": {
-      "settings": {
-        "checksum": "6b5d1942b457a0d94ed6a970911da7c4c765fb4742ef8d87d91a563b4107a3ea_1_1_1_0__1",
-        "ggLyX9gUzYG_text": "<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 4.8 Rating 2,898</p>",
-        "ggbprWAlgZG_text": "<p>Get your Free Milk frother when you order 2 tubs of more - worth $15.99. Limited time offer.</p>",
-        "ggrlLEjwAmc_label": "<p>Limited Time: Free Milk Frother Included</p>",
-        "ggrpU1p24o4_label": "BUY NOW",
-        "ggrpU1p24o4_outOfStockLabel": "Out of stock",
-        "ggrpU1p24o4_unavailableLabel": "Unavailable",
-        "ggrpU1p24o4_variantSelectionRequiredMessage": "Please select a variant to add product to cart"
-      },
-      "type": "gp-section-609001508234593202"
-    },
     "gp_section_609001508268147634": {
       "settings": {
         "checksum": "00f2e1dc62e0c7531071eefa8b2109536bed045b14cfe73bf7e86aa982e188b2_1_1_1_0__1",
@@ -219,6 +206,15 @@
         "ggzm8hs2FIY_text": "<p>Yes. Teangle is a Canadian brand committed to clean ingredients and premium quality standards.</p>"
       },
       "type": "gp-section-611073605006000659"
+    },
+    "gp_section_611163182706197291": {
+      "settings": {
+        "checksum": "0d5776f30014fd6ae9c7bc17df88e8ba5cd2037921ae7059a7ef813c30d6be24_1_1_1_0__1",
+        "ggAVDLy26zK_text": "<p>Get your Free Milk frother when you order 2 tubs of more - worth $15.99. Limited time offer.</p>",
+        "ggL3Kxt4zk__label": "<p>Limited Time: Free Milk Frother Included</p>",
+        "ggUJg9K64YD_text": "<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 4.8 Rating 2,898</p>"
+      },
+      "type": "gp-section-611163182706197291"
     }
   },
   "order": [
@@ -231,7 +227,7 @@
     "gp_section_609001508368942002",
     "gp_section_609001508368810930",
     "gp_section_609005170650514180",
-    "gp_section_609001508234593202",
+    "gp_section_611163182706197291",
     "gp_section_611073605006000659",
     "gp_section_609001508369007538",
     "gp_section_609213794274509715"
