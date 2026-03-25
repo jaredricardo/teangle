@@ -205,155 +205,189 @@
       data-keep-class="true"
       class="gSU4z5cVvg gp-custom-code">
       <div>
-    <!-- BUNDLE RIGHT SIDE — Flavor + Quantity Selector -->
+    <!-- BUNDLE RIGHT SIDE v2 — New Design -->
 <!-- Paste into the RIGHT column Custom Code block in GemPages -->
 
 <style>
   @font-face{font-family:'SofiaPro';src:url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/gempages_Sofia_Pro_Regular_Az.otf?v=1772828137') format('opentype');font-weight:normal;font-style:normal}
-  .bw *{box-sizing:border-box !important;margin:0 !important;padding:0 !important}
-  .bw{font-family:'SofiaPro',-apple-system,sans-serif !important;max-width:640px !important;margin:0 auto !important;padding:0.5rem 0 !important}
-  .section-label{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:11px !important;font-weight:600 !important;letter-spacing:0.1em !important;text-transform:uppercase !important;color:#6b7280 !important;margin-bottom:12px !important}
-  .bw-row{margin-bottom:1.75rem !important}
-  .flavor-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:10px !important}
-  .flavor-card{border:1.5px solid #e5e7eb !important;border-radius:12px !important;padding:14px 12px !important;cursor:pointer !important;transition:all 0.15s !important;background:#fff !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:8px !important;text-align:center !important}
-  .flavor-card:hover{border-color:#5DCAA5 !important}
-  .flavor-card.active{border-color:#1D9E75 !important;background:#F0FAF6 !important}
-  .flavor-img{width:56px !important;height:56px !important;border-radius:8px !important;object-fit:cover !important;background:#f3f4f6 !important}
-  .flavor-name{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;font-weight:600 !important;color:#111 !important;line-height:1.3 !important}
-  .flavor-check{width:18px !important;height:18px !important;border-radius:50% !important;border:1.5px solid #d1d5db !important;display:flex !important;align-items:center !important;justify-content:center !important;transition:all 0.15s !important;margin-top:2px !important}
-  .flavor-check.on{background:#1D9E75 !important;border-color:#1D9E75 !important}
-  .flavor-check svg{width:10px !important;height:10px !important}
-  .qty-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:10px !important}
-  .qty-card{border:1.5px solid #e5e7eb !important;border-radius:12px !important;padding:16px 12px !important;cursor:pointer !important;transition:all 0.15s !important;background:#fff !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:4px !important;text-align:center !important;position:relative !important}
-  .qty-card:hover{border-color:#5DCAA5 !important}
-  .qty-card.active{border-color:#1D9E75 !important;background:#F0FAF6 !important}
-  .qty-badge{font-family:'SofiaPro',-apple-system,sans-serif !important;position:absolute !important;top:-10px !important;left:50% !important;transform:translateX(-50%) !important;background:#1D9E75 !important;color:#fff !important;font-size:10px !important;font-weight:700 !important;padding:2px 10px !important;border-radius:20px !important;white-space:nowrap !important}
-  .qty-number{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:28px !important;font-weight:600 !important;color:#111 !important;line-height:1 !important}
-  .qty-label{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#6b7280 !important}
-  .qty-discount{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;font-weight:600 !important;color:#0F6E56 !important;margin-top:2px !important}
-  .qty-original{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:11px !important;color:#9ca3af !important;text-decoration:line-through !important;margin-top:1px !important}
-  .summary-box{border:1px solid #e5e7eb !important;border-radius:12px !important;padding:16px 20px !important;background:#f9fafb !important}
-  .sum-row{display:flex !important;justify-content:space-between !important;font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:14px !important;color:#6b7280 !important;margin-bottom:8px !important}
-  .sum-row.saving{color:#0F6E56 !important;font-weight:600 !important}
-  .sum-row.hidden{display:none !important}
-  .sum-divider{border:none !important;border-top:1px solid #e5e7eb !important;margin:10px 0 !important}
-  .sum-total{display:flex !important;justify-content:space-between !important;align-items:baseline !important}
-  .sum-total-label{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:15px !important;font-weight:600 !important;color:#111 !important}
-  .sum-total-price{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:24px !important;font-weight:700 !important;color:#111 !important}
-  .sum-per{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#6b7280 !important;margin-top:4px !important;text-align:right !important}
-  .add-btn{font-family:'SofiaPro',-apple-system,sans-serif !important;width:100% !important;margin-top:14px !important;padding:14px !important;border-radius:8px !important;border:none !important;background:#1D9E75 !important;color:#fff !important;font-size:15px !important;font-weight:600 !important;cursor:pointer !important;letter-spacing:0.01em !important;display:block !important;text-align:center !important;text-decoration:none !important}
-  .add-btn:hover{opacity:0.9 !important}
-  .add-btn.loading{opacity:0.7 !important;cursor:wait !important}
-  .add-btn.success{background:#0F6E56 !important}
-  .gift-box{display:none !important;align-items:center !important;gap:12px !important;background:#F0FAF6 !important;border:1.5px dashed #1D9E75 !important;border-radius:12px !important;padding:12px 14px !important;margin-bottom:1.75rem !important}
-  .gift-box.visible{display:flex !important}
-  .gift-img{width:52px !important;height:52px !important;border-radius:8px !important;object-fit:cover !important;background:#e5e7eb !important;flex-shrink:0 !important}
-  .gift-text{flex:1 !important}
-  .gift-label{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:10px !important;font-weight:700 !important;letter-spacing:0.08em !important;text-transform:uppercase !important;color:#0F6E56 !important;margin-bottom:2px !important}
-  .gift-name{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:600 !important;color:#111 !important;line-height:1.3 !important}
-  .gift-price{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#0F6E56 !important;font-weight:600 !important;white-space:nowrap !important}
+  .bw2 *{box-sizing:border-box !important;margin:0 !important;padding:0 !important}
+  .bw2{font-family:'SofiaPro',-apple-system,sans-serif !important;max-width:640px !important;margin:0 auto !important;padding:0.5rem 0 !important}
+
+  /* Section Label */
+  .bw2-label{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:600 !important;color:#374151 !important;margin-bottom:14px !important;letter-spacing:0.01em !important}
+  .bw2-row{margin-bottom:1.75rem !important}
+
+  /* ── FLAVOR CARDS ── */
+  .flavor2-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:12px !important}
+  .flavor2-card{border:2px solid #e5e7eb !important;border-radius:16px !important;padding:16px 10px 14px !important;cursor:pointer !important;transition:all 0.18s ease !important;background:#fff !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:10px !important;text-align:center !important;position:relative !important}
+  .flavor2-card:hover{border-color:#5DCAA5 !important;box-shadow:0 4px 16px rgba(29,158,117,0.12) !important}
+  .flavor2-card.active{border-color:#1D9E75 !important;background:#fff !important;box-shadow:0 4px 20px rgba(29,158,117,0.18) !important}
+  .flavor2-check{position:absolute !important;top:10px !important;right:10px !important;width:22px !important;height:22px !important;border-radius:50% !important;border:2px solid #d1d5db !important;background:#fff !important;display:flex !important;align-items:center !important;justify-content:center !important;transition:all 0.15s !important}
+  .flavor2-check.on{background:#1D9E75 !important;border-color:#1D9E75 !important}
+  .flavor2-check svg{width:11px !important;height:11px !important}
+  .flavor2-img{width:90px !important;height:90px !important;object-fit:contain !important;border-radius:10px !important;background:transparent !important}
+  .flavor2-name{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:600 !important;color:#111 !important;line-height:1.3 !important}
+
+  /* ── QTY CARDS ── */
+  .qty2-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:12px !important}
+  .qty2-card{border:2px solid #e5e7eb !important;border-radius:16px !important;padding:20px 10px 16px !important;cursor:pointer !important;transition:all 0.18s ease !important;background:#fff !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:6px !important;text-align:center !important;position:relative !important}
+  .qty2-card:hover{border-color:#5DCAA5 !important;box-shadow:0 4px 16px rgba(29,158,117,0.12) !important}
+  .qty2-card.active{border-color:#1D9E75 !important;background:#fff !important;box-shadow:0 4px 20px rgba(29,158,117,0.18) !important}
+  .qty2-badge{font-family:'SofiaPro',-apple-system,sans-serif !important;position:absolute !important;top:-13px !important;left:50% !important;transform:translateX(-50%) !important;background:#1D9E75 !important;color:#fff !important;font-size:10px !important;font-weight:700 !important;padding:3px 12px !important;border-radius:20px !important;white-space:nowrap !important;letter-spacing:0.04em !important}
+  .qty2-disc-badge{font-family:'SofiaPro',-apple-system,sans-serif !important;position:absolute !important;top:-13px !important;left:50% !important;transform:translateX(-50%) !important;background:#FF5C3A !important;color:#fff !important;font-size:10px !important;font-weight:700 !important;padding:3px 12px !important;border-radius:20px !important;white-space:nowrap !important;letter-spacing:0.04em !important}
+  .qty2-imgs{display:flex !important;align-items:center !important;justify-content:center !important;margin-bottom:4px !important}
+  .qty2-imgs img{width:52px !important;height:52px !important;object-fit:contain !important;background:transparent !important}
+  .qty2-imgs img+img{margin-left:-12px !important}
+  .qty2-imgs img+img+img{margin-left:-12px !important}
+  .qty2-pouches{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:700 !important;color:#111 !important}
+  .qty2-servings{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:11px !important;color:#9ca3af !important;font-weight:400 !important}
+  .qty2-price-now{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:18px !important;font-weight:700 !important;color:#111 !important;line-height:1.1 !important}
+  .qty2-price-was{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#9ca3af !important;text-decoration:line-through !important}
+
+  /* ── GIFT BOX ── */
+  .gift2-box{display:none !important;align-items:center !important;gap:12px !important;background:#F0FAF6 !important;border:1.5px dashed #1D9E75 !important;border-radius:14px !important;padding:12px 16px !important;margin-bottom:1.75rem !important}
+  .gift2-box.visible{display:flex !important}
+  .gift2-img{width:52px !important;height:52px !important;border-radius:8px !important;object-fit:cover !important;background:#e5e7eb !important;flex-shrink:0 !important}
+  .gift2-text{flex:1 !important}
+  .gift2-tag{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:10px !important;font-weight:700 !important;letter-spacing:0.08em !important;text-transform:uppercase !important;color:#0F6E56 !important;margin-bottom:2px !important}
+  .gift2-name{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:600 !important;color:#111 !important;line-height:1.3 !important}
+  .gift2-price{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#0F6E56 !important;font-weight:700 !important;white-space:nowrap !important;text-align:right !important}
+
+  /* ── SUMMARY ── */
+  .sum2-box{border:1.5px solid #e5e7eb !important;border-radius:16px !important;padding:18px 20px !important;background:#fafafa !important}
+  .sum2-row{display:flex !important;justify-content:space-between !important;font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:14px !important;color:#6b7280 !important;margin-bottom:8px !important}
+  .sum2-row.saving{color:#0F6E56 !important;font-weight:600 !important}
+  .sum2-row.hidden{display:none !important}
+  .sum2-divider{border:none !important;border-top:1px solid #e5e7eb !important;margin:12px 0 !important}
+  .sum2-total{display:flex !important;justify-content:space-between !important;align-items:baseline !important}
+  .sum2-total-label{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:15px !important;font-weight:700 !important;color:#111 !important}
+  .sum2-total-price{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:26px !important;font-weight:700 !important;color:#111 !important}
+  .sum2-per{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#9ca3af !important;margin-top:4px !important;text-align:right !important}
+
+  /* ── CTA BUTTON ── */
+  .add2-btn{font-family:'SofiaPro',-apple-system,sans-serif !important;width:100% !important;margin-top:16px !important;padding:16px !important;border-radius:10px !important;border:none !important;background:#1D9E75 !important;color:#fff !important;font-size:16px !important;font-weight:700 !important;cursor:pointer !important;letter-spacing:0.01em !important;display:block !important;text-align:center !important;text-decoration:none !important;transition:opacity 0.15s !important}
+  .add2-btn:hover{opacity:0.9 !important}
+  .add2-btn.loading{opacity:0.7 !important;cursor:wait !important}
+
   @media(max-width:480px){
-    .flavor-name{font-size:11px !important}
-    .qty-number{font-size:22px !important}
-    .flavor-img{width:44px !important;height:44px !important}
+    .flavor2-img{width:70px !important;height:70px !important}
+    .flavor2-name{font-size:11px !important}
+    .qty2-imgs img{width:42px !important;height:42px !important}
+    .qty2-price-now{font-size:15px !important}
   }
 </style>
 
-<div class="bw">
+<div class="bw2">
 
-  <!-- Row 1: Flavor -->
-  <div class="bw-row">
-    <div class="section-label">Step 1 — Choose your flavor</div>
-    <div class="flavor-grid">
+  <!-- STEP 1: Flavor -->
+  <div class="bw2-row">
+    <div class="bw2-label">Choose your flavor</div>
+    <div class="flavor2-grid">
 
-      <div class="flavor-card active" onclick="bwFlavor(0)">
-        <img class="flavor-img" id="bw-fimg-0" src="" alt="Original" />
-        <div class="flavor-name">Original Matcha</div>
-        <div class="flavor-check on" id="bw-fc-0">
-          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="flavor2-card active" onclick="bw2Flavor(0)">
+        <div class="flavor2-check on" id="bw2-fc-0">
+          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
+        <img class="flavor2-img" id="bw2-fimg-0" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="Original" />
+        <div class="flavor2-name">Original</div>
       </div>
 
-      <div class="flavor-card" onclick="bwFlavor(1)">
-        <img class="flavor-img" id="bw-fimg-1" src="" alt="Chocolate" />
-        <div class="flavor-name">Chocolate Matcha</div>
-        <div class="flavor-check" id="bw-fc-1">
-          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="flavor2-card" onclick="bw2Flavor(1)">
+        <div class="flavor2-check" id="bw2-fc-1">
+          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
+        <img class="flavor2-img" id="bw2-fimg-1" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="Vanilla" />
+        <div class="flavor2-name">Vanilla</div>
       </div>
 
-      <div class="flavor-card" onclick="bwFlavor(2)">
-        <img class="flavor-img" id="bw-fimg-2" src="" alt="Vanilla" />
-        <div class="flavor-name">Vanilla Matcha</div>
-        <div class="flavor-check" id="bw-fc-2">
-          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="flavor2-card" onclick="bw2Flavor(2)">
+        <div class="flavor2-check" id="bw2-fc-2">
+          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
+        <img class="flavor2-img" id="bw2-fimg-2" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="Chocolate" />
+        <div class="flavor2-name">Chocolate</div>
       </div>
 
     </div>
   </div>
 
-  <!-- Row 2: Quantity -->
-  <div class="bw-row">
-    <div class="section-label">Step 2 — Choose quantity</div>
-    <div class="qty-grid">
+  <!-- STEP 2: Quantity -->
+  <div class="bw2-row">
+    <div class="bw2-label">Choose your quantity</div>
+    <div class="qty2-grid">
 
-      <div class="qty-card" onclick="bwQty(0)">
-        <div class="qty-number">1</div>
-        <div class="qty-label">tub</div>
-        <div class="qty-discount" style="color:#9ca3af !important">$68.00</div>
-        <div class="qty-original">&nbsp;</div>
+      <!-- 1 Pouch -->
+      <div class="qty2-card" onclick="bw2Qty(0)">
+        <div class="qty2-imgs">
+          <img id="bw2-qimg-0a" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="1 pouch" />
+        </div>
+        <div class="qty2-pouches">1 Pouch</div>
+        <div class="qty2-servings">30 Servings</div>
+        <div class="qty2-price-now">$68.00</div>
+        <div class="qty2-price-was">&nbsp;</div>
       </div>
 
-      <div class="qty-card active" onclick="bwQty(1)">
-        <div class="qty-badge">Most popular</div>
-        <div class="qty-number">2</div>
-        <div class="qty-label">tubs</div>
-        <div class="qty-discount">$61.20/tub</div>
-        <div class="qty-original">Save 10%</div>
+      <!-- 2 Pouches — Most Popular -->
+      <div class="qty2-card active" onclick="bw2Qty(1)">
+        <div class="qty2-badge">Most Popular</div>
+        <div class="qty2-imgs">
+          <img id="bw2-qimg-1a" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="2 pouches" />
+          <img id="bw2-qimg-1b" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="2 pouches" />
+        </div>
+        <div class="qty2-pouches">2 Pouches</div>
+        <div class="qty2-servings">60 Servings</div>
+        <div class="qty2-price-now">$122.40</div>
+        <div class="qty2-price-was">$136.00</div>
       </div>
 
-      <div class="qty-card" onclick="bwQty(2)">
-        <div class="qty-number">3</div>
-        <div class="qty-label">tubs</div>
-        <div class="qty-discount">$57.80/tub</div>
-        <div class="qty-original">Save 15%</div>
+      <!-- 3 Pouches -->
+      <div class="qty2-card" onclick="bw2Qty(2)">
+        <div class="qty2-disc-badge">Best Value</div>
+        <div class="qty2-imgs">
+          <img id="bw2-qimg-2a" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="3 pouches" />
+          <img id="bw2-qimg-2b" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="3 pouches" />
+          <img id="bw2-qimg-2c" src="https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300" alt="3 pouches" />
+        </div>
+        <div class="qty2-pouches">3 Pouches</div>
+        <div class="qty2-servings">90 Servings</div>
+        <div class="qty2-price-now">$173.40</div>
+        <div class="qty2-price-was">$204.00</div>
       </div>
 
     </div>
   </div>
 
-  <!-- Free Gift Banner — shown when qty >= 2 -->
-  <div class="gift-box visible" id="bw-gift-box">
-    <img class="gift-img" id="bw-gift-img" src="" alt="Free Gift" />
-    <div class="gift-text">
-      <div class="gift-label">🎁 Free gift unlocked!</div>
-      <div class="gift-name" id="bw-gift-name">Loading...</div>
+  <!-- Free Gift Banner -->
+  <div class="gift2-box visible" id="bw2-gift-box">
+    <img class="gift2-img" id="bw2-gift-img" src="" alt="Free Gift" />
+    <div class="gift2-text">
+      <div class="gift2-tag">🎁 Free gift unlocked!</div>
+      <div class="gift2-name" id="bw2-gift-name">Loading...</div>
     </div>
-    <div class="gift-price">FREE<br><span style="font-family:'SofiaPro',sans-serif;text-decoration:line-through;color:#9ca3af;font-size:11px;font-weight:400" id="bw-gift-orig"></span></div>
+    <div class="gift2-price">FREE<br><span style="font-family:'SofiaPro',sans-serif;text-decoration:line-through;color:#9ca3af;font-size:11px;font-weight:400" id="bw2-gift-orig"></span></div>
   </div>
 
   <!-- Summary & CTA -->
-  <div class="summary-box">
-    <div class="sum-row">
-      <span id="bw-items">2 tubs · Original Matcha</span>
-      <span id="bw-orig">$136.00</span>
+  <div class="sum2-box">
+    <div class="sum2-row">
+      <span id="bw2-items">2 pouches · Original</span>
+      <span id="bw2-orig">$136.00</span>
     </div>
-    <div class="sum-row saving" id="bw-discount-row">
-      <span id="bw-disc-lbl">Bundle discount (10%)</span>
-      <span id="bw-disc-amt">-$13.60</span>
+    <div class="sum2-row saving" id="bw2-discount-row">
+      <span id="bw2-disc-lbl">Bundle discount (10%)</span>
+      <span id="bw2-disc-amt">-$13.60</span>
     </div>
-    <div class="sum-row saving" id="bw-gift-row">
-      <span>🎁 Free gift included!</span>
+    <div class="sum2-row saving" id="bw2-gift-row">
+      <span>🎁 Free gift included</span>
       <span>FREE</span>
     </div>
-    <hr class="sum-divider">
-    <div class="sum-total">
-      <span class="sum-total-label">Total</span>
-      <span class="sum-total-price" id="bw-total">$122.40</span>
+    <hr class="sum2-divider">
+    <div class="sum2-total">
+      <span class="sum2-total-label">Total</span>
+      <span class="sum2-total-price" id="bw2-total">$122.40</span>
     </div>
-    <div class="sum-per" id="bw-per">$61.20 per tub</div>
-    <button class="add-btn" id="bw-btn" onclick="bwAddCart()">Buy Now →</button>
+    <div class="sum2-per" id="bw2-per">$61.20 per pouch</div>
+    <button class="add2-btn" id="bw2-btn" onclick="bw2AddCart()">Add to Cart →</button>
   </div>
 
 </div>
@@ -362,20 +396,25 @@
 (function(){
   // ── CONFIG ─────────────────────────────────────────────
   var UNIT_PRICE  = 68.00;
-  var FLAVORS     = ['Original Matcha','Chocolate Matcha','Vanilla Matcha'];
+  var FLAVORS     = ['Original','Vanilla','Chocolate'];
   var PRODUCT_IDS = [7549676290130, 7549675438162, 7545437913170];
   var VARIANT_IDS = [
     42318931066962,   // Original Matcha Collagen
-    42318929264722,   // Chocolate Matcha Collagen
-    42311457996882,   // Vanilla Matcha Collagen
+    42318929264722,   // Vanilla Matcha Collagen
+    42311457996882,   // Chocolate Matcha Collagen
   ];
   var QTYS        = [1,    2,     3   ];
   var DISCOUNTS   = [0,    0.10,  0.15];
-  var FREE_GIFT_VARIANT_ID = 42341023842386; // Milk Frother
-  var FREE_GIFT_PRODUCT_ID = 7560552480850;  // Milk Frother
+  var FREE_GIFT_VARIANT_ID = 42341023842386;
+  var FREE_GIFT_PRODUCT_ID = 7560552480850;
   // ───────────────────────────────────────────────────────
 
   var selF = 0, selQ = 1;
+  var flavorImgs = [
+    'https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300',
+    'https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300',
+    'https://teangle.ca/cdn/shop/files/e7690787-e443-42e7-b2eb-320def710ab6.png?v=9705612028738534795&width=300'
+  ];
 
   // Auto-fetch product images + free gift details
   fetch('/products.json?limit=250')
@@ -387,17 +426,21 @@
       PRODUCT_IDS.forEach(function(id, idx){
         var match = products.find(function(p){ return p.id === id; });
         if(match && match.images && match.images.length > 0){
-          var el = document.getElementById('bw-fimg-'+idx);
-          if(el) el.src = match.images[0].src;
+          var src = match.images[0].src;
+          flavorImgs[idx] = src;
+          var el = document.getElementById('bw2-fimg-'+idx);
+          if(el) el.src = src;
+          // update qty images too
+          updateQtyImages();
         }
       });
 
       // Free gift details
       var gift = products.find(function(p){ return p.id === FREE_GIFT_PRODUCT_ID; });
       if(gift){
-        var giftImg  = document.getElementById('bw-gift-img');
-        var giftName = document.getElementById('bw-gift-name');
-        var giftOrig = document.getElementById('bw-gift-orig');
+        var giftImg  = document.getElementById('bw2-gift-img');
+        var giftName = document.getElementById('bw2-gift-name');
+        var giftOrig = document.getElementById('bw2-gift-orig');
         if(giftImg && gift.images && gift.images.length > 0) giftImg.src = gift.images[0].src;
         if(giftName) giftName.textContent = gift.title;
         if(giftOrig && gift.variants && gift.variants.length > 0){
@@ -407,24 +450,34 @@
       }
     });
 
-  window.bwFlavor = function(i){
-    selF = i;
-    document.querySelectorAll('.flavor-card').forEach(function(c,idx){
-      c.classList.toggle('active', idx===i);
-      document.getElementById('bw-fc-'+idx).classList.toggle('on', idx===i);
+  function updateQtyImages(){
+    var src = flavorImgs[selF];
+    var ids = ['bw2-qimg-0a','bw2-qimg-1a','bw2-qimg-1b','bw2-qimg-2a','bw2-qimg-2b','bw2-qimg-2c'];
+    ids.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.src = src;
     });
+  }
+
+  window.bw2Flavor = function(i){
+    selF = i;
+    document.querySelectorAll('.flavor2-card').forEach(function(c,idx){
+      c.classList.toggle('active', idx===i);
+      document.getElementById('bw2-fc-'+idx).classList.toggle('on', idx===i);
+    });
+    updateQtyImages();
     if(typeof window.bwUpdateImage === 'function'){ window.bwUpdateImage(i); }
     if(typeof window.bwUpdateTitle === 'function'){ window.bwUpdateTitle(i); }
-    bwUpdate();
+    bw2Update();
   };
 
-  window.bwQty = function(i){
+  window.bw2Qty = function(i){
     selQ = i;
-    document.querySelectorAll('.qty-card').forEach(function(c,idx){ c.classList.toggle('active', idx===i); });
-    bwUpdate();
+    document.querySelectorAll('.qty2-card').forEach(function(c,idx){ c.classList.toggle('active', idx===i); });
+    bw2Update();
   };
 
-  function bwUpdate(){
+  function bw2Update(){
     var qty   = QTYS[selQ];
     var disc  = DISCOUNTS[selQ];
     var sub   = parseFloat((UNIT_PRICE * qty).toFixed(2));
@@ -432,19 +485,19 @@
     var total = parseFloat((sub - save).toFixed(2));
     var per   = parseFloat((total / qty).toFixed(2));
 
-    document.getElementById('bw-items').textContent = qty + ' tub' + (qty > 1 ? 's' : '') + ' · ' + FLAVORS[selF];
-    document.getElementById('bw-orig').textContent  = '$' + sub.toFixed(2);
-    document.getElementById('bw-total').textContent = '$' + total.toFixed(2);
-    document.getElementById('bw-per').textContent   = '$' + per.toFixed(2) + ' per tub';
+    document.getElementById('bw2-items').textContent = qty + ' pouch' + (qty > 1 ? 'es' : '') + ' · ' + FLAVORS[selF];
+    document.getElementById('bw2-orig').textContent  = '$' + sub.toFixed(2);
+    document.getElementById('bw2-total').textContent = '$' + total.toFixed(2);
+    document.getElementById('bw2-per').textContent   = '$' + per.toFixed(2) + ' per pouch';
 
-    var discRow = document.getElementById('bw-discount-row');
-    var giftRow = document.getElementById('bw-gift-row');
-    var giftBox = document.getElementById('bw-gift-box');
+    var discRow = document.getElementById('bw2-discount-row');
+    var giftRow = document.getElementById('bw2-gift-row');
+    var giftBox = document.getElementById('bw2-gift-box');
 
     if(disc > 0){
       discRow.classList.remove('hidden');
-      document.getElementById('bw-disc-lbl').textContent = 'Bundle discount (' + (disc * 100) + '%)';
-      document.getElementById('bw-disc-amt').textContent = '-$' + save.toFixed(2);
+      document.getElementById('bw2-disc-lbl').textContent = 'Bundle discount (' + (disc * 100) + '%)';
+      document.getElementById('bw2-disc-amt').textContent = '-$' + save.toFixed(2);
     } else {
       discRow.classList.add('hidden');
     }
@@ -452,16 +505,16 @@
     giftRow.classList.toggle('hidden', qty < 2);
     if(giftBox) giftBox.classList.toggle('visible', qty >= 2);
 
-    var btn = document.getElementById('bw-btn');
-    btn.textContent = 'Buy Now →';
-    btn.classList.remove('success','loading');
+    var btn = document.getElementById('bw2-btn');
+    btn.textContent = 'Add to Cart →';
+    btn.classList.remove('loading');
   }
 
-  window.bwAddCart = function(){
+  window.bw2AddCart = function(){
     var variantId   = VARIANT_IDS[selF];
     var qty         = QTYS[selQ];
     var includeGift = qty >= 2;
-    var btn         = document.getElementById('bw-btn');
+    var btn         = document.getElementById('bw2-btn');
 
     btn.textContent = 'Going to checkout...';
     btn.classList.add('loading');
@@ -469,7 +522,6 @@
     var items = [{ id: variantId, quantity: qty }];
     if(includeGift){ items.push({ id: FREE_GIFT_VARIANT_ID, quantity: 1 }); }
 
-    // Clear any existing free gift first to avoid duplicates
     fetch('/cart/update.js',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -486,13 +538,13 @@
       window.location.href = '/checkout';
     })
     .catch(function(){
-      btn.textContent = 'Buy Now →';
+      btn.textContent = 'Add to Cart →';
       btn.classList.remove('loading');
       alert('Something went wrong. Please try again.');
     });
   };
 
-  bwUpdate();
+  bw2Update();
 })();
 </script>
     </div>
@@ -601,7 +653,7 @@
       role="presentation"
       data-id="gPPGPAWq-B"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1774476200873 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
+      class="gp-group/image gp-relative force-publish-1774478244554 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
     >
       <div
         
