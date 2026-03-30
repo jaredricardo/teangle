@@ -4,6 +4,8 @@ Arguments
 - [per_row]: number of items per row
 {% endcomment %}
 
+{% unless item.object_type == 'product' and item.id == 7560552480850 %}
+
 {%- liquid
   unless per_row
     assign per_row = 4
@@ -44,3 +46,5 @@ Arguments
     </a>
   </div>
 </div>
+
+{% endunless %}
