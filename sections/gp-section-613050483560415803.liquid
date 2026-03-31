@@ -51,12 +51,38 @@
   .bw-img-wrap{width:100% !important;max-width:480px !important;margin:0 auto !important;font-family:'SofiaPro',-apple-system,sans-serif !important}
   .bw-main-img-box{width:100% !important;aspect-ratio:1/1 !important;border-radius:16px !important;overflow:hidden !important;background:#f3f4f6 !important;position:relative !important}
   
-  /* --- FIX APPLIED HERE: Added pointer-events and z-index --- */
   .bw-main-img-box .bw-main-media{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;top:0 !important;left:0 !important;opacity:0 !important;pointer-events:none !important;z-index:0 !important;transition:opacity 0.3s ease !important}
   .bw-main-img-box .bw-main-media.bw-active{opacity:1 !important;pointer-events:auto !important;z-index:1 !important}
-  /* ---------------------------------------------------------- */
 
-  .bw-thumb-row{display:flex !important;gap:8px !important;margin-top:12px !important;justify-content:center !important;flex-wrap:wrap !important}
+  /* ── Thumbnail row — desktop: wrap, mobile: horizontal scroll ── */
+  .bw-thumb-row{
+    display:flex !important;
+    gap:8px !important;
+    margin-top:12px !important;
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+  }
+
+  @media (max-width: 768px) {
+    .bw-thumb-row{
+      flex-wrap:nowrap !important;
+      overflow-x:auto !important;
+      overflow-y:hidden !important;
+      justify-content:flex-start !important;
+      -webkit-overflow-scrolling:touch !important;
+      scroll-snap-type:x mandatory !important;
+      padding-bottom:6px !important;
+      scrollbar-width:none !important;
+    }
+    .bw-thumb-row::-webkit-scrollbar{
+      display:none !important;
+    }
+    .bw-thumb-wrap{
+      scroll-snap-align:start !important;
+      flex-shrink:0 !important;
+    }
+  }
+
   .bw-thumb-wrap{position:relative !important;width:64px !important;height:64px !important;flex-shrink:0 !important;cursor:pointer !important}
   .bw-thumb{width:64px !important;height:64px !important;border-radius:8px !important;object-fit:cover !important;border:2px solid transparent !important;opacity:0.55 !important;transition:all 0.15s !important;background:#f3f4f6 !important;display:block !important}
   .bw-thumb.bw-active{border-color:#1D9E75 !important;opacity:1 !important}
@@ -83,11 +109,9 @@
   ];
   var FREE_GIFT_VARIANT = 42341023842386;
 
-  // allMedia[i] = [{ type:'image'|'video', src, poster }] in Shopify admin order
   var allMedia      = [[], [], []];
   var currentFlavor = 0;
 
-  // ── Render main viewer + thumbnails ──────────────────────────────────
   function render(flavorIdx, activeIdx){
     activeIdx = activeIdx || 0;
     var items    = allMedia[flavorIdx] || [];
@@ -99,7 +123,6 @@
     items.forEach(function(item, i){
       var isActive = (i === activeIdx);
 
-      // Main viewer element
       if(item.type === 'video'){
         var vid         = document.createElement('video');
         vid.src         = item.src;
@@ -117,7 +140,6 @@
         mainBox.appendChild(img);
       }
 
-      // Thumbnail
       var wrap       = document.createElement('div');
       wrap.className = 'bw-thumb-wrap';
       wrap.onclick   = (function(idx){ return function(){ bwSelectMedia(idx); }; })(i);
@@ -137,6 +159,14 @@
 
       thumbRow.appendChild(wrap);
     });
+
+    // Auto scroll active thumb into view on mobile
+    var activeThumb = thumbRow.querySelectorAll('.bw-thumb-wrap')[activeIdx];
+    if(activeThumb){
+      setTimeout(function(){
+        activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }, 50);
+    }
   }
 
   function bwSelectMedia(idx){
@@ -151,17 +181,14 @@
     document.getElementById('bw-thumb-row').style.display = 'flex';
   }
 
-  // ── Parse media from /products/handle.js response ────────────────────
   function parseProductMedia(productData, flavorIdx){
     var mediaArr = productData.media || [];
     mediaArr.forEach(function(m){
       if(m.media_type === 'image'){
         var src = m.src || (m.preview_image && m.preview_image.src);
         if(src) allMedia[flavorIdx].push({ type:'image', src: src });
-
       } else if(m.media_type === 'video'){
         var sources = m.sources || [];
-        // Prefer mp4, pick highest resolution
         var mp4 = sources.filter(function(s){ return s.mime_type === 'video/mp4'; });
         mp4.sort(function(a,b){ return (b.width||0) - (a.width||0); });
         var best   = mp4[0] || sources[0];
@@ -171,13 +198,11 @@
     });
   }
 
-  // ── Main: Step 1 — get handles + gift image from products.json ────────
   fetch('/products.json?limit=250')
     .then(function(r){ return r.json(); })
     .then(function(data){
       var products = data.products || [];
 
-      // Gift image
       var giftImgEl = document.getElementById('bw2-gift-img');
       if(giftImgEl){
         var giftProd = products.find(function(p){
@@ -188,19 +213,17 @@
         }
       }
 
-      // Build handle lookup
       var handles = PRODUCT_IDS.map(function(id){
         var match = products.find(function(p){ return p.id === id; });
         return match ? match.handle : null;
       });
 
-      // Step 2 — fetch each product's full media via /products/handle.js
       var fetches = handles.map(function(handle, idx){
         if(!handle) return Promise.resolve();
         return fetch('/products/' + handle + '.js')
           .then(function(r){ return r.json(); })
           .then(function(productData){ parseProductMedia(productData, idx); })
-          .catch(function(){ /* silently skip if one fails */ });
+          .catch(function(){});
       });
 
       return Promise.all(fetches);
@@ -214,7 +237,6 @@
       showUI();
     });
 
-  // ── Called from right side when flavor card clicked ───────────────────
   window.bwUpdateImage = function(flavorIdx){
     document.querySelectorAll('#bw-main-box video').forEach(function(v){ v.pause(); });
     currentFlavor = flavorIdx;
@@ -711,7 +733,7 @@
       role="presentation"
       data-id="gLn7sq_Xoo"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1774950193882 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gLn7sq_Xoo"
+      class="gp-group/image gp-relative force-publish-1774950322249 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gLn7sq_Xoo"
     >
       <div
         
