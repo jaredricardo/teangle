@@ -766,42 +766,47 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
  <!-- Widget : Saint Jean -->
 {% comment %}<div data-rebuy-id="154725"></div> {% endcomment %} 
 <!-- End Widget : Saint Jean -->
+<!-- Auto-remove all bundle products when any one is removed -->
 <script>
 (function(){
-  var GIFT_HANDLE = 'teangle-milk-frother-1';
+  var ALL_HANDLES = [
+    'product-original-matcha-collagen',
+    'product-chocolate-matcha-collagen-1',
+    'product-vanilla-matcha-collagen',
+    'product-teangle-milk-frother-1'
+  ];
 
   function bindRemoveButtons(){
-    var mainProducts = [
-      'product-original-matcha-collagen',
-      'product-chocolate-matcha-collagen-1',
-      'product-vanilla-matcha-collagen'
-    ];
-
-    mainProducts.forEach(function(cls){
+    ALL_HANDLES.forEach(function(cls){
       var item      = document.querySelector('.rebuy-cart__flyout-item.' + cls);
       if(!item) return;
       var removeBtn = item.querySelector('.rebuy-cart__flyout-item-remove');
-      if(!removeBtn || removeBtn._bound) return;
+      if(!removeBtn || removeBtn._allBound) return;
 
-      removeBtn._bound = true;
+      removeBtn._allBound = true;
       removeBtn.addEventListener('click', function(){
-        // Small delay to let Rebuy process the main removal first
+        // Small delay to let Rebuy process the clicked removal first
         setTimeout(function(){
-          var giftItem      = document.querySelector('.rebuy-cart__flyout-item.product-' + GIFT_HANDLE);
-          if(!giftItem) return;
-          var giftRemoveBtn = giftItem.querySelector('.rebuy-cart__flyout-item-remove');
-          if(giftRemoveBtn) giftRemoveBtn.click();
+          ALL_HANDLES.forEach(function(otherCls){
+            var otherItem = document.querySelector('.rebuy-cart__flyout-item.' + otherCls);
+            if(!otherItem) return;
+            var otherRemoveBtn = otherItem.querySelector('.rebuy-cart__flyout-item-remove');
+            if(otherRemoveBtn && !otherRemoveBtn._clicking){
+              otherRemoveBtn._clicking = true;
+              otherRemoveBtn.click();
+            }
+          });
         }, 300);
       });
     });
   }
 
-  // Run on load and whenever cart DOM updates
+  // Run on load and whenever Rebuy updates the cart DOM
   bindRemoveButtons();
   var observer = new MutationObserver(bindRemoveButtons);
   observer.observe(document.body, { childList: true, subtree: true });
-
 })();
 </script>
+<!-- End auto-remove bundle products -->
 </body>
 </html>
