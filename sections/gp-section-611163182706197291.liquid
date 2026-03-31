@@ -72,24 +72,19 @@
 <script>
 (function(){
 
-  // ── !! FILL THESE 2 IN !! ───────────────────────────────────────────
-  var SHOP_DOMAIN      = 'YOUR-STORE.myshopify.com';
-  var STOREFRONT_TOKEN = 'YOUR-STOREFRONT-ACCESS-TOKEN';
-  // ────────────────────────────────────────────────────────────────────
-
   // Order: 0=Original, 1=Chocolate, 2=Vanilla — must match right side
   var PRODUCT_IDS = [
-    7549676290130,
-    7545437913170,
-    7549675438162
+    7549676290130,  // Original
+    7545437913170,  // Chocolate
+    7549675438162   // Vanilla
   ];
   var FREE_GIFT_VARIANT = 42341023842386;
 
-  // allMedia[i] = [{ type:'image'|'video', src, poster }]  — in Shopify admin order
+  // allMedia[i] = [{ type:'image'|'video', src, poster }] in Shopify admin order
   var allMedia      = [[], [], []];
   var currentFlavor = 0;
 
-  // ── Render ────────────────────────────────────────────────────────────
+  // ── Render main viewer + thumbnails ──────────────────────────────────
   function render(flavorIdx, activeIdx){
     activeIdx = activeIdx || 0;
     var items    = allMedia[flavorIdx] || [];
@@ -101,7 +96,7 @@
     items.forEach(function(item, i){
       var isActive = (i === activeIdx);
 
-      // Main viewer
+      // Main viewer element
       if(item.type === 'video'){
         var vid         = document.createElement('video');
         vid.src         = item.src;
@@ -119,7 +114,7 @@
         mainBox.appendChild(img);
       }
 
-      // Thumbnail wrapper
+      // Thumbnail
       var wrap       = document.createElement('div');
       wrap.className = 'bw-thumb-wrap';
       wrap.onclick   = (function(idx){ return function(){ bwSelectMedia(idx); }; })(i);
@@ -130,7 +125,6 @@
       th.alt         = (item.type === 'video' ? 'Video' : 'Image') + ' ' + (i + 1);
       wrap.appendChild(th);
 
-      // Play icon overlay on video thumbnails
       if(item.type === 'video'){
         var pi = document.createElement('div');
         pi.className = 'bw-play-icon';
@@ -154,111 +148,72 @@
     document.getElementById('bw-thumb-row').style.display = 'flex';
   }
 
-  // ── Storefront API — fetches media in exact Shopify admin order ───────
-  var gids = PRODUCT_IDS.map(function(id){
-    return 'gid://shopify/Product/' + id;
-  });
+  // ── Parse media from /products/handle.js response ────────────────────
+  // This endpoint returns images + videos in exact Shopify admin order
+  // No API token required
+  function parseProductMedia(productData, flavorIdx){
+    var mediaArr = productData.media || [];
+    mediaArr.forEach(function(m){
+      if(m.media_type === 'image'){
+        var src = m.src || (m.preview_image && m.preview_image.src);
+        if(src) allMedia[flavorIdx].push({ type:'image', src: src });
 
-  var GQL = [
-    'query getMedia($ids:[ID!]!){',
-    '  nodes(ids:$ids){',
-    '    ...on Product{',
-    '      id',
-    '      media(first:20){',
-    '        edges{',
-    '          node{',
-    '            mediaContentType',
-    '            ...on MediaImage{',
-    '              image{ url }',
-    '            }',
-    '            ...on Video{',
-    '              sources{ url mimeType }',
-    '              preview{ image{ url } }',
-    '            }',
-    '            ...on ExternalVideo{',
-    '              embeddedUrl',
-    '              preview{ image{ url } }',
-    '            }',
-    '            ...on Model3d{',
-    '              preview{ image{ url } }',
-    '            }',
-    '          }',
-    '        }',
-    '      }',
-    '    }',
-    '  }',
-    '}'
-  ].join('');
+      } else if(m.media_type === 'video'){
+        var sources = m.sources || [];
+        // Prefer mp4, pick highest resolution
+        var mp4 = sources.filter(function(s){ return s.mime_type === 'video/mp4'; });
+        mp4.sort(function(a,b){ return (b.width||0) - (a.width||0); });
+        var best   = mp4[0] || sources[0];
+        var poster = m.preview_image && m.preview_image.src ? m.preview_image.src : '';
+        if(best) allMedia[flavorIdx].push({ type:'video', src: best.url, poster: poster });
+      }
+    });
+  }
 
-  fetch('https://' + SHOP_DOMAIN + '/api/2024-01/graphql.json', {
-    method: 'POST',
-    headers:{
-      'Content-Type':'application/json',
-      'X-Shopify-Storefront-Access-Token': STOREFRONT_TOKEN
-    },
-    body: JSON.stringify({ query: GQL, variables: { ids: gids } })
-  })
-  .then(function(r){ return r.json(); })
-  .then(function(data){
-    var nodes = (data.data && data.data.nodes) || [];
+  // ── Main: Step 1 — get handles + gift image from products.json ────────
+  fetch('/products.json?limit=250')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var products = data.products || [];
 
-    nodes.forEach(function(node){
-      if(!node || !node.id) return;
-
-      var numericId = parseInt(node.id.replace('gid://shopify/Product/',''), 10);
-      var fi        = PRODUCT_IDS.indexOf(numericId);
-      if(fi === -1) return;
-
-      var edges = (node.media && node.media.edges) || [];
-      edges.forEach(function(edge){
-        var m = edge.node;
-        if(!m) return;
-
-        if(m.mediaContentType === 'IMAGE' && m.image){
-          allMedia[fi].push({ type:'image', src: m.image.url });
-
-        } else if(m.mediaContentType === 'VIDEO' && m.sources && m.sources.length){
-          // Prefer highest quality mp4
-          var sources = m.sources.slice().sort(function(a,b){
-            var aw = parseInt(a.width||0,10), bw = parseInt(b.width||0,10);
-            return bw - aw;
-          });
-          var mp4    = sources.find(function(s){ return s.mimeType === 'video/mp4'; });
-          var vidSrc = (mp4 || sources[0]).url;
-          var poster = m.preview && m.preview.image ? m.preview.image.url : '';
-          allMedia[fi].push({ type:'video', src: vidSrc, poster: poster });
-
-        } else if(m.mediaContentType === 'EXTERNAL_VIDEO' && m.embeddedUrl){
-          // Show poster image for YouTube/Vimeo embeds
-          var poster2 = m.preview && m.preview.image ? m.preview.image.url : '';
-          if(poster2) allMedia[fi].push({ type:'image', src: poster2 });
+      // Gift image
+      var giftImgEl = document.getElementById('bw2-gift-img');
+      if(giftImgEl){
+        var giftProd = products.find(function(p){
+          return p.variants && p.variants.some(function(v){ return v.id === FREE_GIFT_VARIANT; });
+        });
+        if(giftProd && giftProd.images && giftProd.images.length){
+          giftImgEl.src = giftProd.images[0].src;
         }
+      }
+
+      // Build handle lookup
+      var handles = PRODUCT_IDS.map(function(id){
+        var match = products.find(function(p){ return p.id === id; });
+        return match ? match.handle : null;
       });
+
+      // Step 2 — fetch each product's full media via /products/handle.js
+      var fetches = handles.map(function(handle, idx){
+        if(!handle) return Promise.resolve();
+        return fetch('/products/' + handle + '.js')
+          .then(function(r){ return r.json(); })
+          .then(function(productData){ parseProductMedia(productData, idx); })
+          .catch(function(){ /* silently skip if one fails */ });
+      });
+
+      return Promise.all(fetches);
+    })
+    .then(function(){
+      render(0, 0);
+      showUI();
+    })
+    .catch(function(){
+      render(0, 0);
+      showUI();
     });
 
-    // Gift image — still use products.json (no token needed for this)
-    return fetch('/products.json?limit=250');
-  })
-  .then(function(r){ return r.json(); })
-  .then(function(data){
-    var giftImgEl = document.getElementById('bw2-gift-img');
-    if(giftImgEl){
-      var giftProd = (data.products || []).find(function(p){
-        return p.variants && p.variants.some(function(v){ return v.id === FREE_GIFT_VARIANT; });
-      });
-      if(giftProd && giftProd.images && giftProd.images.length){
-        giftImgEl.src = giftProd.images[0].src;
-      }
-    }
-    render(0, 0);
-    showUI();
-  })
-  .catch(function(err){
-    console.error('Teangle media error:', err);
-    showUI();
-  });
-
-  // ── Called from right side when flavor card is clicked ────────────────
+  // ── Called from right side when flavor card clicked ───────────────────
   window.bwUpdateImage = function(flavorIdx){
     document.querySelectorAll('#bw-main-box video').forEach(function(v){ v.pause(); });
     currentFlavor = flavorIdx;
@@ -755,7 +710,7 @@
       role="presentation"
       data-id="gPPGPAWq-B"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1774935012462 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
+      class="gp-group/image gp-relative force-publish-1774935200726 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
     >
       <div
         
