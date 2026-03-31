@@ -745,26 +745,41 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
  {% comment %}<div data-rebuy-id="154725"></div> {% endcomment %} 
 <script>
   document.addEventListener('rebuy:smartcart.ready', function() {
-    const BUNDLE_HANDLES = [
+    // These match the logic from your inspect tool and handles
+    const BUNDLE_KEYWORDS = [
       'original-matcha-collagen',
-      'chocolate-matcha-collagen',
+      'chocolate-matcha-collagen-1',
       'vanilla-matcha-collagen',
-      'teangle-milk-frother'
+      'teangle-milk-frother-1'
     ];
 
-    document.addEventListener('rebuy:cart.remove', function(event) {
-      const removedItem = event.detail.item;
-      const isBundlePart = BUNDLE_HANDLES.some(handle => removedItem.handle.includes(handle));
+    function cleanupBundle() {
+      const items = Rebuy.Cart.cart.items;
+      items.forEach(item => {
+        if (BUNDLE_KEYWORDS.some(key => item.handle.includes(key))) {
+           Rebuy.Cart.removeItem(item);
+        }
+      });
+    }
 
-      if (isBundlePart) {
-        const currentCartItems = Rebuy.Cart.cart.items;
-        currentCartItems.forEach(item => {
-          const shouldAlsoRemove = BUNDLE_HANDLES.some(handle => item.handle.includes(handle));
-          if (shouldAlsoRemove) {
-            Rebuy.Cart.removeItem(item);
-          }
-        });
+    // Triggered when an item is removed via the Smart Cart UI
+    document.addEventListener('rebuy:smartcart.line-item-removed', function(event) {
+      const removedItem = event.detail.item;
+      const wasBundleItem = BUNDLE_KEYWORDS.some(key => removedItem.handle.includes(key));
+      
+      if (wasBundleItem) {
+        cleanupBundle();
       }
+    });
+    
+    // Safety check: monitor general cart changes too
+    document.addEventListener('rebuy:cart.change', function(event) {
+      const cartItems = event.detail.cart.cart.items;
+      // If we find ONLY a frother or ONLY a collagen, remove the orphan
+      const bundleCount = cartItems.filter(item => BUNDLE_KEYWORDS.some(key => item.handle.includes(key))).length;
+      
+      // If bundle is broken (not all items present), you can opt to clear it here.
+      // For now, we only clear if a bundle item was explicitly removed by user.
     });
   });
 </script>
