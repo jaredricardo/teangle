@@ -69,11 +69,15 @@
 
 <script>
 (function(){
-  // Order: 0 = Original, 1 = Chocolate, 2 = Vanilla
-  var PRODUCT_IDS        = [7549676290130, 7545437913170, 7549675438162];
-  var FREE_GIFT_VARIANT  = 42341023842386;
-  var allImages          = [[], [], []];
-  var currentFlavor      = 0;
+  // ── MUST match right side flavor order: 0=Original, 1=Chocolate, 2=Vanilla ──
+  var PRODUCT_IDS = [
+    7549676290130,  // 0 — Original
+    7545437913170,  // 1 — Chocolate
+    7549675438162   // 2 — Vanilla
+  ];
+  var FREE_GIFT_VARIANT = 42341023842386;
+  var allImages         = [[], [], []];
+  var currentFlavor     = 0;
 
   function render(flavorIdx, activeImg){
     activeImg = activeImg || 0;
@@ -86,18 +90,18 @@
 
     imgs.forEach(function(src, i){
       // Main image
-      var img       = document.createElement('img');
-      img.src       = src;
-      img.alt       = 'Product image ' + (i + 1);
+      var img      = document.createElement('img');
+      img.src      = src;
+      img.alt      = 'Product image ' + (i + 1);
       if(i === activeImg){ img.className = 'bw-active'; }
       mainBox.appendChild(img);
 
       // Thumbnail
-      var th        = document.createElement('img');
-      th.src        = src;
-      th.className  = 'bw-thumb' + (i === activeImg ? ' bw-active' : '');
-      th.alt        = 'Thumb ' + (i + 1);
-      th.onclick    = (function(idx){ return function(){ window.bwImgSelect(idx); }; })(i);
+      var th       = document.createElement('img');
+      th.src       = src;
+      th.className = 'bw-thumb' + (i === activeImg ? ' bw-active' : '');
+      th.alt       = 'Thumb ' + (i + 1);
+      th.onclick   = (function(idx){ return function(){ window.bwImgSelect(idx); }; })(i);
       thumbRow.appendChild(th);
     });
   }
@@ -113,7 +117,7 @@
     .then(function(data){
       var products = data.products || [];
 
-      // Load product images (up to 5 per flavor)
+      // Load up to 5 images per flavor product
       PRODUCT_IDS.forEach(function(id, idx){
         var match = products.find(function(p){ return p.id === id; });
         if(match && match.images){
@@ -121,7 +125,7 @@
         }
       });
 
-      // Load free gift image
+      // Load free gift image into the right-side banner
       var giftImgEl = document.getElementById('bw2-gift-img');
       if(giftImgEl){
         var giftProd = products.find(function(p){
@@ -143,7 +147,7 @@
     render(flavorIdx, 0);
   };
 
-  // Called when a thumbnail is clicked — switches image only, not flavor
+  // Called when a thumbnail is clicked — switches image within same product
   window.bwImgSelect = function(imgIdx){
     render(currentFlavor, imgIdx);
   };
@@ -638,7 +642,7 @@
       role="presentation"
       data-id="gPPGPAWq-B"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1774933788041 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
+      class="gp-group/image gp-relative force-publish-1774934023473 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
     >
       <div
         
