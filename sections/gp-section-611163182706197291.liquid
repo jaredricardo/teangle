@@ -46,13 +46,16 @@
       data-keep-class="true"
       class="gkUAOJST8u gp-custom-code">
       <div>
-    <!-- BUNDLE LEFT SIDE — Product Image + Video Block -->
-<style>
+    <style>
   @font-face{font-family:'SofiaPro';src:url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/gempages_Sofia_Pro_Regular_Az.otf?v=1772828137') format('opentype');font-weight:normal;font-style:normal}
   .bw-img-wrap{width:100% !important;max-width:480px !important;margin:0 auto !important;font-family:'SofiaPro',-apple-system,sans-serif !important}
   .bw-main-img-box{width:100% !important;aspect-ratio:1/1 !important;border-radius:16px !important;overflow:hidden !important;background:#f3f4f6 !important;position:relative !important}
-  .bw-main-img-box .bw-main-media{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;top:0 !important;left:0 !important;opacity:0 !important;transition:opacity 0.3s ease !important}
-  .bw-main-img-box .bw-main-media.bw-active{opacity:1 !important}
+  
+  /* --- FIX APPLIED HERE: Added pointer-events and z-index --- */
+  .bw-main-img-box .bw-main-media{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;top:0 !important;left:0 !important;opacity:0 !important;pointer-events:none !important;z-index:0 !important;transition:opacity 0.3s ease !important}
+  .bw-main-img-box .bw-main-media.bw-active{opacity:1 !important;pointer-events:auto !important;z-index:1 !important}
+  /* ---------------------------------------------------------- */
+
   .bw-thumb-row{display:flex !important;gap:8px !important;margin-top:12px !important;justify-content:center !important;flex-wrap:wrap !important}
   .bw-thumb-wrap{position:relative !important;width:64px !important;height:64px !important;flex-shrink:0 !important;cursor:pointer !important}
   .bw-thumb{width:64px !important;height:64px !important;border-radius:8px !important;object-fit:cover !important;border:2px solid transparent !important;opacity:0.55 !important;transition:all 0.15s !important;background:#f3f4f6 !important;display:block !important}
@@ -149,8 +152,6 @@
   }
 
   // ── Parse media from /products/handle.js response ────────────────────
-  // This endpoint returns images + videos in exact Shopify admin order
-  // No API token required
   function parseProductMedia(productData, flavorIdx){
     var mediaArr = productData.media || [];
     mediaArr.forEach(function(m){
@@ -710,7 +711,7 @@
       role="presentation"
       data-id="gPPGPAWq-B"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1774935200726 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
+      class="gp-group/image gp-relative force-publish-1774935968764 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
     >
       <div
         
