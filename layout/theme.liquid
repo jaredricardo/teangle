@@ -803,7 +803,6 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
           })
           .then(function () {
             document.dispatchEvent(new CustomEvent('rebuy:cart.change'));
-            document.dispatchEvent(new CustomEvent('cart:refresh'));
             if (window.Rebuy && window.Rebuy.Cart) {
               window.Rebuy.Cart.refresh();
             }
