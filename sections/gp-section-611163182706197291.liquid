@@ -51,16 +51,14 @@
   @font-face{font-family:'SofiaPro';src:url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/gempages_Sofia_Pro_Regular_Az.otf?v=1772828137') format('opentype');font-weight:normal;font-style:normal}
   .bw-img-wrap{width:100% !important;max-width:480px !important;margin:0 auto !important;font-family:'SofiaPro',-apple-system,sans-serif !important}
   .bw-main-img-box{width:100% !important;aspect-ratio:1/1 !important;border-radius:16px !important;overflow:hidden !important;background:#f3f4f6 !important;position:relative !important}
-  .bw-main-img-box img.bw-main-media{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;top:0 !important;left:0 !important;opacity:0 !important;transition:opacity 0.3s ease !important}
-  .bw-main-img-box img.bw-main-media.bw-active{opacity:1 !important}
-  .bw-main-img-box video.bw-main-media{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;top:0 !important;left:0 !important;opacity:0 !important;transition:opacity 0.3s ease !important}
-  .bw-main-img-box video.bw-main-media.bw-active{opacity:1 !important}
+  .bw-main-img-box .bw-main-media{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;top:0 !important;left:0 !important;opacity:0 !important;transition:opacity 0.3s ease !important}
+  .bw-main-img-box .bw-main-media.bw-active{opacity:1 !important}
   .bw-thumb-row{display:flex !important;gap:8px !important;margin-top:12px !important;justify-content:center !important;flex-wrap:wrap !important}
-  .bw-thumb-wrap{position:relative !important;width:64px !important;height:64px !important;flex-shrink:0 !important}
-  .bw-thumb{width:64px !important;height:64px !important;border-radius:8px !important;object-fit:cover !important;cursor:pointer !important;border:2px solid transparent !important;opacity:0.55 !important;transition:all 0.15s !important;background:#f3f4f6 !important;display:block !important}
+  .bw-thumb-wrap{position:relative !important;width:64px !important;height:64px !important;flex-shrink:0 !important;cursor:pointer !important}
+  .bw-thumb{width:64px !important;height:64px !important;border-radius:8px !important;object-fit:cover !important;border:2px solid transparent !important;opacity:0.55 !important;transition:all 0.15s !important;background:#f3f4f6 !important;display:block !important}
   .bw-thumb.bw-active{border-color:#1D9E75 !important;opacity:1 !important}
-  .bw-play-icon{position:absolute !important;top:50% !important;left:50% !important;transform:translate(-50%,-50%) !important;width:22px !important;height:22px !important;background:rgba(0,0,0,0.55) !important;border-radius:50% !important;display:flex !important;align-items:center !important;justify-content:center !important;pointer-events:none !important}
-  .bw-play-icon svg{width:10px !important;height:10px !important;margin-left:1px !important}
+  .bw-play-icon{position:absolute !important;top:50% !important;left:50% !important;transform:translate(-50%,-50%) !important;width:24px !important;height:24px !important;background:rgba(0,0,0,0.6) !important;border-radius:50% !important;display:flex !important;align-items:center !important;justify-content:center !important;pointer-events:none !important}
+  .bw-play-icon svg{width:10px !important;height:10px !important;margin-left:2px !important}
   .bw-skeleton{width:100% !important;aspect-ratio:1/1 !important;border-radius:16px !important;background:#e5e7eb !important;animation:bwPulse 1.4s ease-in-out infinite !important}
   @keyframes bwPulse{0%,100%{opacity:1}50%{opacity:0.4}}
 </style>
@@ -74,31 +72,36 @@
 <script>
 (function(){
 
+  // ── !! FILL THESE 2 IN !! ───────────────────────────────────────────
+  var SHOP_DOMAIN      = 'YOUR-STORE.myshopify.com';
+  var STOREFRONT_TOKEN = 'YOUR-STOREFRONT-ACCESS-TOKEN';
+  // ────────────────────────────────────────────────────────────────────
+
   // Order: 0=Original, 1=Chocolate, 2=Vanilla — must match right side
   var PRODUCT_IDS = [
-    7549676290130,  // Original
-    7545437913170,  // Chocolate
-    7549675438162   // Vanilla
+    7549676290130,
+    7545437913170,
+    7549675438162
   ];
   var FREE_GIFT_VARIANT = 42341023842386;
 
-  // allMedia[flavorIdx] = array of { type:'image'|'video', src, poster }
+  // allMedia[i] = [{ type:'image'|'video', src, poster }]  — in Shopify admin order
   var allMedia      = [[], [], []];
   var currentFlavor = 0;
 
-  // ── Render main viewer + thumbnails ──────────────────────────────────
+  // ── Render ────────────────────────────────────────────────────────────
   function render(flavorIdx, activeIdx){
     activeIdx = activeIdx || 0;
     var items    = allMedia[flavorIdx] || [];
     var mainBox  = document.getElementById('bw-main-box');
     var thumbRow = document.getElementById('bw-thumb-row');
-
     mainBox.innerHTML  = '';
     thumbRow.innerHTML = '';
 
     items.forEach(function(item, i){
       var isActive = (i === activeIdx);
 
+      // Main viewer
       if(item.type === 'video'){
         var vid         = document.createElement('video');
         vid.src         = item.src;
@@ -106,33 +109,33 @@
         vid.className   = 'bw-main-media' + (isActive ? ' bw-active' : '');
         vid.controls    = true;
         vid.playsInline = true;
-        vid.loop        = false;
-        vid.muted       = false;
+        vid.preload     = 'metadata';
         mainBox.appendChild(vid);
       } else {
         var img       = document.createElement('img');
         img.src       = item.src;
-        img.alt       = 'Product image ' + (i + 1);
+        img.alt       = 'Product ' + (i + 1);
         img.className = 'bw-main-media' + (isActive ? ' bw-active' : '');
         mainBox.appendChild(img);
       }
 
-      // Thumbnail
+      // Thumbnail wrapper
       var wrap       = document.createElement('div');
       wrap.className = 'bw-thumb-wrap';
+      wrap.onclick   = (function(idx){ return function(){ bwSelectMedia(idx); }; })(i);
 
       var th         = document.createElement('img');
-      th.src         = item.poster || item.src;  // video uses poster as thumb
+      th.src         = item.poster || item.src;
       th.className   = 'bw-thumb' + (isActive ? ' bw-active' : '');
       th.alt         = (item.type === 'video' ? 'Video' : 'Image') + ' ' + (i + 1);
-      th.onclick     = (function(idx){ return function(){ bwSelectMedia(idx); }; })(i);
       wrap.appendChild(th);
 
+      // Play icon overlay on video thumbnails
       if(item.type === 'video'){
-        var playIcon = document.createElement('div');
-        playIcon.className = 'bw-play-icon';
-        playIcon.innerHTML = '<svg viewBox="0 0 10 10" fill="white"><polygon points="2,1 9,5 2,9"/></svg>';
-        wrap.appendChild(playIcon);
+        var pi = document.createElement('div');
+        pi.className = 'bw-play-icon';
+        pi.innerHTML = '<svg viewBox="0 0 10 10" fill="white"><polygon points="2,1 9,5 2,9"/></svg>';
+        wrap.appendChild(pi);
       }
 
       thumbRow.appendChild(wrap);
@@ -147,108 +150,115 @@
 
   function showUI(){
     document.getElementById('bw-skeleton').style.display = 'none';
-    document.getElementById('bw-main-box').style.display = 'block';
+    document.getElementById('bw-main-box').style.display  = 'block';
     document.getElementById('bw-thumb-row').style.display = 'flex';
   }
 
-  // ── Extract videos from a product page HTML ───────────────────────────
-  function parseVideosFromPage(html, flavorIdx){
-    var found = [];
+  // ── Storefront API — fetches media in exact Shopify admin order ───────
+  var gids = PRODUCT_IDS.map(function(id){
+    return 'gid://shopify/Product/' + id;
+  });
 
-    // Method 1: Shopify standard embedded JSON in <script type="application/json"> tags
-    try {
-      var parser = new DOMParser();
-      var doc    = parser.parseFromString(html, 'text/html');
-      var tags   = doc.querySelectorAll('script[type="application/json"]');
-      tags.forEach(function(tag){
-        try {
-          var data     = JSON.parse(tag.textContent);
-          var mediaArr = data.media || (data.product && data.product.media);
-          if(!mediaArr || !mediaArr.length) return;
-          mediaArr.forEach(function(m){
-            if(m.media_type === 'video' && m.sources){
-              var mp4    = m.sources.find(function(s){ return s.mime_type === 'video/mp4'; });
-              var vidSrc = mp4 ? mp4.url : m.sources[0].url;
-              var poster = m.preview_image && (m.preview_image.src || m.preview_image.url);
-              if(vidSrc) found.push({ type:'video', src: vidSrc, poster: poster || '' });
-            }
+  var GQL = [
+    'query getMedia($ids:[ID!]!){',
+    '  nodes(ids:$ids){',
+    '    ...on Product{',
+    '      id',
+    '      media(first:20){',
+    '        edges{',
+    '          node{',
+    '            mediaContentType',
+    '            ...on MediaImage{',
+    '              image{ url }',
+    '            }',
+    '            ...on Video{',
+    '              sources{ url mimeType }',
+    '              preview{ image{ url } }',
+    '            }',
+    '            ...on ExternalVideo{',
+    '              embeddedUrl',
+    '              preview{ image{ url } }',
+    '            }',
+    '            ...on Model3d{',
+    '              preview{ image{ url } }',
+    '            }',
+    '          }',
+    '        }',
+    '      }',
+    '    }',
+    '  }',
+    '}'
+  ].join('');
+
+  fetch('https://' + SHOP_DOMAIN + '/api/2024-01/graphql.json', {
+    method: 'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'X-Shopify-Storefront-Access-Token': STOREFRONT_TOKEN
+    },
+    body: JSON.stringify({ query: GQL, variables: { ids: gids } })
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    var nodes = (data.data && data.data.nodes) || [];
+
+    nodes.forEach(function(node){
+      if(!node || !node.id) return;
+
+      var numericId = parseInt(node.id.replace('gid://shopify/Product/',''), 10);
+      var fi        = PRODUCT_IDS.indexOf(numericId);
+      if(fi === -1) return;
+
+      var edges = (node.media && node.media.edges) || [];
+      edges.forEach(function(edge){
+        var m = edge.node;
+        if(!m) return;
+
+        if(m.mediaContentType === 'IMAGE' && m.image){
+          allMedia[fi].push({ type:'image', src: m.image.url });
+
+        } else if(m.mediaContentType === 'VIDEO' && m.sources && m.sources.length){
+          // Prefer highest quality mp4
+          var sources = m.sources.slice().sort(function(a,b){
+            var aw = parseInt(a.width||0,10), bw = parseInt(b.width||0,10);
+            return bw - aw;
           });
-        } catch(e){}
-      });
-    } catch(e){}
+          var mp4    = sources.find(function(s){ return s.mimeType === 'video/mp4'; });
+          var vidSrc = (mp4 || sources[0]).url;
+          var poster = m.preview && m.preview.image ? m.preview.image.url : '';
+          allMedia[fi].push({ type:'video', src: vidSrc, poster: poster });
 
-    // Method 2: Regex scan for Shopify video CDN URLs in page source
-    // Handles both normal and JSON-escaped slashes
-    if(found.length === 0){
-      var re = /https:\\?\/\\?\/cdn\.shopify\.com\\?\/videos\\?\/[^\s"'<>\\]+\.mp4/g;
-      var seen = {};
-      var m;
-      while((m = re.exec(html)) !== null){
-        var url = m[0].replace(/\\\//g, '/');
-        if(!seen[url]){
-          seen[url] = true;
-          found.push({ type:'video', src: url, poster: '' });
-        }
-      }
-    }
-
-    // Attach to the right flavor slot
-    found.forEach(function(v){ allMedia[flavorIdx].push(v); });
-  }
-
-  // ── Main fetch sequence ───────────────────────────────────────────────
-  // Step 1: get images + handles from products.json
-  fetch('/products.json?limit=250')
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      var products = data.products || [];
-
-      PRODUCT_IDS.forEach(function(id, idx){
-        var match = products.find(function(p){ return p.id === id; });
-        if(match && match.images){
-          match.images.slice(0, 5).forEach(function(im){
-            allMedia[idx].push({ type:'image', src: im.src });
-          });
+        } else if(m.mediaContentType === 'EXTERNAL_VIDEO' && m.embeddedUrl){
+          // Show poster image for YouTube/Vimeo embeds
+          var poster2 = m.preview && m.preview.image ? m.preview.image.url : '';
+          if(poster2) allMedia[fi].push({ type:'image', src: poster2 });
         }
       });
-
-      // Free gift image
-      var giftImgEl = document.getElementById('bw2-gift-img');
-      if(giftImgEl){
-        var giftProd = products.find(function(p){
-          return p.variants && p.variants.some(function(v){ return v.id === FREE_GIFT_VARIANT; });
-        });
-        if(giftProd && giftProd.images && giftProd.images.length){
-          giftImgEl.src = giftProd.images[0].src;
-        }
-      }
-
-      // Step 2: for each product fetch its page to extract videos
-      var handles = PRODUCT_IDS.map(function(id){
-        var match = products.find(function(p){ return p.id === id; });
-        return match ? match.handle : null;
-      });
-
-      var videoFetches = handles.map(function(handle, idx){
-        if(!handle) return Promise.resolve();
-        return fetch('/products/' + handle)
-          .then(function(r){ return r.text(); })
-          .then(function(html){ parseVideosFromPage(html, idx); })
-          .catch(function(){});
-      });
-
-      return Promise.all(videoFetches);
-    })
-    .then(function(){
-      render(0, 0);
-      showUI();
-    })
-    .catch(function(){
-      render(0, 0);
-      showUI();
     });
 
-  // ── Called from right side when flavor changes ────────────────────────
+    // Gift image — still use products.json (no token needed for this)
+    return fetch('/products.json?limit=250');
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    var giftImgEl = document.getElementById('bw2-gift-img');
+    if(giftImgEl){
+      var giftProd = (data.products || []).find(function(p){
+        return p.variants && p.variants.some(function(v){ return v.id === FREE_GIFT_VARIANT; });
+      });
+      if(giftProd && giftProd.images && giftProd.images.length){
+        giftImgEl.src = giftProd.images[0].src;
+      }
+    }
+    render(0, 0);
+    showUI();
+  })
+  .catch(function(err){
+    console.error('Teangle media error:', err);
+    showUI();
+  });
+
+  // ── Called from right side when flavor card is clicked ────────────────
   window.bwUpdateImage = function(flavorIdx){
     document.querySelectorAll('#bw-main-box video').forEach(function(v){ v.pause(); });
     currentFlavor = flavorIdx;
@@ -745,7 +755,7 @@
       role="presentation"
       data-id="gPPGPAWq-B"
       style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
-      class="gp-group/image gp-relative force-publish-1774934727525 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
+      class="gp-group/image gp-relative force-publish-1774935012462 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gPPGPAWq-B"
     >
       <div
         
