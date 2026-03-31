@@ -777,35 +777,18 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
     42311457996882, // Chocolate
     42318929264722  // Vanilla
   ];
-  var isEvaluating = false; // Prevents infinite loops
+  
+  var isRemovingGift = false; // Prevents the script from looping infinitely
 
-  // Function that actually removes the item and resets the UI
-  function removeGiftAndRefresh(giftLineKey) {
-    if (isEvaluating) return;
-    isEvaluating = true;
-    
-    fetch('/cart/change.js', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: giftLineKey, quantity: 0 })
-    })
-    .then(function() {
-      // Force a hard reload to ensure Rebuy and your custom bundle UI completely reset
-      window.location.reload();
-    })
-    .finally(function() {
-      isEvaluating = false;
-    });
-  }
+  function checkAndRemoveGift(cart) {
+    // Stop if there's no cart data or if we are already in the middle of removing the gift
+    if (!cart || !cart.items || isRemovingGift) return;
 
-  // Function to count items and decide if gift should be removed
-  function evaluateCart(cartItems) {
-    if (!cartItems || !cartItems.length || isEvaluating) return;
-    
     var qualifyingQty = 0;
     var giftLineKey = null;
 
-    cartItems.forEach(function(item) {
+    // 1. Loop through the Shopify cart data that Rebuy holds
+    cart.items.forEach(function(item) {
       if (QUALIFYING_VARIANTS.includes(item.variant_id)) {
         qualifyingQty += item.quantity;
       }
@@ -814,46 +797,55 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
       }
     });
 
-    // If gift exists but user doesn't have 2+ qualifying items, remove it
+    // 2. If the free gift is there, but they have less than 2 qualifying tubs
     if (giftLineKey && qualifyingQty < 2) {
-      removeGiftAndRefresh(giftLineKey);
+      isRemovingGift = true; // Lock the script
+      
+      // 3. Silently remove the gift via Shopify API
+      fetch(window.Shopify.routes.root + 'cart/change.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: giftLineKey,
+          quantity: 0
+        })
+      })
+      .then(function(response) { return response.json(); })
+      .then(function() {
+        // 4. Tell Rebuy to visually refresh the drawer without reloading the page
+        if (window.Rebuy && window.Rebuy.SmartCart) {
+          window.Rebuy.SmartCart.fetchCart();
+        } else {
+          window.location.reload(); // Fallback just in case
+        }
+      })
+      .catch(function(error){
+        console.error('Error removing free gift:', error);
+      })
+      .finally(function() {
+        // Release the lock after a short delay so Rebuy can finish updating
+        setTimeout(function() {
+          isRemovingGift = false;
+        }, 1000);
+      });
     }
   }
 
-  // 1. Check directly from Rebuy events
+  // Hook into Rebuy's native cart update event
   document.addEventListener('rebuy:cart.change', function(event) {
-    if (event.detail && event.detail.cart && event.detail.cart.cart) {
-      evaluateCart(event.detail.cart.cart.items);
+    var cartData = event.detail.cart && event.detail.cart.cart ? event.detail.cart.cart : null;
+    if (cartData) {
+      checkAndRemoveGift(cartData);
     }
   });
-  document.addEventListener('rebuy:smartcart.ready', function(event) {
-    if (event.detail && event.detail.smartcart && event.detail.smartcart.cart) {
-      evaluateCart(event.detail.smartcart.cart.items);
-    }
-  });
-
-  // 2. Catch-all: Intercept Shopify cart AJAX requests
-  // This ensures that when your custom <rebuy-bundle-remove-button> runs, we catch it immediately.
-  var originalFetch = window.fetch;
-  window.fetch = function() {
-    return originalFetch.apply(this, arguments).then(function(res) {
-      // Look for cart update/change endpoints
-      if (res.url && res.url.match(/\/cart\/(add|change|update|clear)/)) {
-        res.clone().json().then(function(data) {
-          if (data && data.items) {
-            evaluateCart(data.items);
-          } else {
-            fetch('/cart.js').then(r => r.json()).then(d => evaluateCart(d.items));
-          }
-        }).catch(function(){}); // Ignore errors if response isn't JSON
-      }
-      return res;
-    });
-  };
-
-  // 3. Fallback: Check on page load (handles users pressing the "back" button from checkout)
+  
+  // Hook into the page load (catches users clicking the "back" button from checkout)
   document.addEventListener('DOMContentLoaded', function() {
-    fetch('/cart.js').then(res => res.json()).then(data => evaluateCart(data.items));
+    fetch(window.Shopify.routes.root + 'cart.js')
+      .then(function(res) { return res.json(); })
+      .then(function(cartData) {
+        checkAndRemoveGift(cartData);
+      });
   });
 
 })();
