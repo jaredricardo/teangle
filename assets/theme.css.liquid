@@ -12271,3 +12271,12 @@ html[dir=rtl] .product-single__meta .rte{
   pointer-events: all !important;
   cursor: pointer !important;
 }
+/* Disable removal for Main Matcha Collagen products only */
+.rebuy-cart__flyout-item.product-original-matcha-collagen .rebuy-cart__flyout-item-remove,
+.rebuy-cart__flyout-item.product-chocolate-matcha-collagen-1 .rebuy-cart__flyout-item-remove,
+.rebuy-cart__flyout-item.product-vanilla-matcha-collagen .rebuy-cart__flyout-item-remove {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+    opacity: 0.5; /* Makes it look locked/disabled */
+    filter: grayscale(1); /* Optional: makes the trash icon look inactive */
+}
