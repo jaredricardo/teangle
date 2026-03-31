@@ -766,6 +766,42 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
  <!-- Widget : Saint Jean -->
 {% comment %}<div data-rebuy-id="154725"></div> {% endcomment %} 
 <!-- End Widget : Saint Jean -->
+<script>
+(function(){
+  var GIFT_HANDLE = 'teangle-milk-frother-1';
 
+  function bindRemoveButtons(){
+    var mainProducts = [
+      'product-original-matcha-collagen',
+      'product-chocolate-matcha-collagen-1',
+      'product-vanilla-matcha-collagen'
+    ];
+
+    mainProducts.forEach(function(cls){
+      var item      = document.querySelector('.rebuy-cart__flyout-item.' + cls);
+      if(!item) return;
+      var removeBtn = item.querySelector('.rebuy-cart__flyout-item-remove');
+      if(!removeBtn || removeBtn._bound) return;
+
+      removeBtn._bound = true;
+      removeBtn.addEventListener('click', function(){
+        // Small delay to let Rebuy process the main removal first
+        setTimeout(function(){
+          var giftItem      = document.querySelector('.rebuy-cart__flyout-item.product-' + GIFT_HANDLE);
+          if(!giftItem) return;
+          var giftRemoveBtn = giftItem.querySelector('.rebuy-cart__flyout-item-remove');
+          if(giftRemoveBtn) giftRemoveBtn.click();
+        }, 300);
+      });
+    });
+  }
+
+  // Run on load and whenever cart DOM updates
+  bindRemoveButtons();
+  var observer = new MutationObserver(bindRemoveButtons);
+  observer.observe(document.body, { childList: true, subtree: true });
+
+})();
+</script>
 </body>
 </html>
