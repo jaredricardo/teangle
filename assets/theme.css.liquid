@@ -12289,27 +12289,3 @@ html[dir=rtl] .product-single__meta .rte{
     opacity: 0.3; /* Makes the minus sign look very faded */
     background-color: #f9f9f9 !important; /* Optional: subtle gray background to look disabled */
 }
-/* 1. Disable all interactions for the main bundle rows */
-.rebuy-cart__flyout-item.product-original-matcha-collagen,
-.rebuy-cart__flyout-item.product-chocolate-matcha-collagen-1,
-.rebuy-cart__flyout-item.product-vanilla-matcha-collagen {
-  pointer-events: none !important;
-  cursor: default !important;
-}
-
-/* 2. Re-enable ONLY the remove button for those rows */
-.rebuy-cart__flyout-item.product-original-matcha-collagen .rebuy-cart__flyout-item-remove,
-.rebuy-cart__flyout-item.product-chocolate-matcha-collagen-1 .rebuy-cart__flyout-item-remove,
-.rebuy-cart__flyout-item.product-vanilla-matcha-collagen .rebuy-cart__flyout-item-remove {
-  pointer-events: all !important;
-  cursor: pointer !important;
-  opacity: 1 !important; /* Ensures the trash icon looks active */
-}
-
-/* 3. Optional: Make the quantity widget look disabled since it won't work */
-.rebuy-cart__flyout-item.product-original-matcha-collagen .rebuy-cart__flyout-item-quantity-widget,
-.rebuy-cart__flyout-item.product-chocolate-matcha-collagen-1 .rebuy-cart__flyout-item-quantity-widget,
-.rebuy-cart__flyout-item.product-vanilla-matcha-collagen .rebuy-cart__flyout-item-quantity-widget {
-  opacity: 0.5;
-  filter: grayscale(1);
-}
