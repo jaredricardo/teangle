@@ -12280,3 +12280,12 @@ html[dir=rtl] .product-single__meta .rte{
     opacity: 0.5; /* Makes it look locked/disabled */
     filter: grayscale(1); /* Optional: makes the trash icon look inactive */
 }
+/* Disable the MINUS quantity button for Main Matcha Collagen products */
+.rebuy-cart__flyout-item.product-original-matcha-collagen .rebuy-cart__flyout-item-quantity-widget-button:first-child,
+.rebuy-cart__flyout-item.product-chocolate-matcha-collagen-1 .rebuy-cart__flyout-item-quantity-widget-button:first-child,
+.rebuy-cart__flyout-item.product-vanilla-matcha-collagen .rebuy-cart__flyout-item-quantity-widget-button:first-child {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+    opacity: 0.3; /* Makes the minus sign look very faded */
+    background-color: #f9f9f9 !important; /* Optional: subtle gray background to look disabled */
+}
