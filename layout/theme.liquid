@@ -766,6 +766,86 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
  <!-- Widget : Saint Jean -->
 {% comment %}<div data-rebuy-id="154725"></div> {% endcomment %} 
 <!-- End Widget : Saint Jean -->
+<!-- Free Gift Guard Script -->
+<script>
+(function () {
+  var MAIN_VARIANTS = [42318931066962, 42311457996882, 42318929264722];
+  var GIFT_VARIANT  = 42341023842386;
+  var MIN_QTY       = 2;
+  var _checking     = false;
+  var _removing     = false;
 
+  function checkCart() {
+    if (_checking || _removing) return;
+    _checking = true;
+
+    fetch('/cart.js')
+      .then(function (r) { return r.json(); })
+      .then(function (cart) {
+        var items = cart.items || [];
+
+        var mainQty = items.reduce(function (sum, item) {
+          return MAIN_VARIANTS.indexOf(item.variant_id) !== -1
+            ? sum + item.quantity
+            : sum;
+        }, 0);
+
+        var hasGift = items.some(function (item) {
+          return item.variant_id === GIFT_VARIANT;
+        });
+
+        if (hasGift && mainQty < MIN_QTY) {
+          _removing = true;
+          fetch('/cart/change.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: GIFT_VARIANT, quantity: 0 })
+          })
+          .then(function () {
+            document.dispatchEvent(new CustomEvent('rebuy:cart.change'));
+            document.dispatchEvent(new CustomEvent('cart:refresh'));
+            if (window.Rebuy && window.Rebuy.Cart) {
+              window.Rebuy.Cart.refresh();
+            }
+          })
+          .catch(function (e) { console.warn('[GiftGuard] Remove failed:', e); })
+          .finally(function () { _removing = false; });
+        }
+      })
+      .catch(function (e) { console.warn('[GiftGuard] Cart fetch failed:', e); })
+      .finally(function () { _checking = false; });
+  }
+
+  var observer = new MutationObserver(function () {
+    setTimeout(checkCart, 500);
+  });
+
+  function initObserver() {
+    var cartEl = document.querySelector('.rebuy-cart__flyout') || document.body;
+    observer.observe(cartEl, { childList: true, subtree: true });
+  }
+
+  document.addEventListener('rebuy:cart.change', function () {
+    setTimeout(checkCart, 600);
+  });
+  document.addEventListener('rebuy:cart.ready', function () {
+    setTimeout(checkCart, 600);
+    initObserver();
+  });
+  document.addEventListener('rebuy:smartcart.open', function () {
+    setTimeout(checkCart, 400);
+  });
+
+  setInterval(checkCart, 2500);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(initObserver, 1200);
+    });
+  } else {
+    setTimeout(initObserver, 1200);
+  }
+})();
+</script>
 </body>
 </html>
