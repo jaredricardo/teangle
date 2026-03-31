@@ -790,18 +790,24 @@ window.TriplePixelData={TripleName:"fr-hellodarknessmyoldfriend.myshopify.com",v
             : sum;
         }, 0);
 
-        var hasGift = items.some(function (item) {
+        var giftItem = items.find(function (item) {
           return item.variant_id === GIFT_VARIANT;
         });
 
-        if (hasGift && mainQty < MIN_QTY) {
+        console.log('[GiftGuard] mainQty:', mainQty, '| giftInCart:', !!giftItem);
+
+        if (giftItem && mainQty < MIN_QTY) {
           _removing = true;
+          console.log('[GiftGuard] Removing gift, line key:', giftItem.key);
+
           fetch('/cart/change.js', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id: GIFT_VARIANT, quantity: 0 })
+            body: JSON.stringify({ id: giftItem.key, quantity: 0 })
           })
+          .then(function (r) { return r.json(); })
           .then(function () {
+            console.log('[GiftGuard] Gift removed successfully');
             document.dispatchEvent(new CustomEvent('rebuy:cart.change'));
             if (window.Rebuy && window.Rebuy.Cart) {
               window.Rebuy.Cart.refresh();
