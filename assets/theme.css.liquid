@@ -12289,3 +12289,16 @@ html[dir=rtl] .product-single__meta .rte{
     opacity: 0.3; /* Makes the minus sign look very faded */
     background-color: #f9f9f9 !important; /* Optional: subtle gray background to look disabled */
 }
+/* Disable clicking on Image and Title for Main Matcha Products */
+/* This prevents users from leaving the cart to go to the product page */
+
+.product-original-matcha-collagen .rebuy-cart__flyout-item-media a,
+.product-original-matcha-collagen .rebuy-cart__flyout-item-product-title,
+.product-chocolate-matcha-collagen-1 .rebuy-cart__flyout-item-media a,
+.product-chocolate-matcha-collagen-1 .rebuy-cart__flyout-item-product-title,
+.product-vanilla-matcha-collagen .rebuy-cart__flyout-item-media a,
+.product-vanilla-matcha-collagen .rebuy-cart__flyout-item-product-title {
+    pointer-events: none !important;
+    cursor: default !important;
+    text-decoration: none !important; /* Removes the underline if there is one */
+}
