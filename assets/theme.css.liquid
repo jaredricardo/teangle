@@ -12249,3 +12249,7 @@ html[dir=rtl] .product-single__meta .rte{
   line-height: 1.4 !important;
   margin: 0.5rem 0 !important;
 }
+/* Hide quantity controls for free gift in Rebuy cart */
+.rebuy-cart__flyout-item:has([data-variant-id="42341023842386"]) .rebuy-cart__flyout-item-quantity {
+  display: none !important;
+}
