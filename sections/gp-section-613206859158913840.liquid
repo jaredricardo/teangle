@@ -1,0 +1,789 @@
+
+    
+    
+    <style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-613206859158913840.gps.gpsil [style*="--as:"]{align-self:var(--as)}.gps-613206859158913840.gps.gpsil [style*="--aspect:"]{aspect-ratio:var(--aspect)}.gps-613206859158913840.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-613206859158913840.gps.gpsil [style*="--hvr-bg:"]:hover{background:var(--hvr-bg)}.gps-613206859158913840.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-613206859158913840.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-613206859158913840.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-613206859158913840.gps.gpsil [style*="--hvr-bgi:"]:hover{background-image:var(--hvr-bgi)}.gps-613206859158913840.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-613206859158913840.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-613206859158913840.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-613206859158913840.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-613206859158913840.gps.gpsil [style*="--hvr-b:"]:hover{border:var(--hvr-b)}.gps-613206859158913840.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-613206859158913840.gps.gpsil [style*="--hvr-bb:"]:hover{border-bottom:var(--hvr-bb)}.gps-613206859158913840.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-613206859158913840.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-613206859158913840.gps.gpsil [style*="--hvr-bblr:"]:hover{border-bottom-left-radius:var(--hvr-bblr)}.gps-613206859158913840.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-613206859158913840.gps.gpsil [style*="--hvr-bbrr:"]:hover{border-bottom-right-radius:var(--hvr-bbrr)}.gps-613206859158913840.gps.gpsil [style*="--bl:"]{border-left:var(--bl)}.gps-613206859158913840.gps.gpsil [style*="--radius:"]{border-radius:var(--radius)}.gps-613206859158913840.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-613206859158913840.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-613206859158913840.gps.gpsil [style*="--hvr-bt:"]:hover{border-top:var(--hvr-bt)}.gps-613206859158913840.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-613206859158913840.gps.gpsil [style*="--hvr-btlr:"]:hover{border-top-left-radius:var(--hvr-btlr)}.gps-613206859158913840.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-613206859158913840.gps.gpsil [style*="--hvr-btrr:"]:hover{border-top-right-radius:var(--hvr-btrr)}.gps-613206859158913840.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-613206859158913840.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-613206859158913840.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-613206859158913840.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-613206859158913840.gps.gpsil [style*="--ff:"]{font-family:var(--ff)}.gps-613206859158913840.gps.gpsil [style*="--size:"]{font-size:var(--size)}.gps-613206859158913840.gps.gpsil [style*="--weight:"]{font-weight:var(--weight)}.gps-613206859158913840.gps.gpsil [style*="--fs:"]{font-style:var(--fs)}.gps-613206859158913840.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-613206859158913840.gps.gpsil [style*="--h:"]{height:var(--h)}.gps-613206859158913840.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-613206859158913840.gps.gpsil [style*="--ls:"]{letter-spacing:var(--ls)}.gps-613206859158913840.gps.gpsil [style*="--lh:"]{line-height:var(--lh)}.gps-613206859158913840.gps.gpsil [style*="--tdt:"]{text-decoration-thickness:var(--tdt)}.gps-613206859158913840.gps.gpsil [style*="--tdl:"]{text-decoration-line:var(--tdl)}.gps-613206859158913840.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-613206859158913840.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-613206859158913840.gps.gpsil [style*="--ml:"]{margin-left:var(--ml)}.gps-613206859158913840.gps.gpsil [style*="--mt:"]{margin-top:var(--mt)}.gps-613206859158913840.gps.gpsil [style*="--minw:"]{min-width:var(--minw)}.gps-613206859158913840.gps.gpsil [style*="--objf:"]{-o-object-fit:var(--objf);object-fit:var(--objf)}.gps-613206859158913840.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-613206859158913840.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-613206859158913840.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-613206859158913840.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-613206859158913840.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-613206859158913840.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-613206859158913840.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-613206859158913840.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-613206859158913840.gps.gpsil [style*="--rg:"]{row-gap:var(--rg)}.gps-613206859158913840.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-613206859158913840.gps.gpsil [style*="--ts:"]{text-shadow:var(--ts)}.gps-613206859158913840.gps.gpsil [style*="--tt:"]{text-transform:var(--tt)}.gps-613206859158913840.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-613206859158913840.gps.gpsil [style*="--w:"]{width:var(--w)}.gps-613206859158913840.gps.gpsil [style*="--line-clamp:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp)}@media only screen and (max-width:1024px){.gps-613206859158913840.gps.gpsil [style*="--aspect-tablet:"]{aspect-ratio:var(--aspect-tablet)}.gps-613206859158913840.gps.gpsil [style*="--size-tablet:"]{font-size:var(--size-tablet)}.gps-613206859158913840.gps.gpsil [style*="--h-tablet:"]{height:var(--h-tablet)}.gps-613206859158913840.gps.gpsil [style*="--ls-tablet:"]{letter-spacing:var(--ls-tablet)}.gps-613206859158913840.gps.gpsil [style*="--lh-tablet:"]{line-height:var(--lh-tablet)}.gps-613206859158913840.gps.gpsil [style*="--mb-tablet:"]{margin-bottom:var(--mb-tablet)}.gps-613206859158913840.gps.gpsil [style*="--ml-tablet:"]{margin-left:var(--ml-tablet)}.gps-613206859158913840.gps.gpsil [style*="--mt-tablet:"]{margin-top:var(--mt-tablet)}.gps-613206859158913840.gps.gpsil [style*="--minw-tablet:"]{min-width:var(--minw-tablet)}.gps-613206859158913840.gps.gpsil [style*="--op-tablet:"]{opacity:var(--op-tablet)}.gps-613206859158913840.gps.gpsil [style*="--pb-tablet:"]{padding-bottom:var(--pb-tablet)}.gps-613206859158913840.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-613206859158913840.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-613206859158913840.gps.gpsil [style*="--pt-tablet:"]{padding-top:var(--pt-tablet)}.gps-613206859158913840.gps.gpsil [style*="--rg-tablet:"]{row-gap:var(--rg-tablet)}.gps-613206859158913840.gps.gpsil [style*="--ta-tablet:"]{text-align:var(--ta-tablet)}.gps-613206859158913840.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}.gps-613206859158913840.gps.gpsil [style*="--line-clamp-tablet:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-tablet)}}@media only screen and (max-width:767px){.gps-613206859158913840.gps.gpsil [style*="--aspect-mobile:"]{aspect-ratio:var(--aspect-mobile)}.gps-613206859158913840.gps.gpsil [style*="--size-mobile:"]{font-size:var(--size-mobile)}.gps-613206859158913840.gps.gpsil [style*="--gtc-mobile:"]{grid-template-columns:var(--gtc-mobile)}.gps-613206859158913840.gps.gpsil [style*="--h-mobile:"]{height:var(--h-mobile)}.gps-613206859158913840.gps.gpsil [style*="--ls-mobile:"]{letter-spacing:var(--ls-mobile)}.gps-613206859158913840.gps.gpsil [style*="--lh-mobile:"]{line-height:var(--lh-mobile)}.gps-613206859158913840.gps.gpsil [style*="--mb-mobile:"]{margin-bottom:var(--mb-mobile)}.gps-613206859158913840.gps.gpsil [style*="--mt-mobile:"]{margin-top:var(--mt-mobile)}.gps-613206859158913840.gps.gpsil [style*="--minw-mobile:"]{min-width:var(--minw-mobile)}.gps-613206859158913840.gps.gpsil [style*="--op-mobile:"]{opacity:var(--op-mobile)}.gps-613206859158913840.gps.gpsil [style*="--pb-mobile:"]{padding-bottom:var(--pb-mobile)}.gps-613206859158913840.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-613206859158913840.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-613206859158913840.gps.gpsil [style*="--pt-mobile:"]{padding-top:var(--pt-mobile)}.gps-613206859158913840.gps.gpsil [style*="--rg-mobile:"]{row-gap:var(--rg-mobile)}.gps-613206859158913840.gps.gpsil [style*="--ta-mobile:"]{text-align:var(--ta-mobile)}.gps-613206859158913840.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}.gps-613206859158913840.gps.gpsil [style*="--line-clamp-mobile:"]{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:var(--line-clamp-mobile)}}.gps-613206859158913840 .gp-relative{position:relative}.gps-613206859158913840 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-613206859158913840 .gp-mb-0{margin-bottom:0}.gps-613206859158913840 .gp-inline-block{display:inline-block}.gps-613206859158913840 .gp-flex{display:flex}.gps-613206859158913840 .gp-inline-flex{display:inline-flex}.gps-613206859158913840 .gp-grid{display:grid}.gps-613206859158913840 .gp-contents{display:contents}.gps-613206859158913840 .\!gp-hidden{display:none!important}.gps-613206859158913840 .gp-hidden{display:none}.gps-613206859158913840 .gp-h-auto{height:auto}.gps-613206859158913840 .gp-h-full{height:100%}.gps-613206859158913840 .gp-w-full{width:100%}.gps-613206859158913840 .gp-max-w-full{max-width:100%}.gps-613206859158913840 .gp-flex-none{flex:none}.gps-613206859158913840 .gp-grid-rows-\[1fr\]{grid-template-rows:1fr}.gps-613206859158913840 .gp-flex-row-reverse{flex-direction:row-reverse}.gps-613206859158913840 .gp-flex-col{flex-direction:column}.gps-613206859158913840 .gp-items-center{align-items:center}.gps-613206859158913840 .gp-justify-center{justify-content:center}.gps-613206859158913840 .gp-overflow-hidden{overflow:hidden}.gps-613206859158913840 .gp-break-words{overflow-wrap:break-word}.gps-613206859158913840 .gp-leading-\[0\]{line-height:0}.gps-613206859158913840 .gp-text-g-text-1{color:var(--g-c-text-1)}.gps-613206859158913840 .gp-no-underline{text-decoration-line:none}.gps-613206859158913840 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-613206859158913840 .gp-duration-200{transition-duration:.2s}.gps-613206859158913840 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-613206859158913840 .disabled\:gp-btn-disabled:disabled{cursor:default}.gps-613206859158913840 .disabled\:gp-opacity-30:disabled{opacity:.3}.gps-613206859158913840 .gp-group\/button:active .group-active\/button\:\!gp-text-inherit{color:inherit!important}.gps-613206859158913840 .gp-group[data-state=loading] .group-data-\[state\=loading\]\:gp-invisible{visibility:hidden}@media (max-width:1024px){.gps-613206859158913840 .tablet\:\!gp-hidden{display:none!important}.gps-613206859158913840 .tablet\:gp-hidden{display:none}.gps-613206859158913840 .tablet\:gp-h-auto{height:auto}.gps-613206859158913840 .tablet\:gp-flex-none{flex:none}}@media (max-width:767px){.gps-613206859158913840 .mobile\:\!gp-hidden{display:none!important}.gps-613206859158913840 .mobile\:gp-hidden{display:none}.gps-613206859158913840 .mobile\:gp-h-auto{height:auto}.gps-613206859158913840 .mobile\:gp-flex-none{flex:none}}.gps-613206859158913840 .\[\&\>svg\]\:\!gp-h-\[var\(--height-desktop\)\]>svg{height:var(--height-desktop)!important}.gps-613206859158913840 .\[\&\>svg\]\:\!gp-w-auto>svg{width:auto!important}@media (max-width:1024px){.gps-613206859158913840 .tablet\:\[\&\>svg\]\:\!gp-h-\[var\(--height-tablet\)\]>svg{height:var(--height-tablet)!important}}@media (max-width:767px){.gps-613206859158913840 .mobile\:\[\&\>svg\]\:\!gp-h-\[var\(--height-mobile\)\]>svg{height:var(--height-mobile)!important}}.gps-613206859158913840 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}.gps-613206859158913840 .\[\&_p\]\:gp-whitespace-pre-line p{white-space:pre-line}</style>
+    
+  
+    
+    
+    
+
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+
+    
+        <section
+          class="gp-mx-auto gp-max-w-full [&_*]:gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:none;--pl-tablet:none;--pl-mobile:none;--pr:none;--pr-tablet:none;--pr-mobile:none"
+        >
+          
+    <gp-row gp-data='{"background":{"desktop":{"attachment":"scroll","color":"#F9F1E8","image":{"height":0,"src":"","width":0},"position":{"x":50,"y":50},"preload":false,"repeat":"no-repeat","size":"cover","type":"color","video":"","videoHtml5":""}},"uid":"gux9Gfug3d"}' data-id="gux9Gfug3d" id="gux9Gfug3d" data-same-height-subgrid-container class="gux9Gfug3d gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--blockPadding:base;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--op-tablet:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--pt:81px;--pb:30px;--pt-tablet:38px;--pb-tablet:0px;--mt-mobile:0px;--mb-mobile:0px;--pt-mobile:30px;--pl-mobile:15px;--pb-mobile:30px;--pr-mobile:15px;--cg:32px;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:#F9F1E8;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="guf18rC67B gp-relative gp-flex gp-flex-col"
+    >
+      
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{},"uid":"gzKFG5P4S1"}' data-id="gzKFG5P4S1" id="gzKFG5P4S1" data-same-height-subgrid-container class="gzKFG5P4S1 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--cg:16px;--rg:16px;--rg-tablet:16px;--rg-mobile:16px;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--h:auto;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="grsNb55_UX gp-relative gp-flex gp-flex-col"
+    >
+      
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gp98y4nqW2 gp-custom-code">
+      <div>
+    <style>
+  @font-face{font-family:'SofiaPro';src:url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/gempages_Sofia_Pro_Regular_Az.otf?v=1772828137') format('opentype');font-weight:normal;font-style:normal}
+  .bw-img-wrap{width:100% !important;max-width:480px !important;margin:0 auto !important;font-family:'SofiaPro',-apple-system,sans-serif !important}
+  .bw-main-img-box{width:100% !important;aspect-ratio:1/1 !important;border-radius:16px !important;overflow:hidden !important;background:#f3f4f6 !important;position:relative !important}
+  
+  .bw-main-img-box .bw-main-media{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;top:0 !important;left:0 !important;opacity:0 !important;pointer-events:none !important;z-index:0 !important;transition:opacity 0.3s ease !important}
+  .bw-main-img-box .bw-main-media.bw-active{opacity:1 !important;pointer-events:auto !important;z-index:1 !important}
+
+  /* ── Thumbnail row — desktop: wrap, mobile: horizontal scroll ── */
+  .bw-thumb-row{
+    display:flex !important;
+    gap:8px !important;
+    margin-top:12px !important;
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+  }
+
+  @media (max-width: 768px) {
+    .bw-thumb-row{
+      flex-wrap:nowrap !important;
+      overflow-x:auto !important;
+      overflow-y:hidden !important;
+      justify-content:flex-start !important;
+      -webkit-overflow-scrolling:touch !important;
+      scroll-snap-type:x mandatory !important;
+      padding-bottom:6px !important;
+      scrollbar-width:none !important;
+    }
+    .bw-thumb-row::-webkit-scrollbar{
+      display:none !important;
+    }
+    .bw-thumb-wrap{
+      scroll-snap-align:start !important;
+      flex-shrink:0 !important;
+    }
+  }
+
+  .bw-thumb-wrap{position:relative !important;width:64px !important;height:64px !important;flex-shrink:0 !important;cursor:pointer !important}
+  .bw-thumb{width:64px !important;height:64px !important;border-radius:8px !important;object-fit:cover !important;border:2px solid transparent !important;opacity:0.55 !important;transition:all 0.15s !important;background:#f3f4f6 !important;display:block !important}
+  .bw-thumb.bw-active{border-color:#1D9E75 !important;opacity:1 !important}
+  .bw-play-icon{position:absolute !important;top:50% !important;left:50% !important;transform:translate(-50%,-50%) !important;width:24px !important;height:24px !important;background:rgba(0,0,0,0.6) !important;border-radius:50% !important;display:flex !important;align-items:center !important;justify-content:center !important;pointer-events:none !important}
+  .bw-play-icon svg{width:10px !important;height:10px !important;margin-left:2px !important}
+  .bw-skeleton{width:100% !important;aspect-ratio:1/1 !important;border-radius:16px !important;background:#e5e7eb !important;animation:bwPulse 1.4s ease-in-out infinite !important}
+  @keyframes bwPulse{0%,100%{opacity:1}50%{opacity:0.4}}
+</style>
+
+<div class="bw-img-wrap">
+  <div id="bw-skeleton" class="bw-skeleton"></div>
+  <div class="bw-main-img-box" id="bw-main-box" style="display:none"></div>
+  <div class="bw-thumb-row" id="bw-thumb-row" style="display:none"></div>
+</div>
+
+<script>
+(function(){
+
+  // Order: 0=Original, 1=Chocolate, 2=Vanilla — must match right side
+  var PRODUCT_IDS = [
+    7549676290130,  // Original
+    7549675438162,  // Chocolate
+    7545437913170   // Vanilla
+  ];
+  var FREE_GIFT_VARIANT = 42341023842386;
+
+  var allMedia      = [[], [], []];
+  var currentFlavor = 0;
+
+  function render(flavorIdx, activeIdx){
+    activeIdx = activeIdx || 0;
+    var items    = allMedia[flavorIdx] || [];
+    var mainBox  = document.getElementById('bw-main-box');
+    var thumbRow = document.getElementById('bw-thumb-row');
+    mainBox.innerHTML  = '';
+    thumbRow.innerHTML = '';
+
+    items.forEach(function(item, i){
+      var isActive = (i === activeIdx);
+
+      if(item.type === 'video'){
+        var vid         = document.createElement('video');
+        vid.src         = item.src;
+        vid.poster      = item.poster || '';
+        vid.className   = 'bw-main-media' + (isActive ? ' bw-active' : '');
+        vid.controls    = true;
+        vid.playsInline = true;
+        vid.preload     = 'metadata';
+        mainBox.appendChild(vid);
+      } else {
+        var img       = document.createElement('img');
+        img.src       = item.src;
+        img.alt       = 'Product ' + (i + 1);
+        img.className = 'bw-main-media' + (isActive ? ' bw-active' : '');
+        mainBox.appendChild(img);
+      }
+
+      var wrap       = document.createElement('div');
+      wrap.className = 'bw-thumb-wrap';
+      wrap.onclick   = (function(idx){ return function(){ bwSelectMedia(idx); }; })(i);
+
+      var th         = document.createElement('img');
+      th.src         = item.poster || item.src;
+      th.className   = 'bw-thumb' + (isActive ? ' bw-active' : '');
+      th.alt         = (item.type === 'video' ? 'Video' : 'Image') + ' ' + (i + 1);
+      wrap.appendChild(th);
+
+      if(item.type === 'video'){
+        var pi = document.createElement('div');
+        pi.className = 'bw-play-icon';
+        pi.innerHTML = '<svg viewBox="0 0 10 10" fill="white"><polygon points="2,1 9,5 2,9"/></svg>';
+        wrap.appendChild(pi);
+      }
+
+      thumbRow.appendChild(wrap);
+    });
+
+    // Auto scroll active thumb into view on mobile
+    var activeThumb = thumbRow.querySelectorAll('.bw-thumb-wrap')[activeIdx];
+    if(activeThumb){
+      setTimeout(function(){
+        activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }, 50);
+    }
+  }
+
+  function bwSelectMedia(idx){
+    document.querySelectorAll('#bw-main-box video').forEach(function(v){ v.pause(); });
+    render(currentFlavor, idx);
+  }
+  window.bwImgSelect = bwSelectMedia;
+
+  function showUI(){
+    document.getElementById('bw-skeleton').style.display = 'none';
+    document.getElementById('bw-main-box').style.display  = 'block';
+    document.getElementById('bw-thumb-row').style.display = 'flex';
+  }
+
+  function parseProductMedia(productData, flavorIdx){
+    var mediaArr = productData.media || [];
+    mediaArr.forEach(function(m){
+      if(m.media_type === 'image'){
+        var src = m.src || (m.preview_image && m.preview_image.src);
+        if(src) allMedia[flavorIdx].push({ type:'image', src: src });
+      } else if(m.media_type === 'video'){
+        var sources = m.sources || [];
+        var mp4 = sources.filter(function(s){ return s.mime_type === 'video/mp4'; });
+        mp4.sort(function(a,b){ return (b.width||0) - (a.width||0); });
+        var best   = mp4[0] || sources[0];
+        var poster = m.preview_image && m.preview_image.src ? m.preview_image.src : '';
+        if(best) allMedia[flavorIdx].push({ type:'video', src: best.url, poster: poster });
+      }
+    });
+  }
+
+  fetch('/products.json?limit=250')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var products = data.products || [];
+
+      var giftImgEl = document.getElementById('bw2-gift-img');
+      if(giftImgEl){
+        var giftProd = products.find(function(p){
+          return p.variants && p.variants.some(function(v){ return v.id === FREE_GIFT_VARIANT; });
+        });
+        if(giftProd && giftProd.images && giftProd.images.length){
+          giftImgEl.src = giftProd.images[0].src;
+        }
+      }
+
+      var handles = PRODUCT_IDS.map(function(id){
+        var match = products.find(function(p){ return p.id === id; });
+        return match ? match.handle : null;
+      });
+
+      var fetches = handles.map(function(handle, idx){
+        if(!handle) return Promise.resolve();
+        return fetch('/products/' + handle + '.js')
+          .then(function(r){ return r.json(); })
+          .then(function(productData){ parseProductMedia(productData, idx); })
+          .catch(function(){});
+      });
+
+      return Promise.all(fetches);
+    })
+    .then(function(){
+      render(0, 0);
+      showUI();
+    })
+    .catch(function(){
+      render(0, 0);
+      showUI();
+    });
+
+  window.bwUpdateImage = function(flavorIdx){
+    document.querySelectorAll('#bw-main-box video').forEach(function(v){ v.pause(); });
+    currentFlavor = flavorIdx;
+    render(flavorIdx, 0);
+  };
+
+})();
+</script>
+    </div>
+    </div>
+  
+    </div><div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gAOGoGxQCE gp-relative gp-flex gp-flex-col"
+    >
+      
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:10px;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gyUGHMNifR gp-custom-code">
+      <div>
+    <!-- BUNDLE PRODUCT TITLE — Syncs with flavor selection -->
+<!-- Paste into a separate Custom Code block for the product title -->
+
+<style>
+  @font-face{font-family:'SofiaPro';src:url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/gempages_Sofia_Pro_Regular_Az.otf?v=1772828137') format('opentype');font-weight:normal;font-style:normal}
+  .bw-product-title{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:28px !important;font-weight:700 !important;color:#111 !important;line-height:1.3 !important;margin:0 !important;padding:0 !important;transition:opacity 0.2s ease !important}
+  .bw-product-title.fading{opacity:0 !important}
+</style>
+
+<h1 class="bw-product-title" id="bw-product-title">Original Matcha Collagen</h1>
+
+<script>
+  var BW_TITLES = [
+    'Original Matcha Collagen',
+    'Chocolate Matcha Collagen',
+    'Vanilla Matcha Collagen'
+  ];
+  window.bwUpdateTitle = function(idx){
+    var el = document.getElementById('bw-product-title');
+    if(!el) return;
+    el.classList.add('fading');
+    setTimeout(function(){
+      el.textContent = BW_TITLES[idx];
+      el.classList.remove('fading');
+    }, 150);
+  };
+</script>
+    </div>
+    </div>
+  
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gShN01Z2xm"
+        class="gShN01Z2xm"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mt:1px;--ml:0px;--mb:10px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mt-mobile:0px;--mb-mobile:-1px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px;--mt-tablet:1px;--ml-tablet:0px;--pt-tablet:0px;--pl-tablet:0px;--pb-tablet:0px;--pr-tablet:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--ta-tablet:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Sofia-Pro-Regular-Az, 'Sofia Pro Regular Az'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:14px;--size-mobile:15px;--lh:100%;--lh-tablet:180%;--lh-mobile:130%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--c:var(--g-c-text-1, text-1);--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggShN01Z2xm_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gsVrNqan8L"
+        class="gsVrNqan8L"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:10px;--mb-mobile:10px;--mb-tablet:10px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class=" gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ts:none;--ta:left;--ta-mobile:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--fs:normal;--ff:var(--g-font-Sofia-Pro-Regular-Az, 'Sofia Pro Regular Az'), var(--g-font-body, body);--weight:400;--size:19px;--size-tablet:16px;--size-mobile:16px;--lh:160%;--lh-tablet:180%;--lh-mobile:150%;--ls:0.6px;--ls-tablet:0.6px;--ls-mobile:0.6px;--c:var(--g-c-text-1, text-1);--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggsVrNqan8L_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:10px;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gSqITvtC_0 gp-custom-code">
+      <div>
+    <!-- BUNDLE RIGHT SIDE v2 — New Design -->
+<!-- Paste into the RIGHT column Custom Code block in GemPages -->
+
+<style>
+  @font-face{font-family:'SofiaPro';src:url('https://cdn.shopify.com/s/files/1/0263/3606/7666/files/gempages_Sofia_Pro_Regular_Az.otf?v=1772828137') format('opentype');font-weight:normal;font-style:normal}
+  .bw2 *{box-sizing:border-box !important;margin:0 !important;padding:0 !important}
+  .bw2{font-family:'SofiaPro',-apple-system,sans-serif !important;max-width:640px !important;margin:0 auto !important;padding:0.5rem 0 !important}
+
+  /* Section Label */
+  .bw2-label{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:600 !important;color:#374151 !important;margin-bottom:14px !important;letter-spacing:0.01em !important}
+  .bw2-row{margin-bottom:1.10rem !important}
+
+  /* ── FLAVOR CARDS ── */
+  .flavor2-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:12px !important}
+  .flavor2-card{border:2px solid #e5e7eb !important;border-radius:16px !important;padding:16px 10px 14px !important;cursor:pointer !important;transition:all 0.18s ease !important;background:#fff !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:10px !important;text-align:center !important;position:relative !important}
+  .flavor2-card:hover{border-color:#5DCAA5 !important;box-shadow:0 4px 16px rgba(29,158,117,0.12) !important}
+  .flavor2-card.active{border-color:#1D9E75 !important;background:#fff !important;box-shadow:0 4px 20px rgba(29,158,117,0.18) !important}
+  .flavor2-check{position:absolute !important;top:10px !important;right:10px !important;width:22px !important;height:22px !important;border-radius:50% !important;border:2px solid #d1d5db !important;background:#fff !important;display:flex !important;align-items:center !important;justify-content:center !important;transition:all 0.15s !important}
+  .flavor2-check.on{background:#1D9E75 !important;border-color:#1D9E75 !important}
+  .flavor2-check svg{width:11px !important;height:11px !important}
+  .flavor2-img{width:90px !important;height:90px !important;object-fit:contain !important;border-radius:10px !important;background:transparent !important}
+  .flavor2-name{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:600 !important;color:#111 !important;line-height:1.3 !important}
+
+  /* ── QTY CARDS ── */
+  .qty2-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:12px !important}
+  .qty2-card{border:2px solid #e5e7eb !important;border-radius:16px !important;padding:10px 1px 10px !important;cursor:pointer !important;transition:all 0.18s ease !important;background:#fff !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:6px !important;text-align:center !important;position:relative !important}
+  .qty2-card:hover{border-color:#5DCAA5 !important;box-shadow:0 4px 16px rgba(29,158,117,0.12) !important}
+  .qty2-card.active{border-color:#1D9E75 !important;background:#fff !important;box-shadow:0 4px 20px rgba(29,158,117,0.18) !important}
+  .qty2-badge{font-family:'SofiaPro',-apple-system,sans-serif !important;position:absolute !important;top:-13px !important;left:50% !important;transform:translateX(-50%) !important;background:#1D9E75 !important;color:#fff !important;font-size:10px !important;font-weight:700 !important;padding:3px 12px !important;border-radius:20px !important;white-space:nowrap !important;letter-spacing:0.04em !important}
+  .qty2-disc-badge{font-family:'SofiaPro',-apple-system,sans-serif !important;position:absolute !important;top:-13px !important;left:50% !important;transform:translateX(-50%) !important;background:#FF5C3A !important;color:#fff !important;font-size:10px !important;font-weight:700 !important;padding:3px 12px !important;border-radius:20px !important;white-space:nowrap !important;letter-spacing:0.04em !important}
+  .qty2-imgs{display:flex !important;align-items:center !important;justify-content:center !important;margin-bottom:4px !important}
+  .qty2-imgs img{width:52px !important;height:52px !important;object-fit:contain !important;background:transparent !important}
+  .qty2-imgs img+img{margin-left:-12px !important}
+  .qty2-imgs img+img+img{margin-left:-12px !important}
+  .qty2-pouches{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:700 !important;color:#111 !important}
+  .qty2-servings{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:11px !important;color:#9ca3af !important;font-weight:400 !important}
+  .qty2-price-now{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:18px !important;font-weight:700 !important;color:#111 !important;line-height:1.1 !important}
+  .qty2-price-was{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#9ca3af !important;text-decoration:line-through !important}
+
+  /* ── GIFT BOX ── */
+  .gift2-box{display:none !important;align-items:center !important;gap:12px !important;background:#F0FAF6 !important;border:1.5px dashed #1D9E75 !important;border-radius:14px !important;padding:12px 16px !important;margin-bottom:1.10rem !important}
+  .gift2-box.visible{display:flex !important}
+  .gift2-img{width:52px !important;height:52px !important;border-radius:8px !important;object-fit:cover !important;background:#e5e7eb !important;flex-shrink:0 !important}
+  .gift2-text{flex:1 !important}
+  .gift2-tag{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:10px !important;font-weight:700 !important;letter-spacing:0.08em !important;text-transform:uppercase !important;color:#0F6E56 !important;margin-bottom:2px !important}
+  .gift2-name{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:13px !important;font-weight:600 !important;color:#111 !important;line-height:1.3 !important}
+  .gift2-price{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#0F6E56 !important;font-weight:700 !important;white-space:nowrap !important;text-align:right !important}
+
+  /* ── SUMMARY ── */
+  .sum2-box{border:1.5px solid #e5e7eb !important;border-radius:16px !important;padding:18px 20px !important;background:#fafafa !important}
+  .sum2-row{display:flex !important;justify-content:space-between !important;font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:14px !important;color:#6b7280 !important;margin-bottom:8px !important}
+  .sum2-row.saving{color:#0F6E56 !important;font-weight:600 !important}
+  .sum2-row.hidden{display:none !important}
+  .sum2-divider{border:none !important;border-top:1px solid #e5e7eb !important;margin:12px 0 !important}
+  .sum2-total{display:flex !important;justify-content:space-between !important;align-items:baseline !important}
+  .sum2-total-label{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:15px !important;font-weight:700 !important;color:#111 !important}
+  .sum2-total-price{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:26px !important;font-weight:700 !important;color:#111 !important}
+  .sum2-per{font-family:'SofiaPro',-apple-system,sans-serif !important;font-size:12px !important;color:#9ca3af !important;margin-top:4px !important;text-align:right !important}
+
+  /* ── CTA BUTTON ── */
+  .add2-btn{font-family:'SofiaPro',-apple-system,sans-serif !important;width:100% !important;margin-top:16px !important;padding:16px !important;border-radius:10px !important;border:none !important;background:#1D9E75 !important;color:#fff !important;font-size:16px !important;font-weight:700 !important;cursor:pointer !important;letter-spacing:0.01em !important;display:block !important;text-align:center !important;text-decoration:none !important;transition:opacity 0.15s !important}
+  .add2-btn:hover{opacity:0.9 !important}
+  .add2-btn.loading{opacity:0.7 !important;cursor:wait !important}
+
+  @media(max-width:480px){
+    .flavor2-img{width:70px !important;height:70px !important}
+    .flavor2-name{font-size:11px !important}
+    .qty2-imgs img{width:42px !important;height:42px !important}
+    .qty2-price-now{font-size:15px !important}
+  }
+</style>
+
+<div class="bw2">
+
+  <!-- STEP 1: Flavor — Order: Original, Chocolate, Vanilla -->
+  <div class="bw2-row">
+    <div class="bw2-label">Choose your flavor</div>
+    <div class="flavor2-grid">
+
+      <!-- 0: Original -->
+      <div class="flavor2-card active" onclick="bw2Flavor(0)">
+        <div class="flavor2-check on" id="bw2-fc-0">
+          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <img class="flavor2-img" id="bw2-fimg-0" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/2_7b87e920-976b-4477-b4d3-9ff477b2dba3.png?v=1774855707" alt="Original" />
+        <div class="flavor2-name">Original</div>
+      </div>
+
+      <!-- 1: Chocolate -->
+      <div class="flavor2-card" onclick="bw2Flavor(1)">
+        <div class="flavor2-check" id="bw2-fc-1">
+          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <img class="flavor2-img" id="bw2-fimg-1" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/1_4d40d9bc-6323-49e4-b570-cf08c90c2d2a.png?v=1774855707" alt="Chocolate" />
+        <div class="flavor2-name">Chocolate</div>
+      </div>
+
+      <!-- 2: Vanilla -->
+      <div class="flavor2-card" onclick="bw2Flavor(2)">
+        <div class="flavor2-check" id="bw2-fc-2">
+          <svg viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <img class="flavor2-img" id="bw2-fimg-2" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/3_1f9f50ca-d20f-48cc-9c00-2b2f0ca2db59.png?v=1774855707" alt="Vanilla" />
+        <div class="flavor2-name">Vanilla</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STEP 2: Quantity -->
+  <div class="bw2-row">
+    <div class="bw2-label">Choose your quantity</div>
+    <div class="qty2-grid">
+
+      <!-- 1 Tub -->
+      <div class="qty2-card" onclick="bw2Qty(0)">
+        <div class="qty2-imgs">
+          <img id="bw2-qimg-0a" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/2_7b87e920-976b-4477-b4d3-9ff477b2dba3.png?v=1774855707" alt="1 tub" />
+        </div>
+        <div class="qty2-pouches">1 Tub</div>
+        <div class="qty2-servings">30 Servings</div>
+        <div class="qty2-price-now">$68.00</div>
+        <div class="qty2-price-was">&nbsp;</div>
+      </div>
+
+      <!-- 2 Tubs — Most Popular -->
+      <div class="qty2-card active" onclick="bw2Qty(1)">
+        <div class="qty2-badge">Most Popular</div>
+        <div class="qty2-imgs">
+          <img id="bw2-qimg-1a" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/2_7b87e920-976b-4477-b4d3-9ff477b2dba3.png?v=1774855707" alt="2 tubs" />
+          <img id="bw2-qimg-1b" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/2_7b87e920-976b-4477-b4d3-9ff477b2dba3.png?v=1774855707" alt="2 tubs" />
+        </div>
+        <div class="qty2-pouches">2 Tubs</div>
+        <div class="qty2-servings">60 Servings</div>
+        <div class="qty2-price-now">$122.40</div>
+        <div class="qty2-price-was">$136.00</div>
+      </div>
+
+      <!-- 3 Tubs — Best Value -->
+      <div class="qty2-card" onclick="bw2Qty(2)">
+        <div class="qty2-disc-badge">Best Value</div>
+        <div class="qty2-imgs">
+          <img id="bw2-qimg-2a" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/2_7b87e920-976b-4477-b4d3-9ff477b2dba3.png?v=1774855707" alt="3 tubs" />
+          <img id="bw2-qimg-2b" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/2_7b87e920-976b-4477-b4d3-9ff477b2dba3.png?v=1774855707" alt="3 tubs" />
+          <img id="bw2-qimg-2c" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/2_7b87e920-976b-4477-b4d3-9ff477b2dba3.png?v=1774855707" alt="3 tubs" />
+        </div>
+        <div class="qty2-pouches">3 Tubs</div>
+        <div class="qty2-servings">90 Servings</div>
+        <div class="qty2-price-now">$173.40</div>
+        <div class="qty2-price-was">$204.00</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Free Gift Banner -->
+  <div class="gift2-box visible" id="bw2-gift-box">
+    <img class="gift2-img" id="bw2-gift-img" src="" alt="Free Gift" />
+    <div class="gift2-text">
+      <div class="gift2-tag">🎁 Free gift unlocked!</div>
+      <div class="gift2-name" id="bw2-gift-name">Teangle Milk Frother</div>
+    </div>
+    <div class="gift2-price">FREE<br><span style="font-family:'SofiaPro',sans-serif;text-decoration:line-through;color:#9ca3af;font-size:11px;font-weight:400" id="bw2-gift-orig">$14.99</span></div>
+  </div>
+
+  <!-- Summary & CTA -->
+  <div class="sum2-box">
+    <div class="sum2-row">
+      <span id="bw2-items">2 Tubs · Original</span>
+      <span id="bw2-orig">$136.00</span>
+    </div>
+    <div class="sum2-row saving" id="bw2-discount-row">
+      <span id="bw2-disc-lbl">Bundle discount (10%)</span>
+      <span id="bw2-disc-amt">-$13.60</span>
+    </div>
+    <div class="sum2-row saving" id="bw2-gift-row">
+      <span>🎁 Free gift included</span>
+      <span>FREE</span>
+    </div>
+    <hr class="sum2-divider">
+    <div class="sum2-total">
+      <span class="sum2-total-label">Total</span>
+      <span class="sum2-total-price" id="bw2-total">$122.40</span>
+    </div>
+    <div class="sum2-per" id="bw2-per">$61.20 per tub</div>
+    <button class="add2-btn" id="bw2-btn" onclick="bw2AddCart()">Add to Cart →</button>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  // ── CONFIG — Order: 0=Original, 1=Chocolate, 2=Vanilla ──────────────
+  var UNIT_PRICE  = 68.00;
+  var FLAVORS     = ['Original', 'Chocolate', 'Vanilla'];
+  var VARIANT_IDS = [
+    42318931066962,   // Original Matcha Collagen
+    42311457996882,   // Chocolate Matcha Collagen
+    42318929264722,   // Vanilla Matcha Collagen
+  ];
+  var QTYS        = [1,    2,     3   ];
+  var DISCOUNTS   = [0,    0.10,  0.15];
+  var FREE_GIFT_VARIANT_ID = 42341023842386;
+  // ─────────────────────────────────────────────────────────────────────
+
+  var selF = 0, selQ = 1;
+
+  // Flavor thumbnail images — same order: Original, Chocolate, Vanilla
+  var flavorImgs = [
+    'https://cdn.shopify.com/s/files/1/0263/3606/7666/files/2_7b87e920-976b-4477-b4d3-9ff477b2dba3.png?v=1774855707',
+    'https://cdn.shopify.com/s/files/1/0263/3606/7666/files/1_4d40d9bc-6323-49e4-b570-cf08c90c2d2a.png?v=1774855707',
+    'https://cdn.shopify.com/s/files/1/0263/3606/7666/files/3_1f9f50ca-d20f-48cc-9c00-2b2f0ca2db59.png?v=1774855707'
+  ];
+
+  function updateQtyImages(){
+    var src = flavorImgs[selF];
+    ['bw2-qimg-0a','bw2-qimg-1a','bw2-qimg-1b','bw2-qimg-2a','bw2-qimg-2b','bw2-qimg-2c'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.src = src;
+    });
+  }
+
+  window.bw2Flavor = function(i){
+    selF = i;
+    document.querySelectorAll('.flavor2-card').forEach(function(c, idx){
+      c.classList.toggle('active', idx === i);
+      document.getElementById('bw2-fc-' + idx).classList.toggle('on', idx === i);
+    });
+    updateQtyImages();
+    if(typeof window.bwUpdateImage === 'function'){ window.bwUpdateImage(i); }
+    if(typeof window.bwUpdateTitle === 'function'){ window.bwUpdateTitle(i); }
+    bw2Update();
+  };
+
+  window.bw2Qty = function(i){
+    selQ = i;
+    document.querySelectorAll('.qty2-card').forEach(function(c, idx){ c.classList.toggle('active', idx === i); });
+    bw2Update();
+  };
+
+  function bw2Update(){
+    var qty   = QTYS[selQ];
+    var disc  = DISCOUNTS[selQ];
+    var sub   = parseFloat((UNIT_PRICE * qty).toFixed(2));
+    var save  = parseFloat((sub * disc).toFixed(2));
+    var total = parseFloat((sub - save).toFixed(2));
+    var per   = parseFloat((total / qty).toFixed(2));
+
+    document.getElementById('bw2-items').textContent = qty + ' Tub' + (qty > 1 ? 's' : '') + ' · ' + FLAVORS[selF];
+    document.getElementById('bw2-orig').textContent  = '$' + sub.toFixed(2);
+    document.getElementById('bw2-total').textContent = '$' + total.toFixed(2);
+    document.getElementById('bw2-per').textContent   = '$' + per.toFixed(2) + ' per tub';
+
+    var discRow = document.getElementById('bw2-discount-row');
+    var giftRow = document.getElementById('bw2-gift-row');
+    var giftBox = document.getElementById('bw2-gift-box');
+
+    if(disc > 0){
+      discRow.classList.remove('hidden');
+      document.getElementById('bw2-disc-lbl').textContent = 'Bundle discount (' + (disc * 100) + '%)';
+      document.getElementById('bw2-disc-amt').textContent = '-$' + save.toFixed(2);
+    } else {
+      discRow.classList.add('hidden');
+    }
+
+    giftRow.classList.toggle('hidden', qty < 2);
+    if(giftBox) giftBox.classList.toggle('visible', qty >= 2);
+
+    var btn = document.getElementById('bw2-btn');
+    btn.textContent = 'Add to Cart →';
+    btn.classList.remove('loading');
+  }
+
+  window.bw2AddCart = function(){
+    var variantId   = VARIANT_IDS[selF];
+    var qty         = QTYS[selQ];
+    var includeGift = qty >= 2;
+    var btn         = document.getElementById('bw2-btn');
+
+    btn.textContent = 'Going to checkout...';
+    btn.classList.add('loading');
+
+    var checkoutUrl = '/cart/' + variantId + ':' + qty;
+    if(includeGift){ checkoutUrl += ',' + FREE_GIFT_VARIANT_ID + ':1'; }
+    checkoutUrl += '?checkout';
+
+    window.location.href = checkoutUrl;
+  };
+
+  bw2Update();
+})();
+</script>
+    </div>
+    </div>
+  
+      <style id="custom-css-gSqITvtC_0">
+        .qty2-card::after, .qty2-card.active::after,
+.flavor2-card::after, .flavor2-card.active::after { display:none !important; }
+      </style>
+    
+    
+
+    
+
+    
+    <gp-row gp-data='{"background":{},"uid":"g5paoOu7iH"}' data-id="g5paoOu7iH" id="g5paoOu7iH" data-same-height-subgrid-container class="g5paoOu7iH gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:10px;--mb-mobile:10px;--mb-tablet:0px;--pb-tablet:5px;--cg:5px;--rg:16px;--rg-tablet:16px;--rg-mobile:16px;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--h:auto;--pc:center">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gd25S4xdiA gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div id="gF-paQu-UD" class="gp-leading-[0] gF-paQu-UD" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left">
+      <div data-id="gF-paQu-UD" class="icon-wrapper gp-inline-flex gp-overflow-hidden gF-paQu-UD " style="--shadow:none">
+      
+        <div >
+          <span style="--c:var(--g-c-text-1, text-1);--t:rotate(0deg);--w:22px;--w-tablet:22px;--w-mobile:18px;--h:22px;--h-tablet:22px;--h-mobile:18px;--minw:22px;--minw-tablet:22px;--minw-mobile:18px;--height-desktop:22px;--height-tablet:22px;--height-mobile:18px" class="gp-inline-flex gp-items-center gp-justify-center gp-overflow-hidden [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)] gp-text-g-text-1"><svg height="20" width="20" data-name="truck-regular" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256" fill="currentColor" data-id="508817710017806696">
+              <path fill="currentColor" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" d="M255.42,117l-14-35A15.93,15.93,0,0,0,226.58,72H192V64a8,8,0,0,0-8-8H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H49a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V120A7.94,7.94,0,0,0,255.42,117ZM192,88h34.58l9.6,24H192ZM32,72H176v64H32ZM80,208a16,16,0,1,1,16-16A16,16,0,0,1,80,208Zm81-24H111a32,32,0,0,0-62,0H32V152H176v12.31A32.11,32.11,0,0,0,161,184Zm31,24a16,16,0,1,1,16-16A16,16,0,0,1,192,208Zm48-24H223a32.06,32.06,0,0,0-31-24V128h48Z" /></svg></span>
+        </div>
+      </div>
+    </div>
+    
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="g4DNIoWcMP gp-relative gp-flex gp-flex-col"
+    >
+      
+    <gp-button
+      gp-data='{"btnLink":{"link":"#el-g-3-4qNdcH","target":"_self","type":"open-popup"}}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left" >
+        <style>[data-id="gR3FI_FIrW"].gp-button-base::before, [data-id="gR3FI_FIrW-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  border-color: var(--g-c-line-3, line-3);
+  
+    
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      
+  
+    }
+  
+      
+  [data-id="gR3FI_FIrW"]:hover::before, [data-id="gR3FI_FIrW-interaction"]:hover::before {
+    
+    
+  }</style>
+        <a
+            class="gp-trigger-button-link gp-hidden"
+            href=#el-g-3-4qNdcH
+            target=_self
+          ></a>
+        <button
+          data-id="gR3FI_FIrW" dataId="gR3FI_FIrW" data-state="idle" aria-label="<p>Limited Time: Free Milk Frother Included</p>"
+          
+          href="#el-g-3-4qNdcH" target="_self" type="button"
+          style="--w:Auto;--w-tablet:Auto;--w-mobile:Auto;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:0px;--pr:0px;--pt:0px;--pb:0px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--bgi:;--hvr-bgi:;--hvr-bg:transparent;--bg:transparent;--c:#151515;--fs:normal;--ff:var(--g-font-Sofia-Pro-Regular-Az, 'Sofia Pro Regular Az'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:13px;--size-mobile:10px;--lh:150%;--lh-tablet:180%;--lh-mobile:180%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal"
+          class="gR3FI_FIrW gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 "
+        >
+        
+        <div class="gp-inline-flex gp-flex-row-reverse">
+          
+          
+    <span
+      data-gp-text
+      style="--fs:normal;--ff:var(--g-font-Sofia-Pro-Regular-Az, 'Sofia Pro Regular Az'), var(--g-font-body, body);--weight:400;--size:14px;--size-tablet:13px;--size-mobile:10px;--lh:150%;--lh-tablet:180%;--lh-mobile:180%;--ls:normal;--ls-tablet:normal;--ls-mobile:normal;--ts:none;word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggR3FI_FIrW_label }}
+    </span>
+        </div>
+        
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+    <div
+      role="presentation"
+      data-id="gKpYtcDlzo"
+      style="--mb:20px;--mb-tablet:20px;--mb-mobile:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--ta:center"
+      class="gp-group/image gp-relative force-publish-1775029379725 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gKpYtcDlzo"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="{{ section.settings.ggKpYtcDlzo_srcSet_desktop_src }}" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI1NCIgaGVpZ2h0PSIxMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTEyNTQtMTIwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxMjU0IiBoZWlnaHQ9IjEyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTI1NCIgaGVpZ2h0PSIxMjAiIGZpbGw9InVybCgjZy0xMjU0LTEyMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTEyNTQiIHRvPSIxMjU0IiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+CiAgPC9zdmc+" />
+      <source media="(max-width: 1024px)" data-srcSet="{{ section.settings.ggKpYtcDlzo_srcSet_desktop_src }}" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI1NCIgaGVpZ2h0PSIxMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTEyNTQtMTIwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxMjU0IiBoZWlnaHQ9IjEyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTI1NCIgaGVpZ2h0PSIxMjAiIGZpbGw9InVybCgjZy0xMjU0LTEyMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTEyNTQiIHRvPSIxMjU0IiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+CiAgPC9zdmc+" />
+    
+      
+      <img
+        base-src="{{ section.settings.ggKpYtcDlzo_srcSet_desktop_src }}" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI1NCIgaGVpZ2h0PSIxMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnLTEyNTQtMTIwIj4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjIwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjUwJSIgLz4KICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSJyZ2JhKDUxLCA1MSwgNTEsIDApIiBvZmZzZXQ9IjcwJSIgLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxMjU0IiBoZWlnaHQ9IjEyMCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMTI1NCIgaGVpZ2h0PSIxMjAiIGZpbGw9InVybCgjZy0xMjU0LTEyMCkiIC8+CiAgICA8YW5pbWF0ZSB4bGluazpocmVmPSIjciIgYXR0cmlidXRlTmFtZT0ieCIgZnJvbT0iLTEyNTQiIHRvPSIxMjU0IiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgIC8+CiAgPC9zdmc+" data-src="{{ section.settings.ggKpYtcDlzo_srcSet_desktop_src }}"
+        alt=""
+        width="100%"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--w:60%;--w-tablet:60%;--w-mobile:80%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--radiusType:none;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload gp_force_load"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+    </div>
+
+      
+    </gp-row>
+  
+  
+    </div>
+
+      
+    </gp-row>
+  
+        </section>
+      
+  
+    
+{% schema %}
+  {
+    
+    "name": "Section 10",
+    "tag": "section",
+    "class": "gps-613206859158913840 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/fr-hellodarknessmyoldfriend/apps/gempages-cro/app/shopify/edit?pageType=GP_STATIC&editorId=609001508167484338&sectionId=613206859158913840)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"false"},{"type":"text","label":"Checksum","id":"checksum"},{"type":"html","id":"ggShN01Z2xm_text","label":"ggShN01Z2xm_text","default":"<p>Excellent <span style=\"font-size:16px;\">★★★★★</span> 4.8 Rating 2,898</p>"},{"type":"html","id":"ggsVrNqan8L_text","label":"ggsVrNqan8L_text","default":"<p>Get your Free Milk frother when you order 2 tubs of more - worth $14.99. Limited time offer.</p>"},{"type":"html","id":"ggR3FI_FIrW_label","label":"ggR3FI_FIrW_label","default":"<p>Limited Time: Free Milk Frother Included</p>"},{"type":"html","id":"ggKpYtcDlzo_srcSet_desktop_src","label":"ggKpYtcDlzo_srcSet_desktop_src","default":"https://cdn.shopify.com/s/files/1/2326/5495/files/Group_72.png?v=1710291651"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {}
+  }
+{% endschema %}
