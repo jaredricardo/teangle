@@ -116,6 +116,7 @@
     "gp_section_609001508402430898": {
       "type": "gp-section-609001508402430898",
       "settings": {
+        "section_preload": "true",
         "checksum": "54d7e27f4a12ce3c7a5070bc9f37ec8ba4a591ffb44cb3358b338adaafa80889_1_1_1_0__1",
         "ggWB5ZiVBKh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/Teangle_Matcha_Collagen.png",
         "gaknTEegdbsUM_text": "The Glow Up Ritual&nbsp;",
@@ -208,6 +209,7 @@
     "gp_section_610505096375042971": {
       "type": "gp-section-610505096375042971",
       "settings": {
+        "section_preload": "true",
         "checksum": "27c8e118ffd88de01165ed9249b8fd8056362bb73c47a8b165d15c187369d46f_1_1_1_0__1",
         "ggOAv5tVUXf_text": "As featured in"
       }
@@ -236,7 +238,7 @@
     "gp_section_613206859158913840": {
       "type": "gp-section-613206859158913840",
       "settings": {
-        "checksum": "df23ab325692f7fd4fdf374cbe0b6f9ffc7c16e99b0be075950f7d20ed86f6e6_1_1_1_0__1",
+        "checksum": "17d9d53fbfedc9a7d5bc7454fcbbf5e1e04ad4e12ed54de863d6da4a25dad758_1_1_1_0__1",
         "ggShN01Z2xm_text": "<p>Excellent ★★★★★ 4,8 | 2 858 avis</p>",
         "ggsVrNqan8L_text": "<p>Reçois un mousseur à lait GRATUIT à l’achat de 2 pots ou plus (valeur de 14,99 $) — offre limitée</p>",
         "ggR3FI_FIrW_label": "<p><span style=\"font-size:11pt;\">Offre limitée : mousseur à lait gratuit</span></p>",
