@@ -61,6 +61,7 @@
 .teangle-reviews-section {
   background: #E1E6B8 !important;
   overflow: hidden !important;
+  padding: 60px 0 !important;
 }
 
 /* CONTAINER */
@@ -68,6 +69,7 @@
   max-width: 1400px !important;
   margin: 0 auto !important;
   padding: 0 24px !important;
+  position: relative !important;
 }
 
 /* HEADER */
@@ -90,13 +92,18 @@
   margin-top: 12px !important;
 }
 
-/* SCROLL TRACK */
+/* SLIDER WRAP */
+.teangle-slider-wrapper {
+  position: relative !important;
+}
+
 .teangle-reviews-track {
   display: flex !important;
   gap: 20px !important;
   overflow-x: auto !important;
   scroll-behavior: smooth !important;
   scrollbar-width: none !important;
+  scroll-snap-type: x mandatory !important;
 }
 
 .teangle-reviews-track::-webkit-scrollbar {
@@ -109,12 +116,15 @@
   min-width: calc((100% - 60px) / 4) !important;
   background: #f7f4ee !important;
   padding: 20px !important;
+  scroll-snap-align: start !important;
+  box-sizing: border-box !important;
 }
 
 /* STARS */
 .teangle-review-stars {
   width: 130px !important;
   margin-bottom: 12px !important;
+  display: block !important;
 }
 
 /* TITLE */
@@ -148,11 +158,65 @@
   font-family: 'Sofia Pro', sans-serif !important;
   font-size: 14px !important;
   color: #1a7f63 !important;
+  margin-top: 4px !important;
+}
+
+/* ARROWS */
+.teangle-slider-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 46px !important;
+  height: 46px !important;
+  border: none !important;
+  border-radius: 50% !important;
+  background: #004b4a !important;
+  color: #ffffff !important;
+  font-size: 24px !important;
+  line-height: 46px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  z-index: 2 !important;
+  transition: all 0.3s ease !important;
+}
+
+.teangle-slider-arrow:hover {
+  background: #003837 !important;
+}
+
+.teangle-slider-arrow.prev {
+  left: -8px !important;
+}
+
+.teangle-slider-arrow.next {
+  right: -8px !important;
+}
+
+/* DOTS */
+.teangle-slider-dots {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-top: 24px !important;
+}
+
+.teangle-slider-dot {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 75, 74, 0.28) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.teangle-slider-dot.active {
+  background: #004b4a !important;
+  transform: scale(1.15) !important;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-
   .teangle-review-card {
     flex: 0 0 100% !important;
     min-width: 100% !important;
@@ -165,6 +229,14 @@
   .teangle-review-text {
     font-size: 16px !important;
   }
+
+  .teangle-slider-arrow {
+    display: none !important;
+  }
+
+  .teangle-reviews-section {
+    padding: 45px 0 !important;
+  }
 }
 </style>
 
@@ -176,77 +248,167 @@
       <p>Clean energy, daily glow, and feel good rituals people actually stick with.</p>
     </div>
 
-    <div class="teangle-reviews-track">
+    <div class="teangle-slider-wrapper">
+      <button class="teangle-slider-arrow prev" aria-label="Previous">&#10094;</button>
+      <button class="teangle-slider-arrow next" aria-label="Next">&#10095;</button>
 
-      <!-- 8 REVIEWS -->
-      
-      <div class="teangle-review-card">
-        <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232">
-        <div class="teangle-review-title">Part of my morning now</div>
-        <div class="teangle-review-text">I swapped coffee for this and feel steady and focused all morning.</div>
-        <div class="teangle-review-author">Jessica M</div>
-        <div class="teangle-review-verified">Verified Customer</div>
+      <div class="teangle-reviews-track" id="teangleReviewsTrack">
+
+        <div class="teangle-review-card">
+          <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232" alt="5 stars">
+          <div class="teangle-review-title">Part of my morning now</div>
+          <div class="teangle-review-text">I swapped coffee for this and feel steady and focused all morning.</div>
+          <div class="teangle-review-author">Jessica M</div>
+          <div class="teangle-review-verified">Verified Customer</div>
+        </div>
+
+        <div class="teangle-review-card">
+          <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232" alt="5 stars">
+          <div class="teangle-review-title">Tastes amazing</div>
+          <div class="teangle-review-text">Vanilla is smooth and delicious. Easy to drink every day.</div>
+          <div class="teangle-review-author">Amanda R</div>
+          <div class="teangle-review-verified">Verified Customer</div>
+        </div>
+
+        <div class="teangle-review-card">
+          <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232" alt="5 stars">
+          <div class="teangle-review-title">No jitters</div>
+          <div class="teangle-review-text">Clean energy without the crash or anxiety. Huge difference.</div>
+          <div class="teangle-review-author">Lauren T</div>
+          <div class="teangle-review-verified">Verified Customer</div>
+        </div>
+
+        <div class="teangle-review-card">
+          <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232" alt="5 stars">
+          <div class="teangle-review-title">Skin improved</div>
+          <div class="teangle-review-text">Noticed brighter skin after a few weeks. Love it.</div>
+          <div class="teangle-review-author">Nicole P</div>
+          <div class="teangle-review-verified">Verified Customer</div>
+        </div>
+
+        <div class="teangle-review-card">
+          <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232" alt="5 stars">
+          <div class="teangle-review-title">Easy routine</div>
+          <div class="teangle-review-text">Quick to make and easy to stick with daily.</div>
+          <div class="teangle-review-author">Brianna S</div>
+          <div class="teangle-review-verified">Verified Customer</div>
+        </div>
+
+        <div class="teangle-review-card">
+          <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232" alt="5 stars">
+          <div class="teangle-review-title">Better than coffee</div>
+          <div class="teangle-review-text">No crash, no anxiety. Just smooth energy.</div>
+          <div class="teangle-review-author">Sophie L</div>
+          <div class="teangle-review-verified">Verified Customer</div>
+        </div>
+
+        <div class="teangle-review-card">
+          <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232" alt="5 stars">
+          <div class="teangle-review-title">Feel more balanced</div>
+          <div class="teangle-review-text">Energy feels stable and I stay productive longer.</div>
+          <div class="teangle-review-author">Hannah K</div>
+          <div class="teangle-review-verified">Verified Customer</div>
+        </div>
+
+        <div class="teangle-review-card">
+          <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232" alt="5 stars">
+          <div class="teangle-review-title">Love chocolate one</div>
+          <div class="teangle-review-text">Tastes incredible and keeps me energized for hours.</div>
+          <div class="teangle-review-author">Olivia D</div>
+          <div class="teangle-review-verified">Verified Customer</div>
+        </div>
+
       </div>
 
-      <div class="teangle-review-card">
-        <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232">
-        <div class="teangle-review-title">Tastes amazing</div>
-        <div class="teangle-review-text">Vanilla is smooth and delicious. Easy to drink every day.</div>
-        <div class="teangle-review-author">Amanda R</div>
-        <div class="teangle-review-verified">Verified Customer</div>
-      </div>
-
-      <div class="teangle-review-card">
-        <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232">
-        <div class="teangle-review-title">No jitters</div>
-        <div class="teangle-review-text">Clean energy without the crash or anxiety. Huge difference.</div>
-        <div class="teangle-review-author">Lauren T</div>
-        <div class="teangle-review-verified">Verified Customer</div>
-      </div>
-
-      <div class="teangle-review-card">
-        <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232">
-        <div class="teangle-review-title">Skin improved</div>
-        <div class="teangle-review-text">Noticed brighter skin after a few weeks. Love it.</div>
-        <div class="teangle-review-author">Nicole P</div>
-        <div class="teangle-review-verified">Verified Customer</div>
-      </div>
-
-      <div class="teangle-review-card">
-        <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232">
-        <div class="teangle-review-title">Easy routine</div>
-        <div class="teangle-review-text">Quick to make and easy to stick with daily.</div>
-        <div class="teangle-review-author">Brianna S</div>
-        <div class="teangle-review-verified">Verified Customer</div>
-      </div>
-
-      <div class="teangle-review-card">
-        <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232">
-        <div class="teangle-review-title">Better than coffee</div>
-        <div class="teangle-review-text">No crash, no anxiety. Just smooth energy.</div>
-        <div class="teangle-review-author">Sophie L</div>
-        <div class="teangle-review-verified">Verified Customer</div>
-      </div>
-
-      <div class="teangle-review-card">
-        <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232">
-        <div class="teangle-review-title">Feel more balanced</div>
-        <div class="teangle-review-text">Energy feels stable and I stay productive longer.</div>
-        <div class="teangle-review-author">Hannah K</div>
-        <div class="teangle-review-verified">Verified Customer</div>
-      </div>
-
-      <div class="teangle-review-card">
-        <img class="teangle-review-stars" src="https://cdn.shopify.com/s/files/1/0263/3606/7666/files/download.svg?v=1775549232">
-        <div class="teangle-review-title">Love chocolate one</div>
-        <div class="teangle-review-text">Tastes incredible and keeps me energized for hours.</div>
-        <div class="teangle-review-author">Olivia D</div>
-        <div class="teangle-review-verified">Verified Customer</div>
-      </div>
-
+      <div class="teangle-slider-dots" id="teangleSliderDots"></div>
     </div>
+
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const track = document.getElementById('teangleReviewsTrack');
+  const prevBtn = document.querySelector('.teangle-slider-arrow.prev');
+  const nextBtn = document.querySelector('.teangle-slider-arrow.next');
+  const dotsWrap = document.getElementById('teangleSliderDots');
+  const cards = track.querySelectorAll('.teangle-review-card');
+
+  function getCardsPerView() {
+    return window.innerWidth <= 768 ? 1 : 4;
+  }
+
+  function getTotalSlides() {
+    return Math.ceil(cards.length / getCardsPerView());
+  }
+
+  function getCardWidth() {
+    const firstCard = cards[0];
+    const cardStyle = window.getComputedStyle(firstCard);
+    const gap = 20;
+    return firstCard.offsetWidth + gap;
+  }
+
+  function createDots() {
+    dotsWrap.innerHTML = '';
+    const totalSlides = getTotalSlides();
+
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'teangle-slider-dot';
+      if (i === 0) dot.classList.add('active');
+
+      dot.addEventListener('click', function () {
+        const moveBy = getCardsPerView() * getCardWidth() * i;
+        track.scrollTo({
+          left: moveBy,
+          behavior: 'smooth'
+        });
+      });
+
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    const dots = dotsWrap.querySelectorAll('.teangle-slider-dot');
+    const cardsPerView = getCardsPerView();
+    const slideIndex = Math.round(track.scrollLeft / (getCardWidth() * cardsPerView));
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === slideIndex);
+    });
+  }
+
+  prevBtn.addEventListener('click', function () {
+    const moveBy = getCardsPerView() * getCardWidth();
+    track.scrollBy({
+      left: -moveBy,
+      behavior: 'smooth'
+    });
+  });
+
+  nextBtn.addEventListener('click', function () {
+    const moveBy = getCardsPerView() * getCardWidth();
+    track.scrollBy({
+      left: moveBy,
+      behavior: 'smooth'
+    });
+  });
+
+  track.addEventListener('scroll', function () {
+    updateDots();
+  });
+
+  window.addEventListener('resize', function () {
+    createDots();
+    updateDots();
+  });
+
+  createDots();
+  updateDots();
+});
+</script>
     </div>
     </div>
   
@@ -268,7 +430,7 @@
 {% schema %}
   {
     
-    "name": "Section 13",
+    "name": "Section 14",
     "tag": "section",
     "class": "gps-614079797806564011 gps gpsil",
     "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/fr-hellodarknessmyoldfriend/apps/gempages-cro/app/shopify/edit?pageType=GP_STATIC&editorId=610477429588231067&sectionId=614079797806564011)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"false"},{"type":"text","label":"Checksum","id":"checksum"}],
