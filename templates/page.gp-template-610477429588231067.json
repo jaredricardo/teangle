@@ -10,128 +10,129 @@
 {
   "sections": {
     "gp_section_610477429655339931": {
+      "type": "gp-section-610477429655339931",
       "settings": {
         "checksum": "2578b77221e395991c2584f3f5cba49ab0d1cd07542ca0fbe128d35bb262b4ba_1_1_1_0__1"
-      },
-      "type": "gp-section-610477429655339931"
+      }
     },
     "gp_section_610477429655405467": {
+      "type": "gp-section-610477429655405467",
       "settings": {
         "checksum": "750372a67a0c6a78f20798c6bc71c891ee04409f9b186b19968112c39f3c4649_1_1_1_0__1"
-      },
-      "type": "gp-section-610477429655405467"
+      }
     },
     "gp_section_610477429655471003": {
+      "type": "gp-section-610477429655471003",
       "settings": {
         "checksum": "8bc3f604e0531cfdd135c619cab8bc17b22e3e42a328953838f45588e7bf4dda_1_1_1_0__1",
         "ggW4jKHkcrn_label": "<p>Claim 20 % OFF</p>"
-      },
-      "type": "gp-section-610477429655471003"
+      }
     },
     "gp_section_610477429655536539": {
+      "type": "gp-section-610477429655536539",
       "settings": {
-        "checksum": "b2747cde7fbf75670a56ec987cd62b6ecebd960a426505d199092e985624b9be_1_1_1_0__1",
-        "gg7bRP_XgaM_text": "Matcha that doesn't taste like grass",
-        "gg9x-EvxDg6_text": "<p>Delicious daily energy you can feel — in 30 seconds.</p>",
-        "ggMyJseVcWW_text": "<p>Loved by over 150,000 Canadians</p>",
+        "checksum": "403b6ebcacfce71fe44c4a41b219869fd840174e35052ac4bd0238b07f313b95_1_1_1_0__1",
+        "ggYwiIMSJIk_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/b60c8e72-cbdf-4497-920b-46d268a119ea.png",
+        "ggMyJseVcWW_text": "<p>Trusted by 150,000+ Canadians</p>",
+        "gg7bRP_XgaM_text": "<strong>Matcha Energy For Real Life.</strong>",
+        "gg9x-EvxDg6_text": "<p>Clean energy, glowing beauty, and daily balance you can feel.</p>",
         "ggXQos7jU5C_label": "<p>SHOP BESTSELLERS</p>"
-      },
-      "type": "gp-section-610477429655536539"
+      }
     },
     "gp_section_610477429655602075": {
+      "type": "gp-section-610477429655602075",
       "settings": {
+        "section_preload": "true",
         "checksum": "8a7376f4787a26228e5661f8d046474c4c815fe5123f7e35722614d13fb4a811_1_1_1_0__1",
-        "ggoX_BYv9y9_text": "<p>Enjoy Free Shipping on Orders Over $59 📦</p>",
-        "section_preload": "true"
-      },
-      "type": "gp-section-610477429655602075"
+        "ggoX_BYv9y9_text": "<p>Enjoy Free Shipping on Orders Over $59 📦</p>"
+      }
     },
     "gp_section_610477429655667611": {
+      "type": "gp-section-610477429655667611",
       "settings": {
         "checksum": "f20cf161fa82b7553d6a69339bd53008260cfbd6df0431d231f1c25099d8ad1e_1_1_1_0__1",
-        "ggYrw_bWPVY_text": "<p>1,247 Reviews</p>",
+        "ggqK7N6FeHH_text": "Shop Best Sellers",
         "ggdj2cUrb_T_text": "<p>Find your perfect energy boost</p>",
+        "ggYrw_bWPVY_text": "<p>1,247 Reviews</p>",
         "gglXr6hrsFz_label": "Shop Now",
         "gglXr6hrsFz_outOfStockLabel": "Out of stock",
         "gglXr6hrsFz_unavailableLabel": "Unavailable",
-        "gglXr6hrsFz_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "ggqK7N6FeHH_text": "Shop Best Sellers"
-      },
-      "type": "gp-section-610477429655667611"
+        "gglXr6hrsFz_variantSelectionRequiredMessage": "Please select a variant to add product to cart"
+      }
     },
     "gp_section_610477429655733147": {
+      "type": "gp-section-610477429655733147",
       "settings": {
         "checksum": "d0118a2a0b57d6abe5145d422b5540531da6a592c4d1495c01bb0b87a9638c62_1_1_1_0__1",
-        "ggFbdN9Bf1g_text": "<p>No jitters. No crash. Just smooth, steady energy you can feel.<br>Our premium matcha supports focus, calm clarity, and balanced metabolism so you can power through your day naturally.</p>",
         "ggRNvJ-gobt_text": "<p>WHY OUR MATCHA STANDS OUT</p>",
         "ggfBXD6Bugg_text": "“CLEAN ENERGY THAT WORKS WITH YOU.”",
+        "ggFbdN9Bf1g_text": "<p>No jitters. No crash. Just smooth, steady energy you can feel.<br>Our premium matcha supports focus, calm clarity, and balanced metabolism so you can power through your day naturally.</p>",
         "ggnRy7qYc-I_label": "<p><strong>SHOP MATCHA NOW</strong></p>"
-      },
-      "type": "gp-section-610477429655733147"
+      }
     },
     "gp_section_610477429655798683": {
+      "type": "gp-section-610477429655798683",
       "settings": {
         "checksum": "9a4421d67974c19ac97ebd49350888338f1560cc2bf968c8a249e6e8a4a1a3b3_1_1_1_0__1",
-        "gg4EZyu2qNf_text": "<p>I’ve tried so many matcha brands and this is the first one that doesn’t taste bitter. Smooth energy and no crash at all. I’m hooked.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Amanda R.</strong></span></p>",
         "ggAPlhaFUY3_text": "<strong>Loved by Thousands of Matcha Drinkers</strong>",
-        "ggKaEIsFinf_text": "<p>Finally a matcha my teenager actually enjoys. Clean ingredients and smooth taste. We both drink it now.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Melissa T.</strong></span></p>",
+        "gg4EZyu2qNf_text": "<p>I’ve tried so many matcha brands and this is the first one that doesn’t taste bitter. Smooth energy and no crash at all. I’m hooked.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Amanda R.</strong></span></p>",
         "ggV6ZWJnxHY_text": "<p>I drink this every morning before work and it keeps me focused for hours. No jitters like coffee gives me.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Daniel M.</strong></span></p>",
-        "ggZY2m7frnT_text": "<p>The Ginger &amp; Lemongrass flavor is so refreshing. I feel lighter and more energized throughout the day.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Priya S.</strong></span></p>"
-      },
-      "type": "gp-section-610477429655798683"
+        "ggZY2m7frnT_text": "<p>The Ginger &amp; Lemongrass flavor is so refreshing. I feel lighter and more energized throughout the day.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Priya S.</strong></span></p>",
+        "ggKaEIsFinf_text": "<p>Finally a matcha my teenager actually enjoys. Clean ingredients and smooth taste. We both drink it now.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Melissa T.</strong></span></p>"
+      }
     },
     "gp_section_610477429655864219": {
+      "type": "gp-section-610477429655864219",
       "settings": {
         "checksum": "bce1eb65b9048fd44cb2d9eac7987eaa39e1f42f69820620bce447030074002a_1_1_1_0__1"
-      },
-      "type": "gp-section-610477429655864219"
+      }
     },
     "gp_section_610477429655929755": {
+      "type": "gp-section-610477429655929755",
       "settings": {
         "checksum": "78b6f0f718f08d503cab085309440fe8e01cf6238bbc65190beeaba10d9f8411_1_1_1_0__1"
-      },
-      "type": "gp-section-610477429655929755"
+      }
     },
     "gp_section_610477429655995291": {
+      "type": "gp-section-610477429655995291",
       "settings": {
         "checksum": "308141c1f5570f3e2af82567469d7b5a61da045c6341fcae37598d81a3750708_1_1_1_0__1",
-        "ggS0BzDzHHw_errorMessage": "Can’t send email. Please try again later.",
-        "ggS0BzDzHHw_successMessage": "Thanks for contacting us. We'll get back to you as soon as possible.",
         "ggTkKlHfZbk_text": "<p>Sign up to get instant VIP access to special deals, New Arrivals and more!</p>",
-        "ggWHr0Sv78S_label": "Submit",
-        "ggeIYHNu0ic_placeholder": "Enter your email"
-      },
-      "type": "gp-section-610477429655995291"
+        "ggS0BzDzHHw_successMessage": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "ggS0BzDzHHw_errorMessage": "Can’t send email. Please try again later.",
+        "ggeIYHNu0ic_placeholder": "Enter your email",
+        "ggWHr0Sv78S_label": "Submit"
+      }
     },
     "gp_section_610477429656126363": {
+      "type": "gp-section-610477429656126363",
       "settings": {
         "checksum": "dceb6deac06f3c9efc605b4e36f6d1e0d4771d4c84b4e9714c02f65aec77e0f1_1_1_1_0__1",
-        "ggQplp9zguq_text": "<p>Whether you're balancing work, kids, or both, our easy, feel-good rituals are here to support your energy, mood, and glow without complicating your routine. &nbsp;</p><p>&nbsp;</p><p>-Phil, Founder</p>",
-        "ggQrktMlm6O_text": "Our Mission - Add Balance to Your Life!&nbsp;"
-      },
-      "type": "gp-section-610477429656126363"
+        "ggQrktMlm6O_text": "Our Mission - Add Balance to Your Life!&nbsp;",
+        "ggQplp9zguq_text": "<p>Whether you're balancing work, kids, or both, our easy, feel-good rituals are here to support your energy, mood, and glow without complicating your routine. &nbsp;</p><p>&nbsp;</p><p>-Phil, Founder</p>"
+      }
     },
     "gp_section_610477429656191899": {
+      "type": "gp-section-610477429656191899",
       "settings": {
         "checksum": "13fae01d099ae1d73a9f8ce0384dd46633303fae9ebba5eb0a50169e5bacf3b0_1_1_1_0__1",
-        "gg1OrMnxmNv_text": "Canadian-Owned, Duh!",
-        "gg8dSpA4QXI_text": "<p>Easy to mix, easy to love - fits your &nbsp;life, not the other way around.</p>",
-        "ggEwM5Xe7aZ_text": "Better Than Coffee",
-        "ggMIPibe4J9_text": "Built for Your Routine",
-        "ggZ7ovjV0sj_text": "<p>Proudly based in Canada with fast &nbsp;and secure North American &nbsp;shipping.</p>",
-        "gga6vMCXQDi_text": "<p>Ditch the jitters and crashes. &nbsp;Teangle gives you calm, stable energy.</p>",
         "ggdQMZori3O_text": "4 Reasons You’ll Never Go Back to Coffee",
+        "ggEwM5Xe7aZ_text": "Better Than Coffee",
+        "gga6vMCXQDi_text": "<p>Ditch the jitters and crashes. &nbsp;Teangle gives you calm, stable energy.</p>",
         "ggewkhbyAKQ_text": "Real Ingredients Only",
-        "ggoJYyKOZ8v_text": "<p>No junk. No fillers. Just natural, &nbsp;feel-good fuel for your body.</p>"
-      },
-      "type": "gp-section-610477429656191899"
+        "ggoJYyKOZ8v_text": "<p>No junk. No fillers. Just natural, &nbsp;feel-good fuel for your body.</p>",
+        "ggMIPibe4J9_text": "Built for Your Routine",
+        "gg8dSpA4QXI_text": "<p>Easy to mix, easy to love - fits your &nbsp;life, not the other way around.</p>",
+        "gg1OrMnxmNv_text": "Canadian-Owned, Duh!",
+        "ggZ7ovjV0sj_text": "<p>Proudly based in Canada with fast &nbsp;and secure North American &nbsp;shipping.</p>"
+      }
     },
     "gp_section_610505914968965689": {
+      "type": "gp-section-610505914968965689",
       "settings": {
         "checksum": "b96c6334ef336ea69657cb2060bfdef20f16df26fe88dd24d45679aa5e9441b2_1_1_1_0__1",
         "ggqSJfY_rHJ_text": "As featured in"
-      },
-      "type": "gp-section-610505914968965689"
+      }
     }
   },
   "order": [
