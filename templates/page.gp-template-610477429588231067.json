@@ -52,14 +52,16 @@
     "gp_section_610477429655667611": {
       "type": "gp-section-610477429655667611",
       "settings": {
-        "checksum": "f20cf161fa82b7553d6a69339bd53008260cfbd6df0431d231f1c25099d8ad1e_1_1_1_0__1",
+        "checksum": "641d43abfb2fd38e1b329961b36c975df1a00e26a33be8c5db7b516a7ab471ae_1_1_1_0__1",
         "ggqK7N6FeHH_text": "Shop Best Sellers",
         "ggdj2cUrb_T_text": "<p>Find your perfect energy boost</p>",
         "ggYrw_bWPVY_text": "<p>1,247 Reviews</p>",
         "gglXr6hrsFz_label": "Shop Now",
         "gglXr6hrsFz_outOfStockLabel": "Out of stock",
         "gglXr6hrsFz_unavailableLabel": "Unavailable",
-        "gglXr6hrsFz_variantSelectionRequiredMessage": "Please select a variant to add product to cart"
+        "gglXr6hrsFz_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "gglXr6hrsFz_successMessage": "Add product to cart successfully",
+        "gglXr6hrsFz_errorMessage": "Cannot add product to cart"
       }
     },
     "gp_section_610477429655733147": {
