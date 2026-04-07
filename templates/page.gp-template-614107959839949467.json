@@ -238,6 +238,16 @@
         "ggzm8hs2FIY_text": "<p>Yes. Teangle is a Canadian brand committed to clean ingredients and premium quality standards.</p>"
       },
       "type": "gp-section-614107959958110875"
+    },
+    "gp_section_614107959958176411": {
+      "settings": {
+        "checksum": "437f6323b9ca81fde540ff24de28f4ba13e0c2456bc849f5d1431887be4f9bb9_1_1_1_0__1",
+        "ggKpYtcDlzo_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2326/5495/files/Group_72.png?v=1710291651",
+        "ggR3FI_FIrW_label": "<p><span style=\"font-size:11pt;\">Offre limitée : mousseur à lait gratuit</span></p>",
+        "ggShN01Z2xm_text": "<p>Excellent ★★★★★ 4,8 | 2 858 avis</p>",
+        "ggsVrNqan8L_text": "<p>Reçois un mousseur à lait GRATUIT à l’achat de 2 pots ou plus (valeur de 14,99 $) — offre limitée</p>"
+      },
+      "type": "gp-section-614107959958176411"
     }
   },
   "order": [
@@ -250,6 +260,7 @@
     "gp_section_614107959957455515",
     "gp_section_614107959957717659",
     "gp_section_614107959957783195",
+    "gp_section_614107959958176411",
     "gp_section_614107959958110875",
     "gp_section_614107959957586587",
     "gp_section_614107959958045339"
