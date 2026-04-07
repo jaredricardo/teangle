@@ -497,7 +497,7 @@
     
 
     
-    <gp-row gp-data='{"background":{},"uid":"g25wykjUIQ"}' data-id="g25wykjUIQ" id="g25wykjUIQ" data-same-height-subgrid-container class="g25wykjUIQ gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:5px;--mb-mobile:5px;--mb-tablet:5px;--cg:7px;--cg-mobile:5px;--rg:16px;--rg-tablet:16px;--rg-mobile:5px;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--h:auto;--pc:center">
+    <gp-row gp-data='{"background":{},"uid":"g25wykjUIQ"}' data-id="g25wykjUIQ" id="g25wykjUIQ" data-same-height-subgrid-container class="g25wykjUIQ gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:5px;--mb-mobile:5px;--mb-tablet:5px;--cg:7px;--cg-mobile:5px;--rg:16px;--rg-tablet:16px;--rg-mobile:5px;--gtc:minmax(0, auto) minmax(0, auto);--gtc-mobile:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--h:auto;--pc:start">
       
 
       <div
@@ -631,7 +631,7 @@
         <h2
           data-gp-text
           class=" gp-text-instant"
-          style="--w:100%;--tdt:auto;--ts:none;--ta:center;--ta-mobile:center;--line-clamp:2;--line-clamp-tablet:2;--line-clamp-mobile:2;--c:#151515;--fs:normal;--ff:var(--g-font-Sofia-Pro-Regular-Az, 'Sofia Pro Regular Az'), var(--g-font-heading, heading);--weight:400;--size:18px;--size-tablet:14px;--size-mobile:16px;--lh:140%;--lh-tablet:140%;--lh-mobile:140%;--ls:Auto;--ls-tablet:0.72px;--ls-mobile:Auto;--tt:none;word-break:break-word;overflow:hidden;--tdl:"
+          style="--w:100%;--tdt:auto;--ts:none;--ta:left;--ta-mobile:center;--line-clamp:2;--line-clamp-tablet:2;--line-clamp-mobile:2;--c:#151515;--fs:normal;--ff:var(--g-font-Sofia-Pro-Regular-Az, 'Sofia Pro Regular Az'), var(--g-font-heading, heading);--weight:400;--size:18px;--size-tablet:14px;--size-mobile:16px;--lh:140%;--lh-tablet:140%;--lh-mobile:140%;--ls:Auto;--ls-tablet:0.72px;--ls-mobile:Auto;--tt:none;word-break:break-word;overflow:hidden;--tdl:"
         >
           {{ product.title }}
         </h2>
@@ -643,6 +643,50 @@
       <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-title-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
     {% endunless %}
       </div>
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--op:100%;--mb:10px;--ta:center;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+      data-keep-class="true"
+      class="gHFH2tMIDp gp-custom-code">
+      <div>
+    <style>
+.teangle-benefit {
+  font-family: 'Sofia Pro', sans-serif;
+  font-size: 13px;
+  color: #2e5c4b;
+  line-height: 1.5;
+}
+</style>
+
+<div class="teangle-benefit">
+
+{% assign handle = product.handle %}
+
+{% if handle contains 'matcha-collagen-3' %}
+  Your daily ritual for clean, steady energy and a natural glow.
+
+{% elsif handle contains 'chocolate-matcha-collagen' %}
+  Smooth chocolate matcha that fuels energy, boosts focus, and supports glowing skin.
+
+{% elsif handle contains 'vanilla-matcha-collagen' %}
+  Creamy vanilla matcha for calm energy and a delicious daily routine.
+
+{% elsif handle contains 'teangle-chai-matcha' %}
+  A warm chai blend that supports focus, digestion, and balanced energy.
+
+{% elsif handle contains 'original-matcha-collagen' %}
+  Pure matcha energy with collagen for focus, glow, and sustained performance.
+
+{% elsif handle contains 'ginger-lemongrass-matcha' %}
+  Refreshing matcha with ginger and lemongrass for digestion and light energy.
+
+{% endif %}
+
+</div>
+    </div>
+    </div>
+  
       <gp-product-price
         id="shopify-text-element-gZLJFsukCv" data-id="gZLJFsukCv"
         class="gp-product-price group-data-[state=loading]:gp-invisible data-[hidden=true]:!gp-hidden gZLJFsukCv"
@@ -659,7 +703,7 @@
         <div
           data-gp-text
           class="gp-price gp-money gp-decoration-g-highlight  gp-text-instant"
-          style="--w:100%;--tdc:var(--g-c-highlight, highlight);--tdt:1px;--ts:none;--ta:center;--ta-mobile:center;--c:#325451;--fs:normal;--ff:var(--g-font-Inter, 'Inter'), var(--g-font-body, body);--size:16px;--size-tablet:14px;--size-mobile:15px;--lh:180%;--lh-tablet:180%;--lh-mobile:150%;--ls:Auto;--ls-tablet:0.6px;--ls-mobile:Auto;--weight:bold;word-break:break-word;overflow:hidden;--tdl:"
+          style="--w:100%;--tdc:var(--g-c-highlight, highlight);--tdt:1px;--ts:none;--ta:left;--ta-mobile:center;--c:#325451;--fs:normal;--ff:var(--g-font-Inter, 'Inter'), var(--g-font-body, body);--size:16px;--size-tablet:14px;--size-mobile:15px;--lh:180%;--lh-tablet:180%;--lh-mobile:150%;--ls:Auto;--ls-tablet:0.6px;--ls-mobile:Auto;--weight:bold;word-break:break-word;overflow:hidden;--tdl:"
         >
           
      {% if variant.price %}
@@ -696,7 +740,7 @@
       
       class="gp-flex gp-flex-col"
     >
-      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center" class="{% unless variant.available %} !gp-hidden {% endunless %}">
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left" class="{% unless variant.available %} !gp-hidden {% endunless %}">
         <style>[data-id="glXr6hrsFz"].gp-button-base::before, [data-id="glXr6hrsFz-interaction"].gp-button-base::before {
       
     content: "";
@@ -780,7 +824,7 @@
       
       class="gp-flex gp-flex-col"
     >
-      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center" class="{% if variant.available %} !gp-hidden {% endif %}">
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:left" class="{% if variant.available %} !gp-hidden {% endif %}">
         <style>[data-id="glXr6hrsFz-sold-out"].gp-button-base::before, [data-id="glXr6hrsFz-sold-out-interaction"].gp-button-base::before {
       
     content: "";

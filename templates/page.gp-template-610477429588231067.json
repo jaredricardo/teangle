@@ -52,7 +52,7 @@
     "gp_section_610477429655667611": {
       "type": "gp-section-610477429655667611",
       "settings": {
-        "checksum": "3550fdc31ac961875bc66b883a87b0c935140fe7642c51f6a14029e96257cebd_1_1_1_0__1",
+        "checksum": "a19a85757ef2f800980fc747f07684ec5d3923217594d0fef7be93fbe4b1eef6_1_1_1_0__1",
         "ggqK7N6FeHH_text": "Shop Best Sellers",
         "ggdj2cUrb_T_text": "<p>Find your perfect energy boost</p>",
         "ggYrw_bWPVY_text": "<p>1,247 Reviews</p>",
@@ -78,7 +78,7 @@
     "gp_section_610477429655798683": {
       "type": "gp-section-610477429655798683",
       "settings": {
-        "checksum": "eb792470fb96d0a7373d7a3bb70807d66cc605277f42e3d932be4a8231bb9358_1_1_1_0__1",
+        "checksum": "4ca6bf319a24339dd17da756c6a587e9e62a12ddcfa75df368d70948768e37f6_1_1_1_0__1",
         "ggAPlhaFUY3_text": "<strong>Loved by Thousands of Matcha Drinkers</strong>",
         "gg4EZyu2qNf_text": "<p>I’ve tried so many matcha brands and this is the first one that doesn’t taste bitter. Smooth energy and no crash at all. I’m hooked.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Amanda R.</strong></span></p>",
         "ggV6ZWJnxHY_text": "<p>I drink this every morning before work and it keeps me focused for hours. No jitters like coffee gives me.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Daniel M.</strong></span></p>",
@@ -90,12 +90,6 @@
       "type": "gp-section-610477429655864219",
       "settings": {
         "checksum": "bce1eb65b9048fd44cb2d9eac7987eaa39e1f42f69820620bce447030074002a_1_1_1_0__1"
-      }
-    },
-    "gp_section_610477429655929755": {
-      "type": "gp-section-610477429655929755",
-      "settings": {
-        "checksum": "78b6f0f718f08d503cab085309440fe8e01cf6238bbc65190beeaba10d9f8411_1_1_1_0__1"
       }
     },
     "gp_section_610477429655995291": {
@@ -158,7 +152,6 @@
     "gp_section_610477429655864219",
     "gp_section_610477429656126363",
     "gp_section_610477429655995291",
-    "gp_section_610477429655929755",
     "gp_section_610477429655339931",
     "gp_section_610477429655405467",
     "gp_section_610477429655471003"
