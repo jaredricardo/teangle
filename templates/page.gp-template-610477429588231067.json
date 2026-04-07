@@ -10,156 +10,153 @@
 {
   "sections": {
     "gp_section_610477429655339931": {
-      "type": "gp-section-610477429655339931",
       "settings": {
         "checksum": "2578b77221e395991c2584f3f5cba49ab0d1cd07542ca0fbe128d35bb262b4ba_1_1_1_0__1"
-      }
+      },
+      "type": "gp-section-610477429655339931"
     },
     "gp_section_610477429655405467": {
-      "type": "gp-section-610477429655405467",
       "settings": {
         "checksum": "750372a67a0c6a78f20798c6bc71c891ee04409f9b186b19968112c39f3c4649_1_1_1_0__1"
-      }
+      },
+      "type": "gp-section-610477429655405467"
     },
     "gp_section_610477429655471003": {
-      "type": "gp-section-610477429655471003",
       "settings": {
         "checksum": "8bc3f604e0531cfdd135c619cab8bc17b22e3e42a328953838f45588e7bf4dda_1_1_1_0__1",
         "ggW4jKHkcrn_label": "<p>Claim 20 % OFF</p>"
-      }
+      },
+      "type": "gp-section-610477429655471003"
     },
     "gp_section_610477429655536539": {
-      "type": "gp-section-610477429655536539",
       "settings": {
         "checksum": "910d212e2b53bf75cc691872e0b6d432ea6d6b3494dccc508c13ce5f0c4c4afe_1_1_1_0__1",
+        "gg7bRP_XgaM_text": "<strong>Matcha Energy&nbsp; For Real Life.</strong>",
+        "gg9x-EvxDg6_text": "<p>Clean energy, glowing beauty, and daily balance you can feel.</p>",
+        "ggMyJseVcWW_text": "<p>Trusted by 150,000+ Canadians</p>",
+        "ggXQos7jU5C_label": "<p>SHOP BESTSELLERS</p>",
         "ggYwiIMSJIk_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/b60c8e72-cbdf-4497-920b-46d268a119ea.png",
         "ggYwiIMSJIk_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/Matcha_latte_and_Teangle_collagens.png",
-        "ggMyJseVcWW_text": "<p>Trusted by 150,000+ Canadians</p>",
-        "gg7bRP_XgaM_text": "<strong>Matcha Energy&nbsp; For Real Life.</strong>",
-        "ggcifOoo7E7_text": "<strong>Matcha Energy&nbsp;</strong><br><strong>For Real Life.</strong>",
-        "gg9x-EvxDg6_text": "<p>Clean energy, glowing beauty, and daily balance you can feel.</p>",
-        "ggXQos7jU5C_label": "<p>SHOP BESTSELLERS</p>"
-      }
+        "ggcifOoo7E7_text": "<strong>Matcha Energy&nbsp;</strong><br><strong>For Real Life.</strong>"
+      },
+      "type": "gp-section-610477429655536539"
     },
     "gp_section_610477429655602075": {
-      "type": "gp-section-610477429655602075",
       "settings": {
-        "section_preload": "true",
         "checksum": "8a7376f4787a26228e5661f8d046474c4c815fe5123f7e35722614d13fb4a811_1_1_1_0__1",
-        "ggoX_BYv9y9_text": "<p>Enjoy Free Shipping on Orders Over $59 📦</p>"
-      }
+        "ggoX_BYv9y9_text": "<p>Enjoy Free Shipping on Orders Over $59 📦</p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-610477429655602075"
     },
     "gp_section_610477429655667611": {
-      "type": "gp-section-610477429655667611",
       "settings": {
         "checksum": "00f6849a20446eb1f970d19d4247728a2c48504a793c9d01585c81a2cbc7dd38_1_1_1_0__1",
-        "ggqK7N6FeHH_text": "Shop Best Sellers",
         "ggdj2cUrb_T_text": "<p>Find your perfect energy boost</p>",
+        "ggfX00qIDdY_label": "<p>SHOP All Products</p>",
+        "gglXr6hrsFz_errorMessage": "Cannot add product to cart",
         "gglXr6hrsFz_label": "Shop Now",
         "gglXr6hrsFz_outOfStockLabel": "Out of stock",
+        "gglXr6hrsFz_successMessage": "Add product to cart successfully",
         "gglXr6hrsFz_unavailableLabel": "Unavailable",
         "gglXr6hrsFz_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
-        "gglXr6hrsFz_successMessage": "Add product to cart successfully",
-        "gglXr6hrsFz_errorMessage": "Cannot add product to cart",
-        "ggfX00qIDdY_label": "<p>SHOP All Products</p>"
-      }
+        "ggqK7N6FeHH_text": "Shop Best Sellers"
+      },
+      "type": "gp-section-610477429655667611"
     },
     "gp_section_610477429655733147": {
-      "type": "gp-section-610477429655733147",
       "settings": {
         "checksum": "4aae7f713a00d70863e99864b2b2f9bc7aabc09ee682887d1d814bdc97f02bf8_1_1_1_0__1",
-        "ggAKj1k1LCA_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/3_21500x1000-3.webp",
-        "ggfBXD6Bugg_text": "<strong>We Keep It Simple.</strong>",
-        "ggFbdN9Bf1g_text": "<p>Clean energy and real results — designed for real life, not complicated routines.</p>",
         "gg2BwwO-opY_text": "<p><strong>It’s for you if:</strong></p>",
+        "ggAKj1k1LCA_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/3_21500x1000-3.webp",
         "ggAd22uOjkX_text": "<p>✔ &nbsp;You want steady energy without the coffee crash<br>✔ &nbsp;You prefer clean, natural ingredients you can trust<br>✔ &nbsp;You want support for focus, glow, and daily balance<br>✔ &nbsp;You’re building simple, feel-good habits that last</p>",
+        "ggFbdN9Bf1g_text": "<p>Clean energy and real results — designed for real life, not complicated routines.</p>",
+        "ggfBXD6Bugg_text": "<strong>We Keep It Simple.</strong>",
         "ggnRy7qYc-I_label": "<p>SHOP MATCHA NOW</p>"
-      }
+      },
+      "type": "gp-section-610477429655733147"
     },
     "gp_section_610477429655798683": {
-      "type": "gp-section-610477429655798683",
       "settings": {
         "checksum": "7d0120ef9f999ba04f35ed2bc3a01839d1b5c00fe99873c236515a781e379ff9_1_1_1_0__1",
-        "ggAPlhaFUY3_text": "<strong>Loved by Thousands of Matcha Drinkers</strong>",
         "gg4EZyu2qNf_text": "<p>I’ve tried so many matcha brands and this is the first one that doesn’t taste bitter. Smooth energy and no crash at all. I’m hooked.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Amanda R.</strong></span></p>",
+        "ggAPlhaFUY3_text": "<strong>Loved by Thousands of Matcha Drinkers</strong>",
+        "ggKaEIsFinf_text": "<p>Finally a matcha my teenager actually enjoys. Clean ingredients and smooth taste. We both drink it now.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Melissa T.</strong></span></p>",
         "ggV6ZWJnxHY_text": "<p>I drink this every morning before work and it keeps me focused for hours. No jitters like coffee gives me.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Daniel M.</strong></span></p>",
-        "ggZY2m7frnT_text": "<p>The Ginger &amp; Lemongrass flavor is so refreshing. I feel lighter and more energized throughout the day.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Priya S.</strong></span></p>",
-        "ggKaEIsFinf_text": "<p>Finally a matcha my teenager actually enjoys. Clean ingredients and smooth taste. We both drink it now.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Melissa T.</strong></span></p>"
-      }
+        "ggZY2m7frnT_text": "<p>The Ginger &amp; Lemongrass flavor is so refreshing. I feel lighter and more energized throughout the day.</p><p>&nbsp;</p><p><span style=\"font-size:16px;\"><strong>— Priya S.</strong></span></p>"
+      },
+      "type": "gp-section-610477429655798683"
     },
     "gp_section_610477429655864219": {
-      "type": "gp-section-610477429655864219",
       "settings": {
         "checksum": "2dd1cea55af5aa7092d1164897e4b0d48e0a154c648f3aed7563d16d2cf882b5_1_1_1_0__1",
-        "ggZ-zAw67g0_text": "<p>150,000+ Happy Customers</p>",
+        "ggCR9AdBBFU_html5Url": "https://cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4",
+        "ggCR9AdBBFU_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggCR9AdBBFU_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg",
         "ggKWNBod1gP_text": "<strong>Real Energy. Real Glow.</strong>",
         "ggSyQZJPXDZ_text": "<p>Clean, steady energy and daily beauty support you can actually feel.</p>",
-        "ggCR9AdBBFU_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg",
-        "ggCR9AdBBFU_vimeoUrl": "https://vimeo.com/1095883398",
-        "ggCR9AdBBFU_html5Url": "https://cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4",
-        "gg_oAqfRblN_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg",
-        "gg_oAqfRblN_vimeoUrl": "https://vimeo.com/1095883398",
-        "gg_oAqfRblN_html5Url": "https://cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4",
-        "gg_AJOY7FrP_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg",
-        "gg_AJOY7FrP_vimeoUrl": "https://vimeo.com/1095883398",
+        "ggZ-zAw67g0_text": "<p>150,000+ Happy Customers</p>",
         "gg_AJOY7FrP_html5Url": "https://cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4",
-        "ggg5CnlqEq0_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg",
+        "gg_AJOY7FrP_vimeoUrl": "https://vimeo.com/1095883398",
+        "gg_AJOY7FrP_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg",
+        "gg_oAqfRblN_html5Url": "https://cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4",
+        "gg_oAqfRblN_vimeoUrl": "https://vimeo.com/1095883398",
+        "gg_oAqfRblN_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg",
+        "ggg5CnlqEq0_html5Url": "https://cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4",
         "ggg5CnlqEq0_vimeoUrl": "https://vimeo.com/1095883398",
-        "ggg5CnlqEq0_html5Url": "https://cdn.shopify.com/videos/c/o/v/a47f451995a94af38c260b770c7b4192.mp4"
-      }
-    },
-    "gp_section_610477429655995291": {
-      "type": "gp-section-610477429655995291",
-      "settings": {
-        "checksum": "308141c1f5570f3e2af82567469d7b5a61da045c6341fcae37598d81a3750708_1_1_1_0__1",
-        "ggTkKlHfZbk_text": "<p>Sign up to get instant VIP access to special deals, New Arrivals and more!</p>",
-        "ggS0BzDzHHw_successMessage": "Thanks for contacting us. We'll get back to you as soon as possible.",
-        "ggS0BzDzHHw_errorMessage": "Can’t send email. Please try again later.",
-        "ggeIYHNu0ic_placeholder": "Enter your email",
-        "ggWHr0Sv78S_label": "Submit"
-      }
+        "ggg5CnlqEq0_youtubeUrl": "https://www.youtube.com/watch?v=NfASaHFN1zg"
+      },
+      "type": "gp-section-610477429655864219"
     },
     "gp_section_610477429656126363": {
-      "type": "gp-section-610477429656126363",
       "settings": {
-        "checksum": "dceb6deac06f3c9efc605b4e36f6d1e0d4771d4c84b4e9714c02f65aec77e0f1_1_1_1_0__1",
-        "ggQrktMlm6O_text": "Our Mission - Add Balance to Your Life!&nbsp;",
-        "ggQplp9zguq_text": "<p>Whether you're balancing work, kids, or both, our easy, feel-good rituals are here to support your energy, mood, and glow without complicating your routine. &nbsp;</p><p>&nbsp;</p><p>-Phil, Founder</p>"
-      }
+        "checksum": "c5edcca5cb4560f9612e691c92a0f99bb083573c7c3cfcec1a10cb73e3e97d8e_1_1_1_0__1",
+        "ggQplp9zguq_text": "<p>We were tired of quick fixes that didn’t actually work.</p><p>The crashes, the burnout, the complicated routines — it wasn’t sustainable.</p><p>So we created something better.</p><p>A simple daily ritual that supports your energy, your focus, and your glow — in a way that fits your real life.</p><p>✔ Calm, steady energy without the crash<br>✔ Clean ingredients, nothing unnecessary<br>✔ Designed for consistency, not perfection<br>✔ Made to help you feel your best every day</p>",
+        "ggQrktMlm6O_text": "<strong>Why We Created Teangle</strong>",
+        "ggjHuXdpcD7_text": "<p><strong>— Phil, Founder</strong></p>",
+        "ggqbTJbk0ur_srcSet_desktop_src": "https://assets.replocdn.com/projects/5363f8a0-20bf-48b3-8eca-625cc61f4879/ee1af870-6fdb-4be7-9a2e-f0d6befc3e99"
+      },
+      "type": "gp-section-610477429656126363"
     },
     "gp_section_610477429656191899": {
-      "type": "gp-section-610477429656191899",
       "settings": {
         "checksum": "82b073498d9182a260c3a7dd2c83bb924bcee119a8343490e942264e8a6aa5be_1_1_1_0__1",
-        "ggdQMZori3O_text": "4 Reasons You’ll Never Go Back to Coffee",
-        "ggM4dSbyuf-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/85673190-fa39-441d-8af0-8e2e6288cd7e.png",
-        "ggTIp3ERRN0_srcSet_desktop_src": "https://assets.replocdn.com/projects/5363f8a0-20bf-48b3-8eca-625cc61f4879/4ed4633f-4e37-44f0-88c4-30a1588f57b7?width=1800",
-        "ggEwM5Xe7aZ_text": "Better Than Coffee",
-        "gga6vMCXQDi_text": "<p>Ditch the jitters and crashes. &nbsp;Teangle gives you calm, stable energy.</p>",
-        "ggrzcr7F6n3_srcSet_desktop_src": "https://assets.replocdn.com/projects/5363f8a0-20bf-48b3-8eca-625cc61f4879/b83c5075-d212-492b-bcce-77d371ac9c62?width=1800",
-        "ggewkhbyAKQ_text": "Real Ingredients Only",
-        "ggoJYyKOZ8v_text": "<p>No junk. No fillers. Just natural, &nbsp;feel-good fuel for your body.</p>",
-        "ggJ6TrhAY-1_srcSet_desktop_src": "https://assets.replocdn.com/projects/5363f8a0-20bf-48b3-8eca-625cc61f4879/9f6c7b7f-7cdd-417f-9488-2b5f345597e5?width=1800",
-        "ggMIPibe4J9_text": "Built for Your Routine",
+        "gg1OrMnxmNv_text": "Canadian-Owned, Duh!",
         "gg8dSpA4QXI_text": "<p>Easy to mix, easy to love - fits your &nbsp;life, not the other way around.</p>",
         "ggC1czrhbIS_srcSet_desktop_src": "https://assets.replocdn.com/projects/5363f8a0-20bf-48b3-8eca-625cc61f4879/64cd3e77-a3c9-4983-8bb6-49343168a556?width=1800",
-        "gg1OrMnxmNv_text": "Canadian-Owned, Duh!",
-        "ggZ7ovjV0sj_text": "<p>Proudly based in Canada with fast &nbsp;and secure North American &nbsp;shipping.</p>"
-      }
+        "ggEwM5Xe7aZ_text": "Better Than Coffee",
+        "ggJ6TrhAY-1_srcSet_desktop_src": "https://assets.replocdn.com/projects/5363f8a0-20bf-48b3-8eca-625cc61f4879/9f6c7b7f-7cdd-417f-9488-2b5f345597e5?width=1800",
+        "ggM4dSbyuf-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/85673190-fa39-441d-8af0-8e2e6288cd7e.png",
+        "ggMIPibe4J9_text": "Built for Your Routine",
+        "ggTIp3ERRN0_srcSet_desktop_src": "https://assets.replocdn.com/projects/5363f8a0-20bf-48b3-8eca-625cc61f4879/4ed4633f-4e37-44f0-88c4-30a1588f57b7?width=1800",
+        "ggZ7ovjV0sj_text": "<p>Proudly based in Canada with fast &nbsp;and secure North American &nbsp;shipping.</p>",
+        "gga6vMCXQDi_text": "<p>Ditch the jitters and crashes. &nbsp;Teangle gives you calm, stable energy.</p>",
+        "ggdQMZori3O_text": "4 Reasons You’ll Never Go Back to Coffee",
+        "ggewkhbyAKQ_text": "Real Ingredients Only",
+        "ggoJYyKOZ8v_text": "<p>No junk. No fillers. Just natural, &nbsp;feel-good fuel for your body.</p>",
+        "ggrzcr7F6n3_srcSet_desktop_src": "https://assets.replocdn.com/projects/5363f8a0-20bf-48b3-8eca-625cc61f4879/b83c5075-d212-492b-bcce-77d371ac9c62?width=1800"
+      },
+      "type": "gp-section-610477429656191899"
     },
     "gp_section_610505914968965689": {
-      "type": "gp-section-610505914968965689",
       "settings": {
         "checksum": "9a2fbcfd781bb70cd8b2ffdd2eb0c6a16412505cb370007b7f0b760041ba9758_1_1_1_0__1",
-        "gg_vEdkLOwS_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_65_featured_teangle4b_720x_a027f9da-7247-4a15-97ac-7a9ecd7f7e93.png",
-        "ggwXGXStydZ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_68_featured_teangle2b_720x_ffe988f8-d039-4c6d-a433-412e586da6d1.png",
-        "ggnM8-x6MD4_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_70_featured_teangle3b_540x_30d3a973-11bd-4b35-a55b-573d0ba4b323.png",
         "gg3ueW7PTQ2_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_73_featured_teangle1b_540x_5c78b2c4-fbb1-448c-8a4f-97c6fbebc0f9.png",
-        "ggqmy9z5IsA_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_65_featured_teangle4b_720x_a027f9da-7247-4a15-97ac-7a9ecd7f7e93.png",
-        "ggLt_nzuYwi_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_68_featured_teangle2b_720x_ffe988f8-d039-4c6d-a433-412e586da6d1.png",
+        "gg6vQsM0Yz4_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_70_featured_teangle3b_540x_30d3a973-11bd-4b35-a55b-573d0ba4b323.png",
         "ggC1My8w8vg_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_73_featured_teangle1b_540x_5c78b2c4-fbb1-448c-8a4f-97c6fbebc0f9.png",
-        "gg6vQsM0Yz4_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_70_featured_teangle3b_540x_30d3a973-11bd-4b35-a55b-573d0ba4b323.png"
-      }
+        "ggLt_nzuYwi_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_68_featured_teangle2b_720x_ffe988f8-d039-4c6d-a433-412e586da6d1.png",
+        "gg_vEdkLOwS_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_65_featured_teangle4b_720x_a027f9da-7247-4a15-97ac-7a9ecd7f7e93.png",
+        "ggnM8-x6MD4_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_70_featured_teangle3b_540x_30d3a973-11bd-4b35-a55b-573d0ba4b323.png",
+        "ggqmy9z5IsA_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_65_featured_teangle4b_720x_a027f9da-7247-4a15-97ac-7a9ecd7f7e93.png",
+        "ggwXGXStydZ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/imgi_68_featured_teangle2b_720x_ffe988f8-d039-4c6d-a433-412e586da6d1.png"
+      },
+      "type": "gp-section-610505914968965689"
+    },
+    "gp_section_614079797806564011": {
+      "settings": {
+        "checksum": "f4d0f003fa37b4643292604af515a5412339bc0b6a2d2425a6e5292ec9f2ae86_1_1_1_0__1"
+      },
+      "type": "gp-section-614079797806564011"
     }
   },
   "order": [
@@ -172,7 +169,7 @@
     "gp_section_610477429656191899",
     "gp_section_610477429655864219",
     "gp_section_610477429656126363",
-    "gp_section_610477429655995291",
+    "gp_section_614079797806564011",
     "gp_section_610477429655339931",
     "gp_section_610477429655405467",
     "gp_section_610477429655471003"
