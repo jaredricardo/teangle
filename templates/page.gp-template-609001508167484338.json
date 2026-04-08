@@ -12,6 +12,7 @@
     "gp_section_609001508268147634": {
       "type": "gp-section-609001508268147634",
       "settings": {
+        "section_preload": "true",
         "checksum": "d9f052f673e978ecc8dee05c5e573ccc5c61b8f22b8e26125192fed8d900e8e0_1_1_1_0__1",
         "ggCkcwQYplX_text": "Glow + Energy",
         "ggXOE02r7G1_text": "⚡",
@@ -238,7 +239,7 @@
     "gp_section_613206859158913840": {
       "type": "gp-section-613206859158913840",
       "settings": {
-        "checksum": "17d9d53fbfedc9a7d5bc7454fcbbf5e1e04ad4e12ed54de863d6da4a25dad758_1_1_1_0__1",
+        "checksum": "239172836acd923fc188f9b4d3b3959eae7e6d219871cd6dd064cd7910dfe705_1_1_1_0__1",
         "ggShN01Z2xm_text": "<p>Excellent ★★★★★ 4,8 | 2 858 avis</p>",
         "ggsVrNqan8L_text": "<p>Reçois un mousseur à lait GRATUIT à l’achat de 2 pots ou plus (valeur de 14,99 $) — offre limitée</p>",
         "ggR3FI_FIrW_label": "<p><span style=\"font-size:11pt;\">Offre limitée : mousseur à lait gratuit</span></p>",
