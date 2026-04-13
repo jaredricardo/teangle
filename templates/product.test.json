@@ -43,6 +43,35 @@
             "code": "<!-- LINE ITEMS METAFIELD -->\n\n\n      {% if product.metafields.general_fields.line_items != blank %}\n        <div class=\"gbl_line_items\"  >\n          {{ product.metafields.general_fields.line_items }}\n        </div>\n      {% endif %}\n\n\n    <!-- LINE ITEMS METAFIELD END HERE -->\n\n\n<!-- BFCM LINE ITEMS METAFIELD -->\n\n\n      {% if product.metafields.bfcm.bf2022 != blank %}\n       <style>\n.product-single__form  { display: none !important; }\n</style>\n      {% endif %}\n\n\n    <!-- BFCM LINE ITEMS METAFIELD END HERE -->"
           }
         },
+        "abra_promotions_tiered_banner_qAam73": {
+          "type": "shopify://apps/abra-promotions/blocks/tiered-banner/daa1493a-23b5-48bb-8cb5-7ab1267b4642",
+          "settings": {
+            "name": "Default",
+            "reward_tier_display": "next",
+            "enable_reward_hover_preview": true,
+            "enable_gift_title_click": true,
+            "banner_background_color": "#FFFFFF",
+            "progress_bar_text_and_icon_color": "#000000",
+            "progress_bar_color": "#119E52",
+            "reward_tier_color": "#CFECDC",
+            "active_reward_tier_color": "#119E52",
+            "reward_tier_icon_color": "#000000",
+            "active_reward_tier_icon_color": "#FFFFFF",
+            "progress_bar_text_size": 13,
+            "progress_bar_icon_size": 16,
+            "summary_background_color": "#CFECDC",
+            "summary_text_size": 13,
+            "gift_badge_background_color": "#119E52",
+            "gift_badge_text_and_icon_color": "#FFFFFF",
+            "gift_product_text_color": "#000000",
+            "gift_badge_border_radius": 48,
+            "gift_badge_text_size": 12,
+            "gift_badge_icon_size": 16,
+            "gift_product_name_text_size": 14,
+            "gift_padding_y": 10,
+            "gift_padding_x": 10
+          }
+        },
         "74d50b9f-7435-429e-b976-9f5b6180d353": {
           "type": "buy_buttons",
           "settings": {
@@ -126,35 +155,6 @@
             "content": "{% if request.locale.iso_code == 'fr' %}\n     <ul class=\"luxelist\"> <li>Livraison gratuite en Amérique du Nord sur les commandes au-dessus de $70. </li> <li>Garantie de remboursement de 30 jours, profite de notre matcha le plus vendu sans risque!</li> </ul>                    \n                    {% else %}\n<ul class=\"luxelist\"> <li>Free standard shipping in North-America on orders over $70</li> <li>30 day money back guarantee, enjoy our best selling Matcha risk-free!</li> </ul>\n                         \n                    {% endif %}",
             "page": ""
           }
-        },
-        "abra_promotions_tiered_banner_qAam73": {
-          "type": "shopify://apps/abra-promotions/blocks/tiered-banner/daa1493a-23b5-48bb-8cb5-7ab1267b4642",
-          "settings": {
-            "name": "Default",
-            "reward_tier_display": "next",
-            "enable_reward_hover_preview": true,
-            "enable_gift_title_click": true,
-            "banner_background_color": "#FFFFFF",
-            "progress_bar_text_and_icon_color": "#000000",
-            "progress_bar_color": "#119E52",
-            "reward_tier_color": "#CFECDC",
-            "active_reward_tier_color": "#119E52",
-            "reward_tier_icon_color": "#000000",
-            "active_reward_tier_icon_color": "#FFFFFF",
-            "progress_bar_text_size": 13,
-            "progress_bar_icon_size": 16,
-            "summary_background_color": "#CFECDC",
-            "summary_text_size": 13,
-            "gift_badge_background_color": "#119E52",
-            "gift_badge_text_and_icon_color": "#FFFFFF",
-            "gift_product_text_color": "#000000",
-            "gift_badge_border_radius": 48,
-            "gift_badge_text_size": 12,
-            "gift_badge_icon_size": 16,
-            "gift_product_name_text_size": 14,
-            "gift_padding_y": 10,
-            "gift_padding_x": 10
-          }
         }
       },
       "block_order": [
@@ -163,6 +163,7 @@
         "7cd9b1ce-895f-4cb9-8e86-a5524e0b0723",
         "variant_picker",
         "12319ff3-c565-4037-baf2-7945b1bcc1a0",
+        "abra_promotions_tiered_banner_qAam73",
         "74d50b9f-7435-429e-b976-9f5b6180d353",
         "skio_subscriptions_yc_s20_app_block_DpbB4i",
         "6b975a6e-ee43-4c8d-9a17-2a267fa8846d",
@@ -171,8 +172,7 @@
         "604a5a9f-1232-4231-8c3f-98f85f9166eb",
         "2273c561-d3d8-4236-b224-4e9bc815fa55",
         "110fb42e-9eda-4e48-9571-53bdd2ce1281",
-        "7fa25097-d507-4ed4-a780-dc52c525b9c2",
-        "abra_promotions_tiered_banner_qAam73"
+        "7fa25097-d507-4ed4-a780-dc52c525b9c2"
       ],
       "settings": {
         "sku_enable": false,
