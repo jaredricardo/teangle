@@ -12,7 +12,6 @@
     "gp_section_609001508268147634": {
       "type": "gp-section-609001508268147634",
       "settings": {
-        "section_preload": "true",
         "checksum": "d9f052f673e978ecc8dee05c5e573ccc5c61b8f22b8e26125192fed8d900e8e0_1_1_1_0__1",
         "ggCkcwQYplX_text": "Glow + Energy",
         "ggXOE02r7G1_text": "⚡",
@@ -117,7 +116,6 @@
     "gp_section_609001508402430898": {
       "type": "gp-section-609001508402430898",
       "settings": {
-        "section_preload": "true",
         "checksum": "54d7e27f4a12ce3c7a5070bc9f37ec8ba4a591ffb44cb3358b338adaafa80889_1_1_1_0__1",
         "ggWB5ZiVBKh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/Teangle_Matcha_Collagen.png",
         "gaknTEegdbsUM_text": "The Glow Up Ritual&nbsp;",
@@ -210,7 +208,6 @@
     "gp_section_610505096375042971": {
       "type": "gp-section-610505096375042971",
       "settings": {
-        "section_preload": "true",
         "checksum": "27c8e118ffd88de01165ed9249b8fd8056362bb73c47a8b165d15c187369d46f_1_1_1_0__1",
         "ggOAv5tVUXf_text": "As featured in"
       }
