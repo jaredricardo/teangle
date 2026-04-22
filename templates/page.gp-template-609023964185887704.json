@@ -24,14 +24,17 @@
       ],
       "settings": {
         "section_preload": "true",
-        "checksum": "140852d5b1db0b19b5d3e78dec297b06fa1b151258908da87ba79d9b63276fd8_1_1_1_0__1",
+        "checksum": "140852d5b1db0b19b5d3e78dec297b06fa1b151258908da87ba79d9b63276fd8_1_1_0_0__1",
         "ggU5PwO8ES1_text": "Matcha Energy Meets&nbsp;<br>Beauty Collagen",
         "ggczQlFQuMx_text": "<p>☀️ More energy, focus with no jitters&nbsp;</p><p>🥥 Delicious coconut and vanilla flavours&nbsp;</p><p>🥛 Super easy to mix with milk, water etc&nbsp;</p><p>✨ Glowing skin, hair &amp; nails support</p>",
         "ggTMwAK8DSU_label": "ADD TO CART",
         "ggTMwAK8DSU_outOfStockLabel": "Out of stock",
         "ggTMwAK8DSU_unavailableLabel": "Unavailable",
         "ggTMwAK8DSU_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "ggTMwAK8DSU_successMessage": "Add product to cart successfully",
+        "ggTMwAK8DSU_errorMessage": "Cannot add product to cart",
         "ggybyXK4vI5_text": "<p>Free Shipping on Orders $50+</p>",
+        "ggZo4fdrS4F_srcSet_desktop_src": "https://media-dynamic.okendo.io/images/8541afcd-287c-493b-86c3-d16c1d8f873e/7e66ce16-192f-455b-b72a-9832504925e1.jpg?d=1600x1600",
         "ggxrBsoh4hk_text": "<p>\"I’ve convinced all of my friends to switch from <strong>coffee to Teangle matcha collagen</strong>.”</p><p>Emily K. ✓ Verified Customer</p>",
         "ggnW-zlbTEF_childItem_0": "<p>Why You'll Love It</p>",
         "ggnW-zlbTEF_childItem_1": "<p>Taste &amp; Feel</p>",
@@ -48,13 +51,14 @@
     "gp_section_609029337106088642": {
       "type": "gp-section-609029337106088642",
       "settings": {
-        "checksum": "f385670bf00e1093bfdbffe0e62f99f34618a158fc923c9d4abfbc4a6d7a5a15_1_1_1_0__1"
+        "checksum": "f385670bf00e1093bfdbffe0e62f99f34618a158fc923c9d4abfbc4a6d7a5a15_1_1_0_0__1"
       }
     },
     "gp_section_609029916893119448": {
       "type": "gp-section-609029916893119448",
       "settings": {
-        "checksum": "27529838f6e613ae122eb355e99103571aadd0d253fc94639aa5dc5e02d748a4_1_1_1_0__1",
+        "checksum": "27529838f6e613ae122eb355e99103571aadd0d253fc94639aa5dc5e02d748a4_1_1_0_0__1",
+        "ggHe-PXvpYP_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ac207310-0cc3-478f-97c4-bb2cc6c463fb.png",
         "ggb5f3EeaWC_text": "Energy That Works With You",
         "ggPBhPhnaF__text": "<p>Coffee may give you a quick boost, but it often comes with jitters and a hard crash. Vanilla Matcha Collagen delivers smooth, steady energy from organic ceremonial matcha, combined with 5g of marine collagen to support your glow from within. Feel focused, balanced, and consistent — without the rollercoaster.</p>"
       }
@@ -62,7 +66,8 @@
     "gp_section_609031597013861024": {
       "type": "gp-section-609031597013861024",
       "settings": {
-        "checksum": "b23ccf54c93fdf1d29fae064f243a06b54415a71055a9e6b51b53ecb0b9e2824_1_1_1_0__1",
+        "checksum": "b23ccf54c93fdf1d29fae064f243a06b54415a71055a9e6b51b53ecb0b9e2824_1_1_0_0__1",
+        "gggiXCilGJI_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_05_26_20_PM.png",
         "ggjn__d6abd_text": "Glow Starts From Within",
         "gggXEdXFdqh_text": "<p>Pure marine collagen, designed to support smoother skin, stronger hair, and a naturally healthy glow.</p><p>&nbsp;</p><p>Every scoop delivers 5g of high-quality collagen peptides to nourish your beauty routine from the inside out — without adding extra steps to your day.</p><p>&nbsp;</p><p>Simple.<br>Effective.<br>Made to be taken daily.</p>"
       }
@@ -70,7 +75,8 @@
     "gp_section_609033271296131744": {
       "type": "gp-section-609033271296131744",
       "settings": {
-        "checksum": "099bbba7f6242e76814028abca38a9a957ccc945c67eb6eb21dec1b67949bd2d_1_1_1_0__1",
+        "checksum": "099bbba7f6242e76814028abca38a9a957ccc945c67eb6eb21dec1b67949bd2d_1_1_0_0__1",
+        "ggPg5uAs32J_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_05_44_58_PM.png",
         "ggjkksF2zRg_text": "Easy to Make and Endless Ways to Enjoy",
         "gg9YjgyUmvl_text": "<p>Hot water. Oat milk. In a smoothie. However you like it, Teangle blends smoothly, dissolves instantly, and fits your routine. Plus, you’ll get 101 Delicious Matcha Recipes, so you’ll never run out of tasty ideas.</p>"
       }
@@ -78,39 +84,57 @@
     "gp_section_609034224476881842": {
       "type": "gp-section-609034224476881842",
       "settings": {
-        "checksum": "440701cefc959a47bb8c99e561974db6515eb967945cead150502dd8d4e24801_1_1_1_0__1"
+        "checksum": "440701cefc959a47bb8c99e561974db6515eb967945cead150502dd8d4e24801_1_1_0_0__1"
       }
     },
     "gp_section_609038777611977410": {
       "type": "gp-section-609038777611977410",
       "settings": {
-        "checksum": "4a85e8731776add4f407bdb75e9e4cc58cedc4be73a59abce0a56435a98596da_1_1_1_0__1",
+        "checksum": "4a85e8731776add4f407bdb75e9e4cc58cedc4be73a59abce0a56435a98596da_1_1_0_0__1",
         "ggpR5h0mS-t_text": "Designed to Support Women — Daily",
         "gglZuPam_Iw_text": "<p>A smarter ritual that supports your energy, glow, balance, and confidence — all in one simple scoop.</p>",
+        "ggQ4VZz0BdF_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_05_33_05_PM.png",
         "gg1oq-AAK1N_text": "Calm Energy",
+        "ggPnMrjE1CW_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_05_33_08_PM.png",
         "ggUgeTjPcBy_text": "Balance Support",
+        "ggCUT5lIBAO_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_05_33_11_PM.png",
         "ggES2PKsFAC_text": "Glow Support",
+        "gg7KzNHpJJz_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_05_33_13_PM.png",
         "gga-4SyoZyd_text": "Stronger Hair",
+        "ggAryesQNBx_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_05_33_16_PM.png",
         "gg-jhShMp7Z_text": "Gut Comfort",
+        "gge1CQJKqd-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_05_34_29_PM.png",
         "gghnbwNRpG3_text": "No Crash"
       }
     },
     "gp_section_609039170517599192": {
       "type": "gp-section-609039170517599192",
       "settings": {
-        "checksum": "985c6f5690e200d4478c125d5c42edda0b1860020cab0a3f4706d5664e049f71_1_1_1_0__1",
+        "checksum": "985c6f5690e200d4478c125d5c42edda0b1860020cab0a3f4706d5664e049f71_1_1_0_0__1",
         "ggJ2Vn5qARA_text": "All-Natural Matcha Collagen Formula",
         "gg3B-FaZMwc_text": "<p>Pure ingredients. No hidden nasties.</p>",
+        "gg-FAWn3wsi_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "gg-FAWn3wsi_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "gghp0n36F7J_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_02_09_34_PM.webp",
         "gg1xaEZyM3e_text": "Organic Ceremonial Matcha",
+        "gg2vEC8vY6h_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "gg2vEC8vY6h_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggHFz44G_6A_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_02_09_37_PM.webp",
         "ggdWRr5nnHU_text": "Marine Collagen&nbsp;<br>Peptides",
+        "gg3QK14JhbS_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "gg3QK14JhbS_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggKPszpK2AX_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_02_09_39_PM.webp",
         "ggS_JrDL29G_text": "Organic Coconut Milk Powder",
+        "gguFd0vDKj-_background_desktop_video": "https://www.youtube.com/watch?v=cyzh48XRS4M",
+        "gguFd0vDKj-_background_desktop_videoHtml5": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+        "ggrv1JCXPiR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0263/3606/7666/files/ChatGPT_Image_Mar_3_2026_02_11_37_PM.webp",
         "ggds4Fo7aIm_text": "Acacia&nbsp;<br>Fiber"
       }
     },
     "gp_section_609041208664130208": {
       "type": "gp-section-609041208664130208",
       "settings": {
-        "checksum": "101f1f6eb10808eabdfc125828c2722f1a7c04d21713429a4a6bf68ff09d249e_1_1_1_0__1"
+        "checksum": "101f1f6eb10808eabdfc125828c2722f1a7c04d21713429a4a6bf68ff09d249e_1_1_0_0__1"
       }
     }
   },
