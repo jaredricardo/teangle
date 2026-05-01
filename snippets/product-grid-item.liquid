@@ -216,9 +216,17 @@ Arguments
           {%- endif -%}
         </div>
         <div class="product_grid_reviews">
+
+          <!-- Start of Judge.me code -->
+      <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+        {{ product.metafields.judgeme.badge }}
+      </div>
+      <!-- End of Judge.me code -->
+      {% comment %}
           	<!-- render Okendo stars -->
             	{% render 'okendo-reviews-product-rating-summary', product: product %}
             <!-- render Okendo stars END -->
+            {% endcomment %}
         </div>
         <div class="product_grid_btn">
           <a href="{{ product.url }}" class="btn">{% if request.locale.iso_code == 'fr' %}Acheter maintenant {%- else -%} Shop Now {%- endif -%} </a>
