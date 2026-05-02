@@ -737,6 +737,11 @@
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
+      },
+      "10072545402559894997": {
+        "type": "shopify://apps/product-image-translate-easy/blocks/image-swapper/019b1a70-a299-727e-9cf1-0670c9110ad1",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
