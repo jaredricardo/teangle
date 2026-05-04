@@ -9,90 +9,97 @@
  */
 {
   "current": {
-    "color_body_bg": "#fffbf7",
-    "color_body_text": "#1e4845",
-    "color_price": "#1e4845",
-    "color_savings_text": "#C20000",
-    "color_borders": "#f7eee3",
-    "color_button": "#3b7d52",
-    "color_button_text": "#ffffff",
-    "color_sale_tag": "#25cd7d",
-    "color_cart_dot": "#ff4f33",
-    "color_small_image_bg": "#ffffff",
-    "color_large_image_bg": "#0f0f0f",
-    "color_header": "#ffffff",
-    "color_header_text": "#000000",
-    "color_announcement": "#3b7d52",
-    "color_announcement_text": "#000000",
-    "color_footer": "#3b7d52",
-    "color_footer_text": "#fffbf7",
-    "color_drawer_background": "#fffbf7",
-    "color_drawer_text": "#1e4845",
-    "color_drawer_border": "#f7eee3",
-    "color_drawer_button": "#1e4845",
-    "color_drawer_button_text": "#ffffff",
-    "color_modal_overlays": "#e6e6e6",
-    "color_image_overlay": "#000000",
-    "color_image_overlay_text_shadow": 20,
-    "bfcm_2025_bundle_product": "build-your-bundle",
     "bfcm_2025_bundle_collection": "bfcm-2025-items",
-    "type_header_font_family": "roboto_n7",
-    "type_header_spacing": "0",
-    "type_header_base_size": 32,
-    "type_header_line_height": 1.4,
-    "type_header_capitalize": false,
-    "type_headers_align_text": true,
-    "type_base_font_family": "twentieth_century_n4",
-    "type_base_spacing": "0",
-    "type_base_size": 15,
-    "type_base_line_height": 1.6,
-    "type_body_align_text": true,
-    "type_navigation_style": "body",
-    "type_navigation_size": 15,
-    "type_navigation_capitalize": false,
-    "type_product_style": "body",
-    "type_collection_font": "body",
-    "type_collection_size": 20,
-    "button_style": "round",
-    "icon_weight": "4px",
-    "icon_linecaps": "round",
-    "product_save_amount": false,
-    "quick_shop_text": "Quick view",
-    "product_grid_image_size": "natural",
-    "product_hover_image": true,
-    "enable_swatches": false,
-    "enable_product_reviews": false,
-    "collection_grid_style": "overlaid-box",
-    "collection_grid_shape": "square",
-    "collection_grid_image": "product",
-    "collection_grid_text_align": "center",
-    "collection_grid_tint": "#000000",
-    "collection_grid_opacity": 10,
-    "collection_grid_gutter": true,
-    "cart_type": "drawer",
-    "cart_additional_buttons": false,
-    "cart_notes_enable": false,
-    "cart_terms_conditions_enable": false,
-    "social_facebook_link": "https://www.facebook.com/teanglematcha/",
-    "social_pinterest_link": "https://www.pinterest.com/teangle/",
-    "social_instagram_link": "https://www.instagram.com/teanglematcha/",
-    "social_tiktok_link": "https://www.tiktok.com/@teangle",
-    "social_youtube_link": "https://www.youtube.com/channel/UC19pk9nercDN0W8ZFdUjXqw",
-    "social_vimeo_link": "",
-    "share_facebook": true,
-    "share_twitter": true,
-    "share_pinterest": true,
-    "favicon": "shopify://shop_images/teangle_fr_favicon.png",
-    "search_enable": true,
-    "search_type": "product,article",
-    "show_breadcrumbs": true,
-    "show_breadcrumbs_collection_link": false,
-    "hide_matcha_sub_box": true,
+    "bfcm_2025_bundle_image": "shopify://shop_images/bundle-up-and-save.gif",
+    "bfcm_2025_bundle_product": "build-your-bundle",
+    "blocks": {
+      "10072545402559894997": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/product-image-translate-easy/blocks/image-swapper/019b1a70-a299-727e-9cf1-0670c9110ad1"
+      },
+      "10641372206048101839": {
+        "disabled": true,
+        "settings": {},
+        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc"
+      },
+      "10840395464443086010": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292"
+      },
+      "10864971697205422121": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa"
+      },
+      "1173261918193615741": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/geo-pro-geolocation/blocks/geopro/16fc5313-7aee-4e90-ac95-f50fc7c8b657"
+      },
+      "14060646107696862457": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8"
+      },
+      "14818028230436078177": {
+        "disabled": false,
+        "settings": {
+          "theme_id": "125742579794",
+          "block_flags_css": false,
+          "block_lib_css": false,
+          "rtl_css": "body {\n  direction: rtl;\n}"
+        },
+        "type": "shopify://apps/langify/blocks/langify/b50c2edb-8c63-4e36-9e7c-a7fdd62ddb8f"
+      },
+      "15685250022964305326": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6"
+      },
+      "17676059084223943535": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a"
+      },
+      "1877152918344802950": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19"
+      },
+      "6478312753674380289": {
+        "disabled": true,
+        "settings": {},
+        "type": "shopify://apps/gempages-builder/blocks/embed-gp-script-head/20b379d4-1b20-474c-a6ca-665c331919f3"
+      },
+      "733389323033596483": {
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        },
+        "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29"
+      },
+      "7885500093077574326": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d"
+      },
+      "855628211100114053": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507"
+      }
+    },
     "bogo_ended": true,
     "bogo_ended_message_en": "⏰ PEPPERMINT BOGO HAS ENDED!",
     "bogo_ended_message_fr": "⏰  LA PROMOTION BOGO EST MAINETNAT TERMINÉE",
-    "bfcm_2025_bundle_image": "shopify://shop_images/bundle-up-and-save.gif",
     "breadcrumb": false,
+    "button_style": "round",
+    "cart_additional_buttons": false,
+    "cart_notes_enable": false,
+    "cart_terms_conditions_enable": false,
+    "cart_type": "drawer",
     "checkout_accent_color": "#d5c2ab",
     "checkout_body_background_color": "#ffffff",
     "checkout_button_color": "#1e4845",
@@ -102,6 +109,51 @@
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
     "checkout_sidebar_background_color": "#fffbf7",
+    "collection_grid_gutter": true,
+    "collection_grid_image": "product",
+    "collection_grid_opacity": 10,
+    "collection_grid_shape": "square",
+    "collection_grid_style": "overlaid-box",
+    "collection_grid_text_align": "center",
+    "collection_grid_tint": "#000000",
+    "color_announcement": "#3b7d52",
+    "color_announcement_text": "#000000",
+    "color_body_bg": "#fffbf7",
+    "color_body_text": "#1e4845",
+    "color_borders": "#f7eee3",
+    "color_button": "#3b7d52",
+    "color_button_text": "#ffffff",
+    "color_cart_dot": "#ff4f33",
+    "color_drawer_background": "#fffbf7",
+    "color_drawer_border": "#f7eee3",
+    "color_drawer_button": "#1e4845",
+    "color_drawer_button_text": "#ffffff",
+    "color_drawer_text": "#1e4845",
+    "color_footer": "#3b7d52",
+    "color_footer_text": "#fffbf7",
+    "color_header": "#ffffff",
+    "color_header_text": "#000000",
+    "color_image_overlay": "#000000",
+    "color_image_overlay_text_shadow": 20,
+    "color_large_image_bg": "#0f0f0f",
+    "color_modal_overlays": "#e6e6e6",
+    "color_price": "#1e4845",
+    "color_sale_tag": "#25cd7d",
+    "color_savings_text": "#C20000",
+    "color_small_image_bg": "#ffffff",
+    "content_for_index": [],
+    "enable_product_reviews": false,
+    "enable_swatches": false,
+    "favicon": "shopify://shop_images/teangle_fr_favicon.png",
+    "hide_matcha_sub_box": true,
+    "icon_linecaps": "round",
+    "icon_weight": "4px",
+    "product_grid_image_size": "natural",
+    "product_hover_image": true,
+    "product_save_amount": false,
+    "quick_shop_text": "Quick view",
+    "search_enable": true,
+    "search_type": "product,article",
     "sections": {
       "header": {
         "type": "header",
@@ -664,86 +716,34 @@
         }
       }
     },
-    "content_for_index": [],
-    "blocks": {
-      "10641372206048101839": {
-        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-        "disabled": true,
-        "settings": {}
-      },
-      "10840395464443086010": {
-        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
-        "disabled": false,
-        "settings": {}
-      },
-      "10864971697205422121": {
-        "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
-        "disabled": false,
-        "settings": {}
-      },
-      "1173261918193615741": {
-        "type": "shopify://apps/geo-pro-geolocation/blocks/geopro/16fc5313-7aee-4e90-ac95-f50fc7c8b657",
-        "disabled": false,
-        "settings": {}
-      },
-      "14818028230436078177": {
-        "type": "shopify://apps/langify/blocks/langify/b50c2edb-8c63-4e36-9e7c-a7fdd62ddb8f",
-        "disabled": false,
-        "settings": {
-          "theme_id": "125742579794",
-          "block_flags_css": false,
-          "block_lib_css": false,
-          "rtl_css": "body {\n  direction: rtl;\n}"
-        }
-      },
-      "15685250022964305326": {
-        "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
-        "disabled": false,
-        "settings": {}
-      },
-      "17676059084223943535": {
-        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": false,
-        "settings": {}
-      },
-      "1877152918344802950": {
-        "type": "shopify://apps/intelligems-a-b-testing/blocks/intelligems-script/fa83b64c-0c77-4c0c-b4b2-b94b42f5ef19",
-        "disabled": false,
-        "settings": {}
-      },
-      "6478312753674380289": {
-        "type": "shopify://apps/gempages-builder/blocks/embed-gp-script-head/20b379d4-1b20-474c-a6ca-665c331919f3",
-        "disabled": false,
-        "settings": {}
-      },
-      "733389323033596483": {
-        "type": "shopify://apps/okendo-product-reviews-ugc/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-        "disabled": false,
-        "settings": {
-          "show_preview_data": true
-        }
-      },
-      "7885500093077574326": {
-        "type": "shopify://apps/videowise-video-commerce/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-        "disabled": false,
-        "settings": {}
-      },
-      "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {}
-      },
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
-      "10072545402559894997": {
-        "type": "shopify://apps/product-image-translate-easy/blocks/image-swapper/019b1a70-a299-727e-9cf1-0670c9110ad1",
-        "disabled": false,
-        "settings": {}
-      }
-    }
+    "share_facebook": true,
+    "share_pinterest": true,
+    "share_twitter": true,
+    "show_breadcrumbs": true,
+    "show_breadcrumbs_collection_link": false,
+    "social_facebook_link": "https://www.facebook.com/teanglematcha/",
+    "social_instagram_link": "https://www.instagram.com/teanglematcha/",
+    "social_pinterest_link": "https://www.pinterest.com/teangle/",
+    "social_tiktok_link": "https://www.tiktok.com/@teangle",
+    "social_vimeo_link": "",
+    "social_youtube_link": "https://www.youtube.com/channel/UC19pk9nercDN0W8ZFdUjXqw",
+    "type_base_font_family": "twentieth_century_n4",
+    "type_base_line_height": 1.6,
+    "type_base_size": 15,
+    "type_base_spacing": "0",
+    "type_body_align_text": true,
+    "type_collection_font": "body",
+    "type_collection_size": 20,
+    "type_header_base_size": 32,
+    "type_header_capitalize": false,
+    "type_header_font_family": "roboto_n7",
+    "type_header_line_height": 1.4,
+    "type_header_spacing": "0",
+    "type_headers_align_text": true,
+    "type_navigation_capitalize": false,
+    "type_navigation_size": 15,
+    "type_navigation_style": "body",
+    "type_product_style": "body"
   },
   "presets": {
     "Bold": {
